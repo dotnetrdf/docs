@@ -1,0 +1,37 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["**/*.csproj"],
+          "exclude": [ "**/bin/**", "**/obj/**"],
+          "src": "../../dotNetRDF/Libraries"
+        }
+      ],
+      "dest": "latest/api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.yml"],
+        "src": "latest/api",
+        "dest": "api"
+      },
+      {
+        "files": ["**/*.{md,yml}"],
+        "src": "latest/docs",
+        "dest": "docs"
+      },
+      {
+        "files": ["toc.yml", "index.md"],
+        "src": "latest"
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "DotNetRDF Documentation"
+    },
+    "dest": "../build/latest",
+    "template": "default"
+  }
+}
