@@ -54,7 +54,6 @@ There are multiple ways to apply SPARQL Updates which we'll cover here but the m
 If your data is purely in-memory then you will want to use the LeviathanUpdateProcessor like so:
 
 ```csharp
-
 using System;
 using System.Linq;
 using VDS.RDF;
@@ -65,40 +64,40 @@ using VDS.RDF.Writing.Formatting;
 
 public class LeviathanUpdateProcessorExample
 {
-	public static void Main(String[] args)
-	{
-		//First create our dataset
-		TripleStore store = new TripleStore();
+    public static void Main(String[] args)
+    {
+        //First create our dataset
+        TripleStore store = new TripleStore();
 
-		//Get an Update Parser
-		SparqlUpdateParser parser = new SparqlUpdateParser();
+        //Get an Update Parser
+        SparqlUpdateParser parser = new SparqlUpdateParser();
 
-		//Generate a Command
-		SparqlParameterizedString cmdString = new SparqlParameterizedString();
-		cmdString.CommandText = "LOAD <http://dbpedia.org/resource/Southampton> INTO <http://example.org/Soton>";
+        //Generate a Command
+        SparqlParameterizedString cmdString = new SparqlParameterizedString();
+        cmdString.CommandText = "LOAD <http://dbpedia.org/resource/Southampton> INTO <http://example.org/Soton>";
 
-		//Parse the command into a SparqlUpdateCommandSet
-		SparqlUpdateCommandSet cmds = parser.ParseFromString(cmdString);
+        //Parse the command into a SparqlUpdateCommandSet
+        SparqlUpdateCommandSet cmds = parser.ParseFromString(cmdString);
 
-                //Create a dataset for our queries to operate over
-                //We need to explicitly state our default graph or the unnamed graph is used
-                //Alternatively you can set the second parameter to true to use the union of all graphs
-                //as the default graph
-                InMemoryDataset ds = new InMemoryDataset(store, new Uri("http://mydefaultgraph.org"));
+        //Create a dataset for our queries to operate over
+        //We need to explicitly state our default graph or the unnamed graph is used
+        //Alternatively you can set the second parameter to true to use the union of all graphs
+        //as the default graph
+        InMemoryDataset ds = new InMemoryDataset(ds, new Uri("http://mydefaultgraph.org"));
 
-		//Create an Update Processor using our dataset and apply the updates
-		LeviathanUpdateProcessor processor = new LeviathanUpdateProcessor(store);
-		processor.ProcessCommandSet(cmds);
+        //Create an Update Processor using our dataset and apply the updates
+        LeviathanUpdateProcessor processor = new LeviathanUpdateProcessor(store);
+        processor.ProcessCommandSet(cmds);
 
-		//We should now have a Graph in our dataset as a result of the LOAD update
-		//So we'll retrieve this and print it to the Console
-		IGraph g = store.Graphs[new Uri("http://example.org/Soton")];
-		NTriplesFormatter formatter = new NTriplesFormatter();
-		foreach (Triple t in g.Triples)
-		{
-			Console.WriteLine(t.ToString(formatter));
-		}
-	}
+        //We should now have a Graph in our dataset as a result of the LOAD update
+        //So we'll retrieve this and print it to the Console
+        IGraph g = store.Graphs[new Uri("http://example.org/Soton")];
+        NTriplesFormatter formatter = new NTriplesFormatter();
+        foreach (Triple t in g.Triples)
+        {
+            Console.WriteLine(t.ToString(formatter));
+        }
+    }
 }
 ```
 
