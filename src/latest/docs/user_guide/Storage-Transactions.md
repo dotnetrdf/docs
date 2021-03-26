@@ -1,8 +1,6 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|Storage-API]] > [[Transactions API|Storage-Transactions]]
-
 # Transactions API 
 
-The Transactions API provides some degree of control over Transactions when working with a store that supports these.  Supporting stores implement the [ITransactionalStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_ITransactionalStorage.htm) and/or [IAsyncTransactionalStorage](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_IAsyncTransactionalStorage.htm) interfaces.
+The Transactions API provides some degree of control over Transactions when working with a store that supports these.  Supporting stores implement the [ITransactionalStorage](xref:VDS.RDF.Storage.ITransactionalStorage) and/or [IAsyncTransactionalStorage](xref:VDS.RDF.Storage.IAsyncTransactionalStorage) interfaces.
 
 # Basic Usage 
 
@@ -12,12 +10,12 @@ These interfaces are fairly rudimentary and provide three simple methods:
 
 ## Begin() 
 
-The `Begin()` method starts a new transaction.
+The [`Begin()`](xref:VDS.RDF.Storage.ITransactionalStorage.Begin) method starts a new transaction.
 
 ## Commit() 
 
-The `Commit()` method commits the current transaction.
+The [`Commit()`](xref:VDS.RDF.Storage.ITransactionalStorage.Commit) method commits the current transaction.
 
 ## Rollback() 
 
-The `Rollback()` method rolls back the current transaction.
+The [`Rollback()`](xref:VDS.RDF.Storage.ITransactionalStorage.Rollback) method rolls back the current transaction.

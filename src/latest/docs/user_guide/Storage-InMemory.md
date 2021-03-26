@@ -1,8 +1,6 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Storage API|Storage-API]] > [[Storage Providers|UserGuide/Storage/Providers]] > [[In-Memory|Storage-InMemory]]
-
 # In-Memory 
 
-This is a wrapper over one of dotNetRDF's internal in-memory [IInMemoryQueryableStore](https://dotnetrdf.github.io/api/html/T_VDS_RDF_IInMemoryQueryableStore.htm) or [ISparqlDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_ISparqlDataset.htm) implementations.  It is primarily intended as a useful convenience for testing and prototyping prior to deploying the actual production store you intend to use.  This functionality is provided by the [InMemoryManager](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Storage_InMemoryManager.htm) class.
+This is a wrapper over one of dotNetRDF's internal in-memory [IInMemoryQueryableStore](xref:VDS.RDF.IInMemoryQueryableStore) or [ISparqlDataset](xref:VDS.RDF.Query.Datasets.ISparqlDataset) implementations.  It is primarily intended as a useful convenience for testing and prototyping prior to deploying the actual production store you intend to use.  This functionality is provided by the [InMemoryManager](xref:VDS.RDF.Storage.InMemoryManager) class.
 
 ## Supported Capabilities 
 
