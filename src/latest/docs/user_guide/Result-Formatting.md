@@ -1,12 +1,10 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|Advanced-SPARQL]] > [[Result Formatting|Result-Formatting|]]
-
 # Result Formatting 
 
-When you make a SPARQL query as detailed on the [[Querying with SPARQL|Querying-With-SPARQL]] you typically get back a [SparqlResultSet](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResultSet.htm) object.  While you can trivially dump results to strings using the `ToString()` method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
+When you make a SPARQL query as detailed on the [Querying with SPARQL](../tutorial/Querying-With-SPARQL.md) you typically get back a [SparqlResultSet](xref:VDS.RDF.Query.SparqlResultSet) object.  While you can trivially dump results to strings using the `ToString()` method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
 
 ## Using Formatters 
 
-dotNetRDF supports a powerful [[Formatting API|Formatting-API]] which is discussed in general elsewhere, this can be leveraged for the purposes of formatting results.  Since values in each column of a [SparqlResult](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResult.htm) are just normal [INode](https://dotnetrdf.github.io/api/html/T_VDS_RDF_INode.htm) values you can use any of the existing [INodeFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_INodeFormatter.htm) implementations for this.
+dotNetRDF supports a powerful [Formatting API](Formatting-API.md) which is discussed in general elsewhere, this can be leveraged for the purposes of formatting results.  Since values in each column of a [SparqlResult](xref:VDS.RDF.Query.SparqlResult) are just normal [INode](xref:VDS.RDF.INode) values you can use any of the existing [INodeFormatter](xref:VDS.RDF.Writing.Formatting.INodeFormatter) implementations for this.
 
 For example:
 

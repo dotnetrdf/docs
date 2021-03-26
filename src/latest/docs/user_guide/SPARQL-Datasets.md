@@ -1,8 +1,6 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|Advanced-SPARQL]] > [[SPARQL Datasets|SPARQL-Datasets]]
-
 # SPARQL Datasets 
 
-A SPARQL dataset refers to the dataset notion from the SPARQL specification, within dotNetRDF it may refer to the concrete ISparqlDataset interface which represents datasets for in-memory queries or it may refer to the dataset description associated with a query/update.
+A SPARQL dataset refers to the dataset notion from the SPARQL specification, within dotNetRDF it may refer to the concrete [`ISparqlDataset`](xref:VDS.RDF.Query.Datasets.ISparqlDataset) interface which represents datasets for in-memory queries or it may refer to the dataset description associated with a query/update.
 
 ## Dataset Description 
 
@@ -28,11 +26,11 @@ The `INSERT/DELETE` command in SPARQL Update allows the dataset to be specified 
 
 ## ISparqlDataset 
 
-The [ISparqlDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_ISparqlDataset.htm) interface is used to represent a dataset over which queries and updates are applied.  dotNetRDF includes a number of implementations of this primarily for wrapping a `IInMemoryQueryableStore` i.e. an in-memory `ITripleStore` so that it can be queried.
+The [`ISparqlDataset`](xref:VDS.RDF.Query.Datasets.ISparqlDataset) interface is used to represent a dataset over which queries and updates are applied.  dotNetRDF includes a number of implementations of this primarily for wrapping a [`IInMemoryQueryableStore`](xref:VDS.RDF.IInMemoryQueryableStore) i.e. an in-memory [`ITripleStore`](xref:VDS.RDF.ITripleStore) so that it can be queried.
 
-How you construct your dataset can affect the results of your query due to SPARQL dataset descriptions as already discussed on this page.  For our examples here we will use the [InMemoryDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_InMemoryDataset.htm) which may be constructed in a number of ways.
+How you construct your dataset can affect the results of your query due to SPARQL dataset descriptions as already discussed on this page.  For our examples here we will use the [`InMemoryDataset`](xref:VDS.RDF.Query.Datasets.InMemoryDataset) which may be constructed in a number of ways.
 
-If your queries involve a lot of named graphs then you may get better performance by using an [InMemoryQuadDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_InMemoryQuadDataset.htm) instead.  This has identical constructors to the ones shown in the following examples.
+If your queries involve a lot of named graphs then you may get better performance by using an [`InMemoryQuadDataset`](xref:VDS.RDF.Query.Datasets.InMemoryQuadDataset) instead.  This has identical constructors to the ones shown in the following examples.
 
 ### Default Behavior 
 

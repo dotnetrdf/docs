@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Advanced SPARQL|Advanced-SPARQL]] > [[Full Text Querying with SPARQL|Full-Text-Querying-With-SPARQL]]
-
 # Full Text Querying with SPARQL 
 
 Full Text SPARQL is a non-standard extension to our SPARQL engine provided in the separate **dotNetRDF.Query.FullText.dll** library. This library is included in the standard distribution from the 0.6.0 release onwards.
@@ -10,19 +8,19 @@ It uses [Lucene.Net](http://lucenenet.apache.org) to build and query full text i
 
 To use the library you'll need to add a reference to **dotNetRDF.Query.FullText.dll** into your project (or install it via NuGet) and you should ensure that Lucene.Net is included in your project as well as this provides the actual indexing and query functionality.  Using NuGet is the preferred way to install since it will sort out dependencies and framework versions for you.
 
-The majority of the classes provided by this library can be found in the `VDS.RDF.Query.FullText` namespace, the only other class you'll typically need is the [FullTextOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_FullTextOptimiser.htm) which is located in the `VDS.RDF.Query.Optimisation` namespace.
+The majority of the classes provided by this library can be found in the `VDS.RDF.Query.FullText` namespace, the only other class you'll typically need is the [`FullTextOptimiser`](xref:VDS.RDF.Query.Optimisation.FullTextOptimiser) which is located in the [`VDS.RDF.Query.Optimisation`](xref:VDS.RDF.Query.Optimisation) namespace.
 
 ## Creating an Index 
 
-Before you can perform full text queries you must first build an index from your RDF data. To do this you will use an instance of the [IFullTextIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_IFullTextIndexer.htm) interface, an indexer provides the means to index Triples, Graphs and Datasets and builds an index which relates the full text of literal objects to one of the nodes of each Triple.
+Before you can perform full text queries you must first build an index from your RDF data. To do this you will use an instance of the [`IFullTextIndexer`](xref:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer) interface, an indexer provides the means to index Triples, Graphs and Datasets and builds an index which relates the full text of literal objects to one of the nodes of each Triple.
 
 Currently the following implementations are available:
 
 | Indexer | Description |
 | --- | --- |
-| [LuceneSubjectsIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_Lucene_LuceneSubjectsIndexer.htm) | Relates the Subject of the Triple to the full text of the Literal Object |
-| [LucenePredicatesIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_LucenePredicatesIndexer.htm) | Relates the Predicate of the Triple to the full text of the Literal Object |
-| [LuceneObjectsIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_LuceneObjectsIndexer.htm) | Relates the Object of the Triple to its own full text |
+| [LuceneSubjectsIndexer](xref:VDS.RDF.Query.FullText.Indexing.Lucene.LuceneSubjectsIndexer) | Relates the Subject of the Triple to the full text of the Literal Object |
+| [LucenePredicatesIndexer](xref:VDS.RDF.Query.FullText.Indexing.Lucene.LucenePredicatesIndexer) | Relates the Predicate of the Triple to the full text of the Literal Object |
+| [LuceneObjectsIndexer](xref:VDS.RDF.Query.FullText.Indexing.Lucene.LuceneObjectsIndexer) | Relates the Object of the Triple to its own full text |
 
 So let's look at an example of building an index:
 
@@ -65,11 +63,11 @@ public class FullTextIndexingExample
 }
 ```
 
-Note that when we created the indexer we passed in a Lucene.Net `Directory` and an `Analyzer` - you can use whatever implementations of these you like with our indexers. The [DefaultIndexSchema](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_Schema_DefaultIndexSchema.htm) is a schema used to control how the indexed data is stored onto fields on the documents in the index, for most use cases you will only ever need to use this default implementation but you can implement your own if you are an advanced user.
+Note that when we created the indexer we passed in a Lucene.Net `Directory` and an `Analyzer` - you can use whatever implementations of these you like with our indexers. The [`DefaultIndexSchema`](xref:VDS.RDF.Query.FullText.Schema.DefaultIndexSchema) is a schema used to control how the indexed data is stored onto fields on the documents in the index, for most use cases you will only ever need to use this default implementation but you can implement your own if you are an advanced user.
 
 ## Querying an Index 
 
-To query an index you use a [IFullTextSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_IFullTextSearchProvider.htm) instance, currently there is a single implementation [LuceneSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_Lucene_LuceneSearchProvider.htm). The following example demonstrates its usage:
+To query an index you use a [`IFullTextSearchProvider`](xref:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider) instance, currently there is a single implementation [`LuceneSearchProvider`](xref:VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider). The following example demonstrates its usage:
 
 ```csharp
 
@@ -115,7 +113,7 @@ public class FullTextSearchExample
 }
 ```
 
-As with our previous example the `LuceneSearchProvider` takes a Lucene.Net `Directory` and `Analyzer` plus a [IFullTextIndexSchema](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_Schema_IFullTextIndexSchema.htm).
+As with our previous example the `LuceneSearchProvider` takes a Lucene.Net `Directory` and `Analyzer` plus a [`IFullTextIndexSchema`](xref:VDS.RDF.Query.FullText.Schema.IFullTextIndexSchema).
 
 Note: This constructor allows you to omit either/both of the Analyzer or Schema, in this case this uses the default Lucene.Net `StandardAnalyzer` and/or the `DefaultIndexSchema`
 
@@ -228,8 +226,8 @@ SELECT * WHERE { ?match pf:textMatch ( "text" 0.75) . }
 
 ## Use with SPARQL Endpoints 
 
-You can use Full Text Querying with SPARQL Endpoints by configuring it via the [[Configuration API|Configuration-API]], see [[Configuration API - Full Text Query|Configuration-Full-Text-Query]] for more details.
+You can use Full Text Querying with SPARQL Endpoints by configuring it via the [Configuration API](Configuration-API.md), see [Configuration API - Full Text Query](Configuration-Full-Text-Query.md) for more details.
 
 # Keeping an index in sync with Datasets 
 
-If your dataset is mutable then you may wish to keep your full text index in sync with your dataset as it changes. To do this you can use the [FullTextIndexedDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_FullTextIndexedDataset.htm) which is a decorator that can be applied over another `ISparqlDataset` and will automatically keep your index in sync with changes made to the dataset.
+If your dataset is mutable then you may wish to keep your full text index in sync with your dataset as it changes. To do this you can use the [`FullTextIndexedDataset`](xref:VDS.RDF.Query.Datasets.FullTextIndexedDataset) which is a decorator that can be applied over another [`ISparqlDataset`](xref:VDS.RDF.Query.Datasets.ISparqlDataset) and will automatically keep your index in sync with changes made to the dataset.
