@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > Using the Namespace Mapper
-
 # Using the Namespace Mapper
 
 Namespaces are a concept from XML which are used in the Semantic Web as the standard way of simplifying URIs into QNames. A QName (Qualified Name) is a way of abbreviating a URI in a simple readable form which makes it easier for humans to understand the data while still being machine readable. e.g.
@@ -38,9 +36,9 @@ The empty namespace prefix has a special meaning, it either refers to the defaul
 
 In order that prefixed names can be resolved into URIs various parts of the library must maintain a table of associations of Namespace Prefixes and their corresponding Namespace URIs. This function is provided by the `VDS.RDF.INamespaceMapper` interface.
 
-The most common place to encounter this interface is when working with graphs, any implementation of the `VDS.RDF.IGraph` interface provides a property called `NamespaceMap` which returns the `INamespaceMapper` associated with the graph.
+The most common place to encounter this interface is when working with graphs, any implementation of the [`VDS.RDF.IGraph`](xref:VDS.RDF.IGraph) interface provides a property called [`NamespaceMap`](xref:VDS.RDF.IGraph.NamespaceMap) which returns the [`INamespaceMapper`](xref:VDS.RDF.INamespaceMapper) associated with the graph.
 
-The `INamespaceMapper` can be used to introduce new Namespaces into the graph to allow you to more easily define URI Nodes by using QNames e.g.
+The [`INamespaceMapper`](xref:VDS.RDF.INamespaceMapper) can be used to introduce new Namespaces into the graph to allow you to more easily define URI Nodes by using QNames e.g.
 
 ```csharp
 IGraph g = new Graph();
@@ -56,10 +54,10 @@ UriNode exExample = g.CreateUriNode("ex:Example");
 g.Assert(new Triple(exThis, rdfType, exExample));
 ```
 
-You can also use the `GetNamespaceUri(String prefix)` and `GetPrefix(Uri uri)` methods to retrieve Namespace URIs based on a Prefix and vice versa.
+You can also use the [`GetNamespaceUri(String prefix)`](xref:VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)) and [`GetPrefix(Uri uri)`](xref:VDS.RDF.INamespaceMapper.GetPrefix(System.Uri))) methods to retrieve Namespace URIs based on a Prefix and vice versa.
 
-Another important feature of the `INamespaceMapper` is it's ability to reduce URIs to prefixed names via it's `ReduceToQName(String uri, out String qname)` function. This function allows you to take a URI and attempts to turn it into a prefixed name returning true if this succeeds and setting the out variable `qname` to be the prefixed name. All of the writer classes provided in the library make use of this function to help them generate prefixed names for output.
+Another important feature of the [`INamespaceMapper`](xref:VDS.RDF.INamespaceMapper) is it's ability to reduce URIs to prefixed names via it's [`ReduceToQName(String uri, out String qname)`](xref:VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)) function. This function allows you to take a URI and attempts to turn it into a prefixed name returning true if this succeeds and setting the out variable `qname` to be the prefixed name. All of the writer classes provided in the library make use of this function to help them generate prefixed names for output.
 
 ## Merging Namespace Maps
 
-If you wish to combine two namespaces maps then you may wish to use the `Import(INamespaceMapper nsmap)` method which imports namespaces from one map into another.
+If you wish to combine two namespaces maps then you may wish to use the [`Import(INamespaceMapper nsmap)`](xref:VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)) method which imports namespaces from one map into another.
