@@ -1,8 +1,6 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Global Options|Global-Options]]
-
 # Global Options 
 
-dotNetRDF has a set of global static options provided by the [Options](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Options.htm) class.  These are used to configure various aspects of dotNetRDF behaviour, some act as defaults for certain functionality while others toggle functionality/features on/off as desired.
+dotNetRDF has a set of global static options provided by the [`Options`](xref:VDS.RDF.Options) class.  These are used to configure various aspects of dotNetRDF behaviour, some act as defaults for certain functionality while others toggle functionality/features on/off as desired.
 
 Here are the available options:
 
@@ -10,21 +8,21 @@ Here are the available options:
 
 ### FullTripleIndexing 
 
-Controls whether implementations of [BaseTripleCollection](https://dotnetrdf.github.io/api/html/T_VDS_RDF_BaseTripleCollection.htm) that support indexing will create full triple indexes, defaults to `true`.  See [[Minimizing Memory Usage|HowTo-Minimize-Memory-Usage]] for more discussions on triple indexing.
+Controls whether implementations of [`BaseTripleCollection`](xref:VDS.RDF.BaseTripleCollection) that support indexing will create full triple indexes, defaults to `true`.  See [Minimizing Memory Usage](../howto/Minimize-Memory-Usage.md) for more discussions on triple indexing.
 
 ### InternUris 
 
-Controls the [[URI Interning|DeveloperGuide-URI-Interning]] feature of the library which is used to speed up URI equality checks and reduce memory usage.  However depending on your usage of the library it may actually inflate memory usage, see the linked page for more discussion of this option.
+Controls the [URI Interning](../developer_guide/URI-Interning.md) feature of the library which is used to speed up URI equality checks and reduce memory usage.  However depending on your usage of the library it may actually inflate memory usage, see the linked page for more discussion of this option.
 
 ## Literal Options 
 
 ### LiteralEqualityMode 
 
-Controls the behaviour when you call `Equals()` on instances of [ILiteralNode](https://dotnetrdf.github.io/api/html/T_VDS_RDF_ILiteralNode.htm).  This takes a value from the [LiteralEqualityMode](https://dotnetrdf.github.io/api/html/T_VDS_RDF_LiteralEqualityMode.htm) enumeration, the default is `Strict`.  In `Strict` mode literal equality follows RDF term equality semantics i.e. the lexical values must be exactly equal and so must the language tag/datatype URI if present.
+Controls the behaviour when you call `Equals()` on instances of [`ILiteralNode`](xref:VDS.RDF.ILiteralNode).  This takes a value from the [`LiteralEqualityMode`](xref:VDS.RDF.LiteralEqualityMode) enumeration, the default is `Strict`.  In `Strict` mode literal equality follows RDF term equality semantics i.e. the lexical values must be exactly equal and so must the language tag/datatype URI if present.
 
 If you set this to `Loose` instead then value equality semantics are used i.e. if the literals represent the same value then they are considered equal.
 
-Please see [[Equality and Comparison|Equality-And-Comparison]] for more information.
+Please see [Equality and Comparison](Equality-And-Comparison.md) for more information.
 
 ### LiteralValueNormalization 
 
@@ -48,11 +46,11 @@ Normally dotNetRDF relies on the standard .Net HTTP support which uses the stand
 
 ### HttpDebugging 
 
-Controls whether to print debug information about HTTP requests and responses to the console, defaults to `false`.  See [[Debugging HTTP Communication|HowTo-Debug-HTTP-Communication]] for more information.
+Controls whether to print debug information about HTTP requests and responses to the console, defaults to `false`.  See [Debugging HTTP Communication](../howto/Debug-HTTP-Communication.md) for more information.
 
 ### HttpFullDebugging 
 
-Controls whether the full response stream for HTTP responses is printed to the console for debugging, defaults to `false`.  See [[Debugging HTTP Communication|HowTo-Debug-HTTP-Communication]] for more information.
+Controls whether the full response stream for HTTP responses is printed to the console for debugging, defaults to `false`.  See [Debugging HTTP Communication](../howto/Debug-HTTP-Communication.md) for more information.
 
 ## Parsing Options 
 
@@ -78,7 +76,7 @@ It may be useful to increase this if you have a slow internet connection or are 
 
 Global timeout setting for in-memory query execution given in milliseconds, defaults to ` 180,000` i.e. 3 minutes.  This setting has no-effect for other forms of query execution.
 
-This can be overridden as a per-query level by the `Timeout` property of a [SparqlQuery](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlQuery.htm) instance.
+This can be overridden as a per-query level by the [`Timeout`](xref:VDS.RDF.Query.SparqlQuery.Timeout) property of a [`SparqlQuery`](xref:VDS.RDF.Query.SparqlQuery) instance.
 
 ### QueryOptimisation 
 
@@ -94,7 +92,7 @@ Controls whether certain optimizations which `may` make queries run faster but c
 
 ### QueryDefaultSyntax 
 
-Sets the default syntax used for parsing SPARQL queries, takes a value from the [SparqlQuerySyntax](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_SparqlQuerySyntax.htm) enumeration.  Defaults to `Sparql_1_1` i.e. SPARQL 1.1
+Sets the default syntax used for parsing SPARQL queries, takes a value from the [`SparqlQuerySyntax`](xref:VDS.RDF.Parsing.SparqlQuerySyntax) enumeration.  Defaults to `Sparql_1_1` i.e. SPARQL 1.1
 
 ### QueryAllowUnknownFunctions 
 
@@ -102,15 +100,15 @@ Controls whether unknown SPARQL extension functions should be allowed, defaults 
 
 ### RigorousEvaluation 
 
-Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [ISparqlDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_ISparqlDataset.htm), defaults to `false` as this is usually unnecessary.
+Controls whether the in-memory SPARQL engine rigorously checks the provided matches from the underlying [`ISparqlDataset`](xref:VDS.RDF.Query.Datasets.ISparqlDataset), defaults to `false` as this is usually unnecessary.
 
-You may need to enable this if your `ISparqlDataset` implementation cannot guarantee that a call to `GetTriplesWithX()` only returns triples matching the given arguments.
+You may need to enable this if your [`ISparqlDataset`](xref:VDS.RDF.Query.Datasets.ISparqlDataset) implementation cannot guarantee that a call to `GetTriplesWithX()` only returns triples matching the given arguments.
 
 ### StrictOperations 
 
 Controls whether SPARQL operators are restricted to only the implementations required by the SPARQL specifications, defaults to `false`.
 
-When disabled certain additional operators will be permitted such as date time computations.  See [[SPARQL Operators|DeveloperGuide-SPARQL-Operators]] for discussion of this feature.
+When disabled certain additional operators will be permitted such as date time computations.  See [SPARQL Operators](../developer_guide/SPARQL-Operators.md) for discussion of this feature.
 
 ### UsePLinqEvaluation 
 
@@ -122,9 +120,9 @@ May be useful to disable if you have a multi-core machine but only want to use a
 
 ### UpdateExecutionTimeout 
 
-Sets the timeout used for in-memory update execution in milliseconds, defaults to ` 180,000` i.e. 3 minutes.  This setting has no-effect for other forms of update execution.
+Sets the timeout used for in-memory update execution in milliseconds, defaults to `180,000` i.e. 3 minutes.  This setting has no-effect for other forms of update execution.
 
-This can be overridden as a per-update level by the `Timeout` property of a [SparqlUpdateCommandSet](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Update_SparqlUpdateCommandSet.htm) instance.
+This can be overridden as a per-update level by the `Timeout` property of a [SparqlUpdateCommandSet](xref:VDS.RDF.Update.SparqlUpdateCommandSet) instance.
 
 ## Writing Options 
 
