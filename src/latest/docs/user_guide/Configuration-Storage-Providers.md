@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[Storage Providers|Configuration-Storage-Providers]]
-
 # Configuring Storage Providers 
 
 Storage Providers can be specified in order to provide connections to any of the 3rd Party Triple Stores supported by dotNetRDF.
@@ -138,7 +136,7 @@ _:endpoint a dnr:SparqlQueryEndpoint ;
   dnr:namedGraphUri "http://example.org/namedGraph" .
 ```
 
-This defines the same connection as in the previous example but has the advantage that more complex endpoints can be specified in this way as described in [[Configuration API - SPARQL Endpoints|Configuration-SPARQL-Endpoints]].
+This defines the same connection as in the previous example but has the advantage that more complex endpoints can be specified in this way as described in [Configuration API - SPARQL Endpoints](Configuration-SPARQL-Endpoints.md).
 
 ## SPARQL Query and Update Endpoints 
 

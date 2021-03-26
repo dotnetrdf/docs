@@ -1,8 +1,6 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[HTTP Handlers|Configuration-HTTP-Handlers]]
-
 # Configuring HTTP Handlers 
 
-HTTP Handler configuration is used to specify the settings for HTTP Handlers that you wish to use in ASP.Net applications. You can then either add handler registrations manually to your Web.config file or automatically using [[rdfWebDeploy|Tools-rdfWebDeploy]] in order to get the handlers running in your ASP.Net application (see [[Deploying with rdfWebDeploy|ASP-Deploying-With-rdfWebDeploy]] for a full example).
+HTTP Handler configuration is used to specify the settings for HTTP Handlers that you wish to use in ASP.Net applications. You can then either add handler registrations manually to your Web.config file or automatically using [rdfWebDeploy](Tools-rdfWebDeploy.md) in order to get the handlers running in your ASP.Net application (see [Deploying with rdfWebDeploy](ASP-Deploying-With-rdfWebDeploy.md) for a full example).
 
 When you specify a handler definition you must use a special dotNetRDF URI as the subject like so:
 
@@ -23,7 +21,7 @@ All handlers have a standard set of properties that can be used to specify some 
 
 ### dnr:userGroup 
 
-The `dnr:userGroup` property is used to associate user groups (see [[Configuration API - User Groups|Configuration-User-Groups]]) with a Handler for basic authentication purposes. Note that this feature is currently experimental and may be revised in future releases.
+The `dnr:userGroup` property is used to associate user groups (see [Configuration API - User Groups](Configuration-User-Groups.md)) with a Handler for basic authentication purposes. Note that this feature is currently experimental and may be revised in future releases.
 
 ### dnr:showErrors 
 
@@ -43,7 +41,7 @@ The `dnr:cacheSliding` property specifies whether sliding cache expiration is us
 
 ### dnr:expressionFactory 
 
-The `dnr:expressionFactory` property adds locally scoped SPARQL expression factories to a Handler which the Handler will use when parsing SPARQL. See [[Configuration API - Expression Factories|Configuration-SPARQL-Expression-Factories]] for more details.
+The `dnr:expressionFactory` property adds locally scoped SPARQL expression factories to a Handler which the Handler will use when parsing SPARQL. See [Configuration API - Expression Factories](Configuration-SPARQL-Expression-Factories.md) for more details.
 
 ### dnr:enableCors 
 
@@ -83,7 +81,7 @@ The `dnr:stylesheet` property specifies a path to a stylesheet that is used for 
 
 ### dnr:importNamespacesFrom 
 
-The `dnr:importNamespacesFrom` property points to a Graph that defines default namespaces (see [[Configuration API - Graphs|Configuration-Graphs]]), these are used for any output that can use QNames to compress output. Defaults to `rdf`, `rdfs` and `xsd` namespaces if not specified.
+The `dnr:importNamespacesFrom` property points to a Graph that defines default namespaces (see [Configuration API - Graphs](Configuration-Graphs.md)), these are used for any output that can use QNames to compress output. Defaults to `rdf`, `rdfs` and `xsd` namespaces if not specified.
 
 # Handler Configurations 
 
@@ -91,7 +89,7 @@ The following section shows how to configure each type of Handler. Since most ty
 
 ## Graph Handlers 
 
-Graph Handlers are used to serve an RDF Graph either at a fixed URI or at a base URI. Use the [GraphHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Web_GraphHandler.htm) for fixed URIs and the [WildcardGraphHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Web_WildcardGraphHandler.htm) for base URIs. In practise the latter is mainly needed if you wish to serve a Graph which uses a slash based URI scheme but all terms are defined in that Graph.
+Graph Handlers are used to serve an RDF Graph either at a fixed URI or at a base URI. Use the [`GraphHandler`](xref:VDS.RDF.Web.GraphHandler) for fixed URIs and the [`WildcardGraphHandler`](xref:VDS.RDF.Web.WildcardGraphHandler) for base URIs. In practise the latter is mainly needed if you wish to serve a Graph which uses a slash based URI scheme but all terms are defined in that Graph.
 
 Configuration for these Handlers looks like the following:
 
@@ -108,13 +106,13 @@ _:graph a dnr:Graph ;
   dnr:fromFile "~/App_Data/example.rdf" .
 ```
 
-This creates configuration for a Handler which responds to requests on the URI /graph by sending back the Graph specified by the `dnr:usingGraph` property. For details of how to configure Graphs see [[Configuration API - Graphs|Configuration-Graphs]].
+This creates configuration for a Handler which responds to requests on the URI /graph by sending back the Graph specified by the `dnr:usingGraph` property. For details of how to configure Graphs see [Configuration API - Graphs](Configuration-Graphs.md).
 
 For serving graphs at wildcard paths replace the URI with `<dotnetrdf:/graph/*>` and change the value of `dnr:type` to `VDS.RDF.Web.WildcardGraphHandler`. This would result in a handler which responds to requests to any URI under `/graph/` with the specified Graph.
 
 ## Query Handlers 
 
-Query Handlers are used to create SPARQL Query endpoints at fixed URIs. To do this there is a single handler implementation which is the [QueryHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Web_QueryHandler.htm).
+Query Handlers are used to create SPARQL Query endpoints at fixed URIs. To do this there is a single handler implementation which is the [`QueryHandler`](xref:VDS.RDF.Web.QueryHandler).
 
 An example configuration might look like the following:
 
@@ -134,7 +132,7 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests on the URI `/sparql` by providing a SPARQL Query endpoint. The `dnr:queryProcessor` property is used to specify the class that processes the queries - for more details on configuring Query Processors see [[Configuration API - Query Processors|Configuration-Query-Processors]].
+This specifies configuration for a Handler which responds to requests on the URI `/sparql` by providing a SPARQL Query endpoint. The `dnr:queryProcessor` property is used to specify the class that processes the queries - for more details on configuring Query Processors see [Configuration API - Query Processors](Configuration-Query-Processors.md).
 
 Query Handlers support the following additional properties. Note that while a Handler may have these properties specified not all query processors can/will use/respect these settings.
 
@@ -160,15 +158,15 @@ The `dnr:defaultQueryFile` property specifies a path to a file containing the de
 
 ### dnr:queryOptimiser 
 
-The `dnr:queryOptimiser` property specifies a Query Optimiser (see [[Configuration API - Optimisers|Configuration-SPARQL-Optimisers]]) to be used for optimising SPARQL Queries.
+The `dnr:queryOptimiser` property specifies a Query Optimiser (see [Configuration API - Optimisers](Configuration-SPARQL-Optimisers.md)) to be used for optimising SPARQL Queries.
 
 ### dnr:algebraOptimiser 
 
-The `dnr:algebraOptimiser` property specifies Algebra Optimisers (see [[Configuration API - Optimisers|Configuration-SPARQL-Optimisers]]) to be used for optimising SPARQL Algebra prior to evaluation.
+The `dnr:algebraOptimiser` property specifies Algebra Optimisers (see [Configuration API - Optimisers](Configuration-SPARQL-Optimisers.md)) to be used for optimising SPARQL Algebra prior to evaluation.
 
 ## Update Handlers 
 
-Update Handlers are used to provide SPARQL Update endpoints at fixed URIs. To do this there is a single implementation which is [UpdateHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Web_UpdateHandler.htm).
+Update Handlers are used to provide SPARQL Update endpoints at fixed URIs. To do this there is a single implementation which is [`UpdateHandler`](xref:VDS.RDF.Web.UpdateHandler).
 
 An example configuration might look like the following:
 
@@ -188,7 +186,7 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests on the URI `/update` by providing a SPARQL Update endpoint. The `dnr:updateProcessor` property is used to specify the class that processes the updates - for more details on configuring Update Processors see [[Configuration API - Update Processors|Configuration-Update-Processors]].
+This specifies configuration for a Handler which responds to requests on the URI `/update` by providing a SPARQL Update endpoint. The `dnr:updateProcessor` property is used to specify the class that processes the updates - for more details on configuring Update Processors see [Configuration API - Update Processors](Configuration-Update-Processors.md).
 
 Update Handlers support the following additional properties. Note that while a Handler may have these properties specified not all update processors can/will use/respect these settings.
 
@@ -202,7 +200,7 @@ The `dnr:defaultUpdateFile` property specifies a path to a file containing the d
 
 ## Protocol Handlers 
 
-Protocol Handlers are used to provide SPARQL Graph Store HTTP Protocol endpoints at either fixed/base URIs. Use the [ProtocolHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Web_ProtocolHandler.htm) for fixed URIs and the [WildcardProtocolHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Web_WildcardProtocolHandler.htm) for base URIs. If you want to support the full capabilities of the protocol you should use the latter since one of the features of the protocol is that requests to URIs under the Base URI should use that URI as the Graph URI unless the graph parameter is specified in the query string.
+Protocol Handlers are used to provide SPARQL Graph Store HTTP Protocol endpoints at either fixed/base URIs. Use the [`ProtocolHandler`](xref:VDS.RDF.Web.ProtocolHandler) for fixed URIs and the [`WildcardProtocolHandler`](xref:VDS.RDF.Web.WildcardProtocolHandler) for base URIs. If you want to support the full capabilities of the protocol you should use the latter since one of the features of the protocol is that requests to URIs under the Base URI should use that URI as the Graph URI unless the graph parameter is specified in the query string.
 
 An example configuration is as follows:
 
@@ -222,11 +220,11 @@ _:store a dnr:TripleStore ;
   dnr:type "VDS.RDF.TripleStore" .
 ```
 
-This specifies configuration for a Handler which responds to requests under the URI /protocol/ by providing a SPARQL Graph Store HTTP Protocol endpoint. The `dnr:protocolProcessor` property is used to specify the class that processes the protocol requests - for more details on configuring Protocol Processors see [[Configuration API - Protocol Processors|Configuration-Protocol-Processors]].
+This specifies configuration for a Handler which responds to requests under the URI /protocol/ by providing a SPARQL Graph Store HTTP Protocol endpoint. The `dnr:protocolProcessor` property is used to specify the class that processes the protocol requests - for more details on configuring Protocol Processors see [Configuration API - Protocol Processors](Configuration-Protocol-Processors.md).
 
 ## SPARQL Servers 
 
-SPARQL Servers are handlers which combine the features of SPARQL Query, Update and Uniform HTTP Protocol into one endpoint. They must always be registered at wildcard URIs and the currently there is one concrete implementation the [SparqlServer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Web_SparqlServer.htm). A SPARQL Server responds to requests to the Base URI plus query as a Query Endpoint, Base URI plus update as an Update Endpoint and all other URIs as a Graph Store HTTP Protocol Endpoint.
+SPARQL Servers are handlers which combine the features of SPARQL Query, Update and Uniform HTTP Protocol into one endpoint. They must always be registered at wildcard URIs and the currently there is one concrete implementation the [`SparqlServer`](xref:VDS.RDF.Web.SparqlServer). A SPARQL Server responds to requests to the Base URI plus query as a Query Endpoint, Base URI plus update as an Update Endpoint and all other URIs as a Graph Store HTTP Protocol Endpoint.
 
 Configuration is essentially the combination of configuration for a Query, Update and Protocol handler like so:
 

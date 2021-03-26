@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[Graphs|Configuration-Graphs]]
-
 # Configuring Graphs 
 
 Graphs can be specified using the [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#) in a variety of ways. Graphs can be specified as empty or they can be specified as the merge of multiple data sources.
@@ -17,7 +15,8 @@ Graphs are loaded from Configuration in the following way:
 1. Assign a specific URI as the Base URI of the Graph
 1.# Apply any specified reasoners
 
-**Note:** If any of the data sources fails to load then the loading of the Graph will fail.
+> [!NOTE]
+> If any of the data sources fails to load then the loading of the Graph will fail.
 
 # Basic Configuration 
 
@@ -53,11 +52,11 @@ _:otherGraph a dnr:Graph ;
   dnr:type "VDS.RDF.Graph" .
 ```
 
-**Note:** While it is possible to potentially introduce circular references by this mechanism the [ConfigurationLoader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_ConfigurationLoader.htm) is designed such that these references are detected during the loading process and an error will be thrown.
+**Note:** While it is possible to potentially introduce circular references by this mechanism the [`ConfigurationLoader`](xref:VDS.RDF.Configuration.ConfigurationLoader) is designed such that these references are detected during the loading process and an error will be thrown.
 
 ### Files 
 
-Loading data from files is specified as shown below using the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [IPathResolver](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_IPathResolver.htm) implementation by setting the `PathResolver` property of the `ConfigurationLoader`. Files are expected to be RDF graphs in formats which dotNetRDF understands.
+Loading data from files is specified as shown below using the `dnr:fromFile` property. File paths can either be absolute or may be relative. In the case of relative paths the resolution of the path can be controlled by introducing an [`IPathResolver`](xref:VDS.RDF.Configuration.IPathResolver) implementation by setting the `PathResolver` property of the `ConfigurationLoader`. Files are expected to be RDF graphs in formats which dotNetRDF understands.
 
 ```turtle
 
@@ -84,7 +83,7 @@ _:graph a dnr:Graph ;
 
 ### Datasets 
 
-Graphs can be filled with data from named graphs held in a SPARQL dataset specified using a combination of the `dnr:fromDataset` and `dnr:withUri` properties. The `dnr:fromDataset` property is used to point to a SPARQL Dataset (see [[Configuration API - SPARQL Datasets|Configuration-SPARQL-Datasets]]) from which data should be loaded and the `dnr:withUri` property is used to specify the URI of the Graph from the dataset which should be loaded. Multiple `dnr:withUri` properties may be specified to load multiple graphs from the dataset.
+Graphs can be filled with data from named graphs held in a SPARQL dataset specified using a combination of the `dnr:fromDataset` and `dnr:withUri` properties. The `dnr:fromDataset` property is used to point to a SPARQL Dataset (see [Configuration API - SPARQL Datasets](Configuration-SPARQL-Datasets.md)) from which data should be loaded and the `dnr:withUri` property is used to specify the URI of the Graph from the dataset which should be loaded. Multiple `dnr:withUri` properties may be specified to load multiple graphs from the dataset.
 
 If you specify multiple `dnr:fromDataset` properties then every URI specified with the `dnr:withUri` property will be loaded from every dataset. To load different graphs from different datasets use the `dnr:fromGraph` property to point to other graphs and setup those graphs to load the specific graphs from the specific databases you need.
 
@@ -136,7 +135,7 @@ _:graph a dnr:Graph ;
 
 ## Applying Reasoners 
 
-You can also apply reasoners to Graphs loaded in this way with the triples that the reasoner produces being materialised in the Graph. To learn how to configure a reasoner see [[Configuration API - Reasoners|Configuration-Reasoners]].
+You can also apply reasoners to Graphs loaded in this way with the triples that the reasoner produces being materialised in the Graph. To learn how to configure a reasoner see [Configuration API - Reasoners](Configuration-Reasoners.md).
 
 Linking a reasoner to a Graph is as easy as using the `dnr:reasoner` property as the following example in which an RDF Schema reasoner is applied to the Graph.
 

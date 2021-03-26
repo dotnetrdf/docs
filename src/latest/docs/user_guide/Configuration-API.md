@@ -1,10 +1,8 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]]
-
 # Configuration API 
 
-The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [ConfigurationLoader](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_ConfigurationLoader.htm) class which is in the `VDS.RDF.Configuration` namespace.
+The Configuration API is a powerful feature of dotNetRDF which provides an RDF based means of encoding configuration information such that objects representing commonly used objects such as Graphs, connections to Triple Stores etc. can be dynamically loaded. This functionality is provided by the [``ConfigurationLoader``](xref:VDS.RDF.Configuration.ConfigurationLoader) class which is in the `VDS.RDF.Configuration` namespace.
 
-Dynamic loading is done by classes which implement the [IObjectFactory](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_IObjectFactory.htm) interface which means that this mechanism can be extended as desired. Either additional `IObjectFactory` instances can be registered programmatically with the `AddObjectFactory(IObjectFactory factory)` method or you can specify them in your configuration files and have the system automatically detect them by calling the `AutoConfigureObjectFactories(IGraph g)` function.
+Dynamic loading is done by classes which implement the [``IObjectFactory``](xref:VDS.RDF.Configuration.IObjectFactory) interface which means that this mechanism can be extended as desired. Either additional [``IObjectFactory``](xref:VDS.RDF.Configuration.IObjectFactory) instances can be registered programmatically with the [``AddObjectFactory(IObjectFactory factory)``](xref:VDS.RDF.Configuration.ConfigurationLoader.AddObjectFactory(VDS.RDF.Configuration.IObjectFactory)) method or you can specify them in your configuration files and have the system automatically detect them by calling the [``AutoConfigureObjectFactories(IGraph g)``](xref:VDS.RDF.Configuration.ConfigurationLoader.AutoConfigureObjectFactories(VDS.RDF.IGraph)) function.
 
 # Configuration File structure 
 
@@ -27,7 +25,7 @@ To specify an object you will need at least two triples, for example to specify 
 
 We use the `rdf:type` (specified here by the Turtle/N3 keyword `a`) predicate to specify that some Node has a type of `dnr:Graph` which is the class of Graphs in the Configuration Vocabulary. Then the `dnr:type` property is used to specify the .Net type of this object, for dotNetRDF types it is sufficient to specify the full namespace qualified name of the class. For any other class you will need to specify the Assembly Qualified Name of the class.
 
-If you fail to specify a `dnr:type` property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the `dnr:Graph` class the default type is [Graph](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Graph.htm).
+If you fail to specify a `dnr:type` property then the object may be unloadable though some classes in the Configuration Vocabulary have default types. In the case of the `dnr:Graph` class the default type is [``Graph``](xref:VDS.RDF.Graph).
 
 ## Imports 
 
@@ -44,20 +42,20 @@ Since configuration graph for larger applications can grow to be quite complex y
 <> dnr:imports <http://example.org/other-config.ttl> .
 ```
 
-If you are using imports then you should always use the `LoadConfiguration()` method to load your Configuration Graph as this will automatically resolve imports for you.
+If you are using imports then you should always use the [``LoadConfiguration()``](xref:VDS.RDF.Configuration.ConfigurationLoader.LoadConfiguration(System.String)) method to load your Configuration Graph as this will automatically resolve imports for you.
 
 ## Auto-Configuration 
 
-The API supports the notion of auto-configuration, some types of object that should be globally registered can be auto-configured either when your Configuration is loaded or on demand via one of the auto-configuration methods e.g. `AutoConfigureOjectFactories(IGraph g)`
+The API supports the notion of auto-configuration, some types of object that should be globally registered can be auto-configured either when your Configuration is loaded or on demand via one of the auto-configuration methods e.g. [``AutoConfigureObjectFactories(IGraph g)``](xref:VDS.RDF.Configuration.ConfigurationLoader.AutoConfigureObjectFactories(VDS.RDF.IGraph))
 
-When you use the `LoadConfiguration()` method the auto-configuration will be automatically done for you unless you explicitly opt out using one of the overloads.
+When you use the [``LoadConfiguration()``](xref:VDS.RDF.Configuration.ConfigurationLoader.LoadConfiguration(System.String)) method the auto-configuration will be automatically done for you unless you explicitly opt out using one of the overloads.
 
 Currently the following may be auto-configured:
 
-* [[Object Factories|Configuration-Object-Factories]]
-* [[Readers and Writers|Configuration-Readers-And-Writers]]
-* [[SPARQL Operators|Configuration-SPARQL-Operators]]
-* [[Static Options|Configuration-Options]]
+* [Object Factories](Configuration-Object-Factories.md)
+* [Readers and Writers](Configuration-Readers-And-Writers.md)
+* [SPARQL Operators](Configuration-SPARQL-Operators.md)
+* [Static Options](Configuration-Options.md)
 
 ## Special URIs 
 
@@ -71,11 +69,11 @@ These URIs allow you to refer to the value of an AppSetting defined in the `<app
 
 ## LoadConfiguration() 
 
-`LoadConfiguration()` is a helper function that can be used to load in a configuration graph, it invokes the standard RDF loading mechanisms but also handles some special features of the Configuration API such as imports, auto-configuration etc.
+[``LoadConfiguration()``](xref:VDS.RDF.Configuration.ConfigurationLoader.LoadConfiguration(System.String)) is a helper function that can be used to load in a configuration graph, it invokes the standard RDF loading mechanisms but also handles some special features of the Configuration API such as imports, auto-configuration etc.
 
 ## LoadObject() 
 
-The main function that you will want to use is the `LoadObject()` function which attempts to load objects dynamically based on the information in a provided graph. The function is invoked by passing in a Configuration Graph containing the configuration and a Node representing the Object to be loaded.
+The main function that you will want to use is the [``LoadObject()``](xref:VDS.RDF.Configuration.ConfigurationLoader.LoadObject(System.String)) function which attempts to load objects dynamically based on the information in a provided graph. The function is invoked by passing in a Configuration Graph containing the configuration and a Node representing the Object to be loaded.
 
 For example consider the following configuration file which we'll refer to as `config.ttl`:
 
@@ -143,37 +141,37 @@ As of the most recent release all of the following objects can be loaded from Co
 
 ## Core Objects 
 
-* [[Graphs|Configuration-Graphs]]
-* [[Triple Stores|Configuration-Triple-Stores]]
-* [[Object Factories|Configuration-Object-Factories]]
-* [[Readers and Writers|Configuration-Readers-And-Writers]]
+* [Graphs](Configuration-Graphs.md)
+* [Triple Stores](Configuration-Triple-Stores.md)
+* [Object Factories](Configuration-Object-Factories.md)
+* [Readers and Writers](Configuration-Readers-And-Writers.md)
 
 ## SPARQL Features 
 
-* [[SPARQL Endpoints|Configuration-SPARQL-Endpoints]]
-* [[Query Processors|Configuration-Query-Processors]]
-* [[Update Processors|Configuration-Update-Processors]]
-* [[Protocol Processors|Configuration-Protocol-Processors]]
-* [[SPARQL Datasets|Configuration-SPARQL-Datasets]]
-* [[SPARQL Expression Factories|Configuration-SPARQL-Expression-Factories]]
-* [[SPARQL Operators|Configuration-SPARQL-Operators]]
-* [[SPARQL Optimisers|Configuration-SPARQL-Optimisers]]
-* [[Full Text Query|Configuration-Full-Text-Query]]
-* [[Reasoners|Configuration-Reasoners]]
+* [SPARQL Endpoints](Configuration-SPARQL-Endpoints.md)
+* [Query Processors](Configuration-Query-Processors.md)
+* [Update Processors](Configuration-Update-Processors.md)
+* [Protocol Processors](Configuration-Protocol-Processors.md)
+* [SPARQL Datasets](Configuration-SPARQL-Datasets.md)
+* [SPARQL Expression Factories](Configuration-SPARQL-Expression-Factories.md)
+* [SPARQL Operators](Configuration-SPARQL-Operators.md)
+* [SPARQL Optimisers](Configuration-SPARQL-Optimisers.md)
+* [Full Text Query](Configuration-Full-Text-Query.md)
+* [Reasoners](Configuration-Reasoners.md)
 
 ## 3rd Party Triple Store Integration 
 
-* [[Storage Providers|Configuration-Storage-Providers]]
+* [Storage Providers](Configuration-Storage-Providers.md)
 
 ## ASP.Net Integration 
 
-* [[HTTP Handlers|Configuration-HTTP-Handlers]]
-* [[User Groups|Configuration-User-Groups]]
-* [[Permissions|Configuration-Permissions]]
-* [[Users|Configuration-Users]]
+* [HTTP Handlers](Configuration-HTTP-Handlers.md)
+* [User Groups](Configuration-User-Groups.md)
+* [Permissions](Configuration-Permissions.md)
+* [Users](Configuration-Users.md)
 
 ## Miscellaneous 
 
-* [[Static Options|Configuration-Options]]
-* [[Proxy Servers|Configuration-Proxy-Servers]]
+* [Static Options](Configuration-Options.md)
+* [Proxy Servers](Configuration-Proxy-Servers.md)
 

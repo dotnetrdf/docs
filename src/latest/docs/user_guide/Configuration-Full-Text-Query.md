@@ -1,10 +1,8 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[Full Text Query|Configuration-Full-Text-Query]]
-
 # Configuring Full Text Query 
 
-Full Text Query is a non-standard SPARQL extension provided by the **dotNetRDF.Query.FullText.dll** library, please see [[Full Text Querying with SPARQL|Full-Text-Querying-With-SPARQL]] for general details on its usage.
+Full Text Query is a non-standard SPARQL extension provided by the **dotNetRDF.Query.FullText.dll** library, please see [Full Text Querying with SPARQL](Full-Text-Querying-With-SPARQL.md) for general details on its usage.
 
-You can use the [[Configuration API|Configuration-API]] to attach full text query functionality to a SPARQL Endpoint. To do this you will need to specify configuration for one of several ancillary objects.
+You can use the [Configuration API](Configuration-API.md) to attach full text query functionality to a SPARQL Endpoint. To do this you will need to specify configuration for one of several ancillary objects.
 
 As the Full Text Query functionality is an additional feature it uses a separate [Full Text Configuration Vocabulary](http://www.dotnetrdf.org/configuration/fulltext#) to specify the additional vocabulary used in configuring these objects.
 
@@ -29,7 +27,7 @@ _:fulltextFactory a dnr:ObjectFactory ;
 
 ## Index Schema 
 
-Index Schemas are specified as follows, this example shows the [DefaultIndexSchema](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Schema_DefaultIndexSchema.htm) which is the only schema included currently (advanced users can create their own schemas):
+Index Schemas are specified as follows, this example shows the [`DefaultIndexSchema`](xref:VDS.RDF.Query.FullText.Schema.DefaultIndexSchema) which is the only schema included currently (advanced users can create their own schemas):
 
 ```turtle
 
@@ -67,7 +65,7 @@ The optional `dnr-ft:version` property is used to specify the version of the ana
 
 ## Indexers 
 
-Indexers are classes that implement the [IFullTextIndexer](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Indexing_IFullTextIndexer.htm) interface and can perform indexing. Their configuration looks like the following:
+Indexers are classes that implement the [`IFullTextIndexer`](xref:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer) interface and can perform indexing. Their configuration looks like the following:
 
 ```turtle
 
@@ -88,7 +86,7 @@ Also you may optionally specify the `dnr-ft:schema` property to point to a Index
 
 ## Search Providers 
 
-A Search Provider provides the actual full text query capability, currently only one implementation [LuceneSearchProvider](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_FullText_Search_Lucene_LuceneSearchProvider.htm) is available and it is configured as follows:
+A Search Provider provides the actual full text query capability, currently only one implementation [`LuceneSearchProvider`](xref:VDS.RDF.Query.FullText.Search.Lucene.LuceneSearchProvider) is available and it is configured as follows:
 
 ```turtle
 
@@ -134,7 +132,7 @@ _:graph a dnr:Graph ;
 
 ## Full Text Optimiser 
 
-The [FullTextOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_FullTextOptimiser.htm) is the only optimiser provided by the Full Text library and is used to enable actual full text query support. It is configured as follows:
+The [`FullTextOptimiser`](xref:VDS.RDF.Query.Optimisation.FullTextOptimiser) is the only optimiser provided by the Full Text library and is used to enable actual full text query support. It is configured as follows:
 
 ```turtle
 
@@ -152,11 +150,11 @@ _:index a dnr-ft:Index ;
   dnr-ft:ensureIndex true .
 ```
 
-For details on how to attach this algebra optimiser to a HTTP Handler please see [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]]
+For details on how to attach this algebra optimiser to a HTTP Handler please see [Configuration API - HTTP Handlers](Configuration-HTTP-Handlers.md)
 
 ## Datasets 
 
-You can use the [FullTextIndexedDataset](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Datasets_FullTextIndexedDataset.htm) as a decorator over another dataset to automatically keep an index in sync with a dataset as that dataset changes.
+You can use the [`FullTextIndexedDataset`](xref:VDS.RDF.Query.Datasets.FullTextIndexedDataset) as a decorator over another dataset to automatically keep an index in sync with a dataset as that dataset changes.
 
 It is configured as follows:
 

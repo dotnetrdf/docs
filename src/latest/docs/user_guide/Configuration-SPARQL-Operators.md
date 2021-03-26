@@ -1,10 +1,8 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[SPARQL Operators|Configuration-SPARQL-Operators]]
-
 # Configuring SPARQL Operators 
 
-SPARQL Operators are a SPARQL extension that allows you to extend how certain operators in SPARQL are evaluated.  You can learn more about operators in the [[SPARQL Operators|DeveloperGuide-SPARQL-Operators]] page of the [[Developer Guide|DeveloperGuide]].
+SPARQL Operators are a SPARQL extension that allows you to extend how certain operators in SPARQL are evaluated.  You can learn more about operators in the [SPARQL Operators](../developer_guide/SPARQL-Operators.md) page of the [Developer Guide](../developer_guide/index.md).
 
-These may be configured quite simply provided they implement the [ISparqlOperator](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Operators_ISparqlOperator.htm) interface and have an unparameterized constructor.
+These may be configured quite simply provided they implement the [`ISparqlOperator`](xref:VDS.RDF.Query.Operators.ISparqlOperator) interface and have an unparameterized constructor.
 
 ```turtle
 

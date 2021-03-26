@@ -1,24 +1,22 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Formatting API|Formatting-API]]
-
 # Formatting API 
 
-The Formatting API is an collection of APIs found in the `VDS.RDF.Writing.Formatting` namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [[Writing RDF|Writing-RDF]] page.
+The Formatting API is an collection of APIs found in the [`VDS.RDF.Writing.Formatting`](xref:VDS.RDF.Writing.Formatting) namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [Writing RDF](../tutorial/Writing-RDF.md) page.
 
 The API consists of a number of interfaces:
 
 | Interface | Formatting Capabilities |
 | --- | --- |
-| [ICharFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_ICharFormatter.htm) | Formats individual characters |
-| [IUriFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_IUriFormatter.htm) | Formats URIs |
-| [IBaseUriFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_IBaseUriFormatter.htm) | Formats Base URI declarations |
-| [INamespaceFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_INamespaceFormatter.htm) | Formats namespace declarations |
-| [INodeFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_INodeFormatter.htm) | Formats [INode](https://dotnetrdf.github.io/api/html/T_VDS_RDF_INode.htm) instances |
-| [ITripleFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_ITripleFormatter.htm) | Formats [Triple](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Triple.htm) instances |
-| [IResultFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_IResultFormatter.htm) | Formats [SparqlResult](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_SparqlResult.htm) instances |
+| [`ICharFormatter`](xref:VDS.RDF.Writing.Formatting.ICharFormatter) | Formats individual characters |
+| [`IUriFormatter`](xref:VDS.RDF.Writing.Formatting.IUriFormatter) | Formats URIs |
+| [`IBaseUriFormatter`](xref:VDS.RDF.Writing.Formatting.IBaseUriFormatter) | Formats Base URI declarations |
+| [`INamespaceFormatter`](xref:VDS.RDF.Writing.Formatting.INamespaceFormatter) | Formats namespace declarations |
+| [`INodeFormatter`](xref:VDS.RDF.Writing.Formatting.INodeFormatter) | Formats [INode](xref:VDS.RDF.INode) instances |
+| [`ITripleFormatter`](xref:VDS.RDF.Writing.Formatting.ITripleFormatter) | Formats [Triple](xref:VDS.RDF.Triple) instances |
+| [`IResultFormatter`](xref:VDS.RDF.Writing.Formatting.IResultFormatter) | Formats [SparqlResult](xref:VDS.RDF.Query.SparqlResult) instances |
 
 # Basic Usage 
 
-Generally you will only want to use one of the higher level interfaces such as `INodeFormatter` or `ITripleFormatter`.  Both these interfaces define `Format(…)` methods which take either a `Triple` or an `INode` and return a string representation of them. You can also call `ToString(…)` overloads on `Triple` and `INode` which take in a formatter and return the String representation as formatted by that formatter.
+Generally you will only want to use one of the higher level interfaces such as [`INodeFormatter`](xref:VDS.RDF.Writing.Formatting.INodeFormatter) or [`ITripleFormatter`](xref:VDS.RDF.Writing.Formatting.ITripleFormatter).  Both these interfaces define `Format(…)` methods which take either a `Triple` or an `INode` and return a string representation of them. You can also call `ToString(…)` overloads on `Triple` and `INode` which take in a formatter and return the String representation as formatted by that formatter.
 
 In general any formatter usually provides one or more `Format()` or `FormatX()` methods which are used to format specific things.  These methods take the thing to be formatted and return a string.
 
@@ -48,15 +46,15 @@ Currently the library has the following formatters available but you can easily 
 
 | Formatter | Format Produced |
 | --- | --- |
-| [CsvFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_CsvFormatter.htm) | CSV |
-| [Notation3Formatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_Notation3Formatter.htm) | Notation 3 |
-| [NQuadsFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_NQuadsFormatter.htm) | NQuads |
-| [NTriplesFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_NTriplesFormatter.htm) | NTriples |
-| [SparqlFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_SparqlFormatter.htm) | SPARQL style, can also format queries |
-| [TsvFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_TsvFormatter.htm) | TSV |
-| [TurtleFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_TurtleFormatter.htm) | Turtle |
-| [UncompressedNotation3Formatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_UncompressedNotation3Formatter.htm) | Uncompressed Notation 3 |
-| [UncompressedTurtleFormatter](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Writing_Formatting_UncompressedTurtleFormatter.htm) | Uncompressed Turtle |
+| [`CsvFormatter`](xref:VDS.RDF.Writing.Formatting.CsvFormatter) | CSV |
+| [`Notation3Formatter`](xref:VDS.RDF.Writing.Formatting.Notation3Formatter) | Notation 3 |
+| [`NQuadsFormatter`](xref:VDS.RDF.Writing.Formatting.NQuadsFormatter) | NQuads |
+| [`NTriplesFormatter`](xref:VDS.RDF.Writing.Formatting.NTriplesFormatter) | NTriples |
+| [`SparqlFormatter`](xref:VDS.RDF.Writing.Formatting.SparqlFormatter) | SPARQL style, can also format queries |
+| [`TsvFormatter`](xref:VDS.RDF.Writing.Formatting.TsvFormatter) | TSV |
+| [`TurtleFormatter`](xref:VDS.RDF.Writing.Formatting.TurtleFormatter) | Turtle |
+| [`UncompressedNotation3Formatter`](xref:VDS.RDF.Writing.Formatting.UncompressedNotation3Formatter) | Uncompressed Notation 3 |
+| [`UncompressedTurtleFormatter`](xref:VDS.RDF.Writing.Formatting.UncompressedTurtleFormatter) | Uncompressed Turtle |
 
 ## Example 2 
 

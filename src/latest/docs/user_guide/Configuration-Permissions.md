@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[Permissions|Configuration-Permissions]]
-
 # Configuring Permissions 
 
 Permissions are configured very simply as follows:

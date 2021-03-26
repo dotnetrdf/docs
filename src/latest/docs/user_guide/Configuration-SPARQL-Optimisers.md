@@ -1,13 +1,11 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[SPARQL Optimisers|Configuration-SPARQL-Optimisers]]
-
 # Configuring SPARQL Optimisers 
 
 Optimisers come in two forms both of which can be configured using the Configuration API:
 
-* [IQueryOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_IQueryOptimiser.htm) are optimisers which optimise Graph Patterns in a Query
-* [IAlgebraOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_IAlgebraOptimiser.htm) are optimisers which optimise SPARQL Algebra
+* [`IQueryOptimiser`](xref:VDS.RDF.Query.Optimisation.IQueryOptimiser) are optimisers which optimise Graph Patterns in a Query
+* [`IAlgebraOptimiser`](xref:VDS.RDF.Query.Optimisation.IAlgebraOptimiser) are optimisers which optimise SPARQL Algebra
 
-Please see [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]] for details on how to attach optimisers to HTTP Handlers.
+Please see [Configuration API - HTTP Handlers](Configuration-HTTP-Handlers.md) for details on how to attach optimisers to HTTP Handlers.
 
 # Configuring Query Optimisers 
 
@@ -27,7 +25,7 @@ The above configures the default optimiser which is used when no other optimiser
 
 ## No Reorder Optimiser 
 
-The [NoReorderOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_NoReorderOptimiser.htm) is an optimiser that only places `FILTER` clauses but does not otherwise reorder Graph Patterns. It can be configured like so:
+The [`NoReorderOptimiser`](xref:VDS.RDF.Query.Optimisation.NoReorderOptimiser) is an optimiser that only places `FILTER` clauses but does not otherwise reorder Graph Patterns. It can be configured like so:
 
 ```turtle
 
@@ -39,7 +37,7 @@ _:optimiser a dnr:QueryOptimiser ;
 
 ## Weighted Optimiser 
 
-The [WeightedOptimiser](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Query_Optimisation_WeightedOptimiser.htm) reorders Graph Patterns based on weighting calculated from statistics about data. These statistics must be invented/computed and then linked as a Graph to the optimiser like so:
+The [`WeightedOptimiser`](xref:VDS.RDF.Query.Optimisation.WeightedOptimiser) reorders Graph Patterns based on weighting calculated from statistics about data. These statistics must be invented/computed and then linked as a Graph to the optimiser like so:
 
 ```turtle
 

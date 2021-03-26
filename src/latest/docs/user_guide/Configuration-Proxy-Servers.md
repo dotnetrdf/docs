@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Configuration API|Configuration-API]] > [[Proxy Servers|Configuration-Proxy-Servers]]
-
 # Configuring Proxy Servers 
 
 Proxy Servers are configured very simply as follows:
