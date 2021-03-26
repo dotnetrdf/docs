@@ -1,18 +1,17 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Handlers API|Handlers-API]]
-
 # Handlers API 
 
 The Handlers API is a powerful API that permits the stream processing of RDF and SPARQL Results.  It can be used in virtually any part of the API that works with RDF or SPARQL results.
 
-The API is designed to facilitate stream processing of the data, that is that handlers get the data as soon as it is available and they control whether processing continues or terminates. Handlers implement either the [IRdfHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_Handlers_IRdfHandler.htm) or the [ISparqlResultsHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_Handlers_ISparqlResultsHandler.htm) interface in order to do this, please note that there is no reason a custom implementation cannot implement both but for ease of implementation and abstraction purposes our implementations do one or the other.
+The API is designed to facilitate stream processing of the data, that is that handlers get the data as soon as it is available and they control whether processing continues or terminates. Handlers implement either the [`IRdfHandler`](xref:VDS.RDF.IRdfHandler) or the [`ISparqlResultsHandler`](xref:VDS.RDF.ISparqlResultsHandler) interface in order to do this, please note that there is no reason a custom implementation cannot implement both but for ease of implementation and abstraction purposes our implementations do one or the other.
 
-One thing to note is that both handler interfaces descend from the [INodeFactory](https://dotnetrdf.github.io/api/html/T_VDS_RDF_INodeFactory.htm) interface which is a large interface that if implemented incorrectly may lead to serious issues. Therefore we'd typically recommend extending either of [BaseRdfHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_Handlers_BaseRdfHandler.htm) or [BaseResultsHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_Handlers_BaseResultsHandler.htm). If you are an advanced developer you may wish to extend their parent class [BaseHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_Handlers_BaseHandler.htm) instead which will allow you complete control over how you implement the rest of the handler interface while still giving you the `INodeFactory` implementation.
+One thing to note is that both handler interfaces descend from the [`INodeFactory`](xref:VDS.RDF.INodeFactory) interface which is a large interface that if implemented incorrectly may lead to serious issues. Therefore we'd typically recommend extending either of [`BaseRdfHandler`](xref:VDS.RDF.Parsing.Handlers.BaseRdfHandler) or [`BaseResultsHandler`](xref:VDS.RDF.Parsing.Handlers.BaseResultsHandler). If you are an advanced developer you may wish to extend their parent class [`BaseHandler`](xref:VDS.RDF.Parsing.Handlers.BaseHandler) instead which will allow you complete control over how you implement the rest of the handler interface while still giving you the `INodeFactory` implementation.
 
-**Note:** While the handlers API allows you to read RDF in a fully streaming fashion this does not mean that memory usage won't steadily increase over time due to various internal state that a parser has to keep during the parsing process.  You may also need to disable the [[URI Interning|DeveloperGuide-URI-Interning]] feature if you wish to stream parse very large data files.
+> [!NOTE]
+> While the handlers API allows you to read RDF in a fully streaming fashion this does not mean that memory usage won't steadily increase over time due to various internal state that a parser has to keep during the parsing process.  You may also need to disable the [URI Interning](../developer_guide/URI-Interning.md) feature if you wish to stream parse very large data files.
 
 # The IRdfHandler Interface 
 
-So let's start by looking at the methods of the `IRdfHandler` interface:
+So let's start by looking at the methods of the [`IRdfHandler`](xref:VDS.RDF.IRdfHandler) interface:
 
 ## StartRdf() 
 
@@ -66,11 +65,11 @@ Called when processing completes, either because the end of the data was reached
 
 # Sample Usages 
 
-You can see a basic example of using the API on the [[Reading RDF|Reading-RDF]] page
+You can see a basic example of using the API on the [Reading RDF](../tutorial/Reading-RDF.md) page
 
 ## Using the WriteThroughHandler 
 
-The [WriteThroughHandler](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Parsing_Handlers_WriteThroughHandler.htm) is a powerful `IRdfHandler` implementation that takes in Triples/Quads and outputs them to an arbitrary `TextWriter` using an `ITripleFormatter` of your choice.
+The [`WriteThroughHandler`](xref:VDS.RDF.Parsing.Handlers.WriteThroughHandler) is a powerful `IRdfHandler` implementation that takes in Triples/Quads and outputs them to an arbitrary `TextWriter` using an `ITripleFormatter` of your choice.
 
 This allows you to perform fast data conversion between different formats, please be aware that depending on the format the data compression will be far poorer than that produced by loading the data into memory and then writing it out with an `IRdfWriter`.
 
