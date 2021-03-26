@@ -1,8 +1,6 @@
-[[User Guide|UserGuide]] > [[JSON-LD API|JsonLd-Api]] > Processor Options
-
 # Processor Options
 
-The class `VDS.RDF.JsonLd.JsonLdProcessorOptions` is used to pass various processing options to the JSON-LD APIs. This class exposes each processor option as a property with getter and setter.
+The class [`VDS.RDF.JsonLd.JsonLdProcessorOptions`](xref:VDS.RDF.JsonLd.JsonLdProcessorOptions) is used to pass various processing options to the JSON-LD APIs. This class exposes each processor option as a property with getter and setter.
 
 | Option Property | Purpose
 |-----------------|-----------|
@@ -36,7 +34,7 @@ There are three supported JSON-LD processing modes:
 
 ## Custom JSON Loader
 
-The `Loader` property of `JsonLdProcessorOptions` allows the developer to override the default remote JSON loading functionality of the JsonLdProcessor. It is a function that takes a `System.Uri` as its only parameter and returns a `VDS.RDF.JsonLd.RemoteDocument` instance representing the loaded JSON. By implementing a custom loader function it is possible to implement your own resolution logic such as redirecting requests to another location or using  a local cache.
+The [`Loader`](xref:VDS.RDF.JsonLd.JsonLdProcessorOptions.Loader) property of `JsonLdProcessorOptions` allows the developer to override the default remote JSON loading functionality of the JsonLdProcessor. It is a function that takes a `System.Uri` as its only parameter and returns a [`VDS.RDF.JsonLd.RemoteDocument`](xref:VDS.RDF.JsonLd.RemoteDocument) instance representing the loaded JSON. By implementing a custom loader function it is possible to implement your own resolution logic such as redirecting requests to another location or using  a local cache.
 
 The RemoteDocument class has three properties of which two MUST be set and one MAY be set:
 
@@ -44,4 +42,4 @@ The RemoteDocument class has three properties of which two MUST be set and one M
 |-------------------------|------------------------|
 | Document                | REQUIRED. The JSON document. The value may be either a `Newtonsoft.Json.Linq.JToken` or a string. If the value is a string, the document will be parsed from the string provided.
 | DocumentUrl             | REQUIRED. The final URL of the loaded document, taking into account any redirects. This is required for proper relative URI resolution during processing.
-| ContextUrl              | OPTIONAL. If the response from the remote server contains an HTTP Link Header (RFC5988) using the http://www.w3.org/ns/json-ld#context link relation in the response, then the ContextUrl property should be set to that value *unless* the response content type is `application/ld+json` (in which case the link header is ignored). NOTE: it is an error for the server to return multiple context link headers and this should be indicated by having the loader raise a `JsonLdProcessorException` with the error code `JsonLdErrorCode.MultipleContextLinkHeaders`
+| ContextUrl              | OPTIONAL. If the response from the remote server contains an HTTP Link Header (RFC5988) using the http://www.w3.org/ns/json-ld#context link relation in the response, then the ContextUrl property should be set to that value *unless* the response content type is `application/ld+json` (in which case the link header is ignored). NOTE: it is an error for the server to return multiple context link headers and this should be indicated by having the loader raise a [`JsonLdProcessorException`](xref:VDS.RDF.JsonLd.JsonLdProcessorException) with the error code [`JsonLdErrorCode.MultipleContextLinkHeaders`](xref:VDS.RDF.JsonLd.JsonLdErrorCode)

@@ -6,9 +6,9 @@ The APIs we implement are based on the [JSON-LD 1.1 Specification](https://www.w
 
 ## Features
 
-* [[Expansion|JsonLd-Expansion]]
-* [[Compaction|JsonLd-Compaction]]
-* [[Flattening|JsonLd-Flattening]]
-* [[Framing|JsonLd-Framing]]
-* [[Processor Options|JsonLd-ProcessorOptions]]
-* [[Error Handling|JsonLd-ErrorHandling]]
+* [Expansion](JsonLd-Expansion.md)
+* [Compaction](JsonLd-Compaction.md)
+* [Flattening](JsonLd-Flattening.md)
+* [Framing](JsonLd-Framing.md)
+* [Processor Options](JsonLd-ProcessorOptions.md)
+* [Error Handling](JsonLd-ErrorHandling.md)
