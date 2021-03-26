@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > Dynamic API
-
 # Dynamic API 
 
 ## Introduction
@@ -8,7 +6,7 @@ The Dynamic API allows developers to access and update RDF graphs and SPARQL res
 
 ## Accessing the Dynamic API
 
-The extension method `IGraph.AsDynamic()` allows a dotNetRDF graph to be accessed as a dynamic collection. This method accepts two optional parameters:
+The extension method [`IGraph.AsDynamic()`](xref:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.IGraph,System.Uri,System.Uri)) (found in [`VDS.RDF.Dynamic.DynamicExtensions`](xref:VDS.RDF.Dynamic.DynamicExtensions)) allows a dotNetRDF graph to be accessed as a dynamic collection. This method accepts two optional parameters:
 
 * `subjectBaseUri` - a base URI that will be used to resolve relative subject URI references in dynamic API calls. If not defined, this defaults to the base URI of the graph that is being accessed.
 * `predicateBaseUri` - a base URI that will be used to resolve relative predicate URI references in dynamic API calls. If not defined, this defaults to the `subjectBaseUri` (or to the graph base URI if `subjectBaseUri` is also undefined).
