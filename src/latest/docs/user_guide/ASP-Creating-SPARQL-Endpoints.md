@@ -1,12 +1,10 @@
-[[Home]] > [[User Guide|UserGuide]] > [[ASP.Net Integration|ASPNET-Integration]] > [[Creating SPARQL Endpoints|ASP-Creating-SPARQL-Endpoints]]
-
 # Creating SPARQL Endpoints 
 
 dotNetRDF provides a set of HTTP Handlers that can be used to deploy various forms of RDF and SPARQL endpoints as part of your ASP.Net website.
 
 ## Automated Configuration 
 
-[[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]] gives a guide to the available handlers and [[Deploying with rdfWebDeploy|ASP-Deploying-With-rdfWebDeploy]] walks you through the automated process of deploying them.
+[Configuration API - HTTP Handlers](Configuration-HTTP-Handlers.md) gives a guide to the available handlers and [Deploying with rdfWebDeploy](ASP-Deploying-With-rdfWebDeploy.md) walks you through the automated process of deploying them.
 
 ## Manual Configuration 
 
@@ -25,7 +23,7 @@ Your Configuration Graph is registered using the `<appSettings>` section of your
 </appSettings>
 ```
 
-Each Handler is associated with some Configuration data in your Configuration Graph by using special URIs of the form `<dotnetrdf:/path>` as described in [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]]
+Each Handler is associated with some Configuration data in your Configuration Graph by using special URIs of the form `<dotnetrdf:/path>` as described in [Configuration API - HTTP Handlers](Configuration-HTTP-Handlers.md)
 
 ### Handler Registration 
 
@@ -62,7 +60,8 @@ Then provided you have entered all the relevant configuration settings for your 
 
 Under IIS 6x you will need to get IIS to serve the request even when the physical file doesn't exist. To do this you can either create a dummy file/folder with the appropriate name or use the IIS 5x configuration approach (see [Microsoft TechNet article](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/4c840252-fab7-427e-a197-7facb6649106.mspx?mfr=true) for IIS 6x)
 
-**Note:** In theory it should be possible to configure under IIS 6 without the previous step but I don't currently have access to an appropriate machine to verify this.
+>[!NOTE]
+> In theory it should be possible to configure under IIS 6 without the previous step but I don't currently have access to an appropriate machine to verify this.
 
 #### IIS 7x
 

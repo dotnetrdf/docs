@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Ontology API|Ontology-API]]
-
 # Ontology API 
 
 The Ontology API part of dotNetRDF provides a number of abstractions over graphs, triples and nodes that allow users who don't want to work at the levels of triples to create and manipulate ontologies and schemas. In general anything that uses RDFS and OWL classes and properties and expresses relationships between them may be more easily manipulated using the Ontology API than directly using the core graph and triple APIs.
@@ -94,9 +92,9 @@ The API provides the following concepts which are wrappers over graphs, triples 
 
 | Class | Purpose |
 | --- | --- |
-| [OntologyGraph](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyGraph.htm) | Represents a graph whose ontology elements may be accessed |
-| [Ontology](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_Ontology.htm) | Represents information about an ontology |
-| [OntologyResource](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyResource.htm) | Represents a resource in the ontology, specific sub-classes expand the basic capabilities further |
-| [OntologyClass](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyClass.htm) | Represents a class in an ontology |
-| [OntologyProperty](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_OntologyProperty.htm) | Represents a property in an ontology |
-| [Individual](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Ontology_Individual.htm) | Represents an instance of a class in an ontology |
+| [OntologyGraph](xref:VDS.RDF.Ontology.OntologyGraph) | Represents a graph whose ontology elements may be accessed |
+| [Ontology](xref:VDS.RDF.Ontology.Ontology) | Represents information about an ontology |
+| [OntologyResource](xref:VDS.RDF.Ontology.OntologyResource) | Represents a resource in the ontology, specific sub-classes expand the basic capabilities further |
+| [OntologyClass](xref:VDS.RDF.Ontology.OntologyClass) | Represents a class in an ontology |
+| [OntologyProperty](xref:VDS.RDF.Ontology.OntologyProperty) | Represents a property in an ontology |
+| [Individual](xref:VDS.RDF.Ontology.Individual) | Represents an instance of a class in an ontology |

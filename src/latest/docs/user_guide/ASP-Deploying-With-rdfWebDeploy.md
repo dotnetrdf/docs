@@ -1,10 +1,6 @@
-[[Home]] > [[User Guide|UserGuide]] > [[ASP.Net Integration|ASPNET-Integration]] > [[Deploying with rdfWebDeploy|ASP-Deploying-With-rdfWebDeploy]]
-
 # Deploying with rdfWebDeploy 
 
-Integration of dotNetRDF into ASP.Net applications is configured using the [[Configuration API|Configuration-API]] and can be deployed using [[rdfWebDeploy|Tools-rdfWebDeploy]]. This guide teaches you how to deploy configuration using rdfWebDeploy.
-
-To see an example of a more complex configuration file you can go to [Configuration API](http://www.dotnetrdf.org/demos/sampleConfig]] which is the configuration file used for all the demos found under the [[http://www.dotnetrdf.org/demos/]] URI. The configuration file shown there was tested and deployed using the method described here.
+Integration of dotNetRDF into ASP.Net applications is configured using the [Configuration API](Configuration-API.md) and can be deployed using [rdfWebDeploy](Tools-rdfWebDeploy.md). This guide teaches you how to deploy configuration using rdfWebDeploy.
 
 # Problem 
 
@@ -12,10 +8,9 @@ In this example we want to create a SPARQL Query endpoint which has a base Graph
 
 ## Step 1 - Define Configuration 
 
-To start with we need to create a configuration file which defines this information - see the [[UserGuide/Configuration API) documentation for guidance on this, this will look like the following:
+To start with we need to create a configuration file which defines this information - see the [Configuration API](Configuration-API.md) documentation for guidance on this, this will look like the following:
 
 ```turtle
-
 @prefix dnr: <http://www.dotnetrdf.org/configuration#> .
 
 # Firstly note that our Handler must have a subject which is a special dotNetRDF URI as discussed in Configuration API - HTTP Handlers
@@ -47,13 +42,13 @@ We recommend that you create your configuration file in your applications `App_D
 
 Next step is to test your Configuration for errors and mistakes by issuing the following command at the command line (assumes you have the Tools package installed and on your path):
 
-```
+```dos
 X:\example.com\www>rdfWebDeploy -test App_Data\config.ttl
 ```
 
 This will test your configuration file and produce output like the following:
 
-```
+```dos
 rdfWebDeploy: Opened the configuration file successfully
 rdfWebDeploy: Loaded the configuration vocabulary successfully
 
@@ -92,13 +87,14 @@ Both of these methods will create/update your `Web.config` file so that all the 
 
 With either of these methods you can add the options `-nointreg` to not register handlers in the integrated mode section of your `Web.config` file or `-noclassicreg` to not register handlers in the classic mode section of your `Web.config` file.
 
-**Important:** This tool was originally designed for .Net 3.5 but dotNetRDF now also supports .Net 4.0, as the `Web.config` format has some differences between ASP.Net 3.5 and ASP.Net 4.0 we strongly recommend you ensure that you have a pre-existing `Web.config` before running this step as we cannot guarantee that a created `Web.config` will be compatible with your environment whereas updating an existing `Web.config` file should work fine.
+> [!WARNING]
+> This tool was originally designed for .Net 3.5 but dotNetRDF now also supports .Net 4.0, as the `Web.config` format has some differences between ASP.Net 3.5 and ASP.Net 4.0 we strongly recommend you ensure that you have a pre-existing `Web.config` before running this step as we cannot guarantee that a created `Web.config` will be compatible with your environment whereas updating an existing `Web.config` file should work fine.
 
 ### Local IIS Method 
 
 If your application is configured on a local IIS server instance then you can issue the following command:
 
-```
+```dos
 X:\example.com\www>rdfWebDeploy -deploy /appVirtualPath config.ttl
 ```
 
@@ -106,7 +102,7 @@ With this method you specify the virtual path to your application and then the n
 
 If your application is not on the default site of your IIS instance then you would use the `-site` option like so:
 
-```
+```dos
 X:\example.com\www>rdfWebDeploy -deploy /appVirtualPath config.ttl -site "www.example.com"
 ```
 
@@ -136,17 +132,17 @@ Navigate to the URL `/sparql` at your site and you should now have a working SPA
 
 There are two common error conditions you may run into:
 
-You get a [DotNetRdfConfigurationException](https://dotnetrdf.github.io/api/html/T_VDS_RDF_Configuration_DotNetRdfConfigurationException.htm) - this generally indicates that your Configuration file is invalid (note that `rdfWebDeploy -test` can only ensure general syntactic correctness and not validity). If you have debugging turned on you should normally see an informative message detailed what is wrong with your configuration. Correct the errors and retry - you may need to restart the IIS site to force the updated file to be read in some cases.
+You get a [DotNetRdfConfigurationException](xref:VDS.RDF.Configuration.DotNetRdfConfigurationException) - this generally indicates that your Configuration file is invalid (note that `rdfWebDeploy -test` can only ensure general syntactic correctness and not validity). If you have debugging turned on you should normally see an informative message detailed what is wrong with your configuration. Correct the errors and retry - you may need to restart the IIS site to force the updated file to be read in some cases.
 
 You get an `Unable to load type VDS.RDF.Web.QueryHandler` or similar error. This is usually due to a failure to upload the required DLLs into the `bin/` directory of your site. If you have done this ensure that you are running as an IIS Application rather than a virtual directory. If you are running as a virtual directory (and cannot change to running as an IIS application) then move the DLLs from the `bin/` directory in your virtual folder to the `bin/` directory of the application root
 
-Depending on your version of ASP.Net you may also need to make some manual tweaks to the `Web.config` - see [[Creating SPARQL Endpoints|ASP-Creating-SPARQL-Endpoints]] for more details.
+Depending on your version of ASP.Net you may also need to make some manual tweaks to the `Web.config` - see [Creating SPARQL Endpoints](ASP-Creating-SPARQL-Endpoints.md) for more details.
 
 # Further Reading 
 
 For more information on setting up SPARQL endpoints you may wish to look at the following topics:
 
-* [[Configuration API|Configuration-API]]
-* [[Configuration API - HTTP Handlers|UserGuide/Configuration/HTTP Handlers]]
+* [Configuration API](Configuration-API.md)
+* [Configuration API - HTTP Handlers](Configuration-HTTP-Handlers.md)
 * [Configuration Vocabulary](http://www.dotnetrdf.org/configuration#)
-* [[rdfWebDeploy|Tools-rdfWebDeploy]]
+* [rdfWebDeploy](Tools-rdfWebDeploy.md)
