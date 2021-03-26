@@ -1,16 +1,14 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|Tools]] > [[rdfServerGui|Tools-rdfServerGui]]
-
 # rdfServerGui 
 
-rdfServerGui is a basic GUI for working with [[rdfServer|Tools-rdfServer]]
+rdfServerGui is a basic GUI for working with [rdfServer](Tools-rdfServer.md)
 
 ## Download 
 
-You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
+You can download this tool as part of our [Toolkit](Tools.md)
 
 ## Documentation 
 
-rdfServerGui is a basic GUI that can be used to manage [[rdfServer|Tools-rdfServer]] instances.  The basic UI looks like the following:
+rdfServerGui is a basic GUI that can be used to manage [rdfServer](Tools-rdfServer.md) instances.  The basic UI looks like the following:
 
 {{http://www.dotnetrdf.org/images/screenshots/rdfservergui.jpg|rdfServerGui}}
 
@@ -24,7 +22,8 @@ As can be seen it provides three tabs:
 
 The Create Server tab provides the easiest way to get a server up and running, fill out the options you are interested in and hit Create.  The following is a summary of the options:
 
-|= Option |= Default |= Description |
+| Option | Default | Description |
+|--------|---------|-------------|
 | Host | localhost | The hostname on which the server will listen for HTTP requests. |
 | Port | 1986 | The port on which the server will listen for HTTP requests. |
 | Configuration File | None | Used to specify a RDF configuration file that will be used to configure rdfServer |
@@ -57,4 +56,4 @@ If you restart the GUI you will be able to see running external servers but you 
 
 ### Create Server Advanced 
 
-Create Server Advanced simply allows you to create a server by specifying the same command line arguments as if you were starting [[rdfServer|Tools-rdfServer]] directly.  Servers created this way always run as external servers and give you complete control over the options you pass to the server.
+Create Server Advanced simply allows you to create a server by specifying the same command line arguments as if you were starting [rdfServer](Tools-rdfServer.md) directly.  Servers created this way always run as external servers and give you complete control over the options you pass to the server.

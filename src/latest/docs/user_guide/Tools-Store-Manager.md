@@ -1,14 +1,12 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|Tools]] > Store Manager
-
 # Store Manager 
 
-The Store Manager is a utility which allows you to use a simple GUI interface to view and manage the contents of Triple Stores. You can work with any of the supported native Triple Stores, see [[Storage Providers|Storage-Providers]] for the list of currently supported stores.
+The Store Manager is a utility which allows you to use a simple GUI interface to view and manage the contents of Triple Stores. You can work with any of the supported native Triple Stores, see [Storage Providers](Storage-Providers.md) for the list of currently supported stores.
 
 Functionality differs depending on the type of store and the capabilities of the given store (or more specifically of our integration with that store).
 
 ## Download 
 
-You can download this tool as part of our [[Toolkit|Tools]]
+You can download this tool as part of our [Toolkit](Tools.md)
 
 ## Documentation 
 
@@ -32,7 +30,7 @@ When you've chosen to create a New Connection either via the File Menu or the St
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_newconnection.jpg|Store Manager - New Connection}}
 
-Available stores are any store which we provide support in any of our publicly released libraries or for which you have a [[Store Plugin|Tools-StoreManager-Plugins]] available in your `plugins/` folder.
+Available stores are any store which we provide support in any of our publicly released libraries or for which you have a [Store Plugin](Tools-Store-Manager-Plugins.md) available in your `plugins/` folder.
 
 ### Graph List 
 
@@ -46,7 +44,7 @@ Provided your chosen store supports SPARQL you can query against it using the SP
 
 {{http://www.dotnetrdf.org/images/screenshots/storemanager_improved_editor.png|Store Manager - SPARQL Query}}
 
-As with the [[SparqlGui|Tools-SparqlGui]] you can save and load queries to text files as desired. 
+As with the [SparqlGui](Tools-SparqlGui.md) you can save and load queries to text files as desired. 
 
 Results are displayed in the same window like so, results from multiple queries are presented as tabs that can be switched between. You can hit the detach button to open a set of results in a separate window if you prefer that:
 

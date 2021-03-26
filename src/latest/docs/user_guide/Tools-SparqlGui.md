@@ -1,5 +1,3 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|Tools]] > [[SparqlGui|Tools-SparqlGui]]
-
 # SparqlGui 
 
 The SparqlGUI is a Windows GUI tool for testing out SPARQL queries on arbitrary datasets which you create by loading in RDF from files and/or remote URIs. Additionally you may set an option so that the query can load graphs on demand from the web where they are specified in `FROM`, `FROM NAMED` or `GRAPH` clauses in the query.
@@ -8,7 +6,7 @@ It will also run under Mono though user experience for Windows Forms based GUIs 
 
 ## Download 
 
-You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
+You can download this tool as part of our [Toolkit](Tools.md)
 
 ## Documentation 
 
@@ -32,7 +30,8 @@ Selects the format that you want the results of CONSTRUCT/DESCRIBE queries prese
 
 Query Options lets you set options for how queries are executed and parsed.
 
-|= Option |= Default |= Description |
+| Option | Default | Description |
+|--------|---------|-------------|
 | Timeout | 10,000 ms | Sets the timeout for query execution |
 | Partial Results on Timeout | Disabled |Controls whether any results should be returned in the event of a timeout. |
 | Allowing Graphs to be loaded 'on demand' from the web | Disabled | Controls the behaviour when queries that specify graph URIs in `FROM`, `FROM NAMED` or `GRAPH` clauses if the Graphs aren't already present in the dataset.  When enabled the tool will attempt to retrieve them from the web. |
@@ -43,11 +42,12 @@ Query Options lets you set options for how queries are executed and parsed.
 | Default Graph is union of all graphs | Disabled | Controls whether queries that parts of a query that don't specify a graph to query will query all graphs rather than only the unnamed default graph |
 | View Results and Graphs in Applications | Enabled | When enabled results are shown in the in application viewer, when disabled the results/graph are written to a file and a separate process launched to open that file.  This will cause the file to open in the default viewer application configured for that file type on your system. |
 | Log Query Explanations | Disabled | When enabled query execution will likely be slower but explanations will be logged to the log file allowing you to understand why a query does/doesn't return results. |
-| Enable Full Text Indexing | Disabled | When enabled you can use our full text search extensions as detailed on the [[Full Text Querying with SPARQL|Full-Text-Querying-With-SPARQL]] page. |
+| Enable Full Text Indexing | Disabled | When enabled you can use our full text search extensions as detailed on the [Full Text Querying with SPARQL](Full-Text-Querying-With-SPARQL.md) page. |
 | Allow Unsafe Optimisations | Disabled | Controls whether certain optimizations that are considered potentially unsafe i.e. may change the semantics and thus the results of the queries may be used.  You can experiment with this if you want but it affects very few queries and often gives worse performance than normal optimizations. |
 | Use BOM for UTF-8 Output | Disabled | Controls whether data exported to files in UTF-8 formats includes a UTF-8 BOM. Disable this option if the data you export will be used with Linux/Unix/Java tools as these sometimes have trouble with the UTF-8 BOM as they don't expect it (whereas Windows does). |
 
-**Note:** We recommend never changing the Optimise Queries/Optimiser Query Algebra settings unless a query is giving unexpected/slow results and you suspect it may be the result of bad optimisation. If you do encounter a query which does this please let us know (see [[Contact Us]]) so that we can try and fix this for future releases.
+> [!NOTE]
+> We recommend never changing the Optimise Queries/Optimiser Query Algebra settings unless a query is giving unexpected/slow results and you suspect it may be the result of bad optimisation. If you do encounter a query which does this please let us know (see [Support](../support/index.md)) so that we can try and fix this for future releases.
 
 Other Features
 

@@ -1,42 +1,40 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|Tools]] > rdfConvert
-
 # rdfConvert 
 
 rdfConvert is a command line utility for converting RDF between different formats.
 
 ## Download 
 
-You can download this tool as part of our [[Toolkit|Tools]]
+You can download this tool as part of our [Toolkit](Tools.md)
 
 ## Documentation 
 
 Command usage is as follows:
 
-```
+```dos
 rdfConvert.exe input1 [input2 [input3 [...]]] (-out:filename.ext | -outformat:mime/type) [options]
 ```
 
 e.g. Convert a RDF/XML file to Turtle
 
-```
+```dos
 rdfConvert.exe input.rdf -out:output.ttl
 ```
 
 e.g. Convert multiple files into HTML
 
-```
+```dos
 rdfConvert.exe input1.rdf input2.ttl input3.n3 -format:text/html
 ```
 
 e.g. Convert a RDF/XML file into N3
 
-```
+```dos
 rdfConvert.exe input.rdf -ext:n3
 ```
 
 You can use URIs as input just by stating URIs (anything with a :// in it will be assumed to be a URI) e.g. 
 
-```
+```dos
 rdfConvert.exe http://example.org/something -out:something.rdf
 ```
 

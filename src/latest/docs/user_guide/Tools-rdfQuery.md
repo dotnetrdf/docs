@@ -1,33 +1,31 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|Tools]] > [[rdfQuery|Tools-rdfQuery]]
-
 # rdfQuery 
 
 A command line utility for querying local/remote RDF using SPARQL
 
 ## Download 
 
-You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
+You can download this tool as part of our [Toolkit](Tools.md)
 
 ## Documentation 
 
 Command usage is as follows:
 
-{{{
+```dos
 rdfQuery.exe input1 [input2 [input3 [...]]] [options] query
 ```
 
 e.g. Query a single file
-{{{
+```dos
 rdfQuery.exe data.rdf "SELECT * WHERE {?s a ?type}"
 ```
 
 e.g. Query a remote file and get SPARQL JSON results
-{{{
+```dos
 rdfQuery.exe -uri:http://example.org/something -outformat:json "SELECT * WHERE {?s a ?type}" > results.srj
 ```
 
 e.g. Query a remote endpoint and get SPARQL XML results
-{{{
+```dos
 rdfQuery.exe -endpoint:http://dbpedia.org/sparql -out:results.srx -outformat:srx "SELECT * WHERE {?s a ?type} LIMIT 50"
 ```
 

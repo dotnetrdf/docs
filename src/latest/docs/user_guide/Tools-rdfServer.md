@@ -1,26 +1,24 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|Tools]] > [[rdfServer|Tools-rdfServer]]
-
 # rdfServer 
 
 rdfServer is a command line HTTP server which provides a SPARQL Server.
 
-You can use the related [[rdfServerGui|Tools-rdfServerGui]] tool to provide a simple GUI for the creation and management of these servers.
+You can use the related [rdfServerGui](Tools-rdfServerGui.md) tool to provide a simple GUI for the creation and management of these servers.
 
 ## Download 
 
-You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
+You can download this tool as part of our [Toolkit](Tools.md)
 
 ## Documentation 
 
 Usage is as follows:
 
-{{{
+```dos
 rdfServer.exe [options]
 ```
 
 For example try the following:
 
-{{{
+```dos
 rdfServer.exe -v
 ```
 
@@ -31,7 +29,7 @@ Then point your browser at `http://localhost:1986/query` which will provide you 
 | Option | Purpose |
 | --- | --- |
 | `-b directory` or `-base directory` | Sets the Base Directory from which static content can be served |
-| `-c config.ttl` or `-config config.ttl` | Sets the Configuration File which specifies the Dataset to use for querying (see `default.ttl` for an example or the online documentation for the [[Configuration API|Configuration-API]]).  Configuration via the Configuration API has some limitations as detailed later on this page. |
+| `-c config.ttl` or `-config config.ttl` | Sets the Configuration File which specifies the Dataset to use for querying (see `default.ttl` for an example or the online documentation for the [Configuration API](Configuration-API.md)).  Configuration via the Configuration API has some limitations as detailed later on this page. |
 | `-f format` or `-format format` | Sets the Log Format for use with logging, format string is in Apache mod_log style |
 | `-help` | Prints this usage summary and quits |
 | `-h host` or `-host host` | Sets the host name that the server listens on |

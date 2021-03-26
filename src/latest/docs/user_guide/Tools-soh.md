@@ -1,12 +1,10 @@
-[[Home]] > [[User Guide|UserGuide]] > [[Tools|Tools]] > [[SPARQL over HTTP (soh)|Tools-soh]]
-
 # SPARQL over HTTP (soh) 
 
 A command line utility for accessing SPARQL servers
 
 ## Download 
 
-You can download this tool as part of our [Toolkit](http://www.dotnetrdf.org?content.asp?pageID=Download%20dotNetRDF%20Toolkit%20for%20Windows)
+You can download this tool as part of our [Toolkit](Tools.md)
 
 ## Documentation 
 
@@ -24,16 +22,16 @@ The mode must always be specified as the first argument to the tool.
 
 Command Usage is:
 
-{{{
+```dos
 soh.exe query [options]
 ```
 
 e.g. Query a endpoint with the query specified at the command line 
-{{{
+```dos
 soh.exe query --service http://dbpedia.org/sparql "SELECT * WHERE {?s a ?type} LIMIT 10"
 ```
 e.g. Query an endpoint with the query taken from a file
-{{{
+```dos
 soh.exe query --service http://dbpedia.org/sparql --query query.rq
 ```
 
@@ -53,16 +51,16 @@ soh.exe query --service http://dbpedia.org/sparql --query query.rq
 
 Command Usage is:
 
-{{{
+```dos
 soh.exe update [options]
 ```
 
 e.g. Update an endpoint specifying the update at the command line
-{{{
+```dos
 soh.exe update service http://example.org/update "LOAD <http://dbpedia.org/resource/Ilkeston>"
 ```
 e.g. Update an endpoint specifying the update using a file.
-{{{
+```dos
 soh.exe update service http://example.org/update --update update.ru
 ```
 
@@ -81,17 +79,17 @@ soh.exe update service http://example.org/update --update update.ru
 
 Command Usage is:
 
-{{{
+```dos
 soh.exe protocol [head|get|post|put|delete] datasetURI graph [file] [options]
 ```
 
 e.g. Upload a RDF file to the default graoh
-{{{
+```dos
 soh.exe protocol put http://example.org/dataset/data default example.rdf
 ```
 
 e.g. Delete a given graph
-{{{
+```dos
 soh.exe protocol delete http://example.org/dataset/data http://example.org/someGraph
 ```
 
