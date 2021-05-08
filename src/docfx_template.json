@@ -8,16 +8,23 @@
       },
       {
         "files": ["**/*.{md,yml}"],
-        "src": "_version_/docs",
-        "dest": "docs"
+        "exclude": ["api/**/*.{md,yml}"],
+        "src": "_version_",
       },
       {
         "files": ["toc.yml", "index.md"],
         "src": "_version_"
       }
     ],
+    "resource": [
+      {
+        "files": ["images/**", "files/design/*.docx", "files/performance/**"],
+        "src": "common"
+      }
+    ],
     "globalMetadata": {
-      "_appTitle": "DotNetRDF Documentation"
+      "_appTitle": "DotNetRDF Documentation",
+      "_appLogoPath": "images/rdf_flyer.svg"
     },
     "dest": "../build/_version_",
     "template": "default"
