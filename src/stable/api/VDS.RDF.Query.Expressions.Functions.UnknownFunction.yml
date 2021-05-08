@@ -1,0 +1,1245 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  commentId: T:VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  id: UnknownFunction
+  parent: VDS.RDF.Query.Expressions.Functions
+  children:
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri)
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression})
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri,VDS.RDF.Query.Expressions.ISparqlExpression)
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables
+  langs:
+  - csharp
+  - vb
+  name: UnknownFunction
+  nameWithType: UnknownFunction
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UnknownFunction
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nRepresents an Unknown Function that is not supported by dotNetRDF.\n"
+  remarks: "\n<p>\nThis exists as a placeholder class so users may choose to parse Unknown Functions and have them appear in queries even if they cannot be evaluated.  This is useful when you wish to parse a query locally to check syntactic validity before passing it to an external query processor which may understand how to evaluate the function.  Using this placeholder also allows queries containing Unknown Functions to still be formatted properly.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class UnknownFunction : ISparqlExpression'
+    content.vb: >-
+      Public Class UnknownFunction
+          Implements ISparqlExpression
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Expressions.Functions.UnknownFunction.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri)
+  commentId: M:VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri)
+  id: '#ctor(System.Uri)'
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: UnknownFunction(Uri)
+  nameWithType: UnknownFunction.UnknownFunction(Uri)
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.UnknownFunction(System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 52
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nCreates a new Unknown Function that has no Arguments.\n"
+  example: []
+  syntax:
+    content: public UnknownFunction(Uri funcUri)
+    parameters:
+    - id: funcUri
+      type: System.Uri
+      description: Function URI.
+    content.vb: Public Sub New(funcUri As Uri)
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri,VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri,VDS.RDF.Query.Expressions.ISparqlExpression)
+  id: '#ctor(System.Uri,VDS.RDF.Query.Expressions.ISparqlExpression)'
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: UnknownFunction(Uri, ISparqlExpression)
+  nameWithType: UnknownFunction.UnknownFunction(Uri, ISparqlExpression)
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.UnknownFunction(System.Uri, VDS.RDF.Query.Expressions.ISparqlExpression)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 62
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nCreates a new Unknown Function that has a Single Argument.\n"
+  example: []
+  syntax:
+    content: public UnknownFunction(Uri funcUri, ISparqlExpression expr)
+    parameters:
+    - id: funcUri
+      type: System.Uri
+      description: Function URI.
+    - id: expr
+      type: VDS.RDF.Query.Expressions.ISparqlExpression
+      description: Argument Expression.
+    content.vb: Public Sub New(funcUri As Uri, expr As ISparqlExpression)
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression})
+  commentId: M:VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression})
+  id: '#ctor(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression})'
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: UnknownFunction(Uri, IEnumerable<ISparqlExpression>)
+  nameWithType: UnknownFunction.UnknownFunction(Uri, IEnumerable<ISparqlExpression>)
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.UnknownFunction(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Query.Expressions.ISparqlExpression>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nCreates a new Unknown Function that has multiple Arguments.\n"
+  example: []
+  syntax:
+    content: public UnknownFunction(Uri funcUri, IEnumerable<ISparqlExpression> exprs)
+    parameters:
+    - id: funcUri
+      type: System.Uri
+      description: Function URI.
+    - id: exprs
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression}
+      description: Argument Expressions.
+    content.vb: Public Sub New(funcUri As Uri, exprs As IEnumerable(Of ISparqlExpression))
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor*
+  nameWithType.vb: UnknownFunction.UnknownFunction(Uri, IEnumerable(Of ISparqlExpression))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.Expressions.Functions.UnknownFunction.UnknownFunction(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.Expressions.ISparqlExpression))
+  name.vb: UnknownFunction(Uri, IEnumerable(Of ISparqlExpression))
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+  commentId: M:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+  id: Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlEvaluationContext, Int32)
+  nameWithType: UnknownFunction.Evaluate(SparqlEvaluationContext, Int32)
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 85
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nGives null as the Value since dotNetRDF does not know how to evaluate Unknown Functions.\n"
+  example: []
+  syntax:
+    content: public IValuedNode Evaluate(SparqlEvaluationContext context, int bindingID)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: Evaluation Context.
+    - id: bindingID
+      type: System.Int32
+      description: Binding ID.
+    return:
+      type: VDS.RDF.Nodes.IValuedNode
+      description: ''
+    content.vb: Public Function Evaluate(context As SparqlEvaluationContext, bindingID As Integer) As IValuedNode
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate*
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables
+  commentId: P:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables
+  id: Variables
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: UnknownFunction.Variables
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nGets the Variables used in the Function.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables*
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression.Variables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type
+  commentId: P:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type
+  id: Type
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: UnknownFunction.Type
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Type
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 106
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nGets the Expression Type.\n"
+  example: []
+  syntax:
+    content: public SparqlExpressionType Type { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Expressions.SparqlExpressionType
+    content.vb: Public ReadOnly Property Type As SparqlExpressionType
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type*
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression.Type
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor
+  commentId: P:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor
+  id: Functor
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: Functor
+  nameWithType: UnknownFunction.Functor
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Functor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 117
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nGets the Function URI of the Expression.\n"
+  example: []
+  syntax:
+    content: public string Functor { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Functor As String
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor*
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression.Functor
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments
+  commentId: P:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments
+  id: Arguments
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: Arguments
+  nameWithType: UnknownFunction.Arguments
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Arguments
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 128
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nGets the Arguments of the Expression.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ISparqlExpression> Arguments { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression}
+    content.vb: Public ReadOnly Property Arguments As IEnumerable(Of ISparqlExpression)
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments*
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression.Arguments
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise
+  commentId: P:VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise
+  id: CanParallelise
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: CanParallelise
+  nameWithType: UnknownFunction.CanParallelise
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CanParallelise
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 139
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nGets whether an expression can safely be evaluated in parallel.\n"
+  example: []
+  syntax:
+    content: public virtual bool CanParallelise { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable ReadOnly Property CanParallelise As Boolean
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise*
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression.CanParallelise
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString
+  commentId: M:VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: UnknownFunction.ToString()
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 151
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nGets the String representation of the Expression.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  commentId: M:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  id: Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  parent: VDS.RDF.Query.Expressions.Functions.UnknownFunction
+  langs:
+  - csharp
+  - vb
+  name: Transform(IExpressionTransformer)
+  nameWithType: UnknownFunction.Transform(IExpressionTransformer)
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Transform
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Expressions/Functions/UnknownFunction.cs
+    startLine: 176
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Expressions.Functions
+  summary: "\nTransforms the Expression using the given Transformer.\n"
+  example: []
+  syntax:
+    content: public ISparqlExpression Transform(IExpressionTransformer transformer)
+    parameters:
+    - id: transformer
+      type: VDS.RDF.Query.Expressions.IExpressionTransformer
+      description: Expression Transformer.
+    return:
+      type: VDS.RDF.Query.Expressions.ISparqlExpression
+      description: ''
+    content.vb: Public Function Transform(transformer As IExpressionTransformer) As ISparqlExpression
+  overload: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform*
+  implements:
+  - VDS.RDF.Query.Expressions.ISparqlExpression.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Query.Expressions.Functions
+  commentId: N:VDS.RDF.Query.Expressions.Functions
+  name: VDS.RDF.Query.Expressions.Functions
+  nameWithType: VDS.RDF.Query.Expressions.Functions
+  fullName: VDS.RDF.Query.Expressions.Functions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression
+  commentId: T:VDS.RDF.Query.Expressions.ISparqlExpression
+  parent: VDS.RDF.Query.Expressions
+  name: ISparqlExpression
+  nameWithType: ISparqlExpression
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<UnknownFunction>()
+  nameWithType: Extensions.AsEnumerable<UnknownFunction>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Expressions.Functions.UnknownFunction>()
+  nameWithType.vb: Extensions.AsEnumerable(Of UnknownFunction)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Expressions.Functions.UnknownFunction)()
+  name.vb: AsEnumerable(Of UnknownFunction)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<UnknownFunction>
+    nameWithType: Extensions.AsEnumerable<UnknownFunction>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Expressions.Functions.UnknownFunction>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of UnknownFunction)
+    nameWithType: Extensions.AsEnumerable(Of UnknownFunction)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Expressions.Functions.UnknownFunction)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Query.Expressions
+  commentId: N:VDS.RDF.Query.Expressions
+  name: VDS.RDF.Query.Expressions
+  nameWithType: VDS.RDF.Query.Expressions
+  fullName: VDS.RDF.Query.Expressions
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.#ctor
+  name: UnknownFunction
+  nameWithType: UnknownFunction.UnknownFunction
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.UnknownFunction
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlExpression}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ISparqlExpression>
+  nameWithType: IEnumerable<ISparqlExpression>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.Expressions.ISparqlExpression>
+  nameWithType.vb: IEnumerable(Of ISparqlExpression)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.Expressions.ISparqlExpression)
+  name.vb: IEnumerable(Of ISparqlExpression)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate
+  name: Evaluate
+  nameWithType: UnknownFunction.Evaluate
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Evaluate
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+  commentId: M:VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+  parent: VDS.RDF.Query.Expressions.ISparqlExpression
+  isExternal: true
+  name: Evaluate(SparqlEvaluationContext, Int32)
+  nameWithType: ISparqlExpression.Evaluate(SparqlEvaluationContext, Int32)
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate(VDS.RDF.Query.SparqlEvaluationContext, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+    name: Evaluate
+    nameWithType: ISparqlExpression.Evaluate
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate(VDS.RDF.Query.SparqlEvaluationContext,System.Int32)
+    name: Evaluate
+    nameWithType: ISparqlExpression.Evaluate
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Nodes.IValuedNode
+  commentId: T:VDS.RDF.Nodes.IValuedNode
+  parent: VDS.RDF.Nodes
+  name: IValuedNode
+  nameWithType: IValuedNode
+  fullName: VDS.RDF.Nodes.IValuedNode
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Nodes
+  commentId: N:VDS.RDF.Nodes
+  name: VDS.RDF.Nodes
+  nameWithType: VDS.RDF.Nodes
+  fullName: VDS.RDF.Nodes
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables
+  name: Variables
+  nameWithType: UnknownFunction.Variables
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Variables
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression.Variables
+  commentId: P:VDS.RDF.Query.Expressions.ISparqlExpression.Variables
+  parent: VDS.RDF.Query.Expressions.ISparqlExpression
+  name: Variables
+  nameWithType: ISparqlExpression.Variables
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Variables
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type
+  name: Type
+  nameWithType: UnknownFunction.Type
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Type
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression.Type
+  commentId: P:VDS.RDF.Query.Expressions.ISparqlExpression.Type
+  parent: VDS.RDF.Query.Expressions.ISparqlExpression
+  name: Type
+  nameWithType: ISparqlExpression.Type
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Type
+- uid: VDS.RDF.Query.Expressions.SparqlExpressionType
+  commentId: T:VDS.RDF.Query.Expressions.SparqlExpressionType
+  parent: VDS.RDF.Query.Expressions
+  name: SparqlExpressionType
+  nameWithType: SparqlExpressionType
+  fullName: VDS.RDF.Query.Expressions.SparqlExpressionType
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor
+  name: Functor
+  nameWithType: UnknownFunction.Functor
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Functor
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression.Functor
+  commentId: P:VDS.RDF.Query.Expressions.ISparqlExpression.Functor
+  parent: VDS.RDF.Query.Expressions.ISparqlExpression
+  name: Functor
+  nameWithType: ISparqlExpression.Functor
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Functor
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments
+  name: Arguments
+  nameWithType: UnknownFunction.Arguments
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Arguments
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression.Arguments
+  commentId: P:VDS.RDF.Query.Expressions.ISparqlExpression.Arguments
+  parent: VDS.RDF.Query.Expressions.ISparqlExpression
+  name: Arguments
+  nameWithType: ISparqlExpression.Arguments
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Arguments
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise
+  name: CanParallelise
+  nameWithType: UnknownFunction.CanParallelise
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.CanParallelise
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression.CanParallelise
+  commentId: P:VDS.RDF.Query.Expressions.ISparqlExpression.CanParallelise
+  parent: VDS.RDF.Query.Expressions.ISparqlExpression
+  name: CanParallelise
+  nameWithType: ISparqlExpression.CanParallelise
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression.CanParallelise
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString
+  name: ToString
+  nameWithType: UnknownFunction.ToString
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.ToString
+- uid: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform*
+  commentId: Overload:VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform
+  name: Transform
+  nameWithType: UnknownFunction.Transform
+  fullName: VDS.RDF.Query.Expressions.Functions.UnknownFunction.Transform
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  commentId: M:VDS.RDF.Query.Expressions.ISparqlExpression.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  parent: VDS.RDF.Query.Expressions.ISparqlExpression
+  name: Transform(IExpressionTransformer)
+  nameWithType: ISparqlExpression.Transform(IExpressionTransformer)
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+    name: Transform
+    nameWithType: ISparqlExpression.Transform
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.IExpressionTransformer
+    name: IExpressionTransformer
+    nameWithType: IExpressionTransformer
+    fullName: VDS.RDF.Query.Expressions.IExpressionTransformer
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression.Transform(VDS.RDF.Query.Expressions.IExpressionTransformer)
+    name: Transform
+    nameWithType: ISparqlExpression.Transform
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.IExpressionTransformer
+    name: IExpressionTransformer
+    nameWithType: IExpressionTransformer
+    fullName: VDS.RDF.Query.Expressions.IExpressionTransformer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Expressions.IExpressionTransformer
+  commentId: T:VDS.RDF.Query.Expressions.IExpressionTransformer
+  parent: VDS.RDF.Query.Expressions
+  name: IExpressionTransformer
+  nameWithType: IExpressionTransformer
+  fullName: VDS.RDF.Query.Expressions.IExpressionTransformer

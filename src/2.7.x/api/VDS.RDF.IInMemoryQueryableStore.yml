@@ -1,0 +1,2874 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.IInMemoryQueryableStore
+  commentId: T:VDS.RDF.IInMemoryQueryableStore
+  id: IInMemoryQueryableStore
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.IInMemoryQueryableStore.Contains(VDS.RDF.Triple)
+  - VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(System.String)
+  - VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  - VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List{System.Uri},System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriples(VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List{System.Uri},System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Uri)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  langs:
+  - csharp
+  - vb
+  name: IInMemoryQueryableStore
+  nameWithType: IInMemoryQueryableStore
+  fullName: VDS.RDF.IInMemoryQueryableStore
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IInMemoryQueryableStore
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 169
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nInterface for Triple Stores which can be queried in memory using method calls or the SPARQL implementation contained in this library.\n"
+  remarks: "\n<p>\nAn in memory Triple Store will typically load most of the Graphs and consequently Triples contained within it into Memory as the in memory SPARQL implementation only operates over the part of the Triple Store loaded in memory.  This being said there is no reason why an in memory store can&apos;t provide a Snapshot view of an underlying store to allow only the relevant parts of Store to be loaded and queried.\n</p>\n<p>\nAll the Selection Methods which do not specify a subset of Graphs on such a Triple Store <strong>should</strong> operate over the entire store.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public interface IInMemoryQueryableStore : ITripleStore, IDisposable'
+    content.vb: >-
+      Public Interface IInMemoryQueryableStore
+          Inherits ITripleStore
+  inheritedMembers:
+  - VDS.RDF.ITripleStore.IsEmpty
+  - VDS.RDF.ITripleStore.Graphs
+  - VDS.RDF.ITripleStore.Triples
+  - VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph)
+  - VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph,System.Boolean)
+  - VDS.RDF.ITripleStore.AddFromUri(System.Uri)
+  - VDS.RDF.ITripleStore.AddFromUri(System.Uri,System.Boolean)
+  - VDS.RDF.ITripleStore.Remove(System.Uri)
+  - VDS.RDF.ITripleStore.HasGraph(System.Uri)
+  - VDS.RDF.ITripleStore.Item(System.Uri)
+  - VDS.RDF.ITripleStore.GraphAdded
+  - VDS.RDF.ITripleStore.GraphRemoved
+  - VDS.RDF.ITripleStore.GraphChanged
+  - VDS.RDF.ITripleStore.GraphCleared
+  - VDS.RDF.ITripleStore.GraphMerged
+  - System.IDisposable.Dispose
+  extensionMethods:
+  - VDS.RDF.IInMemoryQueryableStore.VDS.RDF.Extensions.AsEnumerable``1
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String,VDS.RDF.IStoreReader)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri,VDS.RDF.IStoreReader)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromString(System.String,VDS.RDF.IStoreReader)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromString(System.String)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String,VDS.RDF.IStoreReader)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.SaveToFile(System.String,VDS.RDF.IStoreWriter)
+  - VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.SaveToFile(System.String)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.IInMemoryQueryableStore.Contains(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.Contains(VDS.RDF.Triple)
+  id: Contains(VDS.RDF.Triple)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: Contains(Triple)
+  nameWithType: IInMemoryQueryableStore.Contains(Triple)
+  fullName: VDS.RDF.IInMemoryQueryableStore.Contains(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Contains
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 177
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nReturns whether a given Triple is contained anywhere in the Query Triples.\n"
+  example: []
+  syntax:
+    content: bool Contains(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple to check for existence of.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function Contains(t As Triple) As Boolean
+  overload: VDS.RDF.IInMemoryQueryableStore.Contains*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Uri)
+  id: GetTriples(System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriples(Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriples(Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriples
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 186
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples which have a Uri Node with the given Uri from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriples(Uri uri)
+    parameters:
+    - id: uri
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriples(uri As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriples*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriples(VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriples(VDS.RDF.INode)
+  id: GetTriples(VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriples(INode)
+  nameWithType: IInMemoryQueryableStore.GetTriples(INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriples(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriples
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 193
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples which contain the given Node from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriples(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriples(n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriples*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Uri)
+  id: GetTriplesWithObject(System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithObject(Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithObject(Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 200
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Object is a Uri Node with the given Uri from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithObject(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithObject(u As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(VDS.RDF.INode)
+  id: GetTriplesWithObject(VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithObject(INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithObject(INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 207
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Object is a given Node from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithObject(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithObject(n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(VDS.RDF.INode)
+  id: GetTriplesWithPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithPredicate(INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithPredicate(INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 214
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Predicate is a given Node from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithPredicate(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithPredicate(n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Uri)
+  id: GetTriplesWithPredicate(System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithPredicate(Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithPredicate(Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 221
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Predicate is a Uri Node with the given Uri from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithPredicate(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithPredicate(u As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(VDS.RDF.INode)
+  id: GetTriplesWithSubject(VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubject(INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubject(INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 228
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Subject is a given Node from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubject(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubject(n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Uri)
+  id: GetTriplesWithSubject(System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubject(Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubject(Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 235
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Subject is a Uri Node with the given Uri from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubject(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubject(u As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  id: GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubjectPredicate(INode, INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubjectPredicate(INode, INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubjectPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 243
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all the Triples with the given Subject-Predicate pair from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubjectPredicate(INode subj, INode pred)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubjectPredicate(subj As INode, pred As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  id: GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithPredicateObject(INode, INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithPredicateObject(INode, INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithPredicateObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 251
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all the Triples with the given Predicate-Object pair from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithPredicateObject(INode pred, INode obj)
+    parameters:
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithPredicateObject(pred As INode, obj As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  id: GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubjectObject(INode, INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubjectObject(INode, INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubjectObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 259
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all the Triples with the given Subject-Object pair from all the Query Triples.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubjectObject(INode subj, INode obj)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubjectObject(subj As INode, obj As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject*
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List{System.Uri},System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List{System.Uri},System.Uri)
+  id: GetTriples(System.Collections.Generic.List{System.Uri},System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriples(List<Uri>, Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriples(List<Uri>, Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List<System.Uri>, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriples
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 271
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples which have a Uri Node with the given Uri from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriples(List<Uri> graphUris, Uri uri)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: uri
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriples(graphUris As List(Of Uri), uri As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriples*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriples(List(Of Uri), Uri)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List(Of System.Uri), System.Uri)
+  name.vb: GetTriples(List(Of Uri), Uri)
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  id: GetTriples(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriples(List<Uri>, INode)
+  nameWithType: IInMemoryQueryableStore.GetTriples(List<Uri>, INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List<System.Uri>, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriples
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 279
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples which contain the given Node from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriples(List<Uri> graphUris, INode n)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriples(graphUris As List(Of Uri), n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriples*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriples(List(Of Uri), INode)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriples(System.Collections.Generic.List(Of System.Uri), VDS.RDF.INode)
+  name.vb: GetTriples(List(Of Uri), INode)
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List{System.Uri},System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List{System.Uri},System.Uri)
+  id: GetTriplesWithObject(System.Collections.Generic.List{System.Uri},System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithObject(List<Uri>, Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithObject(List<Uri>, Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List<System.Uri>, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 287
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Object is a Uri Node with the given Uri from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithObject(List<Uri> graphUris, Uri u)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: u
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithObject(graphUris As List(Of Uri), u As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriplesWithObject(List(Of Uri), Uri)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List(Of System.Uri), System.Uri)
+  name.vb: GetTriplesWithObject(List(Of Uri), Uri)
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  id: GetTriplesWithObject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithObject(List<Uri>, INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithObject(List<Uri>, INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List<System.Uri>, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 295
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Object is a given Node from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithObject(List<Uri> graphUris, INode n)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithObject(graphUris As List(Of Uri), n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriplesWithObject(List(Of Uri), INode)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject(System.Collections.Generic.List(Of System.Uri), VDS.RDF.INode)
+  name.vb: GetTriplesWithObject(List(Of Uri), INode)
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  id: GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithPredicate(List<Uri>, INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithPredicate(List<Uri>, INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List<System.Uri>, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 303
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Predicate is a given Node from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithPredicate(List<Uri> graphUris, INode n)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithPredicate(graphUris As List(Of Uri), n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriplesWithPredicate(List(Of Uri), INode)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List(Of System.Uri), VDS.RDF.INode)
+  name.vb: GetTriplesWithPredicate(List(Of Uri), INode)
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},System.Uri)
+  id: GetTriplesWithPredicate(System.Collections.Generic.List{System.Uri},System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithPredicate(List<Uri>, Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithPredicate(List<Uri>, Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List<System.Uri>, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 311
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Predicate is a Uri Node with the given Uri from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithPredicate(List<Uri> graphUris, Uri u)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: u
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithPredicate(graphUris As List(Of Uri), u As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriplesWithPredicate(List(Of Uri), Uri)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate(System.Collections.Generic.List(Of System.Uri), System.Uri)
+  name.vb: GetTriplesWithPredicate(List(Of Uri), Uri)
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  id: GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},VDS.RDF.INode)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubject(List<Uri>, INode)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubject(List<Uri>, INode)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List<System.Uri>, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 319
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Subject is a given Node from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubject(List<Uri> graphUris, INode n)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubject(graphUris As List(Of Uri), n As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriplesWithSubject(List(Of Uri), INode)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List(Of System.Uri), VDS.RDF.INode)
+  name.vb: GetTriplesWithSubject(List(Of Uri), INode)
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},System.Uri)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},System.Uri)
+  id: GetTriplesWithSubject(System.Collections.Generic.List{System.Uri},System.Uri)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubject(List<Uri>, Uri)
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubject(List<Uri>, Uri)
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List<System.Uri>, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 327
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSelects all Triples where the Subject is a Uri Node with the given Uri from a Subset of Graphs in the Triple Store.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubject(List<Uri> graphUris, Uri u)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.List{System.Uri}
+      description: List of the Graph URIs of Graphs you want to select over.
+    - id: u
+      type: System.Uri
+      description: Uri.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubject(graphUris As List(Of Uri), u As Uri) As IEnumerable(Of Triple)
+  overload: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject*
+  nameWithType.vb: IInMemoryQueryableStore.GetTriplesWithSubject(List(Of Uri), Uri)
+  fullName.vb: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject(System.Collections.Generic.List(Of System.Uri), System.Uri)
+  name.vb: GetTriplesWithSubject(List(Of Uri), Uri)
+- uid: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(System.String)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(System.String)
+  id: ExecuteQuery(System.String)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(String)
+  nameWithType: IInMemoryQueryableStore.ExecuteQuery(String)
+  fullName: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 346
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nExecutes a SPARQL Query on the Triple Store.\n"
+  remarks: "\n<p>\nThis method of making queries often leads to no results because of misconceptions about what data is being queries.  dotNetRDF&apos;s SPARQL engine only queries the default unnamed graph of the triple store (the graph added with a null URI) by default unless your query uses FROM clauses to change the default graph or you use GRAPH clauses to access named graphs in the store.  Therefore a common mistake is to add a single graph to the store and then query the store which typically results in no results because usually the added graph is named and so is not queried.\n</p>\n<p>\nWe recommend using a <xref href=\"VDS.RDF.Query.ISparqlQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref> instead for making queries over in-memory data since using our standard implementation (<xref href=\"VDS.RDF.Query.LeviathanQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref>) affords you much more explicit control over which graphs are queried.\n</p>\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")]
+
+      object ExecuteQuery(string query)
+    parameters:
+    - id: query
+      type: System.String
+      description: SPARQL Query as an unparsed string.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: >-
+      <Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")>
+
+      Function ExecuteQuery(query As String) As Object
+  overload: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion
+- uid: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.Query.SparqlQuery)
+  id: ExecuteQuery(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(SparqlQuery)
+  nameWithType: IInMemoryQueryableStore.ExecuteQuery(SparqlQuery)
+  fullName: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 362
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nExecutes a SPARQL Query on the Triple Store.\n"
+  remarks: "\n<p>\nThis method of making queries often leads to no results because of misconceptions about what data is being queries.  dotNetRDF&apos;s SPARQL engine only queries the default unnamed graph of the triple store (the graph added with a null URI) by default unless your query uses FROM clauses to change the default graph or you use GRAPH clauses to access named graphs in the store.  Therefore a common mistake is to add a single graph to the store and then query the store which typically results in no results because usually the added graph is named and so is not queried.\n</p>\n<p>\nWe recommend using a <xref href=\"VDS.RDF.Query.ISparqlQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref> instead for making queries over in-memory data since using our standard implementation (<xref href=\"VDS.RDF.Query.LeviathanQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref>) affords you much more explicit control over which graphs are queried.\n</p>\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")]
+
+      object ExecuteQuery(SparqlQuery query)
+    parameters:
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: SPARQL Query as a <xref href="VDS.RDF.Query.SparqlQuery" data-throw-if-not-resolved="false"></xref> instance.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: >-
+      <Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")>
+
+      Function ExecuteQuery(query As SparqlQuery) As Object
+  overload: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion
+- uid: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  id: ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(IRdfHandler, ISparqlResultsHandler, String)
+  nameWithType: IInMemoryQueryableStore.ExecuteQuery(IRdfHandler, ISparqlResultsHandler, String)
+  fullName: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 380
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nExecutes a SPARQL Query on the Triple Store processing the results with an appropriate handler from those provided.\n"
+  remarks: "\n<p>\nThis method of making queries often leads to no results because of misconceptions about what data is being queries.  dotNetRDF&apos;s SPARQL engine only queries the default unnamed graph of the triple store (the graph added with a null URI) by default unless your query uses FROM clauses to change the default graph or you use GRAPH clauses to access named graphs in the store.  Therefore a common mistake is to add a single graph to the store and then query the store which typically results in no results because usually the added graph is named and so is not queried.\n</p>\n<p>\nWe recommend using a <xref href=\"VDS.RDF.Query.ISparqlQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref> instead for making queries over in-memory data since using our standard implementation (<xref href=\"VDS.RDF.Query.LeviathanQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref>) affords you much more explicit control over which graphs are queried.\n</p>\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")]
+
+      void ExecuteQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, string query)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: query
+      type: System.String
+      description: SPARQL Query as an unparsed string.
+    content.vb: >-
+      <Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")>
+
+      Sub ExecuteQuery(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, query As String)
+  overload: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion
+- uid: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  id: ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.IInMemoryQueryableStore
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  nameWithType: IInMemoryQueryableStore.ExecuteQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  fullName: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/ITripleStore.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/ITripleStore.cs
+    startLine: 398
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nExecutes a SPARQL Query on the Triple Store processing the results with an appropriate handler from those provided.\n"
+  remarks: "\n<p>\nThis method of making queries often leads to no results because of misconceptions about what data is being queries.  dotNetRDF&apos;s SPARQL engine only queries the default unnamed graph of the triple store (the graph added with a null URI) by default unless your query uses FROM clauses to change the default graph or you use GRAPH clauses to access named graphs in the store.  Therefore a common mistake is to add a single graph to the store and then query the store which typically results in no results because usually the added graph is named and so is not queried.\n</p>\n<p>\nWe recommend using a <xref href=\"VDS.RDF.Query.ISparqlQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref> instead for making queries over in-memory data since using our standard implementation (<xref href=\"VDS.RDF.Query.LeviathanQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref>) affords you much more explicit control over which graphs are queried.\n</p>\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")]
+
+      void ExecuteQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, SparqlQuery query)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: Parsed SPARQL Query.
+    content.vb: >-
+      <Obsolete("This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion")>
+
+      Sub ExecuteQuery(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, query As SparqlQuery)
+  overload: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This method of making queries is often error prone due to misconceptions about what data is being queries and we recommend using an ISparqlQueryProcessor instead, see remarks for more discussion
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.ITripleStore.IsEmpty
+  commentId: P:VDS.RDF.ITripleStore.IsEmpty
+  parent: VDS.RDF.ITripleStore
+  name: IsEmpty
+  nameWithType: ITripleStore.IsEmpty
+  fullName: VDS.RDF.ITripleStore.IsEmpty
+- uid: VDS.RDF.ITripleStore.Graphs
+  commentId: P:VDS.RDF.ITripleStore.Graphs
+  parent: VDS.RDF.ITripleStore
+  name: Graphs
+  nameWithType: ITripleStore.Graphs
+  fullName: VDS.RDF.ITripleStore.Graphs
+- uid: VDS.RDF.ITripleStore.Triples
+  commentId: P:VDS.RDF.ITripleStore.Triples
+  parent: VDS.RDF.ITripleStore
+  name: Triples
+  nameWithType: ITripleStore.Triples
+  fullName: VDS.RDF.ITripleStore.Triples
+- uid: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph)
+  parent: VDS.RDF.ITripleStore
+  name: Add(IGraph)
+  nameWithType: ITripleStore.Add(IGraph)
+  fullName: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph)
+    name: Add
+    nameWithType: ITripleStore.Add
+    fullName: VDS.RDF.ITripleStore.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph)
+    name: Add
+    nameWithType: ITripleStore.Add
+    fullName: VDS.RDF.ITripleStore.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph,System.Boolean)
+  commentId: M:VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph,System.Boolean)
+  parent: VDS.RDF.ITripleStore
+  isExternal: true
+  name: Add(IGraph, Boolean)
+  nameWithType: ITripleStore.Add(IGraph, Boolean)
+  fullName: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph,System.Boolean)
+    name: Add
+    nameWithType: ITripleStore.Add
+    fullName: VDS.RDF.ITripleStore.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ITripleStore.Add(VDS.RDF.IGraph,System.Boolean)
+    name: Add
+    nameWithType: ITripleStore.Add
+    fullName: VDS.RDF.ITripleStore.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.AddFromUri(System.Uri)
+  commentId: M:VDS.RDF.ITripleStore.AddFromUri(System.Uri)
+  parent: VDS.RDF.ITripleStore
+  isExternal: true
+  name: AddFromUri(Uri)
+  nameWithType: ITripleStore.AddFromUri(Uri)
+  fullName: VDS.RDF.ITripleStore.AddFromUri(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.ITripleStore.AddFromUri(System.Uri)
+    name: AddFromUri
+    nameWithType: ITripleStore.AddFromUri
+    fullName: VDS.RDF.ITripleStore.AddFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ITripleStore.AddFromUri(System.Uri)
+    name: AddFromUri
+    nameWithType: ITripleStore.AddFromUri
+    fullName: VDS.RDF.ITripleStore.AddFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.AddFromUri(System.Uri,System.Boolean)
+  commentId: M:VDS.RDF.ITripleStore.AddFromUri(System.Uri,System.Boolean)
+  parent: VDS.RDF.ITripleStore
+  isExternal: true
+  name: AddFromUri(Uri, Boolean)
+  nameWithType: ITripleStore.AddFromUri(Uri, Boolean)
+  fullName: VDS.RDF.ITripleStore.AddFromUri(System.Uri, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.ITripleStore.AddFromUri(System.Uri,System.Boolean)
+    name: AddFromUri
+    nameWithType: ITripleStore.AddFromUri
+    fullName: VDS.RDF.ITripleStore.AddFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ITripleStore.AddFromUri(System.Uri,System.Boolean)
+    name: AddFromUri
+    nameWithType: ITripleStore.AddFromUri
+    fullName: VDS.RDF.ITripleStore.AddFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.Remove(System.Uri)
+  commentId: M:VDS.RDF.ITripleStore.Remove(System.Uri)
+  parent: VDS.RDF.ITripleStore
+  isExternal: true
+  name: Remove(Uri)
+  nameWithType: ITripleStore.Remove(Uri)
+  fullName: VDS.RDF.ITripleStore.Remove(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.ITripleStore.Remove(System.Uri)
+    name: Remove
+    nameWithType: ITripleStore.Remove
+    fullName: VDS.RDF.ITripleStore.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ITripleStore.Remove(System.Uri)
+    name: Remove
+    nameWithType: ITripleStore.Remove
+    fullName: VDS.RDF.ITripleStore.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.HasGraph(System.Uri)
+  commentId: M:VDS.RDF.ITripleStore.HasGraph(System.Uri)
+  parent: VDS.RDF.ITripleStore
+  isExternal: true
+  name: HasGraph(Uri)
+  nameWithType: ITripleStore.HasGraph(Uri)
+  fullName: VDS.RDF.ITripleStore.HasGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.ITripleStore.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: ITripleStore.HasGraph
+    fullName: VDS.RDF.ITripleStore.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ITripleStore.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: ITripleStore.HasGraph
+    fullName: VDS.RDF.ITripleStore.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.Item(System.Uri)
+  commentId: P:VDS.RDF.ITripleStore.Item(System.Uri)
+  parent: VDS.RDF.ITripleStore
+  isExternal: true
+  name: Item[Uri]
+  nameWithType: ITripleStore.Item[Uri]
+  fullName: VDS.RDF.ITripleStore.Item[System.Uri]
+  nameWithType.vb: ITripleStore.Item(Uri)
+  fullName.vb: VDS.RDF.ITripleStore.Item(System.Uri)
+  name.vb: Item(Uri)
+  spec.csharp:
+  - uid: VDS.RDF.ITripleStore.Item(System.Uri)
+    name: Item
+    nameWithType: ITripleStore.Item
+    fullName: VDS.RDF.ITripleStore.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: VDS.RDF.ITripleStore.Item(System.Uri)
+    name: Item
+    nameWithType: ITripleStore.Item
+    fullName: VDS.RDF.ITripleStore.Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.GraphAdded
+  commentId: E:VDS.RDF.ITripleStore.GraphAdded
+  parent: VDS.RDF.ITripleStore
+  name: GraphAdded
+  nameWithType: ITripleStore.GraphAdded
+  fullName: VDS.RDF.ITripleStore.GraphAdded
+- uid: VDS.RDF.ITripleStore.GraphRemoved
+  commentId: E:VDS.RDF.ITripleStore.GraphRemoved
+  parent: VDS.RDF.ITripleStore
+  name: GraphRemoved
+  nameWithType: ITripleStore.GraphRemoved
+  fullName: VDS.RDF.ITripleStore.GraphRemoved
+- uid: VDS.RDF.ITripleStore.GraphChanged
+  commentId: E:VDS.RDF.ITripleStore.GraphChanged
+  parent: VDS.RDF.ITripleStore
+  name: GraphChanged
+  nameWithType: ITripleStore.GraphChanged
+  fullName: VDS.RDF.ITripleStore.GraphChanged
+- uid: VDS.RDF.ITripleStore.GraphCleared
+  commentId: E:VDS.RDF.ITripleStore.GraphCleared
+  parent: VDS.RDF.ITripleStore
+  name: GraphCleared
+  nameWithType: ITripleStore.GraphCleared
+  fullName: VDS.RDF.ITripleStore.GraphCleared
+- uid: VDS.RDF.ITripleStore.GraphMerged
+  commentId: E:VDS.RDF.ITripleStore.GraphMerged
+  parent: VDS.RDF.ITripleStore
+  name: GraphMerged
+  nameWithType: ITripleStore.GraphMerged
+  fullName: VDS.RDF.ITripleStore.GraphMerged
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IInMemoryQueryableStore.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IInMemoryQueryableStore>()
+  nameWithType: Extensions.AsEnumerable<IInMemoryQueryableStore>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.IInMemoryQueryableStore>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IInMemoryQueryableStore)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.IInMemoryQueryableStore)()
+  name.vb: AsEnumerable(Of IInMemoryQueryableStore)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IInMemoryQueryableStore>
+    nameWithType: Extensions.AsEnumerable<IInMemoryQueryableStore>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.IInMemoryQueryableStore>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IInMemoryQueryableStore)
+    nameWithType: Extensions.AsEnumerable(Of IInMemoryQueryableStore)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.IInMemoryQueryableStore)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  name: LoadFromFile(String, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromFile(String, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String,VDS.RDF.IStoreReader)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String,VDS.RDF.IStoreReader)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String)
+  name: LoadFromFile(String)
+  nameWithType: TripleStoreExtensions.LoadFromFile(String)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(System.String)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  name: LoadFromUri(Uri, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromUri(Uri, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri,VDS.RDF.IStoreReader)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri,VDS.RDF.IStoreReader)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri)
+  name: LoadFromUri(Uri)
+  nameWithType: TripleStoreExtensions.LoadFromUri(Uri)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(System.Uri)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromString(System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  name: LoadFromString(String, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromString(String, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromString(System.String, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(System.String,VDS.RDF.IStoreReader)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(System.String,VDS.RDF.IStoreReader)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromString(System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String)
+  name: LoadFromString(String)
+  nameWithType: TripleStoreExtensions.LoadFromString(String)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromString(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(System.String)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(System.String)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  name: LoadFromEmbeddedResource(String, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource(String, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String,VDS.RDF.IStoreReader)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String,VDS.RDF.IStoreReader)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String)
+  name: LoadFromEmbeddedResource(String)
+  nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource(String)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(System.String)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.SaveToFile(System.String,VDS.RDF.IStoreWriter)
+  commentId: M:VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreWriter)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreWriter)
+  name: SaveToFile(String, IStoreWriter)
+  nameWithType: TripleStoreExtensions.SaveToFile(String, IStoreWriter)
+  fullName: VDS.RDF.TripleStoreExtensions.SaveToFile(System.String, VDS.RDF.IStoreWriter)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(System.String,VDS.RDF.IStoreWriter)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreWriter
+    name: IStoreWriter
+    nameWithType: IStoreWriter
+    fullName: VDS.RDF.IStoreWriter
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(System.String,VDS.RDF.IStoreWriter)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreWriter
+    name: IStoreWriter
+    nameWithType: IStoreWriter
+    fullName: VDS.RDF.IStoreWriter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore.VDS.RDF.TripleStoreExtensions.SaveToFile(System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.TripleStoreExtensions
+  definition: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String)
+  name: SaveToFile(String)
+  nameWithType: TripleStoreExtensions.SaveToFile(String)
+  fullName: VDS.RDF.TripleStoreExtensions.SaveToFile(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(System.String)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(System.String)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore
+  commentId: T:VDS.RDF.ITripleStore
+  parent: VDS.RDF
+  name: ITripleStore
+  nameWithType: ITripleStore
+  fullName: VDS.RDF.ITripleStore
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  isExternal: true
+  name: LoadFromFile(ITripleStore, String, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromFile(ITripleStore, String, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore, System.String, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions
+  commentId: T:VDS.RDF.TripleStoreExtensions
+  parent: VDS.RDF
+  name: TripleStoreExtensions
+  nameWithType: TripleStoreExtensions
+  fullName: VDS.RDF.TripleStoreExtensions
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String)
+  isExternal: true
+  name: LoadFromFile(ITripleStore, String)
+  nameWithType: TripleStoreExtensions.LoadFromFile(ITripleStore, String)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromFile(VDS.RDF.ITripleStore,System.String)
+    name: LoadFromFile
+    nameWithType: TripleStoreExtensions.LoadFromFile
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  isExternal: true
+  name: LoadFromUri(ITripleStore, Uri, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromUri(ITripleStore, Uri, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore, System.Uri, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri)
+  isExternal: true
+  name: LoadFromUri(ITripleStore, Uri)
+  nameWithType: TripleStoreExtensions.LoadFromUri(ITripleStore, Uri)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromUri(VDS.RDF.ITripleStore,System.Uri)
+    name: LoadFromUri
+    nameWithType: TripleStoreExtensions.LoadFromUri
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  isExternal: true
+  name: LoadFromString(ITripleStore, String, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromString(ITripleStore, String, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore, System.String, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String)
+  isExternal: true
+  name: LoadFromString(ITripleStore, String)
+  nameWithType: TripleStoreExtensions.LoadFromString(ITripleStore, String)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromString(VDS.RDF.ITripleStore,System.String)
+    name: LoadFromString
+    nameWithType: TripleStoreExtensions.LoadFromString
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  isExternal: true
+  name: LoadFromEmbeddedResource(ITripleStore, String, IStoreReader)
+  nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource(ITripleStore, String, IStoreReader)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore, System.String, VDS.RDF.IStoreReader)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreReader
+    name: IStoreReader
+    nameWithType: IStoreReader
+    fullName: VDS.RDF.IStoreReader
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String)
+  isExternal: true
+  name: LoadFromEmbeddedResource(ITripleStore, String)
+  nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource(ITripleStore, String)
+  fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource(VDS.RDF.ITripleStore,System.String)
+    name: LoadFromEmbeddedResource
+    nameWithType: TripleStoreExtensions.LoadFromEmbeddedResource
+    fullName: VDS.RDF.TripleStoreExtensions.LoadFromEmbeddedResource
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreWriter)
+  commentId: M:VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreWriter)
+  isExternal: true
+  name: SaveToFile(ITripleStore, String, IStoreWriter)
+  nameWithType: TripleStoreExtensions.SaveToFile(ITripleStore, String, IStoreWriter)
+  fullName: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore, System.String, VDS.RDF.IStoreWriter)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreWriter)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreWriter
+    name: IStoreWriter
+    nameWithType: IStoreWriter
+    fullName: VDS.RDF.IStoreWriter
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreWriter)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IStoreWriter
+    name: IStoreWriter
+    nameWithType: IStoreWriter
+    fullName: VDS.RDF.IStoreWriter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String)
+  isExternal: true
+  name: SaveToFile(ITripleStore, String)
+  nameWithType: TripleStoreExtensions.SaveToFile(ITripleStore, String)
+  fullName: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.TripleStoreExtensions.SaveToFile(VDS.RDF.ITripleStore,System.String)
+    name: SaveToFile
+    nameWithType: TripleStoreExtensions.SaveToFile
+    fullName: VDS.RDF.TripleStoreExtensions.SaveToFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.IInMemoryQueryableStore.Contains*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.Contains
+  name: Contains
+  nameWithType: IInMemoryQueryableStore.Contains
+  fullName: VDS.RDF.IInMemoryQueryableStore.Contains
+- uid: VDS.RDF.Triple
+  commentId: T:VDS.RDF.Triple
+  parent: VDS.RDF
+  name: Triple
+  nameWithType: Triple
+  fullName: VDS.RDF.Triple
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriples*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.GetTriples
+  name: GetTriples
+  nameWithType: IInMemoryQueryableStore.GetTriples
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriples
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Triple>
+  nameWithType: IEnumerable<Triple>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerable(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple)
+  name.vb: IEnumerable(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject
+  name: GetTriplesWithObject
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithObject
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithObject
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate
+  name: GetTriplesWithPredicate
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithPredicate
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicate
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject
+  name: GetTriplesWithSubject
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubject
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubject
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate
+  name: GetTriplesWithSubjectPredicate
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubjectPredicate
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectPredicate
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject
+  name: GetTriplesWithPredicateObject
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithPredicateObject
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithPredicateObject
+- uid: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject
+  name: GetTriplesWithSubjectObject
+  nameWithType: IInMemoryQueryableStore.GetTriplesWithSubjectObject
+  fullName: VDS.RDF.IInMemoryQueryableStore.GetTriplesWithSubjectObject
+- uid: System.Collections.Generic.List{System.Uri}
+  commentId: T:System.Collections.Generic.List{System.Uri}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Uri>
+  nameWithType: List<Uri>
+  fullName: System.Collections.Generic.List<System.Uri>
+  nameWithType.vb: List(Of Uri)
+  fullName.vb: System.Collections.Generic.List(Of System.Uri)
+  name.vb: List(Of Uri)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.ISparqlQueryProcessor
+  commentId: T:VDS.RDF.Query.ISparqlQueryProcessor
+  parent: VDS.RDF.Query
+  name: ISparqlQueryProcessor
+  nameWithType: ISparqlQueryProcessor
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor
+- uid: VDS.RDF.Query.LeviathanQueryProcessor
+  commentId: T:VDS.RDF.Query.LeviathanQueryProcessor
+  parent: VDS.RDF.Query
+  name: LeviathanQueryProcessor
+  nameWithType: LeviathanQueryProcessor
+  fullName: VDS.RDF.Query.LeviathanQueryProcessor
+- uid: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery*
+  commentId: Overload:VDS.RDF.IInMemoryQueryableStore.ExecuteQuery
+  name: ExecuteQuery
+  nameWithType: IInMemoryQueryableStore.ExecuteQuery
+  fullName: VDS.RDF.IInMemoryQueryableStore.ExecuteQuery
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler

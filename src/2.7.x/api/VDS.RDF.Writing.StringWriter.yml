@@ -1,0 +1,610 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.StringWriter
+  commentId: T:VDS.RDF.Writing.StringWriter
+  id: StringWriter
+  parent: VDS.RDF.Writing
+  children:
+  - VDS.RDF.Writing.StringWriter.Write(VDS.RDF.IGraph,VDS.RDF.IRdfWriter)
+  - VDS.RDF.Writing.StringWriter.Write(VDS.RDF.ITripleStore,VDS.RDF.IStoreWriter)
+  - VDS.RDF.Writing.StringWriter.Write(VDS.RDF.Query.SparqlResultSet,VDS.RDF.ISparqlResultsWriter)
+  langs:
+  - csharp
+  - vb
+  name: StringWriter
+  nameWithType: StringWriter
+  fullName: VDS.RDF.Writing.StringWriter
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/StringWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StringWriter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/StringWriter.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nStatic Helper class for the writing of RDF Graphs and SPARQL Result Sets to Strings rather than Streams/Files.\n"
+  example: []
+  syntax:
+    content: public static class StringWriter
+    content.vb: Public Module StringWriter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Writing.StringWriter.Write(VDS.RDF.IGraph,VDS.RDF.IRdfWriter)
+  commentId: M:VDS.RDF.Writing.StringWriter.Write(VDS.RDF.IGraph,VDS.RDF.IRdfWriter)
+  id: Write(VDS.RDF.IGraph,VDS.RDF.IRdfWriter)
+  parent: VDS.RDF.Writing.StringWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(IGraph, IRdfWriter)
+  nameWithType: StringWriter.Write(IGraph, IRdfWriter)
+  fullName: VDS.RDF.Writing.StringWriter.Write(VDS.RDF.IGraph, VDS.RDF.IRdfWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/StringWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Write
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/StringWriter.cs
+    startLine: 46
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nWrites the Graph to a String and returns the output in your chosen concrete RDF Syntax.\n"
+  remarks: "\nSince the API allows for any <xref href=\"System.IO.TextWriter\" data-throw-if-not-resolved=\"false\"></xref> to be passed to the <xref href=\"VDS.RDF.IRdfWriter.Save(VDS.RDF.IGraph%2cSystem.IO.TextWriter)\" data-throw-if-not-resolved=\"false\"></xref> method of a <xref href=\"VDS.RDF.IRdfWriter\" data-throw-if-not-resolved=\"false\"></xref> you can just pass in a <xref href=\"VDS.RDF.Writing.StringWriter\" data-throw-if-not-resolved=\"false\"></xref> to the Save() method to get the output as a String.  This method simply provides a wrapper to doing just that.\n"
+  example: []
+  syntax:
+    content: public static string Write(IGraph g, IRdfWriter writer)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to save.
+    - id: writer
+      type: VDS.RDF.IRdfWriter
+      description: Writer to use to generate the concrete RDF Syntax.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Write(g As IGraph, writer As IRdfWriter) As String
+  overload: VDS.RDF.Writing.StringWriter.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.StringWriter.Write(VDS.RDF.ITripleStore,VDS.RDF.IStoreWriter)
+  commentId: M:VDS.RDF.Writing.StringWriter.Write(VDS.RDF.ITripleStore,VDS.RDF.IStoreWriter)
+  id: Write(VDS.RDF.ITripleStore,VDS.RDF.IStoreWriter)
+  parent: VDS.RDF.Writing.StringWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(ITripleStore, IStoreWriter)
+  nameWithType: StringWriter.Write(ITripleStore, IStoreWriter)
+  fullName: VDS.RDF.Writing.StringWriter.Write(VDS.RDF.ITripleStore, VDS.RDF.IStoreWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/StringWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Write
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/StringWriter.cs
+    startLine: 60
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nWrites the given Triple Store to a String and returns the output in your chosen concrete RDF dataset syntax.\n"
+  example: []
+  syntax:
+    content: public static string Write(ITripleStore store, IStoreWriter writer)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store.
+    - id: writer
+      type: VDS.RDF.IStoreWriter
+      description: Writer to use to generate conrete RDF Syntax.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Write(store As ITripleStore, writer As IStoreWriter) As String
+  overload: VDS.RDF.Writing.StringWriter.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.StringWriter.Write(VDS.RDF.Query.SparqlResultSet,VDS.RDF.ISparqlResultsWriter)
+  commentId: M:VDS.RDF.Writing.StringWriter.Write(VDS.RDF.Query.SparqlResultSet,VDS.RDF.ISparqlResultsWriter)
+  id: Write(VDS.RDF.Query.SparqlResultSet,VDS.RDF.ISparqlResultsWriter)
+  parent: VDS.RDF.Writing.StringWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(SparqlResultSet, ISparqlResultsWriter)
+  nameWithType: StringWriter.Write(SparqlResultSet, ISparqlResultsWriter)
+  fullName: VDS.RDF.Writing.StringWriter.Write(VDS.RDF.Query.SparqlResultSet, VDS.RDF.ISparqlResultsWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/StringWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Write
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/StringWriter.cs
+    startLine: 74
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nWrites the SPARQL Result Set to a String and returns the Output in your chosen format.\n"
+  example: []
+  syntax:
+    content: public static string Write(SparqlResultSet results, ISparqlResultsWriter writer)
+    parameters:
+    - id: results
+      type: VDS.RDF.Query.SparqlResultSet
+      description: SPARQL Result Set.
+    - id: writer
+      type: VDS.RDF.ISparqlResultsWriter
+      description: Writer to use to generate the SPARQL Results output.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function Write(results As SparqlResultSet, writer As ISparqlResultsWriter) As String
+  overload: VDS.RDF.Writing.StringWriter.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: VDS.RDF.Writing
+  commentId: N:VDS.RDF.Writing
+  name: VDS.RDF.Writing
+  nameWithType: VDS.RDF.Writing
+  fullName: VDS.RDF.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: VDS.RDF.IRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  commentId: M:VDS.RDF.IRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  parent: VDS.RDF.IRdfWriter
+  isExternal: true
+  name: Save(IGraph, TextWriter)
+  nameWithType: IRdfWriter.Save(IGraph, TextWriter)
+  fullName: VDS.RDF.IRdfWriter.Save(VDS.RDF.IGraph, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.IRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: Save
+    nameWithType: IRdfWriter.Save
+    fullName: VDS.RDF.IRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: Save
+    nameWithType: IRdfWriter.Save
+    fullName: VDS.RDF.IRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IRdfWriter
+  commentId: T:VDS.RDF.IRdfWriter
+  parent: VDS.RDF
+  name: IRdfWriter
+  nameWithType: IRdfWriter
+  fullName: VDS.RDF.IRdfWriter
+- uid: VDS.RDF.Writing.StringWriter
+  commentId: T:VDS.RDF.Writing.StringWriter
+  name: StringWriter
+  nameWithType: StringWriter
+  fullName: VDS.RDF.Writing.StringWriter
+- uid: VDS.RDF.Writing.StringWriter.Write*
+  commentId: Overload:VDS.RDF.Writing.StringWriter.Write
+  name: Write
+  nameWithType: StringWriter.Write
+  fullName: VDS.RDF.Writing.StringWriter.Write
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.ITripleStore
+  commentId: T:VDS.RDF.ITripleStore
+  parent: VDS.RDF
+  name: ITripleStore
+  nameWithType: ITripleStore
+  fullName: VDS.RDF.ITripleStore
+- uid: VDS.RDF.IStoreWriter
+  commentId: T:VDS.RDF.IStoreWriter
+  parent: VDS.RDF
+  name: IStoreWriter
+  nameWithType: IStoreWriter
+  fullName: VDS.RDF.IStoreWriter
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.ISparqlResultsWriter
+  commentId: T:VDS.RDF.ISparqlResultsWriter
+  parent: VDS.RDF
+  name: ISparqlResultsWriter
+  nameWithType: ISparqlResultsWriter
+  fullName: VDS.RDF.ISparqlResultsWriter
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query

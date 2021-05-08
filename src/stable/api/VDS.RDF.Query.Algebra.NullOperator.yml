@@ -1,0 +1,1044 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Algebra.NullOperator
+  commentId: T:VDS.RDF.Query.Algebra.NullOperator
+  id: NullOperator
+  parent: VDS.RDF.Query.Algebra
+  children:
+  - VDS.RDF.Query.Algebra.NullOperator.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  - VDS.RDF.Query.Algebra.NullOperator.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Algebra.NullOperator.FixedVariables
+  - VDS.RDF.Query.Algebra.NullOperator.FloatingVariables
+  - VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern
+  - VDS.RDF.Query.Algebra.NullOperator.ToQuery
+  - VDS.RDF.Query.Algebra.NullOperator.ToString
+  - VDS.RDF.Query.Algebra.NullOperator.Variables
+  langs:
+  - csharp
+  - vb
+  name: NullOperator
+  nameWithType: NullOperator
+  fullName: VDS.RDF.Query.Algebra.NullOperator
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NullOperator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 39
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nRepresents a part of the algebra that has been determined to not return any results in advance and so can be replaced with this operator which always returns null.\n"
+  remarks: "\nPrimarily intended for use with Algebra Optimisers which are rewriting the algebra to run against an out of memory dataset (e.g. SQL based) where it may be easily possible to determine if a triple pattern will match in advance of actually returning the matches.\n"
+  example: []
+  syntax:
+    content: 'public class NullOperator : ITerminalOperator, ISparqlAlgebra'
+    content.vb: >-
+      Public Class NullOperator
+          Implements ITerminalOperator, ISparqlAlgebra
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.Query.Algebra.ITerminalOperator
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Algebra.NullOperator.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Algebra.NullOperator.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Algebra.NullOperator.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String})'
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: NullOperator(IEnumerable<String>)
+  nameWithType: NullOperator.NullOperator(IEnumerable<String>)
+  fullName: VDS.RDF.Query.Algebra.NullOperator.NullOperator(System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 48
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a new Null Operator.\n"
+  example: []
+  syntax:
+    content: public NullOperator(IEnumerable<string> variables)
+    parameters:
+    - id: variables
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Variables in the algebra that this null is replacing.
+    content.vb: Public Sub New(variables As IEnumerable(Of String))
+  overload: VDS.RDF.Query.Algebra.NullOperator.#ctor*
+  nameWithType.vb: NullOperator.NullOperator(IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.Algebra.NullOperator.NullOperator(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: NullOperator(IEnumerable(Of String))
+- uid: VDS.RDF.Query.Algebra.NullOperator.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.NullOperator.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  id: Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: NullOperator.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.NullOperator.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nEvaluates the Null operator which of course always returns a <xref href=\"VDS.RDF.Query.Algebra.NullMultiset\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public BaseMultiset Evaluate(SparqlEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: Evaluation Context.
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+      description: ''
+    content.vb: Public Function Evaluate(context As SparqlEvaluationContext) As BaseMultiset
+  overload: VDS.RDF.Query.Algebra.NullOperator.Evaluate*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.NullOperator.Variables
+  commentId: P:VDS.RDF.Query.Algebra.NullOperator.Variables
+  id: Variables
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: NullOperator.Variables
+  fullName: VDS.RDF.Query.Algebra.NullOperator.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 66
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the variables used in this algebra.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.NullOperator.Variables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.NullOperator.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.NullOperator.FixedVariables
+  id: FixedVariables
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: FixedVariables
+  nameWithType: NullOperator.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.NullOperator.FixedVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FixedVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 77
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of fixed variables in the algebra i.e. variables that are guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FixedVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FixedVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.NullOperator.FixedVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.NullOperator.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.NullOperator.FloatingVariables
+  id: FloatingVariables
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: FloatingVariables
+  nameWithType: NullOperator.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.NullOperator.FloatingVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FloatingVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 85
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of floating variables in the algebra i.e. variables that are not guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FloatingVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FloatingVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.NullOperator.FloatingVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.NullOperator.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.NullOperator.ToQuery
+  id: ToQuery
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: ToQuery()
+  nameWithType: NullOperator.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.NullOperator.ToQuery()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 94
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nThrows an error since a null operator cannot be transformed back into a query.\n"
+  example: []
+  syntax:
+    content: public SparqlQuery ToQuery()
+    return:
+      type: VDS.RDF.Query.SparqlQuery
+      description: ''
+    content.vb: Public Function ToQuery As SparqlQuery
+  overload: VDS.RDF.Query.Algebra.NullOperator.ToQuery*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern
+  id: ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: ToGraphPattern()
+  nameWithType: NullOperator.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToGraphPattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 103
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nThrows an error since a null operator cannot be transformed back into a query.\n"
+  example: []
+  syntax:
+    content: public GraphPattern ToGraphPattern()
+    return:
+      type: VDS.RDF.Query.Patterns.GraphPattern
+      description: ''
+    content.vb: Public Function ToGraphPattern As GraphPattern
+  overload: VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.NullOperator.ToString
+  commentId: M:VDS.RDF.Query.Algebra.NullOperator.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Algebra.NullOperator
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: NullOperator.ToString()
+  fullName: VDS.RDF.Query.Algebra.NullOperator.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/NullOperator.cs
+    startLine: 112
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the string representation of the algebra.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.Algebra.NullOperator.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Algebra.ITerminalOperator
+  commentId: T:VDS.RDF.Query.Algebra.ITerminalOperator
+  parent: VDS.RDF.Query.Algebra
+  name: ITerminalOperator
+  nameWithType: ITerminalOperator
+  fullName: VDS.RDF.Query.Algebra.ITerminalOperator
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.NullOperator.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<NullOperator>()
+  nameWithType: Extensions.AsEnumerable<NullOperator>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.NullOperator>()
+  nameWithType.vb: Extensions.AsEnumerable(Of NullOperator)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.NullOperator)()
+  name.vb: AsEnumerable(Of NullOperator)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<NullOperator>
+    nameWithType: Extensions.AsEnumerable<NullOperator>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.NullOperator>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of NullOperator)
+    nameWithType: Extensions.AsEnumerable(Of NullOperator)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.NullOperator)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Algebra.NullOperator.#ctor*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.#ctor
+  name: NullOperator
+  nameWithType: NullOperator.NullOperator
+  fullName: VDS.RDF.Query.Algebra.NullOperator.NullOperator
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.Algebra.NullMultiset
+  commentId: T:VDS.RDF.Query.Algebra.NullMultiset
+  name: NullMultiset
+  nameWithType: NullMultiset
+  fullName: VDS.RDF.Query.Algebra.NullMultiset
+- uid: VDS.RDF.Query.Algebra.NullOperator.Evaluate*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.Evaluate
+  name: Evaluate
+  nameWithType: NullOperator.Evaluate
+  fullName: VDS.RDF.Query.Algebra.NullOperator.Evaluate
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: ISparqlAlgebra.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: VDS.RDF.Query.Algebra.BaseMultiset
+  commentId: T:VDS.RDF.Query.Algebra.BaseMultiset
+  parent: VDS.RDF.Query.Algebra
+  name: BaseMultiset
+  nameWithType: BaseMultiset
+  fullName: VDS.RDF.Query.Algebra.BaseMultiset
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Algebra.NullOperator.Variables*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.Variables
+  name: Variables
+  nameWithType: NullOperator.Variables
+  fullName: VDS.RDF.Query.Algebra.NullOperator.Variables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Variables
+  nameWithType: ISparqlAlgebra.Variables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+- uid: VDS.RDF.Query.Algebra.NullOperator.FixedVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.FixedVariables
+  name: FixedVariables
+  nameWithType: NullOperator.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.NullOperator.FixedVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FixedVariables
+  nameWithType: ISparqlAlgebra.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+- uid: VDS.RDF.Query.Algebra.NullOperator.FloatingVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.FloatingVariables
+  name: FloatingVariables
+  nameWithType: NullOperator.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.NullOperator.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FloatingVariables
+  nameWithType: ISparqlAlgebra.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.NullOperator.ToQuery*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.ToQuery
+  name: ToQuery
+  nameWithType: NullOperator.ToQuery
+  fullName: VDS.RDF.Query.Algebra.NullOperator.ToQuery
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToQuery()
+  nameWithType: ISparqlAlgebra.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern
+  name: ToGraphPattern
+  nameWithType: NullOperator.ToGraphPattern
+  fullName: VDS.RDF.Query.Algebra.NullOperator.ToGraphPattern
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToGraphPattern()
+  nameWithType: ISparqlAlgebra.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Patterns.GraphPattern
+  commentId: T:VDS.RDF.Query.Patterns.GraphPattern
+  parent: VDS.RDF.Query.Patterns
+  name: GraphPattern
+  nameWithType: GraphPattern
+  fullName: VDS.RDF.Query.Patterns.GraphPattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.NullOperator.ToString*
+  commentId: Overload:VDS.RDF.Query.Algebra.NullOperator.ToString
+  name: ToString
+  nameWithType: NullOperator.ToString
+  fullName: VDS.RDF.Query.Algebra.NullOperator.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

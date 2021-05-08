@@ -1,0 +1,482 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.DataUriLoader
+  commentId: T:VDS.RDF.Parsing.DataUriLoader
+  id: DataUriLoader
+  parent: VDS.RDF.Parsing
+  children:
+  - VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IGraph,System.Uri)
+  - VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IRdfHandler,System.Uri)
+  langs:
+  - csharp
+  - vb
+  name: DataUriLoader
+  nameWithType: DataUriLoader
+  fullName: VDS.RDF.Parsing.DataUriLoader
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/DataUriLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DataUriLoader
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/DataUriLoader.cs
+    startLine: 47
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nA Class for parsing RDF data from Data URIs.\n"
+  remarks: "\n<p>\nData URIs use the data: scheme and are defined by the IETF in <a href=\"http://tools.ietf.org/html/rfc2397\">RFC 2397</a> and provide a means to embed data directly in a URI either in Base64 or ASCII encoded format.  This class can extract the data from such URIs and attempt to parse it as RDF using the <xref href=\"VDS.RDF.Parsing.StringParser\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n<p>\nThe parsing process for data: URIs involves first extracting and decoding the data embedded in the URI - this may either be in Base64 or ASCII encoding - and then using the <xref href=\"VDS.RDF.Parsing.StringParser\" data-throw-if-not-resolved=\"false\"></xref> to actually parse the data string.  If the data: URI defines a MIME type then a parser is selected (if one exists for the given MIME type) and that is used to parse the data, in the event that no MIME type is given or the one given does not have a corresponding parser then the <xref href=\"VDS.RDF.Parsing.StringParser\" data-throw-if-not-resolved=\"false\"></xref> will use its basic heuristics to attempt to auto-detect the format and select an appropriate parser.\n</p>\n<p>\nIf you attempt to use this loader for non data: URIs then the standard <xref href=\"VDS.RDF.Parsing.UriLoader\" data-throw-if-not-resolved=\"false\"></xref> is used instead.\n</p>\n"
+  example: []
+  syntax:
+    content: public static class DataUriLoader
+    content.vb: Public Module DataUriLoader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IGraph,System.Uri)
+  id: Load(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Parsing.DataUriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, Uri)
+  nameWithType: DataUriLoader.Load(IGraph, Uri)
+  fullName: VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IGraph, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/DataUriLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/DataUriLoader.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads RDF data into a Graph from a data: URI.\n"
+  remarks: "\nInvokes the normal <xref href=\"VDS.RDF.Parsing.UriLoader\" data-throw-if-not-resolved=\"false\"></xref> instead if a the URI provided is not a data: URI.\n"
+  example: []
+  syntax:
+    content: public static void Load(IGraph g, Uri u)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load into.
+    - id: u
+      type: System.Uri
+      description: URI to load from.
+    content.vb: Public Shared Sub Load(g As IGraph, u As Uri)
+  overload: VDS.RDF.Parsing.DataUriLoader.Load*
+  exceptions:
+  - type: System.UriFormatException
+    commentId: T:System.UriFormatException
+    description: Thrown if the metadata portion of the URI which indicates the MIME Type, Character Set and whether Base64 encoding is used is malformed.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IRdfHandler,System.Uri)
+  id: Load(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Parsing.DataUriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, Uri)
+  nameWithType: DataUriLoader.Load(IRdfHandler, Uri)
+  fullName: VDS.RDF.Parsing.DataUriLoader.Load(VDS.RDF.IRdfHandler, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/DataUriLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/DataUriLoader.cs
+    startLine: 74
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads RDF data using an RDF Handler from a data: URI.\n"
+  remarks: "\nInvokes the normal <xref href=\"VDS.RDF.Parsing.UriLoader\" data-throw-if-not-resolved=\"false\"></xref> instead if a the URI provided is not a data: URI.\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, Uri u)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: u
+      type: System.Uri
+      description: URI to load from.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, u As Uri)
+  overload: VDS.RDF.Parsing.DataUriLoader.Load*
+  exceptions:
+  - type: System.UriFormatException
+    commentId: T:System.UriFormatException
+    description: Thrown if the metadata portion of the URI which indicates the MIME Type, Character Set and whether Base64 encoding is used is malformed.
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: VDS.RDF.Parsing.StringParser
+  commentId: T:VDS.RDF.Parsing.StringParser
+  name: StringParser
+  nameWithType: StringParser
+  fullName: VDS.RDF.Parsing.StringParser
+- uid: VDS.RDF.Parsing.UriLoader
+  commentId: T:VDS.RDF.Parsing.UriLoader
+  name: UriLoader
+  nameWithType: UriLoader
+  fullName: VDS.RDF.Parsing.UriLoader
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UriFormatException
+  commentId: T:System.UriFormatException
+  isExternal: true
+- uid: VDS.RDF.Parsing.DataUriLoader.Load*
+  commentId: Overload:VDS.RDF.Parsing.DataUriLoader.Load
+  name: Load
+  nameWithType: DataUriLoader.Load
+  fullName: VDS.RDF.Parsing.DataUriLoader.Load
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler

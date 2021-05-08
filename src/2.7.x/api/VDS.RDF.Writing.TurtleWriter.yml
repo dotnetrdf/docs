@@ -1,0 +1,1181 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.TurtleWriter
+  commentId: T:VDS.RDF.Writing.TurtleWriter
+  id: TurtleWriter
+  parent: VDS.RDF.Writing
+  children:
+  - VDS.RDF.Writing.TurtleWriter.#ctor
+  - VDS.RDF.Writing.TurtleWriter.#ctor(VDS.RDF.Parsing.TurtleSyntax)
+  - VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted
+  - VDS.RDF.Writing.TurtleWriter.PrettyPrintMode
+  - VDS.RDF.Writing.TurtleWriter.Save(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Writing.TurtleWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  - VDS.RDF.Writing.TurtleWriter.ToString
+  - VDS.RDF.Writing.TurtleWriter.TripleFormatterType
+  - VDS.RDF.Writing.TurtleWriter.Warning
+  langs:
+  - csharp
+  - vb
+  name: TurtleWriter
+  nameWithType: TurtleWriter
+  fullName: VDS.RDF.Writing.TurtleWriter
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TurtleWriter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 44
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nClass for generating RDF in Turtle Syntax.\n"
+  remarks: "\nSimilar in speed to the <xref href=\"VDS.RDF.Writing.CompressingTurtleWriter\" data-throw-if-not-resolved=\"false\"></xref> but doesn&apos;t use the full Blank Node and Collection syntax compressions.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Deprecated in favour of the CompressingTurtleWriter which uses a much fuller range of syntax compressions", false)]
+
+      public class TurtleWriter : BaseRdfWriter, IRdfWriter, IPrettyPrintingWriter, IHighSpeedWriter, IFormatterBasedWriter
+    content.vb: >-
+      <Obsolete("Deprecated in favour of the CompressingTurtleWriter which uses a much fuller range of syntax compressions", False)>
+
+      Public Class TurtleWriter
+          Inherits BaseRdfWriter
+          Implements IRdfWriter, IPrettyPrintingWriter, IHighSpeedWriter, IFormatterBasedWriter
+  inheritance:
+  - System.Object
+  - VDS.RDF.Writing.BaseRdfWriter
+  implements:
+  - VDS.RDF.IRdfWriter
+  - VDS.RDF.Writing.IPrettyPrintingWriter
+  - VDS.RDF.Writing.IHighSpeedWriter
+  - VDS.RDF.Writing.IFormatterBasedWriter
+  inheritedMembers:
+  - VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  - VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Writing.TurtleWriter.VDS.RDF.Extensions.AsEnumerable``1
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: Deprecated in favour of the CompressingTurtleWriter which uses a much fuller range of syntax compressions
+    - type: System.Boolean
+      value: false
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Writing.TurtleWriter.#ctor
+  commentId: M:VDS.RDF.Writing.TurtleWriter.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: TurtleWriter()
+  nameWithType: TurtleWriter.TurtleWriter()
+  fullName: VDS.RDF.Writing.TurtleWriter.TurtleWriter()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nCreates a new Turtle Writer.\n"
+  example: []
+  syntax:
+    content: public TurtleWriter()
+    content.vb: Public Sub New
+  overload: VDS.RDF.Writing.TurtleWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.TurtleWriter.#ctor(VDS.RDF.Parsing.TurtleSyntax)
+  commentId: M:VDS.RDF.Writing.TurtleWriter.#ctor(VDS.RDF.Parsing.TurtleSyntax)
+  id: '#ctor(VDS.RDF.Parsing.TurtleSyntax)'
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: TurtleWriter(TurtleSyntax)
+  nameWithType: TurtleWriter.TurtleWriter(TurtleSyntax)
+  fullName: VDS.RDF.Writing.TurtleWriter.TurtleWriter(VDS.RDF.Parsing.TurtleSyntax)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 61
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nCreates a new Turtle Writer.\n"
+  example: []
+  syntax:
+    content: public TurtleWriter(TurtleSyntax syntax)
+    parameters:
+    - id: syntax
+      type: VDS.RDF.Parsing.TurtleSyntax
+      description: Turtle Syntax.
+    content.vb: Public Sub New(syntax As TurtleSyntax)
+  overload: VDS.RDF.Writing.TurtleWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.TurtleWriter.PrettyPrintMode
+  commentId: P:VDS.RDF.Writing.TurtleWriter.PrettyPrintMode
+  id: PrettyPrintMode
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: PrettyPrintMode
+  nameWithType: TurtleWriter.PrettyPrintMode
+  fullName: VDS.RDF.Writing.TurtleWriter.PrettyPrintMode
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PrettyPrintMode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 69
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets/Sets whether Pretty Printing is used.\n"
+  example: []
+  syntax:
+    content: public bool PrettyPrintMode { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PrettyPrintMode As Boolean
+  overload: VDS.RDF.Writing.TurtleWriter.PrettyPrintMode*
+  implements:
+  - VDS.RDF.Writing.IPrettyPrintingWriter.PrettyPrintMode
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted
+  commentId: P:VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted
+  id: HighSpeedModePermitted
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: HighSpeedModePermitted
+  nameWithType: TurtleWriter.HighSpeedModePermitted
+  fullName: VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HighSpeedModePermitted
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 79
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets/Sets whether the Writer is allowed to use High Speed write mode.\n"
+  remarks: High Speed Write Mode is engaged when the Writer determines that the contents of the Graph are not well suited to Turtle syntax compressions.  Usually the writer compresses triples into groups by Subject using Predicate-Object lists to output the Triples relating to each Subject.  If the number of distinct Subjects is greater than 75% of the Triples in the Graph then High Speed write mode will be used, in High Speed mode all Triples are written fully and no grouping of any sort is done.
+  example: []
+  syntax:
+    content: public bool HighSpeedModePermitted { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HighSpeedModePermitted As Boolean
+  overload: VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted*
+  implements:
+  - VDS.RDF.Writing.IHighSpeedWriter.HighSpeedModePermitted
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.TurtleWriter.TripleFormatterType
+  commentId: P:VDS.RDF.Writing.TurtleWriter.TripleFormatterType
+  id: TripleFormatterType
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: TripleFormatterType
+  nameWithType: TurtleWriter.TripleFormatterType
+  fullName: VDS.RDF.Writing.TurtleWriter.TripleFormatterType
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TripleFormatterType
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 88
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets the type of the Triple Formatter used by this writer.\n"
+  example: []
+  syntax:
+    content: public Type TripleFormatterType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property TripleFormatterType As Type
+  overload: VDS.RDF.Writing.TurtleWriter.TripleFormatterType*
+  implements:
+  - VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Writing.TurtleWriter.Save(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Writing.TurtleWriter.Save(VDS.RDF.IGraph,System.String)
+  id: Save(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(IGraph, String)
+  nameWithType: TurtleWriter.Save(IGraph, String)
+  fullName: VDS.RDF.Writing.TurtleWriter.Save(VDS.RDF.IGraph, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 95
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a Graph to a File.\n"
+  example: []
+  syntax:
+    content: public override void Save(IGraph g, string filename)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to save.
+    - id: filename
+      type: System.String
+      description: Filename to save to.
+    content.vb: Public Overrides Sub Save(g As IGraph, filename As String)
+  overridden: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+  overload: VDS.RDF.Writing.TurtleWriter.Save*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Writing.TurtleWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.TurtleWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  id: SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: SaveInternal(IGraph, TextWriter)
+  nameWithType: TurtleWriter.SaveInternal(IGraph, TextWriter)
+  fullName: VDS.RDF.Writing.TurtleWriter.SaveInternal(VDS.RDF.IGraph, System.IO.TextWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SaveInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 108
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a Graph using an arbitrary <xref href=\"System.IO.TextWriter\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: protected override void SaveInternal(IGraph g, TextWriter output)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to save.
+    - id: output
+      type: System.IO.TextWriter
+      description: Writer to save using.
+    content.vb: Protected Overrides Sub SaveInternal(g As IGraph, output As TextWriter)
+  overridden: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  overload: VDS.RDF.Writing.TurtleWriter.SaveInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Writing.TurtleWriter.Warning
+  commentId: E:VDS.RDF.Writing.TurtleWriter.Warning
+  id: Warning
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: TurtleWriter.Warning
+  fullName: VDS.RDF.Writing.TurtleWriter.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 300
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nEvent which is raised when a non-fatal issue with the Graph being serialized is encountered\n"
+  example: []
+  syntax:
+    content: public override event RdfWriterWarning Warning
+    return:
+      type: VDS.RDF.RdfWriterWarning
+    content.vb: Public Overrides Event Warning As RdfWriterWarning
+  overridden: VDS.RDF.Writing.BaseRdfWriter.Warning
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Writing.TurtleWriter.ToString
+  commentId: M:VDS.RDF.Writing.TurtleWriter.ToString
+  id: ToString
+  parent: VDS.RDF.Writing.TurtleWriter
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TurtleWriter.ToString()
+  fullName: VDS.RDF.Writing.TurtleWriter.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/TurtleWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/TurtleWriter.cs
+    startLine: 306
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets the String representation of the writer which is a description of the syntax it produces.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Writing.TurtleWriter.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Writing.CompressingTurtleWriter
+  commentId: T:VDS.RDF.Writing.CompressingTurtleWriter
+  name: CompressingTurtleWriter
+  nameWithType: CompressingTurtleWriter
+  fullName: VDS.RDF.Writing.CompressingTurtleWriter
+- uid: VDS.RDF.Writing
+  commentId: N:VDS.RDF.Writing
+  name: VDS.RDF.Writing
+  nameWithType: VDS.RDF.Writing
+  fullName: VDS.RDF.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Writing.BaseRdfWriter
+  commentId: T:VDS.RDF.Writing.BaseRdfWriter
+  parent: VDS.RDF.Writing
+  name: BaseRdfWriter
+  nameWithType: BaseRdfWriter
+  fullName: VDS.RDF.Writing.BaseRdfWriter
+- uid: VDS.RDF.IRdfWriter
+  commentId: T:VDS.RDF.IRdfWriter
+  parent: VDS.RDF
+  name: IRdfWriter
+  nameWithType: IRdfWriter
+  fullName: VDS.RDF.IRdfWriter
+- uid: VDS.RDF.Writing.IPrettyPrintingWriter
+  commentId: T:VDS.RDF.Writing.IPrettyPrintingWriter
+  parent: VDS.RDF.Writing
+  name: IPrettyPrintingWriter
+  nameWithType: IPrettyPrintingWriter
+  fullName: VDS.RDF.Writing.IPrettyPrintingWriter
+- uid: VDS.RDF.Writing.IHighSpeedWriter
+  commentId: T:VDS.RDF.Writing.IHighSpeedWriter
+  parent: VDS.RDF.Writing
+  name: IHighSpeedWriter
+  nameWithType: IHighSpeedWriter
+  fullName: VDS.RDF.Writing.IHighSpeedWriter
+- uid: VDS.RDF.Writing.IFormatterBasedWriter
+  commentId: T:VDS.RDF.Writing.IFormatterBasedWriter
+  parent: VDS.RDF.Writing
+  name: IFormatterBasedWriter
+  nameWithType: IFormatterBasedWriter
+  fullName: VDS.RDF.Writing.IFormatterBasedWriter
+- uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: Save(IGraph, TextWriter)
+  nameWithType: BaseRdfWriter.Save(IGraph, TextWriter)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: Save(IGraph, TextWriter, Boolean)
+  nameWithType: BaseRdfWriter.Save(IGraph, TextWriter, Boolean)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph, System.IO.TextWriter, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.TurtleWriter.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<TurtleWriter>()
+  nameWithType: Extensions.AsEnumerable<TurtleWriter>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.TurtleWriter>()
+  nameWithType.vb: Extensions.AsEnumerable(Of TurtleWriter)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.TurtleWriter)()
+  name.vb: AsEnumerable(Of TurtleWriter)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<TurtleWriter>
+    nameWithType: Extensions.AsEnumerable<TurtleWriter>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.TurtleWriter>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of TurtleWriter)
+    nameWithType: Extensions.AsEnumerable(Of TurtleWriter)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.TurtleWriter)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Writing.TurtleWriter.#ctor*
+  commentId: Overload:VDS.RDF.Writing.TurtleWriter.#ctor
+  name: TurtleWriter
+  nameWithType: TurtleWriter.TurtleWriter
+  fullName: VDS.RDF.Writing.TurtleWriter.TurtleWriter
+- uid: VDS.RDF.Parsing.TurtleSyntax
+  commentId: T:VDS.RDF.Parsing.TurtleSyntax
+  parent: VDS.RDF.Parsing
+  name: TurtleSyntax
+  nameWithType: TurtleSyntax
+  fullName: VDS.RDF.Parsing.TurtleSyntax
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: VDS.RDF.Writing.TurtleWriter.PrettyPrintMode*
+  commentId: Overload:VDS.RDF.Writing.TurtleWriter.PrettyPrintMode
+  name: PrettyPrintMode
+  nameWithType: TurtleWriter.PrettyPrintMode
+  fullName: VDS.RDF.Writing.TurtleWriter.PrettyPrintMode
+- uid: VDS.RDF.Writing.IPrettyPrintingWriter.PrettyPrintMode
+  commentId: P:VDS.RDF.Writing.IPrettyPrintingWriter.PrettyPrintMode
+  parent: VDS.RDF.Writing.IPrettyPrintingWriter
+  name: PrettyPrintMode
+  nameWithType: IPrettyPrintingWriter.PrettyPrintMode
+  fullName: VDS.RDF.Writing.IPrettyPrintingWriter.PrettyPrintMode
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted*
+  commentId: Overload:VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted
+  name: HighSpeedModePermitted
+  nameWithType: TurtleWriter.HighSpeedModePermitted
+  fullName: VDS.RDF.Writing.TurtleWriter.HighSpeedModePermitted
+- uid: VDS.RDF.Writing.IHighSpeedWriter.HighSpeedModePermitted
+  commentId: P:VDS.RDF.Writing.IHighSpeedWriter.HighSpeedModePermitted
+  parent: VDS.RDF.Writing.IHighSpeedWriter
+  name: HighSpeedModePermitted
+  nameWithType: IHighSpeedWriter.HighSpeedModePermitted
+  fullName: VDS.RDF.Writing.IHighSpeedWriter.HighSpeedModePermitted
+- uid: VDS.RDF.Writing.TurtleWriter.TripleFormatterType*
+  commentId: Overload:VDS.RDF.Writing.TurtleWriter.TripleFormatterType
+  name: TripleFormatterType
+  nameWithType: TurtleWriter.TripleFormatterType
+  fullName: VDS.RDF.Writing.TurtleWriter.TripleFormatterType
+- uid: VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+  commentId: P:VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+  parent: VDS.RDF.Writing.IFormatterBasedWriter
+  name: TripleFormatterType
+  nameWithType: IFormatterBasedWriter.TripleFormatterType
+  fullName: VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: Save(IGraph, String)
+  nameWithType: BaseRdfWriter.Save(IGraph, String)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.TurtleWriter.Save*
+  commentId: Overload:VDS.RDF.Writing.TurtleWriter.Save
+  name: Save
+  nameWithType: TurtleWriter.Save
+  fullName: VDS.RDF.Writing.TurtleWriter.Save
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: SaveInternal(IGraph, TextWriter)
+  nameWithType: BaseRdfWriter.SaveInternal(IGraph, TextWriter)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: SaveInternal
+    nameWithType: BaseRdfWriter.SaveInternal
+    fullName: VDS.RDF.Writing.BaseRdfWriter.SaveInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: SaveInternal
+    nameWithType: BaseRdfWriter.SaveInternal
+    fullName: VDS.RDF.Writing.BaseRdfWriter.SaveInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.TurtleWriter.SaveInternal*
+  commentId: Overload:VDS.RDF.Writing.TurtleWriter.SaveInternal
+  name: SaveInternal
+  nameWithType: TurtleWriter.SaveInternal
+  fullName: VDS.RDF.Writing.TurtleWriter.SaveInternal
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.Writing.BaseRdfWriter.Warning
+  commentId: E:VDS.RDF.Writing.BaseRdfWriter.Warning
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  name: Warning
+  nameWithType: BaseRdfWriter.Warning
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Warning
+- uid: VDS.RDF.RdfWriterWarning
+  commentId: T:VDS.RDF.RdfWriterWarning
+  parent: VDS.RDF
+  name: RdfWriterWarning
+  nameWithType: RdfWriterWarning
+  fullName: VDS.RDF.RdfWriterWarning
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.TurtleWriter.ToString*
+  commentId: Overload:VDS.RDF.Writing.TurtleWriter.ToString
+  name: ToString
+  nameWithType: TurtleWriter.ToString
+  fullName: VDS.RDF.Writing.TurtleWriter.ToString

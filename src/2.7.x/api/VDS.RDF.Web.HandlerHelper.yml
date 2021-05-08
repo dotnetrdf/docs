@@ -1,0 +1,992 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Web.HandlerHelper
+  commentId: T:VDS.RDF.Web.HandlerHelper
+  id: HandlerHelper
+  parent: VDS.RDF.Web
+  children:
+  - VDS.RDF.Web.HandlerHelper.AddCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  - VDS.RDF.Web.HandlerHelper.AddCorsHeaders(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Web.HandlerHelper.AddStandardHeaders(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  - VDS.RDF.Web.HandlerHelper.ApplyWriterOptions(Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  - VDS.RDF.Web.HandlerHelper.CheckCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  - VDS.RDF.Web.HandlerHelper.GetETag(VDS.RDF.IGraph)
+  - VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  - VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  - VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  - VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  - VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup})
+  - VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup},String)
+  - VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext,Object)
+  - VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext,Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  langs:
+  - csharp
+  - vb
+  name: HandlerHelper
+  nameWithType: HandlerHelper
+  fullName: VDS.RDF.Web.HandlerHelper
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandlerHelper
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nStatic Helper class for HTTP Handlers\n"
+  example: []
+  syntax:
+    content: 'public static class HandlerHelper : object'
+    content.vb: >-
+      Public Module HandlerHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup})
+  commentId: M:VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup})
+  id: IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup})
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: IsAuthenticated(IHttpContext, IEnumerable<UserGroup>)
+  nameWithType: HandlerHelper.IsAuthenticated(IHttpContext, IEnumerable<UserGroup>)
+  fullName: VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext, IEnumerable<VDS.RDF.Configuration.Permissions.UserGroup>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsAuthenticated
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 78
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nChecks whether a User is authenticated (or guests are permitted)\n"
+  example: []
+  syntax:
+    content: public static bool IsAuthenticated(IHttpContext context, IEnumerable<UserGroup> groups)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: HTTP Context
+    - id: groups
+      type: IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup}
+      description: User Groups to test against
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsAuthenticated(context As IHttpContext, groups As IEnumerable(Of UserGroup)) As Boolean
+  overload: VDS.RDF.Web.HandlerHelper.IsAuthenticated*
+  nameWithType.vb: HandlerHelper.IsAuthenticated(IHttpContext, IEnumerable(Of UserGroup))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext, IEnumerable(Of VDS.RDF.Configuration.Permissions.UserGroup))
+  name.vb: IsAuthenticated(IHttpContext, IEnumerable(Of UserGroup))
+- uid: VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup},String)
+  commentId: M:VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup},String)
+  id: IsAuthenticated(VDS.RDF.Web.IHttpContext,IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup},String)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: IsAuthenticated(IHttpContext, IEnumerable<UserGroup>, String)
+  nameWithType: HandlerHelper.IsAuthenticated(IHttpContext, IEnumerable<UserGroup>, String)
+  fullName: VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext, IEnumerable<VDS.RDF.Configuration.Permissions.UserGroup>, String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsAuthenticated
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 105
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nChecks whether a User is authenticated (or guests are permitted) and the given action is allowed\n"
+  example: []
+  syntax:
+    content: public static bool IsAuthenticated(IHttpContext context, IEnumerable<UserGroup> groups, String action)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: HTTP Context
+    - id: groups
+      type: IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup}
+      description: User Groups to test against
+    - id: action
+      type: String
+      description: Action to check for permission for
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsAuthenticated(context As IHttpContext, groups As IEnumerable(Of UserGroup), action As String) As Boolean
+  overload: VDS.RDF.Web.HandlerHelper.IsAuthenticated*
+  nameWithType.vb: HandlerHelper.IsAuthenticated(IHttpContext, IEnumerable(Of UserGroup), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Web.HandlerHelper.IsAuthenticated(VDS.RDF.Web.IHttpContext, IEnumerable(Of VDS.RDF.Configuration.Permissions.UserGroup), String)
+  name.vb: IsAuthenticated(IHttpContext, IEnumerable(Of UserGroup), String)
+- uid: VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext,Object)
+  commentId: M:VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext,Object)
+  id: SendToClient(VDS.RDF.Web.IHttpContext,Object)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: SendToClient(IHttpContext, Object)
+  nameWithType: HandlerHelper.SendToClient(IHttpContext, Object)
+  fullName: VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext, Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SendToClient
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 145
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHelper function which returns the Results (Graph/Triple Store/SPARQL Results) back to the Client in one of their accepted formats\n"
+  example: []
+  syntax:
+    content: public static void SendToClient(IHttpContext context, Object result)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: Context of the HTTP Request
+    - id: result
+      type: Object
+      description: Results of the Sparql Query
+    content.vb: Public Shared Sub SendToClient(context As IHttpContext, result As Object)
+  overload: VDS.RDF.Web.HandlerHelper.SendToClient*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext,Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  commentId: M:VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext,Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  id: SendToClient(VDS.RDF.Web.IHttpContext,Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: SendToClient(IHttpContext, Object, BaseHandlerConfiguration)
+  nameWithType: HandlerHelper.SendToClient(IHttpContext, Object, BaseHandlerConfiguration)
+  fullName: VDS.RDF.Web.HandlerHelper.SendToClient(VDS.RDF.Web.IHttpContext, Object, VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SendToClient
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 156
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHelper function which returns the Results (Graph/Triple Store/SPARQL Results) back to the Client in one of their accepted formats\n"
+  example: []
+  syntax:
+    content: public static void SendToClient(IHttpContext context, Object result, BaseHandlerConfiguration config)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: Context of the HTTP Request
+    - id: result
+      type: Object
+      description: Results of the Sparql Query
+    - id: config
+      type: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+      description: Handler Configuration
+    content.vb: Public Shared Sub SendToClient(context As IHttpContext, result As Object, config As BaseHandlerConfiguration)
+  overload: VDS.RDF.Web.HandlerHelper.SendToClient*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.ApplyWriterOptions(Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  commentId: M:VDS.RDF.Web.HandlerHelper.ApplyWriterOptions(Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  id: ApplyWriterOptions(Object,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: ApplyWriterOptions(Object, BaseHandlerConfiguration)
+  nameWithType: HandlerHelper.ApplyWriterOptions(Object, BaseHandlerConfiguration)
+  fullName: VDS.RDF.Web.HandlerHelper.ApplyWriterOptions(Object, VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ApplyWriterOptions
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 289
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nApplies the Writer Options from a Handler Configuration to a Writer\n"
+  example: []
+  syntax:
+    content: public static void ApplyWriterOptions(Object writer, BaseHandlerConfiguration config)
+    parameters:
+    - id: writer
+      type: Object
+      description: Writer
+    - id: config
+      type: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+      description: Handler Configuration
+    content.vb: Public Shared Sub ApplyWriterOptions(writer As Object, config As BaseHandlerConfiguration)
+  overload: VDS.RDF.Web.HandlerHelper.ApplyWriterOptions*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  commentId: M:VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  id: HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleQueryErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception)
+  nameWithType: HandlerHelper.HandleQueryErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception)
+  fullName: VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext, VDS.RDF.Web.Configuration.BaseHandlerConfiguration, String, String, Exception)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleQueryErrors
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 339
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHandles errors in processing SPARQL Query Requests\n"
+  example: []
+  syntax:
+    content: public static void HandleQueryErrors(IHttpContext context, BaseHandlerConfiguration config, String title, String query, Exception ex)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: Context of the HTTP Request
+    - id: config
+      type: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+      description: Handler Configuration
+    - id: title
+      type: String
+      description: Error title
+    - id: query
+      type: String
+      description: Sparql Query
+    - id: ex
+      type: Exception
+      description: Error
+    content.vb: Public Shared Sub HandleQueryErrors(context As IHttpContext, config As BaseHandlerConfiguration, title As String, query As String, ex As Exception)
+  overload: VDS.RDF.Web.HandlerHelper.HandleQueryErrors*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  commentId: M:VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  id: HandleQueryErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleQueryErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception, Int32)
+  nameWithType: HandlerHelper.HandleQueryErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception, Int32)
+  fullName: VDS.RDF.Web.HandlerHelper.HandleQueryErrors(VDS.RDF.Web.IHttpContext, VDS.RDF.Web.Configuration.BaseHandlerConfiguration, String, String, Exception, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleQueryErrors
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 353
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHandles errors in processing SPARQL Query Requests\n"
+  example: []
+  syntax:
+    content: public static void HandleQueryErrors(IHttpContext context, BaseHandlerConfiguration config, String title, String query, Exception ex, int statusCode)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: Context of the HTTP Request
+    - id: config
+      type: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+      description: Handler Configuration
+    - id: title
+      type: String
+      description: Error title
+    - id: query
+      type: String
+      description: Sparql Query
+    - id: ex
+      type: Exception
+      description: Error
+    - id: statusCode
+      type: System.Int32
+      description: HTTP Status Code to return
+    content.vb: Public Shared Sub HandleQueryErrors(context As IHttpContext, config As BaseHandlerConfiguration, title As String, query As String, ex As Exception, statusCode As Integer)
+  overload: VDS.RDF.Web.HandlerHelper.HandleQueryErrors*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  commentId: M:VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  id: HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleUpdateErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception)
+  nameWithType: HandlerHelper.HandleUpdateErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception)
+  fullName: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext, VDS.RDF.Web.Configuration.BaseHandlerConfiguration, String, String, Exception)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleUpdateErrors
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 407
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHandles errors in processing SPARQL Update Requests\n"
+  example: []
+  syntax:
+    content: public static void HandleUpdateErrors(IHttpContext context, BaseHandlerConfiguration config, String title, String update, Exception ex)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: Context of the HTTP Request
+    - id: config
+      type: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+      description: Handler Configuration
+    - id: title
+      type: String
+      description: Error title
+    - id: update
+      type: String
+      description: SPARQL Update
+    - id: ex
+      type: Exception
+      description: Error
+    content.vb: Public Shared Sub HandleUpdateErrors(context As IHttpContext, config As BaseHandlerConfiguration, title As String, update As String, ex As Exception)
+  overload: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  commentId: M:VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  id: HandleUpdateErrors(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration,String,String,Exception,System.Int32)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleUpdateErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception, Int32)
+  nameWithType: HandlerHelper.HandleUpdateErrors(IHttpContext, BaseHandlerConfiguration, String, String, Exception, Int32)
+  fullName: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors(VDS.RDF.Web.IHttpContext, VDS.RDF.Web.Configuration.BaseHandlerConfiguration, String, String, Exception, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleUpdateErrors
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 421
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHandles errors in processing SPARQL Update Requests\n"
+  example: []
+  syntax:
+    content: public static void HandleUpdateErrors(IHttpContext context, BaseHandlerConfiguration config, String title, String update, Exception ex, int statusCode)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: Context of the HTTP Request
+    - id: config
+      type: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+      description: Handler Configuration
+    - id: title
+      type: String
+      description: Error title
+    - id: update
+      type: String
+      description: SPARQL Update
+    - id: ex
+      type: Exception
+      description: Error
+    - id: statusCode
+      type: System.Int32
+      description: HTTP Status Code to return
+    content.vb: Public Shared Sub HandleUpdateErrors(context As IHttpContext, config As BaseHandlerConfiguration, title As String, update As String, ex As Exception, statusCode As Integer)
+  overload: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.GetETag(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Web.HandlerHelper.GetETag(VDS.RDF.IGraph)
+  id: GetETag(VDS.RDF.IGraph)
+  isExtensionMethod: true
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: GetETag(IGraph)
+  nameWithType: HandlerHelper.GetETag(IGraph)
+  fullName: VDS.RDF.Web.HandlerHelper.GetETag(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetETag
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 476
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nComputes the ETag for a Graph\n"
+  example: []
+  syntax:
+    content: public static String GetETag(this IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph
+    return:
+      type: String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetETag(g As IGraph) As String
+  overload: VDS.RDF.Web.HandlerHelper.GetETag*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.CheckCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  commentId: M:VDS.RDF.Web.HandlerHelper.CheckCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  id: CheckCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: CheckCachingHeaders(IHttpContext, String, Nullable<DateTime>)
+  nameWithType: HandlerHelper.CheckCachingHeaders(IHttpContext, String, Nullable<DateTime>)
+  fullName: VDS.RDF.Web.HandlerHelper.CheckCachingHeaders(VDS.RDF.Web.IHttpContext, String, System.Nullable<DateTime>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CheckCachingHeaders
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 505
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nChecks whether the HTTP Request contains caching headers that means a 304 Modified response can be sent\n"
+  example: []
+  syntax:
+    content: public static bool CheckCachingHeaders(IHttpContext context, String etag, DateTime? lastModified)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: HTTP Context
+    - id: etag
+      type: String
+      description: ETag
+    - id: lastModified
+      type: System.Nullable{DateTime}
+      description: Last Modified
+    return:
+      type: System.Boolean
+      description: True if a 304 Not Modified can be sent
+    content.vb: Public Shared Function CheckCachingHeaders(context As IHttpContext, etag As String, lastModified As DateTime?) As Boolean
+  overload: VDS.RDF.Web.HandlerHelper.CheckCachingHeaders*
+  nameWithType.vb: HandlerHelper.CheckCachingHeaders(IHttpContext, String, Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Web.HandlerHelper.CheckCachingHeaders(VDS.RDF.Web.IHttpContext, String, System.Nullable(Of DateTime))
+  name.vb: CheckCachingHeaders(IHttpContext, String, Nullable(Of DateTime))
+- uid: VDS.RDF.Web.HandlerHelper.AddCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  commentId: M:VDS.RDF.Web.HandlerHelper.AddCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  id: AddCachingHeaders(VDS.RDF.Web.IHttpContext,String,System.Nullable{DateTime})
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: AddCachingHeaders(IHttpContext, String, Nullable<DateTime>)
+  nameWithType: HandlerHelper.AddCachingHeaders(IHttpContext, String, Nullable<DateTime>)
+  fullName: VDS.RDF.Web.HandlerHelper.AddCachingHeaders(VDS.RDF.Web.IHttpContext, String, System.Nullable<DateTime>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddCachingHeaders
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 543
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nAdds ETag and/or Last-Modified headers as appropriate to a response\n"
+  example: []
+  syntax:
+    content: public static void AddCachingHeaders(IHttpContext context, String etag, DateTime? lastModified)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: HTTP Context
+    - id: etag
+      type: String
+      description: ETag
+    - id: lastModified
+      type: System.Nullable{DateTime}
+      description: Last Modified
+    content.vb: Public Shared Sub AddCachingHeaders(context As IHttpContext, etag As String, lastModified As DateTime?)
+  overload: VDS.RDF.Web.HandlerHelper.AddCachingHeaders*
+  nameWithType.vb: HandlerHelper.AddCachingHeaders(IHttpContext, String, Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Web.HandlerHelper.AddCachingHeaders(VDS.RDF.Web.IHttpContext, String, System.Nullable(Of DateTime))
+  name.vb: AddCachingHeaders(IHttpContext, String, Nullable(Of DateTime))
+- uid: VDS.RDF.Web.HandlerHelper.AddStandardHeaders(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  commentId: M:VDS.RDF.Web.HandlerHelper.AddStandardHeaders(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  id: AddStandardHeaders(VDS.RDF.Web.IHttpContext,VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: AddStandardHeaders(IHttpContext, BaseHandlerConfiguration)
+  nameWithType: HandlerHelper.AddStandardHeaders(IHttpContext, BaseHandlerConfiguration)
+  fullName: VDS.RDF.Web.HandlerHelper.AddStandardHeaders(VDS.RDF.Web.IHttpContext, VDS.RDF.Web.Configuration.BaseHandlerConfiguration)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddStandardHeaders
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 585
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nAdds the Standard Custom Headers that dotNetRDF attaches to all responses from it&apos;s Handlers\n"
+  example: []
+  syntax:
+    content: public static void AddStandardHeaders(IHttpContext context, BaseHandlerConfiguration config)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: HTTP Context
+    - id: config
+      type: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+      description: Handler Configuration
+    content.vb: Public Shared Sub AddStandardHeaders(context As IHttpContext, config As BaseHandlerConfiguration)
+  overload: VDS.RDF.Web.HandlerHelper.AddStandardHeaders*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Web.HandlerHelper.AddCorsHeaders(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Web.HandlerHelper.AddCorsHeaders(VDS.RDF.Web.IHttpContext)
+  id: AddCorsHeaders(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Web.HandlerHelper
+  langs:
+  - csharp
+  - vb
+  name: AddCorsHeaders(IHttpContext)
+  nameWithType: HandlerHelper.AddCorsHeaders(IHttpContext)
+  fullName: VDS.RDF.Web.HandlerHelper.AddCorsHeaders(VDS.RDF.Web.IHttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/HandlerHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddCorsHeaders
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/HandlerHelper.cs
+    startLine: 602
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nAdds CORS headers which are needed to allow JS clients to access RDF/SPARQL endpoints powered by dotNetRDF\n"
+  example: []
+  syntax:
+    content: public static void AddCorsHeaders(IHttpContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Web.IHttpContext
+      description: HTTP Context
+    content.vb: Public Shared Sub AddCorsHeaders(context As IHttpContext)
+  overload: VDS.RDF.Web.HandlerHelper.AddCorsHeaders*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: VDS.RDF.Web
+  commentId: N:VDS.RDF.Web
+  name: VDS.RDF.Web
+  nameWithType: VDS.RDF.Web
+  fullName: VDS.RDF.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Web.HandlerHelper.IsAuthenticated*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.IsAuthenticated
+  name: IsAuthenticated
+  nameWithType: HandlerHelper.IsAuthenticated
+  fullName: VDS.RDF.Web.HandlerHelper.IsAuthenticated
+- uid: VDS.RDF.Web.IHttpContext
+  commentId: T:VDS.RDF.Web.IHttpContext
+  parent: VDS.RDF.Web
+  name: IHttpContext
+  nameWithType: IHttpContext
+  fullName: VDS.RDF.Web.IHttpContext
+- uid: IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup}
+  commentId: '!:IEnumerable{VDS.RDF.Configuration.Permissions.UserGroup}'
+  definition: IEnumerable`1
+  name: IEnumerable<UserGroup>
+  nameWithType: IEnumerable<UserGroup>
+  fullName: IEnumerable<VDS.RDF.Configuration.Permissions.UserGroup>
+  nameWithType.vb: IEnumerable(Of UserGroup)
+  fullName.vb: IEnumerable(Of VDS.RDF.Configuration.Permissions.UserGroup)
+  name.vb: IEnumerable(Of UserGroup)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Configuration.Permissions.UserGroup
+    name: UserGroup
+    nameWithType: UserGroup
+    fullName: VDS.RDF.Configuration.Permissions.UserGroup
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Configuration.Permissions.UserGroup
+    name: UserGroup
+    nameWithType: UserGroup
+    fullName: VDS.RDF.Configuration.Permissions.UserGroup
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: VDS.RDF.Web.HandlerHelper.SendToClient*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.SendToClient
+  name: SendToClient
+  nameWithType: HandlerHelper.SendToClient
+  fullName: VDS.RDF.Web.HandlerHelper.SendToClient
+- uid: Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: Object
+- uid: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+  commentId: T:VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+  parent: VDS.RDF.Web.Configuration
+  name: BaseHandlerConfiguration
+  nameWithType: BaseHandlerConfiguration
+  fullName: VDS.RDF.Web.Configuration.BaseHandlerConfiguration
+- uid: VDS.RDF.Web.Configuration
+  commentId: N:VDS.RDF.Web.Configuration
+  name: VDS.RDF.Web.Configuration
+  nameWithType: VDS.RDF.Web.Configuration
+  fullName: VDS.RDF.Web.Configuration
+- uid: VDS.RDF.Web.HandlerHelper.ApplyWriterOptions*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.ApplyWriterOptions
+  name: ApplyWriterOptions
+  nameWithType: HandlerHelper.ApplyWriterOptions
+  fullName: VDS.RDF.Web.HandlerHelper.ApplyWriterOptions
+- uid: VDS.RDF.Web.HandlerHelper.HandleQueryErrors*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.HandleQueryErrors
+  name: HandleQueryErrors
+  nameWithType: HandlerHelper.HandleQueryErrors
+  fullName: VDS.RDF.Web.HandlerHelper.HandleQueryErrors
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.HandleUpdateErrors
+  name: HandleUpdateErrors
+  nameWithType: HandlerHelper.HandleUpdateErrors
+  fullName: VDS.RDF.Web.HandlerHelper.HandleUpdateErrors
+- uid: VDS.RDF.Web.HandlerHelper.GetETag*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.GetETag
+  name: GetETag
+  nameWithType: HandlerHelper.GetETag
+  fullName: VDS.RDF.Web.HandlerHelper.GetETag
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Web.HandlerHelper.CheckCachingHeaders*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.CheckCachingHeaders
+  name: CheckCachingHeaders
+  nameWithType: HandlerHelper.CheckCachingHeaders
+  fullName: VDS.RDF.Web.HandlerHelper.CheckCachingHeaders
+- uid: System.Nullable{DateTime}
+  commentId: '!:System.Nullable{DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.HandlerHelper.AddCachingHeaders*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.AddCachingHeaders
+  name: AddCachingHeaders
+  nameWithType: HandlerHelper.AddCachingHeaders
+  fullName: VDS.RDF.Web.HandlerHelper.AddCachingHeaders
+- uid: VDS.RDF.Web.HandlerHelper.AddStandardHeaders*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.AddStandardHeaders
+  name: AddStandardHeaders
+  nameWithType: HandlerHelper.AddStandardHeaders
+  fullName: VDS.RDF.Web.HandlerHelper.AddStandardHeaders
+- uid: VDS.RDF.Web.HandlerHelper.AddCorsHeaders*
+  commentId: Overload:VDS.RDF.Web.HandlerHelper.AddCorsHeaders
+  name: AddCorsHeaders
+  nameWithType: HandlerHelper.AddCorsHeaders
+  fullName: VDS.RDF.Web.HandlerHelper.AddCorsHeaders

@@ -1,0 +1,1341 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Algebra.GroupBy
+  commentId: T:VDS.RDF.Query.Algebra.GroupBy
+  id: GroupBy
+  parent: VDS.RDF.Query.Algebra
+  children:
+  - VDS.RDF.Query.Algebra.GroupBy.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.Grouping.ISparqlGroupBy,System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable})
+  - VDS.RDF.Query.Algebra.GroupBy.Aggregates
+  - VDS.RDF.Query.Algebra.GroupBy.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Algebra.GroupBy.FixedVariables
+  - VDS.RDF.Query.Algebra.GroupBy.FloatingVariables
+  - VDS.RDF.Query.Algebra.GroupBy.Grouping
+  - VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra
+  - VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern
+  - VDS.RDF.Query.Algebra.GroupBy.ToQuery
+  - VDS.RDF.Query.Algebra.GroupBy.ToString
+  - VDS.RDF.Query.Algebra.GroupBy.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  - VDS.RDF.Query.Algebra.GroupBy.Variables
+  langs:
+  - csharp
+  - vb
+  name: GroupBy
+  nameWithType: GroupBy
+  fullName: VDS.RDF.Query.Algebra.GroupBy
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GroupBy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 38
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nRepresents a Grouping.\n"
+  example: []
+  syntax:
+    content: 'public class GroupBy : IUnaryOperator, ISparqlAlgebra'
+    content.vb: >-
+      Public Class GroupBy
+          Implements IUnaryOperator, ISparqlAlgebra
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Algebra.GroupBy.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Algebra.GroupBy.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.Grouping.ISparqlGroupBy,System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable})
+  commentId: M:VDS.RDF.Query.Algebra.GroupBy.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.Grouping.ISparqlGroupBy,System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable})
+  id: '#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.Grouping.ISparqlGroupBy,System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable})'
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: GroupBy(ISparqlAlgebra, ISparqlGroupBy, IEnumerable<SparqlVariable>)
+  nameWithType: GroupBy.GroupBy(ISparqlAlgebra, ISparqlGroupBy, IEnumerable<SparqlVariable>)
+  fullName: VDS.RDF.Query.Algebra.GroupBy.GroupBy(VDS.RDF.Query.Algebra.ISparqlAlgebra, VDS.RDF.Query.Grouping.ISparqlGroupBy, System.Collections.Generic.IEnumerable<VDS.RDF.Query.SparqlVariable>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 51
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a new Group By.\n"
+  example: []
+  syntax:
+    content: public GroupBy(ISparqlAlgebra pattern, ISparqlGroupBy grouping, IEnumerable<SparqlVariable> aggregates)
+    parameters:
+    - id: pattern
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: Pattern.
+    - id: grouping
+      type: VDS.RDF.Query.Grouping.ISparqlGroupBy
+      description: Grouping to use.
+    - id: aggregates
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable}
+      description: Aggregates to calculate.
+    content.vb: Public Sub New(pattern As ISparqlAlgebra, grouping As ISparqlGroupBy, aggregates As IEnumerable(Of SparqlVariable))
+  overload: VDS.RDF.Query.Algebra.GroupBy.#ctor*
+  nameWithType.vb: GroupBy.GroupBy(ISparqlAlgebra, ISparqlGroupBy, IEnumerable(Of SparqlVariable))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.Algebra.GroupBy.GroupBy(VDS.RDF.Query.Algebra.ISparqlAlgebra, VDS.RDF.Query.Grouping.ISparqlGroupBy, System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.SparqlVariable))
+  name.vb: GroupBy(ISparqlAlgebra, ISparqlGroupBy, IEnumerable(Of SparqlVariable))
+- uid: VDS.RDF.Query.Algebra.GroupBy.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.GroupBy.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  id: Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: GroupBy.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 63
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nEvaluates a Group By by generating a <xref href=\"VDS.RDF.Query.Algebra.GroupMultiset\" data-throw-if-not-resolved=\"false\"></xref> from the Input Multiset.\n"
+  example: []
+  syntax:
+    content: public BaseMultiset Evaluate(SparqlEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: SPARQL Evaluation Context.
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+      description: ''
+    content.vb: Public Function Evaluate(context As SparqlEvaluationContext) As BaseMultiset
+  overload: VDS.RDF.Query.Algebra.GroupBy.Evaluate*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.GroupBy.Variables
+  commentId: P:VDS.RDF.Query.Algebra.GroupBy.Variables
+  id: Variables
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: GroupBy.Variables
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 144
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Variables used in the Algebra.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.GroupBy.Variables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.GroupBy.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.GroupBy.FloatingVariables
+  id: FloatingVariables
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: FloatingVariables
+  nameWithType: GroupBy.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.GroupBy.FloatingVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FloatingVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 155
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of floating variables in the algebra i.e. variables that are not guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FloatingVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FloatingVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.GroupBy.FloatingVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.GroupBy.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.GroupBy.FixedVariables
+  id: FixedVariables
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: FixedVariables
+  nameWithType: GroupBy.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.GroupBy.FixedVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FixedVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 168
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of fixed variables in the algebra i.e. variables that are guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FixedVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FixedVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.GroupBy.FixedVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra
+  commentId: P:VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra
+  id: InnerAlgebra
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: InnerAlgebra
+  nameWithType: GroupBy.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InnerAlgebra
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 173
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Inner Algebra.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra InnerAlgebra { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    content.vb: Public ReadOnly Property InnerAlgebra As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra*
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.GroupBy.Grouping
+  commentId: P:VDS.RDF.Query.Algebra.GroupBy.Grouping
+  id: Grouping
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: Grouping
+  nameWithType: GroupBy.Grouping
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Grouping
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Grouping
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 187
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Grouping that is used.\n"
+  remarks: "\nIf the Query supplied in the <xref href=\"VDS.RDF.Query.SparqlEvaluationContext\" data-throw-if-not-resolved=\"false\"></xref> is non-null and has a GROUP BY clause then that is applied rather than the clause with which the GroupBy algebra is instantiated.\n"
+  example: []
+  syntax:
+    content: public ISparqlGroupBy Grouping { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Grouping.ISparqlGroupBy
+    content.vb: Public ReadOnly Property Grouping As ISparqlGroupBy
+  overload: VDS.RDF.Query.Algebra.GroupBy.Grouping*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.GroupBy.Aggregates
+  commentId: P:VDS.RDF.Query.Algebra.GroupBy.Aggregates
+  id: Aggregates
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: Aggregates
+  nameWithType: GroupBy.Aggregates
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Aggregates
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Aggregates
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 198
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Aggregates that will be applied.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<SparqlVariable> Aggregates { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable}
+    content.vb: Public ReadOnly Property Aggregates As IEnumerable(Of SparqlVariable)
+  overload: VDS.RDF.Query.Algebra.GroupBy.Aggregates*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.GroupBy.ToString
+  commentId: M:VDS.RDF.Query.Algebra.GroupBy.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: GroupBy.ToString()
+  fullName: VDS.RDF.Query.Algebra.GroupBy.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 210
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the String representation of the. \n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.Algebra.GroupBy.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Algebra.GroupBy.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.GroupBy.ToQuery
+  id: ToQuery
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: ToQuery()
+  nameWithType: GroupBy.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.GroupBy.ToQuery()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 219
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nConverts the Algebra back to a SPARQL Query.\n"
+  example: []
+  syntax:
+    content: public SparqlQuery ToQuery()
+    return:
+      type: VDS.RDF.Query.SparqlQuery
+      description: ''
+    content.vb: Public Function ToQuery As SparqlQuery
+  overload: VDS.RDF.Query.Algebra.GroupBy.ToQuery*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern
+  id: ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: ToGraphPattern()
+  nameWithType: GroupBy.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToGraphPattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 231
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nThrows an exception since GroupBy() cannot be converted to a Graph Pattern.\n"
+  example: []
+  syntax:
+    content: public GraphPattern ToGraphPattern()
+    return:
+      type: VDS.RDF.Query.Patterns.GraphPattern
+      description: ''
+    content.vb: Public Function ToGraphPattern As GraphPattern
+  overload: VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: Thrown since GroupBy() cannot be converted to a GraphPattern.
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.GroupBy.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  commentId: M:VDS.RDF.Query.Algebra.GroupBy.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  id: Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  parent: VDS.RDF.Query.Algebra.GroupBy
+  langs:
+  - csharp
+  - vb
+  name: Transform(IAlgebraOptimiser)
+  nameWithType: GroupBy.Transform(IAlgebraOptimiser)
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Transform
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/GroupBy.cs
+    startLine: 241
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nTransforms the Inner Algebra using the given Optimiser.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra Transform(IAlgebraOptimiser optimiser)
+    parameters:
+    - id: optimiser
+      type: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+      description: Optimiser.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public Function Transform(optimiser As IAlgebraOptimiser) As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.GroupBy.Transform*
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator
+  commentId: T:VDS.RDF.Query.Algebra.IUnaryOperator
+  parent: VDS.RDF.Query.Algebra
+  name: IUnaryOperator
+  nameWithType: IUnaryOperator
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.GroupBy.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<GroupBy>()
+  nameWithType: Extensions.AsEnumerable<GroupBy>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.GroupBy>()
+  nameWithType.vb: Extensions.AsEnumerable(Of GroupBy)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.GroupBy)()
+  name.vb: AsEnumerable(Of GroupBy)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<GroupBy>
+    nameWithType: Extensions.AsEnumerable<GroupBy>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.GroupBy>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of GroupBy)
+    nameWithType: Extensions.AsEnumerable(Of GroupBy)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.GroupBy)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Algebra.GroupBy.#ctor*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.#ctor
+  name: GroupBy
+  nameWithType: GroupBy.GroupBy
+  fullName: VDS.RDF.Query.Algebra.GroupBy.GroupBy
+- uid: VDS.RDF.Query.Grouping.ISparqlGroupBy
+  commentId: T:VDS.RDF.Query.Grouping.ISparqlGroupBy
+  parent: VDS.RDF.Query.Grouping
+  name: ISparqlGroupBy
+  nameWithType: ISparqlGroupBy
+  fullName: VDS.RDF.Query.Grouping.ISparqlGroupBy
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<SparqlVariable>
+  nameWithType: IEnumerable<SparqlVariable>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.SparqlVariable>
+  nameWithType.vb: IEnumerable(Of SparqlVariable)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.SparqlVariable)
+  name.vb: IEnumerable(Of SparqlVariable)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.SparqlVariable
+    name: SparqlVariable
+    nameWithType: SparqlVariable
+    fullName: VDS.RDF.Query.SparqlVariable
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.SparqlVariable
+    name: SparqlVariable
+    nameWithType: SparqlVariable
+    fullName: VDS.RDF.Query.SparqlVariable
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Grouping
+  commentId: N:VDS.RDF.Query.Grouping
+  name: VDS.RDF.Query.Grouping
+  nameWithType: VDS.RDF.Query.Grouping
+  fullName: VDS.RDF.Query.Grouping
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.Algebra.GroupMultiset
+  commentId: T:VDS.RDF.Query.Algebra.GroupMultiset
+  name: GroupMultiset
+  nameWithType: GroupMultiset
+  fullName: VDS.RDF.Query.Algebra.GroupMultiset
+- uid: VDS.RDF.Query.Algebra.GroupBy.Evaluate*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.Evaluate
+  name: Evaluate
+  nameWithType: GroupBy.Evaluate
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Evaluate
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: ISparqlAlgebra.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: VDS.RDF.Query.Algebra.BaseMultiset
+  commentId: T:VDS.RDF.Query.Algebra.BaseMultiset
+  parent: VDS.RDF.Query.Algebra
+  name: BaseMultiset
+  nameWithType: BaseMultiset
+  fullName: VDS.RDF.Query.Algebra.BaseMultiset
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Algebra.GroupBy.Variables*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.Variables
+  name: Variables
+  nameWithType: GroupBy.Variables
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Variables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Variables
+  nameWithType: ISparqlAlgebra.Variables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.GroupBy.FloatingVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.FloatingVariables
+  name: FloatingVariables
+  nameWithType: GroupBy.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.GroupBy.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FloatingVariables
+  nameWithType: ISparqlAlgebra.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.GroupBy.FixedVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.FixedVariables
+  name: FixedVariables
+  nameWithType: GroupBy.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.GroupBy.FixedVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FixedVariables
+  nameWithType: ISparqlAlgebra.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+- uid: VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra
+  name: InnerAlgebra
+  nameWithType: GroupBy.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.GroupBy.InnerAlgebra
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  commentId: P:VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  name: InnerAlgebra
+  nameWithType: IUnaryOperator.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+- uid: VDS.RDF.Query.Algebra.GroupBy.Grouping*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.Grouping
+  name: Grouping
+  nameWithType: GroupBy.Grouping
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Grouping
+- uid: VDS.RDF.Query.Algebra.GroupBy.Aggregates*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.Aggregates
+  name: Aggregates
+  nameWithType: GroupBy.Aggregates
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Aggregates
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.GroupBy.ToString*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.ToString
+  name: ToString
+  nameWithType: GroupBy.ToString
+  fullName: VDS.RDF.Query.Algebra.GroupBy.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.Algebra.GroupBy.ToQuery*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.ToQuery
+  name: ToQuery
+  nameWithType: GroupBy.ToQuery
+  fullName: VDS.RDF.Query.Algebra.GroupBy.ToQuery
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToQuery()
+  nameWithType: ISparqlAlgebra.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+- uid: VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern
+  name: ToGraphPattern
+  nameWithType: GroupBy.ToGraphPattern
+  fullName: VDS.RDF.Query.Algebra.GroupBy.ToGraphPattern
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToGraphPattern()
+  nameWithType: ISparqlAlgebra.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Patterns.GraphPattern
+  commentId: T:VDS.RDF.Query.Patterns.GraphPattern
+  parent: VDS.RDF.Query.Patterns
+  name: GraphPattern
+  nameWithType: GraphPattern
+  fullName: VDS.RDF.Query.Patterns.GraphPattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: VDS.RDF.Query.Algebra.GroupBy.Transform*
+  commentId: Overload:VDS.RDF.Query.Algebra.GroupBy.Transform
+  name: Transform
+  nameWithType: GroupBy.Transform
+  fullName: VDS.RDF.Query.Algebra.GroupBy.Transform
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  commentId: M:VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  name: Transform(IAlgebraOptimiser)
+  nameWithType: IUnaryOperator.Transform(IAlgebraOptimiser)
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+    name: Transform
+    nameWithType: IUnaryOperator.Transform
+    fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+    name: Transform
+    nameWithType: IUnaryOperator.Transform
+    fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation

@@ -1,0 +1,1581 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler
+  commentId: T:VDS.RDF.Parsing.Handlers.ResultSetHandler
+  id: ResultSetHandler
+  parent: VDS.RDF.Parsing.Handlers
+  children:
+  - VDS.RDF.Parsing.Handlers.ResultSetHandler.#ctor(VDS.RDF.Query.SparqlResultSet)
+  - VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal(System.Boolean)
+  - VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  - VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal(System.String)
+  - VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal
+  langs:
+  - csharp
+  - vb
+  name: ResultSetHandler
+  nameWithType: ResultSetHandler
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ResultSetHandler
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Handlers
+  summary: "\nA SPARQL Results Handler which loads Results into a <xref href=\"VDS.RDF.Query.SparqlResultSet\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public class ResultSetHandler : BaseResultsHandler, ISparqlResultsHandler, INodeFactory'
+    content.vb: >-
+      Public Class ResultSetHandler
+          Inherits BaseResultsHandler
+          Implements ISparqlResultsHandler, INodeFactory
+  inheritance:
+  - System.Object
+  - VDS.RDF.Parsing.Handlers.BaseHandler
+  - VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  derivedClasses:
+  - VDS.RDF.Parsing.Handlers.MergingResultSetHandler
+  implements:
+  - VDS.RDF.ISparqlResultsHandler
+  - VDS.RDF.INodeFactory
+  inheritedMembers:
+  - VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults
+  - VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults(System.Boolean)
+  - VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal(System.Boolean)
+  - VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult(System.Boolean)
+  - VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable(System.String)
+  - VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult(VDS.RDF.Query.SparqlResult)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Parsing.Handlers.ResultSetHandler.VDS.RDF.Extensions.AsEnumerable``1
+  - VDS.RDF.ISparqlResultsHandler.VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.Query.SparqlResultSet)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.#ctor(VDS.RDF.Query.SparqlResultSet)
+  commentId: M:VDS.RDF.Parsing.Handlers.ResultSetHandler.#ctor(VDS.RDF.Query.SparqlResultSet)
+  id: '#ctor(VDS.RDF.Query.SparqlResultSet)'
+  parent: VDS.RDF.Parsing.Handlers.ResultSetHandler
+  langs:
+  - csharp
+  - vb
+  name: ResultSetHandler(SparqlResultSet)
+  nameWithType: ResultSetHandler.ResultSetHandler(SparqlResultSet)
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.ResultSetHandler(VDS.RDF.Query.SparqlResultSet)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+    startLine: 43
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Handlers
+  summary: "\nCreates a new Result Set Handler.\n"
+  example: []
+  syntax:
+    content: public ResultSetHandler(SparqlResultSet results)
+    parameters:
+    - id: results
+      type: VDS.RDF.Query.SparqlResultSet
+      description: Result Set.
+    content.vb: Public Sub New(results As SparqlResultSet)
+  overload: VDS.RDF.Parsing.Handlers.ResultSetHandler.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal
+  commentId: M:VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal
+  id: StartResultsInternal
+  parent: VDS.RDF.Parsing.Handlers.ResultSetHandler
+  langs:
+  - csharp
+  - vb
+  name: StartResultsInternal()
+  nameWithType: ResultSetHandler.StartResultsInternal()
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StartResultsInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+    startLine: 52
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Handlers
+  summary: "\nStarts Results Handling.\n"
+  example: []
+  syntax:
+    content: protected override void StartResultsInternal()
+    content.vb: Protected Overrides Sub StartResultsInternal
+  overridden: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal
+  overload: VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal(System.Boolean)
+  id: HandleBooleanResultInternal(System.Boolean)
+  parent: VDS.RDF.Parsing.Handlers.ResultSetHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleBooleanResultInternal(Boolean)
+  nameWithType: ResultSetHandler.HandleBooleanResultInternal(Boolean)
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleBooleanResultInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+    startLine: 65
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Handlers
+  summary: "\nHandles a Boolean Result by setting the <xref href=\"VDS.RDF.Query.SparqlResultSet.Result\" data-throw-if-not-resolved=\"false\"></xref> property of the Result Set.\n"
+  example: []
+  syntax:
+    content: protected override void HandleBooleanResultInternal(bool result)
+    parameters:
+    - id: result
+      type: System.Boolean
+      description: Result.
+    content.vb: Protected Overrides Sub HandleBooleanResultInternal(result As Boolean)
+  overridden: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal(System.Boolean)
+  overload: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal(System.String)
+  id: HandleVariableInternal(System.String)
+  parent: VDS.RDF.Parsing.Handlers.ResultSetHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleVariableInternal(String)
+  nameWithType: ResultSetHandler.HandleVariableInternal(String)
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleVariableInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+    startLine: 75
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Handlers
+  summary: "\nHandles a Variable Declaration by adding the Variable to the Result Set.\n"
+  example: []
+  syntax:
+    content: protected override bool HandleVariableInternal(string var)
+    parameters:
+    - id: var
+      type: System.String
+      description: Variable Name.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overrides Function HandleVariableInternal(var As String) As Boolean
+  overridden: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal(System.String)
+  overload: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  commentId: M:VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  id: HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  parent: VDS.RDF.Parsing.Handlers.ResultSetHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleResultInternal(SparqlResult)
+  nameWithType: ResultSetHandler.HandleResultInternal(SparqlResult)
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleResultInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Handlers/ResultSetHandler.cs
+    startLine: 86
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Handlers
+  summary: "\nHandles a Result by adding it to the Result Set.\n"
+  example: []
+  syntax:
+    content: protected override bool HandleResultInternal(SparqlResult result)
+    parameters:
+    - id: result
+      type: VDS.RDF.Query.SparqlResult
+      description: Result.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overrides Function HandleResultInternal(result As SparqlResult) As Boolean
+  overridden: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  overload: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.Parsing.Handlers
+  commentId: N:VDS.RDF.Parsing.Handlers
+  name: VDS.RDF.Parsing.Handlers
+  nameWithType: VDS.RDF.Parsing.Handlers
+  fullName: VDS.RDF.Parsing.Handlers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler
+  commentId: T:VDS.RDF.Parsing.Handlers.BaseHandler
+  parent: VDS.RDF.Parsing.Handlers
+  name: BaseHandler
+  nameWithType: BaseHandler
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  commentId: T:VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  parent: VDS.RDF.Parsing.Handlers
+  name: BaseResultsHandler
+  nameWithType: BaseResultsHandler
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler
+- uid: VDS.RDF.INodeFactory
+  commentId: T:VDS.RDF.INodeFactory
+  parent: VDS.RDF
+  name: INodeFactory
+  nameWithType: INodeFactory
+  fullName: VDS.RDF.INodeFactory
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  name: StartResults()
+  nameWithType: BaseResultsHandler.StartResults()
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults
+    name: StartResults
+    nameWithType: BaseResultsHandler.StartResults
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults
+    name: StartResults
+    nameWithType: BaseResultsHandler.StartResults
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults(System.Boolean)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  isExternal: true
+  name: EndResults(Boolean)
+  nameWithType: BaseResultsHandler.EndResults(Boolean)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults(System.Boolean)
+    name: EndResults
+    nameWithType: BaseResultsHandler.EndResults
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults(System.Boolean)
+    name: EndResults
+    nameWithType: BaseResultsHandler.EndResults
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal(System.Boolean)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  isExternal: true
+  name: EndResultsInternal(Boolean)
+  nameWithType: BaseResultsHandler.EndResultsInternal(Boolean)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal(System.Boolean)
+    name: EndResultsInternal
+    nameWithType: BaseResultsHandler.EndResultsInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal(System.Boolean)
+    name: EndResultsInternal
+    nameWithType: BaseResultsHandler.EndResultsInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.EndResultsInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult(System.Boolean)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  isExternal: true
+  name: HandleBooleanResult(Boolean)
+  nameWithType: BaseResultsHandler.HandleBooleanResult(Boolean)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult(System.Boolean)
+    name: HandleBooleanResult
+    nameWithType: BaseResultsHandler.HandleBooleanResult
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult(System.Boolean)
+    name: HandleBooleanResult
+    nameWithType: BaseResultsHandler.HandleBooleanResult
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  isExternal: true
+  name: HandleVariable(String)
+  nameWithType: BaseResultsHandler.HandleVariable(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable(System.String)
+    name: HandleVariable
+    nameWithType: BaseResultsHandler.HandleVariable
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable(System.String)
+    name: HandleVariable
+    nameWithType: BaseResultsHandler.HandleVariable
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult(VDS.RDF.Query.SparqlResult)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult(VDS.RDF.Query.SparqlResult)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  name: HandleResult(SparqlResult)
+  nameWithType: BaseResultsHandler.HandleResult(SparqlResult)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult(VDS.RDF.Query.SparqlResult)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult(VDS.RDF.Query.SparqlResult)
+    name: HandleResult
+    nameWithType: BaseResultsHandler.HandleResult
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResult
+    name: SparqlResult
+    nameWithType: SparqlResult
+    fullName: VDS.RDF.Query.SparqlResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult(VDS.RDF.Query.SparqlResult)
+    name: HandleResult
+    nameWithType: BaseResultsHandler.HandleResult
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResult
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResult
+    name: SparqlResult
+    nameWithType: SparqlResult
+    fullName: VDS.RDF.Query.SparqlResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+  commentId: P:VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: NodeFactory
+  nameWithType: BaseHandler.NodeFactory
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: CreateBlankNode()
+  nameWithType: BaseHandler.CreateBlankNode()
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateBlankNode(String)
+  nameWithType: BaseHandler.CreateBlankNode(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: CreateGraphLiteralNode()
+  nameWithType: BaseHandler.CreateGraphLiteralNode()
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: CreateGraphLiteralNode(IGraph)
+  nameWithType: BaseHandler.CreateGraphLiteralNode(IGraph)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateLiteralNode(String, Uri)
+  nameWithType: BaseHandler.CreateLiteralNode(String, Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateLiteralNode(String)
+  nameWithType: BaseHandler.CreateLiteralNode(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateLiteralNode(String, String)
+  nameWithType: BaseHandler.CreateLiteralNode(String, String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateUriNode(Uri)
+  nameWithType: BaseHandler.CreateUriNode(Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+    name: CreateUriNode
+    nameWithType: BaseHandler.CreateUriNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+    name: CreateUriNode
+    nameWithType: BaseHandler.CreateUriNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateVariableNode(String)
+  nameWithType: BaseHandler.CreateVariableNode(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+    name: CreateVariableNode
+    nameWithType: BaseHandler.CreateVariableNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+    name: CreateVariableNode
+    nameWithType: BaseHandler.CreateVariableNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: GetNextBlankNodeID()
+  nameWithType: BaseHandler.GetNextBlankNodeID()
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+    name: GetNextBlankNodeID
+    nameWithType: BaseHandler.GetNextBlankNodeID
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+    name: GetNextBlankNodeID
+    nameWithType: BaseHandler.GetNextBlankNodeID
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ResultSetHandler>()
+  nameWithType: Extensions.AsEnumerable<ResultSetHandler>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Handlers.ResultSetHandler>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ResultSetHandler)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Handlers.ResultSetHandler)()
+  name.vb: AsEnumerable(Of ResultSetHandler)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ResultSetHandler>
+    nameWithType: Extensions.AsEnumerable<ResultSetHandler>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Handlers.ResultSetHandler>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ResultSetHandler)
+    nameWithType: Extensions.AsEnumerable(Of ResultSetHandler)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Handlers.ResultSetHandler)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ISparqlResultsHandler.VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.Query.SparqlResultSet)
+  commentId: M:VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlResultSet)
+  parent: VDS.RDF.Parsing.Handlers.HandlerExtensions
+  definition: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlResultSet)
+  name: Apply(SparqlResultSet)
+  nameWithType: HandlerExtensions.Apply(SparqlResultSet)
+  fullName: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.Query.SparqlResultSet)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.Query.SparqlResultSet)
+    name: Apply
+    nameWithType: HandlerExtensions.Apply
+    fullName: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.Query.SparqlResultSet)
+    name: Apply
+    nameWithType: HandlerExtensions.Apply
+    fullName: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlResultSet)
+  commentId: M:VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlResultSet)
+  name: Apply(ISparqlResultsHandler, SparqlResultSet)
+  nameWithType: HandlerExtensions.Apply(ISparqlResultsHandler, SparqlResultSet)
+  fullName: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlResultSet)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlResultSet)
+    name: Apply
+    nameWithType: HandlerExtensions.Apply
+    fullName: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply(VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlResultSet)
+    name: Apply
+    nameWithType: HandlerExtensions.Apply
+    fullName: VDS.RDF.Parsing.Handlers.HandlerExtensions.Apply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.HandlerExtensions
+  commentId: T:VDS.RDF.Parsing.Handlers.HandlerExtensions
+  parent: VDS.RDF.Parsing.Handlers
+  name: HandlerExtensions
+  nameWithType: HandlerExtensions
+  fullName: VDS.RDF.Parsing.Handlers.HandlerExtensions
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.#ctor*
+  commentId: Overload:VDS.RDF.Parsing.Handlers.ResultSetHandler.#ctor
+  name: ResultSetHandler
+  nameWithType: ResultSetHandler.ResultSetHandler
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.ResultSetHandler
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  name: StartResultsInternal()
+  nameWithType: BaseResultsHandler.StartResultsInternal()
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal
+    name: StartResultsInternal
+    nameWithType: BaseResultsHandler.StartResultsInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal
+    name: StartResultsInternal
+    nameWithType: BaseResultsHandler.StartResultsInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.StartResultsInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal*
+  commentId: Overload:VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal
+  name: StartResultsInternal
+  nameWithType: ResultSetHandler.StartResultsInternal
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.StartResultsInternal
+- uid: VDS.RDF.Query.SparqlResultSet.Result
+  commentId: P:VDS.RDF.Query.SparqlResultSet.Result
+  isExternal: true
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal(System.Boolean)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  isExternal: true
+  name: HandleBooleanResultInternal(Boolean)
+  nameWithType: BaseResultsHandler.HandleBooleanResultInternal(Boolean)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal(System.Boolean)
+    name: HandleBooleanResultInternal
+    nameWithType: BaseResultsHandler.HandleBooleanResultInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal(System.Boolean)
+    name: HandleBooleanResultInternal
+    nameWithType: BaseResultsHandler.HandleBooleanResultInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleBooleanResultInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal*
+  commentId: Overload:VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal
+  name: HandleBooleanResultInternal
+  nameWithType: ResultSetHandler.HandleBooleanResultInternal
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleBooleanResultInternal
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  isExternal: true
+  name: HandleVariableInternal(String)
+  nameWithType: BaseResultsHandler.HandleVariableInternal(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal(System.String)
+    name: HandleVariableInternal
+    nameWithType: BaseResultsHandler.HandleVariableInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal(System.String)
+    name: HandleVariableInternal
+    nameWithType: BaseResultsHandler.HandleVariableInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleVariableInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal*
+  commentId: Overload:VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal
+  name: HandleVariableInternal
+  nameWithType: ResultSetHandler.HandleVariableInternal
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleVariableInternal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  parent: VDS.RDF.Parsing.Handlers.BaseResultsHandler
+  name: HandleResultInternal(SparqlResult)
+  nameWithType: BaseResultsHandler.HandleResultInternal(SparqlResult)
+  fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+    name: HandleResultInternal
+    nameWithType: BaseResultsHandler.HandleResultInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResult
+    name: SparqlResult
+    nameWithType: SparqlResult
+    fullName: VDS.RDF.Query.SparqlResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal(VDS.RDF.Query.SparqlResult)
+    name: HandleResultInternal
+    nameWithType: BaseResultsHandler.HandleResultInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseResultsHandler.HandleResultInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResult
+    name: SparqlResult
+    nameWithType: SparqlResult
+    fullName: VDS.RDF.Query.SparqlResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal*
+  commentId: Overload:VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal
+  name: HandleResultInternal
+  nameWithType: ResultSetHandler.HandleResultInternal
+  fullName: VDS.RDF.Parsing.Handlers.ResultSetHandler.HandleResultInternal
+- uid: VDS.RDF.Query.SparqlResult
+  commentId: T:VDS.RDF.Query.SparqlResult
+  parent: VDS.RDF.Query
+  name: SparqlResult
+  nameWithType: SparqlResult
+  fullName: VDS.RDF.Query.SparqlResult

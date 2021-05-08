@@ -1,0 +1,2006 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.NestedNamespaceMapper
+  commentId: T:VDS.RDF.NestedNamespaceMapper
+  id: NestedNamespaceMapper
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.NestedNamespaceMapper.#ctor
+  - VDS.RDF.NestedNamespaceMapper.#ctor(System.Boolean)
+  - VDS.RDF.NestedNamespaceMapper.AddNamespace(System.String,System.Uri)
+  - VDS.RDF.NestedNamespaceMapper.Clear
+  - VDS.RDF.NestedNamespaceMapper.DecrementNesting
+  - VDS.RDF.NestedNamespaceMapper.Dispose
+  - VDS.RDF.NestedNamespaceMapper.GetNamespaceUri(System.String)
+  - VDS.RDF.NestedNamespaceMapper.GetNestingLevel(System.String)
+  - VDS.RDF.NestedNamespaceMapper.GetPrefix(System.Uri)
+  - VDS.RDF.NestedNamespaceMapper.HasNamespace(System.String)
+  - VDS.RDF.NestedNamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  - VDS.RDF.NestedNamespaceMapper.IncrementNesting
+  - VDS.RDF.NestedNamespaceMapper.NamespaceAdded
+  - VDS.RDF.NestedNamespaceMapper.NamespaceModified
+  - VDS.RDF.NestedNamespaceMapper.NamespaceRemoved
+  - VDS.RDF.NestedNamespaceMapper.NestingLevel
+  - VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+  - VDS.RDF.NestedNamespaceMapper.Prefixes
+  - VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded(System.String,System.Uri)
+  - VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified(System.String,System.Uri)
+  - VDS.RDF.NestedNamespaceMapper.ReduceToQName(System.String,System.String@)
+  - VDS.RDF.NestedNamespaceMapper.RemoveNamespace(System.String)
+  langs:
+  - csharp
+  - vb
+  name: NestedNamespaceMapper
+  nameWithType: NestedNamespaceMapper
+  fullName: VDS.RDF.NestedNamespaceMapper
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NestedNamespaceMapper
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nA Namespace Mapper which has an explicit notion of Nesting.\n"
+  example: []
+  syntax:
+    content: 'public class NestedNamespaceMapper : INestedNamespaceMapper, INamespaceMapper, IDisposable'
+    content.vb: >-
+      Public Class NestedNamespaceMapper
+          Implements INestedNamespaceMapper, INamespaceMapper, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.INestedNamespaceMapper
+  - VDS.RDF.INamespaceMapper
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.NestedNamespaceMapper.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.NestedNamespaceMapper.#ctor
+  commentId: M:VDS.RDF.NestedNamespaceMapper.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NestedNamespaceMapper()
+  nameWithType: NestedNamespaceMapper.NestedNamespaceMapper()
+  fullName: VDS.RDF.NestedNamespaceMapper.NestedNamespaceMapper()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nConstructs a new Namespace Map.\n"
+  remarks: The Prefixes rdf, rdfs and xsd are automatically defined.
+  example: []
+  syntax:
+    content: public NestedNamespaceMapper()
+    content.vb: Public Sub New
+  overload: VDS.RDF.NestedNamespaceMapper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.#ctor(System.Boolean)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NestedNamespaceMapper(Boolean)
+  nameWithType: NestedNamespaceMapper.NestedNamespaceMapper(Boolean)
+  fullName: VDS.RDF.NestedNamespaceMapper.NestedNamespaceMapper(System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 52
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nConstructs a new Namespace Map which is optionally empty.\n"
+  example: []
+  syntax:
+    content: protected NestedNamespaceMapper(bool empty)
+    parameters:
+    - id: empty
+      type: System.Boolean
+      description: Whether the Namespace Map should be empty, if set to false the Prefixes rdf, rdfs and xsd are automatically defined.
+    content.vb: Protected Sub New(empty As Boolean)
+  overload: VDS.RDF.NestedNamespaceMapper.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.NestedNamespaceMapper.AddNamespace(System.String,System.Uri)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.AddNamespace(System.String,System.Uri)
+  id: AddNamespace(System.String,System.Uri)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: AddNamespace(String, Uri)
+  nameWithType: NestedNamespaceMapper.AddNamespace(String, Uri)
+  fullName: VDS.RDF.NestedNamespaceMapper.AddNamespace(System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddNamespace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nAdds a Namespace at the Current Nesting Level.\n"
+  example: []
+  syntax:
+    content: public void AddNamespace(string prefix, Uri uri)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Prefix.
+    - id: uri
+      type: System.Uri
+      description: Namespace URI.
+    content.vb: Public Sub AddNamespace(prefix As String, uri As Uri)
+  overload: VDS.RDF.NestedNamespaceMapper.AddNamespace*
+  implements:
+  - VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.Clear
+  commentId: M:VDS.RDF.NestedNamespaceMapper.Clear
+  id: Clear
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: NestedNamespaceMapper.Clear()
+  fullName: VDS.RDF.NestedNamespaceMapper.Clear()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Clear
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 108
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nClears the Namespace Map.\n"
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+  overload: VDS.RDF.NestedNamespaceMapper.Clear*
+  implements:
+  - VDS.RDF.INamespaceMapper.Clear
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.GetNamespaceUri(System.String)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.GetNamespaceUri(System.String)
+  id: GetNamespaceUri(System.String)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: GetNamespaceUri(String)
+  nameWithType: NestedNamespaceMapper.GetNamespaceUri(String)
+  fullName: VDS.RDF.NestedNamespaceMapper.GetNamespaceUri(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetNamespaceUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 119
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Namespace URI for the given Prefix at the current Nesting Level.\n"
+  example: []
+  syntax:
+    content: public Uri GetNamespaceUri(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Prefix.
+    return:
+      type: System.Uri
+      description: ''
+    content.vb: Public Function GetNamespaceUri(prefix As String) As Uri
+  overload: VDS.RDF.NestedNamespaceMapper.GetNamespaceUri*
+  implements:
+  - VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.GetPrefix(System.Uri)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.GetPrefix(System.Uri)
+  id: GetPrefix(System.Uri)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: GetPrefix(Uri)
+  nameWithType: NestedNamespaceMapper.GetPrefix(Uri)
+  fullName: VDS.RDF.NestedNamespaceMapper.GetPrefix(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetPrefix
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 136
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Namespace Prefix for the given URI at the current Nesting Level.\n"
+  example: []
+  syntax:
+    content: public string GetPrefix(Uri uri)
+    parameters:
+    - id: uri
+      type: System.Uri
+      description: Namespace URI.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function GetPrefix(uri As Uri) As String
+  overload: VDS.RDF.NestedNamespaceMapper.GetPrefix*
+  implements:
+  - VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.GetNestingLevel(System.String)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.GetNestingLevel(System.String)
+  id: GetNestingLevel(System.String)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: GetNestingLevel(String)
+  nameWithType: NestedNamespaceMapper.GetNestingLevel(String)
+  fullName: VDS.RDF.NestedNamespaceMapper.GetNestingLevel(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetNestingLevel
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 154
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Nesting Level at which the given Namespace is definition is defined.\n"
+  example: []
+  syntax:
+    content: public int GetNestingLevel(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Prefix.
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Function GetNestingLevel(prefix As String) As Integer
+  overload: VDS.RDF.NestedNamespaceMapper.GetNestingLevel*
+  implements:
+  - VDS.RDF.INestedNamespaceMapper.GetNestingLevel(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.HasNamespace(System.String)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.HasNamespace(System.String)
+  id: HasNamespace(System.String)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: HasNamespace(String)
+  nameWithType: NestedNamespaceMapper.HasNamespace(String)
+  fullName: VDS.RDF.NestedNamespaceMapper.HasNamespace(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasNamespace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 171
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets whether the given Namespace exists.\n"
+  example: []
+  syntax:
+    content: public bool HasNamespace(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Prefix.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function HasNamespace(prefix As String) As Boolean
+  overload: VDS.RDF.NestedNamespaceMapper.HasNamespace*
+  implements:
+  - VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  id: Import(VDS.RDF.INamespaceMapper)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: Import(INamespaceMapper)
+  nameWithType: NestedNamespaceMapper.Import(INamespaceMapper)
+  fullName: VDS.RDF.NestedNamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Import
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 180
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nImports another Namespace Map into this one.\n"
+  example: []
+  syntax:
+    content: public void Import(INamespaceMapper nsmap)
+    parameters:
+    - id: nsmap
+      type: VDS.RDF.INamespaceMapper
+      description: Namespace Map.
+    content.vb: Public Sub Import(nsmap As INamespaceMapper)
+  overload: VDS.RDF.NestedNamespaceMapper.Import*
+  implements:
+  - VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.IncrementNesting
+  commentId: M:VDS.RDF.NestedNamespaceMapper.IncrementNesting
+  id: IncrementNesting
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: IncrementNesting()
+  nameWithType: NestedNamespaceMapper.IncrementNesting()
+  fullName: VDS.RDF.NestedNamespaceMapper.IncrementNesting()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IncrementNesting
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 211
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nIncrements the Nesting Level.\n"
+  example: []
+  syntax:
+    content: public void IncrementNesting()
+    content.vb: Public Sub IncrementNesting
+  overload: VDS.RDF.NestedNamespaceMapper.IncrementNesting*
+  implements:
+  - VDS.RDF.INestedNamespaceMapper.IncrementNesting
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.DecrementNesting
+  commentId: M:VDS.RDF.NestedNamespaceMapper.DecrementNesting
+  id: DecrementNesting
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: DecrementNesting()
+  nameWithType: NestedNamespaceMapper.DecrementNesting()
+  fullName: VDS.RDF.NestedNamespaceMapper.DecrementNesting()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DecrementNesting
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 222
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nDecrements the Nesting Level.\n"
+  remarks: "\nWhen the Nesting Level is decremented any Namespaces defined at a greater Nesting Level are now out of scope and so are removed from the Mapper.\n"
+  example: []
+  syntax:
+    content: public void DecrementNesting()
+    content.vb: Public Sub DecrementNesting
+  overload: VDS.RDF.NestedNamespaceMapper.DecrementNesting*
+  implements:
+  - VDS.RDF.INestedNamespaceMapper.DecrementNesting
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.NestingLevel
+  commentId: P:VDS.RDF.NestedNamespaceMapper.NestingLevel
+  id: NestingLevel
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NestingLevel
+  nameWithType: NestedNamespaceMapper.NestingLevel
+  fullName: VDS.RDF.NestedNamespaceMapper.NestingLevel
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NestingLevel
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 249
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the current Nesting Level.\n"
+  example: []
+  syntax:
+    content: public int NestingLevel { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property NestingLevel As Integer
+  overload: VDS.RDF.NestedNamespaceMapper.NestingLevel*
+  implements:
+  - VDS.RDF.INestedNamespaceMapper.NestingLevel
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.NestedNamespaceMapper.NamespaceAdded
+  commentId: E:VDS.RDF.NestedNamespaceMapper.NamespaceAdded
+  id: NamespaceAdded
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NamespaceAdded
+  nameWithType: NestedNamespaceMapper.NamespaceAdded
+  fullName: VDS.RDF.NestedNamespaceMapper.NamespaceAdded
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamespaceAdded
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 260
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEvent which occurs when a Namespace is added\n"
+  example: []
+  syntax:
+    content: public event NamespaceChanged NamespaceAdded
+    return:
+      type: VDS.RDF.NamespaceChanged
+    content.vb: Public Event NamespaceAdded As NamespaceChanged
+  implements:
+  - VDS.RDF.INamespaceMapper.NamespaceAdded
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.NamespaceModified
+  commentId: E:VDS.RDF.NestedNamespaceMapper.NamespaceModified
+  id: NamespaceModified
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NamespaceModified
+  nameWithType: NestedNamespaceMapper.NamespaceModified
+  fullName: VDS.RDF.NestedNamespaceMapper.NamespaceModified
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamespaceModified
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 265
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEvent which occurs when a Namespace is modified\n"
+  example: []
+  syntax:
+    content: public event NamespaceChanged NamespaceModified
+    return:
+      type: VDS.RDF.NamespaceChanged
+    content.vb: Public Event NamespaceModified As NamespaceChanged
+  implements:
+  - VDS.RDF.INamespaceMapper.NamespaceModified
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.NamespaceRemoved
+  commentId: E:VDS.RDF.NestedNamespaceMapper.NamespaceRemoved
+  id: NamespaceRemoved
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NamespaceRemoved
+  nameWithType: NestedNamespaceMapper.NamespaceRemoved
+  fullName: VDS.RDF.NestedNamespaceMapper.NamespaceRemoved
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamespaceRemoved
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 270
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEvent which occurs when a Namespace is removed\n"
+  example: []
+  syntax:
+    content: public event NamespaceChanged NamespaceRemoved
+    return:
+      type: VDS.RDF.NamespaceChanged
+    content.vb: Public Event NamespaceRemoved As NamespaceChanged
+  implements:
+  - VDS.RDF.INamespaceMapper.NamespaceRemoved
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded(System.String,System.Uri)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded(System.String,System.Uri)
+  id: RaiseNamespaceAdded(System.String,System.Uri)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: RaiseNamespaceAdded(String, Uri)
+  nameWithType: NestedNamespaceMapper.RaiseNamespaceAdded(String, Uri)
+  fullName: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded(System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RaiseNamespaceAdded
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 277
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nInternal Helper for the NamespaceAdded Event which raises it only when a Handler is registered.\n"
+  example: []
+  syntax:
+    content: protected virtual void RaiseNamespaceAdded(string prefix, Uri uri)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Namespace Prefix.
+    - id: uri
+      type: System.Uri
+      description: Namespace Uri.
+    content.vb: Protected Overridable Sub RaiseNamespaceAdded(prefix As String, uri As Uri)
+  overload: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified(System.String,System.Uri)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified(System.String,System.Uri)
+  id: RaiseNamespaceModified(System.String,System.Uri)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: RaiseNamespaceModified(String, Uri)
+  nameWithType: NestedNamespaceMapper.RaiseNamespaceModified(String, Uri)
+  fullName: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified(System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RaiseNamespaceModified
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 291
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nInternal Helper for the NamespaceModified Event which raises it only when a Handler is registered.\n"
+  example: []
+  syntax:
+    content: protected virtual void RaiseNamespaceModified(string prefix, Uri uri)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Namespace Prefix.
+    - id: uri
+      type: System.Uri
+      description: Namespace Uri.
+    content.vb: Protected Overridable Sub RaiseNamespaceModified(prefix As String, uri As Uri)
+  overload: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+  id: OnNamespaceRemoved(System.String,System.Uri)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: OnNamespaceRemoved(String, Uri)
+  nameWithType: NestedNamespaceMapper.OnNamespaceRemoved(String, Uri)
+  fullName: VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved(System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: OnNamespaceRemoved
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 305
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nInternal Helper for the NamespaceRemoved Event which raises it only when a Handler is registered.\n"
+  example: []
+  syntax:
+    content: protected virtual void OnNamespaceRemoved(string prefix, Uri uri)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Namespace Prefix.
+    - id: uri
+      type: System.Uri
+      description: Namespace Uri.
+    content.vb: Protected Overridable Sub OnNamespaceRemoved(prefix As String, uri As Uri)
+  overload: VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.NestedNamespaceMapper.Prefixes
+  commentId: P:VDS.RDF.NestedNamespaceMapper.Prefixes
+  id: Prefixes
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: Prefixes
+  nameWithType: NestedNamespaceMapper.Prefixes
+  fullName: VDS.RDF.NestedNamespaceMapper.Prefixes
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Prefixes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 317
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Namespace Prefixes.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Prefixes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property Prefixes As IEnumerable(Of String)
+  overload: VDS.RDF.NestedNamespaceMapper.Prefixes*
+  implements:
+  - VDS.RDF.INamespaceMapper.Prefixes
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.NestedNamespaceMapper.ReduceToQName(System.String,System.String@)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.ReduceToQName(System.String,System.String@)
+  id: ReduceToQName(System.String,System.String@)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: ReduceToQName(String, out String)
+  nameWithType: NestedNamespaceMapper.ReduceToQName(String, out String)
+  fullName: VDS.RDF.NestedNamespaceMapper.ReduceToQName(System.String, out System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ReduceToQName
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 331
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nTries to reduce a URI to a QName using this Namespace Map.\n"
+  example: []
+  syntax:
+    content: public bool ReduceToQName(string uri, out string qname)
+    parameters:
+    - id: uri
+      type: System.String
+      description: URI.
+    - id: qname
+      type: System.String
+      description: Resulting QName.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function ReduceToQName(uri As String, ByRef qname As String) As Boolean
+  overload: VDS.RDF.NestedNamespaceMapper.ReduceToQName*
+  implements:
+  - VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+  nameWithType.vb: NestedNamespaceMapper.ReduceToQName(String, ByRef String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.NestedNamespaceMapper.ReduceToQName(System.String, ByRef System.String)
+  name.vb: ReduceToQName(String, ByRef String)
+- uid: VDS.RDF.NestedNamespaceMapper.RemoveNamespace(System.String)
+  commentId: M:VDS.RDF.NestedNamespaceMapper.RemoveNamespace(System.String)
+  id: RemoveNamespace(System.String)
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: RemoveNamespace(String)
+  nameWithType: NestedNamespaceMapper.RemoveNamespace(String)
+  fullName: VDS.RDF.NestedNamespaceMapper.RemoveNamespace(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveNamespace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 359
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nRemoves a Namespace provided that Namespace is defined on the current Nesting Level.\n"
+  example: []
+  syntax:
+    content: public void RemoveNamespace(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Prefix.
+    content.vb: Public Sub RemoveNamespace(prefix As String)
+  overload: VDS.RDF.NestedNamespaceMapper.RemoveNamespace*
+  implements:
+  - VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.NestedNamespaceMapper.Dispose
+  commentId: M:VDS.RDF.NestedNamespaceMapper.Dispose
+  id: Dispose
+  parent: VDS.RDF.NestedNamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: NestedNamespaceMapper.Dispose()
+  fullName: VDS.RDF.NestedNamespaceMapper.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Dispose
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NestedNamespaceMapper.cs
+    startLine: 380
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nDisposes of the Namespace Map.\n"
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: VDS.RDF.NestedNamespaceMapper.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.INestedNamespaceMapper
+  commentId: T:VDS.RDF.INestedNamespaceMapper
+  parent: VDS.RDF
+  name: INestedNamespaceMapper
+  nameWithType: INestedNamespaceMapper
+  fullName: VDS.RDF.INestedNamespaceMapper
+- uid: VDS.RDF.INamespaceMapper
+  commentId: T:VDS.RDF.INamespaceMapper
+  parent: VDS.RDF
+  name: INamespaceMapper
+  nameWithType: INamespaceMapper
+  fullName: VDS.RDF.INamespaceMapper
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<NestedNamespaceMapper>()
+  nameWithType: Extensions.AsEnumerable<NestedNamespaceMapper>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.NestedNamespaceMapper>()
+  nameWithType.vb: Extensions.AsEnumerable(Of NestedNamespaceMapper)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.NestedNamespaceMapper)()
+  name.vb: AsEnumerable(Of NestedNamespaceMapper)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<NestedNamespaceMapper>
+    nameWithType: Extensions.AsEnumerable<NestedNamespaceMapper>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.NestedNamespaceMapper>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of NestedNamespaceMapper)
+    nameWithType: Extensions.AsEnumerable(Of NestedNamespaceMapper)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.NestedNamespaceMapper)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.NestedNamespaceMapper.#ctor*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.#ctor
+  name: NestedNamespaceMapper
+  nameWithType: NestedNamespaceMapper.NestedNamespaceMapper
+  fullName: VDS.RDF.NestedNamespaceMapper.NestedNamespaceMapper
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.NestedNamespaceMapper.AddNamespace*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.AddNamespace
+  name: AddNamespace
+  nameWithType: NestedNamespaceMapper.AddNamespace
+  fullName: VDS.RDF.NestedNamespaceMapper.AddNamespace
+- uid: VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+  commentId: M:VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+  parent: VDS.RDF.INamespaceMapper
+  isExternal: true
+  name: AddNamespace(String, Uri)
+  nameWithType: INamespaceMapper.AddNamespace(String, Uri)
+  fullName: VDS.RDF.INamespaceMapper.AddNamespace(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+    name: AddNamespace
+    nameWithType: INamespaceMapper.AddNamespace
+    fullName: VDS.RDF.INamespaceMapper.AddNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+    name: AddNamespace
+    nameWithType: INamespaceMapper.AddNamespace
+    fullName: VDS.RDF.INamespaceMapper.AddNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.NestedNamespaceMapper.Clear*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.Clear
+  name: Clear
+  nameWithType: NestedNamespaceMapper.Clear
+  fullName: VDS.RDF.NestedNamespaceMapper.Clear
+- uid: VDS.RDF.INamespaceMapper.Clear
+  commentId: M:VDS.RDF.INamespaceMapper.Clear
+  parent: VDS.RDF.INamespaceMapper
+  name: Clear()
+  nameWithType: INamespaceMapper.Clear()
+  fullName: VDS.RDF.INamespaceMapper.Clear()
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.Clear
+    name: Clear
+    nameWithType: INamespaceMapper.Clear
+    fullName: VDS.RDF.INamespaceMapper.Clear
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.Clear
+    name: Clear
+    nameWithType: INamespaceMapper.Clear
+    fullName: VDS.RDF.INamespaceMapper.Clear
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.GetNamespaceUri*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.GetNamespaceUri
+  name: GetNamespaceUri
+  nameWithType: NestedNamespaceMapper.GetNamespaceUri
+  fullName: VDS.RDF.NestedNamespaceMapper.GetNamespaceUri
+- uid: VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  commentId: M:VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  parent: VDS.RDF.INamespaceMapper
+  isExternal: true
+  name: GetNamespaceUri(String)
+  nameWithType: INamespaceMapper.GetNamespaceUri(String)
+  fullName: VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+    name: GetNamespaceUri
+    nameWithType: INamespaceMapper.GetNamespaceUri
+    fullName: VDS.RDF.INamespaceMapper.GetNamespaceUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+    name: GetNamespaceUri
+    nameWithType: INamespaceMapper.GetNamespaceUri
+    fullName: VDS.RDF.INamespaceMapper.GetNamespaceUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.GetPrefix*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.GetPrefix
+  name: GetPrefix
+  nameWithType: NestedNamespaceMapper.GetPrefix
+  fullName: VDS.RDF.NestedNamespaceMapper.GetPrefix
+- uid: VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  commentId: M:VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  parent: VDS.RDF.INamespaceMapper
+  isExternal: true
+  name: GetPrefix(Uri)
+  nameWithType: INamespaceMapper.GetPrefix(Uri)
+  fullName: VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+    name: GetPrefix
+    nameWithType: INamespaceMapper.GetPrefix
+    fullName: VDS.RDF.INamespaceMapper.GetPrefix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+    name: GetPrefix
+    nameWithType: INamespaceMapper.GetPrefix
+    fullName: VDS.RDF.INamespaceMapper.GetPrefix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.GetNestingLevel*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.GetNestingLevel
+  name: GetNestingLevel
+  nameWithType: NestedNamespaceMapper.GetNestingLevel
+  fullName: VDS.RDF.NestedNamespaceMapper.GetNestingLevel
+- uid: VDS.RDF.INestedNamespaceMapper.GetNestingLevel(System.String)
+  commentId: M:VDS.RDF.INestedNamespaceMapper.GetNestingLevel(System.String)
+  parent: VDS.RDF.INestedNamespaceMapper
+  isExternal: true
+  name: GetNestingLevel(String)
+  nameWithType: INestedNamespaceMapper.GetNestingLevel(String)
+  fullName: VDS.RDF.INestedNamespaceMapper.GetNestingLevel(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.INestedNamespaceMapper.GetNestingLevel(System.String)
+    name: GetNestingLevel
+    nameWithType: INestedNamespaceMapper.GetNestingLevel
+    fullName: VDS.RDF.INestedNamespaceMapper.GetNestingLevel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INestedNamespaceMapper.GetNestingLevel(System.String)
+    name: GetNestingLevel
+    nameWithType: INestedNamespaceMapper.GetNestingLevel
+    fullName: VDS.RDF.INestedNamespaceMapper.GetNestingLevel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.NestedNamespaceMapper.HasNamespace*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.HasNamespace
+  name: HasNamespace
+  nameWithType: NestedNamespaceMapper.HasNamespace
+  fullName: VDS.RDF.NestedNamespaceMapper.HasNamespace
+- uid: VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  commentId: M:VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  parent: VDS.RDF.INamespaceMapper
+  isExternal: true
+  name: HasNamespace(String)
+  nameWithType: INamespaceMapper.HasNamespace(String)
+  fullName: VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+    name: HasNamespace
+    nameWithType: INamespaceMapper.HasNamespace
+    fullName: VDS.RDF.INamespaceMapper.HasNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+    name: HasNamespace
+    nameWithType: INamespaceMapper.HasNamespace
+    fullName: VDS.RDF.INamespaceMapper.HasNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.Import*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.Import
+  name: Import
+  nameWithType: NestedNamespaceMapper.Import
+  fullName: VDS.RDF.NestedNamespaceMapper.Import
+- uid: VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  commentId: M:VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  parent: VDS.RDF.INamespaceMapper
+  name: Import(INamespaceMapper)
+  nameWithType: INamespaceMapper.Import(INamespaceMapper)
+  fullName: VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+    name: Import
+    nameWithType: INamespaceMapper.Import
+    fullName: VDS.RDF.INamespaceMapper.Import
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INamespaceMapper
+    name: INamespaceMapper
+    nameWithType: INamespaceMapper
+    fullName: VDS.RDF.INamespaceMapper
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+    name: Import
+    nameWithType: INamespaceMapper.Import
+    fullName: VDS.RDF.INamespaceMapper.Import
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INamespaceMapper
+    name: INamespaceMapper
+    nameWithType: INamespaceMapper
+    fullName: VDS.RDF.INamespaceMapper
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.IncrementNesting*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.IncrementNesting
+  name: IncrementNesting
+  nameWithType: NestedNamespaceMapper.IncrementNesting
+  fullName: VDS.RDF.NestedNamespaceMapper.IncrementNesting
+- uid: VDS.RDF.INestedNamespaceMapper.IncrementNesting
+  commentId: M:VDS.RDF.INestedNamespaceMapper.IncrementNesting
+  parent: VDS.RDF.INestedNamespaceMapper
+  name: IncrementNesting()
+  nameWithType: INestedNamespaceMapper.IncrementNesting()
+  fullName: VDS.RDF.INestedNamespaceMapper.IncrementNesting()
+  spec.csharp:
+  - uid: VDS.RDF.INestedNamespaceMapper.IncrementNesting
+    name: IncrementNesting
+    nameWithType: INestedNamespaceMapper.IncrementNesting
+    fullName: VDS.RDF.INestedNamespaceMapper.IncrementNesting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INestedNamespaceMapper.IncrementNesting
+    name: IncrementNesting
+    nameWithType: INestedNamespaceMapper.IncrementNesting
+    fullName: VDS.RDF.INestedNamespaceMapper.IncrementNesting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.DecrementNesting*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.DecrementNesting
+  name: DecrementNesting
+  nameWithType: NestedNamespaceMapper.DecrementNesting
+  fullName: VDS.RDF.NestedNamespaceMapper.DecrementNesting
+- uid: VDS.RDF.INestedNamespaceMapper.DecrementNesting
+  commentId: M:VDS.RDF.INestedNamespaceMapper.DecrementNesting
+  parent: VDS.RDF.INestedNamespaceMapper
+  name: DecrementNesting()
+  nameWithType: INestedNamespaceMapper.DecrementNesting()
+  fullName: VDS.RDF.INestedNamespaceMapper.DecrementNesting()
+  spec.csharp:
+  - uid: VDS.RDF.INestedNamespaceMapper.DecrementNesting
+    name: DecrementNesting
+    nameWithType: INestedNamespaceMapper.DecrementNesting
+    fullName: VDS.RDF.INestedNamespaceMapper.DecrementNesting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INestedNamespaceMapper.DecrementNesting
+    name: DecrementNesting
+    nameWithType: INestedNamespaceMapper.DecrementNesting
+    fullName: VDS.RDF.INestedNamespaceMapper.DecrementNesting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.NestingLevel*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.NestingLevel
+  name: NestingLevel
+  nameWithType: NestedNamespaceMapper.NestingLevel
+  fullName: VDS.RDF.NestedNamespaceMapper.NestingLevel
+- uid: VDS.RDF.INestedNamespaceMapper.NestingLevel
+  commentId: P:VDS.RDF.INestedNamespaceMapper.NestingLevel
+  parent: VDS.RDF.INestedNamespaceMapper
+  name: NestingLevel
+  nameWithType: INestedNamespaceMapper.NestingLevel
+  fullName: VDS.RDF.INestedNamespaceMapper.NestingLevel
+- uid: VDS.RDF.INamespaceMapper.NamespaceAdded
+  commentId: E:VDS.RDF.INamespaceMapper.NamespaceAdded
+  parent: VDS.RDF.INamespaceMapper
+  name: NamespaceAdded
+  nameWithType: INamespaceMapper.NamespaceAdded
+  fullName: VDS.RDF.INamespaceMapper.NamespaceAdded
+- uid: VDS.RDF.NamespaceChanged
+  commentId: T:VDS.RDF.NamespaceChanged
+  parent: VDS.RDF
+  name: NamespaceChanged
+  nameWithType: NamespaceChanged
+  fullName: VDS.RDF.NamespaceChanged
+- uid: VDS.RDF.INamespaceMapper.NamespaceModified
+  commentId: E:VDS.RDF.INamespaceMapper.NamespaceModified
+  parent: VDS.RDF.INamespaceMapper
+  name: NamespaceModified
+  nameWithType: INamespaceMapper.NamespaceModified
+  fullName: VDS.RDF.INamespaceMapper.NamespaceModified
+- uid: VDS.RDF.INamespaceMapper.NamespaceRemoved
+  commentId: E:VDS.RDF.INamespaceMapper.NamespaceRemoved
+  parent: VDS.RDF.INamespaceMapper
+  name: NamespaceRemoved
+  nameWithType: INamespaceMapper.NamespaceRemoved
+  fullName: VDS.RDF.INamespaceMapper.NamespaceRemoved
+- uid: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded
+  name: RaiseNamespaceAdded
+  nameWithType: NestedNamespaceMapper.RaiseNamespaceAdded
+  fullName: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceAdded
+- uid: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified
+  name: RaiseNamespaceModified
+  nameWithType: NestedNamespaceMapper.RaiseNamespaceModified
+  fullName: VDS.RDF.NestedNamespaceMapper.RaiseNamespaceModified
+- uid: VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved
+  name: OnNamespaceRemoved
+  nameWithType: NestedNamespaceMapper.OnNamespaceRemoved
+  fullName: VDS.RDF.NestedNamespaceMapper.OnNamespaceRemoved
+- uid: VDS.RDF.NestedNamespaceMapper.Prefixes*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.Prefixes
+  name: Prefixes
+  nameWithType: NestedNamespaceMapper.Prefixes
+  fullName: VDS.RDF.NestedNamespaceMapper.Prefixes
+- uid: VDS.RDF.INamespaceMapper.Prefixes
+  commentId: P:VDS.RDF.INamespaceMapper.Prefixes
+  parent: VDS.RDF.INamespaceMapper
+  name: Prefixes
+  nameWithType: INamespaceMapper.Prefixes
+  fullName: VDS.RDF.INamespaceMapper.Prefixes
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.NestedNamespaceMapper.ReduceToQName*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.ReduceToQName
+  name: ReduceToQName
+  nameWithType: NestedNamespaceMapper.ReduceToQName
+  fullName: VDS.RDF.NestedNamespaceMapper.ReduceToQName
+- uid: VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+  commentId: M:VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+  parent: VDS.RDF.INamespaceMapper
+  isExternal: true
+  name: ReduceToQName(String, String)
+  nameWithType: INamespaceMapper.ReduceToQName(String, String)
+  fullName: VDS.RDF.INamespaceMapper.ReduceToQName(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+    name: ReduceToQName
+    nameWithType: INamespaceMapper.ReduceToQName
+    fullName: VDS.RDF.INamespaceMapper.ReduceToQName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+    name: ReduceToQName
+    nameWithType: INamespaceMapper.ReduceToQName
+    fullName: VDS.RDF.INamespaceMapper.ReduceToQName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.RemoveNamespace*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.RemoveNamespace
+  name: RemoveNamespace
+  nameWithType: NestedNamespaceMapper.RemoveNamespace
+  fullName: VDS.RDF.NestedNamespaceMapper.RemoveNamespace
+- uid: VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  commentId: M:VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  parent: VDS.RDF.INamespaceMapper
+  isExternal: true
+  name: RemoveNamespace(String)
+  nameWithType: INamespaceMapper.RemoveNamespace(String)
+  fullName: VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+    name: RemoveNamespace
+    nameWithType: INamespaceMapper.RemoveNamespace
+    fullName: VDS.RDF.INamespaceMapper.RemoveNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+    name: RemoveNamespace
+    nameWithType: INamespaceMapper.RemoveNamespace
+    fullName: VDS.RDF.INamespaceMapper.RemoveNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NestedNamespaceMapper.Dispose*
+  commentId: Overload:VDS.RDF.NestedNamespaceMapper.Dispose
+  name: Dispose
+  nameWithType: NestedNamespaceMapper.Dispose
+  fullName: VDS.RDF.NestedNamespaceMapper.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,3394 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  id: SparqlQuery
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.SparqlQuery.AddDefaultGraph(System.Uri)
+  - VDS.RDF.Query.SparqlQuery.AddNamedGraph(System.Uri)
+  - VDS.RDF.Query.SparqlQuery.AlgebraOptimisers
+  - VDS.RDF.Query.SparqlQuery.BaseUri
+  - VDS.RDF.Query.SparqlQuery.Bindings
+  - VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs
+  - VDS.RDF.Query.SparqlQuery.ClearNamedGraphs
+  - VDS.RDF.Query.SparqlQuery.ConstructTemplate
+  - VDS.RDF.Query.SparqlQuery.Copy
+  - VDS.RDF.Query.SparqlQuery.DefaultGraphs
+  - VDS.RDF.Query.SparqlQuery.Describer
+  - VDS.RDF.Query.SparqlQuery.DescribeVariables
+  - VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IInMemoryQueryableStore)
+  - VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.IInMemoryQueryableStore)
+  - VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.Datasets.ISparqlDataset)
+  - VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.Query.Datasets.ISparqlDataset)
+  - VDS.RDF.Query.SparqlQuery.ExpressionFactories
+  - VDS.RDF.Query.SparqlQuery.GroupBy
+  - VDS.RDF.Query.SparqlQuery.HasDistinctModifier
+  - VDS.RDF.Query.SparqlQuery.HasSolutionModifier
+  - VDS.RDF.Query.SparqlQuery.Having
+  - VDS.RDF.Query.SparqlQuery.IsAggregate
+  - VDS.RDF.Query.SparqlQuery.IsOptimised
+  - VDS.RDF.Query.SparqlQuery.IsSubQuery
+  - VDS.RDF.Query.SparqlQuery.Limit
+  - VDS.RDF.Query.SparqlQuery.NamedGraphs
+  - VDS.RDF.Query.SparqlQuery.NamespaceMap
+  - VDS.RDF.Query.SparqlQuery.Offset
+  - VDS.RDF.Query.SparqlQuery.Optimise
+  - VDS.RDF.Query.SparqlQuery.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  - VDS.RDF.Query.SparqlQuery.OrderBy
+  - VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout
+  - VDS.RDF.Query.SparqlQuery.Process(VDS.RDF.Query.ISparqlQueryProcessor)
+  - VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories
+  - VDS.RDF.Query.SparqlQuery.QueryExecutionTime
+  - VDS.RDF.Query.SparqlQuery.QueryType
+  - VDS.RDF.Query.SparqlQuery.RootGraphPattern
+  - VDS.RDF.Query.SparqlQuery.SpecialType
+  - VDS.RDF.Query.SparqlQuery.Timeout
+  - VDS.RDF.Query.SparqlQuery.ToAlgebra
+  - VDS.RDF.Query.SparqlQuery.ToString
+  - VDS.RDF.Query.SparqlQuery.UsesDefaultDataset
+  - VDS.RDF.Query.SparqlQuery.Variables
+  - VDS.RDF.Query.SparqlQuery.VirtualCount
+  langs:
+  - csharp
+  - vb
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SparqlQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 133
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRepresents a SPARQL Query.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> This class is purposefully sealed and most setters are private/protected internal since generally you create a query by using the <xref href=\"VDS.RDF.Parsing.SparqlQueryParser\" data-throw-if-not-resolved=\"false\"></xref> to parse a query string/file.\n</p>\n<p>\nTo build a query programmatically you can use the <xref href=\"VDS.RDF.Query.Builder.QueryBuilder\" data-throw-if-not-resolved=\"false\"></xref> class to generate a new query and then various extension methods to modify that query using a fluent style API.  A query is not immutable\nso if you use that API you are modifying the query, if you want to generate new queries by modifying an existing query consider using the <xref href=\"VDS.RDF.Query.SparqlQuery.Copy\" data-throw-if-not-resolved=\"false\"></xref> method to take a copy of the existing query.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SparqlQuery : NodeFactory, INodeFactory'
+    content.vb: >-
+      Public NotInheritable Class SparqlQuery
+          Inherits NodeFactory
+          Implements INodeFactory
+  inheritance:
+  - System.Object
+  - VDS.RDF.NodeFactory
+  implements:
+  - VDS.RDF.INodeFactory
+  inheritedMembers:
+  - VDS.RDF.NodeFactory.CreateBlankNode
+  - VDS.RDF.NodeFactory.CreateBlankNode(System.String)
+  - VDS.RDF.NodeFactory.CreateGraphLiteralNode
+  - VDS.RDF.NodeFactory.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  - VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.Uri)
+  - VDS.RDF.NodeFactory.CreateLiteralNode(System.String)
+  - VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.String)
+  - VDS.RDF.NodeFactory.CreateUriNode(System.Uri)
+  - VDS.RDF.NodeFactory.CreateVariableNode(System.String)
+  - VDS.RDF.NodeFactory.GetNextBlankNodeID
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.SparqlQuery.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: VDS.RDF.Query.SparqlQuery.Copy
+  commentId: M:VDS.RDF.Query.SparqlQuery.Copy
+  id: Copy
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Copy()
+  nameWithType: SparqlQuery.Copy()
+  fullName: VDS.RDF.Query.SparqlQuery.Copy()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Copy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 187
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a copy of the query.\n"
+  example: []
+  syntax:
+    content: public SparqlQuery Copy()
+    return:
+      type: VDS.RDF.Query.SparqlQuery
+      description: ''
+    content.vb: Public Function Copy As SparqlQuery
+  overload: VDS.RDF.Query.SparqlQuery.Copy*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.NamespaceMap
+  commentId: P:VDS.RDF.Query.SparqlQuery.NamespaceMap
+  id: NamespaceMap
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: NamespaceMap
+  nameWithType: SparqlQuery.NamespaceMap
+  fullName: VDS.RDF.Query.SparqlQuery.NamespaceMap
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamespaceMap
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 222
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Namespace Map for the Query.\n"
+  example: []
+  syntax:
+    content: public NamespaceMapper NamespaceMap { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.NamespaceMapper
+    content.vb: Public ReadOnly Property NamespaceMap As NamespaceMapper
+  overload: VDS.RDF.Query.SparqlQuery.NamespaceMap*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.BaseUri
+  commentId: P:VDS.RDF.Query.SparqlQuery.BaseUri
+  id: BaseUri
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: BaseUri
+  nameWithType: SparqlQuery.BaseUri
+  fullName: VDS.RDF.Query.SparqlQuery.BaseUri
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 234
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Base Uri for the Query.\n"
+  example: []
+  syntax:
+    content: public Uri BaseUri { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property BaseUri As Uri
+  overload: VDS.RDF.Query.SparqlQuery.BaseUri*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.DefaultGraphs
+  commentId: P:VDS.RDF.Query.SparqlQuery.DefaultGraphs
+  id: DefaultGraphs
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: DefaultGraphs
+  nameWithType: SparqlQuery.DefaultGraphs
+  fullName: VDS.RDF.Query.SparqlQuery.DefaultGraphs
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DefaultGraphs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 243
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Default Graph URIs for the Query.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Uri> DefaultGraphs { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+    content.vb: Public ReadOnly Property DefaultGraphs As IEnumerable(Of Uri)
+  overload: VDS.RDF.Query.SparqlQuery.DefaultGraphs*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.NamedGraphs
+  commentId: P:VDS.RDF.Query.SparqlQuery.NamedGraphs
+  id: NamedGraphs
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: NamedGraphs
+  nameWithType: SparqlQuery.NamedGraphs
+  fullName: VDS.RDF.Query.SparqlQuery.NamedGraphs
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamedGraphs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 249
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Named Graph URIs for the Query.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Uri> NamedGraphs { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+    content.vb: Public ReadOnly Property NamedGraphs As IEnumerable(Of Uri)
+  overload: VDS.RDF.Query.SparqlQuery.NamedGraphs*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.Variables
+  commentId: P:VDS.RDF.Query.SparqlQuery.Variables
+  id: Variables
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: SparqlQuery.Variables
+  fullName: VDS.RDF.Query.SparqlQuery.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 255
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Variables used in the Query.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<SparqlVariable> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of SparqlVariable)
+  overload: VDS.RDF.Query.SparqlQuery.Variables*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.DescribeVariables
+  commentId: P:VDS.RDF.Query.SparqlQuery.DescribeVariables
+  id: DescribeVariables
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: DescribeVariables
+  nameWithType: SparqlQuery.DescribeVariables
+  fullName: VDS.RDF.Query.SparqlQuery.DescribeVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DescribeVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 260
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Variables, QNames and URIs used in the Describe Query.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<IToken> DescribeVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Parsing.Tokens.IToken}
+    content.vb: Public ReadOnly Property DescribeVariables As IEnumerable(Of IToken)
+  overload: VDS.RDF.Query.SparqlQuery.DescribeVariables*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.QueryType
+  commentId: P:VDS.RDF.Query.SparqlQuery.QueryType
+  id: QueryType
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: QueryType
+  nameWithType: SparqlQuery.QueryType
+  fullName: VDS.RDF.Query.SparqlQuery.QueryType
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryType
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 265
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the type of the Query.\n"
+  example: []
+  syntax:
+    content: public SparqlQueryType QueryType { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.SparqlQueryType
+    content.vb: Public ReadOnly Property QueryType As SparqlQueryType
+  overload: VDS.RDF.Query.SparqlQuery.QueryType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.SpecialType
+  commentId: P:VDS.RDF.Query.SparqlQuery.SpecialType
+  id: SpecialType
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: SpecialType
+  nameWithType: SparqlQuery.SpecialType
+  fullName: VDS.RDF.Query.SparqlQuery.SpecialType
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SpecialType
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 274
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Special Type of the Query (if any).\n"
+  example: []
+  syntax:
+    content: public SparqlSpecialQueryType SpecialType { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.SparqlSpecialQueryType
+    content.vb: Public ReadOnly Property SpecialType As SparqlSpecialQueryType
+  overload: VDS.RDF.Query.SparqlQuery.SpecialType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.RootGraphPattern
+  commentId: P:VDS.RDF.Query.SparqlQuery.RootGraphPattern
+  id: RootGraphPattern
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: RootGraphPattern
+  nameWithType: SparqlQuery.RootGraphPattern
+  fullName: VDS.RDF.Query.SparqlQuery.RootGraphPattern
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RootGraphPattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 329
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the top level Graph Pattern of the Query.\n"
+  example: []
+  syntax:
+    content: public GraphPattern RootGraphPattern { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Patterns.GraphPattern
+    content.vb: Public ReadOnly Property RootGraphPattern As GraphPattern
+  overload: VDS.RDF.Query.SparqlQuery.RootGraphPattern*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.ConstructTemplate
+  commentId: P:VDS.RDF.Query.SparqlQuery.ConstructTemplate
+  id: ConstructTemplate
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: ConstructTemplate
+  nameWithType: SparqlQuery.ConstructTemplate
+  fullName: VDS.RDF.Query.SparqlQuery.ConstructTemplate
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ConstructTemplate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 338
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Construct Template for a Construct Query.\n"
+  example: []
+  syntax:
+    content: public GraphPattern ConstructTemplate { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Patterns.GraphPattern
+    content.vb: Public ReadOnly Property ConstructTemplate As GraphPattern
+  overload: VDS.RDF.Query.SparqlQuery.ConstructTemplate*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.OrderBy
+  commentId: P:VDS.RDF.Query.SparqlQuery.OrderBy
+  id: OrderBy
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: OrderBy
+  nameWithType: SparqlQuery.OrderBy
+  fullName: VDS.RDF.Query.SparqlQuery.OrderBy
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: OrderBy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 347
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Ordering for the Query.\n"
+  example: []
+  syntax:
+    content: public ISparqlOrderBy OrderBy { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Ordering.ISparqlOrderBy
+    content.vb: Public ReadOnly Property OrderBy As ISparqlOrderBy
+  overload: VDS.RDF.Query.SparqlQuery.OrderBy*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.GroupBy
+  commentId: P:VDS.RDF.Query.SparqlQuery.GroupBy
+  id: GroupBy
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: GroupBy
+  nameWithType: SparqlQuery.GroupBy
+  fullName: VDS.RDF.Query.SparqlQuery.GroupBy
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GroupBy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 360
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Grouping for the Query.\n"
+  example: []
+  syntax:
+    content: public ISparqlGroupBy GroupBy { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Grouping.ISparqlGroupBy
+    content.vb: Public ReadOnly Property GroupBy As ISparqlGroupBy
+  overload: VDS.RDF.Query.SparqlQuery.GroupBy*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.Having
+  commentId: P:VDS.RDF.Query.SparqlQuery.Having
+  id: Having
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Having
+  nameWithType: SparqlQuery.Having
+  fullName: VDS.RDF.Query.SparqlQuery.Having
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Having
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 369
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Having Clause for the Query.\n"
+  example: []
+  syntax:
+    content: public ISparqlFilter Having { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Filters.ISparqlFilter
+    content.vb: Public ReadOnly Property Having As ISparqlFilter
+  overload: VDS.RDF.Query.SparqlQuery.Having*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.Bindings
+  commentId: P:VDS.RDF.Query.SparqlQuery.Bindings
+  id: Bindings
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Bindings
+  nameWithType: SparqlQuery.Bindings
+  fullName: VDS.RDF.Query.SparqlQuery.Bindings
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Bindings
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 378
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the VALUES Clause for the Query which are bindings that should be applied.\n"
+  example: []
+  syntax:
+    content: public BindingsPattern Bindings { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Patterns.BindingsPattern
+    content.vb: Public ReadOnly Property Bindings As BindingsPattern
+  overload: VDS.RDF.Query.SparqlQuery.Bindings*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.Describer
+  commentId: P:VDS.RDF.Query.SparqlQuery.Describer
+  id: Describer
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Describer
+  nameWithType: SparqlQuery.Describer
+  fullName: VDS.RDF.Query.SparqlQuery.Describer
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Describer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 390
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the <xref href=\"VDS.RDF.Query.Describe.ISparqlDescribe\" data-throw-if-not-resolved=\"false\"></xref> which provides the Describe algorithm you wish to use.\n"
+  remarks: "\nBy default this will be the <xref href=\"VDS.RDF.Query.Describe.ConciseBoundedDescription\" data-throw-if-not-resolved=\"false\"></xref> (CBD) algorithm.\n"
+  example: []
+  syntax:
+    content: public ISparqlDescribe Describer { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Describe.ISparqlDescribe
+    content.vb: Public Property Describer As ISparqlDescribe
+  overload: VDS.RDF.Query.SparqlQuery.Describer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.AlgebraOptimisers
+  commentId: P:VDS.RDF.Query.SparqlQuery.AlgebraOptimisers
+  id: AlgebraOptimisers
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: AlgebraOptimisers
+  nameWithType: SparqlQuery.AlgebraOptimisers
+  fullName: VDS.RDF.Query.SparqlQuery.AlgebraOptimisers
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AlgebraOptimisers
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 406
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the locally scoped Algebra Optimisers that are used to optimise the Query Algebra in addition to (but before) any global optimisers (specified by <xref href=\"VDS.RDF.Query.Optimisation.SparqlOptimiser.AlgebraOptimisers\" data-throw-if-not-resolved=\"false\"></xref>) that are applied.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<IAlgebraOptimiser> AlgebraOptimisers { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Optimisation.IAlgebraOptimiser}
+    content.vb: Public Property AlgebraOptimisers As IEnumerable(Of IAlgebraOptimiser)
+  overload: VDS.RDF.Query.SparqlQuery.AlgebraOptimisers*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.ExpressionFactories
+  commentId: P:VDS.RDF.Query.SparqlQuery.ExpressionFactories
+  id: ExpressionFactories
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: ExpressionFactories
+  nameWithType: SparqlQuery.ExpressionFactories
+  fullName: VDS.RDF.Query.SparqlQuery.ExpressionFactories
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExpressionFactories
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 425
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the locally scoped Expression Factories that may be used if the query is using the CALL() function to do dynamic function invocation.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ISparqlCustomExpressionFactory> ExpressionFactories { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory}
+    content.vb: Public Property ExpressionFactories As IEnumerable(Of ISparqlCustomExpressionFactory)
+  overload: VDS.RDF.Query.SparqlQuery.ExpressionFactories*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories
+  commentId: P:VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories
+  id: PropertyFunctionFactories
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: PropertyFunctionFactories
+  nameWithType: SparqlQuery.PropertyFunctionFactories
+  fullName: VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PropertyFunctionFactories
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 444
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the locally scoped Property Function factories that may be used by the <xref href=\"VDS.RDF.Query.Optimisation.PropertyFunctionOptimiser\" data-throw-if-not-resolved=\"false\"></xref> when generating the algebra for the query.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<IPropertyFunctionFactory> PropertyFunctionFactories { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory}
+    content.vb: Public Property PropertyFunctionFactories As IEnumerable(Of IPropertyFunctionFactory)
+  overload: VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Limit
+  commentId: P:VDS.RDF.Query.SparqlQuery.Limit
+  id: Limit
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: SparqlQuery.Limit
+  fullName: VDS.RDF.Query.SparqlQuery.Limit
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Limit
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 464
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Result Set Limit for the Query.\n"
+  remarks: Values less than zero are counted as -1 which indicates no limit.
+  example: []
+  syntax:
+    content: public int Limit { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Limit As Integer
+  overload: VDS.RDF.Query.SparqlQuery.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Offset
+  commentId: P:VDS.RDF.Query.SparqlQuery.Offset
+  id: Offset
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Offset
+  nameWithType: SparqlQuery.Offset
+  fullName: VDS.RDF.Query.SparqlQuery.Offset
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Offset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 484
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Result Set Offset for the Query.\n"
+  remarks: Values less than zero are treated as 0 which indicates no offset.
+  example: []
+  syntax:
+    content: public int Offset { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Offset As Integer
+  overload: VDS.RDF.Query.SparqlQuery.Offset*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Timeout
+  commentId: P:VDS.RDF.Query.SparqlQuery.Timeout
+  id: Timeout
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: SparqlQuery.Timeout
+  fullName: VDS.RDF.Query.SparqlQuery.Timeout
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Timeout
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 508
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Query Execution Timeout in milliseconds.\n"
+  remarks: "\n<p>\nThis Timeout (typically) only applies when executing the Query in memory.  If you have an instance of this class and pass its string representation (using <xref href=\"VDS.RDF.Query.SparqlQuery.ToString\" data-throw-if-not-resolved=\"false\"></xref>) you will lose the timeout information as this is not serialisable in SPARQL syntax.\n</p>\n"
+  example: []
+  syntax:
+    content: public long Timeout { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property Timeout As Long
+  overload: VDS.RDF.Query.SparqlQuery.Timeout*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout
+  commentId: P:VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout
+  id: PartialResultsOnTimeout
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: PartialResultsOnTimeout
+  nameWithType: SparqlQuery.PartialResultsOnTimeout
+  fullName: VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PartialResultsOnTimeout
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 522
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets whether Partial Results should be returned in the event of Query Timeout.\n"
+  remarks: "\n<p>\nPartial Results (typically) only applies when executing the Query in memory.  If you have an instance of this class and pass its string representation (using <xref href=\"VDS.RDF.Query.SparqlQuery.ToString\" data-throw-if-not-resolved=\"false\"></xref>) you will lose the partial results information as this is not serialisable in SPARQL syntax.\n</p>\n"
+  example: []
+  syntax:
+    content: public bool PartialResultsOnTimeout { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PartialResultsOnTimeout As Boolean
+  overload: VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.QueryExecutionTime
+  commentId: P:VDS.RDF.Query.SparqlQuery.QueryExecutionTime
+  id: QueryExecutionTime
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: QueryExecutionTime
+  nameWithType: SparqlQuery.QueryExecutionTime
+  fullName: VDS.RDF.Query.SparqlQuery.QueryExecutionTime
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryExecutionTime
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 532
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Time taken to execute a Query.\n"
+  example: []
+  syntax:
+    content: public TimeSpan? QueryExecutionTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.TimeSpan}
+    content.vb: Public Property QueryExecutionTime As TimeSpan?
+  overload: VDS.RDF.Query.SparqlQuery.QueryExecutionTime*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if you try and inspect the execution time before the Query has been executed.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.IsAggregate
+  commentId: P:VDS.RDF.Query.SparqlQuery.IsAggregate
+  id: IsAggregate
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: IsAggregate
+  nameWithType: SparqlQuery.IsAggregate
+  fullName: VDS.RDF.Query.SparqlQuery.IsAggregate
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsAggregate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 548
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets whether the Query has an Aggregate as its Result.\n"
+  example: []
+  syntax:
+    content: public bool IsAggregate { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAggregate As Boolean
+  overload: VDS.RDF.Query.SparqlQuery.IsAggregate*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.IsOptimised
+  commentId: P:VDS.RDF.Query.SparqlQuery.IsOptimised
+  id: IsOptimised
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: IsOptimised
+  nameWithType: SparqlQuery.IsOptimised
+  fullName: VDS.RDF.Query.SparqlQuery.IsOptimised
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsOptimised
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 562
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets whether Optimisation has been applied to the query.\n"
+  remarks: "\nThis only indicates that an Optimiser has been applied.  You can always reoptimise the query using a different optimiser by using the relevant overload of the <xref href=\"VDS.RDF.Query.SparqlQuery.Optimise\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: public bool IsOptimised { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOptimised As Boolean
+  overload: VDS.RDF.Query.SparqlQuery.IsOptimised*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.IsSubQuery
+  commentId: P:VDS.RDF.Query.SparqlQuery.IsSubQuery
+  id: IsSubQuery
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: IsSubQuery
+  nameWithType: SparqlQuery.IsSubQuery
+  fullName: VDS.RDF.Query.SparqlQuery.IsSubQuery
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsSubQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 567
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets whether this Query is a Sub-Query in another Query.\n"
+  example: []
+  syntax:
+    content: public bool IsSubQuery { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSubQuery As Boolean
+  overload: VDS.RDF.Query.SparqlQuery.IsSubQuery*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.HasDistinctModifier
+  commentId: P:VDS.RDF.Query.SparqlQuery.HasDistinctModifier
+  id: HasDistinctModifier
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: HasDistinctModifier
+  nameWithType: SparqlQuery.HasDistinctModifier
+  fullName: VDS.RDF.Query.SparqlQuery.HasDistinctModifier
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasDistinctModifier
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 572
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets whether a Query has a DISTINCT modifier.\n"
+  example: []
+  syntax:
+    content: public bool HasDistinctModifier { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasDistinctModifier As Boolean
+  overload: VDS.RDF.Query.SparqlQuery.HasDistinctModifier*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.HasSolutionModifier
+  commentId: P:VDS.RDF.Query.SparqlQuery.HasSolutionModifier
+  id: HasSolutionModifier
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: HasSolutionModifier
+  nameWithType: SparqlQuery.HasSolutionModifier
+  fullName: VDS.RDF.Query.SparqlQuery.HasSolutionModifier
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasSolutionModifier
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 590
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets whether the Query has a Solution Modifier (a GROUP BY, HAVING, ORDER BY, LIMIT or OFFSET).\n"
+  example: []
+  syntax:
+    content: public bool HasSolutionModifier { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasSolutionModifier As Boolean
+  overload: VDS.RDF.Query.SparqlQuery.HasSolutionModifier*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.VirtualCount
+  commentId: P:VDS.RDF.Query.SparqlQuery.VirtualCount
+  id: VirtualCount
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: VirtualCount
+  nameWithType: SparqlQuery.VirtualCount
+  fullName: VDS.RDF.Query.SparqlQuery.VirtualCount
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: VirtualCount
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 595
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nThe number of results that would be returned without any limit clause to a query or -1 if not supported. Defaults to the same value as the Count member.\n"
+  example: []
+  syntax:
+    content: public int VirtualCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property VirtualCount As Integer
+  overload: VDS.RDF.Query.SparqlQuery.VirtualCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlQuery.AddDefaultGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.SparqlQuery.AddDefaultGraph(System.Uri)
+  id: AddDefaultGraph(System.Uri)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: AddDefaultGraph(Uri)
+  nameWithType: SparqlQuery.AddDefaultGraph(Uri)
+  fullName: VDS.RDF.Query.SparqlQuery.AddDefaultGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddDefaultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 655
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAdds a Default Graph URI.\n"
+  example: []
+  syntax:
+    content: public void AddDefaultGraph(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Graph URI.
+    content.vb: Public Sub AddDefaultGraph(u As Uri)
+  overload: VDS.RDF.Query.SparqlQuery.AddDefaultGraph*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.AddNamedGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.SparqlQuery.AddNamedGraph(System.Uri)
+  id: AddNamedGraph(System.Uri)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: AddNamedGraph(Uri)
+  nameWithType: SparqlQuery.AddNamedGraph(Uri)
+  fullName: VDS.RDF.Query.SparqlQuery.AddNamedGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddNamedGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 667
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAdds a Named Graph URI.\n"
+  example: []
+  syntax:
+    content: public void AddNamedGraph(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Graph URI.
+    content.vb: Public Sub AddNamedGraph(u As Uri)
+  overload: VDS.RDF.Query.SparqlQuery.AddNamedGraph*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs
+  commentId: M:VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs
+  id: ClearDefaultGraphs
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: ClearDefaultGraphs()
+  nameWithType: SparqlQuery.ClearDefaultGraphs()
+  fullName: VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ClearDefaultGraphs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 678
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRemoves all Default Graph URIs.\n"
+  example: []
+  syntax:
+    content: public void ClearDefaultGraphs()
+    content.vb: Public Sub ClearDefaultGraphs
+  overload: VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.ClearNamedGraphs
+  commentId: M:VDS.RDF.Query.SparqlQuery.ClearNamedGraphs
+  id: ClearNamedGraphs
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: ClearNamedGraphs()
+  nameWithType: SparqlQuery.ClearNamedGraphs()
+  fullName: VDS.RDF.Query.SparqlQuery.ClearNamedGraphs()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ClearNamedGraphs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 686
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRemoves all Named Graph URIs.\n"
+  example: []
+  syntax:
+    content: public void ClearNamedGraphs()
+    content.vb: Public Sub ClearNamedGraphs
+  overload: VDS.RDF.Query.SparqlQuery.ClearNamedGraphs*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IInMemoryQueryableStore)
+  commentId: M:VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IInMemoryQueryableStore)
+  id: Evaluate(VDS.RDF.IInMemoryQueryableStore)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(IInMemoryQueryableStore)
+  nameWithType: SparqlQuery.Evaluate(IInMemoryQueryableStore)
+  fullName: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IInMemoryQueryableStore)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 700
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEvaluates the SPARQL Query against the given Triple Store.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", true)]
+
+      public object Evaluate(IInMemoryQueryableStore data)
+    parameters:
+    - id: data
+      type: VDS.RDF.IInMemoryQueryableStore
+      description: Triple Store.
+    return:
+      type: System.Object
+      description: "\nEither a <xref href=\"VDS.RDF.Query.SparqlResultSet\" data-throw-if-not-resolved=\"false\"></xref> or a <xref href=\"VDS.RDF.Graph\" data-throw-if-not-resolved=\"false\"></xref> depending on the type of query executed.\n"
+    content.vb: >-
+      <Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", True)>
+
+      Public Function Evaluate(data As IInMemoryQueryableStore) As Object
+  overload: VDS.RDF.Query.SparqlQuery.Evaluate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.IInMemoryQueryableStore)
+  commentId: M:VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.IInMemoryQueryableStore)
+  id: Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.IInMemoryQueryableStore)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(IRdfHandler, ISparqlResultsHandler, IInMemoryQueryableStore)
+  nameWithType: SparqlQuery.Evaluate(IRdfHandler, ISparqlResultsHandler, IInMemoryQueryableStore)
+  fullName: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.IInMemoryQueryableStore)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 712
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEvaluates the SPARQL Query against the given Triple Store processing the results with the appropriate handler from those provided.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", true)]
+
+      public void Evaluate(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, IInMemoryQueryableStore data)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: data
+      type: VDS.RDF.IInMemoryQueryableStore
+      description: Triple Store.
+    content.vb: >-
+      <Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", True)>
+
+      Public Sub Evaluate(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, data As IInMemoryQueryableStore)
+  overload: VDS.RDF.Query.SparqlQuery.Evaluate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.Query.Datasets.ISparqlDataset)
+  id: Evaluate(VDS.RDF.Query.Datasets.ISparqlDataset)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(ISparqlDataset)
+  nameWithType: SparqlQuery.Evaluate(ISparqlDataset)
+  fullName: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.Query.Datasets.ISparqlDataset)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 725
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEvaluates the SPARQL Query against the given Dataset.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", true)]
+
+      public object Evaluate(ISparqlDataset dataset)
+    parameters:
+    - id: dataset
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset.
+    return:
+      type: System.Object
+      description: "\nEither a <xref href=\"VDS.RDF.Query.SparqlResultSet\" data-throw-if-not-resolved=\"false\"></xref> or a <xref href=\"VDS.RDF.IGraph\" data-throw-if-not-resolved=\"false\"></xref> depending on the type of query executed.\n"
+    content.vb: >-
+      <Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", True)>
+
+      Public Function Evaluate(dataset As ISparqlDataset) As Object
+  overload: VDS.RDF.Query.SparqlQuery.Evaluate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.Datasets.ISparqlDataset)
+  id: Evaluate(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.Datasets.ISparqlDataset)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(IRdfHandler, ISparqlResultsHandler, ISparqlDataset)
+  nameWithType: SparqlQuery.Evaluate(IRdfHandler, ISparqlResultsHandler, ISparqlDataset)
+  fullName: VDS.RDF.Query.SparqlQuery.Evaluate(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.Datasets.ISparqlDataset)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 738
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEvaluates the SPARQL Query against the given Dataset processing the results with an appropriate handler form those provided.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", true)]
+
+      public void Evaluate(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, ISparqlDataset dataset)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: dataset
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset.
+    content.vb: >-
+      <Obsolete("This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead", True)>
+
+      Public Sub Evaluate(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, dataset As ISparqlDataset)
+  overload: VDS.RDF.Query.SparqlQuery.Evaluate*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: This method is considered obsolete, you should create an ISparqlQueryProcessor instance and invoke the ProcessQuery() method instead
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Process(VDS.RDF.Query.ISparqlQueryProcessor)
+  commentId: M:VDS.RDF.Query.SparqlQuery.Process(VDS.RDF.Query.ISparqlQueryProcessor)
+  id: Process(VDS.RDF.Query.ISparqlQueryProcessor)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Process(ISparqlQueryProcessor)
+  nameWithType: SparqlQuery.Process(ISparqlQueryProcessor)
+  fullName: VDS.RDF.Query.SparqlQuery.Process(VDS.RDF.Query.ISparqlQueryProcessor)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Process
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 750
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nProcesses the Query using the given Query Processor.\n"
+  example: []
+  syntax:
+    content: public object Process(ISparqlQueryProcessor processor)
+    parameters:
+    - id: processor
+      type: VDS.RDF.Query.ISparqlQueryProcessor
+      description: SPARQL Query Processor.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Function Process(processor As ISparqlQueryProcessor) As Object
+  overload: VDS.RDF.Query.SparqlQuery.Process*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Optimise
+  commentId: M:VDS.RDF.Query.SparqlQuery.Optimise
+  id: Optimise
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Optimise()
+  nameWithType: SparqlQuery.Optimise()
+  fullName: VDS.RDF.Query.SparqlQuery.Optimise()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Optimise
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 758
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nApplies optimisation to a Query using the default global optimiser.\n"
+  example: []
+  syntax:
+    content: public void Optimise()
+    content.vb: Public Sub Optimise
+  overload: VDS.RDF.Query.SparqlQuery.Optimise*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  commentId: M:VDS.RDF.Query.SparqlQuery.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  id: Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: Optimise(IQueryOptimiser)
+  nameWithType: SparqlQuery.Optimise(IQueryOptimiser)
+  fullName: VDS.RDF.Query.SparqlQuery.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Optimise
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 767
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nApplies optimisation to a Query using the specific optimiser.\n"
+  example: []
+  syntax:
+    content: public void Optimise(IQueryOptimiser optimiser)
+    parameters:
+    - id: optimiser
+      type: VDS.RDF.Query.Optimisation.IQueryOptimiser
+      description: Query Optimiser.
+    content.vb: Public Sub Optimise(optimiser As IQueryOptimiser)
+  overload: VDS.RDF.Query.SparqlQuery.Optimise*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.ToString
+  commentId: M:VDS.RDF.Query.SparqlQuery.ToString
+  id: ToString
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SparqlQuery.ToString()
+  fullName: VDS.RDF.Query.SparqlQuery.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 852
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGenerates a String representation of the Query.\n"
+  remarks: This method may not return a complete representation of the Query depending on the Query it is called on as not all the classes which can be included in a Sparql query currently implement ToString methods.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.SparqlQuery.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.SparqlQuery.ToAlgebra
+  commentId: M:VDS.RDF.Query.SparqlQuery.ToAlgebra
+  id: ToAlgebra
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: ToAlgebra()
+  nameWithType: SparqlQuery.ToAlgebra()
+  fullName: VDS.RDF.Query.SparqlQuery.ToAlgebra()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToAlgebra
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 1070
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nConverts the Query into it&apos;s SPARQL Algebra representation (as represented in the Leviathan API).\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra ToAlgebra()
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public Function ToAlgebra As ISparqlAlgebra
+  overload: VDS.RDF.Query.SparqlQuery.ToAlgebra*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlQuery.UsesDefaultDataset
+  commentId: P:VDS.RDF.Query.SparqlQuery.UsesDefaultDataset
+  id: UsesDefaultDataset
+  parent: VDS.RDF.Query.SparqlQuery
+  langs:
+  - csharp
+  - vb
+  name: UsesDefaultDataset
+  nameWithType: SparqlQuery.UsesDefaultDataset
+  fullName: VDS.RDF.Query.SparqlQuery.UsesDefaultDataset
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLQuery.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UsesDefaultDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLQuery.cs
+    startLine: 1333
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets whether a Query uses the Default Dataset against which it is evaluated.\n"
+  remarks: "\n<p>\nIf the value is true then the Query will use whatever dataset is it evaluated against.  If the value is false then the query changes the dataset at one/more points during its evaluation.\n</p>\n<p>\nThings that may change the dataset and cause a query not to use the Default Dataset are as follows:.\n<ul>\n<li>FROM clauses (but not FROM NAMED)</li>\n<li>GRAPH clauses</li>\n<li>Subqueries which do not use the default dataset</li>\n</ul>\n</p>\n"
+  example: []
+  syntax:
+    content: public bool UsesDefaultDataset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property UsesDefaultDataset As Boolean
+  overload: VDS.RDF.Query.SparqlQuery.UsesDefaultDataset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: VDS.RDF.Parsing.SparqlQueryParser
+  commentId: T:VDS.RDF.Parsing.SparqlQueryParser
+  parent: VDS.RDF.Parsing
+  name: SparqlQueryParser
+  nameWithType: SparqlQueryParser
+  fullName: VDS.RDF.Parsing.SparqlQueryParser
+- uid: VDS.RDF.Query.Builder.QueryBuilder
+  commentId: T:VDS.RDF.Query.Builder.QueryBuilder
+  name: QueryBuilder
+  nameWithType: QueryBuilder
+  fullName: VDS.RDF.Query.Builder.QueryBuilder
+- uid: VDS.RDF.Query.SparqlQuery.Copy
+  commentId: M:VDS.RDF.Query.SparqlQuery.Copy
+  isExternal: true
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.NodeFactory
+  commentId: T:VDS.RDF.NodeFactory
+  parent: VDS.RDF
+  name: NodeFactory
+  nameWithType: NodeFactory
+  fullName: VDS.RDF.NodeFactory
+- uid: VDS.RDF.INodeFactory
+  commentId: T:VDS.RDF.INodeFactory
+  parent: VDS.RDF
+  name: INodeFactory
+  nameWithType: INodeFactory
+  fullName: VDS.RDF.INodeFactory
+- uid: VDS.RDF.NodeFactory.CreateBlankNode
+  commentId: M:VDS.RDF.NodeFactory.CreateBlankNode
+  parent: VDS.RDF.NodeFactory
+  name: CreateBlankNode()
+  nameWithType: NodeFactory.CreateBlankNode()
+  fullName: VDS.RDF.NodeFactory.CreateBlankNode()
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateBlankNode
+    name: CreateBlankNode
+    nameWithType: NodeFactory.CreateBlankNode
+    fullName: VDS.RDF.NodeFactory.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateBlankNode
+    name: CreateBlankNode
+    nameWithType: NodeFactory.CreateBlankNode
+    fullName: VDS.RDF.NodeFactory.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateBlankNode(System.String)
+  commentId: M:VDS.RDF.NodeFactory.CreateBlankNode(System.String)
+  parent: VDS.RDF.NodeFactory
+  isExternal: true
+  name: CreateBlankNode(String)
+  nameWithType: NodeFactory.CreateBlankNode(String)
+  fullName: VDS.RDF.NodeFactory.CreateBlankNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateBlankNode(System.String)
+    name: CreateBlankNode
+    nameWithType: NodeFactory.CreateBlankNode
+    fullName: VDS.RDF.NodeFactory.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateBlankNode(System.String)
+    name: CreateBlankNode
+    nameWithType: NodeFactory.CreateBlankNode
+    fullName: VDS.RDF.NodeFactory.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateGraphLiteralNode
+  commentId: M:VDS.RDF.NodeFactory.CreateGraphLiteralNode
+  parent: VDS.RDF.NodeFactory
+  name: CreateGraphLiteralNode()
+  nameWithType: NodeFactory.CreateGraphLiteralNode()
+  fullName: VDS.RDF.NodeFactory.CreateGraphLiteralNode()
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateGraphLiteralNode
+    name: CreateGraphLiteralNode
+    nameWithType: NodeFactory.CreateGraphLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateGraphLiteralNode
+    name: CreateGraphLiteralNode
+    nameWithType: NodeFactory.CreateGraphLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.NodeFactory.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  parent: VDS.RDF.NodeFactory
+  name: CreateGraphLiteralNode(IGraph)
+  nameWithType: NodeFactory.CreateGraphLiteralNode(IGraph)
+  fullName: VDS.RDF.NodeFactory.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateGraphLiteralNode(VDS.RDF.IGraph)
+    name: CreateGraphLiteralNode
+    nameWithType: NodeFactory.CreateGraphLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateGraphLiteralNode(VDS.RDF.IGraph)
+    name: CreateGraphLiteralNode
+    nameWithType: NodeFactory.CreateGraphLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.Uri)
+  commentId: M:VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.Uri)
+  parent: VDS.RDF.NodeFactory
+  isExternal: true
+  name: CreateLiteralNode(String, Uri)
+  nameWithType: NodeFactory.CreateLiteralNode(String, Uri)
+  fullName: VDS.RDF.NodeFactory.CreateLiteralNode(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.Uri)
+    name: CreateLiteralNode
+    nameWithType: NodeFactory.CreateLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.Uri)
+    name: CreateLiteralNode
+    nameWithType: NodeFactory.CreateLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String)
+  commentId: M:VDS.RDF.NodeFactory.CreateLiteralNode(System.String)
+  parent: VDS.RDF.NodeFactory
+  isExternal: true
+  name: CreateLiteralNode(String)
+  nameWithType: NodeFactory.CreateLiteralNode(String)
+  fullName: VDS.RDF.NodeFactory.CreateLiteralNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String)
+    name: CreateLiteralNode
+    nameWithType: NodeFactory.CreateLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String)
+    name: CreateLiteralNode
+    nameWithType: NodeFactory.CreateLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.String)
+  commentId: M:VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.String)
+  parent: VDS.RDF.NodeFactory
+  isExternal: true
+  name: CreateLiteralNode(String, String)
+  nameWithType: NodeFactory.CreateLiteralNode(String, String)
+  fullName: VDS.RDF.NodeFactory.CreateLiteralNode(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.String)
+    name: CreateLiteralNode
+    nameWithType: NodeFactory.CreateLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateLiteralNode(System.String,System.String)
+    name: CreateLiteralNode
+    nameWithType: NodeFactory.CreateLiteralNode
+    fullName: VDS.RDF.NodeFactory.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateUriNode(System.Uri)
+  commentId: M:VDS.RDF.NodeFactory.CreateUriNode(System.Uri)
+  parent: VDS.RDF.NodeFactory
+  isExternal: true
+  name: CreateUriNode(Uri)
+  nameWithType: NodeFactory.CreateUriNode(Uri)
+  fullName: VDS.RDF.NodeFactory.CreateUriNode(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateUriNode(System.Uri)
+    name: CreateUriNode
+    nameWithType: NodeFactory.CreateUriNode
+    fullName: VDS.RDF.NodeFactory.CreateUriNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateUriNode(System.Uri)
+    name: CreateUriNode
+    nameWithType: NodeFactory.CreateUriNode
+    fullName: VDS.RDF.NodeFactory.CreateUriNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.CreateVariableNode(System.String)
+  commentId: M:VDS.RDF.NodeFactory.CreateVariableNode(System.String)
+  parent: VDS.RDF.NodeFactory
+  isExternal: true
+  name: CreateVariableNode(String)
+  nameWithType: NodeFactory.CreateVariableNode(String)
+  fullName: VDS.RDF.NodeFactory.CreateVariableNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.CreateVariableNode(System.String)
+    name: CreateVariableNode
+    nameWithType: NodeFactory.CreateVariableNode
+    fullName: VDS.RDF.NodeFactory.CreateVariableNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.CreateVariableNode(System.String)
+    name: CreateVariableNode
+    nameWithType: NodeFactory.CreateVariableNode
+    fullName: VDS.RDF.NodeFactory.CreateVariableNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NodeFactory.GetNextBlankNodeID
+  commentId: M:VDS.RDF.NodeFactory.GetNextBlankNodeID
+  parent: VDS.RDF.NodeFactory
+  name: GetNextBlankNodeID()
+  nameWithType: NodeFactory.GetNextBlankNodeID()
+  fullName: VDS.RDF.NodeFactory.GetNextBlankNodeID()
+  spec.csharp:
+  - uid: VDS.RDF.NodeFactory.GetNextBlankNodeID
+    name: GetNextBlankNodeID
+    nameWithType: NodeFactory.GetNextBlankNodeID
+    fullName: VDS.RDF.NodeFactory.GetNextBlankNodeID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NodeFactory.GetNextBlankNodeID
+    name: GetNextBlankNodeID
+    nameWithType: NodeFactory.GetNextBlankNodeID
+    fullName: VDS.RDF.NodeFactory.GetNextBlankNodeID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SparqlQuery>()
+  nameWithType: Extensions.AsEnumerable<SparqlQuery>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlQuery>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SparqlQuery)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlQuery)()
+  name.vb: AsEnumerable(Of SparqlQuery)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SparqlQuery>
+    nameWithType: Extensions.AsEnumerable<SparqlQuery>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlQuery>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SparqlQuery)
+    nameWithType: Extensions.AsEnumerable(Of SparqlQuery)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlQuery)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Query.SparqlQuery.Copy*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Copy
+  name: Copy
+  nameWithType: SparqlQuery.Copy
+  fullName: VDS.RDF.Query.SparqlQuery.Copy
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query.SparqlQuery.NamespaceMap*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.NamespaceMap
+  name: NamespaceMap
+  nameWithType: SparqlQuery.NamespaceMap
+  fullName: VDS.RDF.Query.SparqlQuery.NamespaceMap
+- uid: VDS.RDF.NamespaceMapper
+  commentId: T:VDS.RDF.NamespaceMapper
+  parent: VDS.RDF
+  name: NamespaceMapper
+  nameWithType: NamespaceMapper
+  fullName: VDS.RDF.NamespaceMapper
+- uid: VDS.RDF.Query.SparqlQuery.BaseUri*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.BaseUri
+  name: BaseUri
+  nameWithType: SparqlQuery.BaseUri
+  fullName: VDS.RDF.Query.SparqlQuery.BaseUri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Query.SparqlQuery.DefaultGraphs*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.DefaultGraphs
+  name: DefaultGraphs
+  nameWithType: SparqlQuery.DefaultGraphs
+  fullName: VDS.RDF.Query.SparqlQuery.DefaultGraphs
+- uid: System.Collections.Generic.IEnumerable{System.Uri}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Uri}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Uri>
+  nameWithType: IEnumerable<Uri>
+  fullName: System.Collections.Generic.IEnumerable<System.Uri>
+  nameWithType.vb: IEnumerable(Of Uri)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Uri)
+  name.vb: IEnumerable(Of Uri)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.SparqlQuery.NamedGraphs*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.NamedGraphs
+  name: NamedGraphs
+  nameWithType: SparqlQuery.NamedGraphs
+  fullName: VDS.RDF.Query.SparqlQuery.NamedGraphs
+- uid: VDS.RDF.Query.SparqlQuery.Variables*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Variables
+  name: Variables
+  nameWithType: SparqlQuery.Variables
+  fullName: VDS.RDF.Query.SparqlQuery.Variables
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlVariable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<SparqlVariable>
+  nameWithType: IEnumerable<SparqlVariable>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.SparqlVariable>
+  nameWithType.vb: IEnumerable(Of SparqlVariable)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.SparqlVariable)
+  name.vb: IEnumerable(Of SparqlVariable)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.SparqlVariable
+    name: SparqlVariable
+    nameWithType: SparqlVariable
+    fullName: VDS.RDF.Query.SparqlVariable
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.SparqlVariable
+    name: SparqlVariable
+    nameWithType: SparqlVariable
+    fullName: VDS.RDF.Query.SparqlVariable
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery.DescribeVariables*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.DescribeVariables
+  name: DescribeVariables
+  nameWithType: SparqlQuery.DescribeVariables
+  fullName: VDS.RDF.Query.SparqlQuery.DescribeVariables
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Parsing.Tokens.IToken}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Parsing.Tokens.IToken}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IToken>
+  nameWithType: IEnumerable<IToken>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Parsing.Tokens.IToken>
+  nameWithType.vb: IEnumerable(Of IToken)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Parsing.Tokens.IToken)
+  name.vb: IEnumerable(Of IToken)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Parsing.Tokens.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: VDS.RDF.Parsing.Tokens.IToken
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Parsing.Tokens.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: VDS.RDF.Parsing.Tokens.IToken
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery.QueryType*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.QueryType
+  name: QueryType
+  nameWithType: SparqlQuery.QueryType
+  fullName: VDS.RDF.Query.SparqlQuery.QueryType
+- uid: VDS.RDF.Query.SparqlQueryType
+  commentId: T:VDS.RDF.Query.SparqlQueryType
+  parent: VDS.RDF.Query
+  name: SparqlQueryType
+  nameWithType: SparqlQueryType
+  fullName: VDS.RDF.Query.SparqlQueryType
+- uid: VDS.RDF.Query.SparqlQuery.SpecialType*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.SpecialType
+  name: SpecialType
+  nameWithType: SparqlQuery.SpecialType
+  fullName: VDS.RDF.Query.SparqlQuery.SpecialType
+- uid: VDS.RDF.Query.SparqlSpecialQueryType
+  commentId: T:VDS.RDF.Query.SparqlSpecialQueryType
+  parent: VDS.RDF.Query
+  name: SparqlSpecialQueryType
+  nameWithType: SparqlSpecialQueryType
+  fullName: VDS.RDF.Query.SparqlSpecialQueryType
+- uid: VDS.RDF.Query.SparqlQuery.RootGraphPattern*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.RootGraphPattern
+  name: RootGraphPattern
+  nameWithType: SparqlQuery.RootGraphPattern
+  fullName: VDS.RDF.Query.SparqlQuery.RootGraphPattern
+- uid: VDS.RDF.Query.Patterns.GraphPattern
+  commentId: T:VDS.RDF.Query.Patterns.GraphPattern
+  parent: VDS.RDF.Query.Patterns
+  name: GraphPattern
+  nameWithType: GraphPattern
+  fullName: VDS.RDF.Query.Patterns.GraphPattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: VDS.RDF.Query.SparqlQuery.ConstructTemplate*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.ConstructTemplate
+  name: ConstructTemplate
+  nameWithType: SparqlQuery.ConstructTemplate
+  fullName: VDS.RDF.Query.SparqlQuery.ConstructTemplate
+- uid: VDS.RDF.Query.SparqlQuery.OrderBy*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.OrderBy
+  name: OrderBy
+  nameWithType: SparqlQuery.OrderBy
+  fullName: VDS.RDF.Query.SparqlQuery.OrderBy
+- uid: VDS.RDF.Query.Ordering.ISparqlOrderBy
+  commentId: T:VDS.RDF.Query.Ordering.ISparqlOrderBy
+  parent: VDS.RDF.Query.Ordering
+  name: ISparqlOrderBy
+  nameWithType: ISparqlOrderBy
+  fullName: VDS.RDF.Query.Ordering.ISparqlOrderBy
+- uid: VDS.RDF.Query.Ordering
+  commentId: N:VDS.RDF.Query.Ordering
+  name: VDS.RDF.Query.Ordering
+  nameWithType: VDS.RDF.Query.Ordering
+  fullName: VDS.RDF.Query.Ordering
+- uid: VDS.RDF.Query.SparqlQuery.GroupBy*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.GroupBy
+  name: GroupBy
+  nameWithType: SparqlQuery.GroupBy
+  fullName: VDS.RDF.Query.SparqlQuery.GroupBy
+- uid: VDS.RDF.Query.Grouping.ISparqlGroupBy
+  commentId: T:VDS.RDF.Query.Grouping.ISparqlGroupBy
+  parent: VDS.RDF.Query.Grouping
+  name: ISparqlGroupBy
+  nameWithType: ISparqlGroupBy
+  fullName: VDS.RDF.Query.Grouping.ISparqlGroupBy
+- uid: VDS.RDF.Query.Grouping
+  commentId: N:VDS.RDF.Query.Grouping
+  name: VDS.RDF.Query.Grouping
+  nameWithType: VDS.RDF.Query.Grouping
+  fullName: VDS.RDF.Query.Grouping
+- uid: VDS.RDF.Query.SparqlQuery.Having*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Having
+  name: Having
+  nameWithType: SparqlQuery.Having
+  fullName: VDS.RDF.Query.SparqlQuery.Having
+- uid: VDS.RDF.Query.Filters.ISparqlFilter
+  commentId: T:VDS.RDF.Query.Filters.ISparqlFilter
+  parent: VDS.RDF.Query.Filters
+  name: ISparqlFilter
+  nameWithType: ISparqlFilter
+  fullName: VDS.RDF.Query.Filters.ISparqlFilter
+- uid: VDS.RDF.Query.Filters
+  commentId: N:VDS.RDF.Query.Filters
+  name: VDS.RDF.Query.Filters
+  nameWithType: VDS.RDF.Query.Filters
+  fullName: VDS.RDF.Query.Filters
+- uid: VDS.RDF.Query.SparqlQuery.Bindings*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Bindings
+  name: Bindings
+  nameWithType: SparqlQuery.Bindings
+  fullName: VDS.RDF.Query.SparqlQuery.Bindings
+- uid: VDS.RDF.Query.Patterns.BindingsPattern
+  commentId: T:VDS.RDF.Query.Patterns.BindingsPattern
+  parent: VDS.RDF.Query.Patterns
+  name: BindingsPattern
+  nameWithType: BindingsPattern
+  fullName: VDS.RDF.Query.Patterns.BindingsPattern
+- uid: VDS.RDF.Query.Describe.ISparqlDescribe
+  commentId: T:VDS.RDF.Query.Describe.ISparqlDescribe
+  parent: VDS.RDF.Query.Describe
+  name: ISparqlDescribe
+  nameWithType: ISparqlDescribe
+  fullName: VDS.RDF.Query.Describe.ISparqlDescribe
+- uid: VDS.RDF.Query.Describe.ConciseBoundedDescription
+  commentId: T:VDS.RDF.Query.Describe.ConciseBoundedDescription
+  name: ConciseBoundedDescription
+  nameWithType: ConciseBoundedDescription
+  fullName: VDS.RDF.Query.Describe.ConciseBoundedDescription
+- uid: VDS.RDF.Query.SparqlQuery.Describer*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Describer
+  name: Describer
+  nameWithType: SparqlQuery.Describer
+  fullName: VDS.RDF.Query.SparqlQuery.Describer
+- uid: VDS.RDF.Query.Describe
+  commentId: N:VDS.RDF.Query.Describe
+  name: VDS.RDF.Query.Describe
+  nameWithType: VDS.RDF.Query.Describe
+  fullName: VDS.RDF.Query.Describe
+- uid: VDS.RDF.Query.Optimisation.SparqlOptimiser.AlgebraOptimisers
+  commentId: P:VDS.RDF.Query.Optimisation.SparqlOptimiser.AlgebraOptimisers
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlQuery.AlgebraOptimisers*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.AlgebraOptimisers
+  name: AlgebraOptimisers
+  nameWithType: SparqlQuery.AlgebraOptimisers
+  fullName: VDS.RDF.Query.SparqlQuery.AlgebraOptimisers
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Optimisation.IAlgebraOptimiser}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.Optimisation.IAlgebraOptimiser}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IAlgebraOptimiser>
+  nameWithType: IEnumerable<IAlgebraOptimiser>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.Optimisation.IAlgebraOptimiser>
+  nameWithType.vb: IEnumerable(Of IAlgebraOptimiser)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  name.vb: IEnumerable(Of IAlgebraOptimiser)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery.ExpressionFactories*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.ExpressionFactories
+  name: ExpressionFactories
+  nameWithType: SparqlQuery.ExpressionFactories
+  fullName: VDS.RDF.Query.SparqlQuery.ExpressionFactories
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ISparqlCustomExpressionFactory>
+  nameWithType: IEnumerable<ISparqlCustomExpressionFactory>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory>
+  nameWithType.vb: IEnumerable(Of ISparqlCustomExpressionFactory)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory)
+  name.vb: IEnumerable(Of ISparqlCustomExpressionFactory)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory
+    name: ISparqlCustomExpressionFactory
+    nameWithType: ISparqlCustomExpressionFactory
+    fullName: VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory
+    name: ISparqlCustomExpressionFactory
+    nameWithType: ISparqlCustomExpressionFactory
+    fullName: VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.PropertyFunctionOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.PropertyFunctionOptimiser
+  name: PropertyFunctionOptimiser
+  nameWithType: PropertyFunctionOptimiser
+  fullName: VDS.RDF.Query.Optimisation.PropertyFunctionOptimiser
+- uid: VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories
+  name: PropertyFunctionFactories
+  nameWithType: SparqlQuery.PropertyFunctionFactories
+  fullName: VDS.RDF.Query.SparqlQuery.PropertyFunctionFactories
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IPropertyFunctionFactory>
+  nameWithType: IEnumerable<IPropertyFunctionFactory>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory>
+  nameWithType.vb: IEnumerable(Of IPropertyFunctionFactory)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  name.vb: IEnumerable(Of IPropertyFunctionFactory)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+    name: IPropertyFunctionFactory
+    nameWithType: IPropertyFunctionFactory
+    fullName: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+    name: IPropertyFunctionFactory
+    nameWithType: IPropertyFunctionFactory
+    fullName: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery.Limit*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Limit
+  name: Limit
+  nameWithType: SparqlQuery.Limit
+  fullName: VDS.RDF.Query.SparqlQuery.Limit
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.SparqlQuery.Offset*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Offset
+  name: Offset
+  nameWithType: SparqlQuery.Offset
+  fullName: VDS.RDF.Query.SparqlQuery.Offset
+- uid: VDS.RDF.Query.SparqlQuery.ToString
+  commentId: M:VDS.RDF.Query.SparqlQuery.ToString
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlQuery.Timeout*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Timeout
+  name: Timeout
+  nameWithType: SparqlQuery.Timeout
+  fullName: VDS.RDF.Query.SparqlQuery.Timeout
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout
+  name: PartialResultsOnTimeout
+  nameWithType: SparqlQuery.PartialResultsOnTimeout
+  fullName: VDS.RDF.Query.SparqlQuery.PartialResultsOnTimeout
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlQuery.QueryExecutionTime*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.QueryExecutionTime
+  name: QueryExecutionTime
+  nameWithType: SparqlQuery.QueryExecutionTime
+  fullName: VDS.RDF.Query.SparqlQuery.QueryExecutionTime
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<TimeSpan>
+  nameWithType: Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
+  nameWithType.vb: Nullable(Of TimeSpan)
+  fullName.vb: System.Nullable(Of System.TimeSpan)
+  name.vb: Nullable(Of TimeSpan)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery.IsAggregate*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.IsAggregate
+  name: IsAggregate
+  nameWithType: SparqlQuery.IsAggregate
+  fullName: VDS.RDF.Query.SparqlQuery.IsAggregate
+- uid: VDS.RDF.Query.SparqlQuery.Optimise
+  commentId: M:VDS.RDF.Query.SparqlQuery.Optimise
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlQuery.IsOptimised*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.IsOptimised
+  name: IsOptimised
+  nameWithType: SparqlQuery.IsOptimised
+  fullName: VDS.RDF.Query.SparqlQuery.IsOptimised
+- uid: VDS.RDF.Query.SparqlQuery.IsSubQuery*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.IsSubQuery
+  name: IsSubQuery
+  nameWithType: SparqlQuery.IsSubQuery
+  fullName: VDS.RDF.Query.SparqlQuery.IsSubQuery
+- uid: VDS.RDF.Query.SparqlQuery.HasDistinctModifier*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.HasDistinctModifier
+  name: HasDistinctModifier
+  nameWithType: SparqlQuery.HasDistinctModifier
+  fullName: VDS.RDF.Query.SparqlQuery.HasDistinctModifier
+- uid: VDS.RDF.Query.SparqlQuery.HasSolutionModifier*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.HasSolutionModifier
+  name: HasSolutionModifier
+  nameWithType: SparqlQuery.HasSolutionModifier
+  fullName: VDS.RDF.Query.SparqlQuery.HasSolutionModifier
+- uid: VDS.RDF.Query.SparqlQuery.VirtualCount*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.VirtualCount
+  name: VirtualCount
+  nameWithType: SparqlQuery.VirtualCount
+  fullName: VDS.RDF.Query.SparqlQuery.VirtualCount
+- uid: VDS.RDF.Query.SparqlQuery.AddDefaultGraph*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.AddDefaultGraph
+  name: AddDefaultGraph
+  nameWithType: SparqlQuery.AddDefaultGraph
+  fullName: VDS.RDF.Query.SparqlQuery.AddDefaultGraph
+- uid: VDS.RDF.Query.SparqlQuery.AddNamedGraph*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.AddNamedGraph
+  name: AddNamedGraph
+  nameWithType: SparqlQuery.AddNamedGraph
+  fullName: VDS.RDF.Query.SparqlQuery.AddNamedGraph
+- uid: VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs
+  name: ClearDefaultGraphs
+  nameWithType: SparqlQuery.ClearDefaultGraphs
+  fullName: VDS.RDF.Query.SparqlQuery.ClearDefaultGraphs
+- uid: VDS.RDF.Query.SparqlQuery.ClearNamedGraphs*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.ClearNamedGraphs
+  name: ClearNamedGraphs
+  nameWithType: SparqlQuery.ClearNamedGraphs
+  fullName: VDS.RDF.Query.SparqlQuery.ClearNamedGraphs
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.Graph
+  commentId: T:VDS.RDF.Graph
+  parent: VDS.RDF
+  name: Graph
+  nameWithType: Graph
+  fullName: VDS.RDF.Graph
+- uid: VDS.RDF.Query.SparqlQuery.Evaluate*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Evaluate
+  name: Evaluate
+  nameWithType: SparqlQuery.Evaluate
+  fullName: VDS.RDF.Query.SparqlQuery.Evaluate
+- uid: VDS.RDF.IInMemoryQueryableStore
+  commentId: T:VDS.RDF.IInMemoryQueryableStore
+  parent: VDS.RDF
+  name: IInMemoryQueryableStore
+  nameWithType: IInMemoryQueryableStore
+  fullName: VDS.RDF.IInMemoryQueryableStore
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: VDS.RDF.Query.SparqlQuery.Process*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Process
+  name: Process
+  nameWithType: SparqlQuery.Process
+  fullName: VDS.RDF.Query.SparqlQuery.Process
+- uid: VDS.RDF.Query.ISparqlQueryProcessor
+  commentId: T:VDS.RDF.Query.ISparqlQueryProcessor
+  parent: VDS.RDF.Query
+  name: ISparqlQueryProcessor
+  nameWithType: ISparqlQueryProcessor
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor
+- uid: VDS.RDF.Query.SparqlQuery.Optimise*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.Optimise
+  name: Optimise
+  nameWithType: SparqlQuery.Optimise
+  fullName: VDS.RDF.Query.SparqlQuery.Optimise
+- uid: VDS.RDF.Query.Optimisation.IQueryOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IQueryOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IQueryOptimiser
+  nameWithType: IQueryOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IQueryOptimiser
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery.ToString*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.ToString
+  name: ToString
+  nameWithType: SparqlQuery.ToString
+  fullName: VDS.RDF.Query.SparqlQuery.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.SparqlQuery.ToAlgebra*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.ToAlgebra
+  name: ToAlgebra
+  nameWithType: SparqlQuery.ToAlgebra
+  fullName: VDS.RDF.Query.SparqlQuery.ToAlgebra
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.SparqlQuery.UsesDefaultDataset*
+  commentId: Overload:VDS.RDF.Query.SparqlQuery.UsesDefaultDataset
+  name: UsesDefaultDataset
+  nameWithType: SparqlQuery.UsesDefaultDataset
+  fullName: VDS.RDF.Query.SparqlQuery.UsesDefaultDataset

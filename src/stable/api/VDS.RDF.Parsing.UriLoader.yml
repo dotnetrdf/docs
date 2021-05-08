@@ -1,0 +1,1541 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.UriLoader
+  commentId: T:VDS.RDF.Parsing.UriLoader
+  id: UriLoader
+  parent: VDS.RDF.Parsing
+  children:
+  - VDS.RDF.Parsing.UriLoader.Cache
+  - VDS.RDF.Parsing.UriLoader.CacheDirectory
+  - VDS.RDF.Parsing.UriLoader.CacheDuration
+  - VDS.RDF.Parsing.UriLoader.IsCached(System.Uri)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.GraphCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.GraphCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.TripleStoreCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.TripleStoreCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler,System.Uri)
+  - VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  - VDS.RDF.Parsing.UriLoader.StoreWarning
+  - VDS.RDF.Parsing.UriLoader.UserAgent
+  - VDS.RDF.Parsing.UriLoader.Warning
+  langs:
+  - csharp
+  - vb
+  name: UriLoader
+  nameWithType: UriLoader
+  fullName: VDS.RDF.Parsing.UriLoader
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UriLoader
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 33
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nStatic Helper Class for dereferencing URIs and attempting to parse the results of a HTTP GET request to the URI into RDF.\n"
+  remarks: "\n<h3>Caching</h3>\n<p>\nAs of the 0.2.2 release the loader has support for caching retrieved data locally built into it (for Graphs only), caching is done using ETags where the remote server provides them or just by a user-defineable &apos;freshness&apos; criteria (i.e. number of hours retrieved resources should be cached for).  By default this caching happens in the system temporary directory which means it is non-persistent i.e. if you run your application using dotNetRDF it may cache stuff during the session but once the application is closed the operating system may freely delete the cached data.  If you wish to have a persistent cache then you can use the <xref href=\"VDS.RDF.Parsing.UriLoader.CacheDirectory\" data-throw-if-not-resolved=\"false\"></xref> property to set your own cache directory.  Even when you set your own cache directory dotNetRDF will delete obsolete data from it over time though this will only happen when a new request invalidates previously cached data.\n</p>\n<p>\nIf you wish to completely control the Cache you can implement your own <xref href=\"VDS.RDF.Parsing.IUriLoaderCache\" data-throw-if-not-resolved=\"false\"></xref> implementation and use it by setting the <xref href=\"VDS.RDF.Parsing.UriLoader.Cache\" data-throw-if-not-resolved=\"false\"></xref> property.\n</p>\n"
+  example: []
+  syntax:
+    content: public static class UriLoader
+    content.vb: Public Module UriLoader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Parsing.UriLoader.CacheDirectory
+  commentId: P:VDS.RDF.Parsing.UriLoader.CacheDirectory
+  id: CacheDirectory
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: CacheDirectory
+  nameWithType: UriLoader.CacheDirectory
+  fullName: VDS.RDF.Parsing.UriLoader.CacheDirectory
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CacheDirectory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets/Sets the Directory used for caching Graphs loaded from URIs.\n"
+  example: []
+  syntax:
+    content: public static string CacheDirectory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property CacheDirectory As String
+  overload: VDS.RDF.Parsing.UriLoader.CacheDirectory*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.CacheDuration
+  commentId: P:VDS.RDF.Parsing.UriLoader.CacheDuration
+  id: CacheDuration
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: CacheDuration
+  nameWithType: UriLoader.CacheDuration
+  fullName: VDS.RDF.Parsing.UriLoader.CacheDuration
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CacheDuration
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets/Sets the amount of time Graphs are cached for.\n"
+  remarks: "\nThis duration only applies to URIs which don&apos;t return an ETag as part of the HTTP response when they are deferenced.\n"
+  example: []
+  syntax:
+    content: public static TimeSpan CacheDuration { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Shared Property CacheDuration As TimeSpan
+  overload: VDS.RDF.Parsing.UriLoader.CacheDuration*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Cache
+  commentId: P:VDS.RDF.Parsing.UriLoader.Cache
+  id: Cache
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Cache
+  nameWithType: UriLoader.Cache
+  fullName: VDS.RDF.Parsing.UriLoader.Cache
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Cache
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 91
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets/Sets the Cache that is in use.\n"
+  remarks: "\nSetting the Cache to null does not disable it, to disable caching use the <xref href=\"VDS.RDF.Options.UriLoaderCaching\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static IUriLoaderCache Cache { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Parsing.IUriLoaderCache
+    content.vb: Public Shared Property Cache As IUriLoaderCache
+  overload: VDS.RDF.Parsing.UriLoader.Cache*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.IsCached(System.Uri)
+  commentId: M:VDS.RDF.Parsing.UriLoader.IsCached(System.Uri)
+  id: IsCached(System.Uri)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: IsCached(Uri)
+  nameWithType: UriLoader.IsCached(Uri)
+  fullName: VDS.RDF.Parsing.UriLoader.IsCached(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsCached
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 116
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nDetermines whether the RDF behind the given URI is cached.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> This does not guarantee that the cached content will be used if you load from the URI using the UriLoader.  Whether the cached copy is used will depend on whether. \n</p>\n"
+  example: []
+  syntax:
+    content: public static bool IsCached(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsCached(u As Uri) As Boolean
+  overload: VDS.RDF.Parsing.UriLoader.IsCached*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.UserAgent
+  commentId: P:VDS.RDF.Parsing.UriLoader.UserAgent
+  id: UserAgent
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: UriLoader.UserAgent
+  fullName: VDS.RDF.Parsing.UriLoader.UserAgent
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UserAgent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 126
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets/Sets an optional User Agent string that will be appended to HTTP Requests.\n"
+  example: []
+  syntax:
+    content: public static string UserAgent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared Property UserAgent As String
+  overload: VDS.RDF.Parsing.UriLoader.UserAgent*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri)
+  id: Load(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, Uri)
+  nameWithType: UriLoader.Load(IGraph, Uri)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 157
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from the given URI into the given Graph.\n"
+  remarks: "\n<p>\nAttempts to select the relevant Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf you know ahead of time the Content Type you can just open a HTTP Stream yourself and pass it to an instance of the correct Parser.\n</p>\n<p>\nIn the event that the URI is a File URI the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.  If the URI is a Data URI then the <xref href=\"VDS.RDF.Parsing.DataUriLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n<p>\n<strong>Note:</strong> UriLoader will assign the Graph the source URI as it&apos;s Base URI unless the Graph already has a Base URI or is non-empty prior to attempting parsing.  Note that any Base URI specified in the RDF contained in the file will override this initial Base URI.  In some cases this may lead to invalid RDF being accepted and generating strange relative URIs, if you encounter this either set a Base URI prior to calling this method or create an instance of the relevant parser and invoke it directly.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IGraph g, Uri u)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to assert Triples in.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get RDF from.
+    content.vb: Public Shared Sub Load(g As IGraph, u As Uri)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader)
+  id: Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, Uri, IRdfReader)
+  nameWithType: UriLoader.Load(IGraph, Uri, IRdfReader)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph, System.Uri, VDS.RDF.IRdfReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 179
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from the given URI into the given Graph.\n"
+  remarks: "\n<p>\nUses the supplied parser to attempt parsing regardless of the actual Content Type returned.\n</p>\n<p>\nIn the event that the URI is a File URI the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.  If the URI is a Data URI then the <xref href=\"VDS.RDF.Parsing.DataUriLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n<p>\n<strong>Note:</strong> UriLoader will assign the Graph the source URI as it&apos;s Base URI unless the Graph already has a Base URI or is non-empty prior to attempting parsing.  Note that any Base URI specified in the RDF contained in the file will override this initial Base URI.  In some cases this may lead to invalid RDF being accepted and generating strange relative URIs, if you encounter this either set a Base URI prior to calling this method or create an instance of the relevant parser and invoke it directly.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IGraph g, Uri u, IRdfReader parser)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to assert Triples in.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get RDF from.
+    - id: parser
+      type: VDS.RDF.IRdfReader
+      description: Parser to use.
+    content.vb: Public Shared Sub Load(g As IGraph, u As Uri, parser As IRdfReader)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri)
+  id: Load(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, Uri)
+  nameWithType: UriLoader.Load(IRdfHandler, Uri)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 227
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from the given URI using a RDF Handler.\n"
+  remarks: "\n<p>\nAttempts to select the relevant Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf you know ahead of time the Content Type you can just open a HTTP Stream yourself and pass it to an instance of the correct Parser.\n</p>\n<p>\nIn the event that the URI is a File URI the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.  If the URI is a Data URI then the <xref href=\"VDS.RDF.Parsing.DataUriLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, Uri u)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get RDF from.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, u As Uri)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader)
+  id: Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, Uri, IRdfReader)
+  nameWithType: UriLoader.Load(IRdfHandler, Uri, IRdfReader)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler, System.Uri, VDS.RDF.IRdfReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 249
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from the given URI using a RDF Handler.\n"
+  remarks: "\n<p>\nUses the supplied parser to attempt parsing regardless of the actual Content Type returned.\n</p>\n<p>\nIn the event that the URI is a File URI the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n<p>\nIf the URI is a Data URI then the <xref href=\"VDS.RDF.Parsing.DataUriLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, Uri u, IRdfReader parser)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get RDF from.
+    - id: parser
+      type: VDS.RDF.IRdfReader
+      description: Parser to use.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, u As Uri, parser As IRdfReader)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  id: Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, Uri, IStoreReader)
+  nameWithType: UriLoader.Load(ITripleStore, Uri, IStoreReader)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore, System.Uri, VDS.RDF.IStoreReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 505
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset from the given URI into the given Triple Store.\n"
+  remarks: "\n<p>\nIf the <code data-dev-comment-type=\"paramref\" class=\"paramref\">parser</code> parameter is set to null then this method attempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf you know ahead of time the Content Type you can explicitly pass in the parser to use.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(ITripleStore store, Uri u, IStoreReader parser)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    - id: parser
+      type: VDS.RDF.IStoreReader
+      description: Parser to use to parse the RDF dataset.
+    content.vb: Public Shared Sub Load(store As ITripleStore, u As Uri, parser As IStoreReader)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri)
+  id: Load(VDS.RDF.ITripleStore,System.Uri)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, Uri)
+  nameWithType: UriLoader.Load(ITripleStore, Uri)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 522
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset from the given URI into the given Triple Store.\n"
+  remarks: "\n<p>\nAttempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(ITripleStore store, Uri u)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    content.vb: Public Shared Sub Load(store As ITripleStore, u As Uri)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader)
+  id: Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, Uri, IStoreReader)
+  nameWithType: UriLoader.Load(IRdfHandler, Uri, IStoreReader)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler, System.Uri, VDS.RDF.IStoreReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 541
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset from the given URI using a RDF Handler.\n"
+  remarks: "\n<p>\nIf the <code data-dev-comment-type=\"paramref\" class=\"paramref\">parser</code> parameter is set to null then this method attempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf you know ahead of time the Content Type you can explicitly pass in the parser to use.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, Uri u, IStoreReader parser)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    - id: parser
+      type: VDS.RDF.IStoreReader
+      description: Parser to use to parse the RDF dataset.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, u As Uri, parser As IStoreReader)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler,System.Uri)
+  id: LoadDataset(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadDataset(IRdfHandler, Uri)
+  nameWithType: UriLoader.LoadDataset(IRdfHandler, Uri)
+  fullName: VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 662
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset from the given URI using a RDF Handler.\n"
+  remarks: "\n<p>\nAttempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void LoadDataset(IRdfHandler handler, Uri u)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    content.vb: Public Shared Sub LoadDataset(handler As IRdfHandler, u As Uri)
+  overload: VDS.RDF.Parsing.UriLoader.LoadDataset*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Warning
+  commentId: E:VDS.RDF.Parsing.UriLoader.Warning
+  id: Warning
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: UriLoader.Warning
+  fullName: VDS.RDF.Parsing.UriLoader.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 698
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nEvent which is raised when a parser that is invoked by the UriLoader notices a non-fatal issue with the RDF syntax\n"
+  example: []
+  syntax:
+    content: public static event RdfReaderWarning Warning
+    return:
+      type: VDS.RDF.RdfReaderWarning
+    content.vb: Public Shared Event Warning As RdfReaderWarning
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.StoreWarning
+  commentId: E:VDS.RDF.Parsing.UriLoader.StoreWarning
+  id: StoreWarning
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: StoreWarning
+  nameWithType: UriLoader.StoreWarning
+  fullName: VDS.RDF.Parsing.UriLoader.StoreWarning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/URILoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StoreWarning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/URILoader.cs
+    startLine: 703
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nEvent which is raised when a store parser that is invoked by the UriLoader notices a non-fatal issue with the RDF dataset syntax\n"
+  example: []
+  syntax:
+    content: public static event StoreReaderWarning StoreWarning
+    return:
+      type: VDS.RDF.StoreReaderWarning
+    content.vb: Public Shared Event StoreWarning As StoreReaderWarning
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.GraphCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.GraphCallback,System.Object)
+  id: Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.GraphCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, Uri, IRdfReader, GraphCallback, Object)
+  nameWithType: UriLoader.Load(IGraph, Uri, IRdfReader, GraphCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph, System.Uri, VDS.RDF.IRdfReader, VDS.RDF.GraphCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from a URI asynchronously.\n"
+  remarks: "\n<p>\nUses the supplied parser to attempt parsing regardless of the actual Content Type returned.\n</p>\n<p>\nIn the event that the URI is a File URI the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead. If the URI is a Data URI then the <xref href=\"VDS.RDF.Parsing.DataUriLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n<p>\n<strong>Note:</strong> UriLoader will assign the Graph the source URI as it&apos;s Base URI unless the Graph already has a Base URI or is non-empty prior to attempting parsing.  Note that any Base URI specified in the RDF contained in the file will override this initial Base URI.  In some cases this may lead to invalid RDF being accepted and generating strange relative URIs, if you encounter this either set a Base URI prior to calling this method or create an instance of the relevant parser and invoke it directly.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IGraph g, Uri u, IRdfReader parser, GraphCallback callback, object state)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to assert triple in.
+    - id: u
+      type: System.Uri
+      description: URI to load from.
+    - id: parser
+      type: VDS.RDF.IRdfReader
+      description: Parser to use.
+    - id: callback
+      type: VDS.RDF.GraphCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub Load(g As IGraph, u As Uri, parser As IRdfReader, callback As GraphCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.GraphCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.GraphCallback,System.Object)
+  id: Load(VDS.RDF.IGraph,System.Uri,VDS.RDF.GraphCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, Uri, GraphCallback, Object)
+  nameWithType: UriLoader.Load(IGraph, Uri, GraphCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IGraph, System.Uri, VDS.RDF.GraphCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 115
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from a URI asynchronously.\n"
+  remarks: "\n<p>\nWill attempt to autodetect the format of the RDF based on the Content-Type header of the HTTP response.\n</p>\n<p>\nIn the event that the URI is a File URI the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead. If the URI is a Data URI then the <xref href=\"VDS.RDF.Parsing.DataUriLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n<p>\n<strong>Note:</strong> UriLoader will assign the Graph the source URI as it&apos;s Base URI unless the Graph already has a Base URI or is non-empty prior to attempting parsing.  Note that any Base URI specified in the RDF contained in the file will override this initial Base URI.  In some cases this may lead to invalid RDF being accepted and generating strange relative URIs, if you encounter this either set a Base URI prior to calling this method or create an instance of the relevant parser and invoke it directly.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IGraph g, Uri u, GraphCallback callback, object state)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to assert triple in.
+    - id: u
+      type: System.Uri
+      description: URI to load from.
+    - id: callback
+      type: VDS.RDF.GraphCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub Load(g As IGraph, u As Uri, callback As GraphCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  id: Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IRdfReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, Uri, IRdfReader, RdfHandlerCallback, Object)
+  nameWithType: UriLoader.Load(IRdfHandler, Uri, IRdfReader, RdfHandlerCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler, System.Uri, VDS.RDF.IRdfReader, VDS.RDF.RdfHandlerCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 142
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from a URI asynchronously using an RDF Handler.\n"
+  remarks: "\n<p>\nUses the supplied parser to attempt parsing regardless of the actual Content Type returned.\n</p>\n<p>\nIn the event that the URI is a File URI the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n<p>\nIf the URI is a Data URI then the <xref href=\"VDS.RDF.Parsing.DataUriLoader\" data-throw-if-not-resolved=\"false\"></xref> will be used instead.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, Uri u, IRdfReader parser, RdfHandlerCallback callback, object state)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to load from.
+    - id: parser
+      type: VDS.RDF.IRdfReader
+      description: Parser to use.
+    - id: callback
+      type: VDS.RDF.RdfHandlerCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, u As Uri, parser As IRdfReader, callback As RdfHandlerCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  id: Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, Uri, RdfHandlerCallback, Object)
+  nameWithType: UriLoader.Load(IRdfHandler, Uri, RdfHandlerCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler, System.Uri, VDS.RDF.RdfHandlerCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 276
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF Graph from a URI asynchronously using an RDF Handler.\n"
+  remarks: "\n<p>\nAttempts to autodetect the RDF format based on the Content-Type header of the HTTP response.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, Uri u, RdfHandlerCallback callback, object state)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to load from.
+    - id: callback
+      type: VDS.RDF.RdfHandlerCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, u As Uri, callback As RdfHandlerCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.TripleStoreCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.TripleStoreCallback,System.Object)
+  id: Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.TripleStoreCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, Uri, IStoreReader, TripleStoreCallback, Object)
+  nameWithType: UriLoader.Load(ITripleStore, Uri, IStoreReader, TripleStoreCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore, System.Uri, VDS.RDF.IStoreReader, VDS.RDF.TripleStoreCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 300
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset asynchronously from the given URI into the given Triple Store.\n"
+  remarks: "\n<p>\nIf the <code data-dev-comment-type=\"paramref\" class=\"paramref\">parser</code> parameter is set to null then this method attempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf you know ahead of time the Content Type you can explicitly pass in the parser to use.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(ITripleStore store, Uri u, IStoreReader parser, TripleStoreCallback callback, object state)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    - id: parser
+      type: VDS.RDF.IStoreReader
+      description: Parser to use to parse the RDF dataset.
+    - id: callback
+      type: VDS.RDF.TripleStoreCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub Load(store As ITripleStore, u As Uri, parser As IStoreReader, callback As TripleStoreCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.TripleStoreCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.TripleStoreCallback,System.Object)
+  id: Load(VDS.RDF.ITripleStore,System.Uri,VDS.RDF.TripleStoreCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, Uri, TripleStoreCallback, Object)
+  nameWithType: UriLoader.Load(ITripleStore, Uri, TripleStoreCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.ITripleStore, System.Uri, VDS.RDF.TripleStoreCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 322
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset asynchronously from the given URI into the given Triple Store.\n"
+  remarks: "\n<p>\nAttempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(ITripleStore store, Uri u, TripleStoreCallback callback, object state)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    - id: callback
+      type: VDS.RDF.TripleStoreCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub Load(store As ITripleStore, u As Uri, callback As TripleStoreCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  id: Load(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.IStoreReader,VDS.RDF.RdfHandlerCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, Uri, IStoreReader, RdfHandlerCallback, Object)
+  nameWithType: UriLoader.Load(IRdfHandler, Uri, IStoreReader, RdfHandlerCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.Load(VDS.RDF.IRdfHandler, System.Uri, VDS.RDF.IStoreReader, VDS.RDF.RdfHandlerCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 346
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset asynchronously from the given URI using a RDF Handler.\n"
+  remarks: "\n<p>\nIf the <code data-dev-comment-type=\"paramref\" class=\"paramref\">parser</code> parameter is set to null then this method attempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf you know ahead of time the Content Type you can explicitly pass in the parser to use.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, Uri u, IStoreReader parser, RdfHandlerCallback callback, object state)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    - id: parser
+      type: VDS.RDF.IStoreReader
+      description: Parser to use to parse the RDF dataset.
+    - id: callback
+      type: VDS.RDF.RdfHandlerCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, u As Uri, parser As IStoreReader, callback As RdfHandlerCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  commentId: M:VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  id: LoadDataset(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.RdfHandlerCallback,System.Object)
+  parent: VDS.RDF.Parsing.UriLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadDataset(IRdfHandler, Uri, RdfHandlerCallback, Object)
+  nameWithType: UriLoader.LoadDataset(IRdfHandler, Uri, RdfHandlerCallback, Object)
+  fullName: VDS.RDF.Parsing.UriLoader.LoadDataset(VDS.RDF.IRdfHandler, System.Uri, VDS.RDF.RdfHandlerCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/UriLoaderAsync.cs
+    startLine: 504
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAttempts to load a RDF dataset asynchronously from the given URI using a RDF Handler.\n"
+  remarks: "\n<p>\nAttempts to select the relevant Store Parser based on the Content Type header returned in the HTTP Response.\n</p>\n<p>\nIf the loading completes normally the callback will be invoked normally, if an error occurs it will be invoked and passed an instance of <xref href=\"VDS.RDF.AsyncError\" data-throw-if-not-resolved=\"false\"></xref> as the state which contains details of the error and the original state.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void LoadDataset(IRdfHandler handler, Uri u, RdfHandlerCallback callback, object state)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: u
+      type: System.Uri
+      description: URI to attempt to get a RDF dataset from.
+    - id: callback
+      type: VDS.RDF.RdfHandlerCallback
+      description: Callback to invoke when the operation completes.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Shared Sub LoadDataset(handler As IRdfHandler, u As Uri, callback As RdfHandlerCallback, state As Object)
+  overload: VDS.RDF.Parsing.UriLoader.LoadDataset*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: VDS.RDF.Parsing.UriLoader.CacheDirectory
+  commentId: P:VDS.RDF.Parsing.UriLoader.CacheDirectory
+  isExternal: true
+- uid: VDS.RDF.Parsing.IUriLoaderCache
+  commentId: T:VDS.RDF.Parsing.IUriLoaderCache
+  parent: VDS.RDF.Parsing
+  name: IUriLoaderCache
+  nameWithType: IUriLoaderCache
+  fullName: VDS.RDF.Parsing.IUriLoaderCache
+- uid: VDS.RDF.Parsing.UriLoader.Cache
+  commentId: P:VDS.RDF.Parsing.UriLoader.Cache
+  isExternal: true
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Parsing.UriLoader.CacheDirectory*
+  commentId: Overload:VDS.RDF.Parsing.UriLoader.CacheDirectory
+  name: CacheDirectory
+  nameWithType: UriLoader.CacheDirectory
+  fullName: VDS.RDF.Parsing.UriLoader.CacheDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Parsing.UriLoader.CacheDuration*
+  commentId: Overload:VDS.RDF.Parsing.UriLoader.CacheDuration
+  name: CacheDuration
+  nameWithType: UriLoader.CacheDuration
+  fullName: VDS.RDF.Parsing.UriLoader.CacheDuration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: VDS.RDF.Options.UriLoaderCaching
+  commentId: P:VDS.RDF.Options.UriLoaderCaching
+  isExternal: true
+- uid: VDS.RDF.Parsing.UriLoader.Cache*
+  commentId: Overload:VDS.RDF.Parsing.UriLoader.Cache
+  name: Cache
+  nameWithType: UriLoader.Cache
+  fullName: VDS.RDF.Parsing.UriLoader.Cache
+- uid: VDS.RDF.Parsing.UriLoader.IsCached*
+  commentId: Overload:VDS.RDF.Parsing.UriLoader.IsCached
+  name: IsCached
+  nameWithType: UriLoader.IsCached
+  fullName: VDS.RDF.Parsing.UriLoader.IsCached
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Parsing.UriLoader.UserAgent*
+  commentId: Overload:VDS.RDF.Parsing.UriLoader.UserAgent
+  name: UserAgent
+  nameWithType: UriLoader.UserAgent
+  fullName: VDS.RDF.Parsing.UriLoader.UserAgent
+- uid: VDS.RDF.Parsing.FileLoader
+  commentId: T:VDS.RDF.Parsing.FileLoader
+  name: FileLoader
+  nameWithType: FileLoader
+  fullName: VDS.RDF.Parsing.FileLoader
+- uid: VDS.RDF.Parsing.DataUriLoader
+  commentId: T:VDS.RDF.Parsing.DataUriLoader
+  name: DataUriLoader
+  nameWithType: DataUriLoader
+  fullName: VDS.RDF.Parsing.DataUriLoader
+- uid: VDS.RDF.Parsing.UriLoader.Load*
+  commentId: Overload:VDS.RDF.Parsing.UriLoader.Load
+  name: Load
+  nameWithType: UriLoader.Load
+  fullName: VDS.RDF.Parsing.UriLoader.Load
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.IRdfReader
+  commentId: T:VDS.RDF.IRdfReader
+  parent: VDS.RDF
+  name: IRdfReader
+  nameWithType: IRdfReader
+  fullName: VDS.RDF.IRdfReader
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ITripleStore
+  commentId: T:VDS.RDF.ITripleStore
+  parent: VDS.RDF
+  name: ITripleStore
+  nameWithType: ITripleStore
+  fullName: VDS.RDF.ITripleStore
+- uid: VDS.RDF.IStoreReader
+  commentId: T:VDS.RDF.IStoreReader
+  parent: VDS.RDF
+  name: IStoreReader
+  nameWithType: IStoreReader
+  fullName: VDS.RDF.IStoreReader
+- uid: VDS.RDF.Parsing.UriLoader.LoadDataset*
+  commentId: Overload:VDS.RDF.Parsing.UriLoader.LoadDataset
+  name: LoadDataset
+  nameWithType: UriLoader.LoadDataset
+  fullName: VDS.RDF.Parsing.UriLoader.LoadDataset
+- uid: VDS.RDF.RdfReaderWarning
+  commentId: T:VDS.RDF.RdfReaderWarning
+  parent: VDS.RDF
+  name: RdfReaderWarning
+  nameWithType: RdfReaderWarning
+  fullName: VDS.RDF.RdfReaderWarning
+- uid: VDS.RDF.StoreReaderWarning
+  commentId: T:VDS.RDF.StoreReaderWarning
+  parent: VDS.RDF
+  name: StoreReaderWarning
+  nameWithType: StoreReaderWarning
+  fullName: VDS.RDF.StoreReaderWarning
+- uid: VDS.RDF.AsyncError
+  commentId: T:VDS.RDF.AsyncError
+  name: AsyncError
+  nameWithType: AsyncError
+  fullName: VDS.RDF.AsyncError
+- uid: VDS.RDF.GraphCallback
+  commentId: T:VDS.RDF.GraphCallback
+  parent: VDS.RDF
+  name: GraphCallback
+  nameWithType: GraphCallback
+  fullName: VDS.RDF.GraphCallback
+- uid: VDS.RDF.RdfHandlerCallback
+  commentId: T:VDS.RDF.RdfHandlerCallback
+  parent: VDS.RDF
+  name: RdfHandlerCallback
+  nameWithType: RdfHandlerCallback
+  fullName: VDS.RDF.RdfHandlerCallback
+- uid: VDS.RDF.TripleStoreCallback
+  commentId: T:VDS.RDF.TripleStoreCallback
+  parent: VDS.RDF
+  name: TripleStoreCallback
+  nameWithType: TripleStoreCallback
+  fullName: VDS.RDF.TripleStoreCallback

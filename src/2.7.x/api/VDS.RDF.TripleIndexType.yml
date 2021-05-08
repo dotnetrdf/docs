@@ -1,0 +1,405 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.TripleIndexType
+  commentId: T:VDS.RDF.TripleIndexType
+  id: TripleIndexType
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.TripleIndexType.None
+  - VDS.RDF.TripleIndexType.NoVariables
+  - VDS.RDF.TripleIndexType.Object
+  - VDS.RDF.TripleIndexType.Predicate
+  - VDS.RDF.TripleIndexType.PredicateObject
+  - VDS.RDF.TripleIndexType.Subject
+  - VDS.RDF.TripleIndexType.SubjectObject
+  - VDS.RDF.TripleIndexType.SubjectPredicate
+  langs:
+  - csharp
+  - vb
+  name: TripleIndexType
+  nameWithType: TripleIndexType
+  fullName: VDS.RDF.TripleIndexType
+  type: Enum
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TripleIndexType
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 43
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nPossible Triple Index types.\n"
+  remarks: "\n<p>\nIndex types are given Integer values with the lowest being the least useful index and the highest being most useful index.  Non-Index based Patterns are given arbitrary high values since these will typically never be used as these items are usually inserted into a Graph Pattern after the ordering step.\n</p>\n<p>\nWhen used to sort Patterns as part of query optimisation the patterns are partially ordered on the usefullness of their index since more useful indexes are considered more likely to return fewer results which will help restrict the query space earlier in the execution process.\n</p>\n"
+  example: []
+  syntax:
+    content: public enum TripleIndexType
+    content.vb: Public Enum TripleIndexType
+  extensionMethods:
+  - VDS.RDF.TripleIndexType.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: VDS.RDF.TripleIndexType.NoVariables
+  commentId: F:VDS.RDF.TripleIndexType.NoVariables
+  id: NoVariables
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: NoVariables
+  nameWithType: TripleIndexType.NoVariables
+  fullName: VDS.RDF.TripleIndexType.NoVariables
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NoVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 48
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nNo Index should be used as the Pattern does not use Variables\n"
+  example: []
+  syntax:
+    content: NoVariables = -2
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.TripleIndexType.None
+  commentId: F:VDS.RDF.TripleIndexType.None
+  id: None
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: TripleIndexType.None
+  fullName: VDS.RDF.TripleIndexType.None
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: None
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 52
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nNo Index should be used as the Pattern is three Variables\n"
+  example: []
+  syntax:
+    content: None = -1
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.TripleIndexType.Subject
+  commentId: F:VDS.RDF.TripleIndexType.Subject
+  id: Subject
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: Subject
+  nameWithType: TripleIndexType.Subject
+  fullName: VDS.RDF.TripleIndexType.Subject
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Subject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSubject Index should be used\n"
+  example: []
+  syntax:
+    content: Subject = 2
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.TripleIndexType.Predicate
+  commentId: F:VDS.RDF.TripleIndexType.Predicate
+  id: Predicate
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: Predicate
+  nameWithType: TripleIndexType.Predicate
+  fullName: VDS.RDF.TripleIndexType.Predicate
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Predicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 60
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nPredicate Index should be used\n"
+  example: []
+  syntax:
+    content: Predicate = 1
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.TripleIndexType.Object
+  commentId: F:VDS.RDF.TripleIndexType.Object
+  id: Object
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: Object
+  nameWithType: TripleIndexType.Object
+  fullName: VDS.RDF.TripleIndexType.Object
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Object
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nObject Index should be used\n"
+  example: []
+  syntax:
+    content: Object = 0
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.TripleIndexType.SubjectPredicate
+  commentId: F:VDS.RDF.TripleIndexType.SubjectPredicate
+  id: SubjectPredicate
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: SubjectPredicate
+  nameWithType: TripleIndexType.SubjectPredicate
+  fullName: VDS.RDF.TripleIndexType.SubjectPredicate
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SubjectPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSubject-Predicate Index should be used\n"
+  example: []
+  syntax:
+    content: SubjectPredicate = 5
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.TripleIndexType.PredicateObject
+  commentId: F:VDS.RDF.TripleIndexType.PredicateObject
+  id: PredicateObject
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: PredicateObject
+  nameWithType: TripleIndexType.PredicateObject
+  fullName: VDS.RDF.TripleIndexType.PredicateObject
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PredicateObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 72
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nPredicate-Object Index should be used\n"
+  example: []
+  syntax:
+    content: PredicateObject = 3
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.TripleIndexType.SubjectObject
+  commentId: F:VDS.RDF.TripleIndexType.SubjectObject
+  id: SubjectObject
+  parent: VDS.RDF.TripleIndexType
+  langs:
+  - csharp
+  - vb
+  name: SubjectObject
+  nameWithType: TripleIndexType.SubjectObject
+  fullName: VDS.RDF.TripleIndexType.SubjectObject
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Indexing.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SubjectObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Indexing.cs
+    startLine: 76
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSubject-Object Index should be used\n"
+  example: []
+  syntax:
+    content: SubjectObject = 4
+    return:
+      type: VDS.RDF.TripleIndexType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.TripleIndexType.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<TripleIndexType>()
+  nameWithType: Extensions.AsEnumerable<TripleIndexType>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.TripleIndexType>()
+  nameWithType.vb: Extensions.AsEnumerable(Of TripleIndexType)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.TripleIndexType)()
+  name.vb: AsEnumerable(Of TripleIndexType)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<TripleIndexType>
+    nameWithType: Extensions.AsEnumerable<TripleIndexType>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.TripleIndexType>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of TripleIndexType)
+    nameWithType: Extensions.AsEnumerable(Of TripleIndexType)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.TripleIndexType)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.TripleIndexType
+  commentId: T:VDS.RDF.TripleIndexType
+  parent: VDS.RDF
+  name: TripleIndexType
+  nameWithType: TripleIndexType
+  fullName: VDS.RDF.TripleIndexType

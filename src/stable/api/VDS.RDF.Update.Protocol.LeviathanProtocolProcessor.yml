@@ -1,0 +1,1119 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor
+  commentId: T:VDS.RDF.Update.Protocol.LeviathanProtocolProcessor
+  id: LeviathanProtocolProcessor
+  parent: VDS.RDF.Update.Protocol
+  children:
+  - VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor(VDS.RDF.IInMemoryQueryableStore)
+  - VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  langs:
+  - csharp
+  - vb
+  name: LeviathanProtocolProcessor
+  nameWithType: LeviathanProtocolProcessor
+  fullName: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Protocol/LeviathanProtocolProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LeviathanProtocolProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Protocol/LeviathanProtocolProcessor.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Protocol
+  summary: "\nA processor for the SPARQL Graph Store HTTP Protocol which operates by using the libraries in-memory Leviathan SPARQL engine and converting protocol actions to SPARQL Query/Update commands as appropriate.\n"
+  example: []
+  syntax:
+    content: 'public class LeviathanProtocolProcessor : ProtocolToUpdateProcessor, ISparqlHttpProtocolProcessor'
+    content.vb: >-
+      Public Class LeviathanProtocolProcessor
+          Inherits ProtocolToUpdateProcessor
+          Implements ISparqlHttpProtocolProcessor
+  inheritance:
+  - System.Object
+  - VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  implements:
+  - VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor
+  inheritedMembers:
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph(System.Uri)
+  - VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph(System.Uri)
+  - VDS.RDF.Update.Protocol.BaseProtocolProcessor.DefaultParameterPattern
+  - VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  - VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  - VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload(VDS.RDF.Web.IHttpContext)
+  - VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor(VDS.RDF.IInMemoryQueryableStore)
+  commentId: M:VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor(VDS.RDF.IInMemoryQueryableStore)
+  id: '#ctor(VDS.RDF.IInMemoryQueryableStore)'
+  parent: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor
+  langs:
+  - csharp
+  - vb
+  name: LeviathanProtocolProcessor(IInMemoryQueryableStore)
+  nameWithType: LeviathanProtocolProcessor.LeviathanProtocolProcessor(IInMemoryQueryableStore)
+  fullName: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.LeviathanProtocolProcessor(VDS.RDF.IInMemoryQueryableStore)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Protocol/LeviathanProtocolProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Protocol/LeviathanProtocolProcessor.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Protocol
+  summary: "\nCreates a new Leviathan Protocol Processor.\n"
+  example: []
+  syntax:
+    content: public LeviathanProtocolProcessor(IInMemoryQueryableStore store)
+    parameters:
+    - id: store
+      type: VDS.RDF.IInMemoryQueryableStore
+      description: Triple Store.
+    content.vb: Public Sub New(store As IInMemoryQueryableStore)
+  overload: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  id: '#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)'
+  parent: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor
+  langs:
+  - csharp
+  - vb
+  name: LeviathanProtocolProcessor(ISparqlDataset)
+  nameWithType: LeviathanProtocolProcessor.LeviathanProtocolProcessor(ISparqlDataset)
+  fullName: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.LeviathanProtocolProcessor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Protocol/LeviathanProtocolProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Protocol/LeviathanProtocolProcessor.cs
+    startLine: 48
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Protocol
+  summary: "\nCreates a new Leviathan Protocol Processor.\n"
+  example: []
+  syntax:
+    content: public LeviathanProtocolProcessor(ISparqlDataset dataset)
+    parameters:
+    - id: dataset
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: SPARQL Dataset.
+    content.vb: Public Sub New(dataset As ISparqlDataset)
+  overload: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Update.Protocol
+  commentId: N:VDS.RDF.Update.Protocol
+  name: VDS.RDF.Update.Protocol
+  nameWithType: VDS.RDF.Update.Protocol
+  fullName: VDS.RDF.Update.Protocol
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  commentId: T:VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  parent: VDS.RDF.Update.Protocol
+  name: BaseProtocolProcessor
+  nameWithType: BaseProtocolProcessor
+  fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  commentId: T:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  parent: VDS.RDF.Update.Protocol
+  name: ProtocolToUpdateProcessor
+  nameWithType: ProtocolToUpdateProcessor
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+- uid: VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor
+  commentId: T:VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor
+  parent: VDS.RDF.Update.Protocol
+  name: ISparqlHttpProtocolProcessor
+  nameWithType: ISparqlHttpProtocolProcessor
+  fullName: VDS.RDF.Update.Protocol.ISparqlHttpProtocolProcessor
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  name: ProcessGet(IHttpContext)
+  nameWithType: ProtocolToUpdateProcessor.ProcessGet(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet(VDS.RDF.Web.IHttpContext)
+    name: ProcessGet
+    nameWithType: ProtocolToUpdateProcessor.ProcessGet
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet(VDS.RDF.Web.IHttpContext)
+    name: ProcessGet
+    nameWithType: ProtocolToUpdateProcessor.ProcessGet
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessGet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  name: ProcessPost(IHttpContext)
+  nameWithType: ProtocolToUpdateProcessor.ProcessPost(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost(VDS.RDF.Web.IHttpContext)
+    name: ProcessPost
+    nameWithType: ProtocolToUpdateProcessor.ProcessPost
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost(VDS.RDF.Web.IHttpContext)
+    name: ProcessPost
+    nameWithType: ProtocolToUpdateProcessor.ProcessPost
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  name: ProcessPostCreate(IHttpContext)
+  nameWithType: ProtocolToUpdateProcessor.ProcessPostCreate(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate(VDS.RDF.Web.IHttpContext)
+    name: ProcessPostCreate
+    nameWithType: ProtocolToUpdateProcessor.ProcessPostCreate
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate(VDS.RDF.Web.IHttpContext)
+    name: ProcessPostCreate
+    nameWithType: ProtocolToUpdateProcessor.ProcessPostCreate
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPostCreate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  name: ProcessPut(IHttpContext)
+  nameWithType: ProtocolToUpdateProcessor.ProcessPut(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut(VDS.RDF.Web.IHttpContext)
+    name: ProcessPut
+    nameWithType: ProtocolToUpdateProcessor.ProcessPut
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut(VDS.RDF.Web.IHttpContext)
+    name: ProcessPut
+    nameWithType: ProtocolToUpdateProcessor.ProcessPut
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPut
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  name: ProcessDelete(IHttpContext)
+  nameWithType: ProtocolToUpdateProcessor.ProcessDelete(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete(VDS.RDF.Web.IHttpContext)
+    name: ProcessDelete
+    nameWithType: ProtocolToUpdateProcessor.ProcessDelete
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete(VDS.RDF.Web.IHttpContext)
+    name: ProcessDelete
+    nameWithType: ProtocolToUpdateProcessor.ProcessDelete
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessDelete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  name: ProcessHead(IHttpContext)
+  nameWithType: ProtocolToUpdateProcessor.ProcessHead(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead(VDS.RDF.Web.IHttpContext)
+    name: ProcessHead
+    nameWithType: ProtocolToUpdateProcessor.ProcessHead
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead(VDS.RDF.Web.IHttpContext)
+    name: ProcessHead
+    nameWithType: ProtocolToUpdateProcessor.ProcessHead
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessHead
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  name: ProcessPatch(IHttpContext)
+  nameWithType: ProtocolToUpdateProcessor.ProcessPatch(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch(VDS.RDF.Web.IHttpContext)
+    name: ProcessPatch
+    nameWithType: ProtocolToUpdateProcessor.ProcessPatch
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch(VDS.RDF.Web.IHttpContext)
+    name: ProcessPatch
+    nameWithType: ProtocolToUpdateProcessor.ProcessPatch
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.ProcessPatch
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph(System.Uri)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  isExternal: true
+  name: GetGraph(Uri)
+  nameWithType: ProtocolToUpdateProcessor.GetGraph(Uri)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph(System.Uri)
+    name: GetGraph
+    nameWithType: ProtocolToUpdateProcessor.GetGraph
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph(System.Uri)
+    name: GetGraph
+    nameWithType: ProtocolToUpdateProcessor.GetGraph
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.GetGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph(System.Uri)
+  parent: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor
+  isExternal: true
+  name: HasGraph(Uri)
+  nameWithType: ProtocolToUpdateProcessor.HasGraph(Uri)
+  fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: ProtocolToUpdateProcessor.HasGraph
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: ProtocolToUpdateProcessor.HasGraph
+    fullName: VDS.RDF.Update.Protocol.ProtocolToUpdateProcessor.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.DefaultParameterPattern
+  commentId: F:VDS.RDF.Update.Protocol.BaseProtocolProcessor.DefaultParameterPattern
+  parent: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  name: DefaultParameterPattern
+  nameWithType: BaseProtocolProcessor.DefaultParameterPattern
+  fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.DefaultParameterPattern
+- uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  name: ResolveGraphUri(IHttpContext)
+  nameWithType: BaseProtocolProcessor.ResolveGraphUri(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext)
+    name: ResolveGraphUri
+    nameWithType: BaseProtocolProcessor.ResolveGraphUri
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext)
+    name: ResolveGraphUri
+    nameWithType: BaseProtocolProcessor.ResolveGraphUri
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  parent: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  name: ResolveGraphUri(IHttpContext, IGraph)
+  nameWithType: BaseProtocolProcessor.ResolveGraphUri(IHttpContext, IGraph)
+  fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext, VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+    name: ResolveGraphUri
+    nameWithType: BaseProtocolProcessor.ResolveGraphUri
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+    name: ResolveGraphUri
+    nameWithType: BaseProtocolProcessor.ResolveGraphUri
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ResolveGraphUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  parent: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  name: MintGraphUri(IHttpContext, IGraph)
+  nameWithType: BaseProtocolProcessor.MintGraphUri(IHttpContext, IGraph)
+  fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri(VDS.RDF.Web.IHttpContext, VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+    name: MintGraphUri
+    nameWithType: BaseProtocolProcessor.MintGraphUri
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+    name: MintGraphUri
+    nameWithType: BaseProtocolProcessor.MintGraphUri
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.MintGraphUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload(VDS.RDF.Web.IHttpContext)
+  commentId: M:VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload(VDS.RDF.Web.IHttpContext)
+  parent: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  name: ParsePayload(IHttpContext)
+  nameWithType: BaseProtocolProcessor.ParsePayload(IHttpContext)
+  fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload(VDS.RDF.Web.IHttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload(VDS.RDF.Web.IHttpContext)
+    name: ParsePayload
+    nameWithType: BaseProtocolProcessor.ParsePayload
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload(VDS.RDF.Web.IHttpContext)
+    name: ParsePayload
+    nameWithType: BaseProtocolProcessor.ParsePayload
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.ParsePayload
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+  parent: VDS.RDF.Update.Protocol.BaseProtocolProcessor
+  name: SendResultsToClient(IHttpContext, IGraph)
+  nameWithType: BaseProtocolProcessor.SendResultsToClient(IHttpContext, IGraph)
+  fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient(VDS.RDF.Web.IHttpContext, VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+    name: SendResultsToClient
+    nameWithType: BaseProtocolProcessor.SendResultsToClient
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient(VDS.RDF.Web.IHttpContext,VDS.RDF.IGraph)
+    name: SendResultsToClient
+    nameWithType: BaseProtocolProcessor.SendResultsToClient
+    fullName: VDS.RDF.Update.Protocol.BaseProtocolProcessor.SendResultsToClient
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Web.IHttpContext
+    name: IHttpContext
+    nameWithType: IHttpContext
+    fullName: VDS.RDF.Web.IHttpContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<LeviathanProtocolProcessor>()
+  nameWithType: Extensions.AsEnumerable<LeviathanProtocolProcessor>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Protocol.LeviathanProtocolProcessor>()
+  nameWithType.vb: Extensions.AsEnumerable(Of LeviathanProtocolProcessor)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Protocol.LeviathanProtocolProcessor)()
+  name.vb: AsEnumerable(Of LeviathanProtocolProcessor)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<LeviathanProtocolProcessor>
+    nameWithType: Extensions.AsEnumerable<LeviathanProtocolProcessor>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Protocol.LeviathanProtocolProcessor>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of LeviathanProtocolProcessor)
+    nameWithType: Extensions.AsEnumerable(Of LeviathanProtocolProcessor)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Protocol.LeviathanProtocolProcessor)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor*
+  commentId: Overload:VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.#ctor
+  name: LeviathanProtocolProcessor
+  nameWithType: LeviathanProtocolProcessor.LeviathanProtocolProcessor
+  fullName: VDS.RDF.Update.Protocol.LeviathanProtocolProcessor.LeviathanProtocolProcessor
+- uid: VDS.RDF.IInMemoryQueryableStore
+  commentId: T:VDS.RDF.IInMemoryQueryableStore
+  parent: VDS.RDF
+  name: IInMemoryQueryableStore
+  nameWithType: IInMemoryQueryableStore
+  fullName: VDS.RDF.IInMemoryQueryableStore
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets

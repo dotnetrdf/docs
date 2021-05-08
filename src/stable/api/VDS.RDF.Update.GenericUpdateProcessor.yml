@@ -1,0 +1,2081 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Update.GenericUpdateProcessor
+  commentId: T:VDS.RDF.Update.GenericUpdateProcessor
+  id: GenericUpdateProcessor
+  parent: VDS.RDF.Update
+  children:
+  - VDS.RDF.Update.GenericUpdateProcessor.#ctor(VDS.RDF.Storage.IStorageProvider)
+  - VDS.RDF.Update.GenericUpdateProcessor.Discard
+  - VDS.RDF.Update.GenericUpdateProcessor.Flush
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  - VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  langs:
+  - csharp
+  - vb
+  name: GenericUpdateProcessor
+  nameWithType: GenericUpdateProcessor
+  fullName: VDS.RDF.Update.GenericUpdateProcessor
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GenericUpdateProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 51
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nSPARQL Update Processor which processes commands against a generic underlying store represented by an <xref href=\"VDS.RDF.Storage.IStorageProvider\" data-throw-if-not-resolved=\"false\"></xref> implementation.\n"
+  remarks: "\n<p>\nIf the provided manager also implements the <xref href=\"VDS.RDF.Storage.IUpdateableStorage\" data-throw-if-not-resolved=\"false\"></xref> interface then the managers native SPARQL Update implementation will be used for the non-type specific calls i.e. <xref href=\"VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)\" data-throw-if-not-resolved=\"false\"></xref>.  At all other times the SPARQL Update commands will be processed by approximating their behaviour through calls to <xref href=\"VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph%2cSystem.Uri)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri%2cSystem.Collections.Generic.IEnumerable%7bVDS.RDF.Triple%7d%2cSystem.Collections.Generic.IEnumerable%7bVDS.RDF.Triple%7d)\" data-throw-if-not-resolved=\"false\"></xref> in addition to local in-memory manipulation of the data.  Some commands such as INSERT and DELETE can only be processed when the manager is also a <xref href=\"VDS.RDF.Storage.IQueryableStorage\" data-throw-if-not-resolved=\"false\"></xref> since they rely on making a query and performing actions based on the results of that query.\n</p>\n<p>\nThe performance of this processor is somewhat dependent on the underlying <xref href=\"VDS.RDF.Storage.IStorageProvider\" data-throw-if-not-resolved=\"false\"></xref>.  If the underlying manager supports triple level updates as indicated by the <xref href=\"VDS.RDF.Storage.IStorageCapabilities.UpdateSupported\" data-throw-if-not-resolved=\"false\"></xref> property then operations can be performed quite efficiently, if this is not the case then any operation which modifies a Graph will need to load the existing Graph from the store, make the modifications locally in-memory and then save the resulting Graph back to the Store.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class GenericUpdateProcessor : ISparqlUpdateProcessor'
+    content.vb: >-
+      Public Class GenericUpdateProcessor
+          Implements ISparqlUpdateProcessor
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Update.GenericUpdateProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Update.GenericUpdateProcessor.#ctor(VDS.RDF.Storage.IStorageProvider)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.#ctor(VDS.RDF.Storage.IStorageProvider)
+  id: '#ctor(VDS.RDF.Storage.IStorageProvider)'
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: GenericUpdateProcessor(IStorageProvider)
+  nameWithType: GenericUpdateProcessor.GenericUpdateProcessor(IStorageProvider)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.GenericUpdateProcessor(VDS.RDF.Storage.IStorageProvider)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 60
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nCreates a new Generic Update Processor.\n"
+  example: []
+  syntax:
+    content: public GenericUpdateProcessor(IStorageProvider manager)
+    parameters:
+    - id: manager
+      type: VDS.RDF.Storage.IStorageProvider
+      description: Generic IO Manager.
+    content.vb: Public Sub New(manager As IStorageProvider)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.Discard
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.Discard
+  id: Discard
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: Discard()
+  nameWithType: GenericUpdateProcessor.Discard()
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.Discard()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Discard
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 69
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nDiscards any outstanding changes.\n"
+  example: []
+  syntax:
+    content: public virtual void Discard()
+    content.vb: Public Overridable Sub Discard
+  overload: VDS.RDF.Update.GenericUpdateProcessor.Discard*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Update.GenericUpdateProcessor.Flush
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.Flush
+  id: Flush
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: GenericUpdateProcessor.Flush()
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.Flush()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Flush
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 77
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nFlushes any outstanding changes to the underlying store.\n"
+  example: []
+  syntax:
+    content: public virtual void Flush()
+    content.vb: Public Overridable Sub Flush
+  overload: VDS.RDF.Update.GenericUpdateProcessor.Flush*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  id: ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessAddCommand(AddCommand)
+  nameWithType: GenericUpdateProcessor.ProcessAddCommand(AddCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessAddCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 86
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an ADD command.\n"
+  example: []
+  syntax:
+    content: public void ProcessAddCommand(AddCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.AddCommand
+      description: Add Command.
+    content.vb: Public Sub ProcessAddCommand(cmd As AddCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  id: ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessClearCommand(ClearCommand)
+  nameWithType: GenericUpdateProcessor.ProcessClearCommand(ClearCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessClearCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 135
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a CLEAR command.\n"
+  remarks: "\nImplemented by replacing the Graph with an empty Graph.\n"
+  example: []
+  syntax:
+    content: public void ProcessClearCommand(ClearCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.ClearCommand
+      description: Clear Command.
+    content.vb: Public Sub ProcessClearCommand(cmd As ClearCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  id: ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCopyCommand(CopyCommand)
+  nameWithType: GenericUpdateProcessor.ProcessCopyCommand(CopyCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCopyCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 222
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a COPY command.\n"
+  example: []
+  syntax:
+    content: public void ProcessCopyCommand(CopyCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.CopyCommand
+      description: Copy Command.
+    content.vb: Public Sub ProcessCopyCommand(cmd As CopyCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  id: ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCreateCommand(CreateCommand)
+  nameWithType: GenericUpdateProcessor.ProcessCreateCommand(CreateCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCreateCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 289
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a CREATE command.\n"
+  remarks: "\n<p>\nImplemented by adding an empty Graph to the Store.\n</p>\n<p>\n<strong>Warning:</strong> As the <xref href=\"VDS.RDF.Storage.IStorageProvider\" data-throw-if-not-resolved=\"false\"></xref> interface does not allow checking whether a Graph exists processing CREATE commands can result in overwriting existing Graphs.\n</p>\n"
+  example: []
+  syntax:
+    content: public void ProcessCreateCommand(CreateCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.CreateCommand
+      description: Create Command.
+    content.vb: Public Sub ProcessCreateCommand(cmd As CreateCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  id: ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCommand(SparqlUpdateCommand)
+  nameWithType: GenericUpdateProcessor.ProcessCommand(SparqlUpdateCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 322
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a command.\n"
+  remarks: "\n<p>\nIf the provided manager also implements the <xref href=\"VDS.RDF.Storage.IUpdateableStorage\" data-throw-if-not-resolved=\"false\"></xref> interface then the managers native SPARQL Update implementation will be used.\n</p>\n"
+  example: []
+  syntax:
+    content: public virtual void ProcessCommand(SparqlUpdateCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.SparqlUpdateCommand
+      description: Command.
+    content.vb: Public Overridable Sub ProcessCommand(cmd As SparqlUpdateCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  id: ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCommandSet(SparqlUpdateCommandSet)
+  nameWithType: GenericUpdateProcessor.ProcessCommandSet(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCommandSet
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 383
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a command set.\n"
+  remarks: "\n<p>\nIf the provided manager also implements the <xref href=\"VDS.RDF.Storage.IUpdateableStorage\" data-throw-if-not-resolved=\"false\"></xref> interface then the managers native SPARQL Update implementation will be used.\n</p>\n"
+  example: []
+  syntax:
+    content: public virtual void ProcessCommandSet(SparqlUpdateCommandSet commands)
+    parameters:
+    - id: commands
+      type: VDS.RDF.Update.SparqlUpdateCommandSet
+      description: Command Set.
+    content.vb: Public Overridable Sub ProcessCommandSet(commands As SparqlUpdateCommandSet)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  id: ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDeleteCommand(DeleteCommand)
+  nameWithType: GenericUpdateProcessor.ProcessDeleteCommand(DeleteCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDeleteCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 417
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DELETE command.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The underlying manager must implement the <xref href=\"VDS.RDF.Storage.IQueryableStorage\" data-throw-if-not-resolved=\"false\"></xref> interface in order for DELETE commands to be processed.\n</p>\n"
+  example: []
+  syntax:
+    content: public void ProcessDeleteCommand(DeleteCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DeleteCommand
+      description: Delete Command.
+    content.vb: Public Sub ProcessDeleteCommand(cmd As DeleteCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  id: ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDeleteDataCommand(DeleteDataCommand)
+  nameWithType: GenericUpdateProcessor.ProcessDeleteDataCommand(DeleteDataCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDeleteDataCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 602
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DELETE DATA command.\n"
+  example: []
+  syntax:
+    content: public void ProcessDeleteDataCommand(DeleteDataCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DeleteDataCommand
+      description: DELETE Data Command.
+    content.vb: Public Sub ProcessDeleteDataCommand(cmd As DeleteDataCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  id: ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDropCommand(DropCommand)
+  nameWithType: GenericUpdateProcessor.ProcessDropCommand(DropCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDropCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 719
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DROP command.\n"
+  example: []
+  syntax:
+    content: public void ProcessDropCommand(DropCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DropCommand
+      description: Drop Command.
+    content.vb: Public Sub ProcessDropCommand(cmd As DropCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  id: ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessInsertCommand(InsertCommand)
+  nameWithType: GenericUpdateProcessor.ProcessInsertCommand(InsertCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessInsertCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 812
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT command.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The underlying manager must implement the <xref href=\"VDS.RDF.Storage.IQueryableStorage\" data-throw-if-not-resolved=\"false\"></xref> interface in order for INSERT commands to be processed.\n</p>\n"
+  example: []
+  syntax:
+    content: public void ProcessInsertCommand(InsertCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.InsertCommand
+      description: Insert Command.
+    content.vb: Public Sub ProcessInsertCommand(cmd As InsertCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  id: ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessInsertDataCommand(InsertDataCommand)
+  nameWithType: GenericUpdateProcessor.ProcessInsertDataCommand(InsertDataCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessInsertDataCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 997
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT DATA command.\n"
+  example: []
+  syntax:
+    content: public void ProcessInsertDataCommand(InsertDataCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.InsertDataCommand
+      description: Insert Data Command.
+    content.vb: Public Sub ProcessInsertDataCommand(cmd As InsertDataCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  id: ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessLoadCommand(LoadCommand)
+  nameWithType: GenericUpdateProcessor.ProcessLoadCommand(LoadCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessLoadCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 1095
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a LOAD command.\n"
+  example: []
+  syntax:
+    content: public void ProcessLoadCommand(LoadCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.LoadCommand
+      description: Load Command.
+    content.vb: Public Sub ProcessLoadCommand(cmd As LoadCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  id: ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessModifyCommand(ModifyCommand)
+  nameWithType: GenericUpdateProcessor.ProcessModifyCommand(ModifyCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessModifyCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 1146
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT/DELETE command.\n"
+  example: []
+  syntax:
+    content: public void ProcessModifyCommand(ModifyCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.ModifyCommand
+      description: Insert/Delete Command.
+    content.vb: Public Sub ProcessModifyCommand(cmd As ModifyCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  id: ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  parent: VDS.RDF.Update.GenericUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessMoveCommand(MoveCommand)
+  nameWithType: GenericUpdateProcessor.ProcessMoveCommand(MoveCommand)
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessMoveCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/GenericUpdateProcessor.cs
+    startLine: 1452
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a MOVE command.\n"
+  example: []
+  syntax:
+    content: public void ProcessMoveCommand(MoveCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.MoveCommand
+      description: Move Command.
+    content.vb: Public Sub ProcessMoveCommand(cmd As MoveCommand)
+  overload: VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Storage.IStorageProvider
+  commentId: T:VDS.RDF.Storage.IStorageProvider
+  parent: VDS.RDF.Storage
+  name: IStorageProvider
+  nameWithType: IStorageProvider
+  fullName: VDS.RDF.Storage.IStorageProvider
+- uid: VDS.RDF.Storage.IUpdateableStorage
+  commentId: T:VDS.RDF.Storage.IUpdateableStorage
+  parent: VDS.RDF.Storage
+  name: IUpdateableStorage
+  nameWithType: IUpdateableStorage
+  fullName: VDS.RDF.Storage.IUpdateableStorage
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  isExternal: true
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  isExternal: true
+- uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.IStorageProvider
+  name: SaveGraph(IGraph)
+  nameWithType: IStorageProvider.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: IStorageProvider.SaveGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: IStorageProvider.SaveGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: LoadGraph(IGraph, Uri)
+  nameWithType: IStorageProvider.LoadGraph(IGraph, Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: IStorageProvider.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: IStorageProvider.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IQueryableStorage
+  commentId: T:VDS.RDF.Storage.IQueryableStorage
+  parent: VDS.RDF.Storage
+  name: IQueryableStorage
+  nameWithType: IQueryableStorage
+  fullName: VDS.RDF.Storage.IQueryableStorage
+- uid: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: UpdateSupported
+  nameWithType: IStorageCapabilities.UpdateSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor
+  commentId: T:VDS.RDF.Update.ISparqlUpdateProcessor
+  parent: VDS.RDF.Update
+  name: ISparqlUpdateProcessor
+  nameWithType: ISparqlUpdateProcessor
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.GenericUpdateProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<GenericUpdateProcessor>()
+  nameWithType: Extensions.AsEnumerable<GenericUpdateProcessor>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.GenericUpdateProcessor>()
+  nameWithType.vb: Extensions.AsEnumerable(Of GenericUpdateProcessor)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.GenericUpdateProcessor)()
+  name.vb: AsEnumerable(Of GenericUpdateProcessor)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<GenericUpdateProcessor>
+    nameWithType: Extensions.AsEnumerable<GenericUpdateProcessor>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.GenericUpdateProcessor>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of GenericUpdateProcessor)
+    nameWithType: Extensions.AsEnumerable(Of GenericUpdateProcessor)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.GenericUpdateProcessor)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  parent: VDS.RDF.Storage
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Update.GenericUpdateProcessor.#ctor*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.#ctor
+  name: GenericUpdateProcessor
+  nameWithType: GenericUpdateProcessor.GenericUpdateProcessor
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.GenericUpdateProcessor
+- uid: VDS.RDF.Update.GenericUpdateProcessor.Discard*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.Discard
+  name: Discard
+  nameWithType: GenericUpdateProcessor.Discard
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.Discard
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: Discard()
+  nameWithType: ISparqlUpdateProcessor.Discard()
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Discard()
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+    name: Discard
+    nameWithType: ISparqlUpdateProcessor.Discard
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+    name: Discard
+    nameWithType: ISparqlUpdateProcessor.Discard
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.GenericUpdateProcessor.Flush*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.Flush
+  name: Flush
+  nameWithType: GenericUpdateProcessor.Flush
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.Flush
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: Flush()
+  nameWithType: ISparqlUpdateProcessor.Flush()
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Flush()
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+    name: Flush
+    nameWithType: ISparqlUpdateProcessor.Flush
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+    name: Flush
+    nameWithType: ISparqlUpdateProcessor.Flush
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand
+  name: ProcessAddCommand
+  nameWithType: GenericUpdateProcessor.ProcessAddCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessAddCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessAddCommand(AddCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessAddCommand(AddCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+    name: ProcessAddCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessAddCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.AddCommand
+    name: AddCommand
+    nameWithType: AddCommand
+    fullName: VDS.RDF.Update.Commands.AddCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+    name: ProcessAddCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessAddCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.AddCommand
+    name: AddCommand
+    nameWithType: AddCommand
+    fullName: VDS.RDF.Update.Commands.AddCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.AddCommand
+  commentId: T:VDS.RDF.Update.Commands.AddCommand
+  parent: VDS.RDF.Update.Commands
+  name: AddCommand
+  nameWithType: AddCommand
+  fullName: VDS.RDF.Update.Commands.AddCommand
+- uid: VDS.RDF.Update.Commands
+  commentId: N:VDS.RDF.Update.Commands
+  name: VDS.RDF.Update.Commands
+  nameWithType: VDS.RDF.Update.Commands
+  fullName: VDS.RDF.Update.Commands
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand
+  name: ProcessClearCommand
+  nameWithType: GenericUpdateProcessor.ProcessClearCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessClearCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessClearCommand(ClearCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessClearCommand(ClearCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+    name: ProcessClearCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessClearCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ClearCommand
+    name: ClearCommand
+    nameWithType: ClearCommand
+    fullName: VDS.RDF.Update.Commands.ClearCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+    name: ProcessClearCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessClearCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ClearCommand
+    name: ClearCommand
+    nameWithType: ClearCommand
+    fullName: VDS.RDF.Update.Commands.ClearCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.ClearCommand
+  commentId: T:VDS.RDF.Update.Commands.ClearCommand
+  parent: VDS.RDF.Update.Commands
+  name: ClearCommand
+  nameWithType: ClearCommand
+  fullName: VDS.RDF.Update.Commands.ClearCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand
+  name: ProcessCopyCommand
+  nameWithType: GenericUpdateProcessor.ProcessCopyCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCopyCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCopyCommand(CopyCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessCopyCommand(CopyCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+    name: ProcessCopyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCopyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CopyCommand
+    name: CopyCommand
+    nameWithType: CopyCommand
+    fullName: VDS.RDF.Update.Commands.CopyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+    name: ProcessCopyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCopyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CopyCommand
+    name: CopyCommand
+    nameWithType: CopyCommand
+    fullName: VDS.RDF.Update.Commands.CopyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.CopyCommand
+  commentId: T:VDS.RDF.Update.Commands.CopyCommand
+  parent: VDS.RDF.Update.Commands
+  name: CopyCommand
+  nameWithType: CopyCommand
+  fullName: VDS.RDF.Update.Commands.CopyCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand
+  name: ProcessCreateCommand
+  nameWithType: GenericUpdateProcessor.ProcessCreateCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCreateCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCreateCommand(CreateCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessCreateCommand(CreateCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+    name: ProcessCreateCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCreateCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CreateCommand
+    name: CreateCommand
+    nameWithType: CreateCommand
+    fullName: VDS.RDF.Update.Commands.CreateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+    name: ProcessCreateCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCreateCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CreateCommand
+    name: CreateCommand
+    nameWithType: CreateCommand
+    fullName: VDS.RDF.Update.Commands.CreateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.CreateCommand
+  commentId: T:VDS.RDF.Update.Commands.CreateCommand
+  parent: VDS.RDF.Update.Commands
+  name: CreateCommand
+  nameWithType: CreateCommand
+  fullName: VDS.RDF.Update.Commands.CreateCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand
+  name: ProcessCommand
+  nameWithType: GenericUpdateProcessor.ProcessCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCommand(SparqlUpdateCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessCommand(SparqlUpdateCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+    name: ProcessCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommand
+    name: SparqlUpdateCommand
+    nameWithType: SparqlUpdateCommand
+    fullName: VDS.RDF.Update.SparqlUpdateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+    name: ProcessCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommand
+    name: SparqlUpdateCommand
+    nameWithType: SparqlUpdateCommand
+    fullName: VDS.RDF.Update.SparqlUpdateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.SparqlUpdateCommand
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommand
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommand
+  nameWithType: SparqlUpdateCommand
+  fullName: VDS.RDF.Update.SparqlUpdateCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet
+  name: ProcessCommandSet
+  nameWithType: GenericUpdateProcessor.ProcessCommandSet
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessCommandSet
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCommandSet(SparqlUpdateCommandSet)
+  nameWithType: ISparqlUpdateProcessor.ProcessCommandSet(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: ProcessCommandSet
+    nameWithType: ISparqlUpdateProcessor.ProcessCommandSet
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: ProcessCommandSet
+    nameWithType: ISparqlUpdateProcessor.ProcessCommandSet
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.SparqlUpdateCommandSet
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommandSet
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommandSet
+  nameWithType: SparqlUpdateCommandSet
+  fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand
+  name: ProcessDeleteCommand
+  nameWithType: GenericUpdateProcessor.ProcessDeleteCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessDeleteCommand(DeleteCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessDeleteCommand(DeleteCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+    name: ProcessDeleteCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteCommand
+    name: DeleteCommand
+    nameWithType: DeleteCommand
+    fullName: VDS.RDF.Update.Commands.DeleteCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+    name: ProcessDeleteCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteCommand
+    name: DeleteCommand
+    nameWithType: DeleteCommand
+    fullName: VDS.RDF.Update.Commands.DeleteCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DeleteCommand
+  commentId: T:VDS.RDF.Update.Commands.DeleteCommand
+  parent: VDS.RDF.Update.Commands
+  name: DeleteCommand
+  nameWithType: DeleteCommand
+  fullName: VDS.RDF.Update.Commands.DeleteCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand
+  name: ProcessDeleteDataCommand
+  nameWithType: GenericUpdateProcessor.ProcessDeleteDataCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessDeleteDataCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessDeleteDataCommand(DeleteDataCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessDeleteDataCommand(DeleteDataCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+    name: ProcessDeleteDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteDataCommand
+    name: DeleteDataCommand
+    nameWithType: DeleteDataCommand
+    fullName: VDS.RDF.Update.Commands.DeleteDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+    name: ProcessDeleteDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteDataCommand
+    name: DeleteDataCommand
+    nameWithType: DeleteDataCommand
+    fullName: VDS.RDF.Update.Commands.DeleteDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DeleteDataCommand
+  commentId: T:VDS.RDF.Update.Commands.DeleteDataCommand
+  parent: VDS.RDF.Update.Commands
+  name: DeleteDataCommand
+  nameWithType: DeleteDataCommand
+  fullName: VDS.RDF.Update.Commands.DeleteDataCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand
+  name: ProcessDropCommand
+  nameWithType: GenericUpdateProcessor.ProcessDropCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessDropCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessDropCommand(DropCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessDropCommand(DropCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+    name: ProcessDropCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDropCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DropCommand
+    name: DropCommand
+    nameWithType: DropCommand
+    fullName: VDS.RDF.Update.Commands.DropCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+    name: ProcessDropCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDropCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DropCommand
+    name: DropCommand
+    nameWithType: DropCommand
+    fullName: VDS.RDF.Update.Commands.DropCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DropCommand
+  commentId: T:VDS.RDF.Update.Commands.DropCommand
+  parent: VDS.RDF.Update.Commands
+  name: DropCommand
+  nameWithType: DropCommand
+  fullName: VDS.RDF.Update.Commands.DropCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand
+  name: ProcessInsertCommand
+  nameWithType: GenericUpdateProcessor.ProcessInsertCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessInsertCommand(InsertCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessInsertCommand(InsertCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+    name: ProcessInsertCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertCommand
+    name: InsertCommand
+    nameWithType: InsertCommand
+    fullName: VDS.RDF.Update.Commands.InsertCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+    name: ProcessInsertCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertCommand
+    name: InsertCommand
+    nameWithType: InsertCommand
+    fullName: VDS.RDF.Update.Commands.InsertCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertCommand
+  commentId: T:VDS.RDF.Update.Commands.InsertCommand
+  parent: VDS.RDF.Update.Commands
+  name: InsertCommand
+  nameWithType: InsertCommand
+  fullName: VDS.RDF.Update.Commands.InsertCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand
+  name: ProcessInsertDataCommand
+  nameWithType: GenericUpdateProcessor.ProcessInsertDataCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessInsertDataCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessInsertDataCommand(InsertDataCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessInsertDataCommand(InsertDataCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+    name: ProcessInsertDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertDataCommand
+    name: InsertDataCommand
+    nameWithType: InsertDataCommand
+    fullName: VDS.RDF.Update.Commands.InsertDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+    name: ProcessInsertDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertDataCommand
+    name: InsertDataCommand
+    nameWithType: InsertDataCommand
+    fullName: VDS.RDF.Update.Commands.InsertDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertDataCommand
+  commentId: T:VDS.RDF.Update.Commands.InsertDataCommand
+  parent: VDS.RDF.Update.Commands
+  name: InsertDataCommand
+  nameWithType: InsertDataCommand
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand
+  name: ProcessLoadCommand
+  nameWithType: GenericUpdateProcessor.ProcessLoadCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessLoadCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessLoadCommand(LoadCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessLoadCommand(LoadCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+    name: ProcessLoadCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessLoadCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.LoadCommand
+    name: LoadCommand
+    nameWithType: LoadCommand
+    fullName: VDS.RDF.Update.Commands.LoadCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+    name: ProcessLoadCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessLoadCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.LoadCommand
+    name: LoadCommand
+    nameWithType: LoadCommand
+    fullName: VDS.RDF.Update.Commands.LoadCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.LoadCommand
+  commentId: T:VDS.RDF.Update.Commands.LoadCommand
+  parent: VDS.RDF.Update.Commands
+  name: LoadCommand
+  nameWithType: LoadCommand
+  fullName: VDS.RDF.Update.Commands.LoadCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand
+  name: ProcessModifyCommand
+  nameWithType: GenericUpdateProcessor.ProcessModifyCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessModifyCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessModifyCommand(ModifyCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessModifyCommand(ModifyCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+    name: ProcessModifyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessModifyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ModifyCommand
+    name: ModifyCommand
+    nameWithType: ModifyCommand
+    fullName: VDS.RDF.Update.Commands.ModifyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+    name: ProcessModifyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessModifyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ModifyCommand
+    name: ModifyCommand
+    nameWithType: ModifyCommand
+    fullName: VDS.RDF.Update.Commands.ModifyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.ModifyCommand
+  commentId: T:VDS.RDF.Update.Commands.ModifyCommand
+  parent: VDS.RDF.Update.Commands
+  name: ModifyCommand
+  nameWithType: ModifyCommand
+  fullName: VDS.RDF.Update.Commands.ModifyCommand
+- uid: VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand*
+  commentId: Overload:VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand
+  name: ProcessMoveCommand
+  nameWithType: GenericUpdateProcessor.ProcessMoveCommand
+  fullName: VDS.RDF.Update.GenericUpdateProcessor.ProcessMoveCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessMoveCommand(MoveCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessMoveCommand(MoveCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+    name: ProcessMoveCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessMoveCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.MoveCommand
+    name: MoveCommand
+    nameWithType: MoveCommand
+    fullName: VDS.RDF.Update.Commands.MoveCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+    name: ProcessMoveCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessMoveCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.MoveCommand
+    name: MoveCommand
+    nameWithType: MoveCommand
+    fullName: VDS.RDF.Update.Commands.MoveCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.MoveCommand
+  commentId: T:VDS.RDF.Update.Commands.MoveCommand
+  parent: VDS.RDF.Update.Commands
+  name: MoveCommand
+  nameWithType: MoveCommand
+  fullName: VDS.RDF.Update.Commands.MoveCommand

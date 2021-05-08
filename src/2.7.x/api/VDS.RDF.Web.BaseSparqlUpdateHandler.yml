@@ -1,0 +1,598 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler
+  commentId: T:VDS.RDF.Web.BaseSparqlUpdateHandler
+  id: BaseSparqlUpdateHandler
+  parent: VDS.RDF.Web
+  children:
+  - VDS.RDF.Web.BaseSparqlUpdateHandler._config
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext,String,String,Exception)
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext,String,String,Exception,System.Int32)
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig(HttpContext)
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest(HttpContext)
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm(HttpContext)
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig(HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: BaseSparqlUpdateHandler
+  nameWithType: BaseSparqlUpdateHandler
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseSparqlUpdateHandler
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nAbstract Base Class for creating SPARQL Update Handler implementations\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseSparqlUpdateHandler : IHttpHandler'
+    content.vb: >-
+      Public MustInherit Class BaseSparqlUpdateHandler
+          Inherits IHttpHandler
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Web.UpdateHandler
+  extensionMethods:
+  - VDS.RDF.Web.BaseSparqlUpdateHandler.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler._config
+  commentId: F:VDS.RDF.Web.BaseSparqlUpdateHandler._config
+  id: _config
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: _config
+  nameWithType: BaseSparqlUpdateHandler._config
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler._config
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: _config
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 51
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHandler Configuration\n"
+  example: []
+  syntax:
+    content: protected BaseUpdateHandlerConfiguration _config
+    return:
+      type: VDS.RDF.Web.Configuration.Update.BaseUpdateHandlerConfiguration
+    content.vb: Protected _config As BaseUpdateHandlerConfiguration
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable
+  commentId: P:VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable
+  id: IsReusable
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: IsReusable
+  nameWithType: BaseSparqlUpdateHandler.IsReusable
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsReusable
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nGets that the Handler is reusable\n"
+  example: []
+  syntax:
+    content: public bool IsReusable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReusable As Boolean
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest(HttpContext)
+  id: ProcessRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: ProcessRequest(HttpContext)
+  nameWithType: BaseSparqlUpdateHandler.ProcessRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessRequest
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nProcesses SPARQL Update requests\n"
+  example: []
+  syntax:
+    content: public void ProcessRequest(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    content.vb: Public Sub ProcessRequest(context As HttpContext)
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig(HttpContext)
+  id: LoadConfig(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig(HttpContext)
+  nameWithType: BaseSparqlUpdateHandler.LoadConfig(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 306
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nLoads the Handler Configuration\n"
+  example: []
+  syntax:
+    content: protected abstract BaseUpdateHandlerConfiguration LoadConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    return:
+      type: VDS.RDF.Web.Configuration.Update.BaseUpdateHandlerConfiguration
+      description: ''
+    content.vb: Protected MustOverride Function LoadConfig(context As HttpContext) As BaseUpdateHandlerConfiguration
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  id: ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: ProcessUpdates(SparqlUpdateCommandSet)
+  nameWithType: BaseSparqlUpdateHandler.ProcessUpdates(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessUpdates
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 317
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nProcesses SPARQL Updates\n"
+  remarks: "\n<p>\nImplementations should override this method if their behaviour requires more than just invoking the configured Update processor\n</p>\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessUpdates(SparqlUpdateCommandSet cmds)
+    parameters:
+    - id: cmds
+      type: VDS.RDF.Update.SparqlUpdateCommandSet
+      description: Update Command Set
+    content.vb: Protected Overridable Sub ProcessUpdates(cmds As SparqlUpdateCommandSet)
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig(HttpContext)
+  id: UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: UpdateConfig(HttpContext)
+  nameWithType: BaseSparqlUpdateHandler.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 326
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nUpdates the Handler Configuration\n"
+  example: []
+  syntax:
+    content: protected virtual void UpdateConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    content.vb: Protected Overridable Sub UpdateConfig(context As HttpContext)
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm(HttpContext)
+  id: ShowUpdateForm(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: ShowUpdateForm(HttpContext)
+  nameWithType: BaseSparqlUpdateHandler.ShowUpdateForm(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ShowUpdateForm
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 335
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nGenerates a SPARQL Update Form\n"
+  example: []
+  syntax:
+    content: protected virtual void ShowUpdateForm(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    content.vb: Protected Overridable Sub ShowUpdateForm(context As HttpContext)
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext,String,String,Exception)
+  commentId: M:VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext,String,String,Exception)
+  id: HandleErrors(HttpContext,String,String,Exception)
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleErrors(HttpContext, String, String, Exception)
+  nameWithType: BaseSparqlUpdateHandler.HandleErrors(HttpContext, String, String, Exception)
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext, String, String, Exception)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleErrors
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 422
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHandles errors in processing SPARQL Update Requests\n"
+  example: []
+  syntax:
+    content: protected virtual void HandleErrors(HttpContext context, String title, String update, Exception ex)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: Context of the HTTP Request
+    - id: title
+      type: String
+      description: Error title
+    - id: update
+      type: String
+      description: SPARQL Update
+    - id: ex
+      type: Exception
+      description: Error
+    content.vb: Protected Overridable Sub HandleErrors(context As HttpContext, title As String, update As String, ex As Exception)
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext,String,String,Exception,System.Int32)
+  commentId: M:VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext,String,String,Exception,System.Int32)
+  id: HandleErrors(HttpContext,String,String,Exception,System.Int32)
+  parent: VDS.RDF.Web.BaseSparqlUpdateHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleErrors(HttpContext, String, String, Exception, Int32)
+  nameWithType: BaseSparqlUpdateHandler.HandleErrors(HttpContext, String, String, Exception, Int32)
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors(HttpContext, String, String, Exception, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleErrors
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/BaseSparqlUpdateHandler.cs
+    startLine: 435
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHandles errors in processing SPARQL Update Requests\n"
+  example: []
+  syntax:
+    content: protected virtual void HandleErrors(HttpContext context, String title, String update, Exception ex, int statusCode)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: Context of the HTTP Request
+    - id: title
+      type: String
+      description: Error title
+    - id: update
+      type: String
+      description: SPARQL Update
+    - id: ex
+      type: Exception
+      description: Error
+    - id: statusCode
+      type: System.Int32
+      description: HTTP Status Code
+    content.vb: Protected Overridable Sub HandleErrors(context As HttpContext, title As String, update As String, ex As Exception, statusCode As Integer)
+  overload: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+references:
+- uid: VDS.RDF.Web
+  commentId: N:VDS.RDF.Web
+  name: VDS.RDF.Web
+  nameWithType: VDS.RDF.Web
+  fullName: VDS.RDF.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseSparqlUpdateHandler>()
+  nameWithType: Extensions.AsEnumerable<BaseSparqlUpdateHandler>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.BaseSparqlUpdateHandler>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseSparqlUpdateHandler)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.BaseSparqlUpdateHandler)()
+  name.vb: AsEnumerable(Of BaseSparqlUpdateHandler)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseSparqlUpdateHandler>
+    nameWithType: Extensions.AsEnumerable<BaseSparqlUpdateHandler>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.BaseSparqlUpdateHandler>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseSparqlUpdateHandler)
+    nameWithType: Extensions.AsEnumerable(Of BaseSparqlUpdateHandler)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.BaseSparqlUpdateHandler)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Web.Configuration.Update.BaseUpdateHandlerConfiguration
+  commentId: T:VDS.RDF.Web.Configuration.Update.BaseUpdateHandlerConfiguration
+  parent: VDS.RDF.Web.Configuration.Update
+  name: BaseUpdateHandlerConfiguration
+  nameWithType: BaseUpdateHandlerConfiguration
+  fullName: VDS.RDF.Web.Configuration.Update.BaseUpdateHandlerConfiguration
+- uid: VDS.RDF.Web.Configuration.Update
+  commentId: N:VDS.RDF.Web.Configuration.Update
+  name: VDS.RDF.Web.Configuration.Update
+  nameWithType: VDS.RDF.Web.Configuration.Update
+  fullName: VDS.RDF.Web.Configuration.Update
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable*
+  commentId: Overload:VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable
+  name: IsReusable
+  nameWithType: BaseSparqlUpdateHandler.IsReusable
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.IsReusable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest*
+  commentId: Overload:VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest
+  name: ProcessRequest
+  nameWithType: BaseSparqlUpdateHandler.ProcessRequest
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessRequest
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig*
+  commentId: Overload:VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig
+  name: LoadConfig
+  nameWithType: BaseSparqlUpdateHandler.LoadConfig
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.LoadConfig
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates*
+  commentId: Overload:VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates
+  name: ProcessUpdates
+  nameWithType: BaseSparqlUpdateHandler.ProcessUpdates
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.ProcessUpdates
+- uid: VDS.RDF.Update.SparqlUpdateCommandSet
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommandSet
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommandSet
+  nameWithType: SparqlUpdateCommandSet
+  fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig*
+  commentId: Overload:VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig
+  name: UpdateConfig
+  nameWithType: BaseSparqlUpdateHandler.UpdateConfig
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.UpdateConfig
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm*
+  commentId: Overload:VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm
+  name: ShowUpdateForm
+  nameWithType: BaseSparqlUpdateHandler.ShowUpdateForm
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.ShowUpdateForm
+- uid: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors*
+  commentId: Overload:VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors
+  name: HandleErrors
+  nameWithType: BaseSparqlUpdateHandler.HandleErrors
+  fullName: VDS.RDF.Web.BaseSparqlUpdateHandler.HandleErrors
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

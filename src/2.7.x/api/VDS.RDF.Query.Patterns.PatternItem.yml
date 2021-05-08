@@ -1,0 +1,835 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Patterns.PatternItem
+  commentId: T:VDS.RDF.Query.Patterns.PatternItem
+  id: PatternItem
+  parent: VDS.RDF.Query.Patterns
+  children:
+  - VDS.RDF.Query.Patterns.PatternItem._context
+  - VDS.RDF.Query.Patterns.PatternItem.Accepts(VDS.RDF.Query.SparqlEvaluationContext,VDS.RDF.INode)
+  - VDS.RDF.Query.Patterns.PatternItem.BindingContext
+  - VDS.RDF.Query.Patterns.PatternItem.Construct(VDS.RDF.Query.Construct.ConstructContext)
+  - VDS.RDF.Query.Patterns.PatternItem.Repeated
+  - VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation
+  - VDS.RDF.Query.Patterns.PatternItem.ToString
+  - VDS.RDF.Query.Patterns.PatternItem.VariableName
+  langs:
+  - csharp
+  - vb
+  name: PatternItem
+  nameWithType: PatternItem
+  fullName: VDS.RDF.Query.Patterns.PatternItem
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PatternItem
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nClass for representing Node Patterns in Sparql Queries.\n"
+  example: []
+  syntax:
+    content: public abstract class PatternItem
+    content.vb: Public MustInherit Class PatternItem
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Query.Patterns.BlankNodePattern
+  - VDS.RDF.Query.Patterns.FixedBlankNodePattern
+  - VDS.RDF.Query.Patterns.NodeMatchPattern
+  - VDS.RDF.Query.Patterns.VariablePattern
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Patterns.PatternItem.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Query.Patterns.PatternItem._context
+  commentId: F:VDS.RDF.Query.Patterns.PatternItem._context
+  id: _context
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: _context
+  nameWithType: PatternItem._context
+  fullName: VDS.RDF.Query.Patterns.PatternItem._context
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: _context
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 39
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nBinding Context for Pattern Item.\n"
+  example: []
+  syntax:
+    content: protected SparqlResultBinder _context
+    return:
+      type: VDS.RDF.Query.SparqlResultBinder
+    content.vb: Protected _context As SparqlResultBinder
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Query.Patterns.PatternItem.Accepts(VDS.RDF.Query.SparqlEvaluationContext,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Patterns.PatternItem.Accepts(VDS.RDF.Query.SparqlEvaluationContext,VDS.RDF.INode)
+  id: Accepts(VDS.RDF.Query.SparqlEvaluationContext,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: Accepts(SparqlEvaluationContext, INode)
+  nameWithType: PatternItem.Accepts(SparqlEvaluationContext, INode)
+  fullName: VDS.RDF.Query.Patterns.PatternItem.Accepts(VDS.RDF.Query.SparqlEvaluationContext, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Accepts
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 50
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nChecks whether the Pattern Item accepts the given Node in the given Context.\n"
+  example: []
+  syntax:
+    content: protected abstract bool Accepts(SparqlEvaluationContext context, INode obj)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: Evaluation Context.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Node to test.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected MustOverride Function Accepts(context As SparqlEvaluationContext, obj As INode) As Boolean
+  overload: VDS.RDF.Query.Patterns.PatternItem.Accepts*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: VDS.RDF.Query.Patterns.PatternItem.Construct(VDS.RDF.Query.Construct.ConstructContext)
+  commentId: M:VDS.RDF.Query.Patterns.PatternItem.Construct(VDS.RDF.Query.Construct.ConstructContext)
+  id: Construct(VDS.RDF.Query.Construct.ConstructContext)
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: Construct(ConstructContext)
+  nameWithType: PatternItem.Construct(ConstructContext)
+  fullName: VDS.RDF.Query.Patterns.PatternItem.Construct(VDS.RDF.Query.Construct.ConstructContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Construct
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nConstructs a Node based on this Pattern for the given Set.\n"
+  example: []
+  syntax:
+    content: protected abstract INode Construct(ConstructContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.Construct.ConstructContext
+      description: Construct Context.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Protected MustOverride Function Construct(context As ConstructContext) As INode
+  overload: VDS.RDF.Query.Patterns.PatternItem.Construct*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: VDS.RDF.Query.Patterns.PatternItem.BindingContext
+  commentId: P:VDS.RDF.Query.Patterns.PatternItem.BindingContext
+  id: BindingContext
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: BindingContext
+  nameWithType: PatternItem.BindingContext
+  fullName: VDS.RDF.Query.Patterns.PatternItem.BindingContext
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BindingContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 62
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nSets the Binding Context for the Pattern Item.\n"
+  example: []
+  syntax:
+    content: public SparqlResultBinder BindingContext { set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.SparqlResultBinder
+    content.vb: Public WriteOnly Property BindingContext As SparqlResultBinder
+  overload: VDS.RDF.Query.Patterns.PatternItem.BindingContext*
+  modifiers.csharp:
+  - public
+  - set
+  modifiers.vb:
+  - Public
+  - WriteOnly
+- uid: VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation
+  commentId: P:VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation
+  id: RigorousEvaluation
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: RigorousEvaluation
+  nameWithType: PatternItem.RigorousEvaluation
+  fullName: VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RigorousEvaluation
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nGets/Sets whether rigorous evaluation is used, note that this setting may be overridden by the global <xref href=\"VDS.RDF.Options.RigorousEvaluation\" data-throw-if-not-resolved=\"false\"></xref> option.\n"
+  example: []
+  syntax:
+    content: public bool RigorousEvaluation { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RigorousEvaluation As Boolean
+  overload: VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Patterns.PatternItem.ToString
+  commentId: M:VDS.RDF.Query.Patterns.PatternItem.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PatternItem.ToString()
+  fullName: VDS.RDF.Query.Patterns.PatternItem.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 84
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nGets the String representation of the Pattern.\n"
+  example: []
+  syntax:
+    content: public abstract override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public MustOverride Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.Patterns.PatternItem.ToString*
+  modifiers.csharp:
+  - public
+  - abstract
+  - override
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - Overrides
+- uid: VDS.RDF.Query.Patterns.PatternItem.VariableName
+  commentId: P:VDS.RDF.Query.Patterns.PatternItem.VariableName
+  id: VariableName
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: VariableName
+  nameWithType: PatternItem.VariableName
+  fullName: VDS.RDF.Query.Patterns.PatternItem.VariableName
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: VariableName
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 89
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nGets the Variable Name if this is a Variable Pattern or null otherwise.\n"
+  example: []
+  syntax:
+    content: public virtual string VariableName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable ReadOnly Property VariableName As String
+  overload: VDS.RDF.Query.Patterns.PatternItem.VariableName*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+- uid: VDS.RDF.Query.Patterns.PatternItem.Repeated
+  commentId: P:VDS.RDF.Query.Patterns.PatternItem.Repeated
+  id: Repeated
+  parent: VDS.RDF.Query.Patterns.PatternItem
+  langs:
+  - csharp
+  - vb
+  name: Repeated
+  nameWithType: PatternItem.Repeated
+  fullName: VDS.RDF.Query.Patterns.PatternItem.Repeated
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Repeated
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Patterns/SPARQLPatternClasses.cs
+    startLine: 100
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Patterns
+  summary: "\nGets/Sets whether the Variable is repeated in the Pattern.\n"
+  example: []
+  syntax:
+    content: public virtual bool Repeated { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable Property Repeated As Boolean
+  overload: VDS.RDF.Query.Patterns.PatternItem.Repeated*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Patterns.PatternItem.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<PatternItem>()
+  nameWithType: Extensions.AsEnumerable<PatternItem>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Patterns.PatternItem>()
+  nameWithType.vb: Extensions.AsEnumerable(Of PatternItem)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Patterns.PatternItem)()
+  name.vb: AsEnumerable(Of PatternItem)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<PatternItem>
+    nameWithType: Extensions.AsEnumerable<PatternItem>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Patterns.PatternItem>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of PatternItem)
+    nameWithType: Extensions.AsEnumerable(Of PatternItem)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Patterns.PatternItem)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.SparqlResultBinder
+  commentId: T:VDS.RDF.Query.SparqlResultBinder
+  parent: VDS.RDF.Query
+  name: SparqlResultBinder
+  nameWithType: SparqlResultBinder
+  fullName: VDS.RDF.Query.SparqlResultBinder
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Patterns.PatternItem.Accepts*
+  commentId: Overload:VDS.RDF.Query.Patterns.PatternItem.Accepts
+  name: Accepts
+  nameWithType: PatternItem.Accepts
+  fullName: VDS.RDF.Query.Patterns.PatternItem.Accepts
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Patterns.PatternItem.Construct*
+  commentId: Overload:VDS.RDF.Query.Patterns.PatternItem.Construct
+  name: Construct
+  nameWithType: PatternItem.Construct
+  fullName: VDS.RDF.Query.Patterns.PatternItem.Construct
+- uid: VDS.RDF.Query.Construct.ConstructContext
+  commentId: T:VDS.RDF.Query.Construct.ConstructContext
+  parent: VDS.RDF.Query.Construct
+  name: ConstructContext
+  nameWithType: ConstructContext
+  fullName: VDS.RDF.Query.Construct.ConstructContext
+- uid: VDS.RDF.Query.Construct
+  commentId: N:VDS.RDF.Query.Construct
+  name: VDS.RDF.Query.Construct
+  nameWithType: VDS.RDF.Query.Construct
+  fullName: VDS.RDF.Query.Construct
+- uid: VDS.RDF.Query.Patterns.PatternItem.BindingContext*
+  commentId: Overload:VDS.RDF.Query.Patterns.PatternItem.BindingContext
+  name: BindingContext
+  nameWithType: PatternItem.BindingContext
+  fullName: VDS.RDF.Query.Patterns.PatternItem.BindingContext
+- uid: VDS.RDF.Options.RigorousEvaluation
+  commentId: P:VDS.RDF.Options.RigorousEvaluation
+  isExternal: true
+- uid: VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation*
+  commentId: Overload:VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation
+  name: RigorousEvaluation
+  nameWithType: PatternItem.RigorousEvaluation
+  fullName: VDS.RDF.Query.Patterns.PatternItem.RigorousEvaluation
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Patterns.PatternItem.ToString*
+  commentId: Overload:VDS.RDF.Query.Patterns.PatternItem.ToString
+  name: ToString
+  nameWithType: PatternItem.ToString
+  fullName: VDS.RDF.Query.Patterns.PatternItem.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.Patterns.PatternItem.VariableName*
+  commentId: Overload:VDS.RDF.Query.Patterns.PatternItem.VariableName
+  name: VariableName
+  nameWithType: PatternItem.VariableName
+  fullName: VDS.RDF.Query.Patterns.PatternItem.VariableName
+- uid: VDS.RDF.Query.Patterns.PatternItem.Repeated*
+  commentId: Overload:VDS.RDF.Query.Patterns.PatternItem.Repeated
+  name: Repeated
+  nameWithType: PatternItem.Repeated
+  fullName: VDS.RDF.Query.Patterns.PatternItem.Repeated

@@ -1,0 +1,1530 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.QNameOutputMapper
+  commentId: T:VDS.RDF.QNameOutputMapper
+  id: QNameOutputMapper
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.QNameOutputMapper.#ctor
+  - VDS.RDF.QNameOutputMapper.#ctor(VDS.RDF.INamespaceMapper)
+  - VDS.RDF.QNameOutputMapper._mapping
+  - VDS.RDF.QNameOutputMapper._nextNamespaceID
+  - VDS.RDF.QNameOutputMapper.AddToCache(System.String,VDS.RDF.QNameMapping)
+  - VDS.RDF.QNameOutputMapper.ReduceToQName(System.String,System.String@)
+  - VDS.RDF.QNameOutputMapper.ReduceToQName(System.String,System.String@,System.String@)
+  langs:
+  - csharp
+  - vb
+  name: QNameOutputMapper
+  nameWithType: QNameOutputMapper
+  fullName: VDS.RDF.QNameOutputMapper
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QNameOutputMapper
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 430
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nClass for representing Mappings from URIs to QNames.\n"
+  remarks: "\nUsed primarily in outputting RDF syntax.\n"
+  example: []
+  syntax:
+    content: 'public class QNameOutputMapper : NamespaceMapper, INamespaceMapper, IDisposable'
+    content.vb: >-
+      Public Class QNameOutputMapper
+          Inherits NamespaceMapper
+          Implements INamespaceMapper, IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.NamespaceMapper
+  derivedClasses:
+  - VDS.RDF.ThreadSafeQNameOutputMapper
+  implements:
+  - VDS.RDF.INamespaceMapper
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.NamespaceMapper.RDF
+  - VDS.RDF.NamespaceMapper.RDFS
+  - VDS.RDF.NamespaceMapper.XMLSCHEMA
+  - VDS.RDF.NamespaceMapper.OWL
+  - VDS.RDF.NamespaceMapper._uris
+  - VDS.RDF.NamespaceMapper._prefixes
+  - VDS.RDF.NamespaceMapper.GetPrefix(System.Uri)
+  - VDS.RDF.NamespaceMapper.GetNamespaceUri(System.String)
+  - VDS.RDF.NamespaceMapper.AddNamespace(System.String,System.Uri)
+  - VDS.RDF.NamespaceMapper.RemoveNamespace(System.String)
+  - VDS.RDF.NamespaceMapper.HasNamespace(System.String)
+  - VDS.RDF.NamespaceMapper.HasNamespace(System.Uri)
+  - VDS.RDF.NamespaceMapper.Clear
+  - VDS.RDF.NamespaceMapper.Prefixes
+  - VDS.RDF.NamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  - VDS.RDF.NamespaceMapper.NamespaceAdded
+  - VDS.RDF.NamespaceMapper.NamespaceModified
+  - VDS.RDF.NamespaceMapper.NamespaceRemoved
+  - VDS.RDF.NamespaceMapper.OnNamespaceAdded(System.String,System.Uri)
+  - VDS.RDF.NamespaceMapper.OnNamespaceModified(System.String,System.Uri)
+  - VDS.RDF.NamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+  - VDS.RDF.NamespaceMapper.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.QNameOutputMapper.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.QNameOutputMapper._mapping
+  commentId: F:VDS.RDF.QNameOutputMapper._mapping
+  id: _mapping
+  parent: VDS.RDF.QNameOutputMapper
+  langs:
+  - csharp
+  - vb
+  name: _mapping
+  nameWithType: QNameOutputMapper._mapping
+  fullName: VDS.RDF.QNameOutputMapper._mapping
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: _mapping
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 436
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMapping of URIs to QNames.\n"
+  example: []
+  syntax:
+    content: protected MultiDictionary<string, QNameMapping> _mapping
+    return:
+      type: VDS.Common.Collections.MultiDictionary{System.String,VDS.RDF.QNameMapping}
+    content.vb: Protected _mapping As MultiDictionary(Of String, QNameMapping)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.QNameOutputMapper._nextNamespaceID
+  commentId: F:VDS.RDF.QNameOutputMapper._nextNamespaceID
+  id: _nextNamespaceID
+  parent: VDS.RDF.QNameOutputMapper
+  langs:
+  - csharp
+  - vb
+  name: _nextNamespaceID
+  nameWithType: QNameOutputMapper._nextNamespaceID
+  fullName: VDS.RDF.QNameOutputMapper._nextNamespaceID
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: _nextNamespaceID
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 440
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nNext available Temporary Namespace ID.\n"
+  example: []
+  syntax:
+    content: protected int _nextNamespaceID
+    return:
+      type: System.Int32
+    content.vb: Protected _nextNamespaceID As Integer
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.QNameOutputMapper.#ctor(VDS.RDF.INamespaceMapper)
+  commentId: M:VDS.RDF.QNameOutputMapper.#ctor(VDS.RDF.INamespaceMapper)
+  id: '#ctor(VDS.RDF.INamespaceMapper)'
+  parent: VDS.RDF.QNameOutputMapper
+  langs:
+  - csharp
+  - vb
+  name: QNameOutputMapper(INamespaceMapper)
+  nameWithType: QNameOutputMapper.QNameOutputMapper(INamespaceMapper)
+  fullName: VDS.RDF.QNameOutputMapper.QNameOutputMapper(VDS.RDF.INamespaceMapper)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 446
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new QName Output Mapper using the given Namespace Map.\n"
+  example: []
+  syntax:
+    content: public QNameOutputMapper(INamespaceMapper nsmapper)
+    parameters:
+    - id: nsmapper
+      type: VDS.RDF.INamespaceMapper
+      description: Namespace Map.
+    content.vb: Public Sub New(nsmapper As INamespaceMapper)
+  overload: VDS.RDF.QNameOutputMapper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.QNameOutputMapper.#ctor
+  commentId: M:VDS.RDF.QNameOutputMapper.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.QNameOutputMapper
+  langs:
+  - csharp
+  - vb
+  name: QNameOutputMapper()
+  nameWithType: QNameOutputMapper.QNameOutputMapper()
+  fullName: VDS.RDF.QNameOutputMapper.QNameOutputMapper()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 452
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new QName Output Mapper which has an empty Namespace Map.\n"
+  example: []
+  syntax:
+    content: public QNameOutputMapper()
+    content.vb: Public Sub New
+  overload: VDS.RDF.QNameOutputMapper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.QNameOutputMapper.ReduceToQName(System.String,System.String@)
+  commentId: M:VDS.RDF.QNameOutputMapper.ReduceToQName(System.String,System.String@)
+  id: ReduceToQName(System.String,System.String@)
+  parent: VDS.RDF.QNameOutputMapper
+  langs:
+  - csharp
+  - vb
+  name: ReduceToQName(String, out String)
+  nameWithType: QNameOutputMapper.ReduceToQName(String, out String)
+  fullName: VDS.RDF.QNameOutputMapper.ReduceToQName(System.String, out System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ReduceToQName
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 462
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nA Function which attempts to reduce a Uri to a QName.\n"
+  remarks: This function will return a Boolean indicated whether it succeeded in reducing the Uri to a QName.  If it did then the out parameter qname will contain the reduction, otherwise it will be the empty string.
+  example: []
+  syntax:
+    content: public override bool ReduceToQName(string uri, out string qname)
+    parameters:
+    - id: uri
+      type: System.String
+      description: The Uri to attempt to reduce.
+    - id: qname
+      type: System.String
+      description: The value to output the QName to if possible.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function ReduceToQName(uri As String, ByRef qname As String) As Boolean
+  overridden: VDS.RDF.NamespaceMapper.ReduceToQName(System.String,System.String@)
+  overload: VDS.RDF.QNameOutputMapper.ReduceToQName*
+  nameWithType.vb: QNameOutputMapper.ReduceToQName(String, ByRef String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: VDS.RDF.QNameOutputMapper.ReduceToQName(System.String, ByRef System.String)
+  name.vb: ReduceToQName(String, ByRef String)
+- uid: VDS.RDF.QNameOutputMapper.ReduceToQName(System.String,System.String@,System.String@)
+  commentId: M:VDS.RDF.QNameOutputMapper.ReduceToQName(System.String,System.String@,System.String@)
+  id: ReduceToQName(System.String,System.String@,System.String@)
+  parent: VDS.RDF.QNameOutputMapper
+  langs:
+  - csharp
+  - vb
+  name: ReduceToQName(String, out String, out String)
+  nameWithType: QNameOutputMapper.ReduceToQName(String, out String, out String)
+  fullName: VDS.RDF.QNameOutputMapper.ReduceToQName(System.String, out System.String, out System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ReduceToQName
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 516
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nA Function which attempts to reduce a Uri to a QName and issues a Temporary Namespace if required.\n"
+  remarks: "\n<p>\nThis function will always returns a possible QName for the URI if the format of the URI permits it.  It doesn&apos;t guarentee that the QName will be valid for the syntax it is being written to - it is up to implementers of writers to validate the QNames returned.\n</p>\n<p>\nWhere necessary a Temporary Namespace will be issued and the <code data-dev-comment-type=\"paramref\" class=\"paramref\">tempNamespace</code> parameter will be set to the prefix of the new temporary namespace.\n</p>\n"
+  example: []
+  syntax:
+    content: public bool ReduceToQName(string uri, out string qname, out string tempNamespace)
+    parameters:
+    - id: uri
+      type: System.String
+      description: The Uri to attempt to reduce.
+    - id: qname
+      type: System.String
+      description: The value to output the QName to if possible.
+    - id: tempNamespace
+      type: System.String
+      description: The Temporary Namespace issued (if any).
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function ReduceToQName(uri As String, ByRef qname As String, ByRef tempNamespace As String) As Boolean
+  overload: VDS.RDF.QNameOutputMapper.ReduceToQName*
+  nameWithType.vb: QNameOutputMapper.ReduceToQName(String, ByRef String, ByRef String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.QNameOutputMapper.ReduceToQName(System.String, ByRef System.String, ByRef System.String)
+  name.vb: ReduceToQName(String, ByRef String, ByRef String)
+- uid: VDS.RDF.QNameOutputMapper.AddToCache(System.String,VDS.RDF.QNameMapping)
+  commentId: M:VDS.RDF.QNameOutputMapper.AddToCache(System.String,VDS.RDF.QNameMapping)
+  id: AddToCache(System.String,VDS.RDF.QNameMapping)
+  parent: VDS.RDF.QNameOutputMapper
+  langs:
+  - csharp
+  - vb
+  name: AddToCache(String, QNameMapping)
+  nameWithType: QNameOutputMapper.AddToCache(String, QNameMapping)
+  fullName: VDS.RDF.QNameOutputMapper.AddToCache(System.String, VDS.RDF.QNameMapping)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddToCache
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NamespaceMapper.cs
+    startLine: 588
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nAdds a QName mapping to the cache.\n"
+  example: []
+  syntax:
+    content: protected virtual void AddToCache(string uri, QNameMapping mapping)
+    parameters:
+    - id: uri
+      type: System.String
+      description: URI.
+    - id: mapping
+      type: VDS.RDF.QNameMapping
+      description: Mapping.
+    content.vb: Protected Overridable Sub AddToCache(uri As String, mapping As QNameMapping)
+  overload: VDS.RDF.QNameOutputMapper.AddToCache*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.NamespaceMapper
+  commentId: T:VDS.RDF.NamespaceMapper
+  parent: VDS.RDF
+  name: NamespaceMapper
+  nameWithType: NamespaceMapper
+  fullName: VDS.RDF.NamespaceMapper
+- uid: VDS.RDF.INamespaceMapper
+  commentId: T:VDS.RDF.INamespaceMapper
+  parent: VDS.RDF
+  name: INamespaceMapper
+  nameWithType: INamespaceMapper
+  fullName: VDS.RDF.INamespaceMapper
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.NamespaceMapper.RDF
+  commentId: F:VDS.RDF.NamespaceMapper.RDF
+  parent: VDS.RDF.NamespaceMapper
+  name: RDF
+  nameWithType: NamespaceMapper.RDF
+  fullName: VDS.RDF.NamespaceMapper.RDF
+- uid: VDS.RDF.NamespaceMapper.RDFS
+  commentId: F:VDS.RDF.NamespaceMapper.RDFS
+  parent: VDS.RDF.NamespaceMapper
+  name: RDFS
+  nameWithType: NamespaceMapper.RDFS
+  fullName: VDS.RDF.NamespaceMapper.RDFS
+- uid: VDS.RDF.NamespaceMapper.XMLSCHEMA
+  commentId: F:VDS.RDF.NamespaceMapper.XMLSCHEMA
+  parent: VDS.RDF.NamespaceMapper
+  name: XMLSCHEMA
+  nameWithType: NamespaceMapper.XMLSCHEMA
+  fullName: VDS.RDF.NamespaceMapper.XMLSCHEMA
+- uid: VDS.RDF.NamespaceMapper.OWL
+  commentId: F:VDS.RDF.NamespaceMapper.OWL
+  parent: VDS.RDF.NamespaceMapper
+  name: OWL
+  nameWithType: NamespaceMapper.OWL
+  fullName: VDS.RDF.NamespaceMapper.OWL
+- uid: VDS.RDF.NamespaceMapper._uris
+  commentId: F:VDS.RDF.NamespaceMapper._uris
+  parent: VDS.RDF.NamespaceMapper
+  name: _uris
+  nameWithType: NamespaceMapper._uris
+  fullName: VDS.RDF.NamespaceMapper._uris
+- uid: VDS.RDF.NamespaceMapper._prefixes
+  commentId: F:VDS.RDF.NamespaceMapper._prefixes
+  parent: VDS.RDF.NamespaceMapper
+  name: _prefixes
+  nameWithType: NamespaceMapper._prefixes
+  fullName: VDS.RDF.NamespaceMapper._prefixes
+- uid: VDS.RDF.NamespaceMapper.GetPrefix(System.Uri)
+  commentId: M:VDS.RDF.NamespaceMapper.GetPrefix(System.Uri)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: GetPrefix(Uri)
+  nameWithType: NamespaceMapper.GetPrefix(Uri)
+  fullName: VDS.RDF.NamespaceMapper.GetPrefix(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.GetPrefix(System.Uri)
+    name: GetPrefix
+    nameWithType: NamespaceMapper.GetPrefix
+    fullName: VDS.RDF.NamespaceMapper.GetPrefix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.GetPrefix(System.Uri)
+    name: GetPrefix
+    nameWithType: NamespaceMapper.GetPrefix
+    fullName: VDS.RDF.NamespaceMapper.GetPrefix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.GetNamespaceUri(System.String)
+  commentId: M:VDS.RDF.NamespaceMapper.GetNamespaceUri(System.String)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: GetNamespaceUri(String)
+  nameWithType: NamespaceMapper.GetNamespaceUri(String)
+  fullName: VDS.RDF.NamespaceMapper.GetNamespaceUri(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.GetNamespaceUri(System.String)
+    name: GetNamespaceUri
+    nameWithType: NamespaceMapper.GetNamespaceUri
+    fullName: VDS.RDF.NamespaceMapper.GetNamespaceUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.GetNamespaceUri(System.String)
+    name: GetNamespaceUri
+    nameWithType: NamespaceMapper.GetNamespaceUri
+    fullName: VDS.RDF.NamespaceMapper.GetNamespaceUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.AddNamespace(System.String,System.Uri)
+  commentId: M:VDS.RDF.NamespaceMapper.AddNamespace(System.String,System.Uri)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: AddNamespace(String, Uri)
+  nameWithType: NamespaceMapper.AddNamespace(String, Uri)
+  fullName: VDS.RDF.NamespaceMapper.AddNamespace(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.AddNamespace(System.String,System.Uri)
+    name: AddNamespace
+    nameWithType: NamespaceMapper.AddNamespace
+    fullName: VDS.RDF.NamespaceMapper.AddNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.AddNamespace(System.String,System.Uri)
+    name: AddNamespace
+    nameWithType: NamespaceMapper.AddNamespace
+    fullName: VDS.RDF.NamespaceMapper.AddNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.RemoveNamespace(System.String)
+  commentId: M:VDS.RDF.NamespaceMapper.RemoveNamespace(System.String)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: RemoveNamespace(String)
+  nameWithType: NamespaceMapper.RemoveNamespace(String)
+  fullName: VDS.RDF.NamespaceMapper.RemoveNamespace(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.RemoveNamespace(System.String)
+    name: RemoveNamespace
+    nameWithType: NamespaceMapper.RemoveNamespace
+    fullName: VDS.RDF.NamespaceMapper.RemoveNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.RemoveNamespace(System.String)
+    name: RemoveNamespace
+    nameWithType: NamespaceMapper.RemoveNamespace
+    fullName: VDS.RDF.NamespaceMapper.RemoveNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.HasNamespace(System.String)
+  commentId: M:VDS.RDF.NamespaceMapper.HasNamespace(System.String)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: HasNamespace(String)
+  nameWithType: NamespaceMapper.HasNamespace(String)
+  fullName: VDS.RDF.NamespaceMapper.HasNamespace(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.HasNamespace(System.String)
+    name: HasNamespace
+    nameWithType: NamespaceMapper.HasNamespace
+    fullName: VDS.RDF.NamespaceMapper.HasNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.HasNamespace(System.String)
+    name: HasNamespace
+    nameWithType: NamespaceMapper.HasNamespace
+    fullName: VDS.RDF.NamespaceMapper.HasNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.HasNamespace(System.Uri)
+  commentId: M:VDS.RDF.NamespaceMapper.HasNamespace(System.Uri)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: HasNamespace(Uri)
+  nameWithType: NamespaceMapper.HasNamespace(Uri)
+  fullName: VDS.RDF.NamespaceMapper.HasNamespace(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.HasNamespace(System.Uri)
+    name: HasNamespace
+    nameWithType: NamespaceMapper.HasNamespace
+    fullName: VDS.RDF.NamespaceMapper.HasNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.HasNamespace(System.Uri)
+    name: HasNamespace
+    nameWithType: NamespaceMapper.HasNamespace
+    fullName: VDS.RDF.NamespaceMapper.HasNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.Clear
+  commentId: M:VDS.RDF.NamespaceMapper.Clear
+  parent: VDS.RDF.NamespaceMapper
+  name: Clear()
+  nameWithType: NamespaceMapper.Clear()
+  fullName: VDS.RDF.NamespaceMapper.Clear()
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.Clear
+    name: Clear
+    nameWithType: NamespaceMapper.Clear
+    fullName: VDS.RDF.NamespaceMapper.Clear
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.Clear
+    name: Clear
+    nameWithType: NamespaceMapper.Clear
+    fullName: VDS.RDF.NamespaceMapper.Clear
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.Prefixes
+  commentId: P:VDS.RDF.NamespaceMapper.Prefixes
+  parent: VDS.RDF.NamespaceMapper
+  name: Prefixes
+  nameWithType: NamespaceMapper.Prefixes
+  fullName: VDS.RDF.NamespaceMapper.Prefixes
+- uid: VDS.RDF.NamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  commentId: M:VDS.RDF.NamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  parent: VDS.RDF.NamespaceMapper
+  name: Import(INamespaceMapper)
+  nameWithType: NamespaceMapper.Import(INamespaceMapper)
+  fullName: VDS.RDF.NamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+    name: Import
+    nameWithType: NamespaceMapper.Import
+    fullName: VDS.RDF.NamespaceMapper.Import
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INamespaceMapper
+    name: INamespaceMapper
+    nameWithType: INamespaceMapper
+    fullName: VDS.RDF.INamespaceMapper
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+    name: Import
+    nameWithType: NamespaceMapper.Import
+    fullName: VDS.RDF.NamespaceMapper.Import
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INamespaceMapper
+    name: INamespaceMapper
+    nameWithType: INamespaceMapper
+    fullName: VDS.RDF.INamespaceMapper
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.NamespaceAdded
+  commentId: E:VDS.RDF.NamespaceMapper.NamespaceAdded
+  parent: VDS.RDF.NamespaceMapper
+  name: NamespaceAdded
+  nameWithType: NamespaceMapper.NamespaceAdded
+  fullName: VDS.RDF.NamespaceMapper.NamespaceAdded
+- uid: VDS.RDF.NamespaceMapper.NamespaceModified
+  commentId: E:VDS.RDF.NamespaceMapper.NamespaceModified
+  parent: VDS.RDF.NamespaceMapper
+  name: NamespaceModified
+  nameWithType: NamespaceMapper.NamespaceModified
+  fullName: VDS.RDF.NamespaceMapper.NamespaceModified
+- uid: VDS.RDF.NamespaceMapper.NamespaceRemoved
+  commentId: E:VDS.RDF.NamespaceMapper.NamespaceRemoved
+  parent: VDS.RDF.NamespaceMapper
+  name: NamespaceRemoved
+  nameWithType: NamespaceMapper.NamespaceRemoved
+  fullName: VDS.RDF.NamespaceMapper.NamespaceRemoved
+- uid: VDS.RDF.NamespaceMapper.OnNamespaceAdded(System.String,System.Uri)
+  commentId: M:VDS.RDF.NamespaceMapper.OnNamespaceAdded(System.String,System.Uri)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: OnNamespaceAdded(String, Uri)
+  nameWithType: NamespaceMapper.OnNamespaceAdded(String, Uri)
+  fullName: VDS.RDF.NamespaceMapper.OnNamespaceAdded(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.OnNamespaceAdded(System.String,System.Uri)
+    name: OnNamespaceAdded
+    nameWithType: NamespaceMapper.OnNamespaceAdded
+    fullName: VDS.RDF.NamespaceMapper.OnNamespaceAdded
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.OnNamespaceAdded(System.String,System.Uri)
+    name: OnNamespaceAdded
+    nameWithType: NamespaceMapper.OnNamespaceAdded
+    fullName: VDS.RDF.NamespaceMapper.OnNamespaceAdded
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.OnNamespaceModified(System.String,System.Uri)
+  commentId: M:VDS.RDF.NamespaceMapper.OnNamespaceModified(System.String,System.Uri)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: OnNamespaceModified(String, Uri)
+  nameWithType: NamespaceMapper.OnNamespaceModified(String, Uri)
+  fullName: VDS.RDF.NamespaceMapper.OnNamespaceModified(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.OnNamespaceModified(System.String,System.Uri)
+    name: OnNamespaceModified
+    nameWithType: NamespaceMapper.OnNamespaceModified
+    fullName: VDS.RDF.NamespaceMapper.OnNamespaceModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.OnNamespaceModified(System.String,System.Uri)
+    name: OnNamespaceModified
+    nameWithType: NamespaceMapper.OnNamespaceModified
+    fullName: VDS.RDF.NamespaceMapper.OnNamespaceModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+  commentId: M:VDS.RDF.NamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: OnNamespaceRemoved(String, Uri)
+  nameWithType: NamespaceMapper.OnNamespaceRemoved(String, Uri)
+  fullName: VDS.RDF.NamespaceMapper.OnNamespaceRemoved(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+    name: OnNamespaceRemoved
+    nameWithType: NamespaceMapper.OnNamespaceRemoved
+    fullName: VDS.RDF.NamespaceMapper.OnNamespaceRemoved
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.OnNamespaceRemoved(System.String,System.Uri)
+    name: OnNamespaceRemoved
+    nameWithType: NamespaceMapper.OnNamespaceRemoved
+    fullName: VDS.RDF.NamespaceMapper.OnNamespaceRemoved
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.NamespaceMapper.Dispose
+  commentId: M:VDS.RDF.NamespaceMapper.Dispose
+  parent: VDS.RDF.NamespaceMapper
+  name: Dispose()
+  nameWithType: NamespaceMapper.Dispose()
+  fullName: VDS.RDF.NamespaceMapper.Dispose()
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.Dispose
+    name: Dispose
+    nameWithType: NamespaceMapper.Dispose
+    fullName: VDS.RDF.NamespaceMapper.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.Dispose
+    name: Dispose
+    nameWithType: NamespaceMapper.Dispose
+    fullName: VDS.RDF.NamespaceMapper.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.QNameOutputMapper.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<QNameOutputMapper>()
+  nameWithType: Extensions.AsEnumerable<QNameOutputMapper>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.QNameOutputMapper>()
+  nameWithType.vb: Extensions.AsEnumerable(Of QNameOutputMapper)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.QNameOutputMapper)()
+  name.vb: AsEnumerable(Of QNameOutputMapper)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<QNameOutputMapper>
+    nameWithType: Extensions.AsEnumerable<QNameOutputMapper>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.QNameOutputMapper>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of QNameOutputMapper)
+    nameWithType: Extensions.AsEnumerable(Of QNameOutputMapper)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.QNameOutputMapper)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.Common.Collections.MultiDictionary{System.String,VDS.RDF.QNameMapping}
+  commentId: T:VDS.Common.Collections.MultiDictionary{System.String,VDS.RDF.QNameMapping}
+  parent: VDS.Common.Collections
+  definition: VDS.Common.Collections.MultiDictionary`2
+  name: MultiDictionary<String, QNameMapping>
+  nameWithType: MultiDictionary<String, QNameMapping>
+  fullName: VDS.Common.Collections.MultiDictionary<System.String, VDS.RDF.QNameMapping>
+  nameWithType.vb: MultiDictionary(Of String, QNameMapping)
+  fullName.vb: VDS.Common.Collections.MultiDictionary(Of System.String, VDS.RDF.QNameMapping)
+  name.vb: MultiDictionary(Of String, QNameMapping)
+  spec.csharp:
+  - uid: VDS.Common.Collections.MultiDictionary`2
+    name: MultiDictionary
+    nameWithType: MultiDictionary
+    fullName: VDS.Common.Collections.MultiDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QNameMapping
+    name: QNameMapping
+    nameWithType: QNameMapping
+    fullName: VDS.RDF.QNameMapping
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.Common.Collections.MultiDictionary`2
+    name: MultiDictionary
+    nameWithType: MultiDictionary
+    fullName: VDS.Common.Collections.MultiDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QNameMapping
+    name: QNameMapping
+    nameWithType: QNameMapping
+    fullName: VDS.RDF.QNameMapping
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.Common.Collections.MultiDictionary`2
+  commentId: T:VDS.Common.Collections.MultiDictionary`2
+  isExternal: true
+  name: MultiDictionary<TKey, TValue>
+  nameWithType: MultiDictionary<TKey, TValue>
+  fullName: VDS.Common.Collections.MultiDictionary<TKey, TValue>
+  nameWithType.vb: MultiDictionary(Of TKey, TValue)
+  fullName.vb: VDS.Common.Collections.MultiDictionary(Of TKey, TValue)
+  name.vb: MultiDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: VDS.Common.Collections.MultiDictionary`2
+    name: MultiDictionary
+    nameWithType: MultiDictionary
+    fullName: VDS.Common.Collections.MultiDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.Common.Collections.MultiDictionary`2
+    name: MultiDictionary
+    nameWithType: MultiDictionary
+    fullName: VDS.Common.Collections.MultiDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.Common.Collections
+  commentId: N:VDS.Common.Collections
+  isExternal: true
+  name: VDS.Common.Collections
+  nameWithType: VDS.Common.Collections
+  fullName: VDS.Common.Collections
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.QNameOutputMapper.#ctor*
+  commentId: Overload:VDS.RDF.QNameOutputMapper.#ctor
+  name: QNameOutputMapper
+  nameWithType: QNameOutputMapper.QNameOutputMapper
+  fullName: VDS.RDF.QNameOutputMapper.QNameOutputMapper
+- uid: VDS.RDF.NamespaceMapper.ReduceToQName(System.String,System.String@)
+  commentId: M:VDS.RDF.NamespaceMapper.ReduceToQName(System.String,System.String@)
+  parent: VDS.RDF.NamespaceMapper
+  isExternal: true
+  name: ReduceToQName(String, String)
+  nameWithType: NamespaceMapper.ReduceToQName(String, String)
+  fullName: VDS.RDF.NamespaceMapper.ReduceToQName(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.NamespaceMapper.ReduceToQName(System.String,System.String@)
+    name: ReduceToQName
+    nameWithType: NamespaceMapper.ReduceToQName
+    fullName: VDS.RDF.NamespaceMapper.ReduceToQName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.NamespaceMapper.ReduceToQName(System.String,System.String@)
+    name: ReduceToQName
+    nameWithType: NamespaceMapper.ReduceToQName
+    fullName: VDS.RDF.NamespaceMapper.ReduceToQName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.QNameOutputMapper.ReduceToQName*
+  commentId: Overload:VDS.RDF.QNameOutputMapper.ReduceToQName
+  name: ReduceToQName
+  nameWithType: QNameOutputMapper.ReduceToQName
+  fullName: VDS.RDF.QNameOutputMapper.ReduceToQName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.QNameOutputMapper.AddToCache*
+  commentId: Overload:VDS.RDF.QNameOutputMapper.AddToCache
+  name: AddToCache
+  nameWithType: QNameOutputMapper.AddToCache
+  fullName: VDS.RDF.QNameOutputMapper.AddToCache
+- uid: VDS.RDF.QNameMapping
+  commentId: T:VDS.RDF.QNameMapping
+  parent: VDS.RDF
+  name: QNameMapping
+  nameWithType: QNameMapping
+  fullName: VDS.RDF.QNameMapping

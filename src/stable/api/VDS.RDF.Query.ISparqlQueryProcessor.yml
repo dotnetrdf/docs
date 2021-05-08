@@ -1,0 +1,352 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.ISparqlQueryProcessor
+  commentId: T:VDS.RDF.Query.ISparqlQueryProcessor
+  id: ISparqlQueryProcessor
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+  - VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: ISparqlQueryProcessor
+  nameWithType: ISparqlQueryProcessor
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ISparqlQueryProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nInterface for SPARQL Query Processors.\n"
+  remarks: "\n<p>\nA SPARQL Query Processor is a class that knows how to evaluate SPARQL queries against some data source to which the processor has access.\n</p>\n<p>\nThe point of this interface is to allow for end users to implement custom query processors or to extend and modify the behaviour of the default Leviathan engine as required.\n</p>\n"
+  example: []
+  syntax:
+    content: public interface ISparqlQueryProcessor
+    content.vb: Public Interface ISparqlQueryProcessor
+  extensionMethods:
+  - VDS.RDF.Query.ISparqlQueryProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  id: ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.ISparqlQueryProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessQuery(SparqlQuery)
+  nameWithType: ISparqlQueryProcessor.ProcessQuery(SparqlQuery)
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+    startLine: 51
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nProcesses a SPARQL Query returning a <xref href=\"VDS.RDF.IGraph\" data-throw-if-not-resolved=\"false\"></xref> instance or a <xref href=\"VDS.RDF.Query.SparqlResultSet\" data-throw-if-not-resolved=\"false\"></xref> depending on the type of the query.\n"
+  example: []
+  syntax:
+    content: object ProcessQuery(SparqlQuery query)
+    parameters:
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: SPARQL Query.
+    return:
+      type: System.Object
+      description: "\nEither an <xref href=\"VDS.RDF.IGraph\" data-throw-if-not-resolved=\"false\"></xref> instance of a <xref href=\"VDS.RDF.Query.SparqlResultSet\" data-throw-if-not-resolved=\"false\"></xref> depending on the type of the query.\n"
+    content.vb: Function ProcessQuery(query As SparqlQuery) As Object
+  overload: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery*
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  id: ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.ISparqlQueryProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  nameWithType: ISparqlQueryProcessor.ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+    startLine: 59
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nProcesses a SPARQL Query passing the results to the RDF or Results handler as appropriate.\n"
+  example: []
+  syntax:
+    content: void ProcessQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, SparqlQuery query)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: SPARQL Query.
+    content.vb: Sub ProcessQuery(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, query As SparqlQuery)
+  overload: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery*
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+  commentId: M:VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+  id: ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+  parent: VDS.RDF.Query.ISparqlQueryProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessQuery(SparqlQuery, GraphCallback, SparqlResultsCallback, Object)
+  nameWithType: ISparqlQueryProcessor.ProcessQuery(SparqlQuery, GraphCallback, SparqlResultsCallback, Object)
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery, VDS.RDF.GraphCallback, VDS.RDF.SparqlResultsCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nProcesses a SPARQL Query asynchronously invoking the relevant callback when the query completes.\n"
+  example: []
+  syntax:
+    content: void ProcessQuery(SparqlQuery query, GraphCallback rdfCallback, SparqlResultsCallback resultsCallback, object state)
+    parameters:
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: SPARQL QUery.
+    - id: rdfCallback
+      type: VDS.RDF.GraphCallback
+      description: Callback for queries that return a Graph.
+    - id: resultsCallback
+      type: VDS.RDF.SparqlResultsCallback
+      description: Callback for queries that return a Result Set.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Sub ProcessQuery(query As SparqlQuery, rdfCallback As GraphCallback, resultsCallback As SparqlResultsCallback, state As Object)
+  overload: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery*
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+  commentId: M:VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+  id: ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+  parent: VDS.RDF.Query.ISparqlQueryProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery, QueryCallback, Object)
+  nameWithType: ISparqlQueryProcessor.ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery, QueryCallback, Object)
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlQuery, VDS.RDF.QueryCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/ISparqlQueryProcessor.cs
+    startLine: 78
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nProcesses a SPARQL Query asynchronously passing the results to the relevant handler and invoking the callback when the query completes.\n"
+  example: []
+  syntax:
+    content: void ProcessQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, SparqlQuery query, QueryCallback callback, object state)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: SPARQL Query.
+    - id: callback
+      type: VDS.RDF.QueryCallback
+      description: Callback.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Sub ProcessQuery(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, query As SparqlQuery, callback As QueryCallback, state As Object)
+  overload: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery*
+references:
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ISparqlQueryProcessor>()
+  nameWithType: Extensions.AsEnumerable<ISparqlQueryProcessor>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.ISparqlQueryProcessor>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ISparqlQueryProcessor)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.ISparqlQueryProcessor)()
+  name.vb: AsEnumerable(Of ISparqlQueryProcessor)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ISparqlQueryProcessor>
+    nameWithType: Extensions.AsEnumerable<ISparqlQueryProcessor>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.ISparqlQueryProcessor>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ISparqlQueryProcessor)
+    nameWithType: Extensions.AsEnumerable(Of ISparqlQueryProcessor)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.ISparqlQueryProcessor)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery*
+  commentId: Overload:VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery
+  name: ProcessQuery
+  nameWithType: ISparqlQueryProcessor.ProcessQuery
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler
+- uid: VDS.RDF.GraphCallback
+  commentId: T:VDS.RDF.GraphCallback
+  parent: VDS.RDF
+  name: GraphCallback
+  nameWithType: GraphCallback
+  fullName: VDS.RDF.GraphCallback
+- uid: VDS.RDF.SparqlResultsCallback
+  commentId: T:VDS.RDF.SparqlResultsCallback
+  parent: VDS.RDF
+  name: SparqlResultsCallback
+  nameWithType: SparqlResultsCallback
+  fullName: VDS.RDF.SparqlResultsCallback
+- uid: VDS.RDF.QueryCallback
+  commentId: T:VDS.RDF.QueryCallback
+  parent: VDS.RDF
+  name: QueryCallback
+  nameWithType: QueryCallback
+  fullName: VDS.RDF.QueryCallback

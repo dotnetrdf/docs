@@ -1,0 +1,581 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.IUriLoaderCache
+  commentId: T:VDS.RDF.Parsing.IUriLoaderCache
+  id: IUriLoaderCache
+  parent: VDS.RDF.Parsing
+  children:
+  - VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory
+  - VDS.RDF.Parsing.IUriLoaderCache.CacheDuration
+  - VDS.RDF.Parsing.IUriLoaderCache.Clear
+  - VDS.RDF.Parsing.IUriLoaderCache.GetETag(System.Uri)
+  - VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy(System.Uri)
+  - VDS.RDF.Parsing.IUriLoaderCache.HasETag(System.Uri)
+  - VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy(System.Uri,System.Boolean)
+  - VDS.RDF.Parsing.IUriLoaderCache.RemoveETag(System.Uri)
+  - VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy(System.Uri)
+  - VDS.RDF.Parsing.IUriLoaderCache.ToCache(System.Uri,System.Uri,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IUriLoaderCache
+  nameWithType: IUriLoaderCache
+  fullName: VDS.RDF.Parsing.IUriLoaderCache
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IUriLoaderCache
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 43
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nInterface for Caches that can be used to cache the result of loading Graphs from URIs.\n"
+  remarks: "\n<p>\n<strong>Warning:</strong> Only available in Builds for which caching is supported e.g. not supported under Silverlight.\n</p>\n<p>\nImplementors should take care to implement their caches such that any errors in the cache do not bubble up outside of the cache.  If the cache encounters any error when caching data or retrieving data from the cache it should indicate that the cached data is not available.\n</p>\n"
+  example: []
+  syntax:
+    content: public interface IUriLoaderCache
+    content.vb: Public Interface IUriLoaderCache
+  extensionMethods:
+  - VDS.RDF.Parsing.IUriLoaderCache.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory
+  commentId: P:VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory
+  id: CacheDirectory
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: CacheDirectory
+  nameWithType: IUriLoaderCache.CacheDirectory
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CacheDirectory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 53
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets/Sets the Cache Directory that is in use.\n"
+  remarks: "\n<p>\nNon-filesystem based caches are free to return String.Empty or null but <strong>MUST NOT</strong> throw any form or error.\n</p>\n"
+  example: []
+  syntax:
+    content: string CacheDirectory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property CacheDirectory As String
+  overload: VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory*
+  modifiers.csharp:
+  - get
+  - set
+- uid: VDS.RDF.Parsing.IUriLoaderCache.CacheDuration
+  commentId: P:VDS.RDF.Parsing.IUriLoaderCache.CacheDuration
+  id: CacheDuration
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: CacheDuration
+  nameWithType: IUriLoaderCache.CacheDuration
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.CacheDuration
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CacheDuration
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 61
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets/Sets how long results should be cached.\n"
+  remarks: "\nThis only applies to downloaded URIs where an ETag is not available, where ETags are available ETag based caching <strong>SHOULD</strong> be used.\n"
+  example: []
+  syntax:
+    content: TimeSpan CacheDuration { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Property CacheDuration As TimeSpan
+  overload: VDS.RDF.Parsing.IUriLoaderCache.CacheDuration*
+  modifiers.csharp:
+  - get
+  - set
+- uid: VDS.RDF.Parsing.IUriLoaderCache.Clear
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.Clear
+  id: Clear
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: IUriLoaderCache.Clear()
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.Clear()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Clear
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 66
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nClears the Cache.\n"
+  example: []
+  syntax:
+    content: void Clear()
+    content.vb: Sub Clear
+  overload: VDS.RDF.Parsing.IUriLoaderCache.Clear*
+- uid: VDS.RDF.Parsing.IUriLoaderCache.GetETag(System.Uri)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.GetETag(System.Uri)
+  id: GetETag(System.Uri)
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: GetETag(Uri)
+  nameWithType: IUriLoaderCache.GetETag(Uri)
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.GetETag(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetETag
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 79
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets the ETag for the given URI.\n"
+  remarks: "\n<p>\nCalling code <strong>MUST</strong> always use the <xref href=\"VDS.RDF.Parsing.IUriLoaderCache.HasETag(System.Uri)\" data-throw-if-not-resolved=\"false\"></xref> method prior to using this method so it should be safe to throw the <xref href=\"System.Collections.Generic.KeyNotFoundException\" data-throw-if-not-resolved=\"false\"></xref> if there is no ETag for the given URI.\n</p>\n"
+  example: []
+  syntax:
+    content: string GetETag(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: URI.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function GetETag(u As Uri) As String
+  overload: VDS.RDF.Parsing.IUriLoaderCache.GetETag*
+  exceptions:
+  - type: System.Collections.Generic.KeyNotFoundException
+    commentId: T:System.Collections.Generic.KeyNotFoundException
+    description: Thrown if there is no ETag for the given URI.
+- uid: VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy(System.Uri)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy(System.Uri)
+  id: GetLocalCopy(System.Uri)
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: GetLocalCopy(Uri)
+  nameWithType: IUriLoaderCache.GetLocalCopy(Uri)
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetLocalCopy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 86
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets the path to the locally cached copy of the Graph from the given URI.\n"
+  example: []
+  syntax:
+    content: string GetLocalCopy(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: URI.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Function GetLocalCopy(u As Uri) As String
+  overload: VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy*
+- uid: VDS.RDF.Parsing.IUriLoaderCache.HasETag(System.Uri)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.HasETag(System.Uri)
+  id: HasETag(System.Uri)
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: HasETag(Uri)
+  nameWithType: IUriLoaderCache.HasETag(Uri)
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.HasETag(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasETag
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets whether there is an ETag for the given URI.\n"
+  example: []
+  syntax:
+    content: bool HasETag(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function HasETag(u As Uri) As Boolean
+  overload: VDS.RDF.Parsing.IUriLoaderCache.HasETag*
+- uid: VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy(System.Uri,System.Boolean)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy(System.Uri,System.Boolean)
+  id: HasLocalCopy(System.Uri,System.Boolean)
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: HasLocalCopy(Uri, Boolean)
+  nameWithType: IUriLoaderCache.HasLocalCopy(Uri, Boolean)
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy(System.Uri, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasLocalCopy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 101
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nIs there a locally cached copy of the Graph from the given URI which is not expired.\n"
+  example: []
+  syntax:
+    content: bool HasLocalCopy(Uri u, bool requireFreshness)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: URI.
+    - id: requireFreshness
+      type: System.Boolean
+      description: Whether the local copy is required to meet the Cache Freshness (set by the Cache Duration).
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function HasLocalCopy(u As Uri, requireFreshness As Boolean) As Boolean
+  overload: VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy*
+- uid: VDS.RDF.Parsing.IUriLoaderCache.RemoveETag(System.Uri)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.RemoveETag(System.Uri)
+  id: RemoveETag(System.Uri)
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: RemoveETag(Uri)
+  nameWithType: IUriLoaderCache.RemoveETag(Uri)
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.RemoveETag(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveETag
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 107
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nRemove the ETag record for the given URI.\n"
+  example: []
+  syntax:
+    content: void RemoveETag(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: URI.
+    content.vb: Sub RemoveETag(u As Uri)
+  overload: VDS.RDF.Parsing.IUriLoaderCache.RemoveETag*
+- uid: VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy(System.Uri)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy(System.Uri)
+  id: RemoveLocalCopy(System.Uri)
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: RemoveLocalCopy(Uri)
+  nameWithType: IUriLoaderCache.RemoveLocalCopy(Uri)
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveLocalCopy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 113
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nRemoves a locally cached copy of a URIs results from the Cache.\n"
+  example: []
+  syntax:
+    content: void RemoveLocalCopy(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: URI.
+    content.vb: Sub RemoveLocalCopy(u As Uri)
+  overload: VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy*
+- uid: VDS.RDF.Parsing.IUriLoaderCache.ToCache(System.Uri,System.Uri,System.String)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.ToCache(System.Uri,System.Uri,System.String)
+  id: ToCache(System.Uri,System.Uri,System.String)
+  parent: VDS.RDF.Parsing.IUriLoaderCache
+  langs:
+  - csharp
+  - vb
+  name: ToCache(Uri, Uri, String)
+  nameWithType: IUriLoaderCache.ToCache(Uri, Uri, String)
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.ToCache(System.Uri, System.Uri, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToCache
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/IUriLoaderCache.cs
+    startLine: 122
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nAssociates an ETag (if any) with the Request and Response URIs plus returns an IRdfHandler that can be used to write to the cache.\n"
+  example: []
+  syntax:
+    content: IRdfHandler ToCache(Uri requestUri, Uri responseUri, string etag)
+    parameters:
+    - id: requestUri
+      type: System.Uri
+      description: URI from which the RDF Graph was requested.
+    - id: responseUri
+      type: System.Uri
+      description: The actual URI which responded to the request.
+    - id: etag
+      type: System.String
+      description: ETag of the response (if any).
+    return:
+      type: VDS.RDF.IRdfHandler
+      description: Either an instance of an <xref href="VDS.RDF.IRdfHandler" data-throw-if-not-resolved="false"></xref> that will do the caching or null if no caching is possible.
+    content.vb: Function ToCache(requestUri As Uri, responseUri As Uri, etag As String) As IRdfHandler
+  overload: VDS.RDF.Parsing.IUriLoaderCache.ToCache*
+references:
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: VDS.RDF.Parsing.IUriLoaderCache.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IUriLoaderCache>()
+  nameWithType: Extensions.AsEnumerable<IUriLoaderCache>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.IUriLoaderCache>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IUriLoaderCache)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.IUriLoaderCache)()
+  name.vb: AsEnumerable(Of IUriLoaderCache)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IUriLoaderCache>
+    nameWithType: Extensions.AsEnumerable<IUriLoaderCache>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.IUriLoaderCache>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IUriLoaderCache)
+    nameWithType: Extensions.AsEnumerable(Of IUriLoaderCache)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.IUriLoaderCache)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory
+  name: CacheDirectory
+  nameWithType: IUriLoaderCache.CacheDirectory
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.CacheDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Parsing.IUriLoaderCache.CacheDuration*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.CacheDuration
+  name: CacheDuration
+  nameWithType: IUriLoaderCache.CacheDuration
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.CacheDuration
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: VDS.RDF.Parsing.IUriLoaderCache.Clear*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.Clear
+  name: Clear
+  nameWithType: IUriLoaderCache.Clear
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.Clear
+- uid: VDS.RDF.Parsing.IUriLoaderCache.HasETag(System.Uri)
+  commentId: M:VDS.RDF.Parsing.IUriLoaderCache.HasETag(System.Uri)
+  isExternal: true
+- uid: System.Collections.Generic.KeyNotFoundException
+  commentId: T:System.Collections.Generic.KeyNotFoundException
+  isExternal: true
+- uid: VDS.RDF.Parsing.IUriLoaderCache.GetETag*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.GetETag
+  name: GetETag
+  nameWithType: IUriLoaderCache.GetETag
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.GetETag
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy
+  name: GetLocalCopy
+  nameWithType: IUriLoaderCache.GetLocalCopy
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.GetLocalCopy
+- uid: VDS.RDF.Parsing.IUriLoaderCache.HasETag*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.HasETag
+  name: HasETag
+  nameWithType: IUriLoaderCache.HasETag
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.HasETag
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy
+  name: HasLocalCopy
+  nameWithType: IUriLoaderCache.HasLocalCopy
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.HasLocalCopy
+- uid: VDS.RDF.Parsing.IUriLoaderCache.RemoveETag*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.RemoveETag
+  name: RemoveETag
+  nameWithType: IUriLoaderCache.RemoveETag
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.RemoveETag
+- uid: VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy
+  name: RemoveLocalCopy
+  nameWithType: IUriLoaderCache.RemoveLocalCopy
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.RemoveLocalCopy
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.Parsing.IUriLoaderCache.ToCache*
+  commentId: Overload:VDS.RDF.Parsing.IUriLoaderCache.ToCache
+  name: ToCache
+  nameWithType: IUriLoaderCache.ToCache
+  fullName: VDS.RDF.Parsing.IUriLoaderCache.ToCache

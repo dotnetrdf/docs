@@ -1,0 +1,1016 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder
+  commentId: T:VDS.RDF.Query.LeviathanLeftJoinBinder
+  id: LeviathanLeftJoinBinder
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.LeviathanLeftJoinBinder.#ctor(VDS.RDF.Query.Algebra.BaseMultiset)
+  - VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs
+  - VDS.RDF.Query.LeviathanLeftJoinBinder.Value(System.String,System.Int32)
+  - VDS.RDF.Query.LeviathanLeftJoinBinder.Variables
+  langs:
+  - csharp
+  - vb
+  name: LeviathanLeftJoinBinder
+  nameWithType: LeviathanLeftJoinBinder
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LeviathanLeftJoinBinder
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+    startLine: 290
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSpecial Temporary Results Binder used during LeftJoin&apos;s.\n"
+  example: []
+  syntax:
+    content: 'public class LeviathanLeftJoinBinder : SparqlResultBinder, IDisposable'
+    content.vb: >-
+      Public Class LeviathanLeftJoinBinder
+          Inherits SparqlResultBinder
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.SparqlResultBinder
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.Query.SparqlResultBinder.Groups
+  - VDS.RDF.Query.SparqlResultBinder.Group(System.Int32)
+  - VDS.RDF.Query.SparqlResultBinder.IsGroup(System.Int32)
+  - VDS.RDF.Query.SparqlResultBinder.SetGroupContext(System.Boolean)
+  - VDS.RDF.Query.SparqlResultBinder.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.LeviathanLeftJoinBinder.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.#ctor(VDS.RDF.Query.Algebra.BaseMultiset)
+  commentId: M:VDS.RDF.Query.LeviathanLeftJoinBinder.#ctor(VDS.RDF.Query.Algebra.BaseMultiset)
+  id: '#ctor(VDS.RDF.Query.Algebra.BaseMultiset)'
+  parent: VDS.RDF.Query.LeviathanLeftJoinBinder
+  langs:
+  - csharp
+  - vb
+  name: LeviathanLeftJoinBinder(BaseMultiset)
+  nameWithType: LeviathanLeftJoinBinder.LeviathanLeftJoinBinder(BaseMultiset)
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.LeviathanLeftJoinBinder(VDS.RDF.Query.Algebra.BaseMultiset)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+    startLine: 298
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new LeftJoin Binder.\n"
+  example: []
+  syntax:
+    content: public LeviathanLeftJoinBinder(BaseMultiset multiset)
+    parameters:
+    - id: multiset
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+      description: Input Multiset.
+    content.vb: Public Sub New(multiset As BaseMultiset)
+  overload: VDS.RDF.Query.LeviathanLeftJoinBinder.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.Value(System.String,System.Int32)
+  commentId: M:VDS.RDF.Query.LeviathanLeftJoinBinder.Value(System.String,System.Int32)
+  id: Value(System.String,System.Int32)
+  parent: VDS.RDF.Query.LeviathanLeftJoinBinder
+  langs:
+  - csharp
+  - vb
+  name: Value(String, Int32)
+  nameWithType: LeviathanLeftJoinBinder.Value(String, Int32)
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.Value(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Value
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+    startLine: 310
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Value for a given Variable from the Set with the given Binding ID.\n"
+  example: []
+  syntax:
+    content: public override INode Value(string name, int bindingID)
+    parameters:
+    - id: name
+      type: System.String
+      description: Variable.
+    - id: bindingID
+      type: System.Int32
+      description: Set ID.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Public Overrides Function Value(name As String, bindingID As Integer) As INode
+  overridden: VDS.RDF.Query.SparqlResultBinder.Value(System.String,System.Int32)
+  overload: VDS.RDF.Query.LeviathanLeftJoinBinder.Value*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.Variables
+  commentId: P:VDS.RDF.Query.LeviathanLeftJoinBinder.Variables
+  id: Variables
+  parent: VDS.RDF.Query.LeviathanLeftJoinBinder
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: LeviathanLeftJoinBinder.Variables
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+    startLine: 318
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Variables in the Input Multiset.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public Overrides ReadOnly Property Variables As IEnumerable(Of String)
+  overridden: VDS.RDF.Query.SparqlResultBinder.Variables
+  overload: VDS.RDF.Query.LeviathanLeftJoinBinder.Variables*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs
+  commentId: P:VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs
+  id: BindingIDs
+  parent: VDS.RDF.Query.LeviathanLeftJoinBinder
+  langs:
+  - csharp
+  - vb
+  name: BindingIDs
+  nameWithType: LeviathanLeftJoinBinder.BindingIDs
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BindingIDs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResultBinder.cs
+    startLine: 329
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the IDs of Sets.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<int> BindingIDs { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    content.vb: Public Overrides ReadOnly Property BindingIDs As IEnumerable(Of Integer)
+  overridden: VDS.RDF.Query.SparqlResultBinder.BindingIDs
+  overload: VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+references:
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.SparqlResultBinder
+  commentId: T:VDS.RDF.Query.SparqlResultBinder
+  parent: VDS.RDF.Query
+  name: SparqlResultBinder
+  nameWithType: SparqlResultBinder
+  fullName: VDS.RDF.Query.SparqlResultBinder
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Query.SparqlResultBinder.Groups
+  commentId: P:VDS.RDF.Query.SparqlResultBinder.Groups
+  parent: VDS.RDF.Query.SparqlResultBinder
+  name: Groups
+  nameWithType: SparqlResultBinder.Groups
+  fullName: VDS.RDF.Query.SparqlResultBinder.Groups
+- uid: VDS.RDF.Query.SparqlResultBinder.Group(System.Int32)
+  commentId: M:VDS.RDF.Query.SparqlResultBinder.Group(System.Int32)
+  parent: VDS.RDF.Query.SparqlResultBinder
+  isExternal: true
+  name: Group(Int32)
+  nameWithType: SparqlResultBinder.Group(Int32)
+  fullName: VDS.RDF.Query.SparqlResultBinder.Group(System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlResultBinder.Group(System.Int32)
+    name: Group
+    nameWithType: SparqlResultBinder.Group
+    fullName: VDS.RDF.Query.SparqlResultBinder.Group
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlResultBinder.Group(System.Int32)
+    name: Group
+    nameWithType: SparqlResultBinder.Group
+    fullName: VDS.RDF.Query.SparqlResultBinder.Group
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResultBinder.IsGroup(System.Int32)
+  commentId: M:VDS.RDF.Query.SparqlResultBinder.IsGroup(System.Int32)
+  parent: VDS.RDF.Query.SparqlResultBinder
+  isExternal: true
+  name: IsGroup(Int32)
+  nameWithType: SparqlResultBinder.IsGroup(Int32)
+  fullName: VDS.RDF.Query.SparqlResultBinder.IsGroup(System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlResultBinder.IsGroup(System.Int32)
+    name: IsGroup
+    nameWithType: SparqlResultBinder.IsGroup
+    fullName: VDS.RDF.Query.SparqlResultBinder.IsGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlResultBinder.IsGroup(System.Int32)
+    name: IsGroup
+    nameWithType: SparqlResultBinder.IsGroup
+    fullName: VDS.RDF.Query.SparqlResultBinder.IsGroup
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResultBinder.SetGroupContext(System.Boolean)
+  commentId: M:VDS.RDF.Query.SparqlResultBinder.SetGroupContext(System.Boolean)
+  parent: VDS.RDF.Query.SparqlResultBinder
+  isExternal: true
+  name: SetGroupContext(Boolean)
+  nameWithType: SparqlResultBinder.SetGroupContext(Boolean)
+  fullName: VDS.RDF.Query.SparqlResultBinder.SetGroupContext(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlResultBinder.SetGroupContext(System.Boolean)
+    name: SetGroupContext
+    nameWithType: SparqlResultBinder.SetGroupContext
+    fullName: VDS.RDF.Query.SparqlResultBinder.SetGroupContext
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlResultBinder.SetGroupContext(System.Boolean)
+    name: SetGroupContext
+    nameWithType: SparqlResultBinder.SetGroupContext
+    fullName: VDS.RDF.Query.SparqlResultBinder.SetGroupContext
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResultBinder.Dispose
+  commentId: M:VDS.RDF.Query.SparqlResultBinder.Dispose
+  parent: VDS.RDF.Query.SparqlResultBinder
+  name: Dispose()
+  nameWithType: SparqlResultBinder.Dispose()
+  fullName: VDS.RDF.Query.SparqlResultBinder.Dispose()
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlResultBinder.Dispose
+    name: Dispose
+    nameWithType: SparqlResultBinder.Dispose
+    fullName: VDS.RDF.Query.SparqlResultBinder.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlResultBinder.Dispose
+    name: Dispose
+    nameWithType: SparqlResultBinder.Dispose
+    fullName: VDS.RDF.Query.SparqlResultBinder.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<LeviathanLeftJoinBinder>()
+  nameWithType: Extensions.AsEnumerable<LeviathanLeftJoinBinder>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.LeviathanLeftJoinBinder>()
+  nameWithType.vb: Extensions.AsEnumerable(Of LeviathanLeftJoinBinder)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.LeviathanLeftJoinBinder)()
+  name.vb: AsEnumerable(Of LeviathanLeftJoinBinder)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<LeviathanLeftJoinBinder>
+    nameWithType: Extensions.AsEnumerable<LeviathanLeftJoinBinder>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.LeviathanLeftJoinBinder>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of LeviathanLeftJoinBinder)
+    nameWithType: Extensions.AsEnumerable(Of LeviathanLeftJoinBinder)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.LeviathanLeftJoinBinder)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.#ctor*
+  commentId: Overload:VDS.RDF.Query.LeviathanLeftJoinBinder.#ctor
+  name: LeviathanLeftJoinBinder
+  nameWithType: LeviathanLeftJoinBinder.LeviathanLeftJoinBinder
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.LeviathanLeftJoinBinder
+- uid: VDS.RDF.Query.Algebra.BaseMultiset
+  commentId: T:VDS.RDF.Query.Algebra.BaseMultiset
+  parent: VDS.RDF.Query.Algebra
+  name: BaseMultiset
+  nameWithType: BaseMultiset
+  fullName: VDS.RDF.Query.Algebra.BaseMultiset
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.SparqlResultBinder.Value(System.String,System.Int32)
+  commentId: M:VDS.RDF.Query.SparqlResultBinder.Value(System.String,System.Int32)
+  parent: VDS.RDF.Query.SparqlResultBinder
+  isExternal: true
+  name: Value(String, Int32)
+  nameWithType: SparqlResultBinder.Value(String, Int32)
+  fullName: VDS.RDF.Query.SparqlResultBinder.Value(System.String, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlResultBinder.Value(System.String,System.Int32)
+    name: Value
+    nameWithType: SparqlResultBinder.Value
+    fullName: VDS.RDF.Query.SparqlResultBinder.Value
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlResultBinder.Value(System.String,System.Int32)
+    name: Value
+    nameWithType: SparqlResultBinder.Value
+    fullName: VDS.RDF.Query.SparqlResultBinder.Value
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.Value*
+  commentId: Overload:VDS.RDF.Query.LeviathanLeftJoinBinder.Value
+  name: Value
+  nameWithType: LeviathanLeftJoinBinder.Value
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.Value
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.SparqlResultBinder.Variables
+  commentId: P:VDS.RDF.Query.SparqlResultBinder.Variables
+  parent: VDS.RDF.Query.SparqlResultBinder
+  name: Variables
+  nameWithType: SparqlResultBinder.Variables
+  fullName: VDS.RDF.Query.SparqlResultBinder.Variables
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.Variables*
+  commentId: Overload:VDS.RDF.Query.LeviathanLeftJoinBinder.Variables
+  name: Variables
+  nameWithType: LeviathanLeftJoinBinder.Variables
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.Variables
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.SparqlResultBinder.BindingIDs
+  commentId: P:VDS.RDF.Query.SparqlResultBinder.BindingIDs
+  parent: VDS.RDF.Query.SparqlResultBinder
+  name: BindingIDs
+  nameWithType: SparqlResultBinder.BindingIDs
+  fullName: VDS.RDF.Query.SparqlResultBinder.BindingIDs
+- uid: VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs*
+  commentId: Overload:VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs
+  name: BindingIDs
+  nameWithType: LeviathanLeftJoinBinder.BindingIDs
+  fullName: VDS.RDF.Query.LeviathanLeftJoinBinder.BindingIDs
+- uid: System.Collections.Generic.IEnumerable{System.Int32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Int32>
+  nameWithType: IEnumerable<Int32>
+  fullName: System.Collections.Generic.IEnumerable<System.Int32>
+  nameWithType.vb: IEnumerable(Of Int32)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Int32)
+  name.vb: IEnumerable(Of Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

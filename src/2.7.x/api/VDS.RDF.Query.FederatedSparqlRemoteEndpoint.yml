@@ -1,0 +1,2678 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  commentId: T:VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  id: FederatedSparqlRemoteEndpoint
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlRemoteEndpoint})
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Uri)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(System.Uri)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(System.Uri)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  langs:
+  - csharp
+  - vb
+  name: FederatedSparqlRemoteEndpoint
+  nameWithType: FederatedSparqlRemoteEndpoint
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FederatedSparqlRemoteEndpoint
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 47
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nA Class for connecting to multiple remote SPARQL Endpoints and federating queries over them with the data merging done locally.\n"
+  remarks: "\n<p>\nQueries are federated by executing multiple requesting simultaneously and asynchronously against the endpoints in question with the data then merged locally.  The merging process does not attempt to remove duplicate data it just naively merges the data.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class FederatedSparqlRemoteEndpoint : SparqlRemoteEndpoint, IConfigurationSerializable'
+    content.vb: >-
+      Public Class FederatedSparqlRemoteEndpoint
+          Inherits SparqlRemoteEndpoint
+          Implements IConfigurationSerializable
+  inheritance:
+  - System.Object
+  - VDS.RDF.BaseEndpoint
+  - VDS.RDF.Query.SparqlRemoteEndpoint
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  inheritedMembers:
+  - VDS.RDF.Query.SparqlRemoteEndpoint.DefaultGraphs
+  - VDS.RDF.Query.SparqlRemoteEndpoint.NamedGraphs
+  - VDS.RDF.Query.SparqlRemoteEndpoint.ResultsAcceptHeader
+  - VDS.RDF.Query.SparqlRemoteEndpoint.RdfAcceptHeader
+  - VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String,VDS.RDF.SparqlResultsCallback,System.Object)
+  - VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+  - VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String,VDS.RDF.GraphCallback,System.Object)
+  - VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+  - VDS.RDF.BaseEndpoint.Uri
+  - VDS.RDF.BaseEndpoint.Credentials
+  - VDS.RDF.BaseEndpoint.UserAgent
+  - VDS.RDF.BaseEndpoint.HttpMode
+  - VDS.RDF.BaseEndpoint.Timeout
+  - VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  - VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+  - VDS.RDF.BaseEndpoint.ClearCredentials
+  - VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  - VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  - VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  - VDS.RDF.BaseEndpoint.Proxy
+  - VDS.RDF.BaseEndpoint.ClearProxy
+  - VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+  - VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+  - VDS.RDF.BaseEndpoint.ProxyCredentials
+  - VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  - VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  - VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.FederatedSparqlRemoteEndpoint.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint)
+  id: '#ctor(VDS.RDF.Query.SparqlRemoteEndpoint)'
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: FederatedSparqlRemoteEndpoint(SparqlRemoteEndpoint)
+  nameWithType: FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(SparqlRemoteEndpoint)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Federated SPARQL Endpoint using a given Endpoint.\n"
+  example: []
+  syntax:
+    content: public FederatedSparqlRemoteEndpoint(SparqlRemoteEndpoint endpoint)
+    parameters:
+    - id: endpoint
+      type: VDS.RDF.Query.SparqlRemoteEndpoint
+      description: Endpoint.
+    content.vb: Public Sub New(endpoint As SparqlRemoteEndpoint)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlRemoteEndpoint})
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlRemoteEndpoint})
+  id: '#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlRemoteEndpoint})'
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: FederatedSparqlRemoteEndpoint(IEnumerable<SparqlRemoteEndpoint>)
+  nameWithType: FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(IEnumerable<SparqlRemoteEndpoint>)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(System.Collections.Generic.IEnumerable<VDS.RDF.Query.SparqlRemoteEndpoint>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Federated SPARQL Endpoint using the given Endpoints.\n"
+  example: []
+  syntax:
+    content: public FederatedSparqlRemoteEndpoint(IEnumerable<SparqlRemoteEndpoint> endpoints)
+    parameters:
+    - id: endpoints
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlRemoteEndpoint}
+      description: Endpoints.
+    content.vb: Public Sub New(endpoints As IEnumerable(Of SparqlRemoteEndpoint))
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor*
+  nameWithType.vb: FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(IEnumerable(Of SparqlRemoteEndpoint))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.SparqlRemoteEndpoint))
+  name.vb: FederatedSparqlRemoteEndpoint(IEnumerable(Of SparqlRemoteEndpoint))
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Uri)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Uri)
+  id: '#ctor(System.Uri)'
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: FederatedSparqlRemoteEndpoint(Uri)
+  nameWithType: FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(Uri)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 76
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Federated SPARQL Endpoint by creating a new <xref href=\"VDS.RDF.Query.SparqlRemoteEndpoint\" data-throw-if-not-resolved=\"false\"></xref> for the given URI.\n"
+  example: []
+  syntax:
+    content: public FederatedSparqlRemoteEndpoint(Uri endpointUri)
+    parameters:
+    - id: endpointUri
+      type: System.Uri
+      description: Endpoint URI.
+    content.vb: Public Sub New(endpointUri As Uri)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor(System.Collections.Generic.IEnumerable{System.Uri})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.Uri})'
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: FederatedSparqlRemoteEndpoint(IEnumerable<Uri>)
+  nameWithType: FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(System.Collections.Generic.IEnumerable<System.Uri>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 85
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Federated SPARQL Endpoint by creating a <xref href=\"VDS.RDF.Query.SparqlRemoteEndpoint\" data-throw-if-not-resolved=\"false\"></xref> for each of the given URI.\n"
+  example: []
+  syntax:
+    content: public FederatedSparqlRemoteEndpoint(IEnumerable<Uri> endpointUris)
+    parameters:
+    - id: endpointUris
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+      description: Endpoint URIs.
+    content.vb: Public Sub New(endpointUris As IEnumerable(Of Uri))
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor*
+  nameWithType.vb: FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(IEnumerable(Of Uri))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: FederatedSparqlRemoteEndpoint(IEnumerable(Of Uri))
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  id: AddEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: AddEndpoint(SparqlRemoteEndpoint)
+  nameWithType: FederatedSparqlRemoteEndpoint.AddEndpoint(SparqlRemoteEndpoint)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddEndpoint
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 94
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAdds a additional endpoint to be used by this endpoint.\n"
+  example: []
+  syntax:
+    content: public void AddEndpoint(SparqlRemoteEndpoint endpoint)
+    parameters:
+    - id: endpoint
+      type: VDS.RDF.Query.SparqlRemoteEndpoint
+      description: Endpoint.
+    content.vb: Public Sub AddEndpoint(endpoint As SparqlRemoteEndpoint)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(System.Uri)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(System.Uri)
+  id: AddEndpoint(System.Uri)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: AddEndpoint(Uri)
+  nameWithType: FederatedSparqlRemoteEndpoint.AddEndpoint(Uri)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddEndpoint
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 103
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAdds an additional endpoint to be used by this endpoint.\n"
+  example: []
+  syntax:
+    content: public void AddEndpoint(Uri endpointUri)
+    parameters:
+    - id: endpointUri
+      type: System.Uri
+      description: Endpoint URI.
+    content.vb: Public Sub AddEndpoint(endpointUri As Uri)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  id: RemoveEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: RemoveEndpoint(SparqlRemoteEndpoint)
+  nameWithType: FederatedSparqlRemoteEndpoint.RemoveEndpoint(SparqlRemoteEndpoint)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(VDS.RDF.Query.SparqlRemoteEndpoint)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveEndpoint
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 112
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRemoves a given endpoint from this endpoint.\n"
+  example: []
+  syntax:
+    content: public void RemoveEndpoint(SparqlRemoteEndpoint endpoint)
+    parameters:
+    - id: endpoint
+      type: VDS.RDF.Query.SparqlRemoteEndpoint
+      description: Endpoint.
+    content.vb: Public Sub RemoveEndpoint(endpoint As SparqlRemoteEndpoint)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(System.Uri)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(System.Uri)
+  id: RemoveEndpoint(System.Uri)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: RemoveEndpoint(Uri)
+  nameWithType: FederatedSparqlRemoteEndpoint.RemoveEndpoint(Uri)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveEndpoint
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 121
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRemoves all endpoints with the given URI from this endpoint.\n"
+  example: []
+  syntax:
+    content: public void RemoveEndpoint(Uri endpointUri)
+    parameters:
+    - id: endpointUri
+      type: System.Uri
+      description: Endpoint URI.
+    content.vb: Public Sub RemoveEndpoint(endpointUri As Uri)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  commentId: P:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  id: IgnoreFailedRequests
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: IgnoreFailedRequests
+  nameWithType: FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IgnoreFailedRequests
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 134
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets whether a failed request on one endpoint should cause the entire request to fail.\n"
+  remarks: "\n<p>\nBy default if a request on any of the endpoint fails or times out then the entire request will fail.\n</p>\n"
+  example: []
+  syntax:
+    content: public bool IgnoreFailedRequests { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IgnoreFailedRequests As Boolean
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+  commentId: P:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+  id: MaxSimultaneousRequests
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: MaxSimultaneousRequests
+  nameWithType: FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: MaxSimultaneousRequests
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 149
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the maximum number of endpoints this endpoint will issue queries to at any one time.\n"
+  example: []
+  syntax:
+    content: public int MaxSimultaneousRequests { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxSimultaneousRequests As Integer
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String)
+  id: QueryRaw(System.String)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: QueryRaw(String)
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryRaw(String)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryRaw
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 170
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nMakes a Query to a Sparql Endpoint and returns the raw Response.\n"
+  example: []
+  syntax:
+    content: public override HttpWebResponse QueryRaw(string sparqlQuery)
+    parameters:
+    - id: sparqlQuery
+      type: System.String
+      description: Sparql Query String.
+    return:
+      type: System.Net.HttpWebResponse
+      description: ''
+    content.vb: Public Overrides Function QueryRaw(sparqlQuery As String) As HttpWebResponse
+  overridden: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: Thrown if more than one endpoint is in use since for any federated endpoint which used more than one endpoint there is no logical/sensible way to combine the result streams.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+  id: QueryRaw(System.String,System.String[])
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: QueryRaw(String, String[])
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryRaw(String, String[])
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String, System.String[])
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryRaw
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 186
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nMakes a Query to a Sparql Endpoint and returns the raw Response.\n"
+  example: []
+  syntax:
+    content: public override HttpWebResponse QueryRaw(string sparqlQuery, string[] mimeTypes)
+    parameters:
+    - id: sparqlQuery
+      type: System.String
+      description: Sparql Query String.
+    - id: mimeTypes
+      type: System.String[]
+      description: MIME Types to use for the Accept Header.
+    return:
+      type: System.Net.HttpWebResponse
+      description: ''
+    content.vb: Public Overrides Function QueryRaw(sparqlQuery As String, mimeTypes As String()) As HttpWebResponse
+  overridden: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: Thrown if more than one endpoint is in use since for any federated endpoint which used more than one endpoint there is no logical/sensible way to combine the result streams.
+  nameWithType.vb: FederatedSparqlRemoteEndpoint.QueryRaw(String, String())
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw(System.String, System.String())
+  name.vb: QueryRaw(String, String())
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  id: QueryWithResultGraph(System.String)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: QueryWithResultGraph(String)
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryWithResultGraph(String)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryWithResultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 210
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nMakes a Query where the expected Result is an RDF Graph ie. CONSTRUCT and DESCRIBE Queries.\n"
+  remarks: "\n<p>\nThe query is executed by sending it federating it to all the endpoints this endpoint contains using simultaneous asychronous calls.  Once these calls complete the results are naivley merged together (no duplicate data removal) and returned as a single result.\n</p>\n<p>\nBy default if any of the endpoints used return an error then the entire query will fail and an exception will be thrown, this behaviour can be overridden by setting the <xref href=\"VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests\" data-throw-if-not-resolved=\"false\"></xref> property to be true in which case the result will be the merge of the results from all endpoints which successfully provided a result.\n</p>\n"
+  example: []
+  syntax:
+    content: public override IGraph QueryWithResultGraph(string sparqlQuery)
+    parameters:
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query String.
+    return:
+      type: VDS.RDF.IGraph
+      description: RDF Graph.
+    content.vb: Public Overrides Function QueryWithResultGraph(sparqlQuery As String) As IGraph
+  overridden: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph*
+  exceptions:
+  - type: VDS.RDF.Query.RdfQueryException
+    commentId: T:VDS.RDF.Query.RdfQueryException
+    description: Thrown if any of the requests to the endpoints fail.
+  - type: VDS.RDF.Query.RdfQueryTimeoutException
+    commentId: T:VDS.RDF.Query.RdfQueryTimeoutException
+    description: Thrown if not all the requests complete within the set timeout.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+  id: QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: QueryWithResultGraph(IRdfHandler, String)
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryWithResultGraph(IRdfHandler, String)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryWithResultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 225
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nMakes a Query where the expected result is a Graph i.e. a CONSTRUCT or DESCRIBE query.\n"
+  example: []
+  syntax:
+    content: public override void QueryWithResultGraph(IRdfHandler handler, string sparqlQuery)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to process the results.
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query.
+    content.vb: Public Overrides Sub QueryWithResultGraph(handler As IRdfHandler, sparqlQuery As String)
+  overridden: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  id: QueryWithResultSet(System.String)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: QueryWithResultSet(String)
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryWithResultSet(String)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryWithResultSet
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 367
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nMakes a Query where the expected Result is a SparqlResultSet ie. SELECT and ASK Queries.\n"
+  remarks: "\n<p>\nThe query is executed by sending it federating it to all the endpoints this endpoint contains using simultaneous asychronous calls.  Once these calls complete the results are naivley merged together (no duplicate data removal) and returned as a single result.\n</p>\n<p>\nBy default if any of the endpoints used return an error then the entire query will fail and an exception will be thrown, this behaviour can be overridden by setting the <xref href=\"VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests\" data-throw-if-not-resolved=\"false\"></xref> property to be true in which case the result will be the merge of the results from all endpoints which successfully provided a result.\n</p>\n"
+  example: []
+  syntax:
+    content: public override SparqlResultSet QueryWithResultSet(string sparqlQuery)
+    parameters:
+    - id: sparqlQuery
+      type: System.String
+      description: Sparql Query String.
+    return:
+      type: VDS.RDF.Query.SparqlResultSet
+      description: A Sparql Result Set.
+    content.vb: Public Overrides Function QueryWithResultSet(sparqlQuery As String) As SparqlResultSet
+  overridden: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet*
+  exceptions:
+  - type: VDS.RDF.Query.RdfQueryException
+    commentId: T:VDS.RDF.Query.RdfQueryException
+    description: Thrown if any of the requests to the endpoints fail.
+  - type: VDS.RDF.Query.RdfQueryTimeoutException
+    commentId: T:VDS.RDF.Query.RdfQueryTimeoutException
+    description: Thrown if not all the requests complete within the set timeout.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+  id: QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: QueryWithResultSet(ISparqlResultsHandler, String)
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler, String)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryWithResultSet
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 385
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nMakes a Query where the expected Result is a SparqlResultSet ie. SELECT and ASK Queries.\n"
+  example: []
+  syntax:
+    content: public override void QueryWithResultSet(ISparqlResultsHandler handler, string sparqlQuery)
+    parameters:
+    - id: handler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler to process the results.
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query String.
+    content.vb: Public Overrides Sub QueryWithResultSet(handler As ISparqlResultsHandler, sparqlQuery As String)
+  overridden: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet*
+  exceptions:
+  - type: VDS.RDF.Query.RdfQueryException
+    commentId: T:VDS.RDF.Query.RdfQueryException
+    description: Thrown if any of the requests to the endpoints fail.
+  - type: VDS.RDF.Query.RdfQueryTimeoutException
+    commentId: T:VDS.RDF.Query.RdfQueryTimeoutException
+    description: Thrown if not all the requests complete within the set timeout.
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  id: SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Query.FederatedSparqlRemoteEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: FederatedSparqlRemoteEndpoint.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SerializeConfiguration
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/FederatedSparqlRemoteEndpoint.cs
+    startLine: 518
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSerializes the Endpoint&apos;s Configuration.\n"
+  example: []
+  syntax:
+    content: public override void SerializeConfiguration(ConfigurationSerializationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Configuration.ConfigurationSerializationContext
+      description: Configuration Serialization Context.
+    content.vb: Public Overrides Sub SerializeConfiguration(context As ConfigurationSerializationContext)
+  overridden: VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  overload: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.BaseEndpoint
+  commentId: T:VDS.RDF.BaseEndpoint
+  parent: VDS.RDF
+  name: BaseEndpoint
+  nameWithType: BaseEndpoint
+  fullName: VDS.RDF.BaseEndpoint
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint
+  commentId: T:VDS.RDF.Query.SparqlRemoteEndpoint
+  parent: VDS.RDF.Query
+  name: SparqlRemoteEndpoint
+  nameWithType: SparqlRemoteEndpoint
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.DefaultGraphs
+  commentId: P:VDS.RDF.Query.SparqlRemoteEndpoint.DefaultGraphs
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  name: DefaultGraphs
+  nameWithType: SparqlRemoteEndpoint.DefaultGraphs
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.DefaultGraphs
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.NamedGraphs
+  commentId: P:VDS.RDF.Query.SparqlRemoteEndpoint.NamedGraphs
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  name: NamedGraphs
+  nameWithType: SparqlRemoteEndpoint.NamedGraphs
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.NamedGraphs
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.ResultsAcceptHeader
+  commentId: P:VDS.RDF.Query.SparqlRemoteEndpoint.ResultsAcceptHeader
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  name: ResultsAcceptHeader
+  nameWithType: SparqlRemoteEndpoint.ResultsAcceptHeader
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.ResultsAcceptHeader
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.RdfAcceptHeader
+  commentId: P:VDS.RDF.Query.SparqlRemoteEndpoint.RdfAcceptHeader
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  name: RdfAcceptHeader
+  nameWithType: SparqlRemoteEndpoint.RdfAcceptHeader
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.RdfAcceptHeader
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String,VDS.RDF.SparqlResultsCallback,System.Object)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String,VDS.RDF.SparqlResultsCallback,System.Object)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultSet(String, SparqlResultsCallback, Object)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultSet(String, SparqlResultsCallback, Object)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String, VDS.RDF.SparqlResultsCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String,VDS.RDF.SparqlResultsCallback,System.Object)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.SparqlResultsCallback
+    name: SparqlResultsCallback
+    nameWithType: SparqlResultsCallback
+    fullName: VDS.RDF.SparqlResultsCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String,VDS.RDF.SparqlResultsCallback,System.Object)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.SparqlResultsCallback
+    name: SparqlResultsCallback
+    nameWithType: SparqlResultsCallback
+    fullName: VDS.RDF.SparqlResultsCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultSet(ISparqlResultsHandler, String, QueryCallback, Object)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler, String, QueryCallback, Object)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler, System.String, VDS.RDF.QueryCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QueryCallback
+    name: QueryCallback
+    nameWithType: QueryCallback
+    fullName: VDS.RDF.QueryCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QueryCallback
+    name: QueryCallback
+    nameWithType: QueryCallback
+    fullName: VDS.RDF.QueryCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String,VDS.RDF.GraphCallback,System.Object)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String,VDS.RDF.GraphCallback,System.Object)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultGraph(String, GraphCallback, Object)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph(String, GraphCallback, Object)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String, VDS.RDF.GraphCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String,VDS.RDF.GraphCallback,System.Object)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.GraphCallback
+    name: GraphCallback
+    nameWithType: GraphCallback
+    fullName: VDS.RDF.GraphCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String,VDS.RDF.GraphCallback,System.Object)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.GraphCallback
+    name: GraphCallback
+    nameWithType: GraphCallback
+    fullName: VDS.RDF.GraphCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultGraph(IRdfHandler, String, QueryCallback, Object)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph(IRdfHandler, String, QueryCallback, Object)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler, System.String, VDS.RDF.QueryCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QueryCallback
+    name: QueryCallback
+    nameWithType: QueryCallback
+    fullName: VDS.RDF.QueryCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.QueryCallback,System.Object)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QueryCallback
+    name: QueryCallback
+    nameWithType: QueryCallback
+    fullName: VDS.RDF.QueryCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.Uri
+  commentId: P:VDS.RDF.BaseEndpoint.Uri
+  parent: VDS.RDF.BaseEndpoint
+  name: Uri
+  nameWithType: BaseEndpoint.Uri
+  fullName: VDS.RDF.BaseEndpoint.Uri
+- uid: VDS.RDF.BaseEndpoint.Credentials
+  commentId: P:VDS.RDF.BaseEndpoint.Credentials
+  parent: VDS.RDF.BaseEndpoint
+  name: Credentials
+  nameWithType: BaseEndpoint.Credentials
+  fullName: VDS.RDF.BaseEndpoint.Credentials
+- uid: VDS.RDF.BaseEndpoint.UserAgent
+  commentId: P:VDS.RDF.BaseEndpoint.UserAgent
+  parent: VDS.RDF.BaseEndpoint
+  name: UserAgent
+  nameWithType: BaseEndpoint.UserAgent
+  fullName: VDS.RDF.BaseEndpoint.UserAgent
+- uid: VDS.RDF.BaseEndpoint.HttpMode
+  commentId: P:VDS.RDF.BaseEndpoint.HttpMode
+  parent: VDS.RDF.BaseEndpoint
+  name: HttpMode
+  nameWithType: BaseEndpoint.HttpMode
+  fullName: VDS.RDF.BaseEndpoint.HttpMode
+- uid: VDS.RDF.BaseEndpoint.Timeout
+  commentId: P:VDS.RDF.BaseEndpoint.Timeout
+  parent: VDS.RDF.BaseEndpoint
+  name: Timeout
+  nameWithType: BaseEndpoint.Timeout
+  fullName: VDS.RDF.BaseEndpoint.Timeout
+- uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: SetCredentials(String, String)
+  nameWithType: BaseEndpoint.SetCredentials(String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetCredentials(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseEndpoint.SetCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseEndpoint.SetCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: SetCredentials(String, String, String)
+  nameWithType: BaseEndpoint.SetCredentials(String, String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetCredentials(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseEndpoint.SetCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseEndpoint.SetCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.ClearCredentials
+  commentId: M:VDS.RDF.BaseEndpoint.ClearCredentials
+  parent: VDS.RDF.BaseEndpoint
+  name: ClearCredentials()
+  nameWithType: BaseEndpoint.ClearCredentials()
+  fullName: VDS.RDF.BaseEndpoint.ClearCredentials()
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.ClearCredentials
+    name: ClearCredentials
+    nameWithType: BaseEndpoint.ClearCredentials
+    fullName: VDS.RDF.BaseEndpoint.ClearCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.ClearCredentials
+    name: ClearCredentials
+    nameWithType: BaseEndpoint.ClearCredentials
+    fullName: VDS.RDF.BaseEndpoint.ClearCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  commentId: P:VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  parent: VDS.RDF.BaseEndpoint
+  name: UseCredentialsForProxy
+  nameWithType: BaseEndpoint.UseCredentialsForProxy
+  fullName: VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+- uid: VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: SetProxy(String)
+  nameWithType: BaseEndpoint.SetProxy(String)
+  fullName: VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.SetProxy(System.String)
+    name: SetProxy
+    nameWithType: BaseEndpoint.SetProxy
+    fullName: VDS.RDF.BaseEndpoint.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.SetProxy(System.String)
+    name: SetProxy
+    nameWithType: BaseEndpoint.SetProxy
+    fullName: VDS.RDF.BaseEndpoint.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: SetProxy(Uri)
+  nameWithType: BaseEndpoint.SetProxy(Uri)
+  fullName: VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+    name: SetProxy
+    nameWithType: BaseEndpoint.SetProxy
+    fullName: VDS.RDF.BaseEndpoint.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+    name: SetProxy
+    nameWithType: BaseEndpoint.SetProxy
+    fullName: VDS.RDF.BaseEndpoint.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.Proxy
+  commentId: P:VDS.RDF.BaseEndpoint.Proxy
+  parent: VDS.RDF.BaseEndpoint
+  name: Proxy
+  nameWithType: BaseEndpoint.Proxy
+  fullName: VDS.RDF.BaseEndpoint.Proxy
+- uid: VDS.RDF.BaseEndpoint.ClearProxy
+  commentId: M:VDS.RDF.BaseEndpoint.ClearProxy
+  parent: VDS.RDF.BaseEndpoint
+  name: ClearProxy()
+  nameWithType: BaseEndpoint.ClearProxy()
+  fullName: VDS.RDF.BaseEndpoint.ClearProxy()
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.ClearProxy
+    name: ClearProxy
+    nameWithType: BaseEndpoint.ClearProxy
+    fullName: VDS.RDF.BaseEndpoint.ClearProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.ClearProxy
+    name: ClearProxy
+    nameWithType: BaseEndpoint.ClearProxy
+    fullName: VDS.RDF.BaseEndpoint.ClearProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: SetProxyCredentials(String, String)
+  nameWithType: BaseEndpoint.SetProxyCredentials(String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseEndpoint.SetProxyCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseEndpoint.SetProxyCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: SetProxyCredentials(String, String, String)
+  nameWithType: BaseEndpoint.SetProxyCredentials(String, String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseEndpoint.SetProxyCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseEndpoint.SetProxyCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.ProxyCredentials
+  commentId: P:VDS.RDF.BaseEndpoint.ProxyCredentials
+  parent: VDS.RDF.BaseEndpoint
+  name: ProxyCredentials
+  nameWithType: BaseEndpoint.ProxyCredentials
+  fullName: VDS.RDF.BaseEndpoint.ProxyCredentials
+- uid: VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  commentId: M:VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  parent: VDS.RDF.BaseEndpoint
+  name: ClearProxyCredentials()
+  nameWithType: BaseEndpoint.ClearProxyCredentials()
+  fullName: VDS.RDF.BaseEndpoint.ClearProxyCredentials()
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.ClearProxyCredentials
+    name: ClearProxyCredentials
+    nameWithType: BaseEndpoint.ClearProxyCredentials
+    fullName: VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.ClearProxyCredentials
+    name: ClearProxyCredentials
+    nameWithType: BaseEndpoint.ClearProxyCredentials
+    fullName: VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  commentId: M:VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: ApplyRequestOptions(HttpWebRequest)
+  nameWithType: BaseEndpoint.ApplyRequestOptions(HttpWebRequest)
+  fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseEndpoint.ApplyRequestOptions
+    fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseEndpoint.ApplyRequestOptions
+    fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  commentId: M:VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: ApplyCustomRequestOptions(HttpWebRequest)
+  nameWithType: BaseEndpoint.ApplyCustomRequestOptions(HttpWebRequest)
+  fullName: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyCustomRequestOptions
+    nameWithType: BaseEndpoint.ApplyCustomRequestOptions
+    fullName: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyCustomRequestOptions
+    nameWithType: BaseEndpoint.ApplyCustomRequestOptions
+    fullName: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<FederatedSparqlRemoteEndpoint>()
+  nameWithType: Extensions.AsEnumerable<FederatedSparqlRemoteEndpoint>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.FederatedSparqlRemoteEndpoint>()
+  nameWithType.vb: Extensions.AsEnumerable(Of FederatedSparqlRemoteEndpoint)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.FederatedSparqlRemoteEndpoint)()
+  name.vb: AsEnumerable(Of FederatedSparqlRemoteEndpoint)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<FederatedSparqlRemoteEndpoint>
+    nameWithType: Extensions.AsEnumerable<FederatedSparqlRemoteEndpoint>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.FederatedSparqlRemoteEndpoint>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of FederatedSparqlRemoteEndpoint)
+    nameWithType: Extensions.AsEnumerable(Of FederatedSparqlRemoteEndpoint)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.FederatedSparqlRemoteEndpoint)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.#ctor
+  name: FederatedSparqlRemoteEndpoint
+  nameWithType: FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.FederatedSparqlRemoteEndpoint
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlRemoteEndpoint}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.SparqlRemoteEndpoint}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<SparqlRemoteEndpoint>
+  nameWithType: IEnumerable<SparqlRemoteEndpoint>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.SparqlRemoteEndpoint>
+  nameWithType.vb: IEnumerable(Of SparqlRemoteEndpoint)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.SparqlRemoteEndpoint)
+  name.vb: IEnumerable(Of SparqlRemoteEndpoint)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint
+    name: SparqlRemoteEndpoint
+    nameWithType: SparqlRemoteEndpoint
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint
+    name: SparqlRemoteEndpoint
+    nameWithType: SparqlRemoteEndpoint
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.Collections.Generic.IEnumerable{System.Uri}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Uri}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Uri>
+  nameWithType: IEnumerable<Uri>
+  fullName: System.Collections.Generic.IEnumerable<System.Uri>
+  nameWithType.vb: IEnumerable(Of Uri)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Uri)
+  name.vb: IEnumerable(Of Uri)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint
+  name: AddEndpoint
+  nameWithType: FederatedSparqlRemoteEndpoint.AddEndpoint
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.AddEndpoint
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint
+  name: RemoveEndpoint
+  nameWithType: FederatedSparqlRemoteEndpoint.RemoveEndpoint
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.RemoveEndpoint
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  name: IgnoreFailedRequests
+  nameWithType: FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+  name: MaxSimultaneousRequests
+  nameWithType: FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.MaxSimultaneousRequests
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryRaw(String)
+  nameWithType: SparqlRemoteEndpoint.QueryRaw(String)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String)
+    name: QueryRaw
+    nameWithType: SparqlRemoteEndpoint.QueryRaw
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String)
+    name: QueryRaw
+    nameWithType: SparqlRemoteEndpoint.QueryRaw
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw
+  name: QueryRaw
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryRaw
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryRaw
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Net.HttpWebResponse
+  commentId: T:System.Net.HttpWebResponse
+  parent: System.Net
+  isExternal: true
+  name: HttpWebResponse
+  nameWithType: HttpWebResponse
+  fullName: System.Net.HttpWebResponse
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryRaw(String, String[])
+  nameWithType: SparqlRemoteEndpoint.QueryRaw(String, String[])
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String, System.String[])
+  nameWithType.vb: SparqlRemoteEndpoint.QueryRaw(String, String())
+  fullName.vb: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String, System.String())
+  name.vb: QueryRaw(String, String())
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+    name: QueryRaw
+    nameWithType: SparqlRemoteEndpoint.QueryRaw
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw(System.String,System.String[])
+    name: QueryRaw
+    nameWithType: SparqlRemoteEndpoint.QueryRaw
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryRaw
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  commentId: P:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.IgnoreFailedRequests
+  isExternal: true
+- uid: VDS.RDF.Query.RdfQueryException
+  commentId: T:VDS.RDF.Query.RdfQueryException
+  parent: VDS.RDF.Query
+  name: RdfQueryException
+  nameWithType: RdfQueryException
+  fullName: VDS.RDF.Query.RdfQueryException
+- uid: VDS.RDF.Query.RdfQueryTimeoutException
+  commentId: T:VDS.RDF.Query.RdfQueryTimeoutException
+  name: RdfQueryTimeoutException
+  nameWithType: RdfQueryTimeoutException
+  fullName: VDS.RDF.Query.RdfQueryTimeoutException
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultGraph(String)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph(String)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(System.String)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph
+  name: QueryWithResultGraph
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryWithResultGraph
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultGraph
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultGraph(IRdfHandler, String)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph(IRdfHandler, String)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph(VDS.RDF.IRdfHandler,System.String)
+    name: QueryWithResultGraph
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultGraph
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultSet(String)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultSet(String)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(System.String)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet
+  name: QueryWithResultSet
+  nameWithType: FederatedSparqlRemoteEndpoint.QueryWithResultSet
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.QueryWithResultSet
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  isExternal: true
+  name: QueryWithResultSet(ISparqlResultsHandler, String)
+  nameWithType: SparqlRemoteEndpoint.QueryWithResultSet(ISparqlResultsHandler, String)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet(VDS.RDF.ISparqlResultsHandler,System.String)
+    name: QueryWithResultSet
+    nameWithType: SparqlRemoteEndpoint.QueryWithResultSet
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.QueryWithResultSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Query.SparqlRemoteEndpoint
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: SparqlRemoteEndpoint.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: SparqlRemoteEndpoint.SerializeConfiguration
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: SparqlRemoteEndpoint.SerializeConfiguration
+    fullName: VDS.RDF.Query.SparqlRemoteEndpoint.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration*
+  commentId: Overload:VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration
+  name: SerializeConfiguration
+  nameWithType: FederatedSparqlRemoteEndpoint.SerializeConfiguration
+  fullName: VDS.RDF.Query.FederatedSparqlRemoteEndpoint.SerializeConfiguration
+- uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+  commentId: T:VDS.RDF.Configuration.ConfigurationSerializationContext
+  parent: VDS.RDF.Configuration
+  name: ConfigurationSerializationContext
+  nameWithType: ConfigurationSerializationContext
+  fullName: VDS.RDF.Configuration.ConfigurationSerializationContext

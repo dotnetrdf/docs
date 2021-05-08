@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.JsonLd.INodeMapGenerator
+  commentId: T:VDS.RDF.JsonLd.INodeMapGenerator
+  id: INodeMapGenerator
+  parent: VDS.RDF.JsonLd
+  children:
+  - VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap(Newtonsoft.Json.Linq.JObject)
+  - VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap(Newtonsoft.Json.Linq.JToken,VDS.RDF.JsonLd.IBlankNodeGenerator)
+  langs:
+  - csharp
+  - vb
+  name: INodeMapGenerator
+  nameWithType: INodeMapGenerator
+  fullName: VDS.RDF.JsonLd.INodeMapGenerator
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/JsonLd/INodeMapGenerator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: INodeMapGenerator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/JsonLd/INodeMapGenerator.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.JsonLd
+  summary: "\nInterface for the JSON-LD node map generator.\n"
+  example: []
+  syntax:
+    content: public interface INodeMapGenerator
+    content.vb: Public Interface INodeMapGenerator
+  extensionMethods:
+  - VDS.RDF.JsonLd.INodeMapGenerator.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap(Newtonsoft.Json.Linq.JToken,VDS.RDF.JsonLd.IBlankNodeGenerator)
+  commentId: M:VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap(Newtonsoft.Json.Linq.JToken,VDS.RDF.JsonLd.IBlankNodeGenerator)
+  id: GenerateNodeMap(Newtonsoft.Json.Linq.JToken,VDS.RDF.JsonLd.IBlankNodeGenerator)
+  parent: VDS.RDF.JsonLd.INodeMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateNodeMap(JToken, IBlankNodeGenerator)
+  nameWithType: INodeMapGenerator.GenerateNodeMap(JToken, IBlankNodeGenerator)
+  fullName: VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap(Newtonsoft.Json.Linq.JToken, VDS.RDF.JsonLd.IBlankNodeGenerator)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/JsonLd/INodeMapGenerator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GenerateNodeMap
+    path: ../../dotNetRDF/Libraries/dotNetRDF/JsonLd/INodeMapGenerator.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.JsonLd
+  summary: "\nApplies the Node Map Generation algorithm to the specified input.\n"
+  example: []
+  syntax:
+    content: JObject GenerateNodeMap(JToken element, IBlankNodeGenerator identifierGenerator = null)
+    parameters:
+    - id: element
+      type: Newtonsoft.Json.Linq.JToken
+      description: The element to be processed.
+    - id: identifierGenerator
+      type: VDS.RDF.JsonLd.IBlankNodeGenerator
+      description: The identifier generator instance to use when creating new blank node identifiers. Defaults to a new instance of <xref href="VDS.RDF.JsonLd.Processors.BlankNodeGenerator" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Newtonsoft.Json.Linq.JObject
+      description: The generated node map dictionary as a JObject instance.
+    content.vb: Function GenerateNodeMap(element As JToken, identifierGenerator As IBlankNodeGenerator = Nothing) As JObject
+  overload: VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap*
+- uid: VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap(Newtonsoft.Json.Linq.JObject)
+  commentId: M:VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap(Newtonsoft.Json.Linq.JObject)
+  id: GenerateMergedNodeMap(Newtonsoft.Json.Linq.JObject)
+  parent: VDS.RDF.JsonLd.INodeMapGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateMergedNodeMap(JObject)
+  nameWithType: INodeMapGenerator.GenerateMergedNodeMap(JObject)
+  fullName: VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap(Newtonsoft.Json.Linq.JObject)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/JsonLd/INodeMapGenerator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GenerateMergedNodeMap
+    path: ../../dotNetRDF/Libraries/dotNetRDF/JsonLd/INodeMapGenerator.cs
+    startLine: 49
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.JsonLd
+  summary: "\nCreates a new node map object by merging the graph-level node maps contained in the input graph map object.\n"
+  example: []
+  syntax:
+    content: JObject GenerateMergedNodeMap(JObject graphMap)
+    parameters:
+    - id: graphMap
+      type: Newtonsoft.Json.Linq.JObject
+      description: The input graph map to be merged.
+    return:
+      type: Newtonsoft.Json.Linq.JObject
+      description: The merged node map as a new object (the original node map is not modified).
+    content.vb: Function GenerateMergedNodeMap(graphMap As JObject) As JObject
+  overload: VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap*
+references:
+- uid: VDS.RDF.JsonLd
+  commentId: N:VDS.RDF.JsonLd
+  name: VDS.RDF.JsonLd
+  nameWithType: VDS.RDF.JsonLd
+  fullName: VDS.RDF.JsonLd
+- uid: VDS.RDF.JsonLd.INodeMapGenerator.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<INodeMapGenerator>()
+  nameWithType: Extensions.AsEnumerable<INodeMapGenerator>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.JsonLd.INodeMapGenerator>()
+  nameWithType.vb: Extensions.AsEnumerable(Of INodeMapGenerator)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.JsonLd.INodeMapGenerator)()
+  name.vb: AsEnumerable(Of INodeMapGenerator)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<INodeMapGenerator>
+    nameWithType: Extensions.AsEnumerable<INodeMapGenerator>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.JsonLd.INodeMapGenerator>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of INodeMapGenerator)
+    nameWithType: Extensions.AsEnumerable(Of INodeMapGenerator)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.JsonLd.INodeMapGenerator)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.JsonLd.Processors.BlankNodeGenerator
+  commentId: T:VDS.RDF.JsonLd.Processors.BlankNodeGenerator
+  name: BlankNodeGenerator
+  nameWithType: BlankNodeGenerator
+  fullName: VDS.RDF.JsonLd.Processors.BlankNodeGenerator
+- uid: VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap*
+  commentId: Overload:VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap
+  name: GenerateNodeMap
+  nameWithType: INodeMapGenerator.GenerateNodeMap
+  fullName: VDS.RDF.JsonLd.INodeMapGenerator.GenerateNodeMap
+- uid: Newtonsoft.Json.Linq.JToken
+  commentId: T:Newtonsoft.Json.Linq.JToken
+  parent: Newtonsoft.Json.Linq
+  isExternal: true
+  name: JToken
+  nameWithType: JToken
+  fullName: Newtonsoft.Json.Linq.JToken
+- uid: VDS.RDF.JsonLd.IBlankNodeGenerator
+  commentId: T:VDS.RDF.JsonLd.IBlankNodeGenerator
+  parent: VDS.RDF.JsonLd
+  name: IBlankNodeGenerator
+  nameWithType: IBlankNodeGenerator
+  fullName: VDS.RDF.JsonLd.IBlankNodeGenerator
+- uid: Newtonsoft.Json.Linq.JObject
+  commentId: T:Newtonsoft.Json.Linq.JObject
+  parent: Newtonsoft.Json.Linq
+  isExternal: true
+  name: JObject
+  nameWithType: JObject
+  fullName: Newtonsoft.Json.Linq.JObject
+- uid: Newtonsoft.Json.Linq
+  commentId: N:Newtonsoft.Json.Linq
+  isExternal: true
+  name: Newtonsoft.Json.Linq
+  nameWithType: Newtonsoft.Json.Linq
+  fullName: Newtonsoft.Json.Linq
+- uid: VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap*
+  commentId: Overload:VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap
+  name: GenerateMergedNodeMap
+  nameWithType: INodeMapGenerator.GenerateMergedNodeMap
+  fullName: VDS.RDF.JsonLd.INodeMapGenerator.GenerateMergedNodeMap

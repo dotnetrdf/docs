@@ -1,0 +1,443 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  commentId: T:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  id: IFullTextIndexer
+  parent: VDS.RDF.Query.FullText.Indexing
+  children:
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.IGraph)
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Query.Datasets.ISparqlDataset)
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Triple)
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.IGraph)
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Query.Datasets.ISparqlDataset)
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Triple)
+  langs:
+  - csharp
+  - vb
+  name: IFullTextIndexer
+  nameWithType: IFullTextIndexer
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IFullTextIndexer
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nInterface for classes that provide full text indexing functionality.\n"
+  example: []
+  syntax:
+    content: 'public interface IFullTextIndexer : IDisposable'
+    content.vb: >-
+      Public Interface IFullTextIndexer
+          Inherits IDisposable
+  extensionMethods:
+  - VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode
+  commentId: P:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode
+  id: IndexingMode
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: IndexingMode
+  nameWithType: IFullTextIndexer.IndexingMode
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IndexingMode
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 63
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nGets the Indexing Mode used.\n"
+  example: []
+  syntax:
+    content: IndexingMode IndexingMode { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.FullText.Indexing.IndexingMode
+    content.vb: ReadOnly Property IndexingMode As IndexingMode
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Triple)
+  id: Index(VDS.RDF.Triple)
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: Index(Triple)
+  nameWithType: IFullTextIndexer.Index(Triple)
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Index
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 75
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nIndexes a Triple.\n"
+  remarks: "\nImplementations <emph>SHOULD NOT</emph> automatically Flush changes to the indexes at the end of this operation.\n"
+  example: []
+  syntax:
+    content: void Index(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple.
+    content.vb: Sub Index(t As Triple)
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index*
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.IGraph)
+  id: Index(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: Index(IGraph)
+  nameWithType: IFullTextIndexer.Index(IGraph)
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Index
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 84
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nIndexes a Graph.\n"
+  remarks: "\nImplementations <emph>SHOULD</emph> automatically Flush changes to the indexes at the end of this operation.\n"
+  example: []
+  syntax:
+    content: void Index(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    content.vb: Sub Index(g As IGraph)
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index*
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Query.Datasets.ISparqlDataset)
+  id: Index(VDS.RDF.Query.Datasets.ISparqlDataset)
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: Index(ISparqlDataset)
+  nameWithType: IFullTextIndexer.Index(ISparqlDataset)
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index(VDS.RDF.Query.Datasets.ISparqlDataset)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Index
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nIndexes a Dataset.\n"
+  remarks: "\nImplementations <emph>SHOULD</emph> automatically Flush changes to the indexes at the end of this operation.\n"
+  example: []
+  syntax:
+    content: void Index(ISparqlDataset dataset)
+    parameters:
+    - id: dataset
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset.
+    content.vb: Sub Index(dataset As ISparqlDataset)
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index*
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Triple)
+  id: Unindex(VDS.RDF.Triple)
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: Unindex(Triple)
+  nameWithType: IFullTextIndexer.Unindex(Triple)
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Unindex
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 102
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nUnindexes a Triple.\n"
+  remarks: "\nImplementations <emph>SHOULD NOT</emph> automatically Flush changes to the indexes at the end of this operation.\n"
+  example: []
+  syntax:
+    content: void Unindex(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple.
+    content.vb: Sub Unindex(t As Triple)
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex*
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.IGraph)
+  id: Unindex(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: Unindex(IGraph)
+  nameWithType: IFullTextIndexer.Unindex(IGraph)
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Unindex
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 111
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nUnindexes a Graph.\n"
+  remarks: "\nImplementations <emph>SHOULD</emph> automatically Flush changes to the indexes at the end of this operation.\n"
+  example: []
+  syntax:
+    content: void Unindex(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    content.vb: Sub Unindex(g As IGraph)
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex*
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Query.Datasets.ISparqlDataset)
+  id: Unindex(VDS.RDF.Query.Datasets.ISparqlDataset)
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: Unindex(ISparqlDataset)
+  nameWithType: IFullTextIndexer.Unindex(ISparqlDataset)
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex(VDS.RDF.Query.Datasets.ISparqlDataset)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Unindex
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 120
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nUnindexes a Dataset.\n"
+  remarks: "\nImplementations <emph>SHOULD</emph> automatically Flush changes to the indexes at the end of this operation.\n"
+  example: []
+  syntax:
+    content: void Unindex(ISparqlDataset dataset)
+    parameters:
+    - id: dataset
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset.
+    content.vb: Sub Unindex(dataset As ISparqlDataset)
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex*
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush
+  commentId: M:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush
+  id: Flush
+  parent: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: IFullTextIndexer.Flush()
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Flush
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Indexing/IFullTextIndexer.cs
+    startLine: 125
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Indexing
+  summary: "\nFlushes any outstanding changes to the Index.\n"
+  example: []
+  syntax:
+    content: void Flush()
+    content.vb: Sub Flush
+  overload: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush*
+references:
+- uid: VDS.RDF.Query.FullText.Indexing
+  commentId: N:VDS.RDF.Query.FullText.Indexing
+  name: VDS.RDF.Query.FullText.Indexing
+  nameWithType: VDS.RDF.Query.FullText.Indexing
+  fullName: VDS.RDF.Query.FullText.Indexing
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IFullTextIndexer>()
+  nameWithType: Extensions.AsEnumerable<IFullTextIndexer>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.FullText.Indexing.IFullTextIndexer>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IFullTextIndexer)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.FullText.Indexing.IFullTextIndexer)()
+  name.vb: AsEnumerable(Of IFullTextIndexer)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IFullTextIndexer>
+    nameWithType: Extensions.AsEnumerable<IFullTextIndexer>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.FullText.Indexing.IFullTextIndexer>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IFullTextIndexer)
+    nameWithType: Extensions.AsEnumerable(Of IFullTextIndexer)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.FullText.Indexing.IFullTextIndexer)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode*
+  commentId: Overload:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode
+  name: IndexingMode
+  nameWithType: IFullTextIndexer.IndexingMode
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.IndexingMode
+- uid: VDS.RDF.Query.FullText.Indexing.IndexingMode
+  commentId: T:VDS.RDF.Query.FullText.Indexing.IndexingMode
+  parent: VDS.RDF.Query.FullText.Indexing
+  name: IndexingMode
+  nameWithType: IndexingMode
+  fullName: VDS.RDF.Query.FullText.Indexing.IndexingMode
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index*
+  commentId: Overload:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index
+  name: Index
+  nameWithType: IFullTextIndexer.Index
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Index
+- uid: VDS.RDF.Triple
+  commentId: T:VDS.RDF.Triple
+  parent: VDS.RDF
+  name: Triple
+  nameWithType: Triple
+  fullName: VDS.RDF.Triple
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex*
+  commentId: Overload:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex
+  name: Unindex
+  nameWithType: IFullTextIndexer.Unindex
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Unindex
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush*
+  commentId: Overload:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush
+  name: Flush
+  nameWithType: IFullTextIndexer.Flush
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer.Flush

@@ -1,0 +1,2844 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor
+  commentId: T:VDS.RDF.Update.LeviathanUpdateProcessor
+  id: LeviathanUpdateProcessor
+  parent: VDS.RDF.Update
+  children:
+  - VDS.RDF.Update.LeviathanUpdateProcessor.#ctor(VDS.RDF.IInMemoryQueryableStore)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  - VDS.RDF.Update.LeviathanUpdateProcessor._dataset
+  - VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit
+  - VDS.RDF.Update.LeviathanUpdateProcessor.Discard
+  - VDS.RDF.Update.LeviathanUpdateProcessor.Flush
+  - VDS.RDF.Update.LeviathanUpdateProcessor.GetContext
+  - VDS.RDF.Update.LeviathanUpdateProcessor.GetContext(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal(VDS.RDF.Update.Commands.AddCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal(VDS.RDF.Update.Commands.ClearCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal(VDS.RDF.Update.Commands.CopyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal(VDS.RDF.Update.Commands.CreateCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal(VDS.RDF.Update.Commands.DeleteCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal(VDS.RDF.Update.Commands.DeleteDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal(VDS.RDF.Update.Commands.DropCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal(VDS.RDF.Update.Commands.InsertCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal(VDS.RDF.Update.Commands.InsertDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal(VDS.RDF.Update.Commands.LoadCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal(VDS.RDF.Update.Commands.ModifyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  - VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal(VDS.RDF.Update.Commands.MoveCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  langs:
+  - csharp
+  - vb
+  name: LeviathanUpdateProcessor
+  nameWithType: LeviathanUpdateProcessor
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LeviathanUpdateProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 43
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nDefault SPARQL Update Processor provided by the library&apos;s Leviathan SPARQL Engine.\n"
+  remarks: "\n<p>\nThe Leviathan Update Processor simply invokes the <xref href=\"VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)\" data-throw-if-not-resolved=\"false\"></xref> method of the SPARQL Commands it is asked to process.  Derived implementations may override the relevant virtual protected methods to substitute their own evaluation of an update for our default standards compliant implementations.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class LeviathanUpdateProcessor : ISparqlUpdateProcessor'
+    content.vb: >-
+      Public Class LeviathanUpdateProcessor
+          Implements ISparqlUpdateProcessor
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Update.ExplainUpdateProcessor
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Update.LeviathanUpdateProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor._dataset
+  commentId: F:VDS.RDF.Update.LeviathanUpdateProcessor._dataset
+  id: _dataset
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: _dataset
+  nameWithType: LeviathanUpdateProcessor._dataset
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor._dataset
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: _dataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 49
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nDataset over which updates are applied.\n"
+  example: []
+  syntax:
+    content: protected ISparqlDataset _dataset
+    return:
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+    content.vb: Protected _dataset As ISparqlDataset
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.#ctor(VDS.RDF.IInMemoryQueryableStore)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.#ctor(VDS.RDF.IInMemoryQueryableStore)
+  id: '#ctor(VDS.RDF.IInMemoryQueryableStore)'
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: LeviathanUpdateProcessor(IInMemoryQueryableStore)
+  nameWithType: LeviathanUpdateProcessor.LeviathanUpdateProcessor(IInMemoryQueryableStore)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.LeviathanUpdateProcessor(VDS.RDF.IInMemoryQueryableStore)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nCreates a new Leviathan Update Processor.\n"
+  example: []
+  syntax:
+    content: public LeviathanUpdateProcessor(IInMemoryQueryableStore store)
+    parameters:
+    - id: store
+      type: VDS.RDF.IInMemoryQueryableStore
+      description: Triple Store.
+    content.vb: Public Sub New(store As IInMemoryQueryableStore)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  id: '#ctor(VDS.RDF.Query.Datasets.ISparqlDataset)'
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: LeviathanUpdateProcessor(ISparqlDataset)
+  nameWithType: LeviathanUpdateProcessor.LeviathanUpdateProcessor(ISparqlDataset)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.LeviathanUpdateProcessor(VDS.RDF.Query.Datasets.ISparqlDataset)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nCreates a new Leviathan Update Processor.\n"
+  example: []
+  syntax:
+    content: public LeviathanUpdateProcessor(ISparqlDataset data)
+    parameters:
+    - id: data
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: SPARQL Dataset.
+    content.vb: Public Sub New(data As ISparqlDataset)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit
+  commentId: P:VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit
+  id: AutoCommit
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: AutoCommit
+  nameWithType: LeviathanUpdateProcessor.AutoCommit
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AutoCommit
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 78
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nGets/Sets whether Updates are automatically committed.\n"
+  example: []
+  syntax:
+    content: public bool AutoCommit { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AutoCommit As Boolean
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.Flush
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.Flush
+  id: Flush
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: LeviathanUpdateProcessor.Flush()
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.Flush()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Flush
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nFlushes any outstanding changes to the underlying dataset.\n"
+  example: []
+  syntax:
+    content: public void Flush()
+    content.vb: Public Sub Flush
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.Flush*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.Discard
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.Discard
+  id: Discard
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: Discard()
+  nameWithType: LeviathanUpdateProcessor.Discard()
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.Discard()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Discard
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 102
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nDiscards and outstanding changes from the underlying dataset.\n"
+  example: []
+  syntax:
+    content: public void Discard()
+    content.vb: Public Sub Discard
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.Discard*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.GetContext(VDS.RDF.Update.SparqlUpdateCommandSet)
+  id: GetContext(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: GetContext(SparqlUpdateCommandSet)
+  nameWithType: LeviathanUpdateProcessor.GetContext(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext(VDS.RDF.Update.SparqlUpdateCommandSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 113
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nCreates a new Evaluation Context.\n"
+  example: []
+  syntax:
+    content: protected SparqlUpdateEvaluationContext GetContext(SparqlUpdateCommandSet cmds)
+    parameters:
+    - id: cmds
+      type: VDS.RDF.Update.SparqlUpdateCommandSet
+      description: Update Commands.
+    return:
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: ''
+    content.vb: Protected Function GetContext(cmds As SparqlUpdateCommandSet) As SparqlUpdateEvaluationContext
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.GetContext
+  id: GetContext
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: GetContext()
+  nameWithType: LeviathanUpdateProcessor.GetContext()
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 122
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nCreates a new Evaluation Context.\n"
+  example: []
+  syntax:
+    content: protected SparqlUpdateEvaluationContext GetContext()
+    return:
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: ''
+    content.vb: Protected Function GetContext As SparqlUpdateEvaluationContext
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor
+  id: GetQueryProcessor
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: GetQueryProcessor()
+  nameWithType: LeviathanUpdateProcessor.GetQueryProcessor()
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetQueryProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 134
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nGets the Query Processor to be used.\n"
+  remarks: "\nBy default <strong>null</strong> is returned which indicates that the default query processing behaviour is used, to use a specific processor extend this class and override this method.  If you do so you will have access to the dataset in use so generally you will want to use a query processor that accepts a <xref href=\"VDS.RDF.Query.Datasets.ISparqlDataset\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  example: []
+  syntax:
+    content: protected virtual ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext> GetQueryProcessor()
+    return:
+      type: VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext}
+      description: ''
+    content.vb: Protected Overridable Function GetQueryProcessor As ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  id: ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessAddCommand(AddCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessAddCommand(AddCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessAddCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 143
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an ADD command.\n"
+  example: []
+  syntax:
+    content: public void ProcessAddCommand(AddCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.AddCommand
+      description: Add Command.
+    content.vb: Public Sub ProcessAddCommand(cmd As AddCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal(VDS.RDF.Update.Commands.AddCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal(VDS.RDF.Update.Commands.AddCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessAddCommandInternal(VDS.RDF.Update.Commands.AddCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessAddCommandInternal(AddCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessAddCommandInternal(AddCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal(VDS.RDF.Update.Commands.AddCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessAddCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 153
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an ADD command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessAddCommandInternal(AddCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.AddCommand
+      description: Add Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessAddCommandInternal(cmd As AddCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  id: ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessClearCommand(ClearCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessClearCommand(ClearCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessClearCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 162
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a CLEAR command.\n"
+  example: []
+  syntax:
+    content: public void ProcessClearCommand(ClearCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.ClearCommand
+      description: Clear Command.
+    content.vb: Public Sub ProcessClearCommand(cmd As ClearCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal(VDS.RDF.Update.Commands.ClearCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal(VDS.RDF.Update.Commands.ClearCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessClearCommandInternal(VDS.RDF.Update.Commands.ClearCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessClearCommandInternal(ClearCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessClearCommandInternal(ClearCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal(VDS.RDF.Update.Commands.ClearCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessClearCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 172
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a CLEAR command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessClearCommandInternal(ClearCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.ClearCommand
+      description: Clear Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessClearCommandInternal(cmd As ClearCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  id: ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCopyCommand(CopyCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessCopyCommand(CopyCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCopyCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 181
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a COPY command.\n"
+  example: []
+  syntax:
+    content: public void ProcessCopyCommand(CopyCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.CopyCommand
+      description: Copy Command.
+    content.vb: Public Sub ProcessCopyCommand(cmd As CopyCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal(VDS.RDF.Update.Commands.CopyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal(VDS.RDF.Update.Commands.CopyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessCopyCommandInternal(VDS.RDF.Update.Commands.CopyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCopyCommandInternal(CopyCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessCopyCommandInternal(CopyCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal(VDS.RDF.Update.Commands.CopyCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCopyCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 191
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a COPY command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessCopyCommandInternal(CopyCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.CopyCommand
+      description: Copy Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessCopyCommandInternal(cmd As CopyCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  id: ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCreateCommand(CreateCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessCreateCommand(CreateCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCreateCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 200
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a CREATE command.\n"
+  example: []
+  syntax:
+    content: public void ProcessCreateCommand(CreateCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.CreateCommand
+      description: Create Command.
+    content.vb: Public Sub ProcessCreateCommand(cmd As CreateCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal(VDS.RDF.Update.Commands.CreateCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal(VDS.RDF.Update.Commands.CreateCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessCreateCommandInternal(VDS.RDF.Update.Commands.CreateCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCreateCommandInternal(CreateCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessCreateCommandInternal(CreateCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal(VDS.RDF.Update.Commands.CreateCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCreateCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 210
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a CREATE command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessCreateCommandInternal(CreateCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.CreateCommand
+      description: Create Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessCreateCommandInternal(cmd As CreateCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  id: ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCommand(SparqlUpdateCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessCommand(SparqlUpdateCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 219
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a command.\n"
+  example: []
+  syntax:
+    content: public void ProcessCommand(SparqlUpdateCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.SparqlUpdateCommand
+      description: Command.
+    content.vb: Public Sub ProcessCommand(cmd As SparqlUpdateCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  id: ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessCommandSet(SparqlUpdateCommandSet)
+  nameWithType: LeviathanUpdateProcessor.ProcessCommandSet(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessCommandSet
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 324
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a command set.\n"
+  remarks: "\nInvokes <xref href=\"VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)\" data-throw-if-not-resolved=\"false\"></xref> on each command in turn.\n"
+  example: []
+  syntax:
+    content: public void ProcessCommandSet(SparqlUpdateCommandSet commands)
+    parameters:
+    - id: commands
+      type: VDS.RDF.Update.SparqlUpdateCommandSet
+      description: Command Set.
+    content.vb: Public Sub ProcessCommandSet(commands As SparqlUpdateCommandSet)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  id: ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDeleteCommand(DeleteCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteCommand(DeleteCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDeleteCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 402
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DELETE command.\n"
+  example: []
+  syntax:
+    content: public void ProcessDeleteCommand(DeleteCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DeleteCommand
+      description: Delete Command.
+    content.vb: Public Sub ProcessDeleteCommand(cmd As DeleteCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal(VDS.RDF.Update.Commands.DeleteCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal(VDS.RDF.Update.Commands.DeleteCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessDeleteCommandInternal(VDS.RDF.Update.Commands.DeleteCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDeleteCommandInternal(DeleteCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteCommandInternal(DeleteCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal(VDS.RDF.Update.Commands.DeleteCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDeleteCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 412
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DELETE command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessDeleteCommandInternal(DeleteCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DeleteCommand
+      description: Delete Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessDeleteCommandInternal(cmd As DeleteCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  id: ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDeleteDataCommand(DeleteDataCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteDataCommand(DeleteDataCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDeleteDataCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 421
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DELETE DATA command.\n"
+  example: []
+  syntax:
+    content: public void ProcessDeleteDataCommand(DeleteDataCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DeleteDataCommand
+      description: DELETE Data Command.
+    content.vb: Public Sub ProcessDeleteDataCommand(cmd As DeleteDataCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal(VDS.RDF.Update.Commands.DeleteDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal(VDS.RDF.Update.Commands.DeleteDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessDeleteDataCommandInternal(VDS.RDF.Update.Commands.DeleteDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDeleteDataCommandInternal(DeleteDataCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal(DeleteDataCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal(VDS.RDF.Update.Commands.DeleteDataCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDeleteDataCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 431
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DELETE DATA command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessDeleteDataCommandInternal(DeleteDataCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DeleteDataCommand
+      description: Delete Data Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessDeleteDataCommandInternal(cmd As DeleteDataCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  id: ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDropCommand(DropCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessDropCommand(DropCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDropCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 440
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DROP command.\n"
+  example: []
+  syntax:
+    content: public void ProcessDropCommand(DropCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DropCommand
+      description: Drop Command.
+    content.vb: Public Sub ProcessDropCommand(cmd As DropCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal(VDS.RDF.Update.Commands.DropCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal(VDS.RDF.Update.Commands.DropCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessDropCommandInternal(VDS.RDF.Update.Commands.DropCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessDropCommandInternal(DropCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessDropCommandInternal(DropCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal(VDS.RDF.Update.Commands.DropCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessDropCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 450
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a DROP command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessDropCommandInternal(DropCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.DropCommand
+      description: Drop Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessDropCommandInternal(cmd As DropCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  id: ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessInsertCommand(InsertCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertCommand(InsertCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessInsertCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 459
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT command.\n"
+  example: []
+  syntax:
+    content: public void ProcessInsertCommand(InsertCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.InsertCommand
+      description: Insert Command.
+    content.vb: Public Sub ProcessInsertCommand(cmd As InsertCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal(VDS.RDF.Update.Commands.InsertCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal(VDS.RDF.Update.Commands.InsertCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessInsertCommandInternal(VDS.RDF.Update.Commands.InsertCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessInsertCommandInternal(InsertCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertCommandInternal(InsertCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal(VDS.RDF.Update.Commands.InsertCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessInsertCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 469
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessInsertCommandInternal(InsertCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.InsertCommand
+      description: Insert Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessInsertCommandInternal(cmd As InsertCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  id: ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessInsertDataCommand(InsertDataCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertDataCommand(InsertDataCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessInsertDataCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 478
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT DATA command.\n"
+  example: []
+  syntax:
+    content: public void ProcessInsertDataCommand(InsertDataCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.InsertDataCommand
+      description: Insert Data Command.
+    content.vb: Public Sub ProcessInsertDataCommand(cmd As InsertDataCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal(VDS.RDF.Update.Commands.InsertDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal(VDS.RDF.Update.Commands.InsertDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessInsertDataCommandInternal(VDS.RDF.Update.Commands.InsertDataCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessInsertDataCommandInternal(InsertDataCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertDataCommandInternal(InsertDataCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal(VDS.RDF.Update.Commands.InsertDataCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessInsertDataCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 488
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT DATA command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessInsertDataCommandInternal(InsertDataCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.InsertDataCommand
+      description: Insert Data Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessInsertDataCommandInternal(cmd As InsertDataCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  id: ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessLoadCommand(LoadCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessLoadCommand(LoadCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessLoadCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 497
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a LOAD command.\n"
+  example: []
+  syntax:
+    content: public void ProcessLoadCommand(LoadCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.LoadCommand
+      description: Load Command.
+    content.vb: Public Sub ProcessLoadCommand(cmd As LoadCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal(VDS.RDF.Update.Commands.LoadCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal(VDS.RDF.Update.Commands.LoadCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessLoadCommandInternal(VDS.RDF.Update.Commands.LoadCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessLoadCommandInternal(LoadCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessLoadCommandInternal(LoadCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal(VDS.RDF.Update.Commands.LoadCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessLoadCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 507
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a LOAD command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessLoadCommandInternal(LoadCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.LoadCommand
+      description: Load Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessLoadCommandInternal(cmd As LoadCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  id: ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessModifyCommand(ModifyCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessModifyCommand(ModifyCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessModifyCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 516
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT/DELETE command.\n"
+  example: []
+  syntax:
+    content: public void ProcessModifyCommand(ModifyCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.ModifyCommand
+      description: Insert/Delete Command.
+    content.vb: Public Sub ProcessModifyCommand(cmd As ModifyCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal(VDS.RDF.Update.Commands.ModifyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal(VDS.RDF.Update.Commands.ModifyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessModifyCommandInternal(VDS.RDF.Update.Commands.ModifyCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessModifyCommandInternal(ModifyCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessModifyCommandInternal(ModifyCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal(VDS.RDF.Update.Commands.ModifyCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessModifyCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 526
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses an INSERT/DELETE command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessModifyCommandInternal(ModifyCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.ModifyCommand
+      description: Insert/Delete Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessModifyCommandInternal(cmd As ModifyCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  id: ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessMoveCommand(MoveCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessMoveCommand(MoveCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessMoveCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 535
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a MOVE command.\n"
+  example: []
+  syntax:
+    content: public void ProcessMoveCommand(MoveCommand cmd)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.MoveCommand
+      description: Move Command.
+    content.vb: Public Sub ProcessMoveCommand(cmd As MoveCommand)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand*
+  implements:
+  - VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal(VDS.RDF.Update.Commands.MoveCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal(VDS.RDF.Update.Commands.MoveCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: ProcessMoveCommandInternal(VDS.RDF.Update.Commands.MoveCommand,VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessMoveCommandInternal(MoveCommand, SparqlUpdateEvaluationContext)
+  nameWithType: LeviathanUpdateProcessor.ProcessMoveCommandInternal(MoveCommand, SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal(VDS.RDF.Update.Commands.MoveCommand, VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessMoveCommandInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/LeviathanUpdateProcessor.cs
+    startLine: 545
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update
+  summary: "\nProcesses a MOVE command.\n"
+  example: []
+  syntax:
+    content: protected virtual void ProcessMoveCommandInternal(MoveCommand cmd, SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: cmd
+      type: VDS.RDF.Update.Commands.MoveCommand
+      description: Move Command.
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: SPARQL Update Evaluation Context.
+    content.vb: Protected Overridable Sub ProcessMoveCommandInternal(cmd As MoveCommand, context As SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+references:
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Evaluate(SparqlUpdateEvaluationContext)
+  nameWithType: SparqlUpdateCommand.Evaluate(SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor
+  commentId: T:VDS.RDF.Update.ISparqlUpdateProcessor
+  parent: VDS.RDF.Update
+  name: ISparqlUpdateProcessor
+  nameWithType: ISparqlUpdateProcessor
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<LeviathanUpdateProcessor>()
+  nameWithType: Extensions.AsEnumerable<LeviathanUpdateProcessor>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.LeviathanUpdateProcessor>()
+  nameWithType.vb: Extensions.AsEnumerable(Of LeviathanUpdateProcessor)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.LeviathanUpdateProcessor)()
+  name.vb: AsEnumerable(Of LeviathanUpdateProcessor)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<LeviathanUpdateProcessor>
+    nameWithType: Extensions.AsEnumerable<LeviathanUpdateProcessor>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.LeviathanUpdateProcessor>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of LeviathanUpdateProcessor)
+    nameWithType: Extensions.AsEnumerable(Of LeviathanUpdateProcessor)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.LeviathanUpdateProcessor)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.SparqlUpdateCommand
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommand
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommand
+  nameWithType: SparqlUpdateCommand
+  fullName: VDS.RDF.Update.SparqlUpdateCommand
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.#ctor*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.#ctor
+  name: LeviathanUpdateProcessor
+  nameWithType: LeviathanUpdateProcessor.LeviathanUpdateProcessor
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.LeviathanUpdateProcessor
+- uid: VDS.RDF.IInMemoryQueryableStore
+  commentId: T:VDS.RDF.IInMemoryQueryableStore
+  parent: VDS.RDF
+  name: IInMemoryQueryableStore
+  nameWithType: IInMemoryQueryableStore
+  fullName: VDS.RDF.IInMemoryQueryableStore
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit
+  name: AutoCommit
+  nameWithType: LeviathanUpdateProcessor.AutoCommit
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.AutoCommit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.Flush*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.Flush
+  name: Flush
+  nameWithType: LeviathanUpdateProcessor.Flush
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.Flush
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: Flush()
+  nameWithType: ISparqlUpdateProcessor.Flush()
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Flush()
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+    name: Flush
+    nameWithType: ISparqlUpdateProcessor.Flush
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+    name: Flush
+    nameWithType: ISparqlUpdateProcessor.Flush
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.Discard*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.Discard
+  name: Discard
+  nameWithType: LeviathanUpdateProcessor.Discard
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.Discard
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: Discard()
+  nameWithType: ISparqlUpdateProcessor.Discard()
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Discard()
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+    name: Discard
+    nameWithType: ISparqlUpdateProcessor.Discard
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+    name: Discard
+    nameWithType: ISparqlUpdateProcessor.Discard
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.GetContext
+  name: GetContext
+  nameWithType: LeviathanUpdateProcessor.GetContext
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.GetContext
+- uid: VDS.RDF.Update.SparqlUpdateCommandSet
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommandSet
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommandSet
+  nameWithType: SparqlUpdateCommandSet
+  fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+- uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  commentId: T:VDS.RDF.Update.SparqlUpdateEvaluationContext
+  parent: VDS.RDF.Update
+  name: SparqlUpdateEvaluationContext
+  nameWithType: SparqlUpdateEvaluationContext
+  fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor
+  name: GetQueryProcessor
+  nameWithType: LeviathanUpdateProcessor.GetQueryProcessor
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.GetQueryProcessor
+- uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext}
+  commentId: T:VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext}
+  parent: VDS.RDF.Query
+  definition: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+  name: ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext>
+  nameWithType: ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext>
+  fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor<VDS.RDF.Query.Algebra.BaseMultiset, VDS.RDF.Query.SparqlEvaluationContext>
+  nameWithType.vb: ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext)
+  fullName.vb: VDS.RDF.Query.ISparqlQueryAlgebraProcessor(Of VDS.RDF.Query.Algebra.BaseMultiset, VDS.RDF.Query.SparqlEvaluationContext)
+  name.vb: ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.Algebra.BaseMultiset
+    name: BaseMultiset
+    nameWithType: BaseMultiset
+    fullName: VDS.RDF.Query.Algebra.BaseMultiset
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.Algebra.BaseMultiset
+    name: BaseMultiset
+    nameWithType: BaseMultiset
+    fullName: VDS.RDF.Query.Algebra.BaseMultiset
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+  commentId: T:VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+  name: ISparqlQueryAlgebraProcessor<TResult, TContext>
+  nameWithType: ISparqlQueryAlgebraProcessor<TResult, TContext>
+  fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor<TResult, TContext>
+  nameWithType.vb: ISparqlQueryAlgebraProcessor(Of TResult, TContext)
+  fullName.vb: VDS.RDF.Query.ISparqlQueryAlgebraProcessor(Of TResult, TContext)
+  name.vb: ISparqlQueryAlgebraProcessor(Of TResult, TContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand
+  name: ProcessAddCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessAddCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessAddCommand(AddCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessAddCommand(AddCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+    name: ProcessAddCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessAddCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.AddCommand
+    name: AddCommand
+    nameWithType: AddCommand
+    fullName: VDS.RDF.Update.Commands.AddCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand(VDS.RDF.Update.Commands.AddCommand)
+    name: ProcessAddCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessAddCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessAddCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.AddCommand
+    name: AddCommand
+    nameWithType: AddCommand
+    fullName: VDS.RDF.Update.Commands.AddCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.AddCommand
+  commentId: T:VDS.RDF.Update.Commands.AddCommand
+  parent: VDS.RDF.Update.Commands
+  name: AddCommand
+  nameWithType: AddCommand
+  fullName: VDS.RDF.Update.Commands.AddCommand
+- uid: VDS.RDF.Update.Commands
+  commentId: N:VDS.RDF.Update.Commands
+  name: VDS.RDF.Update.Commands
+  nameWithType: VDS.RDF.Update.Commands
+  fullName: VDS.RDF.Update.Commands
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal
+  name: ProcessAddCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessAddCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessAddCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand
+  name: ProcessClearCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessClearCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessClearCommand(ClearCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessClearCommand(ClearCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+    name: ProcessClearCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessClearCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ClearCommand
+    name: ClearCommand
+    nameWithType: ClearCommand
+    fullName: VDS.RDF.Update.Commands.ClearCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand(VDS.RDF.Update.Commands.ClearCommand)
+    name: ProcessClearCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessClearCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessClearCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ClearCommand
+    name: ClearCommand
+    nameWithType: ClearCommand
+    fullName: VDS.RDF.Update.Commands.ClearCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.ClearCommand
+  commentId: T:VDS.RDF.Update.Commands.ClearCommand
+  parent: VDS.RDF.Update.Commands
+  name: ClearCommand
+  nameWithType: ClearCommand
+  fullName: VDS.RDF.Update.Commands.ClearCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal
+  name: ProcessClearCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessClearCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessClearCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand
+  name: ProcessCopyCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessCopyCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCopyCommand(CopyCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessCopyCommand(CopyCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+    name: ProcessCopyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCopyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CopyCommand
+    name: CopyCommand
+    nameWithType: CopyCommand
+    fullName: VDS.RDF.Update.Commands.CopyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand(VDS.RDF.Update.Commands.CopyCommand)
+    name: ProcessCopyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCopyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCopyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CopyCommand
+    name: CopyCommand
+    nameWithType: CopyCommand
+    fullName: VDS.RDF.Update.Commands.CopyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.CopyCommand
+  commentId: T:VDS.RDF.Update.Commands.CopyCommand
+  parent: VDS.RDF.Update.Commands
+  name: CopyCommand
+  nameWithType: CopyCommand
+  fullName: VDS.RDF.Update.Commands.CopyCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal
+  name: ProcessCopyCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessCopyCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCopyCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand
+  name: ProcessCreateCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessCreateCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCreateCommand(CreateCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessCreateCommand(CreateCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+    name: ProcessCreateCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCreateCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CreateCommand
+    name: CreateCommand
+    nameWithType: CreateCommand
+    fullName: VDS.RDF.Update.Commands.CreateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand(VDS.RDF.Update.Commands.CreateCommand)
+    name: ProcessCreateCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCreateCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCreateCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.CreateCommand
+    name: CreateCommand
+    nameWithType: CreateCommand
+    fullName: VDS.RDF.Update.Commands.CreateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.CreateCommand
+  commentId: T:VDS.RDF.Update.Commands.CreateCommand
+  parent: VDS.RDF.Update.Commands
+  name: CreateCommand
+  nameWithType: CreateCommand
+  fullName: VDS.RDF.Update.Commands.CreateCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal
+  name: ProcessCreateCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessCreateCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCreateCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand
+  name: ProcessCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCommand(SparqlUpdateCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessCommand(SparqlUpdateCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+    name: ProcessCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommand
+    name: SparqlUpdateCommand
+    nameWithType: SparqlUpdateCommand
+    fullName: VDS.RDF.Update.SparqlUpdateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+    name: ProcessCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommand
+    name: SparqlUpdateCommand
+    nameWithType: SparqlUpdateCommand
+    fullName: VDS.RDF.Update.SparqlUpdateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  commentId: M:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  parent: VDS.RDF.Update.LeviathanUpdateProcessor
+  name: ProcessCommand(SparqlUpdateCommand)
+  nameWithType: LeviathanUpdateProcessor.ProcessCommand(SparqlUpdateCommand)
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+    name: ProcessCommand
+    nameWithType: LeviathanUpdateProcessor.ProcessCommand
+    fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommand
+    name: SparqlUpdateCommand
+    nameWithType: SparqlUpdateCommand
+    fullName: VDS.RDF.Update.SparqlUpdateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand(VDS.RDF.Update.SparqlUpdateCommand)
+    name: ProcessCommand
+    nameWithType: LeviathanUpdateProcessor.ProcessCommand
+    fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommand
+    name: SparqlUpdateCommand
+    nameWithType: SparqlUpdateCommand
+    fullName: VDS.RDF.Update.SparqlUpdateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet
+  name: ProcessCommandSet
+  nameWithType: LeviathanUpdateProcessor.ProcessCommandSet
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessCommandSet
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessCommandSet(SparqlUpdateCommandSet)
+  nameWithType: ISparqlUpdateProcessor.ProcessCommandSet(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: ProcessCommandSet
+    nameWithType: ISparqlUpdateProcessor.ProcessCommandSet
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: ProcessCommandSet
+    nameWithType: ISparqlUpdateProcessor.ProcessCommandSet
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessCommandSet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor
+  commentId: T:VDS.RDF.Update.LeviathanUpdateProcessor
+  parent: VDS.RDF.Update
+  name: LeviathanUpdateProcessor
+  nameWithType: LeviathanUpdateProcessor
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand
+  name: ProcessDeleteCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessDeleteCommand(DeleteCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessDeleteCommand(DeleteCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+    name: ProcessDeleteCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteCommand
+    name: DeleteCommand
+    nameWithType: DeleteCommand
+    fullName: VDS.RDF.Update.Commands.DeleteCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand(VDS.RDF.Update.Commands.DeleteCommand)
+    name: ProcessDeleteCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteCommand
+    name: DeleteCommand
+    nameWithType: DeleteCommand
+    fullName: VDS.RDF.Update.Commands.DeleteCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DeleteCommand
+  commentId: T:VDS.RDF.Update.Commands.DeleteCommand
+  parent: VDS.RDF.Update.Commands
+  name: DeleteCommand
+  nameWithType: DeleteCommand
+  fullName: VDS.RDF.Update.Commands.DeleteCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal
+  name: ProcessDeleteCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand
+  name: ProcessDeleteDataCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteDataCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessDeleteDataCommand(DeleteDataCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessDeleteDataCommand(DeleteDataCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+    name: ProcessDeleteDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteDataCommand
+    name: DeleteDataCommand
+    nameWithType: DeleteDataCommand
+    fullName: VDS.RDF.Update.Commands.DeleteDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand(VDS.RDF.Update.Commands.DeleteDataCommand)
+    name: ProcessDeleteDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDeleteDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDeleteDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DeleteDataCommand
+    name: DeleteDataCommand
+    nameWithType: DeleteDataCommand
+    fullName: VDS.RDF.Update.Commands.DeleteDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DeleteDataCommand
+  commentId: T:VDS.RDF.Update.Commands.DeleteDataCommand
+  parent: VDS.RDF.Update.Commands
+  name: DeleteDataCommand
+  nameWithType: DeleteDataCommand
+  fullName: VDS.RDF.Update.Commands.DeleteDataCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal
+  name: ProcessDeleteDataCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDeleteDataCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand
+  name: ProcessDropCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessDropCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessDropCommand(DropCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessDropCommand(DropCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+    name: ProcessDropCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDropCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DropCommand
+    name: DropCommand
+    nameWithType: DropCommand
+    fullName: VDS.RDF.Update.Commands.DropCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand(VDS.RDF.Update.Commands.DropCommand)
+    name: ProcessDropCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessDropCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessDropCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.DropCommand
+    name: DropCommand
+    nameWithType: DropCommand
+    fullName: VDS.RDF.Update.Commands.DropCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DropCommand
+  commentId: T:VDS.RDF.Update.Commands.DropCommand
+  parent: VDS.RDF.Update.Commands
+  name: DropCommand
+  nameWithType: DropCommand
+  fullName: VDS.RDF.Update.Commands.DropCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal
+  name: ProcessDropCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessDropCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessDropCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand
+  name: ProcessInsertCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessInsertCommand(InsertCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessInsertCommand(InsertCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+    name: ProcessInsertCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertCommand
+    name: InsertCommand
+    nameWithType: InsertCommand
+    fullName: VDS.RDF.Update.Commands.InsertCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand(VDS.RDF.Update.Commands.InsertCommand)
+    name: ProcessInsertCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertCommand
+    name: InsertCommand
+    nameWithType: InsertCommand
+    fullName: VDS.RDF.Update.Commands.InsertCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertCommand
+  commentId: T:VDS.RDF.Update.Commands.InsertCommand
+  parent: VDS.RDF.Update.Commands
+  name: InsertCommand
+  nameWithType: InsertCommand
+  fullName: VDS.RDF.Update.Commands.InsertCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal
+  name: ProcessInsertCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand
+  name: ProcessInsertDataCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertDataCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessInsertDataCommand(InsertDataCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessInsertDataCommand(InsertDataCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+    name: ProcessInsertDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertDataCommand
+    name: InsertDataCommand
+    nameWithType: InsertDataCommand
+    fullName: VDS.RDF.Update.Commands.InsertDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand(VDS.RDF.Update.Commands.InsertDataCommand)
+    name: ProcessInsertDataCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessInsertDataCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessInsertDataCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.InsertDataCommand
+    name: InsertDataCommand
+    nameWithType: InsertDataCommand
+    fullName: VDS.RDF.Update.Commands.InsertDataCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertDataCommand
+  commentId: T:VDS.RDF.Update.Commands.InsertDataCommand
+  parent: VDS.RDF.Update.Commands
+  name: InsertDataCommand
+  nameWithType: InsertDataCommand
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal
+  name: ProcessInsertDataCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessInsertDataCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessInsertDataCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand
+  name: ProcessLoadCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessLoadCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessLoadCommand(LoadCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessLoadCommand(LoadCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+    name: ProcessLoadCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessLoadCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.LoadCommand
+    name: LoadCommand
+    nameWithType: LoadCommand
+    fullName: VDS.RDF.Update.Commands.LoadCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand(VDS.RDF.Update.Commands.LoadCommand)
+    name: ProcessLoadCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessLoadCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessLoadCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.LoadCommand
+    name: LoadCommand
+    nameWithType: LoadCommand
+    fullName: VDS.RDF.Update.Commands.LoadCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.LoadCommand
+  commentId: T:VDS.RDF.Update.Commands.LoadCommand
+  parent: VDS.RDF.Update.Commands
+  name: LoadCommand
+  nameWithType: LoadCommand
+  fullName: VDS.RDF.Update.Commands.LoadCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal
+  name: ProcessLoadCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessLoadCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessLoadCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand
+  name: ProcessModifyCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessModifyCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessModifyCommand(ModifyCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessModifyCommand(ModifyCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+    name: ProcessModifyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessModifyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ModifyCommand
+    name: ModifyCommand
+    nameWithType: ModifyCommand
+    fullName: VDS.RDF.Update.Commands.ModifyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand(VDS.RDF.Update.Commands.ModifyCommand)
+    name: ProcessModifyCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessModifyCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessModifyCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.ModifyCommand
+    name: ModifyCommand
+    nameWithType: ModifyCommand
+    fullName: VDS.RDF.Update.Commands.ModifyCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.ModifyCommand
+  commentId: T:VDS.RDF.Update.Commands.ModifyCommand
+  parent: VDS.RDF.Update.Commands
+  name: ModifyCommand
+  nameWithType: ModifyCommand
+  fullName: VDS.RDF.Update.Commands.ModifyCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal
+  name: ProcessModifyCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessModifyCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessModifyCommandInternal
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand
+  name: ProcessMoveCommand
+  nameWithType: LeviathanUpdateProcessor.ProcessMoveCommand
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommand
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  commentId: M:VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  parent: VDS.RDF.Update.ISparqlUpdateProcessor
+  name: ProcessMoveCommand(MoveCommand)
+  nameWithType: ISparqlUpdateProcessor.ProcessMoveCommand(MoveCommand)
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+  spec.csharp:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+    name: ProcessMoveCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessMoveCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.MoveCommand
+    name: MoveCommand
+    nameWithType: MoveCommand
+    fullName: VDS.RDF.Update.Commands.MoveCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand(VDS.RDF.Update.Commands.MoveCommand)
+    name: ProcessMoveCommand
+    nameWithType: ISparqlUpdateProcessor.ProcessMoveCommand
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor.ProcessMoveCommand
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.Commands.MoveCommand
+    name: MoveCommand
+    nameWithType: MoveCommand
+    fullName: VDS.RDF.Update.Commands.MoveCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.MoveCommand
+  commentId: T:VDS.RDF.Update.Commands.MoveCommand
+  parent: VDS.RDF.Update.Commands
+  name: MoveCommand
+  nameWithType: MoveCommand
+  fullName: VDS.RDF.Update.Commands.MoveCommand
+- uid: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal*
+  commentId: Overload:VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal
+  name: ProcessMoveCommandInternal
+  nameWithType: LeviathanUpdateProcessor.ProcessMoveCommandInternal
+  fullName: VDS.RDF.Update.LeviathanUpdateProcessor.ProcessMoveCommandInternal

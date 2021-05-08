@@ -1,0 +1,1291 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue
+  commentId: T:VDS.RDF.Parsing.Tokens.TokenQueue
+  id: TokenQueue
+  parent: VDS.RDF.Parsing.Tokens
+  children:
+  - VDS.RDF.Parsing.Tokens.TokenQueue.#ctor
+  - VDS.RDF.Parsing.Tokens.TokenQueue.#ctor(VDS.RDF.Parsing.Tokens.ITokeniser)
+  - VDS.RDF.Parsing.Tokens.TokenQueue._tokens
+  - VDS.RDF.Parsing.Tokens.TokenQueue.Clear
+  - VDS.RDF.Parsing.Tokens.TokenQueue.Count
+  - VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue
+  - VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  - VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer
+  - VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer(System.Int32)
+  - VDS.RDF.Parsing.Tokens.TokenQueue.Peek
+  - VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace(VDS.RDF.Parsing.Tokens.IToken)
+  - VDS.RDF.Parsing.Tokens.TokenQueue.Tokens
+  langs:
+  - csharp
+  - vb
+  name: TokenQueue
+  nameWithType: TokenQueue
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TokenQueue
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nBasic Token Queue which provides no Buffering except in the sense that it queues all possible Tokens when the InitialiseBuffer method is called.\n"
+  example: []
+  syntax:
+    content: 'public class TokenQueue : BaseTokenQueue, ITokenQueue'
+    content.vb: >-
+      Public Class TokenQueue
+          Inherits BaseTokenQueue
+          Implements ITokenQueue
+  inheritance:
+  - System.Object
+  - VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  derivedClasses:
+  - VDS.RDF.Parsing.Tokens.BufferedTokenQueue
+  - VDS.RDF.Parsing.Tokens.NonTokenisedTokenQueue
+  implements:
+  - VDS.RDF.Parsing.Tokens.ITokenQueue
+  inheritedMembers:
+  - VDS.RDF.Parsing.Tokens.BaseTokenQueue._tokeniser
+  - VDS.RDF.Parsing.Tokens.BaseTokenQueue._tracing
+  - VDS.RDF.Parsing.Tokens.BaseTokenQueue._lasttokentype
+  - VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokeniser
+  - VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tracing
+  - VDS.RDF.Parsing.Tokens.BaseTokenQueue.LastTokenType
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Parsing.Tokens.TokenQueue.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue._tokens
+  commentId: F:VDS.RDF.Parsing.Tokens.TokenQueue._tokens
+  id: _tokens
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: _tokens
+  nameWithType: TokenQueue._tokens
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue._tokens
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: _tokens
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nInternal Queue object which this class is a wrapper around.\n"
+  example: []
+  syntax:
+    content: protected Queue<IToken> _tokens
+    return:
+      type: System.Collections.Generic.Queue{VDS.RDF.Parsing.Tokens.IToken}
+    content.vb: Protected _tokens As Queue(Of IToken)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.#ctor
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: TokenQueue()
+  nameWithType: TokenQueue.TokenQueue()
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.TokenQueue()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 46
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nCreates a new Token Queue.\n"
+  example: []
+  syntax:
+    content: public TokenQueue()
+    content.vb: Public Sub New
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.#ctor(VDS.RDF.Parsing.Tokens.ITokeniser)
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.#ctor(VDS.RDF.Parsing.Tokens.ITokeniser)
+  id: '#ctor(VDS.RDF.Parsing.Tokens.ITokeniser)'
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: TokenQueue(ITokeniser)
+  nameWithType: TokenQueue.TokenQueue(ITokeniser)
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.TokenQueue(VDS.RDF.Parsing.Tokens.ITokeniser)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nCreates a new Token Queue with the given Tokeniser.\n"
+  example: []
+  syntax:
+    content: public TokenQueue(ITokeniser tokeniser)
+    parameters:
+    - id: tokeniser
+      type: VDS.RDF.Parsing.Tokens.ITokeniser
+      description: Tokeniser.
+    content.vb: Public Sub New(tokeniser As ITokeniser)
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue
+  id: Dequeue
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: Dequeue()
+  nameWithType: TokenQueue.Dequeue()
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Dequeue
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nRemoves and returns the first Token from the Queue.\n"
+  example: []
+  syntax:
+    content: public override IToken Dequeue()
+    return:
+      type: VDS.RDF.Parsing.Tokens.IToken
+      description: First Token in the Queue.
+    content.vb: Public Overrides Function Dequeue As IToken
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  id: Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: Enqueue(IToken)
+  nameWithType: TokenQueue.Enqueue(IToken)
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Enqueue
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 74
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nAdds a Token to the end of the Queue.\n"
+  example: []
+  syntax:
+    content: public override void Enqueue(IToken t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Parsing.Tokens.IToken
+      description: Token to add.
+    content.vb: Public Overrides Sub Enqueue(t As IToken)
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Peek
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.Peek
+  id: Peek
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: Peek()
+  nameWithType: TokenQueue.Peek()
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Peek()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Peek
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 83
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the first Token from the Queue without removing it.\n"
+  example: []
+  syntax:
+    content: public override IToken Peek()
+    return:
+      type: VDS.RDF.Parsing.Tokens.IToken
+      description: First Token in the Queue.
+    content.vb: Public Overrides Function Peek As IToken
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.Peek*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Clear
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.Clear
+  id: Clear
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: TokenQueue.Clear()
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Clear()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Clear
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 91
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nEmpties the Token Queue.\n"
+  example: []
+  syntax:
+    content: public override void Clear()
+    content.vb: Public Overrides Sub Clear
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.Clear*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Count
+  commentId: P:VDS.RDF.Parsing.Tokens.TokenQueue.Count
+  id: Count
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: TokenQueue.Count
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Count
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Count
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 99
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the number of Tokens in the Queue.\n"
+  example: []
+  syntax:
+    content: public override int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property Count As Integer
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Count
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.Count*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer
+  id: InitialiseBuffer
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: InitialiseBuffer()
+  nameWithType: TokenQueue.InitialiseBuffer()
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InitialiseBuffer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 110
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nInitialises the Token Queue Buffer.\n"
+  example: []
+  syntax:
+    content: public override void InitialiseBuffer()
+    content.vb: Public Overrides Sub InitialiseBuffer
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer(System.Int32)
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer(System.Int32)
+  id: InitialiseBuffer(System.Int32)
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: InitialiseBuffer(Int32)
+  nameWithType: TokenQueue.InitialiseBuffer(Int32)
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InitialiseBuffer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 134
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nInitialises the Token Queue Buffer to the set Buffer Amount.\n"
+  example: []
+  syntax:
+    content: public override void InitialiseBuffer(int amount)
+    parameters:
+    - id: amount
+      type: System.Int32
+      description: Amount of Tokens to Buffer.
+    content.vb: Public Overrides Sub InitialiseBuffer(amount As Integer)
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer(System.Int32)
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Tokens
+  commentId: P:VDS.RDF.Parsing.Tokens.TokenQueue.Tokens
+  id: Tokens
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: Tokens
+  nameWithType: TokenQueue.Tokens
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Tokens
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Tokens
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 143
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the underlying Queue of Tokens.\n"
+  example: []
+  syntax:
+    content: public override Queue<IToken> Tokens { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Queue{VDS.RDF.Parsing.Tokens.IToken}
+    content.vb: Public Overrides ReadOnly Property Tokens As Queue(Of IToken)
+  overridden: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokens
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.Tokens*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace(VDS.RDF.Parsing.Tokens.IToken)
+  commentId: M:VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace(VDS.RDF.Parsing.Tokens.IToken)
+  id: PrintTrace(VDS.RDF.Parsing.Tokens.IToken)
+  parent: VDS.RDF.Parsing.Tokens.TokenQueue
+  langs:
+  - csharp
+  - vb
+  name: PrintTrace(IToken)
+  nameWithType: TokenQueue.PrintTrace(IToken)
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace(VDS.RDF.Parsing.Tokens.IToken)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PrintTrace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BufferedTokenQueue.cs
+    startLine: 155
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nInternal Helper Method for Tokeniser Tracing.\n"
+  example: []
+  syntax:
+    content: protected void PrintTrace(IToken t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Parsing.Tokens.IToken
+      description: ''
+    content.vb: Protected Sub PrintTrace(t As IToken)
+  overload: VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: VDS.RDF.Parsing.Tokens
+  commentId: N:VDS.RDF.Parsing.Tokens
+  name: VDS.RDF.Parsing.Tokens
+  nameWithType: VDS.RDF.Parsing.Tokens
+  fullName: VDS.RDF.Parsing.Tokens
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  commentId: T:VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  parent: VDS.RDF.Parsing.Tokens
+  name: BaseTokenQueue
+  nameWithType: BaseTokenQueue
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+- uid: VDS.RDF.Parsing.Tokens.ITokenQueue
+  commentId: T:VDS.RDF.Parsing.Tokens.ITokenQueue
+  parent: VDS.RDF.Parsing.Tokens
+  name: ITokenQueue
+  nameWithType: ITokenQueue
+  fullName: VDS.RDF.Parsing.Tokens.ITokenQueue
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue._tokeniser
+  commentId: F:VDS.RDF.Parsing.Tokens.BaseTokenQueue._tokeniser
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: _tokeniser
+  nameWithType: BaseTokenQueue._tokeniser
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue._tokeniser
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue._tracing
+  commentId: F:VDS.RDF.Parsing.Tokens.BaseTokenQueue._tracing
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: _tracing
+  nameWithType: BaseTokenQueue._tracing
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue._tracing
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue._lasttokentype
+  commentId: F:VDS.RDF.Parsing.Tokens.BaseTokenQueue._lasttokentype
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: _lasttokentype
+  nameWithType: BaseTokenQueue._lasttokentype
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue._lasttokentype
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokeniser
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokeniser
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Tokeniser
+  nameWithType: BaseTokenQueue.Tokeniser
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokeniser
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tracing
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tracing
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Tracing
+  nameWithType: BaseTokenQueue.Tracing
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tracing
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.LastTokenType
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokenQueue.LastTokenType
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: LastTokenType
+  nameWithType: BaseTokenQueue.LastTokenType
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.LastTokenType
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<TokenQueue>()
+  nameWithType: Extensions.AsEnumerable<TokenQueue>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Tokens.TokenQueue>()
+  nameWithType.vb: Extensions.AsEnumerable(Of TokenQueue)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Tokens.TokenQueue)()
+  name.vb: AsEnumerable(Of TokenQueue)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<TokenQueue>
+    nameWithType: Extensions.AsEnumerable<TokenQueue>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Tokens.TokenQueue>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of TokenQueue)
+    nameWithType: Extensions.AsEnumerable(Of TokenQueue)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Tokens.TokenQueue)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Collections.Generic.Queue{VDS.RDF.Parsing.Tokens.IToken}
+  commentId: T:System.Collections.Generic.Queue{VDS.RDF.Parsing.Tokens.IToken}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  name: Queue<IToken>
+  nameWithType: Queue<IToken>
+  fullName: System.Collections.Generic.Queue<VDS.RDF.Parsing.Tokens.IToken>
+  nameWithType.vb: Queue(Of IToken)
+  fullName.vb: System.Collections.Generic.Queue(Of VDS.RDF.Parsing.Tokens.IToken)
+  name.vb: Queue(Of IToken)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Parsing.Tokens.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: VDS.RDF.Parsing.Tokens.IToken
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Parsing.Tokens.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: VDS.RDF.Parsing.Tokens.IToken
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Queue`1
+  commentId: T:System.Collections.Generic.Queue`1
+  isExternal: true
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.#ctor*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.#ctor
+  name: TokenQueue
+  nameWithType: TokenQueue.TokenQueue
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.TokenQueue
+- uid: VDS.RDF.Parsing.Tokens.ITokeniser
+  commentId: T:VDS.RDF.Parsing.Tokens.ITokeniser
+  parent: VDS.RDF.Parsing.Tokens
+  name: ITokeniser
+  nameWithType: ITokeniser
+  fullName: VDS.RDF.Parsing.Tokens.ITokeniser
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Dequeue()
+  nameWithType: BaseTokenQueue.Dequeue()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue
+    name: Dequeue
+    nameWithType: BaseTokenQueue.Dequeue
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue
+    name: Dequeue
+    nameWithType: BaseTokenQueue.Dequeue
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Dequeue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue
+  name: Dequeue
+  nameWithType: TokenQueue.Dequeue
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Dequeue
+- uid: VDS.RDF.Parsing.Tokens.IToken
+  commentId: T:VDS.RDF.Parsing.Tokens.IToken
+  parent: VDS.RDF.Parsing.Tokens
+  name: IToken
+  nameWithType: IToken
+  fullName: VDS.RDF.Parsing.Tokens.IToken
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Enqueue(IToken)
+  nameWithType: BaseTokenQueue.Enqueue(IToken)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+    name: Enqueue
+    nameWithType: BaseTokenQueue.Enqueue
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Parsing.Tokens.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: VDS.RDF.Parsing.Tokens.IToken
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue(VDS.RDF.Parsing.Tokens.IToken)
+    name: Enqueue
+    nameWithType: BaseTokenQueue.Enqueue
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Enqueue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Parsing.Tokens.IToken
+    name: IToken
+    nameWithType: IToken
+    fullName: VDS.RDF.Parsing.Tokens.IToken
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue
+  name: Enqueue
+  nameWithType: TokenQueue.Enqueue
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Enqueue
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Peek()
+  nameWithType: BaseTokenQueue.Peek()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek
+    name: Peek
+    nameWithType: BaseTokenQueue.Peek
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek
+    name: Peek
+    nameWithType: BaseTokenQueue.Peek
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Peek
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Peek*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.Peek
+  name: Peek
+  nameWithType: TokenQueue.Peek
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Peek
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Clear()
+  nameWithType: BaseTokenQueue.Clear()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear
+    name: Clear
+    nameWithType: BaseTokenQueue.Clear
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear
+    name: Clear
+    nameWithType: BaseTokenQueue.Clear
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Clear
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Clear*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.Clear
+  name: Clear
+  nameWithType: TokenQueue.Clear
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Clear
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Count
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Count
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Count
+  nameWithType: BaseTokenQueue.Count
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Count
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Count*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.Count
+  name: Count
+  nameWithType: TokenQueue.Count
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: InitialiseBuffer()
+  nameWithType: BaseTokenQueue.InitialiseBuffer()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+    name: InitialiseBuffer
+    nameWithType: BaseTokenQueue.InitialiseBuffer
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+    name: InitialiseBuffer
+    nameWithType: BaseTokenQueue.InitialiseBuffer
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer
+  name: InitialiseBuffer
+  nameWithType: TokenQueue.InitialiseBuffer
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.InitialiseBuffer
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer(System.Int32)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer(System.Int32)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  isExternal: true
+  name: InitialiseBuffer(Int32)
+  nameWithType: BaseTokenQueue.InitialiseBuffer(Int32)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer(System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer(System.Int32)
+    name: InitialiseBuffer
+    nameWithType: BaseTokenQueue.InitialiseBuffer
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer(System.Int32)
+    name: InitialiseBuffer
+    nameWithType: BaseTokenQueue.InitialiseBuffer
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.InitialiseBuffer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokens
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokens
+  parent: VDS.RDF.Parsing.Tokens.BaseTokenQueue
+  name: Tokens
+  nameWithType: BaseTokenQueue.Tokens
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokenQueue.Tokens
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.Tokens*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.Tokens
+  name: Tokens
+  nameWithType: TokenQueue.Tokens
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.Tokens
+- uid: VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace
+  name: PrintTrace
+  nameWithType: TokenQueue.PrintTrace
+  fullName: VDS.RDF.Parsing.Tokens.TokenQueue.PrintTrace

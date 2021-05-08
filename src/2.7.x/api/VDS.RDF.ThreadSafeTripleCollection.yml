@@ -1,0 +1,2932 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.ThreadSafeTripleCollection
+  commentId: T:VDS.RDF.ThreadSafeTripleCollection
+  id: ThreadSafeTripleCollection
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.ThreadSafeTripleCollection.#ctor
+  - VDS.RDF.ThreadSafeTripleCollection.#ctor(VDS.RDF.BaseTripleCollection)
+  - VDS.RDF.ThreadSafeTripleCollection.Add(VDS.RDF.Triple)
+  - VDS.RDF.ThreadSafeTripleCollection.Contains(VDS.RDF.Triple)
+  - VDS.RDF.ThreadSafeTripleCollection.Count
+  - VDS.RDF.ThreadSafeTripleCollection.Delete(VDS.RDF.Triple)
+  - VDS.RDF.ThreadSafeTripleCollection.Dispose
+  - VDS.RDF.ThreadSafeTripleCollection.EnterReadLock
+  - VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock
+  - VDS.RDF.ThreadSafeTripleCollection.ExitReadLock
+  - VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock
+  - VDS.RDF.ThreadSafeTripleCollection.GetEnumerator
+  - VDS.RDF.ThreadSafeTripleCollection.Item(VDS.RDF.Triple)
+  - VDS.RDF.ThreadSafeTripleCollection.ObjectNodes
+  - VDS.RDF.ThreadSafeTripleCollection.PredicateNodes
+  - VDS.RDF.ThreadSafeTripleCollection.SubjectNodes
+  - VDS.RDF.ThreadSafeTripleCollection.WithObject(VDS.RDF.INode)
+  - VDS.RDF.ThreadSafeTripleCollection.WithPredicate(VDS.RDF.INode)
+  - VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.ThreadSafeTripleCollection.WithSubject(VDS.RDF.INode)
+  - VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  langs:
+  - csharp
+  - vb
+  name: ThreadSafeTripleCollection
+  nameWithType: ThreadSafeTripleCollection
+  fullName: VDS.RDF.ThreadSafeTripleCollection
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ThreadSafeTripleCollection
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 211
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nThread Safe decorator for triple collections.\n"
+  remarks: "\nDepending on the platform this either uses <xref href=\"System.Threading.ReaderWriterLockSlim\" data-throw-if-not-resolved=\"false\"></xref> to provide MRSW concurrency or it uses <xref href=\"System.Threading.Monitor\" data-throw-if-not-resolved=\"false\"></xref> to provide exclusive access concurrency, either way usage is thread safe.\n"
+  example: []
+  syntax:
+    content: 'public class ThreadSafeTripleCollection : WrapperTripleCollection, IEnumerable<Triple>, IEnumerable, IDisposable'
+    content.vb: >-
+      Public Class ThreadSafeTripleCollection
+          Inherits WrapperTripleCollection
+          Implements IEnumerable(Of Triple), IEnumerable, IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.BaseTripleCollection
+  - VDS.RDF.WrapperTripleCollection
+  implements:
+  - System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  - System.Collections.IEnumerable
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.WrapperTripleCollection._triples
+  - VDS.RDF.BaseTripleCollection.System#Collections#IEnumerable#GetEnumerator
+  - VDS.RDF.BaseTripleCollection.TripleAdded
+  - VDS.RDF.BaseTripleCollection.TripleRemoved
+  - VDS.RDF.BaseTripleCollection.RaiseTripleAdded(VDS.RDF.Triple)
+  - VDS.RDF.BaseTripleCollection.RaiseTripleRemoved(VDS.RDF.Triple)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.ThreadSafeTripleCollection.VDS.RDF.Extensions.AsEnumerable``1
+  - System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  - System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.WithSubject(VDS.RDF.INode)
+  - System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.WithPredicate(VDS.RDF.INode)
+  - System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.WithObject(VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.ThreadSafeTripleCollection.#ctor
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: ThreadSafeTripleCollection()
+  nameWithType: ThreadSafeTripleCollection.ThreadSafeTripleCollection()
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ThreadSafeTripleCollection()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 219
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new thread safe triple collection which wraps a new instance of the default unindexed <xref href=\"VDS.RDF.TripleCollection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ThreadSafeTripleCollection()
+    content.vb: Public Sub New
+  overload: VDS.RDF.ThreadSafeTripleCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.ThreadSafeTripleCollection.#ctor(VDS.RDF.BaseTripleCollection)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.#ctor(VDS.RDF.BaseTripleCollection)
+  id: '#ctor(VDS.RDF.BaseTripleCollection)'
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: ThreadSafeTripleCollection(BaseTripleCollection)
+  nameWithType: ThreadSafeTripleCollection.ThreadSafeTripleCollection(BaseTripleCollection)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ThreadSafeTripleCollection(VDS.RDF.BaseTripleCollection)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 226
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new thread safe triple collection which wraps the provided triple collection.\n"
+  example: []
+  syntax:
+    content: public ThreadSafeTripleCollection(BaseTripleCollection tripleCollection)
+    parameters:
+    - id: tripleCollection
+      type: VDS.RDF.BaseTripleCollection
+      description: Triple Collection.
+    content.vb: Public Sub New(tripleCollection As BaseTripleCollection)
+  overload: VDS.RDF.ThreadSafeTripleCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock
+  id: EnterWriteLock
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: EnterWriteLock()
+  nameWithType: ThreadSafeTripleCollection.EnterWriteLock()
+  fullName: VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: EnterWriteLock
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 232
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEnters the write lock.\n"
+  example: []
+  syntax:
+    content: protected void EnterWriteLock()
+    content.vb: Protected Sub EnterWriteLock
+  overload: VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock
+  id: ExitWriteLock
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: ExitWriteLock()
+  nameWithType: ThreadSafeTripleCollection.ExitWriteLock()
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExitWriteLock
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 240
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nExists the write lock.\n"
+  example: []
+  syntax:
+    content: protected void ExitWriteLock()
+    content.vb: Protected Sub ExitWriteLock
+  overload: VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.ThreadSafeTripleCollection.EnterReadLock
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.EnterReadLock
+  id: EnterReadLock
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: EnterReadLock()
+  nameWithType: ThreadSafeTripleCollection.EnterReadLock()
+  fullName: VDS.RDF.ThreadSafeTripleCollection.EnterReadLock()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: EnterReadLock
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 248
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEnters the read lock.\n"
+  example: []
+  syntax:
+    content: protected void EnterReadLock()
+    content.vb: Protected Sub EnterReadLock
+  overload: VDS.RDF.ThreadSafeTripleCollection.EnterReadLock*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.ThreadSafeTripleCollection.ExitReadLock
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.ExitReadLock
+  id: ExitReadLock
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: ExitReadLock()
+  nameWithType: ThreadSafeTripleCollection.ExitReadLock()
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ExitReadLock()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExitReadLock
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 256
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nExists the read lock.\n"
+  example: []
+  syntax:
+    content: protected void ExitReadLock()
+    content.vb: Protected Sub ExitReadLock
+  overload: VDS.RDF.ThreadSafeTripleCollection.ExitReadLock*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.ThreadSafeTripleCollection.Add(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.Add(VDS.RDF.Triple)
+  id: Add(VDS.RDF.Triple)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: Add(Triple)
+  nameWithType: ThreadSafeTripleCollection.Add(Triple)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Add(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Add
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 265
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nAdds a Triple to the Collection.\n"
+  example: []
+  syntax:
+    content: protected override bool Add(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple to add.
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function Add(t As Triple) As Boolean
+  overridden: VDS.RDF.WrapperTripleCollection.Add(VDS.RDF.Triple)
+  overload: VDS.RDF.ThreadSafeTripleCollection.Add*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.Contains(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.Contains(VDS.RDF.Triple)
+  id: Contains(VDS.RDF.Triple)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: Contains(Triple)
+  nameWithType: ThreadSafeTripleCollection.Contains(Triple)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Contains(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Contains
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 283
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nDetermines whether a given Triple is in the Triple Collection.\n"
+  example: []
+  syntax:
+    content: public override bool Contains(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: The Triple to test.
+    return:
+      type: System.Boolean
+      description: True if the Triple already exists in the Triple Collection.
+    content.vb: Public Overrides Function Contains(t As Triple) As Boolean
+  overridden: VDS.RDF.WrapperTripleCollection.Contains(VDS.RDF.Triple)
+  overload: VDS.RDF.ThreadSafeTripleCollection.Contains*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.Count
+  commentId: P:VDS.RDF.ThreadSafeTripleCollection.Count
+  id: Count
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ThreadSafeTripleCollection.Count
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Count
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Count
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 301
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Number of Triples in the Triple Collection.\n"
+  example: []
+  syntax:
+    content: public override int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property Count As Integer
+  overridden: VDS.RDF.WrapperTripleCollection.Count
+  overload: VDS.RDF.ThreadSafeTripleCollection.Count*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.ThreadSafeTripleCollection.Item(VDS.RDF.Triple)
+  commentId: P:VDS.RDF.ThreadSafeTripleCollection.Item(VDS.RDF.Triple)
+  id: Item(VDS.RDF.Triple)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: Item[Triple]
+  nameWithType: ThreadSafeTripleCollection.Item[Triple]
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Item[VDS.RDF.Triple]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 324
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the original instance of a specific Triple from the Triple Collection.\n"
+  example: []
+  syntax:
+    content: public override Triple this[Triple t] { get; }
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple.
+    return:
+      type: VDS.RDF.Triple
+      description: ''
+    content.vb: Public Overrides ReadOnly Property Item(t As Triple) As Triple
+  overridden: VDS.RDF.WrapperTripleCollection.Item(VDS.RDF.Triple)
+  overload: VDS.RDF.ThreadSafeTripleCollection.Item*
+  nameWithType.vb: ThreadSafeTripleCollection.Item(Triple)
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+  fullName.vb: VDS.RDF.ThreadSafeTripleCollection.Item(VDS.RDF.Triple)
+  name.vb: Item(Triple)
+- uid: VDS.RDF.ThreadSafeTripleCollection.Delete(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.Delete(VDS.RDF.Triple)
+  id: Delete(VDS.RDF.Triple)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: Delete(Triple)
+  nameWithType: ThreadSafeTripleCollection.Delete(Triple)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Delete(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Delete
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 348
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nDeletes a Triple from the Collection.\n"
+  remarks: Deleting something that doesn&apos;t exist has no effect and gives no error.
+  example: []
+  syntax:
+    content: protected override bool Delete(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple to remove.
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function Delete(t As Triple) As Boolean
+  overridden: VDS.RDF.WrapperTripleCollection.Delete(VDS.RDF.Triple)
+  overload: VDS.RDF.ThreadSafeTripleCollection.Delete*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.GetEnumerator
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.GetEnumerator
+  id: GetEnumerator
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ThreadSafeTripleCollection.GetEnumerator()
+  fullName: VDS.RDF.ThreadSafeTripleCollection.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetEnumerator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 365
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Enumerator for the Collection.\n"
+  example: []
+  syntax:
+    content: public override IEnumerator<Triple> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Overrides Function GetEnumerator As IEnumerator(Of Triple)
+  overridden: VDS.RDF.WrapperTripleCollection.GetEnumerator
+  overload: VDS.RDF.ThreadSafeTripleCollection.GetEnumerator*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.ObjectNodes
+  commentId: P:VDS.RDF.ThreadSafeTripleCollection.ObjectNodes
+  id: ObjectNodes
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: ObjectNodes
+  nameWithType: ThreadSafeTripleCollection.ObjectNodes
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ObjectNodes
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ObjectNodes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 383
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all the Nodes which are Objects of Triples in the Triple Collectio.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<INode> ObjectNodes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+    content.vb: Public Overrides ReadOnly Property ObjectNodes As IEnumerable(Of INode)
+  overridden: VDS.RDF.WrapperTripleCollection.ObjectNodes
+  overload: VDS.RDF.ThreadSafeTripleCollection.ObjectNodes*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.ThreadSafeTripleCollection.PredicateNodes
+  commentId: P:VDS.RDF.ThreadSafeTripleCollection.PredicateNodes
+  id: PredicateNodes
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: PredicateNodes
+  nameWithType: ThreadSafeTripleCollection.PredicateNodes
+  fullName: VDS.RDF.ThreadSafeTripleCollection.PredicateNodes
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PredicateNodes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 404
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all the Nodes which are Predicates of Triples in the Triple Collection.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<INode> PredicateNodes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+    content.vb: Public Overrides ReadOnly Property PredicateNodes As IEnumerable(Of INode)
+  overridden: VDS.RDF.WrapperTripleCollection.PredicateNodes
+  overload: VDS.RDF.ThreadSafeTripleCollection.PredicateNodes*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.ThreadSafeTripleCollection.SubjectNodes
+  commentId: P:VDS.RDF.ThreadSafeTripleCollection.SubjectNodes
+  id: SubjectNodes
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: SubjectNodes
+  nameWithType: ThreadSafeTripleCollection.SubjectNodes
+  fullName: VDS.RDF.ThreadSafeTripleCollection.SubjectNodes
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SubjectNodes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 425
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all the Nodes which are Subjects of Triples in the Triple Collection.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<INode> SubjectNodes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+    content.vb: Public Overrides ReadOnly Property SubjectNodes As IEnumerable(Of INode)
+  overridden: VDS.RDF.WrapperTripleCollection.SubjectNodes
+  overload: VDS.RDF.ThreadSafeTripleCollection.SubjectNodes*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.WithObject(VDS.RDF.INode)
+  id: WithObject(VDS.RDF.INode)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: WithObject(INode)
+  nameWithType: ThreadSafeTripleCollection.WithObject(INode)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithObject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WithObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 448
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all triples with the given Object.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<Triple> WithObject(INode obj)
+    parameters:
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Overrides Function WithObject(obj As INode) As IEnumerable(Of Triple)
+  overridden: VDS.RDF.WrapperTripleCollection.WithObject(VDS.RDF.INode)
+  overload: VDS.RDF.ThreadSafeTripleCollection.WithObject*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.WithPredicate(VDS.RDF.INode)
+  id: WithPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: WithPredicate(INode)
+  nameWithType: ThreadSafeTripleCollection.WithPredicate(INode)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithPredicate(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WithPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 468
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all triples with the given predicate.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<Triple> WithPredicate(INode pred)
+    parameters:
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Overrides Function WithPredicate(pred As INode) As IEnumerable(Of Triple)
+  overridden: VDS.RDF.WrapperTripleCollection.WithPredicate(VDS.RDF.INode)
+  overload: VDS.RDF.ThreadSafeTripleCollection.WithPredicate*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  id: WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: WithPredicateObject(INode, INode)
+  nameWithType: ThreadSafeTripleCollection.WithPredicateObject(INode, INode)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WithPredicateObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 489
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all triples with the given predicate object.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<Triple> WithPredicateObject(INode pred, INode obj)
+    parameters:
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Overrides Function WithPredicateObject(pred As INode, obj As INode) As IEnumerable(Of Triple)
+  overridden: VDS.RDF.WrapperTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  overload: VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.WithSubject(VDS.RDF.INode)
+  id: WithSubject(VDS.RDF.INode)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: WithSubject(INode)
+  nameWithType: ThreadSafeTripleCollection.WithSubject(INode)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithSubject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WithSubject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 509
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all the triples with the given subject.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<Triple> WithSubject(INode subj)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Overrides Function WithSubject(subj As INode) As IEnumerable(Of Triple)
+  overridden: VDS.RDF.WrapperTripleCollection.WithSubject(VDS.RDF.INode)
+  overload: VDS.RDF.ThreadSafeTripleCollection.WithSubject*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  id: WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: WithSubjectObject(INode, INode)
+  nameWithType: ThreadSafeTripleCollection.WithSubjectObject(INode, INode)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WithSubjectObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 530
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all the triples with the given subject and object.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<Triple> WithSubjectObject(INode subj, INode obj)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Overrides Function WithSubjectObject(subj As INode, obj As INode) As IEnumerable(Of Triple)
+  overridden: VDS.RDF.WrapperTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  overload: VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  id: WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: WithSubjectPredicate(INode, INode)
+  nameWithType: ThreadSafeTripleCollection.WithSubjectPredicate(INode, INode)
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WithSubjectPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 551
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets all triples with the given subject and predicate.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<Triple> WithSubjectPredicate(INode subj, INode pred)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Overrides Function WithSubjectPredicate(subj As INode, pred As INode) As IEnumerable(Of Triple)
+  overridden: VDS.RDF.WrapperTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  overload: VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.ThreadSafeTripleCollection.Dispose
+  commentId: M:VDS.RDF.ThreadSafeTripleCollection.Dispose
+  id: Dispose
+  parent: VDS.RDF.ThreadSafeTripleCollection
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ThreadSafeTripleCollection.Dispose()
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Dispose
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleCollection.cs
+    startLine: 569
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nDisposes of a Triple Collection.\n"
+  example: []
+  syntax:
+    content: public override void Dispose()
+    content.vb: Public Overrides Sub Dispose
+  overridden: VDS.RDF.WrapperTripleCollection.Dispose
+  overload: VDS.RDF.ThreadSafeTripleCollection.Dispose*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: System.Threading.ReaderWriterLockSlim
+  commentId: T:System.Threading.ReaderWriterLockSlim
+  parent: System.Threading
+  isExternal: true
+  name: ReaderWriterLockSlim
+  nameWithType: ReaderWriterLockSlim
+  fullName: System.Threading.ReaderWriterLockSlim
+- uid: System.Threading.Monitor
+  commentId: T:System.Threading.Monitor
+  isExternal: true
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.BaseTripleCollection
+  commentId: T:VDS.RDF.BaseTripleCollection
+  parent: VDS.RDF
+  name: BaseTripleCollection
+  nameWithType: BaseTripleCollection
+  fullName: VDS.RDF.BaseTripleCollection
+- uid: VDS.RDF.WrapperTripleCollection
+  commentId: T:VDS.RDF.WrapperTripleCollection
+  parent: VDS.RDF
+  name: WrapperTripleCollection
+  nameWithType: WrapperTripleCollection
+  fullName: VDS.RDF.WrapperTripleCollection
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Triple>
+  nameWithType: IEnumerable<Triple>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerable(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple)
+  name.vb: IEnumerable(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.WrapperTripleCollection._triples
+  commentId: F:VDS.RDF.WrapperTripleCollection._triples
+  parent: VDS.RDF.WrapperTripleCollection
+  name: _triples
+  nameWithType: WrapperTripleCollection._triples
+  fullName: VDS.RDF.WrapperTripleCollection._triples
+- uid: VDS.RDF.BaseTripleCollection.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:VDS.RDF.BaseTripleCollection.System#Collections#IEnumerable#GetEnumerator
+  parent: VDS.RDF.BaseTripleCollection
+  name: IEnumerable.GetEnumerator()
+  nameWithType: BaseTripleCollection.IEnumerable.GetEnumerator()
+  fullName: VDS.RDF.BaseTripleCollection.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: BaseTripleCollection.System.Collections.IEnumerable.GetEnumerator()
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: VDS.RDF.BaseTripleCollection.System#Collections#IEnumerable#GetEnumerator
+    name: IEnumerable.GetEnumerator
+    nameWithType: BaseTripleCollection.IEnumerable.GetEnumerator
+    fullName: VDS.RDF.BaseTripleCollection.System.Collections.IEnumerable.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseTripleCollection.System#Collections#IEnumerable#GetEnumerator
+    name: System.Collections.IEnumerable.GetEnumerator
+    nameWithType: BaseTripleCollection.System.Collections.IEnumerable.GetEnumerator
+    fullName: VDS.RDF.BaseTripleCollection.System.Collections.IEnumerable.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseTripleCollection.TripleAdded
+  commentId: E:VDS.RDF.BaseTripleCollection.TripleAdded
+  parent: VDS.RDF.BaseTripleCollection
+  name: TripleAdded
+  nameWithType: BaseTripleCollection.TripleAdded
+  fullName: VDS.RDF.BaseTripleCollection.TripleAdded
+- uid: VDS.RDF.BaseTripleCollection.TripleRemoved
+  commentId: E:VDS.RDF.BaseTripleCollection.TripleRemoved
+  parent: VDS.RDF.BaseTripleCollection
+  name: TripleRemoved
+  nameWithType: BaseTripleCollection.TripleRemoved
+  fullName: VDS.RDF.BaseTripleCollection.TripleRemoved
+- uid: VDS.RDF.BaseTripleCollection.RaiseTripleAdded(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.BaseTripleCollection.RaiseTripleAdded(VDS.RDF.Triple)
+  parent: VDS.RDF.BaseTripleCollection
+  name: RaiseTripleAdded(Triple)
+  nameWithType: BaseTripleCollection.RaiseTripleAdded(Triple)
+  fullName: VDS.RDF.BaseTripleCollection.RaiseTripleAdded(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.BaseTripleCollection.RaiseTripleAdded(VDS.RDF.Triple)
+    name: RaiseTripleAdded
+    nameWithType: BaseTripleCollection.RaiseTripleAdded
+    fullName: VDS.RDF.BaseTripleCollection.RaiseTripleAdded
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseTripleCollection.RaiseTripleAdded(VDS.RDF.Triple)
+    name: RaiseTripleAdded
+    nameWithType: BaseTripleCollection.RaiseTripleAdded
+    fullName: VDS.RDF.BaseTripleCollection.RaiseTripleAdded
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseTripleCollection.RaiseTripleRemoved(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.BaseTripleCollection.RaiseTripleRemoved(VDS.RDF.Triple)
+  parent: VDS.RDF.BaseTripleCollection
+  name: RaiseTripleRemoved(Triple)
+  nameWithType: BaseTripleCollection.RaiseTripleRemoved(Triple)
+  fullName: VDS.RDF.BaseTripleCollection.RaiseTripleRemoved(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.BaseTripleCollection.RaiseTripleRemoved(VDS.RDF.Triple)
+    name: RaiseTripleRemoved
+    nameWithType: BaseTripleCollection.RaiseTripleRemoved
+    fullName: VDS.RDF.BaseTripleCollection.RaiseTripleRemoved
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseTripleCollection.RaiseTripleRemoved(VDS.RDF.Triple)
+    name: RaiseTripleRemoved
+    nameWithType: BaseTripleCollection.RaiseTripleRemoved
+    fullName: VDS.RDF.BaseTripleCollection.RaiseTripleRemoved
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ThreadSafeTripleCollection>()
+  nameWithType: Extensions.AsEnumerable<ThreadSafeTripleCollection>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.ThreadSafeTripleCollection>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ThreadSafeTripleCollection)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.ThreadSafeTripleCollection)()
+  name.vb: AsEnumerable(Of ThreadSafeTripleCollection)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ThreadSafeTripleCollection>
+    nameWithType: Extensions.AsEnumerable<ThreadSafeTripleCollection>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.ThreadSafeTripleCollection>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ThreadSafeTripleCollection)
+    nameWithType: Extensions.AsEnumerable(Of ThreadSafeTripleCollection)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.ThreadSafeTripleCollection)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name: IsDisjoint<Triple>(IEnumerable<Triple>)
+  nameWithType: Extensions.IsDisjoint<Triple>(IEnumerable<Triple>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<VDS.RDF.Triple>(System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: Extensions.IsDisjoint(Of Triple)(IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of VDS.RDF.Triple)(System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: IsDisjoint(Of Triple)(IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<Triple>
+    nameWithType: Extensions.IsDisjoint<Triple>
+    fullName: VDS.RDF.Extensions.IsDisjoint<VDS.RDF.Triple>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of Triple)
+    nameWithType: Extensions.IsDisjoint(Of Triple)
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of VDS.RDF.Triple)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: ChunkBy<Triple>(Int32)
+  nameWithType: Extensions.ChunkBy<Triple>(Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<VDS.RDF.Triple>(System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of Triple)(Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of VDS.RDF.Triple)(System.Int32)
+  name.vb: ChunkBy(Of Triple)(Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy<Triple>
+    nameWithType: Extensions.ChunkBy<Triple>
+    fullName: VDS.RDF.Extensions.ChunkBy<VDS.RDF.Triple>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy(Of Triple)
+    nameWithType: Extensions.ChunkBy(Of Triple)
+    fullName: VDS.RDF.Extensions.ChunkBy(Of VDS.RDF.Triple)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.WithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  name: WithSubject(INode)
+  nameWithType: Extensions.WithSubject(INode)
+  fullName: VDS.RDF.Extensions.WithSubject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.WithSubject(VDS.RDF.INode)
+    name: WithSubject
+    nameWithType: Extensions.WithSubject
+    fullName: VDS.RDF.Extensions.WithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.WithSubject(VDS.RDF.INode)
+    name: WithSubject
+    nameWithType: Extensions.WithSubject
+    fullName: VDS.RDF.Extensions.WithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.WithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  name: WithPredicate(INode)
+  nameWithType: Extensions.WithPredicate(INode)
+  fullName: VDS.RDF.Extensions.WithPredicate(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.WithPredicate(VDS.RDF.INode)
+    name: WithPredicate
+    nameWithType: Extensions.WithPredicate
+    fullName: VDS.RDF.Extensions.WithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.WithPredicate(VDS.RDF.INode)
+    name: WithPredicate
+    nameWithType: Extensions.WithPredicate
+    fullName: VDS.RDF.Extensions.WithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}.VDS.RDF.Extensions.WithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  name: WithObject(INode)
+  nameWithType: Extensions.WithObject(INode)
+  fullName: VDS.RDF.Extensions.WithObject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.WithObject(VDS.RDF.INode)
+    name: WithObject
+    nameWithType: Extensions.WithObject
+    fullName: VDS.RDF.Extensions.WithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.WithObject(VDS.RDF.INode)
+    name: WithObject
+    nameWithType: Extensions.WithObject
+    fullName: VDS.RDF.Extensions.WithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  name: IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType: Extensions.IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: Extensions.IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<T>
+    nameWithType: Extensions.IsDisjoint<T>
+    fullName: VDS.RDF.Extensions.IsDisjoint<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of T)
+    nameWithType: Extensions.IsDisjoint(Of T)
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  isExternal: true
+  name: ChunkBy<T>(IEnumerable<T>, Int32)
+  nameWithType: Extensions.ChunkBy<T>(IEnumerable<T>, Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  name.vb: ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy<T>
+    nameWithType: Extensions.ChunkBy<T>
+    fullName: VDS.RDF.Extensions.ChunkBy<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy(Of T)
+    nameWithType: Extensions.ChunkBy(Of T)
+    fullName: VDS.RDF.Extensions.ChunkBy(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  commentId: M:VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  isExternal: true
+  name: WithSubject(IEnumerable<Triple>, INode)
+  nameWithType: Extensions.WithSubject(IEnumerable<Triple>, INode)
+  fullName: VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, VDS.RDF.INode)
+  nameWithType.vb: Extensions.WithSubject(IEnumerable(Of Triple), INode)
+  fullName.vb: VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), VDS.RDF.INode)
+  name.vb: WithSubject(IEnumerable(Of Triple), INode)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+    name: WithSubject
+    nameWithType: Extensions.WithSubject
+    fullName: VDS.RDF.Extensions.WithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.WithSubject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+    name: WithSubject
+    nameWithType: Extensions.WithSubject
+    fullName: VDS.RDF.Extensions.WithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  commentId: M:VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  isExternal: true
+  name: WithPredicate(IEnumerable<Triple>, INode)
+  nameWithType: Extensions.WithPredicate(IEnumerable<Triple>, INode)
+  fullName: VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, VDS.RDF.INode)
+  nameWithType.vb: Extensions.WithPredicate(IEnumerable(Of Triple), INode)
+  fullName.vb: VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), VDS.RDF.INode)
+  name.vb: WithPredicate(IEnumerable(Of Triple), INode)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+    name: WithPredicate
+    nameWithType: Extensions.WithPredicate
+    fullName: VDS.RDF.Extensions.WithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.WithPredicate(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+    name: WithPredicate
+    nameWithType: Extensions.WithPredicate
+    fullName: VDS.RDF.Extensions.WithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  commentId: M:VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+  isExternal: true
+  name: WithObject(IEnumerable<Triple>, INode)
+  nameWithType: Extensions.WithObject(IEnumerable<Triple>, INode)
+  fullName: VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, VDS.RDF.INode)
+  nameWithType.vb: Extensions.WithObject(IEnumerable(Of Triple), INode)
+  fullName.vb: VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), VDS.RDF.INode)
+  name.vb: WithObject(IEnumerable(Of Triple), INode)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+    name: WithObject
+    nameWithType: Extensions.WithObject
+    fullName: VDS.RDF.Extensions.WithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.WithObject(System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.INode)
+    name: WithObject
+    nameWithType: Extensions.WithObject
+    fullName: VDS.RDF.Extensions.WithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.TripleCollection
+  commentId: T:VDS.RDF.TripleCollection
+  name: TripleCollection
+  nameWithType: TripleCollection
+  fullName: VDS.RDF.TripleCollection
+- uid: VDS.RDF.ThreadSafeTripleCollection.#ctor*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.#ctor
+  name: ThreadSafeTripleCollection
+  nameWithType: ThreadSafeTripleCollection.ThreadSafeTripleCollection
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ThreadSafeTripleCollection
+- uid: VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock
+  name: EnterWriteLock
+  nameWithType: ThreadSafeTripleCollection.EnterWriteLock
+  fullName: VDS.RDF.ThreadSafeTripleCollection.EnterWriteLock
+- uid: VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock
+  name: ExitWriteLock
+  nameWithType: ThreadSafeTripleCollection.ExitWriteLock
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ExitWriteLock
+- uid: VDS.RDF.ThreadSafeTripleCollection.EnterReadLock*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.EnterReadLock
+  name: EnterReadLock
+  nameWithType: ThreadSafeTripleCollection.EnterReadLock
+  fullName: VDS.RDF.ThreadSafeTripleCollection.EnterReadLock
+- uid: VDS.RDF.ThreadSafeTripleCollection.ExitReadLock*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.ExitReadLock
+  name: ExitReadLock
+  nameWithType: ThreadSafeTripleCollection.ExitReadLock
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ExitReadLock
+- uid: VDS.RDF.WrapperTripleCollection.Add(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.WrapperTripleCollection.Add(VDS.RDF.Triple)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: Add(Triple)
+  nameWithType: WrapperTripleCollection.Add(Triple)
+  fullName: VDS.RDF.WrapperTripleCollection.Add(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.Add(VDS.RDF.Triple)
+    name: Add
+    nameWithType: WrapperTripleCollection.Add
+    fullName: VDS.RDF.WrapperTripleCollection.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.Add(VDS.RDF.Triple)
+    name: Add
+    nameWithType: WrapperTripleCollection.Add
+    fullName: VDS.RDF.WrapperTripleCollection.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.Add*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.Add
+  name: Add
+  nameWithType: ThreadSafeTripleCollection.Add
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Add
+- uid: VDS.RDF.Triple
+  commentId: T:VDS.RDF.Triple
+  parent: VDS.RDF
+  name: Triple
+  nameWithType: Triple
+  fullName: VDS.RDF.Triple
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.WrapperTripleCollection.Contains(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.WrapperTripleCollection.Contains(VDS.RDF.Triple)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: Contains(Triple)
+  nameWithType: WrapperTripleCollection.Contains(Triple)
+  fullName: VDS.RDF.WrapperTripleCollection.Contains(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.Contains(VDS.RDF.Triple)
+    name: Contains
+    nameWithType: WrapperTripleCollection.Contains
+    fullName: VDS.RDF.WrapperTripleCollection.Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.Contains(VDS.RDF.Triple)
+    name: Contains
+    nameWithType: WrapperTripleCollection.Contains
+    fullName: VDS.RDF.WrapperTripleCollection.Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.Contains*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.Contains
+  name: Contains
+  nameWithType: ThreadSafeTripleCollection.Contains
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Contains
+- uid: VDS.RDF.WrapperTripleCollection.Count
+  commentId: P:VDS.RDF.WrapperTripleCollection.Count
+  parent: VDS.RDF.WrapperTripleCollection
+  name: Count
+  nameWithType: WrapperTripleCollection.Count
+  fullName: VDS.RDF.WrapperTripleCollection.Count
+- uid: VDS.RDF.ThreadSafeTripleCollection.Count*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.Count
+  name: Count
+  nameWithType: ThreadSafeTripleCollection.Count
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.WrapperTripleCollection.Item(VDS.RDF.Triple)
+  commentId: P:VDS.RDF.WrapperTripleCollection.Item(VDS.RDF.Triple)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: Item[Triple]
+  nameWithType: WrapperTripleCollection.Item[Triple]
+  fullName: VDS.RDF.WrapperTripleCollection.Item[VDS.RDF.Triple]
+  nameWithType.vb: WrapperTripleCollection.Item(Triple)
+  fullName.vb: VDS.RDF.WrapperTripleCollection.Item(VDS.RDF.Triple)
+  name.vb: Item(Triple)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.Item(VDS.RDF.Triple)
+    name: Item
+    nameWithType: WrapperTripleCollection.Item
+    fullName: VDS.RDF.WrapperTripleCollection.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.Item(VDS.RDF.Triple)
+    name: Item
+    nameWithType: WrapperTripleCollection.Item
+    fullName: VDS.RDF.WrapperTripleCollection.Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.Item*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.Item
+  name: Item
+  nameWithType: ThreadSafeTripleCollection.Item
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Item
+- uid: VDS.RDF.WrapperTripleCollection.Delete(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.WrapperTripleCollection.Delete(VDS.RDF.Triple)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: Delete(Triple)
+  nameWithType: WrapperTripleCollection.Delete(Triple)
+  fullName: VDS.RDF.WrapperTripleCollection.Delete(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.Delete(VDS.RDF.Triple)
+    name: Delete
+    nameWithType: WrapperTripleCollection.Delete
+    fullName: VDS.RDF.WrapperTripleCollection.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.Delete(VDS.RDF.Triple)
+    name: Delete
+    nameWithType: WrapperTripleCollection.Delete
+    fullName: VDS.RDF.WrapperTripleCollection.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.Delete*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.Delete
+  name: Delete
+  nameWithType: ThreadSafeTripleCollection.Delete
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Delete
+- uid: VDS.RDF.WrapperTripleCollection.GetEnumerator
+  commentId: M:VDS.RDF.WrapperTripleCollection.GetEnumerator
+  parent: VDS.RDF.WrapperTripleCollection
+  name: GetEnumerator()
+  nameWithType: WrapperTripleCollection.GetEnumerator()
+  fullName: VDS.RDF.WrapperTripleCollection.GetEnumerator()
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.GetEnumerator
+    name: GetEnumerator
+    nameWithType: WrapperTripleCollection.GetEnumerator
+    fullName: VDS.RDF.WrapperTripleCollection.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.GetEnumerator
+    name: GetEnumerator
+    nameWithType: WrapperTripleCollection.GetEnumerator
+    fullName: VDS.RDF.WrapperTripleCollection.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.GetEnumerator*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.GetEnumerator
+  name: GetEnumerator
+  nameWithType: ThreadSafeTripleCollection.GetEnumerator
+  fullName: VDS.RDF.ThreadSafeTripleCollection.GetEnumerator
+- uid: System.Collections.Generic.IEnumerator{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerator{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<Triple>
+  nameWithType: IEnumerator<Triple>
+  fullName: System.Collections.Generic.IEnumerator<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerator(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of VDS.RDF.Triple)
+  name.vb: IEnumerator(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.WrapperTripleCollection.ObjectNodes
+  commentId: P:VDS.RDF.WrapperTripleCollection.ObjectNodes
+  parent: VDS.RDF.WrapperTripleCollection
+  name: ObjectNodes
+  nameWithType: WrapperTripleCollection.ObjectNodes
+  fullName: VDS.RDF.WrapperTripleCollection.ObjectNodes
+- uid: VDS.RDF.ThreadSafeTripleCollection.ObjectNodes*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.ObjectNodes
+  name: ObjectNodes
+  nameWithType: ThreadSafeTripleCollection.ObjectNodes
+  fullName: VDS.RDF.ThreadSafeTripleCollection.ObjectNodes
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<INode>
+  nameWithType: IEnumerable<INode>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.INode>
+  nameWithType.vb: IEnumerable(Of INode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.INode)
+  name.vb: IEnumerable(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.WrapperTripleCollection.PredicateNodes
+  commentId: P:VDS.RDF.WrapperTripleCollection.PredicateNodes
+  parent: VDS.RDF.WrapperTripleCollection
+  name: PredicateNodes
+  nameWithType: WrapperTripleCollection.PredicateNodes
+  fullName: VDS.RDF.WrapperTripleCollection.PredicateNodes
+- uid: VDS.RDF.ThreadSafeTripleCollection.PredicateNodes*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.PredicateNodes
+  name: PredicateNodes
+  nameWithType: ThreadSafeTripleCollection.PredicateNodes
+  fullName: VDS.RDF.ThreadSafeTripleCollection.PredicateNodes
+- uid: VDS.RDF.WrapperTripleCollection.SubjectNodes
+  commentId: P:VDS.RDF.WrapperTripleCollection.SubjectNodes
+  parent: VDS.RDF.WrapperTripleCollection
+  name: SubjectNodes
+  nameWithType: WrapperTripleCollection.SubjectNodes
+  fullName: VDS.RDF.WrapperTripleCollection.SubjectNodes
+- uid: VDS.RDF.ThreadSafeTripleCollection.SubjectNodes*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.SubjectNodes
+  name: SubjectNodes
+  nameWithType: ThreadSafeTripleCollection.SubjectNodes
+  fullName: VDS.RDF.ThreadSafeTripleCollection.SubjectNodes
+- uid: VDS.RDF.WrapperTripleCollection.WithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.WrapperTripleCollection.WithObject(VDS.RDF.INode)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: WithObject(INode)
+  nameWithType: WrapperTripleCollection.WithObject(INode)
+  fullName: VDS.RDF.WrapperTripleCollection.WithObject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.WithObject(VDS.RDF.INode)
+    name: WithObject
+    nameWithType: WrapperTripleCollection.WithObject
+    fullName: VDS.RDF.WrapperTripleCollection.WithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.WithObject(VDS.RDF.INode)
+    name: WithObject
+    nameWithType: WrapperTripleCollection.WithObject
+    fullName: VDS.RDF.WrapperTripleCollection.WithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithObject*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.WithObject
+  name: WithObject
+  nameWithType: ThreadSafeTripleCollection.WithObject
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithObject
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.WrapperTripleCollection.WithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.WrapperTripleCollection.WithPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: WithPredicate(INode)
+  nameWithType: WrapperTripleCollection.WithPredicate(INode)
+  fullName: VDS.RDF.WrapperTripleCollection.WithPredicate(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.WithPredicate(VDS.RDF.INode)
+    name: WithPredicate
+    nameWithType: WrapperTripleCollection.WithPredicate
+    fullName: VDS.RDF.WrapperTripleCollection.WithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.WithPredicate(VDS.RDF.INode)
+    name: WithPredicate
+    nameWithType: WrapperTripleCollection.WithPredicate
+    fullName: VDS.RDF.WrapperTripleCollection.WithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithPredicate*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.WithPredicate
+  name: WithPredicate
+  nameWithType: ThreadSafeTripleCollection.WithPredicate
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithPredicate
+- uid: VDS.RDF.WrapperTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.WrapperTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: WithPredicateObject(INode, INode)
+  nameWithType: WrapperTripleCollection.WithPredicateObject(INode, INode)
+  fullName: VDS.RDF.WrapperTripleCollection.WithPredicateObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: WithPredicateObject
+    nameWithType: WrapperTripleCollection.WithPredicateObject
+    fullName: VDS.RDF.WrapperTripleCollection.WithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.WithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: WithPredicateObject
+    nameWithType: WrapperTripleCollection.WithPredicateObject
+    fullName: VDS.RDF.WrapperTripleCollection.WithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject
+  name: WithPredicateObject
+  nameWithType: ThreadSafeTripleCollection.WithPredicateObject
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithPredicateObject
+- uid: VDS.RDF.WrapperTripleCollection.WithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.WrapperTripleCollection.WithSubject(VDS.RDF.INode)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: WithSubject(INode)
+  nameWithType: WrapperTripleCollection.WithSubject(INode)
+  fullName: VDS.RDF.WrapperTripleCollection.WithSubject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.WithSubject(VDS.RDF.INode)
+    name: WithSubject
+    nameWithType: WrapperTripleCollection.WithSubject
+    fullName: VDS.RDF.WrapperTripleCollection.WithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.WithSubject(VDS.RDF.INode)
+    name: WithSubject
+    nameWithType: WrapperTripleCollection.WithSubject
+    fullName: VDS.RDF.WrapperTripleCollection.WithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithSubject*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.WithSubject
+  name: WithSubject
+  nameWithType: ThreadSafeTripleCollection.WithSubject
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithSubject
+- uid: VDS.RDF.WrapperTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.WrapperTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: WithSubjectObject(INode, INode)
+  nameWithType: WrapperTripleCollection.WithSubjectObject(INode, INode)
+  fullName: VDS.RDF.WrapperTripleCollection.WithSubjectObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: WithSubjectObject
+    nameWithType: WrapperTripleCollection.WithSubjectObject
+    fullName: VDS.RDF.WrapperTripleCollection.WithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.WithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: WithSubjectObject
+    nameWithType: WrapperTripleCollection.WithSubjectObject
+    fullName: VDS.RDF.WrapperTripleCollection.WithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject
+  name: WithSubjectObject
+  nameWithType: ThreadSafeTripleCollection.WithSubjectObject
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithSubjectObject
+- uid: VDS.RDF.WrapperTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.WrapperTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.WrapperTripleCollection
+  name: WithSubjectPredicate(INode, INode)
+  nameWithType: WrapperTripleCollection.WithSubjectPredicate(INode, INode)
+  fullName: VDS.RDF.WrapperTripleCollection.WithSubjectPredicate(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: WithSubjectPredicate
+    nameWithType: WrapperTripleCollection.WithSubjectPredicate
+    fullName: VDS.RDF.WrapperTripleCollection.WithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.WithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: WithSubjectPredicate
+    nameWithType: WrapperTripleCollection.WithSubjectPredicate
+    fullName: VDS.RDF.WrapperTripleCollection.WithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate
+  name: WithSubjectPredicate
+  nameWithType: ThreadSafeTripleCollection.WithSubjectPredicate
+  fullName: VDS.RDF.ThreadSafeTripleCollection.WithSubjectPredicate
+- uid: VDS.RDF.WrapperTripleCollection.Dispose
+  commentId: M:VDS.RDF.WrapperTripleCollection.Dispose
+  parent: VDS.RDF.WrapperTripleCollection
+  name: Dispose()
+  nameWithType: WrapperTripleCollection.Dispose()
+  fullName: VDS.RDF.WrapperTripleCollection.Dispose()
+  spec.csharp:
+  - uid: VDS.RDF.WrapperTripleCollection.Dispose
+    name: Dispose
+    nameWithType: WrapperTripleCollection.Dispose
+    fullName: VDS.RDF.WrapperTripleCollection.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperTripleCollection.Dispose
+    name: Dispose
+    nameWithType: WrapperTripleCollection.Dispose
+    fullName: VDS.RDF.WrapperTripleCollection.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ThreadSafeTripleCollection.Dispose*
+  commentId: Overload:VDS.RDF.ThreadSafeTripleCollection.Dispose
+  name: Dispose
+  nameWithType: ThreadSafeTripleCollection.Dispose
+  fullName: VDS.RDF.ThreadSafeTripleCollection.Dispose

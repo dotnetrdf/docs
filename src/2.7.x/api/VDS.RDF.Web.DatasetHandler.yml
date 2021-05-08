@@ -1,0 +1,444 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Web.DatasetHandler
+  commentId: T:VDS.RDF.Web.DatasetHandler
+  id: DatasetHandler
+  parent: VDS.RDF.Web
+  children:
+  - VDS.RDF.Web.DatasetHandler.LoadConfig(HttpContext)
+  - VDS.RDF.Web.DatasetHandler.UpdateConfig(HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: DatasetHandler
+  nameWithType: DatasetHandler
+  fullName: VDS.RDF.Web.DatasetHandler
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/DatasetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DatasetHandler
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/DatasetHandler.cs
+    startLine: 59
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHTTP Handler for serving RDF Datasets in ASP.Net applications\n"
+  remarks: "\n<p>\nUsed to serve a Dataset at a specific fixed URL.  The Dataset being served to the user in one of their acceptable MIME types if possible, if they don&apos;t accept any MIME type we can serve then they get a 406 Not Acceptable\n</p>\n<p>\nThis Handler is configured using the new Configuration API introduced in the 0.3.0 release.  This requires just one setting to be defined in the &lt;appSettings> section of your Web.config file which points to a Configuration Graph like so:\n<pre><code>&lt;add key=&quot;dotNetRDFConfig&quot; value=&quot;~/App_Data/config.ttl&quot; /></code></pre>\nThe Configuration Graph must then contain Triples like the following to specify a Dataset to be served:\n<pre><code>&lt;dotnetrdf:/folder/dataset> a dnr:HttpHandler ;\n                                  dnr:type &quot;VDS.RDF.Web.DatasetHandler&quot; ;\n                                  dnr:usingDataset _:dataset .\n\n_:dataset a dnr:SparqlDataset ;\n        dnr:type &quot;VDS.RDF.Query.Datasets.InMemoryDataset&quot; .</code></pre>\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class DatasetHandler : BaseDatasetHandler'
+    content.vb: >-
+      Public Class DatasetHandler
+          Inherits BaseDatasetHandler
+  inheritance:
+  - System.Object
+  - VDS.RDF.Web.BaseDatasetHandler
+  inheritedMembers:
+  - VDS.RDF.Web.BaseDatasetHandler._config
+  - VDS.RDF.Web.BaseDatasetHandler.IsReusable
+  - VDS.RDF.Web.BaseDatasetHandler.ProcessRequest(HttpContext)
+  - VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient(HttpContext,VDS.RDF.Query.Datasets.ISparqlDataset)
+  extensionMethods:
+  - VDS.RDF.Web.DatasetHandler.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Web.DatasetHandler.LoadConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.DatasetHandler.LoadConfig(HttpContext)
+  id: LoadConfig(HttpContext)
+  parent: VDS.RDF.Web.DatasetHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig(HttpContext)
+  nameWithType: DatasetHandler.LoadConfig(HttpContext)
+  fullName: VDS.RDF.Web.DatasetHandler.LoadConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/DatasetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/DatasetHandler.cs
+    startLine: 66
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nLoads the Handlers configuration\n"
+  example: []
+  syntax:
+    content: protected override BaseDatasetHandlerConfiguration LoadConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    return:
+      type: VDS.RDF.Web.Configuration.Resource.BaseDatasetHandlerConfiguration
+      description: ''
+    content.vb: Protected Overrides Function LoadConfig(context As HttpContext) As BaseDatasetHandlerConfiguration
+  overridden: VDS.RDF.Web.BaseDatasetHandler.LoadConfig(HttpContext)
+  overload: VDS.RDF.Web.DatasetHandler.LoadConfig*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Web.DatasetHandler.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.DatasetHandler.UpdateConfig(HttpContext)
+  id: UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.DatasetHandler
+  langs:
+  - csharp
+  - vb
+  name: UpdateConfig(HttpContext)
+  nameWithType: DatasetHandler.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.DatasetHandler.UpdateConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/DatasetHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/DatasetHandler.cs
+    startLine: 109
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nUpdates the Handlers configuration\n"
+  example: []
+  syntax:
+    content: protected override void UpdateConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    content.vb: Protected Overrides Sub UpdateConfig(context As HttpContext)
+  overridden: VDS.RDF.Web.BaseDatasetHandler.UpdateConfig(HttpContext)
+  overload: VDS.RDF.Web.DatasetHandler.UpdateConfig*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Web
+  commentId: N:VDS.RDF.Web
+  name: VDS.RDF.Web
+  nameWithType: VDS.RDF.Web
+  fullName: VDS.RDF.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Web.BaseDatasetHandler
+  commentId: T:VDS.RDF.Web.BaseDatasetHandler
+  parent: VDS.RDF.Web
+  name: BaseDatasetHandler
+  nameWithType: BaseDatasetHandler
+  fullName: VDS.RDF.Web.BaseDatasetHandler
+- uid: VDS.RDF.Web.BaseDatasetHandler._config
+  commentId: F:VDS.RDF.Web.BaseDatasetHandler._config
+  parent: VDS.RDF.Web.BaseDatasetHandler
+  name: _config
+  nameWithType: BaseDatasetHandler._config
+  fullName: VDS.RDF.Web.BaseDatasetHandler._config
+- uid: VDS.RDF.Web.BaseDatasetHandler.IsReusable
+  commentId: P:VDS.RDF.Web.BaseDatasetHandler.IsReusable
+  parent: VDS.RDF.Web.BaseDatasetHandler
+  name: IsReusable
+  nameWithType: BaseDatasetHandler.IsReusable
+  fullName: VDS.RDF.Web.BaseDatasetHandler.IsReusable
+- uid: VDS.RDF.Web.BaseDatasetHandler.ProcessRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseDatasetHandler.ProcessRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseDatasetHandler
+  isExternal: true
+  name: ProcessRequest(HttpContext)
+  nameWithType: BaseDatasetHandler.ProcessRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseDatasetHandler.ProcessRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseDatasetHandler.ProcessRequest
+    fullName: VDS.RDF.Web.BaseDatasetHandler.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseDatasetHandler.ProcessRequest
+    fullName: VDS.RDF.Web.BaseDatasetHandler.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient(HttpContext,VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient(HttpContext,VDS.RDF.Query.Datasets.ISparqlDataset)
+  parent: VDS.RDF.Web.BaseDatasetHandler
+  isExternal: true
+  name: SendDatasetToClient(HttpContext, ISparqlDataset)
+  nameWithType: BaseDatasetHandler.SendDatasetToClient(HttpContext, ISparqlDataset)
+  fullName: VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient(HttpContext, VDS.RDF.Query.Datasets.ISparqlDataset)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient(HttpContext,VDS.RDF.Query.Datasets.ISparqlDataset)
+    name: SendDatasetToClient
+    nameWithType: BaseDatasetHandler.SendDatasetToClient
+    fullName: VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset
+    name: ISparqlDataset
+    nameWithType: ISparqlDataset
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient(HttpContext,VDS.RDF.Query.Datasets.ISparqlDataset)
+    name: SendDatasetToClient
+    nameWithType: BaseDatasetHandler.SendDatasetToClient
+    fullName: VDS.RDF.Web.BaseDatasetHandler.SendDatasetToClient
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset
+    name: ISparqlDataset
+    nameWithType: ISparqlDataset
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.DatasetHandler.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<DatasetHandler>()
+  nameWithType: Extensions.AsEnumerable<DatasetHandler>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.DatasetHandler>()
+  nameWithType.vb: Extensions.AsEnumerable(Of DatasetHandler)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.DatasetHandler)()
+  name.vb: AsEnumerable(Of DatasetHandler)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<DatasetHandler>
+    nameWithType: Extensions.AsEnumerable<DatasetHandler>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.DatasetHandler>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of DatasetHandler)
+    nameWithType: Extensions.AsEnumerable(Of DatasetHandler)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.DatasetHandler)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Web.BaseDatasetHandler.LoadConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseDatasetHandler.LoadConfig(HttpContext)
+  parent: VDS.RDF.Web.BaseDatasetHandler
+  isExternal: true
+  name: LoadConfig(HttpContext)
+  nameWithType: BaseDatasetHandler.LoadConfig(HttpContext)
+  fullName: VDS.RDF.Web.BaseDatasetHandler.LoadConfig(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.LoadConfig(HttpContext)
+    name: LoadConfig
+    nameWithType: BaseDatasetHandler.LoadConfig
+    fullName: VDS.RDF.Web.BaseDatasetHandler.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.LoadConfig(HttpContext)
+    name: LoadConfig
+    nameWithType: BaseDatasetHandler.LoadConfig
+    fullName: VDS.RDF.Web.BaseDatasetHandler.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.DatasetHandler.LoadConfig*
+  commentId: Overload:VDS.RDF.Web.DatasetHandler.LoadConfig
+  name: LoadConfig
+  nameWithType: DatasetHandler.LoadConfig
+  fullName: VDS.RDF.Web.DatasetHandler.LoadConfig
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: VDS.RDF.Web.Configuration.Resource.BaseDatasetHandlerConfiguration
+  commentId: T:VDS.RDF.Web.Configuration.Resource.BaseDatasetHandlerConfiguration
+  parent: VDS.RDF.Web.Configuration.Resource
+  name: BaseDatasetHandlerConfiguration
+  nameWithType: BaseDatasetHandlerConfiguration
+  fullName: VDS.RDF.Web.Configuration.Resource.BaseDatasetHandlerConfiguration
+- uid: VDS.RDF.Web.Configuration.Resource
+  commentId: N:VDS.RDF.Web.Configuration.Resource
+  name: VDS.RDF.Web.Configuration.Resource
+  nameWithType: VDS.RDF.Web.Configuration.Resource
+  fullName: VDS.RDF.Web.Configuration.Resource
+- uid: VDS.RDF.Web.BaseDatasetHandler.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseDatasetHandler.UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.BaseDatasetHandler
+  isExternal: true
+  name: UpdateConfig(HttpContext)
+  nameWithType: BaseDatasetHandler.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.BaseDatasetHandler.UpdateConfig(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: BaseDatasetHandler.UpdateConfig
+    fullName: VDS.RDF.Web.BaseDatasetHandler.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseDatasetHandler.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: BaseDatasetHandler.UpdateConfig
+    fullName: VDS.RDF.Web.BaseDatasetHandler.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.DatasetHandler.UpdateConfig*
+  commentId: Overload:VDS.RDF.Web.DatasetHandler.UpdateConfig
+  name: UpdateConfig
+  nameWithType: DatasetHandler.UpdateConfig
+  fullName: VDS.RDF.Web.DatasetHandler.UpdateConfig

@@ -1,0 +1,836 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Operators.BaseOperator
+  commentId: T:VDS.RDF.Query.Operators.BaseOperator
+  id: BaseOperator
+  parent: VDS.RDF.Query.Operators
+  children:
+  - VDS.RDF.Query.Operators.BaseOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  - VDS.RDF.Query.Operators.BaseOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  - VDS.RDF.Query.Operators.BaseOperator.Operator
+  - VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  langs:
+  - csharp
+  - vb
+  name: BaseOperator
+  nameWithType: BaseOperator
+  fullName: VDS.RDF.Query.Operators.BaseOperator
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseOperator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Operators
+  summary: "\nAbstract base class for SPARQL Operators which also makes their configuration serializable.\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseOperator : ISparqlOperator, IConfigurationSerializable'
+    content.vb: >-
+      Public MustInherit Class BaseOperator
+          Implements ISparqlOperator, IConfigurationSerializable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Query.Operators.DateTime.BaseDateTimeOperator
+  - VDS.RDF.Query.Operators.DateTime.BaseTimeSpanOperator
+  - VDS.RDF.Query.Operators.Numeric.BaseNumericOperator
+  implements:
+  - VDS.RDF.Query.Operators.ISparqlOperator
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Operators.BaseOperator.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Query.Operators.BaseOperator.Operator
+  commentId: P:VDS.RDF.Query.Operators.BaseOperator.Operator
+  id: Operator
+  parent: VDS.RDF.Query.Operators.BaseOperator
+  langs:
+  - csharp
+  - vb
+  name: Operator
+  nameWithType: BaseOperator.Operator
+  fullName: VDS.RDF.Query.Operators.BaseOperator.Operator
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Operator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Operators
+  summary: "\nGets the operator this implementation represents.\n"
+  example: []
+  syntax:
+    content: public abstract SparqlOperatorType Operator { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Operators.SparqlOperatorType
+    content.vb: Public MustOverride ReadOnly Property Operator As SparqlOperatorType
+  overload: VDS.RDF.Query.Operators.BaseOperator.Operator*
+  implements:
+  - VDS.RDF.Query.Operators.ISparqlOperator.Operator
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: VDS.RDF.Query.Operators.BaseOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  commentId: M:VDS.RDF.Query.Operators.BaseOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  id: IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  parent: VDS.RDF.Query.Operators.BaseOperator
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable(IValuedNode[])
+  nameWithType: BaseOperator.IsApplicable(IValuedNode[])
+  fullName: VDS.RDF.Query.Operators.BaseOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsApplicable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+    startLine: 51
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Operators
+  summary: "\nGets whether the operator can be applied to the given inputs.\n"
+  example: []
+  syntax:
+    content: public abstract bool IsApplicable(params IValuedNode[] ns)
+    parameters:
+    - id: ns
+      type: VDS.RDF.Nodes.IValuedNode[]
+      description: Inputs.
+    return:
+      type: System.Boolean
+      description: True if applicable to the given inputs.
+    content.vb: Public MustOverride Function IsApplicable(ParamArray ns As IValuedNode()) As Boolean
+  overload: VDS.RDF.Query.Operators.BaseOperator.IsApplicable*
+  implements:
+  - VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  nameWithType.vb: BaseOperator.IsApplicable(IValuedNode())
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: VDS.RDF.Query.Operators.BaseOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode())
+  name.vb: IsApplicable(IValuedNode())
+- uid: VDS.RDF.Query.Operators.BaseOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  commentId: M:VDS.RDF.Query.Operators.BaseOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  id: Apply(VDS.RDF.Nodes.IValuedNode[])
+  parent: VDS.RDF.Query.Operators.BaseOperator
+  langs:
+  - csharp
+  - vb
+  name: Apply(IValuedNode[])
+  nameWithType: BaseOperator.Apply(IValuedNode[])
+  fullName: VDS.RDF.Query.Operators.BaseOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Apply
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Operators
+  summary: "\nApplies the operator.\n"
+  example: []
+  syntax:
+    content: public abstract IValuedNode Apply(params IValuedNode[] ns)
+    parameters:
+    - id: ns
+      type: VDS.RDF.Nodes.IValuedNode[]
+      description: Inputs.
+    return:
+      type: VDS.RDF.Nodes.IValuedNode
+      description: ''
+    content.vb: Public MustOverride Function Apply(ParamArray ns As IValuedNode()) As IValuedNode
+  overload: VDS.RDF.Query.Operators.BaseOperator.Apply*
+  implements:
+  - VDS.RDF.Query.Operators.ISparqlOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  nameWithType.vb: BaseOperator.Apply(IValuedNode())
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: VDS.RDF.Query.Operators.BaseOperator.Apply(VDS.RDF.Nodes.IValuedNode())
+  name.vb: Apply(IValuedNode())
+- uid: VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  id: SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Query.Operators.BaseOperator
+  langs:
+  - csharp
+  - vb
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: BaseOperator.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SerializeConfiguration
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Operators/BaseOperator.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Operators
+  summary: "\nSerializes the configuration of the operator.\n"
+  example: []
+  syntax:
+    content: public virtual void SerializeConfiguration(ConfigurationSerializationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Configuration.ConfigurationSerializationContext
+      description: Serialization Context.
+    content.vb: Public Overridable Sub SerializeConfiguration(context As ConfigurationSerializationContext)
+  overload: VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration*
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: VDS.RDF.Query.Operators
+  commentId: N:VDS.RDF.Query.Operators
+  name: VDS.RDF.Query.Operators
+  nameWithType: VDS.RDF.Query.Operators
+  fullName: VDS.RDF.Query.Operators
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Operators.ISparqlOperator
+  commentId: T:VDS.RDF.Query.Operators.ISparqlOperator
+  parent: VDS.RDF.Query.Operators
+  name: ISparqlOperator
+  nameWithType: ISparqlOperator
+  fullName: VDS.RDF.Query.Operators.ISparqlOperator
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Operators.BaseOperator.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseOperator>()
+  nameWithType: Extensions.AsEnumerable<BaseOperator>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Operators.BaseOperator>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseOperator)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Operators.BaseOperator)()
+  name.vb: AsEnumerable(Of BaseOperator)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseOperator>
+    nameWithType: Extensions.AsEnumerable<BaseOperator>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Operators.BaseOperator>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseOperator)
+    nameWithType: Extensions.AsEnumerable(Of BaseOperator)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Operators.BaseOperator)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Operators.BaseOperator.Operator*
+  commentId: Overload:VDS.RDF.Query.Operators.BaseOperator.Operator
+  name: Operator
+  nameWithType: BaseOperator.Operator
+  fullName: VDS.RDF.Query.Operators.BaseOperator.Operator
+- uid: VDS.RDF.Query.Operators.ISparqlOperator.Operator
+  commentId: P:VDS.RDF.Query.Operators.ISparqlOperator.Operator
+  parent: VDS.RDF.Query.Operators.ISparqlOperator
+  name: Operator
+  nameWithType: ISparqlOperator.Operator
+  fullName: VDS.RDF.Query.Operators.ISparqlOperator.Operator
+- uid: VDS.RDF.Query.Operators.SparqlOperatorType
+  commentId: T:VDS.RDF.Query.Operators.SparqlOperatorType
+  parent: VDS.RDF.Query.Operators
+  name: SparqlOperatorType
+  nameWithType: SparqlOperatorType
+  fullName: VDS.RDF.Query.Operators.SparqlOperatorType
+- uid: VDS.RDF.Query.Operators.BaseOperator.IsApplicable*
+  commentId: Overload:VDS.RDF.Query.Operators.BaseOperator.IsApplicable
+  name: IsApplicable
+  nameWithType: BaseOperator.IsApplicable
+  fullName: VDS.RDF.Query.Operators.BaseOperator.IsApplicable
+- uid: VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  commentId: M:VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  parent: VDS.RDF.Query.Operators.ISparqlOperator
+  name: IsApplicable(IValuedNode[])
+  nameWithType: ISparqlOperator.IsApplicable(IValuedNode[])
+  fullName: VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+  nameWithType.vb: ISparqlOperator.IsApplicable(IValuedNode())
+  fullName.vb: VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode())
+  name.vb: IsApplicable(IValuedNode())
+  spec.csharp:
+  - uid: VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+    name: IsApplicable
+    nameWithType: ISparqlOperator.IsApplicable
+    fullName: VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Nodes.IValuedNode
+    name: IValuedNode
+    nameWithType: IValuedNode
+    fullName: VDS.RDF.Nodes.IValuedNode
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable(VDS.RDF.Nodes.IValuedNode[])
+    name: IsApplicable
+    nameWithType: ISparqlOperator.IsApplicable
+    fullName: VDS.RDF.Query.Operators.ISparqlOperator.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Nodes.IValuedNode
+    name: IValuedNode
+    nameWithType: IValuedNode
+    fullName: VDS.RDF.Nodes.IValuedNode
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Nodes.IValuedNode[]
+  isExternal: true
+  name: IValuedNode[]
+  nameWithType: IValuedNode[]
+  fullName: VDS.RDF.Nodes.IValuedNode[]
+  nameWithType.vb: IValuedNode()
+  fullName.vb: VDS.RDF.Nodes.IValuedNode()
+  name.vb: IValuedNode()
+  spec.csharp:
+  - uid: VDS.RDF.Nodes.IValuedNode
+    name: IValuedNode
+    nameWithType: IValuedNode
+    fullName: VDS.RDF.Nodes.IValuedNode
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: VDS.RDF.Nodes.IValuedNode
+    name: IValuedNode
+    nameWithType: IValuedNode
+    fullName: VDS.RDF.Nodes.IValuedNode
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Operators.BaseOperator.Apply*
+  commentId: Overload:VDS.RDF.Query.Operators.BaseOperator.Apply
+  name: Apply
+  nameWithType: BaseOperator.Apply
+  fullName: VDS.RDF.Query.Operators.BaseOperator.Apply
+- uid: VDS.RDF.Query.Operators.ISparqlOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  commentId: M:VDS.RDF.Query.Operators.ISparqlOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  parent: VDS.RDF.Query.Operators.ISparqlOperator
+  name: Apply(IValuedNode[])
+  nameWithType: ISparqlOperator.Apply(IValuedNode[])
+  fullName: VDS.RDF.Query.Operators.ISparqlOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+  nameWithType.vb: ISparqlOperator.Apply(IValuedNode())
+  fullName.vb: VDS.RDF.Query.Operators.ISparqlOperator.Apply(VDS.RDF.Nodes.IValuedNode())
+  name.vb: Apply(IValuedNode())
+  spec.csharp:
+  - uid: VDS.RDF.Query.Operators.ISparqlOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+    name: Apply
+    nameWithType: ISparqlOperator.Apply
+    fullName: VDS.RDF.Query.Operators.ISparqlOperator.Apply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Nodes.IValuedNode
+    name: IValuedNode
+    nameWithType: IValuedNode
+    fullName: VDS.RDF.Nodes.IValuedNode
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Operators.ISparqlOperator.Apply(VDS.RDF.Nodes.IValuedNode[])
+    name: Apply
+    nameWithType: ISparqlOperator.Apply
+    fullName: VDS.RDF.Query.Operators.ISparqlOperator.Apply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Nodes.IValuedNode
+    name: IValuedNode
+    nameWithType: IValuedNode
+    fullName: VDS.RDF.Nodes.IValuedNode
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Nodes.IValuedNode
+  commentId: T:VDS.RDF.Nodes.IValuedNode
+  parent: VDS.RDF.Nodes
+  name: IValuedNode
+  nameWithType: IValuedNode
+  fullName: VDS.RDF.Nodes.IValuedNode
+- uid: VDS.RDF.Nodes
+  commentId: N:VDS.RDF.Nodes
+  name: VDS.RDF.Nodes
+  nameWithType: VDS.RDF.Nodes
+  fullName: VDS.RDF.Nodes
+- uid: VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration*
+  commentId: Overload:VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration
+  name: SerializeConfiguration
+  nameWithType: BaseOperator.SerializeConfiguration
+  fullName: VDS.RDF.Query.Operators.BaseOperator.SerializeConfiguration
+- uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Configuration.IConfigurationSerializable
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: IConfigurationSerializable.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+  commentId: T:VDS.RDF.Configuration.ConfigurationSerializationContext
+  parent: VDS.RDF.Configuration
+  name: ConfigurationSerializationContext
+  nameWithType: ConfigurationSerializationContext
+  fullName: VDS.RDF.Configuration.ConfigurationSerializationContext

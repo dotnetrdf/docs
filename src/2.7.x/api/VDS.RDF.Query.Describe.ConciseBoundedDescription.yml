@@ -1,0 +1,887 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Describe.ConciseBoundedDescription
+  commentId: T:VDS.RDF.Query.Describe.ConciseBoundedDescription
+  id: ConciseBoundedDescription
+  parent: VDS.RDF.Query.Describe
+  children:
+  - VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  langs:
+  - csharp
+  - vb
+  name: ConciseBoundedDescription
+  nameWithType: ConciseBoundedDescription
+  fullName: VDS.RDF.Query.Describe.ConciseBoundedDescription
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Describe/ConciseBoundedDescription.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ConciseBoundedDescription
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Describe/ConciseBoundedDescription.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Describe
+  summary: "\nComputes a Concise Bounded Description for all the Values resulting from the Query.\n"
+  remarks: "\n<p>\nThe Description returned is all the Triples for which a Value is a Subject and with any Blank Nodes expanded to include Triples with the Blank Node as the Subject.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class ConciseBoundedDescription : BaseDescribeAlgorithm, ISparqlDescribe'
+    content.vb: >-
+      Public Class ConciseBoundedDescription
+          Inherits BaseDescribeAlgorithm
+          Implements ISparqlDescribe
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+  implements:
+  - VDS.RDF.Query.Describe.ISparqlDescribe
+  inheritedMembers:
+  - VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes(VDS.RDF.Triple,System.Collections.Generic.Dictionary{System.String,VDS.RDF.INode},VDS.RDF.INodeFactory)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Describe.ConciseBoundedDescription.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  id: DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  parent: VDS.RDF.Query.Describe.ConciseBoundedDescription
+  langs:
+  - csharp
+  - vb
+  name: DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable<INode>)
+  nameWithType: ConciseBoundedDescription.DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable<INode>)
+  fullName: VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal(VDS.RDF.IRdfHandler, VDS.RDF.Query.SparqlEvaluationContext, System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Describe/ConciseBoundedDescription.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DescribeInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Describe/ConciseBoundedDescription.cs
+    startLine: 50
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Describe
+  summary: "\nGenerates the Description for each of the Nodes to be described.\n"
+  example: []
+  syntax:
+    content: protected override void DescribeInternal(IRdfHandler handler, SparqlEvaluationContext context, IEnumerable<INode> nodes)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: SPARQL Evaluation Context.
+    - id: nodes
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+      description: Nodes to be described.
+    content.vb: Protected Overrides Sub DescribeInternal(handler As IRdfHandler, context As SparqlEvaluationContext, nodes As IEnumerable(Of INode))
+  overridden: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  overload: VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal*
+  nameWithType.vb: ConciseBoundedDescription.DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable(Of INode))
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal(VDS.RDF.IRdfHandler, VDS.RDF.Query.SparqlEvaluationContext, System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable(Of INode))
+references:
+- uid: VDS.RDF.Query.Describe
+  commentId: N:VDS.RDF.Query.Describe
+  name: VDS.RDF.Query.Describe
+  nameWithType: VDS.RDF.Query.Describe
+  fullName: VDS.RDF.Query.Describe
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+  commentId: T:VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+  parent: VDS.RDF.Query.Describe
+  name: BaseDescribeAlgorithm
+  nameWithType: BaseDescribeAlgorithm
+  fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+- uid: VDS.RDF.Query.Describe.ISparqlDescribe
+  commentId: T:VDS.RDF.Query.Describe.ISparqlDescribe
+  parent: VDS.RDF.Query.Describe
+  name: ISparqlDescribe
+  nameWithType: ISparqlDescribe
+  fullName: VDS.RDF.Query.Describe.ISparqlDescribe
+- uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+  name: Describe(SparqlEvaluationContext)
+  nameWithType: BaseDescribeAlgorithm.Describe(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Describe
+    nameWithType: BaseDescribeAlgorithm.Describe
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Describe
+    nameWithType: BaseDescribeAlgorithm.Describe
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+  name: Describe(IRdfHandler, SparqlEvaluationContext)
+  nameWithType: BaseDescribeAlgorithm.Describe(IRdfHandler, SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.IRdfHandler, VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext)
+    name: Describe
+    nameWithType: BaseDescribeAlgorithm.Describe
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext)
+    name: Describe
+    nameWithType: BaseDescribeAlgorithm.Describe
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.Describe
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes(VDS.RDF.Triple,System.Collections.Generic.Dictionary{System.String,VDS.RDF.INode},VDS.RDF.INodeFactory)
+  commentId: M:VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes(VDS.RDF.Triple,System.Collections.Generic.Dictionary{System.String,VDS.RDF.INode},VDS.RDF.INodeFactory)
+  parent: VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+  isExternal: true
+  name: RewriteDescribeBNodes(Triple, Dictionary<String, INode>, INodeFactory)
+  nameWithType: BaseDescribeAlgorithm.RewriteDescribeBNodes(Triple, Dictionary<String, INode>, INodeFactory)
+  fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes(VDS.RDF.Triple, System.Collections.Generic.Dictionary<System.String, VDS.RDF.INode>, VDS.RDF.INodeFactory)
+  nameWithType.vb: BaseDescribeAlgorithm.RewriteDescribeBNodes(Triple, Dictionary(Of String, INode), INodeFactory)
+  fullName.vb: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes(VDS.RDF.Triple, System.Collections.Generic.Dictionary(Of System.String, VDS.RDF.INode), VDS.RDF.INodeFactory)
+  name.vb: RewriteDescribeBNodes(Triple, Dictionary(Of String, INode), INodeFactory)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes(VDS.RDF.Triple,System.Collections.Generic.Dictionary{System.String,VDS.RDF.INode},VDS.RDF.INodeFactory)
+    name: RewriteDescribeBNodes
+    nameWithType: BaseDescribeAlgorithm.RewriteDescribeBNodes
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INodeFactory
+    name: INodeFactory
+    nameWithType: INodeFactory
+    fullName: VDS.RDF.INodeFactory
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes(VDS.RDF.Triple,System.Collections.Generic.Dictionary{System.String,VDS.RDF.INode},VDS.RDF.INodeFactory)
+    name: RewriteDescribeBNodes
+    nameWithType: BaseDescribeAlgorithm.RewriteDescribeBNodes
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.RewriteDescribeBNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INodeFactory
+    name: INodeFactory
+    nameWithType: INodeFactory
+    fullName: VDS.RDF.INodeFactory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Describe.ConciseBoundedDescription.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ConciseBoundedDescription>()
+  nameWithType: Extensions.AsEnumerable<ConciseBoundedDescription>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Describe.ConciseBoundedDescription>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ConciseBoundedDescription)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Describe.ConciseBoundedDescription)()
+  name.vb: AsEnumerable(Of ConciseBoundedDescription)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ConciseBoundedDescription>
+    nameWithType: Extensions.AsEnumerable<ConciseBoundedDescription>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Describe.ConciseBoundedDescription>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ConciseBoundedDescription)
+    nameWithType: Extensions.AsEnumerable(Of ConciseBoundedDescription)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Describe.ConciseBoundedDescription)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  parent: VDS.RDF.Query.Describe.BaseDescribeAlgorithm
+  isExternal: true
+  name: DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable<INode>)
+  nameWithType: BaseDescribeAlgorithm.DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable<INode>)
+  fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal(VDS.RDF.IRdfHandler, VDS.RDF.Query.SparqlEvaluationContext, System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  nameWithType.vb: BaseDescribeAlgorithm.DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable(Of INode))
+  fullName.vb: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal(VDS.RDF.IRdfHandler, VDS.RDF.Query.SparqlEvaluationContext, System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: DescribeInternal(IRdfHandler, SparqlEvaluationContext, IEnumerable(Of INode))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: DescribeInternal
+    nameWithType: BaseDescribeAlgorithm.DescribeInternal
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal(VDS.RDF.IRdfHandler,VDS.RDF.Query.SparqlEvaluationContext,System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: DescribeInternal
+    nameWithType: BaseDescribeAlgorithm.DescribeInternal
+    fullName: VDS.RDF.Query.Describe.BaseDescribeAlgorithm.DescribeInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal*
+  commentId: Overload:VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal
+  name: DescribeInternal
+  nameWithType: ConciseBoundedDescription.DescribeInternal
+  fullName: VDS.RDF.Query.Describe.ConciseBoundedDescription.DescribeInternal
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<INode>
+  nameWithType: IEnumerable<INode>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.INode>
+  nameWithType.vb: IEnumerable(Of INode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.INode)
+  name.vb: IEnumerable(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

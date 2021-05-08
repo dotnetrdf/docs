@@ -1,0 +1,584 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Dynamic.DynamicExtensions
+  commentId: T:VDS.RDF.Dynamic.DynamicExtensions
+  id: DynamicExtensions
+  parent: VDS.RDF.Dynamic
+  children:
+  - VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.IGraph,System.Uri,System.Uri)
+  - VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.INode,System.Uri)
+  - VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  - VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResultSet)
+  langs:
+  - csharp
+  - vb
+  name: DynamicExtensions
+  nameWithType: DynamicExtensions
+  fullName: VDS.RDF.Dynamic.DynamicExtensions
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DynamicExtensions
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+    startLine: 36
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nContains helper extension methods for dynamic graphs and nodes.\n"
+  example: []
+  syntax:
+    content: public static class DynamicExtensions
+    content.vb: Public Module DynamicExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.IGraph,System.Uri,System.Uri)
+  commentId: M:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.IGraph,System.Uri,System.Uri)
+  id: AsDynamic(VDS.RDF.IGraph,System.Uri,System.Uri)
+  isExtensionMethod: true
+  parent: VDS.RDF.Dynamic.DynamicExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsDynamic(IGraph, Uri, Uri)
+  nameWithType: DynamicExtensions.AsDynamic(IGraph, Uri, Uri)
+  fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.IGraph, System.Uri, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AsDynamic
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nDynamically wraps a graph.\n"
+  example: []
+  syntax:
+    content: public static dynamic AsDynamic(this IGraph graph, Uri subjectBaseUri = null, Uri predicateBaseUri = null)
+    parameters:
+    - id: graph
+      type: VDS.RDF.IGraph
+      description: The graph to wrap dynamically.
+    - id: subjectBaseUri
+      type: System.Uri
+      description: The Uri to use for resolving relative subject references.
+    - id: predicateBaseUri
+      type: System.Uri
+      description: The Uri used to resolve relative predicate references.
+    return:
+      type: System.Object
+      description: A dynamic graph that wrappes <code data-dev-comment-type="paramref" class="paramref">graph</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AsDynamic(graph As IGraph, subjectBaseUri As Uri = Nothing, predicateBaseUri As Uri = Nothing) As Object
+  overload: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.INode,System.Uri)
+  commentId: M:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.INode,System.Uri)
+  id: AsDynamic(VDS.RDF.INode,System.Uri)
+  isExtensionMethod: true
+  parent: VDS.RDF.Dynamic.DynamicExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsDynamic(INode, Uri)
+  nameWithType: DynamicExtensions.AsDynamic(INode, Uri)
+  fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.INode, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AsDynamic
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nDynamically wraps a node.\n"
+  example: []
+  syntax:
+    content: public static dynamic AsDynamic(this INode node, Uri baseUri = null)
+    parameters:
+    - id: node
+      type: VDS.RDF.INode
+      description: The node to wrap dynamically.
+    - id: baseUri
+      type: System.Uri
+      description: The Uri to use for resolving relative predicate references.
+    return:
+      type: System.Object
+      description: A dynamic node that wraps <code data-dev-comment-type="paramref" class="paramref">node</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AsDynamic(node As INode, baseUri As Uri = Nothing) As Object
+  overload: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResultSet)
+  commentId: M:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResultSet)
+  id: AsDynamic(VDS.RDF.Query.SparqlResultSet)
+  isExtensionMethod: true
+  parent: VDS.RDF.Dynamic.DynamicExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsDynamic(SparqlResultSet)
+  nameWithType: DynamicExtensions.AsDynamic(SparqlResultSet)
+  fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResultSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AsDynamic
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+    startLine: 66
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nDynamically wraps a SPARQL result set.\n"
+  example: []
+  syntax:
+    content: public static dynamic AsDynamic(this SparqlResultSet set)
+    parameters:
+    - id: set
+      type: VDS.RDF.Query.SparqlResultSet
+      description: The SPARQL result set to wrap dynamically.
+    return:
+      type: System.Object
+      description: A dynamic result set that wraps <code data-dev-comment-type="paramref" class="paramref">set</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AsDynamic(set As SparqlResultSet) As Object
+  overload: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  commentId: M:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  id: AsDynamic(VDS.RDF.Query.SparqlResult)
+  isExtensionMethod: true
+  parent: VDS.RDF.Dynamic.DynamicExtensions
+  langs:
+  - csharp
+  - vb
+  name: AsDynamic(SparqlResult)
+  nameWithType: DynamicExtensions.AsDynamic(SparqlResult)
+  fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AsDynamic
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicExtensions.cs
+    startLine: 76
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nDynamically wraps a SPARQL result.\n"
+  example: []
+  syntax:
+    content: public static dynamic AsDynamic(this SparqlResult result)
+    parameters:
+    - id: result
+      type: VDS.RDF.Query.SparqlResult
+      description: The SPARQL result to wrap dynamically.
+    return:
+      type: System.Object
+      description: A dynamic result that wraps <code data-dev-comment-type="paramref" class="paramref">result</code>.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AsDynamic(result As SparqlResult) As Object
+  overload: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: VDS.RDF.Dynamic
+  commentId: N:VDS.RDF.Dynamic
+  name: VDS.RDF.Dynamic
+  nameWithType: VDS.RDF.Dynamic
+  fullName: VDS.RDF.Dynamic
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+  name: AsDynamic
+  nameWithType: DynamicExtensions.AsDynamic
+  fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.SparqlResult
+  commentId: T:VDS.RDF.Query.SparqlResult
+  parent: VDS.RDF.Query
+  name: SparqlResult
+  nameWithType: SparqlResult
+  fullName: VDS.RDF.Query.SparqlResult

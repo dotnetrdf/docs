@@ -1,0 +1,1151 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Update.Commands.LoadCommand
+  commentId: T:VDS.RDF.Update.Commands.LoadCommand
+  id: LoadCommand
+  parent: VDS.RDF.Update.Commands
+  children:
+  - VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri)
+  - VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Boolean)
+  - VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Uri)
+  - VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Uri,System.Boolean)
+  - VDS.RDF.Update.Commands.LoadCommand.AffectsGraph(System.Uri)
+  - VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph
+  - VDS.RDF.Update.Commands.LoadCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.Commands.LoadCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  - VDS.RDF.Update.Commands.LoadCommand.Silent
+  - VDS.RDF.Update.Commands.LoadCommand.SourceUri
+  - VDS.RDF.Update.Commands.LoadCommand.TargetUri
+  - VDS.RDF.Update.Commands.LoadCommand.ToString
+  langs:
+  - csharp
+  - vb
+  name: LoadCommand
+  nameWithType: LoadCommand
+  fullName: VDS.RDF.Update.Commands.LoadCommand
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nRepresents the SPARQL Update LOAD command.\n"
+  example: []
+  syntax:
+    content: 'public class LoadCommand : SparqlUpdateCommand'
+    content.vb: >-
+      Public Class LoadCommand
+          Inherits SparqlUpdateCommand
+  inheritance:
+  - System.Object
+  - VDS.RDF.Update.SparqlUpdateCommand
+  inheritedMembers:
+  - VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  - VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Update.Commands.LoadCommand.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Uri,System.Boolean)
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Uri,System.Boolean)
+  id: '#ctor(System.Uri,System.Uri,System.Boolean)'
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: LoadCommand(Uri, Uri, Boolean)
+  nameWithType: LoadCommand.LoadCommand(Uri, Uri, Boolean)
+  fullName: VDS.RDF.Update.Commands.LoadCommand.LoadCommand(System.Uri, System.Uri, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new LOAD command.\n"
+  example: []
+  syntax:
+    content: public LoadCommand(Uri sourceUri, Uri graphUri, bool silent)
+    parameters:
+    - id: sourceUri
+      type: System.Uri
+      description: Source URI to load data from.
+    - id: graphUri
+      type: System.Uri
+      description: Target URI for the Graph to store data in.
+    - id: silent
+      type: System.Boolean
+      description: Whether errors loading should be suppressed.
+    content.vb: Public Sub New(sourceUri As Uri, graphUri As Uri, silent As Boolean)
+  overload: VDS.RDF.Update.Commands.LoadCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Boolean)
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Boolean)
+  id: '#ctor(System.Uri,System.Boolean)'
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: LoadCommand(Uri, Boolean)
+  nameWithType: LoadCommand.LoadCommand(Uri, Boolean)
+  fullName: VDS.RDF.Update.Commands.LoadCommand.LoadCommand(System.Uri, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 59
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new LOAD command.\n"
+  example: []
+  syntax:
+    content: public LoadCommand(Uri sourceUri, bool silent)
+    parameters:
+    - id: sourceUri
+      type: System.Uri
+      description: Source URI to load data from.
+    - id: silent
+      type: System.Boolean
+      description: Whether errors loading should be suppressed.
+    content.vb: Public Sub New(sourceUri As Uri, silent As Boolean)
+  overload: VDS.RDF.Update.Commands.LoadCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Uri)
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri,System.Uri)
+  id: '#ctor(System.Uri,System.Uri)'
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: LoadCommand(Uri, Uri)
+  nameWithType: LoadCommand.LoadCommand(Uri, Uri)
+  fullName: VDS.RDF.Update.Commands.LoadCommand.LoadCommand(System.Uri, System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new LOAD command.\n"
+  example: []
+  syntax:
+    content: public LoadCommand(Uri sourceUri, Uri targetUri)
+    parameters:
+    - id: sourceUri
+      type: System.Uri
+      description: Source URI to load data from.
+    - id: targetUri
+      type: System.Uri
+      description: Target URI for the Graph to store data in.
+    content.vb: Public Sub New(sourceUri As Uri, targetUri As Uri)
+  overload: VDS.RDF.Update.Commands.LoadCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri)
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.#ctor(System.Uri)
+  id: '#ctor(System.Uri)'
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: LoadCommand(Uri)
+  nameWithType: LoadCommand.LoadCommand(Uri)
+  fullName: VDS.RDF.Update.Commands.LoadCommand.LoadCommand(System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 74
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new LOAD command which operates on the Default Graph.\n"
+  example: []
+  syntax:
+    content: public LoadCommand(Uri sourceUri)
+    parameters:
+    - id: sourceUri
+      type: System.Uri
+      description: Source URI to load data from.
+    content.vb: Public Sub New(sourceUri As Uri)
+  overload: VDS.RDF.Update.Commands.LoadCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph
+  commentId: P:VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph
+  id: AffectsSingleGraph
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: AffectsSingleGraph
+  nameWithType: LoadCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AffectsSingleGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 80
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether the Command affects a specific Graph.\n"
+  example: []
+  syntax:
+    content: public override bool AffectsSingleGraph { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property AffectsSingleGraph As Boolean
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  overload: VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.LoadCommand.AffectsGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.AffectsGraph(System.Uri)
+  id: AffectsGraph(System.Uri)
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: AffectsGraph(Uri)
+  nameWithType: LoadCommand.AffectsGraph(Uri)
+  fullName: VDS.RDF.Update.Commands.LoadCommand.AffectsGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AffectsGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether the Command affects a given Graph.\n"
+  example: []
+  syntax:
+    content: public override bool AffectsGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function AffectsGraph(graphUri As Uri) As Boolean
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  overload: VDS.RDF.Update.Commands.LoadCommand.AffectsGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.LoadCommand.SourceUri
+  commentId: P:VDS.RDF.Update.Commands.LoadCommand.SourceUri
+  id: SourceUri
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: SourceUri
+  nameWithType: LoadCommand.SourceUri
+  fullName: VDS.RDF.Update.Commands.LoadCommand.SourceUri
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SourceUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 105
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the URI that data is loaded from.\n"
+  example: []
+  syntax:
+    content: public Uri SourceUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property SourceUri As Uri
+  overload: VDS.RDF.Update.Commands.LoadCommand.SourceUri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.LoadCommand.TargetUri
+  commentId: P:VDS.RDF.Update.Commands.LoadCommand.TargetUri
+  id: TargetUri
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: TargetUri
+  nameWithType: LoadCommand.TargetUri
+  fullName: VDS.RDF.Update.Commands.LoadCommand.TargetUri
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TargetUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 116
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the URI of the Graph to load data into.\n"
+  example: []
+  syntax:
+    content: public Uri TargetUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property TargetUri As Uri
+  overload: VDS.RDF.Update.Commands.LoadCommand.TargetUri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.LoadCommand.Silent
+  commentId: P:VDS.RDF.Update.Commands.LoadCommand.Silent
+  id: Silent
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: Silent
+  nameWithType: LoadCommand.Silent
+  fullName: VDS.RDF.Update.Commands.LoadCommand.Silent
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Silent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 127
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether errors loading the data are suppressed.\n"
+  example: []
+  syntax:
+    content: public bool Silent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Silent As Boolean
+  overload: VDS.RDF.Update.Commands.LoadCommand.Silent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.LoadCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlUpdateEvaluationContext)
+  nameWithType: LoadCommand.Evaluate(SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.Commands.LoadCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 139
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nEvaluates the Command in the given Context.\n"
+  example: []
+  syntax:
+    content: public override void Evaluate(SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: Evaluation Context.
+    content.vb: Public Overrides Sub Evaluate(context As SparqlUpdateEvaluationContext)
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.Commands.LoadCommand.Evaluate*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.LoadCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  id: Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: Process(ISparqlUpdateProcessor)
+  nameWithType: LoadCommand.Process(ISparqlUpdateProcessor)
+  fullName: VDS.RDF.Update.Commands.LoadCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Process
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 180
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nProcesses the Command using the given Update Processor.\n"
+  example: []
+  syntax:
+    content: public override void Process(ISparqlUpdateProcessor processor)
+    parameters:
+    - id: processor
+      type: VDS.RDF.Update.ISparqlUpdateProcessor
+      description: SPARQL Update Processor.
+    content.vb: Public Overrides Sub Process(processor As ISparqlUpdateProcessor)
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  overload: VDS.RDF.Update.Commands.LoadCommand.Process*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.LoadCommand.ToString
+  commentId: M:VDS.RDF.Update.Commands.LoadCommand.ToString
+  id: ToString
+  parent: VDS.RDF.Update.Commands.LoadCommand
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: LoadCommand.ToString()
+  fullName: VDS.RDF.Update.Commands.LoadCommand.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/LoadCommand.cs
+    startLine: 189
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the String representation of the Command.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  overload: VDS.RDF.Update.Commands.LoadCommand.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Update.Commands
+  commentId: N:VDS.RDF.Update.Commands
+  name: VDS.RDF.Update.Commands
+  nameWithType: VDS.RDF.Update.Commands
+  fullName: VDS.RDF.Update.Commands
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Update.SparqlUpdateCommand
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommand
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommand
+  nameWithType: SparqlUpdateCommand
+  fullName: VDS.RDF.Update.SparqlUpdateCommand
+- uid: VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  commentId: P:VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: CommandType
+  nameWithType: SparqlUpdateCommand.CommandType
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.CommandType
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Optimise(IQueryOptimiser)
+  nameWithType: SparqlUpdateCommand.Optimise(IQueryOptimiser)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+    name: Optimise
+    nameWithType: SparqlUpdateCommand.Optimise
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IQueryOptimiser
+    name: IQueryOptimiser
+    nameWithType: IQueryOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IQueryOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+    name: Optimise
+    nameWithType: SparqlUpdateCommand.Optimise
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IQueryOptimiser
+    name: IQueryOptimiser
+    nameWithType: IQueryOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IQueryOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.LoadCommand.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<LoadCommand>()
+  nameWithType: Extensions.AsEnumerable<LoadCommand>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Commands.LoadCommand>()
+  nameWithType.vb: Extensions.AsEnumerable(Of LoadCommand)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Commands.LoadCommand)()
+  name.vb: AsEnumerable(Of LoadCommand)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<LoadCommand>
+    nameWithType: Extensions.AsEnumerable<LoadCommand>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Commands.LoadCommand>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of LoadCommand)
+    nameWithType: Extensions.AsEnumerable(Of LoadCommand)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Commands.LoadCommand)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Update.Commands.LoadCommand.#ctor*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.#ctor
+  name: LoadCommand
+  nameWithType: LoadCommand.LoadCommand
+  fullName: VDS.RDF.Update.Commands.LoadCommand.LoadCommand
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  commentId: P:VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: AffectsSingleGraph
+  nameWithType: SparqlUpdateCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+- uid: VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph
+  name: AffectsSingleGraph
+  nameWithType: LoadCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.Commands.LoadCommand.AffectsSingleGraph
+- uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  isExternal: true
+  name: AffectsGraph(Uri)
+  nameWithType: SparqlUpdateCommand.AffectsGraph(Uri)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+    name: AffectsGraph
+    nameWithType: SparqlUpdateCommand.AffectsGraph
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+    name: AffectsGraph
+    nameWithType: SparqlUpdateCommand.AffectsGraph
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.LoadCommand.AffectsGraph*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.AffectsGraph
+  name: AffectsGraph
+  nameWithType: LoadCommand.AffectsGraph
+  fullName: VDS.RDF.Update.Commands.LoadCommand.AffectsGraph
+- uid: VDS.RDF.Update.Commands.LoadCommand.SourceUri*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.SourceUri
+  name: SourceUri
+  nameWithType: LoadCommand.SourceUri
+  fullName: VDS.RDF.Update.Commands.LoadCommand.SourceUri
+- uid: VDS.RDF.Update.Commands.LoadCommand.TargetUri*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.TargetUri
+  name: TargetUri
+  nameWithType: LoadCommand.TargetUri
+  fullName: VDS.RDF.Update.Commands.LoadCommand.TargetUri
+- uid: VDS.RDF.Update.Commands.LoadCommand.Silent*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.Silent
+  name: Silent
+  nameWithType: LoadCommand.Silent
+  fullName: VDS.RDF.Update.Commands.LoadCommand.Silent
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Evaluate(SparqlUpdateEvaluationContext)
+  nameWithType: SparqlUpdateCommand.Evaluate(SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.LoadCommand.Evaluate*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.Evaluate
+  name: Evaluate
+  nameWithType: LoadCommand.Evaluate
+  fullName: VDS.RDF.Update.Commands.LoadCommand.Evaluate
+- uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  commentId: T:VDS.RDF.Update.SparqlUpdateEvaluationContext
+  parent: VDS.RDF.Update
+  name: SparqlUpdateEvaluationContext
+  nameWithType: SparqlUpdateEvaluationContext
+  fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Process(ISparqlUpdateProcessor)
+  nameWithType: SparqlUpdateCommand.Process(ISparqlUpdateProcessor)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+    name: Process
+    nameWithType: SparqlUpdateCommand.Process
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Process
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor
+    name: ISparqlUpdateProcessor
+    nameWithType: ISparqlUpdateProcessor
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+    name: Process
+    nameWithType: SparqlUpdateCommand.Process
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Process
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor
+    name: ISparqlUpdateProcessor
+    nameWithType: ISparqlUpdateProcessor
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.LoadCommand.Process*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.Process
+  name: Process
+  nameWithType: LoadCommand.Process
+  fullName: VDS.RDF.Update.Commands.LoadCommand.Process
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor
+  commentId: T:VDS.RDF.Update.ISparqlUpdateProcessor
+  parent: VDS.RDF.Update
+  name: ISparqlUpdateProcessor
+  nameWithType: ISparqlUpdateProcessor
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+- uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.ToString
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: ToString()
+  nameWithType: SparqlUpdateCommand.ToString()
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+    name: ToString
+    nameWithType: SparqlUpdateCommand.ToString
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+    name: ToString
+    nameWithType: SparqlUpdateCommand.ToString
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.LoadCommand.ToString*
+  commentId: Overload:VDS.RDF.Update.Commands.LoadCommand.ToString
+  name: ToString
+  nameWithType: LoadCommand.ToString
+  fullName: VDS.RDF.Update.Commands.LoadCommand.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

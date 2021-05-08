@@ -23,7 +23,7 @@ Copy-Item -Path '.\src\latest\*' -Destination $version_dir -Recurse
 
 # Replace the content of the stable folder with the content of the latest folder
 Get-ChildItem '.\src\stable\*' | Remove-Item -Recurse -Confirm:$false
-Copy-Item -Path '.\src\latest\*' -Destination '.\src\stable' -Recurse
+Copy-Item -Path '.\src\latest\*' -Recurse -Destination '.\src\stable' -Container
 
 # Build stable and the persistent version
 docfx build .\src\stable_docfx.json

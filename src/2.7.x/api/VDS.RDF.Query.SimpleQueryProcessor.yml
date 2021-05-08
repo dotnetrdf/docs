@@ -1,0 +1,985 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.SimpleQueryProcessor
+  commentId: T:VDS.RDF.Query.SimpleQueryProcessor
+  id: SimpleQueryProcessor
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.SimpleQueryProcessor.#ctor(VDS.RDF.INativelyQueryableStore)
+  - VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  langs:
+  - csharp
+  - vb
+  name: SimpleQueryProcessor
+  nameWithType: SimpleQueryProcessor
+  fullName: VDS.RDF.Query.SimpleQueryProcessor
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SimpleQueryProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nA SPARQL Query Processor where the query is processed by passing it to the <xref href=\"VDS.RDF.INativelyQueryableStore.ExecuteQuery(System.String)\" data-throw-if-not-resolved=\"false\"></xref> method of an <xref href=\"VDS.RDF.INativelyQueryableStore\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: 'public class SimpleQueryProcessor : QueryProcessorBase, ISparqlQueryProcessor'
+    content.vb: >-
+      Public Class SimpleQueryProcessor
+          Inherits QueryProcessorBase
+          Implements ISparqlQueryProcessor
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.QueryProcessorBase
+  implements:
+  - VDS.RDF.Query.ISparqlQueryProcessor
+  inheritedMembers:
+  - VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+  - VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.SimpleQueryProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.SimpleQueryProcessor.#ctor(VDS.RDF.INativelyQueryableStore)
+  commentId: M:VDS.RDF.Query.SimpleQueryProcessor.#ctor(VDS.RDF.INativelyQueryableStore)
+  id: '#ctor(VDS.RDF.INativelyQueryableStore)'
+  parent: VDS.RDF.Query.SimpleQueryProcessor
+  langs:
+  - csharp
+  - vb
+  name: SimpleQueryProcessor(INativelyQueryableStore)
+  nameWithType: SimpleQueryProcessor.SimpleQueryProcessor(INativelyQueryableStore)
+  fullName: VDS.RDF.Query.SimpleQueryProcessor.SimpleQueryProcessor(VDS.RDF.INativelyQueryableStore)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Simple Query Processor.\n"
+  example: []
+  syntax:
+    content: public SimpleQueryProcessor(INativelyQueryableStore store)
+    parameters:
+    - id: store
+      type: VDS.RDF.INativelyQueryableStore
+      description: Triple Store.
+    content.vb: Public Sub New(store As INativelyQueryableStore)
+  overload: VDS.RDF.Query.SimpleQueryProcessor.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  id: ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.SimpleQueryProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessQuery(SparqlQuery)
+  nameWithType: SimpleQueryProcessor.ProcessQuery(SparqlQuery)
+  fullName: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nProcesses a SPARQL Query.\n"
+  example: []
+  syntax:
+    content: public object ProcessQuery(SparqlQuery query)
+    parameters:
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: SPARQL Query.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Function ProcessQuery(query As SparqlQuery) As Object
+  overload: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery*
+  implements:
+  - VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  id: ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.SimpleQueryProcessor
+  langs:
+  - csharp
+  - vb
+  name: ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  nameWithType: SimpleQueryProcessor.ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  fullName: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProcessQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SimpleQueryProcessor.cs
+    startLine: 76
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nProcesses a SPARQL Query passing the results to the RDF or Results handler as appropriate.\n"
+  example: []
+  syntax:
+    content: public override void ProcessQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, SparqlQuery query)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: SPARQL Query.
+    content.vb: Public Overrides Sub ProcessQuery(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, query As SparqlQuery)
+  overridden: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  overload: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery*
+  implements:
+  - VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.INativelyQueryableStore.ExecuteQuery(System.String)
+  commentId: M:VDS.RDF.INativelyQueryableStore.ExecuteQuery(System.String)
+  parent: VDS.RDF.INativelyQueryableStore
+  isExternal: true
+  name: ExecuteQuery(String)
+  nameWithType: INativelyQueryableStore.ExecuteQuery(String)
+  fullName: VDS.RDF.INativelyQueryableStore.ExecuteQuery(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.INativelyQueryableStore.ExecuteQuery(System.String)
+    name: ExecuteQuery
+    nameWithType: INativelyQueryableStore.ExecuteQuery
+    fullName: VDS.RDF.INativelyQueryableStore.ExecuteQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.INativelyQueryableStore.ExecuteQuery(System.String)
+    name: ExecuteQuery
+    nameWithType: INativelyQueryableStore.ExecuteQuery
+    fullName: VDS.RDF.INativelyQueryableStore.ExecuteQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.INativelyQueryableStore
+  commentId: T:VDS.RDF.INativelyQueryableStore
+  parent: VDS.RDF
+  name: INativelyQueryableStore
+  nameWithType: INativelyQueryableStore
+  fullName: VDS.RDF.INativelyQueryableStore
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.QueryProcessorBase
+  commentId: T:VDS.RDF.Query.QueryProcessorBase
+  parent: VDS.RDF.Query
+  name: QueryProcessorBase
+  nameWithType: QueryProcessorBase
+  fullName: VDS.RDF.Query.QueryProcessorBase
+- uid: VDS.RDF.Query.ISparqlQueryProcessor
+  commentId: T:VDS.RDF.Query.ISparqlQueryProcessor
+  parent: VDS.RDF.Query
+  name: ISparqlQueryProcessor
+  nameWithType: ISparqlQueryProcessor
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor
+- uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+  commentId: M:VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+  parent: VDS.RDF.Query.QueryProcessorBase
+  isExternal: true
+  name: ProcessQuery(SparqlQuery, GraphCallback, SparqlResultsCallback, Object)
+  nameWithType: QueryProcessorBase.ProcessQuery(SparqlQuery, GraphCallback, SparqlResultsCallback, Object)
+  fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.Query.SparqlQuery, VDS.RDF.GraphCallback, VDS.RDF.SparqlResultsCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+    name: ProcessQuery
+    nameWithType: QueryProcessorBase.ProcessQuery
+    fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.GraphCallback
+    name: GraphCallback
+    nameWithType: GraphCallback
+    fullName: VDS.RDF.GraphCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.SparqlResultsCallback
+    name: SparqlResultsCallback
+    nameWithType: SparqlResultsCallback
+    fullName: VDS.RDF.SparqlResultsCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.Query.SparqlQuery,VDS.RDF.GraphCallback,VDS.RDF.SparqlResultsCallback,System.Object)
+    name: ProcessQuery
+    nameWithType: QueryProcessorBase.ProcessQuery
+    fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.GraphCallback
+    name: GraphCallback
+    nameWithType: GraphCallback
+    fullName: VDS.RDF.GraphCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.SparqlResultsCallback
+    name: SparqlResultsCallback
+    nameWithType: SparqlResultsCallback
+    fullName: VDS.RDF.SparqlResultsCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+  commentId: M:VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+  parent: VDS.RDF.Query.QueryProcessorBase
+  isExternal: true
+  name: ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery, QueryCallback, Object)
+  nameWithType: QueryProcessorBase.ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery, QueryCallback, Object)
+  fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlQuery, VDS.RDF.QueryCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+    name: ProcessQuery
+    nameWithType: QueryProcessorBase.ProcessQuery
+    fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QueryCallback
+    name: QueryCallback
+    nameWithType: QueryCallback
+    fullName: VDS.RDF.QueryCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery,VDS.RDF.QueryCallback,System.Object)
+    name: ProcessQuery
+    nameWithType: QueryProcessorBase.ProcessQuery
+    fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.QueryCallback
+    name: QueryCallback
+    nameWithType: QueryCallback
+    fullName: VDS.RDF.QueryCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SimpleQueryProcessor.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SimpleQueryProcessor>()
+  nameWithType: Extensions.AsEnumerable<SimpleQueryProcessor>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SimpleQueryProcessor>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SimpleQueryProcessor)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SimpleQueryProcessor)()
+  name.vb: AsEnumerable(Of SimpleQueryProcessor)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SimpleQueryProcessor>
+    nameWithType: Extensions.AsEnumerable<SimpleQueryProcessor>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SimpleQueryProcessor>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SimpleQueryProcessor)
+    nameWithType: Extensions.AsEnumerable(Of SimpleQueryProcessor)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SimpleQueryProcessor)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Query.SimpleQueryProcessor.#ctor*
+  commentId: Overload:VDS.RDF.Query.SimpleQueryProcessor.#ctor
+  name: SimpleQueryProcessor
+  nameWithType: SimpleQueryProcessor.SimpleQueryProcessor
+  fullName: VDS.RDF.Query.SimpleQueryProcessor.SimpleQueryProcessor
+- uid: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery*
+  commentId: Overload:VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery
+  name: ProcessQuery
+  nameWithType: SimpleQueryProcessor.ProcessQuery
+  fullName: VDS.RDF.Query.SimpleQueryProcessor.ProcessQuery
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.ISparqlQueryProcessor
+  name: ProcessQuery(SparqlQuery)
+  nameWithType: ISparqlQueryProcessor.ProcessQuery(SparqlQuery)
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: ISparqlQueryProcessor.ProcessQuery
+    fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: ISparqlQueryProcessor.ProcessQuery
+    fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.QueryProcessorBase
+  name: ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  nameWithType: QueryProcessorBase.ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: QueryProcessorBase.ProcessQuery
+    fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.QueryProcessorBase.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: QueryProcessorBase.ProcessQuery
+    fullName: VDS.RDF.Query.QueryProcessorBase.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.ISparqlQueryProcessor
+  name: ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  nameWithType: ISparqlQueryProcessor.ProcessQuery(IRdfHandler, ISparqlResultsHandler, SparqlQuery)
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: ISparqlQueryProcessor.ProcessQuery
+    fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: ISparqlQueryProcessor.ProcessQuery
+    fullName: VDS.RDF.Query.ISparqlQueryProcessor.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler

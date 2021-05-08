@@ -1,0 +1,1131 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.NTriplesWriter
+  commentId: T:VDS.RDF.Writing.NTriplesWriter
+  id: NTriplesWriter
+  parent: VDS.RDF.Writing
+  children:
+  - VDS.RDF.Writing.NTriplesWriter.#ctor
+  - VDS.RDF.Writing.NTriplesWriter.#ctor(VDS.RDF.Parsing.NTriplesSyntax)
+  - VDS.RDF.Writing.NTriplesWriter.Save(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Writing.NTriplesWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  - VDS.RDF.Writing.NTriplesWriter.SortTriples
+  - VDS.RDF.Writing.NTriplesWriter.Syntax
+  - VDS.RDF.Writing.NTriplesWriter.ToString
+  - VDS.RDF.Writing.NTriplesWriter.TripleFormatterType
+  - VDS.RDF.Writing.NTriplesWriter.Warning
+  langs:
+  - csharp
+  - vb
+  name: NTriplesWriter
+  nameWithType: NTriplesWriter
+  fullName: VDS.RDF.Writing.NTriplesWriter
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NTriplesWriter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nClass for generating RDF in NTriples Concrete Syntax.\n"
+  example: []
+  syntax:
+    content: 'public class NTriplesWriter : BaseRdfWriter, IRdfWriter, IFormatterBasedWriter'
+    content.vb: >-
+      Public Class NTriplesWriter
+          Inherits BaseRdfWriter
+          Implements IRdfWriter, IFormatterBasedWriter
+  inheritance:
+  - System.Object
+  - VDS.RDF.Writing.BaseRdfWriter
+  implements:
+  - VDS.RDF.IRdfWriter
+  - VDS.RDF.Writing.IFormatterBasedWriter
+  inheritedMembers:
+  - VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  - VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Writing.NTriplesWriter.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Writing.NTriplesWriter.#ctor(VDS.RDF.Parsing.NTriplesSyntax)
+  commentId: M:VDS.RDF.Writing.NTriplesWriter.#ctor(VDS.RDF.Parsing.NTriplesSyntax)
+  id: '#ctor(VDS.RDF.Parsing.NTriplesSyntax)'
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: NTriplesWriter(NTriplesSyntax)
+  nameWithType: NTriplesWriter.NTriplesWriter(NTriplesSyntax)
+  fullName: VDS.RDF.Writing.NTriplesWriter.NTriplesWriter(VDS.RDF.Parsing.NTriplesSyntax)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 50
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nCreates a new writer.\n"
+  example: []
+  syntax:
+    content: public NTriplesWriter(NTriplesSyntax syntax)
+    parameters:
+    - id: syntax
+      type: VDS.RDF.Parsing.NTriplesSyntax
+      description: NTriples Syntax Mode.
+    content.vb: Public Sub New(syntax As NTriplesSyntax)
+  overload: VDS.RDF.Writing.NTriplesWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.NTriplesWriter.#ctor
+  commentId: M:VDS.RDF.Writing.NTriplesWriter.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: NTriplesWriter()
+  nameWithType: NTriplesWriter.NTriplesWriter()
+  fullName: VDS.RDF.Writing.NTriplesWriter.NTriplesWriter()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nCreates a new writer.\n"
+  example: []
+  syntax:
+    content: public NTriplesWriter()
+    content.vb: Public Sub New
+  overload: VDS.RDF.Writing.NTriplesWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.NTriplesWriter.SortTriples
+  commentId: P:VDS.RDF.Writing.NTriplesWriter.SortTriples
+  id: SortTriples
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: SortTriples
+  nameWithType: NTriplesWriter.SortTriples
+  fullName: VDS.RDF.Writing.NTriplesWriter.SortTriples
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SortTriples
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets/Sets whether Triples are sorted before being Output.\n"
+  example: []
+  syntax:
+    content: public bool SortTriples { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SortTriples As Boolean
+  overload: VDS.RDF.Writing.NTriplesWriter.SortTriples*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.NTriplesWriter.TripleFormatterType
+  commentId: P:VDS.RDF.Writing.NTriplesWriter.TripleFormatterType
+  id: TripleFormatterType
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: TripleFormatterType
+  nameWithType: NTriplesWriter.TripleFormatterType
+  fullName: VDS.RDF.Writing.NTriplesWriter.TripleFormatterType
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TripleFormatterType
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 79
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets the type of the Triple Formatter used by this writer.\n"
+  example: []
+  syntax:
+    content: public Type TripleFormatterType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property TripleFormatterType As Type
+  overload: VDS.RDF.Writing.NTriplesWriter.TripleFormatterType*
+  implements:
+  - VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Writing.NTriplesWriter.Syntax
+  commentId: P:VDS.RDF.Writing.NTriplesWriter.Syntax
+  id: Syntax
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: Syntax
+  nameWithType: NTriplesWriter.Syntax
+  fullName: VDS.RDF.Writing.NTriplesWriter.Syntax
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Syntax
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 90
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets/Sets the NTriples syntax mode.\n"
+  example: []
+  syntax:
+    content: public NTriplesSyntax Syntax { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Parsing.NTriplesSyntax
+    content.vb: Public Property Syntax As NTriplesSyntax
+  overload: VDS.RDF.Writing.NTriplesWriter.Syntax*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.NTriplesWriter.Save(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Writing.NTriplesWriter.Save(VDS.RDF.IGraph,System.String)
+  id: Save(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(IGraph, String)
+  nameWithType: NTriplesWriter.Save(IGraph, String)
+  fullName: VDS.RDF.Writing.NTriplesWriter.Save(VDS.RDF.IGraph, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 97
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves the Graph in NTriples Syntax to the given stream.\n"
+  example: []
+  syntax:
+    content: public override void Save(IGraph g, string filename)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to save.
+    - id: filename
+      type: System.String
+      description: File to save to.
+    content.vb: Public Overrides Sub Save(g As IGraph, filename As String)
+  overridden: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+  overload: VDS.RDF.Writing.NTriplesWriter.Save*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Writing.NTriplesWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.NTriplesWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  id: SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: SaveInternal(IGraph, TextWriter)
+  nameWithType: NTriplesWriter.SaveInternal(IGraph, TextWriter)
+  fullName: VDS.RDF.Writing.NTriplesWriter.SaveInternal(VDS.RDF.IGraph, System.IO.TextWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SaveInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 110
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves the Graph in NTriples Syntax to the given stream.\n"
+  example: []
+  syntax:
+    content: protected override void SaveInternal(IGraph g, TextWriter output)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to save.
+    - id: output
+      type: System.IO.TextWriter
+      description: Stream to save to.
+    content.vb: Protected Overrides Sub SaveInternal(g As IGraph, output As TextWriter)
+  overridden: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  overload: VDS.RDF.Writing.NTriplesWriter.SaveInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Writing.NTriplesWriter.Warning
+  commentId: E:VDS.RDF.Writing.NTriplesWriter.Warning
+  id: Warning
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: NTriplesWriter.Warning
+  fullName: VDS.RDF.Writing.NTriplesWriter.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 177
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nEvent which is raised when there is an issue with the Graph being serialized that doesn&apos;t prevent serialization but the user should be aware of\n"
+  example: []
+  syntax:
+    content: public override event RdfWriterWarning Warning
+    return:
+      type: VDS.RDF.RdfWriterWarning
+    content.vb: Public Overrides Event Warning As RdfWriterWarning
+  overridden: VDS.RDF.Writing.BaseRdfWriter.Warning
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Writing.NTriplesWriter.ToString
+  commentId: M:VDS.RDF.Writing.NTriplesWriter.ToString
+  id: ToString
+  parent: VDS.RDF.Writing.NTriplesWriter
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: NTriplesWriter.ToString()
+  fullName: VDS.RDF.Writing.NTriplesWriter.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/NTriplesWriter.cs
+    startLine: 196
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets the String representation of the writer which is a description of the syntax it produces.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Writing.NTriplesWriter.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Writing
+  commentId: N:VDS.RDF.Writing
+  name: VDS.RDF.Writing
+  nameWithType: VDS.RDF.Writing
+  fullName: VDS.RDF.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Writing.BaseRdfWriter
+  commentId: T:VDS.RDF.Writing.BaseRdfWriter
+  parent: VDS.RDF.Writing
+  name: BaseRdfWriter
+  nameWithType: BaseRdfWriter
+  fullName: VDS.RDF.Writing.BaseRdfWriter
+- uid: VDS.RDF.IRdfWriter
+  commentId: T:VDS.RDF.IRdfWriter
+  parent: VDS.RDF
+  name: IRdfWriter
+  nameWithType: IRdfWriter
+  fullName: VDS.RDF.IRdfWriter
+- uid: VDS.RDF.Writing.IFormatterBasedWriter
+  commentId: T:VDS.RDF.Writing.IFormatterBasedWriter
+  parent: VDS.RDF.Writing
+  name: IFormatterBasedWriter
+  nameWithType: IFormatterBasedWriter
+  fullName: VDS.RDF.Writing.IFormatterBasedWriter
+- uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: Save(IGraph, TextWriter)
+  nameWithType: BaseRdfWriter.Save(IGraph, TextWriter)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: Save(IGraph, TextWriter, Boolean)
+  nameWithType: BaseRdfWriter.Save(IGraph, TextWriter, Boolean)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph, System.IO.TextWriter, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.IO.TextWriter,System.Boolean)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.NTriplesWriter.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<NTriplesWriter>()
+  nameWithType: Extensions.AsEnumerable<NTriplesWriter>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.NTriplesWriter>()
+  nameWithType.vb: Extensions.AsEnumerable(Of NTriplesWriter)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.NTriplesWriter)()
+  name.vb: AsEnumerable(Of NTriplesWriter)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<NTriplesWriter>
+    nameWithType: Extensions.AsEnumerable<NTriplesWriter>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.NTriplesWriter>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of NTriplesWriter)
+    nameWithType: Extensions.AsEnumerable(Of NTriplesWriter)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.NTriplesWriter)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Writing.NTriplesWriter.#ctor*
+  commentId: Overload:VDS.RDF.Writing.NTriplesWriter.#ctor
+  name: NTriplesWriter
+  nameWithType: NTriplesWriter.NTriplesWriter
+  fullName: VDS.RDF.Writing.NTriplesWriter.NTriplesWriter
+- uid: VDS.RDF.Parsing.NTriplesSyntax
+  commentId: T:VDS.RDF.Parsing.NTriplesSyntax
+  parent: VDS.RDF.Parsing
+  name: NTriplesSyntax
+  nameWithType: NTriplesSyntax
+  fullName: VDS.RDF.Parsing.NTriplesSyntax
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: VDS.RDF.Writing.NTriplesWriter.SortTriples*
+  commentId: Overload:VDS.RDF.Writing.NTriplesWriter.SortTriples
+  name: SortTriples
+  nameWithType: NTriplesWriter.SortTriples
+  fullName: VDS.RDF.Writing.NTriplesWriter.SortTriples
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Writing.NTriplesWriter.TripleFormatterType*
+  commentId: Overload:VDS.RDF.Writing.NTriplesWriter.TripleFormatterType
+  name: TripleFormatterType
+  nameWithType: NTriplesWriter.TripleFormatterType
+  fullName: VDS.RDF.Writing.NTriplesWriter.TripleFormatterType
+- uid: VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+  commentId: P:VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+  parent: VDS.RDF.Writing.IFormatterBasedWriter
+  name: TripleFormatterType
+  nameWithType: IFormatterBasedWriter.TripleFormatterType
+  fullName: VDS.RDF.Writing.IFormatterBasedWriter.TripleFormatterType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: VDS.RDF.Writing.NTriplesWriter.Syntax*
+  commentId: Overload:VDS.RDF.Writing.NTriplesWriter.Syntax
+  name: Syntax
+  nameWithType: NTriplesWriter.Syntax
+  fullName: VDS.RDF.Writing.NTriplesWriter.Syntax
+- uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: Save(IGraph, String)
+  nameWithType: BaseRdfWriter.Save(IGraph, String)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.Save(VDS.RDF.IGraph,System.String)
+    name: Save
+    nameWithType: BaseRdfWriter.Save
+    fullName: VDS.RDF.Writing.BaseRdfWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.NTriplesWriter.Save*
+  commentId: Overload:VDS.RDF.Writing.NTriplesWriter.Save
+  name: Save
+  nameWithType: NTriplesWriter.Save
+  fullName: VDS.RDF.Writing.NTriplesWriter.Save
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  isExternal: true
+  name: SaveInternal(IGraph, TextWriter)
+  nameWithType: BaseRdfWriter.SaveInternal(IGraph, TextWriter)
+  fullName: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: SaveInternal
+    nameWithType: BaseRdfWriter.SaveInternal
+    fullName: VDS.RDF.Writing.BaseRdfWriter.SaveInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.BaseRdfWriter.SaveInternal(VDS.RDF.IGraph,System.IO.TextWriter)
+    name: SaveInternal
+    nameWithType: BaseRdfWriter.SaveInternal
+    fullName: VDS.RDF.Writing.BaseRdfWriter.SaveInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.NTriplesWriter.SaveInternal*
+  commentId: Overload:VDS.RDF.Writing.NTriplesWriter.SaveInternal
+  name: SaveInternal
+  nameWithType: NTriplesWriter.SaveInternal
+  fullName: VDS.RDF.Writing.NTriplesWriter.SaveInternal
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.Writing.BaseRdfWriter.Warning
+  commentId: E:VDS.RDF.Writing.BaseRdfWriter.Warning
+  parent: VDS.RDF.Writing.BaseRdfWriter
+  name: Warning
+  nameWithType: BaseRdfWriter.Warning
+  fullName: VDS.RDF.Writing.BaseRdfWriter.Warning
+- uid: VDS.RDF.RdfWriterWarning
+  commentId: T:VDS.RDF.RdfWriterWarning
+  parent: VDS.RDF
+  name: RdfWriterWarning
+  nameWithType: RdfWriterWarning
+  fullName: VDS.RDF.RdfWriterWarning
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.NTriplesWriter.ToString*
+  commentId: Overload:VDS.RDF.Writing.NTriplesWriter.ToString
+  name: ToString
+  nameWithType: NTriplesWriter.ToString
+  fullName: VDS.RDF.Writing.NTriplesWriter.ToString

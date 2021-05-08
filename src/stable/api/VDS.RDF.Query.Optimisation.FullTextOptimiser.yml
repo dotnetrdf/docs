@@ -1,0 +1,589 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.FullTextOptimiser
+  id: FullTextOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  children:
+  - VDS.RDF.Query.Optimisation.FullTextOptimiser.#ctor(VDS.RDF.Query.FullText.Search.IFullTextSearchProvider)
+  - VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  - VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  langs:
+  - csharp
+  - vb
+  name: FullTextOptimiser
+  nameWithType: FullTextOptimiser
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FullTextOptimiser
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nAn Algebra Optimiser that ensures that Full Text Query support is available to query evaluation.\n"
+  example: []
+  syntax:
+    content: 'public class FullTextOptimiser : object, IAlgebraOptimiser, IConfigurationSerializable'
+    content.vb: >-
+      Public Class FullTextOptimiser
+          Inherits Object
+          Implements IAlgebraOptimiser, IConfigurationSerializable
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  extensionMethods:
+  - VDS.RDF.Query.Optimisation.FullTextOptimiser.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.#ctor(VDS.RDF.Query.FullText.Search.IFullTextSearchProvider)
+  commentId: M:VDS.RDF.Query.Optimisation.FullTextOptimiser.#ctor(VDS.RDF.Query.FullText.Search.IFullTextSearchProvider)
+  id: '#ctor(VDS.RDF.Query.FullText.Search.IFullTextSearchProvider)'
+  parent: VDS.RDF.Query.Optimisation.FullTextOptimiser
+  langs:
+  - csharp
+  - vb
+  name: FullTextOptimiser(IFullTextSearchProvider)
+  nameWithType: FullTextOptimiser.FullTextOptimiser(IFullTextSearchProvider)
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.FullTextOptimiser(VDS.RDF.Query.FullText.Search.IFullTextSearchProvider)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+    startLine: 52
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nCreates a Full Text Optimiser.\n"
+  example: []
+  syntax:
+    content: public FullTextOptimiser(IFullTextSearchProvider provider)
+    parameters:
+    - id: provider
+      type: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+      description: Full Text Search Provider.
+    content.vb: Public Sub New(provider As IFullTextSearchProvider)
+  overload: VDS.RDF.Query.Optimisation.FullTextOptimiser.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  id: Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  parent: VDS.RDF.Query.Optimisation.FullTextOptimiser
+  langs:
+  - csharp
+  - vb
+  name: Optimise(ISparqlAlgebra)
+  nameWithType: FullTextOptimiser.Optimise(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Optimise
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+    startLine: 63
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nOptimises the Algebra to apply the <xref href=\"VDS.RDF.Query.Algebra.FullTextQuery\" data-throw-if-not-resolved=\"false\"></xref> operator which ensures Full Text Query support is available to the query evaluation.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra Optimise(ISparqlAlgebra algebra)
+    parameters:
+    - id: algebra
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: Algebra to optimise.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public Function Optimise(algebra As ISparqlAlgebra) As ISparqlAlgebra
+  overload: VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise*
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  id: IsApplicable(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.Optimisation.FullTextOptimiser
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable(SparqlQuery)
+  nameWithType: FullTextOptimiser.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsApplicable
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nReturns that the optimiser is applicable to all queries.\n"
+  example: []
+  syntax:
+    content: public bool IsApplicable(SparqlQuery q)
+    parameters:
+    - id: q
+      type: VDS.RDF.Query.SparqlQuery
+      description: Query.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsApplicable(q As SparqlQuery) As Boolean
+  overload: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable*
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  id: IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Query.Optimisation.FullTextOptimiser
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: FullTextOptimiser.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsApplicable
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+    startLine: 84
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nReturns that the optimiser is applicable to all updates.\n"
+  example: []
+  syntax:
+    content: public bool IsApplicable(SparqlUpdateCommandSet cmds)
+    parameters:
+    - id: cmds
+      type: VDS.RDF.Update.SparqlUpdateCommandSet
+      description: Updates.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsApplicable(cmds As SparqlUpdateCommandSet) As Boolean
+  overload: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable*
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  id: SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Query.Optimisation.FullTextOptimiser
+  langs:
+  - csharp
+  - vb
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: FullTextOptimiser.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SerializeConfiguration
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Optimisation/FullTextOptimiser.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nSerializes the Optimisers Configuration.\n"
+  example: []
+  syntax:
+    content: public void SerializeConfiguration(ConfigurationSerializationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Configuration.ConfigurationSerializationContext
+      description: Serialization Context.
+    content.vb: Public Sub SerializeConfiguration(context As ConfigurationSerializationContext)
+  overload: VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration*
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<FullTextOptimiser>()
+  nameWithType: Extensions.AsEnumerable<FullTextOptimiser>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.FullTextOptimiser>()
+  nameWithType.vb: Extensions.AsEnumerable(Of FullTextOptimiser)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.FullTextOptimiser)()
+  name.vb: AsEnumerable(Of FullTextOptimiser)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<FullTextOptimiser>
+    nameWithType: Extensions.AsEnumerable<FullTextOptimiser>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.FullTextOptimiser>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of FullTextOptimiser)
+    nameWithType: Extensions.AsEnumerable(Of FullTextOptimiser)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.FullTextOptimiser)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.#ctor*
+  commentId: Overload:VDS.RDF.Query.Optimisation.FullTextOptimiser.#ctor
+  name: FullTextOptimiser
+  nameWithType: FullTextOptimiser.FullTextOptimiser
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.FullTextOptimiser
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  commentId: T:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  parent: VDS.RDF.Query.FullText.Search
+  name: IFullTextSearchProvider
+  nameWithType: IFullTextSearchProvider
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+- uid: VDS.RDF.Query.FullText.Search
+  commentId: N:VDS.RDF.Query.FullText.Search
+  name: VDS.RDF.Query.FullText.Search
+  nameWithType: VDS.RDF.Query.FullText.Search
+  fullName: VDS.RDF.Query.FullText.Search
+- uid: VDS.RDF.Query.Algebra.FullTextQuery
+  commentId: T:VDS.RDF.Query.Algebra.FullTextQuery
+  name: FullTextQuery
+  nameWithType: FullTextQuery
+  fullName: VDS.RDF.Query.Algebra.FullTextQuery
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise*
+  commentId: Overload:VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise
+  name: Optimise
+  nameWithType: FullTextOptimiser.Optimise
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.Optimise
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  parent: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  name: Optimise(ISparqlAlgebra)
+  nameWithType: IAlgebraOptimiser.Optimise(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: IAlgebraOptimiser.Optimise
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: IAlgebraOptimiser.Optimise
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable*
+  commentId: Overload:VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable
+  name: IsApplicable
+  nameWithType: FullTextOptimiser.IsApplicable
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.IsApplicable
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  name: IsApplicable(SparqlQuery)
+  nameWithType: IAlgebraOptimiser.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: IAlgebraOptimiser.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.SparqlUpdateCommandSet
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommandSet
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommandSet
+  nameWithType: SparqlUpdateCommandSet
+  fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration*
+  commentId: Overload:VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration
+  name: SerializeConfiguration
+  nameWithType: FullTextOptimiser.SerializeConfiguration
+  fullName: VDS.RDF.Query.Optimisation.FullTextOptimiser.SerializeConfiguration
+- uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Configuration.IConfigurationSerializable
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: IConfigurationSerializable.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+  commentId: T:VDS.RDF.Configuration.ConfigurationSerializationContext
+  parent: VDS.RDF.Configuration
+  name: ConfigurationSerializationContext
+  nameWithType: ConfigurationSerializationContext
+  fullName: VDS.RDF.Configuration.ConfigurationSerializationContext

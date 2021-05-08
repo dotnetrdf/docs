@@ -1,0 +1,782 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Construct.ConstructContext
+  commentId: T:VDS.RDF.Query.Construct.ConstructContext
+  id: ConstructContext
+  parent: VDS.RDF.Query.Construct
+  children:
+  - VDS.RDF.Query.Construct.ConstructContext.#ctor(VDS.RDF.IGraph,VDS.RDF.Query.Algebra.ISet,System.Boolean)
+  - VDS.RDF.Query.Construct.ConstructContext.#ctor(VDS.RDF.INodeFactory,VDS.RDF.Query.Algebra.ISet,System.Boolean)
+  - VDS.RDF.Query.Construct.ConstructContext.GetBlankNode(System.String)
+  - VDS.RDF.Query.Construct.ConstructContext.GetNode(VDS.RDF.INode)
+  - VDS.RDF.Query.Construct.ConstructContext.Graph
+  - VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes
+  - VDS.RDF.Query.Construct.ConstructContext.Set
+  langs:
+  - csharp
+  - vb
+  name: ConstructContext
+  nameWithType: ConstructContext
+  fullName: VDS.RDF.Query.Construct.ConstructContext
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ConstructContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 37
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nContext used for Constructing Triples in SPARQL Query/Update.\n"
+  example: []
+  syntax:
+    content: public class ConstructContext
+    content.vb: Public Class ConstructContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Construct.ConstructContext.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Construct.ConstructContext.#ctor(VDS.RDF.IGraph,VDS.RDF.Query.Algebra.ISet,System.Boolean)
+  commentId: M:VDS.RDF.Query.Construct.ConstructContext.#ctor(VDS.RDF.IGraph,VDS.RDF.Query.Algebra.ISet,System.Boolean)
+  id: '#ctor(VDS.RDF.IGraph,VDS.RDF.Query.Algebra.ISet,System.Boolean)'
+  parent: VDS.RDF.Query.Construct.ConstructContext
+  langs:
+  - csharp
+  - vb
+  name: ConstructContext(IGraph, ISet, Boolean)
+  nameWithType: ConstructContext.ConstructContext(IGraph, ISet, Boolean)
+  fullName: VDS.RDF.Query.Construct.ConstructContext.ConstructContext(VDS.RDF.IGraph, VDS.RDF.Query.Algebra.ISet, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nCreates a new Construct Context.\n"
+  remarks: "\n<p>\nEither the <code data-dev-comment-type=\"paramref\" class=\"paramref\">s</code>  or <code data-dev-comment-type=\"paramref\" class=\"paramref\">g</code> parameters may be null if required.\n</p>\n"
+  example: []
+  syntax:
+    content: public ConstructContext(IGraph g, ISet s, bool preserveBNodes)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to construct Triples in.
+    - id: s
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Set to construct from.
+    - id: preserveBNodes
+      type: System.Boolean
+      description: Whether Blank Nodes bound to variables should be preserved as-is.
+    content.vb: Public Sub New(g As IGraph, s As ISet, preserveBNodes As Boolean)
+  overload: VDS.RDF.Query.Construct.ConstructContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Construct.ConstructContext.#ctor(VDS.RDF.INodeFactory,VDS.RDF.Query.Algebra.ISet,System.Boolean)
+  commentId: M:VDS.RDF.Query.Construct.ConstructContext.#ctor(VDS.RDF.INodeFactory,VDS.RDF.Query.Algebra.ISet,System.Boolean)
+  id: '#ctor(VDS.RDF.INodeFactory,VDS.RDF.Query.Algebra.ISet,System.Boolean)'
+  parent: VDS.RDF.Query.Construct.ConstructContext
+  langs:
+  - csharp
+  - vb
+  name: ConstructContext(INodeFactory, ISet, Boolean)
+  nameWithType: ConstructContext.ConstructContext(INodeFactory, ISet, Boolean)
+  fullName: VDS.RDF.Query.Construct.ConstructContext.ConstructContext(VDS.RDF.INodeFactory, VDS.RDF.Query.Algebra.ISet, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 77
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nCreates a new Construct Context.\n"
+  remarks: "\n<p>\nEither the <code data-dev-comment-type=\"paramref\" class=\"paramref\">s</code>  or <code data-dev-comment-type=\"paramref\" class=\"paramref\">factory</code> parameters may be null if required.\n</p>\n"
+  example: []
+  syntax:
+    content: public ConstructContext(INodeFactory factory, ISet s, bool preserveBNodes)
+    parameters:
+    - id: factory
+      type: VDS.RDF.INodeFactory
+      description: Factory to create nodes with.
+    - id: s
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Set to construct from.
+    - id: preserveBNodes
+      type: System.Boolean
+      description: Whether Blank Nodes bound to variables should be preserved as-is.
+    content.vb: Public Sub New(factory As INodeFactory, s As ISet, preserveBNodes As Boolean)
+  overload: VDS.RDF.Query.Construct.ConstructContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Construct.ConstructContext.Set
+  commentId: P:VDS.RDF.Query.Construct.ConstructContext.Set
+  id: Set
+  parent: VDS.RDF.Query.Construct.ConstructContext
+  langs:
+  - csharp
+  - vb
+  name: Set
+  nameWithType: ConstructContext.Set
+  fullName: VDS.RDF.Query.Construct.ConstructContext.Set
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Set
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 87
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nGets the Set that this Context pertains to.\n"
+  example: []
+  syntax:
+    content: public ISet Set { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Algebra.ISet
+    content.vb: Public ReadOnly Property Set As ISet
+  overload: VDS.RDF.Query.Construct.ConstructContext.Set*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Construct.ConstructContext.Graph
+  commentId: P:VDS.RDF.Query.Construct.ConstructContext.Graph
+  id: Graph
+  parent: VDS.RDF.Query.Construct.ConstructContext
+  langs:
+  - csharp
+  - vb
+  name: Graph
+  nameWithType: ConstructContext.Graph
+  fullName: VDS.RDF.Query.Construct.ConstructContext.Graph
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Graph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 98
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nGets the Graph that Triples should be constructed in.\n"
+  example: []
+  syntax:
+    content: public IGraph Graph { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.IGraph
+    content.vb: Public ReadOnly Property Graph As IGraph
+  overload: VDS.RDF.Query.Construct.ConstructContext.Graph*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes
+  commentId: P:VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes
+  id: PreserveBlankNodes
+  parent: VDS.RDF.Query.Construct.ConstructContext
+  langs:
+  - csharp
+  - vb
+  name: PreserveBlankNodes
+  nameWithType: ConstructContext.PreserveBlankNodes
+  fullName: VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PreserveBlankNodes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 117
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nGets whether Blank Nodes bound to variables should be preserved.\n"
+  example: []
+  syntax:
+    content: public bool PreserveBlankNodes { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PreserveBlankNodes As Boolean
+  overload: VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Construct.ConstructContext.GetBlankNode(System.String)
+  commentId: M:VDS.RDF.Query.Construct.ConstructContext.GetBlankNode(System.String)
+  id: GetBlankNode(System.String)
+  parent: VDS.RDF.Query.Construct.ConstructContext
+  langs:
+  - csharp
+  - vb
+  name: GetBlankNode(String)
+  nameWithType: ConstructContext.GetBlankNode(String)
+  fullName: VDS.RDF.Query.Construct.ConstructContext.GetBlankNode(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetBlankNode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 135
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nCreates a new Blank Node for this Context.\n"
+  remarks: "\n<p>\nIf the same Blank Node ID is used multiple times in this Context you will always get the same Blank Node for that ID.\n</p>\n"
+  example: []
+  syntax:
+    content: public INode GetBlankNode(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: ID.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Public Function GetBlankNode(id As String) As INode
+  overload: VDS.RDF.Query.Construct.ConstructContext.GetBlankNode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Construct.ConstructContext.GetNode(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Construct.ConstructContext.GetNode(VDS.RDF.INode)
+  id: GetNode(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Construct.ConstructContext
+  langs:
+  - csharp
+  - vb
+  name: GetNode(INode)
+  nameWithType: ConstructContext.GetNode(INode)
+  fullName: VDS.RDF.Query.Construct.ConstructContext.GetNode(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetNode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Construct/ConstructContext.cs
+    startLine: 172
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Construct
+  summary: "\nCreates a Node for the Context.\n"
+  remarks: "\n<p>\nIn effect all this does is ensure that all Nodes end up in the same Graph which may occassionally not happen otherwise when Graph wrappers are involved.\n</p>\n"
+  example: []
+  syntax:
+    content: public INode GetNode(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Public Function GetNode(n As INode) As INode
+  overload: VDS.RDF.Query.Construct.ConstructContext.GetNode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Query.Construct
+  commentId: N:VDS.RDF.Query.Construct
+  name: VDS.RDF.Query.Construct
+  nameWithType: VDS.RDF.Query.Construct
+  fullName: VDS.RDF.Query.Construct
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Construct.ConstructContext.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ConstructContext>()
+  nameWithType: Extensions.AsEnumerable<ConstructContext>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Construct.ConstructContext>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ConstructContext)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Construct.ConstructContext)()
+  name.vb: AsEnumerable(Of ConstructContext)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ConstructContext>
+    nameWithType: Extensions.AsEnumerable<ConstructContext>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Construct.ConstructContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ConstructContext)
+    nameWithType: Extensions.AsEnumerable(Of ConstructContext)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Construct.ConstructContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Construct.ConstructContext.#ctor*
+  commentId: Overload:VDS.RDF.Query.Construct.ConstructContext.#ctor
+  name: ConstructContext
+  nameWithType: ConstructContext.ConstructContext
+  fullName: VDS.RDF.Query.Construct.ConstructContext.ConstructContext
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.Algebra.ISet
+  commentId: T:VDS.RDF.Query.Algebra.ISet
+  parent: VDS.RDF.Query.Algebra
+  name: ISet
+  nameWithType: ISet
+  fullName: VDS.RDF.Query.Algebra.ISet
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.INodeFactory
+  commentId: T:VDS.RDF.INodeFactory
+  parent: VDS.RDF
+  name: INodeFactory
+  nameWithType: INodeFactory
+  fullName: VDS.RDF.INodeFactory
+- uid: VDS.RDF.Query.Construct.ConstructContext.Set*
+  commentId: Overload:VDS.RDF.Query.Construct.ConstructContext.Set
+  name: Set
+  nameWithType: ConstructContext.Set
+  fullName: VDS.RDF.Query.Construct.ConstructContext.Set
+- uid: VDS.RDF.Query.Construct.ConstructContext.Graph*
+  commentId: Overload:VDS.RDF.Query.Construct.ConstructContext.Graph
+  name: Graph
+  nameWithType: ConstructContext.Graph
+  fullName: VDS.RDF.Query.Construct.ConstructContext.Graph
+- uid: VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes*
+  commentId: Overload:VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes
+  name: PreserveBlankNodes
+  nameWithType: ConstructContext.PreserveBlankNodes
+  fullName: VDS.RDF.Query.Construct.ConstructContext.PreserveBlankNodes
+- uid: VDS.RDF.Query.Construct.ConstructContext.GetBlankNode*
+  commentId: Overload:VDS.RDF.Query.Construct.ConstructContext.GetBlankNode
+  name: GetBlankNode
+  nameWithType: ConstructContext.GetBlankNode
+  fullName: VDS.RDF.Query.Construct.ConstructContext.GetBlankNode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.Construct.ConstructContext.GetNode*
+  commentId: Overload:VDS.RDF.Query.Construct.ConstructContext.GetNode
+  name: GetNode
+  nameWithType: ConstructContext.GetNode
+  fullName: VDS.RDF.Query.Construct.ConstructContext.GetNode

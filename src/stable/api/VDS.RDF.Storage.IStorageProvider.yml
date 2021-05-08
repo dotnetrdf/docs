@@ -1,0 +1,867 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.IStorageProvider
+  commentId: T:VDS.RDF.Storage.IStorageProvider
+  id: IStorageProvider
+  parent: VDS.RDF.Storage
+  children:
+  - VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  - VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  - VDS.RDF.Storage.IStorageProvider.ListGraphs
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  - VDS.RDF.Storage.IStorageProvider.ParentServer
+  - VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  langs:
+  - csharp
+  - vb
+  name: IStorageProvider
+  nameWithType: IStorageProvider
+  fullName: VDS.RDF.Storage.IStorageProvider
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IStorageProvider
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 104
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nInterface for storage providers which provide the read/write functionality to some arbitrary storage layer.\n"
+  remarks: "\nDesigned to allow for arbitrary Triple Stores to be plugged into the library as required by the end user.\n"
+  example: []
+  syntax:
+    content: 'public interface IStorageProvider : IStorageCapabilities, IDisposable'
+    content.vb: >-
+      Public Interface IStorageProvider
+          Inherits IStorageCapabilities, IDisposable
+  inheritedMembers:
+  - VDS.RDF.Storage.IStorageCapabilities.IsReady
+  - VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  - VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  - VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  - VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  - VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  - System.IDisposable.Dispose
+  extensionMethods:
+  - VDS.RDF.Storage.IStorageProvider.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Storage.IStorageProvider.ParentServer
+  commentId: P:VDS.RDF.Storage.IStorageProvider.ParentServer
+  id: ParentServer
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: ParentServer
+  nameWithType: IStorageProvider.ParentServer
+  fullName: VDS.RDF.Storage.IStorageProvider.ParentServer
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ParentServer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 115
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets the Parent Server on which this store is hosted (if any).\n"
+  remarks: "\n<p>\nFor storage backends which support multiple stores this is useful because it provides a way to access all the stores on that backend.  For stores which are standalone they should simply return null.\n</p>\n"
+  example: []
+  syntax:
+    content: IStorageServer ParentServer { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Storage.Management.IStorageServer
+    content.vb: ReadOnly Property ParentServer As IStorageServer
+  overload: VDS.RDF.Storage.IStorageProvider.ParentServer*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  id: LoadGraph(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: LoadGraph(IGraph, Uri)
+  nameWithType: IStorageProvider.LoadGraph(IGraph, Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 133
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nLoads a Graph from the Store.\n"
+  remarks: "\n<p>\nIf the Graph being loaded into is Empty then it&apos;s Base Uri should become the Uri of the Graph being loaded, otherwise it should be merged into the existing non-empty Graph whose Base Uri should be unaffected.\n</p>\n<p>\nBehaviour of this method with regards to non-existent Graphs is up to the implementor, an empty Graph may be returned or an error thrown.  Implementors <strong>should</strong> state in the XML comments for their implementation what behaviour is implemented.\n</p>\n"
+  example: []
+  syntax:
+    content: void LoadGraph(IGraph g, Uri graphUri)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load into.
+    - id: graphUri
+      type: System.Uri
+      description: Uri of the Graph to load.
+    content.vb: Sub LoadGraph(g As IGraph, graphUri As Uri)
+  overload: VDS.RDF.Storage.IStorageProvider.LoadGraph*
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+  id: LoadGraph(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: LoadGraph(IGraph, String)
+  nameWithType: IStorageProvider.LoadGraph(IGraph, String)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 148
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nLoads a Graph from the Store.\n"
+  remarks: "\n<p>\nIf the Graph being loaded into is Empty then it&apos;s Base Uri should become the Uri of the Graph being loaded, otherwise it should be merged into the existing non-empty Graph whose Base Uri should be unaffected.\n</p>\n<p>\nBehaviour of this method with regards to non-existent Graphs is up to the implementor, an empty Graph may be returned or an error thrown.  Implementors <strong>should</strong> state in the XML comments for their implementation what behaviour is implemented.\n</p>\n"
+  example: []
+  syntax:
+    content: void LoadGraph(IGraph g, string graphUri)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load into.
+    - id: graphUri
+      type: System.String
+      description: URI of the Graph to load.
+    content.vb: Sub LoadGraph(g As IGraph, graphUri As String)
+  overload: VDS.RDF.Storage.IStorageProvider.LoadGraph*
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  id: LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: LoadGraph(IRdfHandler, Uri)
+  nameWithType: IStorageProvider.LoadGraph(IRdfHandler, Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 160
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nLoads a Graph from the Store using the RDF Handler.\n"
+  remarks: "\n<p>\nBehaviour of this method with regards to non-existent Graphs is up to the implementor, an empty Graph may be returned or an error thrown.  Implementors <strong>should</strong> state in the XML comments for their implementation what behaviour is implemented.\n</p>\n"
+  example: []
+  syntax:
+    content: void LoadGraph(IRdfHandler handler, Uri graphUri)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: graphUri
+      type: System.Uri
+      description: URI of the Graph to load.
+    content.vb: Sub LoadGraph(handler As IRdfHandler, graphUri As Uri)
+  overload: VDS.RDF.Storage.IStorageProvider.LoadGraph*
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  id: LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: LoadGraph(IRdfHandler, String)
+  nameWithType: IStorageProvider.LoadGraph(IRdfHandler, String)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 172
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nLoads a Graph from the Store using the RDF Handler.\n"
+  remarks: "\n<p>\nBehaviour of this method with regards to non-existent Graphs is up to the implementor, an empty Graph may be returned or an error thrown.  Implementors <strong>should</strong> state in the XML comments for their implementation what behaviour is implemented.\n</p>\n"
+  example: []
+  syntax:
+    content: void LoadGraph(IRdfHandler handler, string graphUri)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: graphUri
+      type: System.String
+      description: URI of the Graph to load.
+    content.vb: Sub LoadGraph(handler As IRdfHandler, graphUri As String)
+  overload: VDS.RDF.Storage.IStorageProvider.LoadGraph*
+- uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  id: SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: SaveGraph(IGraph)
+  nameWithType: IStorageProvider.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SaveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 183
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nSaves a Graph to the Store.\n"
+  remarks: "\nUri of the Graph should be taken from the <xref href=\"VDS.RDF.IGraph.BaseUri\" data-throw-if-not-resolved=\"false\"></xref> property\n<br /><br />\nBehaviour of this method with regards to whether it overwrites/updates/merges with existing Graphs of the same Uri is up to the implementor and may be dependent on the underlying store.  Implementors <strong>should</strong> state in the XML comments for their implementations what behaviour is implemented.\n"
+  example: []
+  syntax:
+    content: void SaveGraph(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to Save.
+    content.vb: Sub SaveGraph(g As IGraph)
+  overload: VDS.RDF.Storage.IStorageProvider.SaveGraph*
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  id: UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: IStorageProvider.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 204
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nUpdates a Graph in the Store.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> Not all Stores are capable of supporting update at the individual Triple level and as such it is acceptable for such a Store to throw a <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref> if the Store cannot provide this functionality.\n</p>\n<p>\nBehaviour of this method with regards to non-existent Graph is up to the implementor, it may create a new empty Graph and apply the updates to that or it may throw an error.  Implementors <strong>should</strong> state in the XML comments for their implementation what behaviour is implemented.\n</p>\n<p>\nImplementers <strong>MUST</strong> allow for either the additions or removals argument to be null.\n</p>\n"
+  example: []
+  syntax:
+    content: void UpdateGraph(Uri graphUri, IEnumerable<Triple> additions, IEnumerable<Triple> removals)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Uri of the Graph to update.
+    - id: additions
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to add to the Graph.
+    - id: removals
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to remove from the Graph.
+    content.vb: Sub UpdateGraph(graphUri As Uri, additions As IEnumerable(Of Triple), removals As IEnumerable(Of Triple))
+  overload: VDS.RDF.Storage.IStorageProvider.UpdateGraph*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the underlying Store is not capable of doing Updates at the Triple level.
+  - type: VDS.RDF.Storage.RdfStorageException
+    commentId: T:VDS.RDF.Storage.RdfStorageException
+    description: May be thrown if the underlying Store is not capable of doing Updates at the Triple level or if some error occurs while attempting the Update.
+  nameWithType.vb: IStorageProvider.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  id: UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: IStorageProvider.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 225
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nUpdates a Graph in the Store.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> Not all Stores are capable of supporting update at the individual Triple level and as such it is acceptable for such a Store to throw a <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref> or an <xref href=\"VDS.RDF.Storage.RdfStorageException\" data-throw-if-not-resolved=\"false\"></xref> if the Store cannot provide this functionality.\n</p>\n<p>\nBehaviour of this method with regards to non-existent Graph is up to the implementor, it may create a new empty Graph and apply the updates to that or it may throw an error.  Implementors <strong>should</strong> state in the XML comments for their implementation what behaviour is implemented.\n</p>\n<p>\nImplementers <strong>MUST</strong> allow for either the additions or removals argument to be null.\n</p>\n"
+  example: []
+  syntax:
+    content: void UpdateGraph(string graphUri, IEnumerable<Triple> additions, IEnumerable<Triple> removals)
+    parameters:
+    - id: graphUri
+      type: System.String
+      description: Uri of the Graph to update.
+    - id: additions
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to add to the Graph.
+    - id: removals
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to remove from the Graph.
+    content.vb: Sub UpdateGraph(graphUri As String, additions As IEnumerable(Of Triple), removals As IEnumerable(Of Triple))
+  overload: VDS.RDF.Storage.IStorageProvider.UpdateGraph*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the underlying Store is not capable of doing Updates at the Triple level.
+  - type: VDS.RDF.Storage.RdfStorageException
+    commentId: T:VDS.RDF.Storage.RdfStorageException
+    description: May be thrown if the underlying Store is not capable of doing Updates at the Triple level or if some error occurs while attempting the Update.
+  nameWithType.vb: IStorageProvider.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+- uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  id: DeleteGraph(System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: DeleteGraph(Uri)
+  nameWithType: IStorageProvider.DeleteGraph(Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 238
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nDeletes a Graph from the Store.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> Not all Stores are capable of Deleting a Graph so it is acceptable for such a Store to throw a <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref> or an <xref href=\"VDS.RDF.Storage.RdfStorageException\" data-throw-if-not-resolved=\"false\"></xref> if the Store cannot provide this functionality.\n</p>\n"
+  example: []
+  syntax:
+    content: void DeleteGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: URI of the Graph to be deleted.
+    content.vb: Sub DeleteGraph(graphUri As Uri)
+  overload: VDS.RDF.Storage.IStorageProvider.DeleteGraph*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the underlying Store is not capable of doing Deleting a Graph.
+  - type: VDS.RDF.Storage.RdfStorageException
+    commentId: T:VDS.RDF.Storage.RdfStorageException
+    description: May be thrown if the underlying Store is not capable of Deleting a Graph or an error occurs while performing the delete.
+- uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  id: DeleteGraph(System.String)
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: DeleteGraph(String)
+  nameWithType: IStorageProvider.DeleteGraph(String)
+  fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 251
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nDeletes a Graph from the Store.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> Not all Stores are capable of Deleting a Graph so it is acceptable for such a Store to throw a <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref> or an <xref href=\"VDS.RDF.Storage.RdfStorageException\" data-throw-if-not-resolved=\"false\"></xref> if the Store cannot provide this functionality.\n</p>\n"
+  example: []
+  syntax:
+    content: void DeleteGraph(string graphUri)
+    parameters:
+    - id: graphUri
+      type: System.String
+      description: URI of the Graph to be deleted.
+    content.vb: Sub DeleteGraph(graphUri As String)
+  overload: VDS.RDF.Storage.IStorageProvider.DeleteGraph*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the underlying Store is not capable of doing Deleting a Graph.
+  - type: VDS.RDF.Storage.RdfStorageException
+    commentId: T:VDS.RDF.Storage.RdfStorageException
+    description: May be thrown if the underlying Store is not capable of Deleting a Graph or an error occurs while performing the delete.
+- uid: VDS.RDF.Storage.IStorageProvider.ListGraphs
+  commentId: M:VDS.RDF.Storage.IStorageProvider.ListGraphs
+  id: ListGraphs
+  parent: VDS.RDF.Storage.IStorageProvider
+  langs:
+  - csharp
+  - vb
+  name: ListGraphs()
+  nameWithType: IStorageProvider.ListGraphs()
+  fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ListGraphs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 262
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets a List of Graph URIs for the graphs in the store.\n"
+  remarks: "\n<p>\nImplementations should implement this method only if they need to provide a custom way of listing Graphs.  If the Store for which you are providing a manager can efficiently return the Graphs using a SELECT DISTINCT ?g WHERE { GRAPH ?g { ?s ?p ?o } } query then there should be no need to implement this function.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Uri> ListGraphs()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+      description: ''
+    content.vb: Function ListGraphs As IEnumerable(Of Uri)
+  overload: VDS.RDF.Storage.IStorageProvider.ListGraphs*
+references:
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReady
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IsReady
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IsReady
+  nameWithType: IStorageCapabilities.IsReady
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReady
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IsReadOnly
+  nameWithType: IStorageCapabilities.IsReadOnly
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IOBehaviour
+  nameWithType: IStorageCapabilities.IOBehaviour
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+- uid: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: UpdateSupported
+  nameWithType: IStorageCapabilities.UpdateSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: DeleteSupported
+  nameWithType: IStorageCapabilities.DeleteSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: ListGraphsSupported
+  nameWithType: IStorageCapabilities.ListGraphsSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IStorageProvider>()
+  nameWithType: Extensions.AsEnumerable<IStorageProvider>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.IStorageProvider>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IStorageProvider)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.IStorageProvider)()
+  name.vb: AsEnumerable(Of IStorageProvider)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IStorageProvider>
+    nameWithType: Extensions.AsEnumerable<IStorageProvider>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.IStorageProvider>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IStorageProvider)
+    nameWithType: Extensions.AsEnumerable(Of IStorageProvider)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.IStorageProvider)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  parent: VDS.RDF.Storage
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Storage.IStorageProvider.ParentServer*
+  commentId: Overload:VDS.RDF.Storage.IStorageProvider.ParentServer
+  name: ParentServer
+  nameWithType: IStorageProvider.ParentServer
+  fullName: VDS.RDF.Storage.IStorageProvider.ParentServer
+- uid: VDS.RDF.Storage.Management.IStorageServer
+  commentId: T:VDS.RDF.Storage.Management.IStorageServer
+  parent: VDS.RDF.Storage.Management
+  name: IStorageServer
+  nameWithType: IStorageServer
+  fullName: VDS.RDF.Storage.Management.IStorageServer
+- uid: VDS.RDF.Storage.Management
+  commentId: N:VDS.RDF.Storage.Management
+  name: VDS.RDF.Storage.Management
+  nameWithType: VDS.RDF.Storage.Management
+  fullName: VDS.RDF.Storage.Management
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph*
+  commentId: Overload:VDS.RDF.Storage.IStorageProvider.LoadGraph
+  name: LoadGraph
+  nameWithType: IStorageProvider.LoadGraph
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.IGraph.BaseUri
+  commentId: P:VDS.RDF.IGraph.BaseUri
+  parent: VDS.RDF.IGraph
+  name: BaseUri
+  nameWithType: IGraph.BaseUri
+  fullName: VDS.RDF.IGraph.BaseUri
+- uid: VDS.RDF.Storage.IStorageProvider.SaveGraph*
+  commentId: Overload:VDS.RDF.Storage.IStorageProvider.SaveGraph
+  name: SaveGraph
+  nameWithType: IStorageProvider.SaveGraph
+  fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+- uid: VDS.RDF.Storage.RdfStorageException
+  commentId: T:VDS.RDF.Storage.RdfStorageException
+  parent: VDS.RDF.Storage
+  name: RdfStorageException
+  nameWithType: RdfStorageException
+  fullName: VDS.RDF.Storage.RdfStorageException
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph*
+  commentId: Overload:VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  name: UpdateGraph
+  nameWithType: IStorageProvider.UpdateGraph
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Triple>
+  nameWithType: IEnumerable<Triple>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerable(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple)
+  name.vb: IEnumerable(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph*
+  commentId: Overload:VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  name: DeleteGraph
+  nameWithType: IStorageProvider.DeleteGraph
+  fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+- uid: VDS.RDF.Storage.IStorageProvider.ListGraphs*
+  commentId: Overload:VDS.RDF.Storage.IStorageProvider.ListGraphs
+  name: ListGraphs
+  nameWithType: IStorageProvider.ListGraphs
+  fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs
+- uid: System.Collections.Generic.IEnumerable{System.Uri}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Uri}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Uri>
+  nameWithType: IEnumerable<Uri>
+  fullName: System.Collections.Generic.IEnumerable<System.Uri>
+  nameWithType.vb: IEnumerable(Of Uri)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Uri)
+  name.vb: IEnumerable(Of Uri)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

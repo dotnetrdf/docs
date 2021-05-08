@@ -1,0 +1,1046 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.FastVirtualNodeComparer
+  commentId: T:VDS.RDF.FastVirtualNodeComparer
+  id: FastVirtualNodeComparer
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.FastVirtualNodeComparer.Compare(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.FastVirtualNodeComparer.Equals(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.FastVirtualNodeComparer.GetHashCode(VDS.RDF.INode)
+  langs:
+  - csharp
+  - vb
+  name: FastVirtualNodeComparer
+  nameWithType: FastVirtualNodeComparer
+  fullName: VDS.RDF.FastVirtualNodeComparer
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleComparers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FastVirtualNodeComparer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleComparers.cs
+    startLine: 37
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nA Node Comparer which does faster comparisons since it only does lexical comparisons for literals rather than value comparisons,\nand it compares virtual nodes on their VirtualID where possible.\n"
+  example: []
+  syntax:
+    content: 'public class FastVirtualNodeComparer : IComparer<INode>, IEqualityComparer<INode>'
+    content.vb: >-
+      Public Class FastVirtualNodeComparer
+          Implements IComparer(Of INode), IEqualityComparer(Of INode)
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.Generic.IComparer{VDS.RDF.INode}
+  - System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.FastVirtualNodeComparer.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.FastVirtualNodeComparer.Compare(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.FastVirtualNodeComparer.Compare(VDS.RDF.INode,VDS.RDF.INode)
+  id: Compare(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.FastVirtualNodeComparer
+  langs:
+  - csharp
+  - vb
+  name: Compare(INode, INode)
+  nameWithType: FastVirtualNodeComparer.Compare(INode, INode)
+  fullName: VDS.RDF.FastVirtualNodeComparer.Compare(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleComparers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Compare
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleComparers.cs
+    startLine: 46
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCompares two Nodes.\n"
+  example: []
+  syntax:
+    content: public int Compare(INode x, INode y)
+    parameters:
+    - id: x
+      type: VDS.RDF.INode
+      description: Node.
+    - id: y
+      type: VDS.RDF.INode
+      description: Node.
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Function Compare(x As INode, y As INode) As Integer
+  overload: VDS.RDF.FastVirtualNodeComparer.Compare*
+  implements:
+  - System.Collections.Generic.IComparer{VDS.RDF.INode}.Compare(VDS.RDF.INode,VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.FastVirtualNodeComparer.Equals(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.FastVirtualNodeComparer.Equals(VDS.RDF.INode,VDS.RDF.INode)
+  id: Equals(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.FastVirtualNodeComparer
+  langs:
+  - csharp
+  - vb
+  name: Equals(INode, INode)
+  nameWithType: FastVirtualNodeComparer.Equals(INode, INode)
+  fullName: VDS.RDF.FastVirtualNodeComparer.Equals(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleComparers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Equals
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleComparers.cs
+    startLine: 147
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nDetermine equality for two nodes.\n"
+  example: []
+  syntax:
+    content: public bool Equals(INode x, INode y)
+    parameters:
+    - id: x
+      type: VDS.RDF.INode
+      description: ''
+    - id: y
+      type: VDS.RDF.INode
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if the nodes compare equal, false otheriwse.
+    content.vb: Public Function Equals(x As INode, y As INode) As Boolean
+  overload: VDS.RDF.FastVirtualNodeComparer.Equals*
+  implements:
+  - System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}.Equals(VDS.RDF.INode,VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.FastVirtualNodeComparer.GetHashCode(VDS.RDF.INode)
+  commentId: M:VDS.RDF.FastVirtualNodeComparer.GetHashCode(VDS.RDF.INode)
+  id: GetHashCode(VDS.RDF.INode)
+  parent: VDS.RDF.FastVirtualNodeComparer
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode(INode)
+  nameWithType: FastVirtualNodeComparer.GetHashCode(INode)
+  fullName: VDS.RDF.FastVirtualNodeComparer.GetHashCode(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/TripleComparers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetHashCode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/TripleComparers.cs
+    startLine: 153
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  example: []
+  syntax:
+    content: public int GetHashCode(INode obj)
+    parameters:
+    - id: obj
+      type: VDS.RDF.INode
+    return:
+      type: System.Int32
+    content.vb: Public Function GetHashCode(obj As INode) As Integer
+  overload: VDS.RDF.FastVirtualNodeComparer.GetHashCode*
+  implements:
+  - System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}.GetHashCode(VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Collections.Generic.IComparer{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IComparer{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IComparer`1
+  name: IComparer<INode>
+  nameWithType: IComparer<INode>
+  fullName: System.Collections.Generic.IComparer<VDS.RDF.INode>
+  nameWithType.vb: IComparer(Of INode)
+  fullName.vb: System.Collections.Generic.IComparer(Of VDS.RDF.INode)
+  name.vb: IComparer(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    nameWithType: IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    nameWithType: IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEqualityComparer`1
+  name: IEqualityComparer<INode>
+  nameWithType: IEqualityComparer<INode>
+  fullName: System.Collections.Generic.IEqualityComparer<VDS.RDF.INode>
+  nameWithType.vb: IEqualityComparer(Of INode)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of VDS.RDF.INode)
+  name.vb: IEqualityComparer(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.FastVirtualNodeComparer.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<FastVirtualNodeComparer>()
+  nameWithType: Extensions.AsEnumerable<FastVirtualNodeComparer>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.FastVirtualNodeComparer>()
+  nameWithType.vb: Extensions.AsEnumerable(Of FastVirtualNodeComparer)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.FastVirtualNodeComparer)()
+  name.vb: AsEnumerable(Of FastVirtualNodeComparer)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<FastVirtualNodeComparer>
+    nameWithType: Extensions.AsEnumerable<FastVirtualNodeComparer>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.FastVirtualNodeComparer>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of FastVirtualNodeComparer)
+    nameWithType: Extensions.AsEnumerable(Of FastVirtualNodeComparer)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.FastVirtualNodeComparer)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IComparer`1
+  commentId: T:System.Collections.Generic.IComparer`1
+  isExternal: true
+  name: IComparer<T>
+  nameWithType: IComparer<T>
+  fullName: System.Collections.Generic.IComparer<T>
+  nameWithType.vb: IComparer(Of T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T)
+  name.vb: IComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    nameWithType: IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1
+    name: IComparer
+    nameWithType: IComparer
+    fullName: System.Collections.Generic.IComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.IEqualityComparer`1
+  commentId: T:System.Collections.Generic.IEqualityComparer`1
+  isExternal: true
+  name: IEqualityComparer<T>
+  nameWithType: IEqualityComparer<T>
+  fullName: System.Collections.Generic.IEqualityComparer<T>
+  nameWithType.vb: IEqualityComparer(Of T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T)
+  name.vb: IEqualityComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    nameWithType: IEqualityComparer
+    fullName: System.Collections.Generic.IEqualityComparer
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.FastVirtualNodeComparer.Compare*
+  commentId: Overload:VDS.RDF.FastVirtualNodeComparer.Compare
+  name: Compare
+  nameWithType: FastVirtualNodeComparer.Compare
+  fullName: VDS.RDF.FastVirtualNodeComparer.Compare
+- uid: System.Collections.Generic.IComparer{VDS.RDF.INode}.Compare(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:System.Collections.Generic.IComparer{VDS.RDF.INode}.Compare(VDS.RDF.INode,VDS.RDF.INode)
+  parent: System.Collections.Generic.IComparer{VDS.RDF.INode}
+  definition: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  name: Compare(INode, INode)
+  nameWithType: IComparer<INode>.Compare(INode, INode)
+  fullName: System.Collections.Generic.IComparer<VDS.RDF.INode>.Compare(VDS.RDF.INode, VDS.RDF.INode)
+  nameWithType.vb: IComparer(Of INode).Compare(INode, INode)
+  fullName.vb: System.Collections.Generic.IComparer(Of VDS.RDF.INode).Compare(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    nameWithType: IComparer<INode>.Compare
+    fullName: System.Collections.Generic.IComparer<VDS.RDF.INode>.Compare
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    nameWithType: IComparer(Of INode).Compare
+    fullName: System.Collections.Generic.IComparer(Of VDS.RDF.INode).Compare
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  commentId: M:System.Collections.Generic.IComparer`1.Compare(`0,`0)
+  isExternal: true
+  name: Compare(T, T)
+  nameWithType: IComparer<T>.Compare(T, T)
+  fullName: System.Collections.Generic.IComparer<T>.Compare(T, T)
+  nameWithType.vb: IComparer(Of T).Compare(T, T)
+  fullName.vb: System.Collections.Generic.IComparer(Of T).Compare(T, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    nameWithType: IComparer<T>.Compare
+    fullName: System.Collections.Generic.IComparer<T>.Compare
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IComparer`1.Compare(`0,`0)
+    name: Compare
+    nameWithType: IComparer(Of T).Compare
+    fullName: System.Collections.Generic.IComparer(Of T).Compare
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.FastVirtualNodeComparer.Equals*
+  commentId: Overload:VDS.RDF.FastVirtualNodeComparer.Equals
+  name: Equals
+  nameWithType: FastVirtualNodeComparer.Equals
+  fullName: VDS.RDF.FastVirtualNodeComparer.Equals
+- uid: System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}.Equals(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}.Equals(VDS.RDF.INode,VDS.RDF.INode)
+  parent: System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}
+  definition: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  name: Equals(INode, INode)
+  nameWithType: IEqualityComparer<INode>.Equals(INode, INode)
+  fullName: System.Collections.Generic.IEqualityComparer<VDS.RDF.INode>.Equals(VDS.RDF.INode, VDS.RDF.INode)
+  nameWithType.vb: IEqualityComparer(Of INode).Equals(INode, INode)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of VDS.RDF.INode).Equals(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer<INode>.Equals
+    fullName: System.Collections.Generic.IEqualityComparer<VDS.RDF.INode>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer(Of INode).Equals
+    fullName: System.Collections.Generic.IEqualityComparer(Of VDS.RDF.INode).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  commentId: M:System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+  isExternal: true
+  name: Equals(T, T)
+  nameWithType: IEqualityComparer<T>.Equals(T, T)
+  fullName: System.Collections.Generic.IEqualityComparer<T>.Equals(T, T)
+  nameWithType.vb: IEqualityComparer(Of T).Equals(T, T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T).Equals(T, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer<T>.Equals
+    fullName: System.Collections.Generic.IEqualityComparer<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.Equals(`0,`0)
+    name: Equals
+    nameWithType: IEqualityComparer(Of T).Equals
+    fullName: System.Collections.Generic.IEqualityComparer(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.FastVirtualNodeComparer.GetHashCode*
+  commentId: Overload:VDS.RDF.FastVirtualNodeComparer.GetHashCode
+  name: GetHashCode
+  nameWithType: FastVirtualNodeComparer.GetHashCode
+  fullName: VDS.RDF.FastVirtualNodeComparer.GetHashCode
+- uid: System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}.GetHashCode(VDS.RDF.INode)
+  commentId: M:System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}.GetHashCode(VDS.RDF.INode)
+  parent: System.Collections.Generic.IEqualityComparer{VDS.RDF.INode}
+  definition: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  name: GetHashCode(INode)
+  nameWithType: IEqualityComparer<INode>.GetHashCode(INode)
+  fullName: System.Collections.Generic.IEqualityComparer<VDS.RDF.INode>.GetHashCode(VDS.RDF.INode)
+  nameWithType.vb: IEqualityComparer(Of INode).GetHashCode(INode)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of VDS.RDF.INode).GetHashCode(VDS.RDF.INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer<INode>.GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer<VDS.RDF.INode>.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer(Of INode).GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer(Of VDS.RDF.INode).GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  commentId: M:System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+  isExternal: true
+  name: GetHashCode(T)
+  nameWithType: IEqualityComparer<T>.GetHashCode(T)
+  fullName: System.Collections.Generic.IEqualityComparer<T>.GetHashCode(T)
+  nameWithType.vb: IEqualityComparer(Of T).GetHashCode(T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T).GetHashCode(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer<T>.GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer<T>.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1.GetHashCode(`0)
+    name: GetHashCode
+    nameWithType: IEqualityComparer(Of T).GetHashCode
+    fullName: System.Collections.Generic.IEqualityComparer(Of T).GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

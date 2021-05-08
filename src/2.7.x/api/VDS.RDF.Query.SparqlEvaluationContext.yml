@@ -1,0 +1,1452 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  id: SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset)
+  - VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext})
+  - VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlResultBinder)
+  - VDS.RDF.Query.SparqlEvaluationContext.Binder
+  - VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout
+  - VDS.RDF.Query.SparqlEvaluationContext.Data
+  - VDS.RDF.Query.SparqlEvaluationContext.EndExecution
+  - VDS.RDF.Query.SparqlEvaluationContext.Evaluate(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  - VDS.RDF.Query.SparqlEvaluationContext.InputMultiset
+  - VDS.RDF.Query.SparqlEvaluationContext.Item(System.String)
+  - VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset
+  - VDS.RDF.Query.SparqlEvaluationContext.Processor
+  - VDS.RDF.Query.SparqlEvaluationContext.Query
+  - VDS.RDF.Query.SparqlEvaluationContext.QueryTime
+  - VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout
+  - VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks
+  - VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout
+  - VDS.RDF.Query.SparqlEvaluationContext.StartExecution
+  - VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables
+  langs:
+  - csharp
+  - vb
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SparqlEvaluationContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 37
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nStores information about the Evaluation of a Query during it&apos;s evaluation.\n"
+  example: []
+  syntax:
+    content: public class SparqlEvaluationContext
+    content.vb: Public Class SparqlEvaluationContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.SparqlEvaluationContext.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset)
+  commentId: M:VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset)
+  id: '#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset)'
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: SparqlEvaluationContext(SparqlQuery, ISparqlDataset)
+  nameWithType: SparqlEvaluationContext.SparqlEvaluationContext(SparqlQuery, ISparqlDataset)
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.SparqlEvaluationContext(VDS.RDF.Query.SparqlQuery, VDS.RDF.Query.Datasets.ISparqlDataset)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 54
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Evaluation Context for the given Query over the given Dataset.\n"
+  example: []
+  syntax:
+    content: public SparqlEvaluationContext(SparqlQuery q, ISparqlDataset data)
+    parameters:
+    - id: q
+      type: VDS.RDF.Query.SparqlQuery
+      description: Query.
+    - id: data
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset.
+    content.vb: Public Sub New(q As SparqlQuery, data As ISparqlDataset)
+  overload: VDS.RDF.Query.SparqlEvaluationContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext})
+  commentId: M:VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext})
+  id: '#ctor(VDS.RDF.Query.SparqlQuery,VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext})'
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: SparqlEvaluationContext(SparqlQuery, ISparqlDataset, ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext>)
+  nameWithType: SparqlEvaluationContext.SparqlEvaluationContext(SparqlQuery, ISparqlDataset, ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext>)
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.SparqlEvaluationContext(VDS.RDF.Query.SparqlQuery, VDS.RDF.Query.Datasets.ISparqlDataset, VDS.RDF.Query.ISparqlQueryAlgebraProcessor<VDS.RDF.Query.Algebra.BaseMultiset, VDS.RDF.Query.SparqlEvaluationContext>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 70
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Evaluation Context for the given Query over the given Dataset using a specific processor.\n"
+  example: []
+  syntax:
+    content: public SparqlEvaluationContext(SparqlQuery q, ISparqlDataset data, ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext> processor)
+    parameters:
+    - id: q
+      type: VDS.RDF.Query.SparqlQuery
+      description: Query.
+    - id: data
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset.
+    - id: processor
+      type: VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext}
+      description: Query Processor.
+    content.vb: Public Sub New(q As SparqlQuery, data As ISparqlDataset, processor As ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext))
+  overload: VDS.RDF.Query.SparqlEvaluationContext.#ctor*
+  nameWithType.vb: SparqlEvaluationContext.SparqlEvaluationContext(SparqlQuery, ISparqlDataset, ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.SparqlEvaluationContext.SparqlEvaluationContext(VDS.RDF.Query.SparqlQuery, VDS.RDF.Query.Datasets.ISparqlDataset, VDS.RDF.Query.ISparqlQueryAlgebraProcessor(Of VDS.RDF.Query.Algebra.BaseMultiset, VDS.RDF.Query.SparqlEvaluationContext))
+  name.vb: SparqlEvaluationContext(SparqlQuery, ISparqlDataset, ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext))
+- uid: VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlResultBinder)
+  commentId: M:VDS.RDF.Query.SparqlEvaluationContext.#ctor(VDS.RDF.Query.SparqlResultBinder)
+  id: '#ctor(VDS.RDF.Query.SparqlResultBinder)'
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: SparqlEvaluationContext(SparqlResultBinder)
+  nameWithType: SparqlEvaluationContext.SparqlEvaluationContext(SparqlResultBinder)
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.SparqlEvaluationContext(VDS.RDF.Query.SparqlResultBinder)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 80
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new Evaluation Context which is a Container for the given Result Binder.\n"
+  example: []
+  syntax:
+    content: public SparqlEvaluationContext(SparqlResultBinder binder)
+    parameters:
+    - id: binder
+      type: VDS.RDF.Query.SparqlResultBinder
+      description: ''
+    content.vb: Public Sub New(binder As SparqlResultBinder)
+  overload: VDS.RDF.Query.SparqlEvaluationContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Query
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.Query
+  id: Query
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: SparqlEvaluationContext.Query
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Query
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Query
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 118
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Query that is being evaluated.\n"
+  example: []
+  syntax:
+    content: public SparqlQuery Query { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.SparqlQuery
+    content.vb: Public ReadOnly Property Query As SparqlQuery
+  overload: VDS.RDF.Query.SparqlEvaluationContext.Query*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Data
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.Data
+  id: Data
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: SparqlEvaluationContext.Data
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Data
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Data
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 129
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Dataset the query is over.\n"
+  example: []
+  syntax:
+    content: public ISparqlDataset Data { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+    content.vb: Public ReadOnly Property Data As ISparqlDataset
+  overload: VDS.RDF.Query.SparqlEvaluationContext.Data*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Processor
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.Processor
+  id: Processor
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: Processor
+  nameWithType: SparqlEvaluationContext.Processor
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Processor
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Processor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 140
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the custom query processor that is in use (if any).\n"
+  example: []
+  syntax:
+    content: public ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext> Processor { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext}
+    content.vb: Public ReadOnly Property Processor As ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext)
+  overload: VDS.RDF.Query.SparqlEvaluationContext.Processor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlEvaluationContext.InputMultiset
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.InputMultiset
+  id: InputMultiset
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: InputMultiset
+  nameWithType: SparqlEvaluationContext.InputMultiset
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.InputMultiset
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InputMultiset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 151
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Input Multiset.\n"
+  example: []
+  syntax:
+    content: public BaseMultiset InputMultiset { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+    content.vb: Public Property InputMultiset As BaseMultiset
+  overload: VDS.RDF.Query.SparqlEvaluationContext.InputMultiset*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset
+  id: OutputMultiset
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: OutputMultiset
+  nameWithType: SparqlEvaluationContext.OutputMultiset
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: OutputMultiset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 166
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Output Multiset.\n"
+  example: []
+  syntax:
+    content: public BaseMultiset OutputMultiset { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+    content.vb: Public Property OutputMultiset As BaseMultiset
+  overload: VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Binder
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.Binder
+  id: Binder
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: Binder
+  nameWithType: SparqlEvaluationContext.Binder
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Binder
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Binder
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 181
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Results Binder.\n"
+  example: []
+  syntax:
+    content: public SparqlResultBinder Binder { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.SparqlResultBinder
+    content.vb: Public Property Binder As SparqlResultBinder
+  overload: VDS.RDF.Query.SparqlEvaluationContext.Binder*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables
+  id: TrimTemporaryVariables
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: TrimTemporaryVariables
+  nameWithType: SparqlEvaluationContext.TrimTemporaryVariables
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TrimTemporaryVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 196
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets whether BGPs should trim temporary variables.\n"
+  example: []
+  syntax:
+    content: public bool TrimTemporaryVariables { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property TrimTemporaryVariables As Boolean
+  overload: VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.StartExecution
+  commentId: M:VDS.RDF.Query.SparqlEvaluationContext.StartExecution
+  id: StartExecution
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: StartExecution()
+  nameWithType: SparqlEvaluationContext.StartExecution()
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.StartExecution()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StartExecution
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 226
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nStarts the Execution Timer.\n"
+  example: []
+  syntax:
+    content: public void StartExecution()
+    content.vb: Public Sub StartExecution
+  overload: VDS.RDF.Query.SparqlEvaluationContext.StartExecution*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.EndExecution
+  commentId: M:VDS.RDF.Query.SparqlEvaluationContext.EndExecution
+  id: EndExecution
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: EndExecution()
+  nameWithType: SparqlEvaluationContext.EndExecution()
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.EndExecution()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: EndExecution
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 235
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEnds the Execution Timer.\n"
+  example: []
+  syntax:
+    content: public void EndExecution()
+    content.vb: Public Sub
+  overload: VDS.RDF.Query.SparqlEvaluationContext.EndExecution*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout
+  commentId: M:VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout
+  id: CheckTimeout
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: CheckTimeout()
+  nameWithType: SparqlEvaluationContext.CheckTimeout()
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CheckTimeout
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 244
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nChecks whether Execution should Time out.\n"
+  example: []
+  syntax:
+    content: public void CheckTimeout()
+    content.vb: Public Sub CheckTimeout
+  overload: VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout*
+  exceptions:
+  - type: VDS.RDF.Query.RdfQueryTimeoutException
+    commentId: T:VDS.RDF.Query.RdfQueryTimeoutException
+    description: Thrown if the Query has exceeded the Execution Timeout.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout
+  id: RemainingTimeout
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: RemainingTimeout
+  nameWithType: SparqlEvaluationContext.RemainingTimeout
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemainingTimeout
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 262
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Remaining Timeout i.e. the Timeout taking into account time already elapsed.\n"
+  remarks: "\nIf there is no timeout then this is always zero, if there is a timeout this is always >= 1 since any operation that wants to respect the timeout must have a non-zero timeout to actually timeout properly.\n"
+  example: []
+  syntax:
+    content: public long RemainingTimeout { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property RemainingTimeout As Long
+  overload: VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout
+  id: QueryTimeout
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: QueryTimeout
+  nameWithType: SparqlEvaluationContext.QueryTimeout
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryTimeout
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 293
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Query Timeout used for the Query.\n"
+  remarks: "\n<p>\nThis is taken either from the <xref href=\"VDS.RDF.Query.SparqlQuery.Timeout\" data-throw-if-not-resolved=\"false\"></xref> property of the <xref href=\"VDS.RDF.Query.SparqlQuery\" data-throw-if-not-resolved=\"false\"></xref> to which this evaluation context pertains (if any) or from the global option <xref href=\"VDS.RDF.Options.QueryExecutionTimeout\" data-throw-if-not-resolved=\"false\"></xref>.  To set the Timeout to be used set whichever of those is appropriate prior to evaluating the query.  If there is a Query present then it&apos;s timeout takes precedence unless it is set to zero (no timeout) in which case the global timeout setting is applied.  You cannot set the Query Timeout to be higher than the global timeout unless the global timeout is set to zero (i.e. no global timeout).\n</p>\n"
+  example: []
+  syntax:
+    content: public long QueryTimeout { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property QueryTimeout As Long
+  overload: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlEvaluationContext.QueryTime
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.QueryTime
+  id: QueryTime
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: QueryTime
+  nameWithType: SparqlEvaluationContext.QueryTime
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.QueryTime
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryTime
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 304
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRetrieves the Time in milliseconds the query took to evaluate.\n"
+  example: []
+  syntax:
+    content: public long QueryTime { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property QueryTime As Long
+  overload: VDS.RDF.Query.SparqlEvaluationContext.QueryTime*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks
+  id: QueryTimeTicks
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: QueryTimeTicks
+  nameWithType: SparqlEvaluationContext.QueryTimeTicks
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryTimeTicks
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 315
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRetrieves the Time in ticks the query took to evaluate.\n"
+  example: []
+  syntax:
+    content: public long QueryTimeTicks { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property QueryTimeTicks As Long
+  overload: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Item(System.String)
+  commentId: P:VDS.RDF.Query.SparqlEvaluationContext.Item(System.String)
+  id: Item(System.String)
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: SparqlEvaluationContext.Item[String]
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Item[System.String]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 331
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets a Object that should be persisted over the entire Evaluation Context.\n"
+  remarks: "\nMay be used by parts of the Evaluation Process that need to ensure a persistent state across the entire Evaluation Query (e.g. the implementation of the BNODE() function).\n"
+  example: []
+  syntax:
+    content: public object this[string key] { get; set; }
+    parameters:
+    - id: key
+      type: System.String
+      description: Key.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Property Item(key As String) As Object
+  overload: VDS.RDF.Query.SparqlEvaluationContext.Item*
+  nameWithType.vb: SparqlEvaluationContext.Item(String)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.SparqlEvaluationContext.Item(System.String)
+  name.vb: Item(String)
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Evaluate(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.SparqlEvaluationContext.Evaluate(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  id: Evaluate(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  parent: VDS.RDF.Query.SparqlEvaluationContext
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(ISparqlAlgebra)
+  nameWithType: SparqlEvaluationContext.Evaluate(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Evaluate(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlEvaluationContext.cs
+    startLine: 362
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEvalutes an Algebra Operator in this Context using the current Query Processor (if any) or the default <xref href=\"VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: public BaseMultiset Evaluate(ISparqlAlgebra algebra)
+    parameters:
+    - id: algebra
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: Algebra.
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+      description: ''
+    content.vb: Public Function Evaluate(algebra As ISparqlAlgebra) As BaseMultiset
+  overload: VDS.RDF.Query.SparqlEvaluationContext.Evaluate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlEvaluationContext.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SparqlEvaluationContext>()
+  nameWithType: Extensions.AsEnumerable<SparqlEvaluationContext>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlEvaluationContext>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SparqlEvaluationContext)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlEvaluationContext)()
+  name.vb: AsEnumerable(Of SparqlEvaluationContext)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SparqlEvaluationContext>
+    nameWithType: Extensions.AsEnumerable<SparqlEvaluationContext>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlEvaluationContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SparqlEvaluationContext)
+    nameWithType: Extensions.AsEnumerable(Of SparqlEvaluationContext)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlEvaluationContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.SparqlEvaluationContext.#ctor*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.#ctor
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext.SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.SparqlEvaluationContext
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext}
+  commentId: T:VDS.RDF.Query.ISparqlQueryAlgebraProcessor{VDS.RDF.Query.Algebra.BaseMultiset,VDS.RDF.Query.SparqlEvaluationContext}
+  parent: VDS.RDF.Query
+  definition: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+  name: ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext>
+  nameWithType: ISparqlQueryAlgebraProcessor<BaseMultiset, SparqlEvaluationContext>
+  fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor<VDS.RDF.Query.Algebra.BaseMultiset, VDS.RDF.Query.SparqlEvaluationContext>
+  nameWithType.vb: ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext)
+  fullName.vb: VDS.RDF.Query.ISparqlQueryAlgebraProcessor(Of VDS.RDF.Query.Algebra.BaseMultiset, VDS.RDF.Query.SparqlEvaluationContext)
+  name.vb: ISparqlQueryAlgebraProcessor(Of BaseMultiset, SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.Algebra.BaseMultiset
+    name: BaseMultiset
+    nameWithType: BaseMultiset
+    fullName: VDS.RDF.Query.Algebra.BaseMultiset
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.Algebra.BaseMultiset
+    name: BaseMultiset
+    nameWithType: BaseMultiset
+    fullName: VDS.RDF.Query.Algebra.BaseMultiset
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+  commentId: T:VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+  name: ISparqlQueryAlgebraProcessor<TResult, TContext>
+  nameWithType: ISparqlQueryAlgebraProcessor<TResult, TContext>
+  fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor<TResult, TContext>
+  nameWithType.vb: ISparqlQueryAlgebraProcessor(Of TResult, TContext)
+  fullName.vb: VDS.RDF.Query.ISparqlQueryAlgebraProcessor(Of TResult, TContext)
+  name.vb: ISparqlQueryAlgebraProcessor(Of TResult, TContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Query.ISparqlQueryAlgebraProcessor`2
+    name: ISparqlQueryAlgebraProcessor
+    nameWithType: ISparqlQueryAlgebraProcessor
+    fullName: VDS.RDF.Query.ISparqlQueryAlgebraProcessor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResultBinder
+  commentId: T:VDS.RDF.Query.SparqlResultBinder
+  parent: VDS.RDF.Query
+  name: SparqlResultBinder
+  nameWithType: SparqlResultBinder
+  fullName: VDS.RDF.Query.SparqlResultBinder
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Query*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.Query
+  name: Query
+  nameWithType: SparqlEvaluationContext.Query
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Query
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Data*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.Data
+  name: Data
+  nameWithType: SparqlEvaluationContext.Data
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Data
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Processor*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.Processor
+  name: Processor
+  nameWithType: SparqlEvaluationContext.Processor
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Processor
+- uid: VDS.RDF.Query.SparqlEvaluationContext.InputMultiset*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.InputMultiset
+  name: InputMultiset
+  nameWithType: SparqlEvaluationContext.InputMultiset
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.InputMultiset
+- uid: VDS.RDF.Query.Algebra.BaseMultiset
+  commentId: T:VDS.RDF.Query.Algebra.BaseMultiset
+  parent: VDS.RDF.Query.Algebra
+  name: BaseMultiset
+  nameWithType: BaseMultiset
+  fullName: VDS.RDF.Query.Algebra.BaseMultiset
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset
+  name: OutputMultiset
+  nameWithType: SparqlEvaluationContext.OutputMultiset
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.OutputMultiset
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Binder*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.Binder
+  name: Binder
+  nameWithType: SparqlEvaluationContext.Binder
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Binder
+- uid: VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables
+  name: TrimTemporaryVariables
+  nameWithType: SparqlEvaluationContext.TrimTemporaryVariables
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.TrimTemporaryVariables
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.SparqlEvaluationContext.StartExecution*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.StartExecution
+  name: StartExecution
+  nameWithType: SparqlEvaluationContext.StartExecution
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.StartExecution
+- uid: VDS.RDF.Query.SparqlEvaluationContext.EndExecution*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.EndExecution
+  name: EndExecution
+  nameWithType: SparqlEvaluationContext.EndExecution
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.EndExecution
+- uid: VDS.RDF.Query.RdfQueryTimeoutException
+  commentId: T:VDS.RDF.Query.RdfQueryTimeoutException
+  name: RdfQueryTimeoutException
+  nameWithType: RdfQueryTimeoutException
+  fullName: VDS.RDF.Query.RdfQueryTimeoutException
+- uid: VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout
+  name: CheckTimeout
+  nameWithType: SparqlEvaluationContext.CheckTimeout
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.CheckTimeout
+- uid: VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout
+  name: RemainingTimeout
+  nameWithType: SparqlEvaluationContext.RemainingTimeout
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.RemainingTimeout
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: VDS.RDF.Query.SparqlQuery.Timeout
+  commentId: P:VDS.RDF.Query.SparqlQuery.Timeout
+  isExternal: true
+- uid: VDS.RDF.Options.QueryExecutionTimeout
+  commentId: P:VDS.RDF.Options.QueryExecutionTimeout
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout
+  name: QueryTimeout
+  nameWithType: SparqlEvaluationContext.QueryTimeout
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeout
+- uid: VDS.RDF.Query.SparqlEvaluationContext.QueryTime*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.QueryTime
+  name: QueryTime
+  nameWithType: SparqlEvaluationContext.QueryTime
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.QueryTime
+- uid: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks
+  name: QueryTimeTicks
+  nameWithType: SparqlEvaluationContext.QueryTimeTicks
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.QueryTimeTicks
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Item*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.Item
+  name: Item
+  nameWithType: SparqlEvaluationContext.Item
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Item
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: ISparqlAlgebra.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlEvaluationContext.Evaluate*
+  commentId: Overload:VDS.RDF.Query.SparqlEvaluationContext.Evaluate
+  name: Evaluate
+  nameWithType: SparqlEvaluationContext.Evaluate
+  fullName: VDS.RDF.Query.SparqlEvaluationContext.Evaluate
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra

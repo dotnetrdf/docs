@@ -1,0 +1,1227 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Update.Commands.DropCommand
+  commentId: T:VDS.RDF.Update.Commands.DropCommand
+  id: DropCommand
+  parent: VDS.RDF.Update.Commands
+  children:
+  - VDS.RDF.Update.Commands.DropCommand.#ctor
+  - VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri)
+  - VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode)
+  - VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode,System.Boolean)
+  - VDS.RDF.Update.Commands.DropCommand.#ctor(VDS.RDF.Update.Commands.ClearMode)
+  - VDS.RDF.Update.Commands.DropCommand.#ctor(VDS.RDF.Update.Commands.ClearMode,System.Boolean)
+  - VDS.RDF.Update.Commands.DropCommand.AffectsGraph(System.Uri)
+  - VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph
+  - VDS.RDF.Update.Commands.DropCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.Commands.DropCommand.Mode
+  - VDS.RDF.Update.Commands.DropCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  - VDS.RDF.Update.Commands.DropCommand.Silent
+  - VDS.RDF.Update.Commands.DropCommand.TargetUri
+  - VDS.RDF.Update.Commands.DropCommand.ToString
+  langs:
+  - csharp
+  - vb
+  name: DropCommand
+  nameWithType: DropCommand
+  fullName: VDS.RDF.Update.Commands.DropCommand
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DropCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nRepresents a SPARQL Update DROP command.\n"
+  example: []
+  syntax:
+    content: 'public class DropCommand : SparqlUpdateCommand'
+    content.vb: >-
+      Public Class DropCommand
+          Inherits SparqlUpdateCommand
+  inheritance:
+  - System.Object
+  - VDS.RDF.Update.SparqlUpdateCommand
+  inheritedMembers:
+  - VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  - VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Update.Commands.DropCommand.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode,System.Boolean)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode,System.Boolean)
+  id: '#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode,System.Boolean)'
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: DropCommand(Uri, ClearMode, Boolean)
+  nameWithType: DropCommand.DropCommand(Uri, ClearMode, Boolean)
+  fullName: VDS.RDF.Update.Commands.DropCommand.DropCommand(System.Uri, VDS.RDF.Update.Commands.ClearMode, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 47
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new DROP command.\n"
+  example: []
+  syntax:
+    content: public DropCommand(Uri graphUri, ClearMode mode, bool silent)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: URI ofthe Graph to DROP.
+    - id: mode
+      type: VDS.RDF.Update.Commands.ClearMode
+      description: DROP Mode to use.
+    - id: silent
+      type: System.Boolean
+      description: Whether the DROP should be done silently.
+    content.vb: Public Sub New(graphUri As Uri, mode As ClearMode, silent As Boolean)
+  overload: VDS.RDF.Update.Commands.DropCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode)
+  id: '#ctor(System.Uri,VDS.RDF.Update.Commands.ClearMode)'
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: DropCommand(Uri, ClearMode)
+  nameWithType: DropCommand.DropCommand(Uri, ClearMode)
+  fullName: VDS.RDF.Update.Commands.DropCommand.DropCommand(System.Uri, VDS.RDF.Update.Commands.ClearMode)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 62
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new DROP command.\n"
+  example: []
+  syntax:
+    content: public DropCommand(Uri graphUri, ClearMode mode)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: URI of the Graph to DROP.
+    - id: mode
+      type: VDS.RDF.Update.Commands.ClearMode
+      description: DROP Mode to use.
+    content.vb: Public Sub New(graphUri As Uri, mode As ClearMode)
+  overload: VDS.RDF.Update.Commands.DropCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.#ctor(System.Uri)
+  id: '#ctor(System.Uri)'
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: DropCommand(Uri)
+  nameWithType: DropCommand.DropCommand(Uri)
+  fullName: VDS.RDF.Update.Commands.DropCommand.DropCommand(System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 69
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new DROP command.\n"
+  example: []
+  syntax:
+    content: public DropCommand(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: URI of the Graph to DROP.
+    content.vb: Public Sub New(graphUri As Uri)
+  overload: VDS.RDF.Update.Commands.DropCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.DropCommand.#ctor
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: DropCommand()
+  nameWithType: DropCommand.DropCommand()
+  fullName: VDS.RDF.Update.Commands.DropCommand.DropCommand()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 75
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new DROP command which drops the Default Graph.\n"
+  example: []
+  syntax:
+    content: public DropCommand()
+    content.vb: Public Sub New
+  overload: VDS.RDF.Update.Commands.DropCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.DropCommand.#ctor(VDS.RDF.Update.Commands.ClearMode)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.#ctor(VDS.RDF.Update.Commands.ClearMode)
+  id: '#ctor(VDS.RDF.Update.Commands.ClearMode)'
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: DropCommand(ClearMode)
+  nameWithType: DropCommand.DropCommand(ClearMode)
+  fullName: VDS.RDF.Update.Commands.DropCommand.DropCommand(VDS.RDF.Update.Commands.ClearMode)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 82
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new DROP command which performs a specific clear mode drop operation.\n"
+  example: []
+  syntax:
+    content: public DropCommand(ClearMode mode)
+    parameters:
+    - id: mode
+      type: VDS.RDF.Update.Commands.ClearMode
+      description: Clear Mode.
+    content.vb: Public Sub New(mode As ClearMode)
+  overload: VDS.RDF.Update.Commands.DropCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.DropCommand.#ctor(VDS.RDF.Update.Commands.ClearMode,System.Boolean)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.#ctor(VDS.RDF.Update.Commands.ClearMode,System.Boolean)
+  id: '#ctor(VDS.RDF.Update.Commands.ClearMode,System.Boolean)'
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: DropCommand(ClearMode, Boolean)
+  nameWithType: DropCommand.DropCommand(ClearMode, Boolean)
+  fullName: VDS.RDF.Update.Commands.DropCommand.DropCommand(VDS.RDF.Update.Commands.ClearMode, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 90
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new DROP command which performs a specific clear mode drop operation.\n"
+  example: []
+  syntax:
+    content: public DropCommand(ClearMode mode, bool silent)
+    parameters:
+    - id: mode
+      type: VDS.RDF.Update.Commands.ClearMode
+      description: Clear Mode.
+    - id: silent
+      type: System.Boolean
+      description: Whether errors should be suppressed.
+    content.vb: Public Sub New(mode As ClearMode, silent As Boolean)
+  overload: VDS.RDF.Update.Commands.DropCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph
+  commentId: P:VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph
+  id: AffectsSingleGraph
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: AffectsSingleGraph
+  nameWithType: DropCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AffectsSingleGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 96
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether the Command affects a single Graph.\n"
+  example: []
+  syntax:
+    content: public override bool AffectsSingleGraph { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property AffectsSingleGraph As Boolean
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  overload: VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.DropCommand.AffectsGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.AffectsGraph(System.Uri)
+  id: AffectsGraph(System.Uri)
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: AffectsGraph(Uri)
+  nameWithType: DropCommand.AffectsGraph(Uri)
+  fullName: VDS.RDF.Update.Commands.DropCommand.AffectsGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AffectsGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 109
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether the Command affects a given Graph.\n"
+  example: []
+  syntax:
+    content: public override bool AffectsGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function AffectsGraph(graphUri As Uri) As Boolean
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  overload: VDS.RDF.Update.Commands.DropCommand.AffectsGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.DropCommand.TargetUri
+  commentId: P:VDS.RDF.Update.Commands.DropCommand.TargetUri
+  id: TargetUri
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: TargetUri
+  nameWithType: DropCommand.TargetUri
+  fullName: VDS.RDF.Update.Commands.DropCommand.TargetUri
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TargetUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 137
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the URI of the Graph to be dropped.\n"
+  example: []
+  syntax:
+    content: public Uri TargetUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property TargetUri As Uri
+  overload: VDS.RDF.Update.Commands.DropCommand.TargetUri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.DropCommand.Silent
+  commentId: P:VDS.RDF.Update.Commands.DropCommand.Silent
+  id: Silent
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: Silent
+  nameWithType: DropCommand.Silent
+  fullName: VDS.RDF.Update.Commands.DropCommand.Silent
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Silent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 148
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether the Drop should be done silently.\n"
+  example: []
+  syntax:
+    content: public bool Silent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Silent As Boolean
+  overload: VDS.RDF.Update.Commands.DropCommand.Silent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.DropCommand.Mode
+  commentId: P:VDS.RDF.Update.Commands.DropCommand.Mode
+  id: Mode
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: DropCommand.Mode
+  fullName: VDS.RDF.Update.Commands.DropCommand.Mode
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Mode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 159
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the type of DROP operation to perform.\n"
+  example: []
+  syntax:
+    content: public ClearMode Mode { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Update.Commands.ClearMode
+    content.vb: Public ReadOnly Property Mode As ClearMode
+  overload: VDS.RDF.Update.Commands.DropCommand.Mode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.DropCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlUpdateEvaluationContext)
+  nameWithType: DropCommand.Evaluate(SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.Commands.DropCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 171
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nEvaluates the Command in the given Context.\n"
+  example: []
+  syntax:
+    content: public override void Evaluate(SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: Evaluation Context.
+    content.vb: Public Overrides Sub Evaluate(context As SparqlUpdateEvaluationContext)
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.Commands.DropCommand.Evaluate*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.DropCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  id: Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: Process(ISparqlUpdateProcessor)
+  nameWithType: DropCommand.Process(ISparqlUpdateProcessor)
+  fullName: VDS.RDF.Update.Commands.DropCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Process
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 236
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nProcesses the Command using the given Update Processor.\n"
+  example: []
+  syntax:
+    content: public override void Process(ISparqlUpdateProcessor processor)
+    parameters:
+    - id: processor
+      type: VDS.RDF.Update.ISparqlUpdateProcessor
+      description: SPARQL Update Processor.
+    content.vb: Public Overrides Sub Process(processor As ISparqlUpdateProcessor)
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  overload: VDS.RDF.Update.Commands.DropCommand.Process*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.DropCommand.ToString
+  commentId: M:VDS.RDF.Update.Commands.DropCommand.ToString
+  id: ToString
+  parent: VDS.RDF.Update.Commands.DropCommand
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: DropCommand.ToString()
+  fullName: VDS.RDF.Update.Commands.DropCommand.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/DropCommand.cs
+    startLine: 245
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the String representation of the command.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  overload: VDS.RDF.Update.Commands.DropCommand.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Update.Commands
+  commentId: N:VDS.RDF.Update.Commands
+  name: VDS.RDF.Update.Commands
+  nameWithType: VDS.RDF.Update.Commands
+  fullName: VDS.RDF.Update.Commands
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Update.SparqlUpdateCommand
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommand
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommand
+  nameWithType: SparqlUpdateCommand
+  fullName: VDS.RDF.Update.SparqlUpdateCommand
+- uid: VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  commentId: P:VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: CommandType
+  nameWithType: SparqlUpdateCommand.CommandType
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.CommandType
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Optimise(IQueryOptimiser)
+  nameWithType: SparqlUpdateCommand.Optimise(IQueryOptimiser)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+    name: Optimise
+    nameWithType: SparqlUpdateCommand.Optimise
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IQueryOptimiser
+    name: IQueryOptimiser
+    nameWithType: IQueryOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IQueryOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+    name: Optimise
+    nameWithType: SparqlUpdateCommand.Optimise
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IQueryOptimiser
+    name: IQueryOptimiser
+    nameWithType: IQueryOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IQueryOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DropCommand.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<DropCommand>()
+  nameWithType: Extensions.AsEnumerable<DropCommand>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Commands.DropCommand>()
+  nameWithType.vb: Extensions.AsEnumerable(Of DropCommand)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Commands.DropCommand)()
+  name.vb: AsEnumerable(Of DropCommand)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<DropCommand>
+    nameWithType: Extensions.AsEnumerable<DropCommand>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Commands.DropCommand>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of DropCommand)
+    nameWithType: Extensions.AsEnumerable(Of DropCommand)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Commands.DropCommand)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Update.Commands.DropCommand.#ctor*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.#ctor
+  name: DropCommand
+  nameWithType: DropCommand.DropCommand
+  fullName: VDS.RDF.Update.Commands.DropCommand.DropCommand
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Update.Commands.ClearMode
+  commentId: T:VDS.RDF.Update.Commands.ClearMode
+  parent: VDS.RDF.Update.Commands
+  name: ClearMode
+  nameWithType: ClearMode
+  fullName: VDS.RDF.Update.Commands.ClearMode
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  commentId: P:VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: AffectsSingleGraph
+  nameWithType: SparqlUpdateCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+- uid: VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph
+  name: AffectsSingleGraph
+  nameWithType: DropCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.Commands.DropCommand.AffectsSingleGraph
+- uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  isExternal: true
+  name: AffectsGraph(Uri)
+  nameWithType: SparqlUpdateCommand.AffectsGraph(Uri)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+    name: AffectsGraph
+    nameWithType: SparqlUpdateCommand.AffectsGraph
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+    name: AffectsGraph
+    nameWithType: SparqlUpdateCommand.AffectsGraph
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DropCommand.AffectsGraph*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.AffectsGraph
+  name: AffectsGraph
+  nameWithType: DropCommand.AffectsGraph
+  fullName: VDS.RDF.Update.Commands.DropCommand.AffectsGraph
+- uid: VDS.RDF.Update.Commands.DropCommand.TargetUri*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.TargetUri
+  name: TargetUri
+  nameWithType: DropCommand.TargetUri
+  fullName: VDS.RDF.Update.Commands.DropCommand.TargetUri
+- uid: VDS.RDF.Update.Commands.DropCommand.Silent*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.Silent
+  name: Silent
+  nameWithType: DropCommand.Silent
+  fullName: VDS.RDF.Update.Commands.DropCommand.Silent
+- uid: VDS.RDF.Update.Commands.DropCommand.Mode*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.Mode
+  name: Mode
+  nameWithType: DropCommand.Mode
+  fullName: VDS.RDF.Update.Commands.DropCommand.Mode
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Evaluate(SparqlUpdateEvaluationContext)
+  nameWithType: SparqlUpdateCommand.Evaluate(SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DropCommand.Evaluate*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.Evaluate
+  name: Evaluate
+  nameWithType: DropCommand.Evaluate
+  fullName: VDS.RDF.Update.Commands.DropCommand.Evaluate
+- uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  commentId: T:VDS.RDF.Update.SparqlUpdateEvaluationContext
+  parent: VDS.RDF.Update
+  name: SparqlUpdateEvaluationContext
+  nameWithType: SparqlUpdateEvaluationContext
+  fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Process(ISparqlUpdateProcessor)
+  nameWithType: SparqlUpdateCommand.Process(ISparqlUpdateProcessor)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+    name: Process
+    nameWithType: SparqlUpdateCommand.Process
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Process
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor
+    name: ISparqlUpdateProcessor
+    nameWithType: ISparqlUpdateProcessor
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+    name: Process
+    nameWithType: SparqlUpdateCommand.Process
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Process
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor
+    name: ISparqlUpdateProcessor
+    nameWithType: ISparqlUpdateProcessor
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DropCommand.Process*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.Process
+  name: Process
+  nameWithType: DropCommand.Process
+  fullName: VDS.RDF.Update.Commands.DropCommand.Process
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor
+  commentId: T:VDS.RDF.Update.ISparqlUpdateProcessor
+  parent: VDS.RDF.Update
+  name: ISparqlUpdateProcessor
+  nameWithType: ISparqlUpdateProcessor
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+- uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.ToString
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: ToString()
+  nameWithType: SparqlUpdateCommand.ToString()
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+    name: ToString
+    nameWithType: SparqlUpdateCommand.ToString
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+    name: ToString
+    nameWithType: SparqlUpdateCommand.ToString
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.DropCommand.ToString*
+  commentId: Overload:VDS.RDF.Update.Commands.DropCommand.ToString
+  name: ToString
+  nameWithType: DropCommand.ToString
+  fullName: VDS.RDF.Update.Commands.DropCommand.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

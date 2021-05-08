@@ -1,0 +1,953 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Update.Commands.InsertDataCommand
+  commentId: T:VDS.RDF.Update.Commands.InsertDataCommand
+  id: InsertDataCommand
+  parent: VDS.RDF.Update.Commands
+  children:
+  - VDS.RDF.Update.Commands.InsertDataCommand.#ctor(VDS.RDF.Query.Patterns.GraphPattern)
+  - VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph(System.Uri)
+  - VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph
+  - VDS.RDF.Update.Commands.InsertDataCommand.DataPattern
+  - VDS.RDF.Update.Commands.InsertDataCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  - VDS.RDF.Update.Commands.InsertDataCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  - VDS.RDF.Update.Commands.InsertDataCommand.ToString
+  langs:
+  - csharp
+  - vb
+  name: InsertDataCommand
+  nameWithType: InsertDataCommand
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InsertDataCommand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 39
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nRepresents the SPARQL Update INSERT DATA command.\n"
+  example: []
+  syntax:
+    content: 'public class InsertDataCommand : SparqlUpdateCommand'
+    content.vb: >-
+      Public Class InsertDataCommand
+          Inherits SparqlUpdateCommand
+  inheritance:
+  - System.Object
+  - VDS.RDF.Update.SparqlUpdateCommand
+  inheritedMembers:
+  - VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  - VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Update.Commands.InsertDataCommand.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.#ctor(VDS.RDF.Query.Patterns.GraphPattern)
+  commentId: M:VDS.RDF.Update.Commands.InsertDataCommand.#ctor(VDS.RDF.Query.Patterns.GraphPattern)
+  id: '#ctor(VDS.RDF.Query.Patterns.GraphPattern)'
+  parent: VDS.RDF.Update.Commands.InsertDataCommand
+  langs:
+  - csharp
+  - vb
+  name: InsertDataCommand(GraphPattern)
+  nameWithType: InsertDataCommand.InsertDataCommand(GraphPattern)
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.InsertDataCommand(VDS.RDF.Query.Patterns.GraphPattern)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 48
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nCreates a new INSERT DATA command.\n"
+  example: []
+  syntax:
+    content: public InsertDataCommand(GraphPattern pattern)
+    parameters:
+    - id: pattern
+      type: VDS.RDF.Query.Patterns.GraphPattern
+      description: Pattern containing concrete Triples to insert.
+    content.vb: Public Sub New(pattern As GraphPattern)
+  overload: VDS.RDF.Update.Commands.InsertDataCommand.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.DataPattern
+  commentId: P:VDS.RDF.Update.Commands.InsertDataCommand.DataPattern
+  id: DataPattern
+  parent: VDS.RDF.Update.Commands.InsertDataCommand
+  langs:
+  - csharp
+  - vb
+  name: DataPattern
+  nameWithType: InsertDataCommand.DataPattern
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.DataPattern
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DataPattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 82
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the Data Pattern containing Triples to insert.\n"
+  example: []
+  syntax:
+    content: public GraphPattern DataPattern { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Patterns.GraphPattern
+    content.vb: Public ReadOnly Property DataPattern As GraphPattern
+  overload: VDS.RDF.Update.Commands.InsertDataCommand.DataPattern*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph
+  commentId: P:VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph
+  id: AffectsSingleGraph
+  parent: VDS.RDF.Update.Commands.InsertDataCommand
+  langs:
+  - csharp
+  - vb
+  name: AffectsSingleGraph
+  nameWithType: InsertDataCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AffectsSingleGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether the Command affects a single Graph.\n"
+  example: []
+  syntax:
+    content: public override bool AffectsSingleGraph { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property AffectsSingleGraph As Boolean
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  overload: VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph(System.Uri)
+  id: AffectsGraph(System.Uri)
+  parent: VDS.RDF.Update.Commands.InsertDataCommand
+  langs:
+  - csharp
+  - vb
+  name: AffectsGraph(Uri)
+  nameWithType: InsertDataCommand.AffectsGraph(Uri)
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AffectsGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 116
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets whether the Command affects a given Graph.\n"
+  example: []
+  syntax:
+    content: public override bool AffectsGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function AffectsGraph(graphUri As Uri) As Boolean
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  overload: VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.Commands.InsertDataCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  id: Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.Commands.InsertDataCommand
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlUpdateEvaluationContext)
+  nameWithType: InsertDataCommand.Evaluate(SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 135
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nEvaluates the Command in the given Context.\n"
+  example: []
+  syntax:
+    content: public override void Evaluate(SparqlUpdateEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Update.SparqlUpdateEvaluationContext
+      description: Evaluation Context.
+    content.vb: Public Overrides Sub Evaluate(context As SparqlUpdateEvaluationContext)
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  overload: VDS.RDF.Update.Commands.InsertDataCommand.Evaluate*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  commentId: M:VDS.RDF.Update.Commands.InsertDataCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  id: Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  parent: VDS.RDF.Update.Commands.InsertDataCommand
+  langs:
+  - csharp
+  - vb
+  name: Process(ISparqlUpdateProcessor)
+  nameWithType: InsertDataCommand.Process(ISparqlUpdateProcessor)
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Process
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 211
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nProcesses the Command using the given Update Processor.\n"
+  example: []
+  syntax:
+    content: public override void Process(ISparqlUpdateProcessor processor)
+    parameters:
+    - id: processor
+      type: VDS.RDF.Update.ISparqlUpdateProcessor
+      description: SPARQL Update Processor.
+    content.vb: Public Overrides Sub Process(processor As ISparqlUpdateProcessor)
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  overload: VDS.RDF.Update.Commands.InsertDataCommand.Process*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.ToString
+  commentId: M:VDS.RDF.Update.Commands.InsertDataCommand.ToString
+  id: ToString
+  parent: VDS.RDF.Update.Commands.InsertDataCommand
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: InsertDataCommand.ToString()
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Update/Commands/InsertDataCommand.cs
+    startLine: 220
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Update.Commands
+  summary: "\nGets the String representation of the Command.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  overload: VDS.RDF.Update.Commands.InsertDataCommand.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Update.Commands
+  commentId: N:VDS.RDF.Update.Commands
+  name: VDS.RDF.Update.Commands
+  nameWithType: VDS.RDF.Update.Commands
+  fullName: VDS.RDF.Update.Commands
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Update.SparqlUpdateCommand
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommand
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommand
+  nameWithType: SparqlUpdateCommand
+  fullName: VDS.RDF.Update.SparqlUpdateCommand
+- uid: VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  commentId: P:VDS.RDF.Update.SparqlUpdateCommand.CommandType
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: CommandType
+  nameWithType: SparqlUpdateCommand.CommandType
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.CommandType
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Optimise(IQueryOptimiser)
+  nameWithType: SparqlUpdateCommand.Optimise(IQueryOptimiser)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+    name: Optimise
+    nameWithType: SparqlUpdateCommand.Optimise
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IQueryOptimiser
+    name: IQueryOptimiser
+    nameWithType: IQueryOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IQueryOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Optimise(VDS.RDF.Query.Optimisation.IQueryOptimiser)
+    name: Optimise
+    nameWithType: SparqlUpdateCommand.Optimise
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IQueryOptimiser
+    name: IQueryOptimiser
+    nameWithType: IQueryOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IQueryOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<InsertDataCommand>()
+  nameWithType: Extensions.AsEnumerable<InsertDataCommand>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Commands.InsertDataCommand>()
+  nameWithType.vb: Extensions.AsEnumerable(Of InsertDataCommand)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Commands.InsertDataCommand)()
+  name.vb: AsEnumerable(Of InsertDataCommand)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<InsertDataCommand>
+    nameWithType: Extensions.AsEnumerable<InsertDataCommand>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Update.Commands.InsertDataCommand>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of InsertDataCommand)
+    nameWithType: Extensions.AsEnumerable(Of InsertDataCommand)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Update.Commands.InsertDataCommand)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.#ctor*
+  commentId: Overload:VDS.RDF.Update.Commands.InsertDataCommand.#ctor
+  name: InsertDataCommand
+  nameWithType: InsertDataCommand.InsertDataCommand
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.InsertDataCommand
+- uid: VDS.RDF.Query.Patterns.GraphPattern
+  commentId: T:VDS.RDF.Query.Patterns.GraphPattern
+  parent: VDS.RDF.Query.Patterns
+  name: GraphPattern
+  nameWithType: GraphPattern
+  fullName: VDS.RDF.Query.Patterns.GraphPattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.DataPattern*
+  commentId: Overload:VDS.RDF.Update.Commands.InsertDataCommand.DataPattern
+  name: DataPattern
+  nameWithType: InsertDataCommand.DataPattern
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.DataPattern
+- uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  commentId: P:VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: AffectsSingleGraph
+  nameWithType: SparqlUpdateCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsSingleGraph
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph*
+  commentId: Overload:VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph
+  name: AffectsSingleGraph
+  nameWithType: InsertDataCommand.AffectsSingleGraph
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.AffectsSingleGraph
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  isExternal: true
+  name: AffectsGraph(Uri)
+  nameWithType: SparqlUpdateCommand.AffectsGraph(Uri)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+    name: AffectsGraph
+    nameWithType: SparqlUpdateCommand.AffectsGraph
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph(System.Uri)
+    name: AffectsGraph
+    nameWithType: SparqlUpdateCommand.AffectsGraph
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.AffectsGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph*
+  commentId: Overload:VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph
+  name: AffectsGraph
+  nameWithType: InsertDataCommand.AffectsGraph
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.AffectsGraph
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Evaluate(SparqlUpdateEvaluationContext)
+  nameWithType: SparqlUpdateCommand.Evaluate(SparqlUpdateEvaluationContext)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Evaluate(VDS.RDF.Update.SparqlUpdateEvaluationContext)
+    name: Evaluate
+    nameWithType: SparqlUpdateCommand.Evaluate
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+    name: SparqlUpdateEvaluationContext
+    nameWithType: SparqlUpdateEvaluationContext
+    fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.Evaluate*
+  commentId: Overload:VDS.RDF.Update.Commands.InsertDataCommand.Evaluate
+  name: Evaluate
+  nameWithType: InsertDataCommand.Evaluate
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.Evaluate
+- uid: VDS.RDF.Update.SparqlUpdateEvaluationContext
+  commentId: T:VDS.RDF.Update.SparqlUpdateEvaluationContext
+  parent: VDS.RDF.Update
+  name: SparqlUpdateEvaluationContext
+  nameWithType: SparqlUpdateEvaluationContext
+  fullName: VDS.RDF.Update.SparqlUpdateEvaluationContext
+- uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: Process(ISparqlUpdateProcessor)
+  nameWithType: SparqlUpdateCommand.Process(ISparqlUpdateProcessor)
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+    name: Process
+    nameWithType: SparqlUpdateCommand.Process
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Process
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor
+    name: ISparqlUpdateProcessor
+    nameWithType: ISparqlUpdateProcessor
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.Process(VDS.RDF.Update.ISparqlUpdateProcessor)
+    name: Process
+    nameWithType: SparqlUpdateCommand.Process
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.Process
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.ISparqlUpdateProcessor
+    name: ISparqlUpdateProcessor
+    nameWithType: ISparqlUpdateProcessor
+    fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.Process*
+  commentId: Overload:VDS.RDF.Update.Commands.InsertDataCommand.Process
+  name: Process
+  nameWithType: InsertDataCommand.Process
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.Process
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor
+  commentId: T:VDS.RDF.Update.ISparqlUpdateProcessor
+  parent: VDS.RDF.Update
+  name: ISparqlUpdateProcessor
+  nameWithType: ISparqlUpdateProcessor
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+- uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  commentId: M:VDS.RDF.Update.SparqlUpdateCommand.ToString
+  parent: VDS.RDF.Update.SparqlUpdateCommand
+  name: ToString()
+  nameWithType: SparqlUpdateCommand.ToString()
+  fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+    name: ToString
+    nameWithType: SparqlUpdateCommand.ToString
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Update.SparqlUpdateCommand.ToString
+    name: ToString
+    nameWithType: SparqlUpdateCommand.ToString
+    fullName: VDS.RDF.Update.SparqlUpdateCommand.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.Commands.InsertDataCommand.ToString*
+  commentId: Overload:VDS.RDF.Update.Commands.InsertDataCommand.ToString
+  name: ToString
+  nameWithType: InsertDataCommand.ToString
+  fullName: VDS.RDF.Update.Commands.InsertDataCommand.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

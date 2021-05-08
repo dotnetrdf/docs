@@ -1,0 +1,847 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.FileLoader
+  commentId: T:VDS.RDF.Parsing.FileLoader
+  id: FileLoader
+  parent: VDS.RDF.Parsing
+  children:
+  - VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph,System.String,VDS.RDF.IRdfReader)
+  - VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IRdfReader)
+  - VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IStoreReader)
+  - VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore,System.String)
+  - VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  - VDS.RDF.Parsing.FileLoader.LoadDataset(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Parsing.FileLoader.StoreWarning
+  - VDS.RDF.Parsing.FileLoader.Warning
+  langs:
+  - csharp
+  - vb
+  name: FileLoader
+  nameWithType: FileLoader
+  fullName: VDS.RDF.Parsing.FileLoader
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FileLoader
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nStatic Helper Class for loading RDF Files into Graphs/Triple Stores.\n"
+  example: []
+  syntax:
+    content: public static class FileLoader
+    content.vb: Public Module FileLoader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph,System.String)
+  id: Load(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, String)
+  nameWithType: FileLoader.Load(IGraph, String)
+  fullName: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File into a Graph providing the RDF format can be determined.\n"
+  remarks: "\n<p>\nThe <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> first attempts to select a RDF Parser by examining the file extension to select the most likely MIME type for the file.  This assumes that the file extension corresponds to one of the recognized file extensions for a RDF format the library supports.  If this suceeds then a parser is chosen and will be used to attempt to parse the input.\n</p>\n<p>\nShould this fail then the contents of the file will be read into a String, the <xref href=\"VDS.RDF.Parsing.StringParser\" data-throw-if-not-resolved=\"false\"></xref> is then used to attempt to parse it.  The <xref href=\"VDS.RDF.Parsing.StringParser\" data-throw-if-not-resolved=\"false\"></xref> uses some simple rules to guess which format the input is likely to be and chooses a parser based on it&apos;s guess.\n</p>\n<p>\n<strong>Note:</strong> FileLoader will assign the Graph a file URI as it&apos;s Base URI unless the Graph already has a Base URI or is non-empty prior to attempting parsing.  Note that any Base URI specified in the RDF contained in the file will override this initial Base URI.  In some cases this may lead to invalid RDF being accepted and generating strange relative URIs, if you encounter this either set a Base URI prior to calling this method or create an instance of the relevant parser and invoke it directly.\n</p>\n<p>\nIf a File URI is assigned it will always be an absolute URI for the file.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IGraph g, string filename)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load into.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    content.vb: Public Shared Sub Load(g As IGraph, filename As String)
+  overload: VDS.RDF.Parsing.FileLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph,System.String,VDS.RDF.IRdfReader)
+  commentId: M:VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph,System.String,VDS.RDF.IRdfReader)
+  id: Load(VDS.RDF.IGraph,System.String,VDS.RDF.IRdfReader)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, String, IRdfReader)
+  nameWithType: FileLoader.Load(IGraph, String, IRdfReader)
+  fullName: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IGraph, System.String, VDS.RDF.IRdfReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 75
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File into a Graph using the given RDF Parser.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> FileLoader will assign the Graph a file URI as it&apos;s Base URI unless the Graph already has a Base URI or is non-empty prior to attempting parsing.  Note that any Base URI specified in the RDF contained in the file will override this initial Base URI.  In some cases this may lead to invalid RDF being accepted and generating strange relative URIs, if you encounter this either set a Base URI prior to calling this method or create an instance of the relevant parser and invoke it directly.\n</p>\n<p>\nIf a File URI is assigned it will always be an absolute URI for the file.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IGraph g, string filename, IRdfReader parser)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load into.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    - id: parser
+      type: VDS.RDF.IRdfReader
+      description: Parser to use.
+    content.vb: Public Shared Sub Load(g As IGraph, filename As String, parser As IRdfReader)
+  overload: VDS.RDF.Parsing.FileLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String)
+  id: Load(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, String)
+  nameWithType: FileLoader.Load(IRdfHandler, String)
+  fullName: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 121
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File using a RDF Handler providing the RDF format can be determined.\n"
+  remarks: "\n<p>\nThe <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> first attempts to select a RDF Parser by examining the file extension to select the most likely MIME type for the file.  This assumes that the file extension corresponds to one of the recognized file extensions for a RDF format the library supports.  If this suceeds then a parser is chosen and will be used to attempt to parse the input.\n</p>\n<p>\nShould this fail then the contents of the file will be read into a String, the <xref href=\"VDS.RDF.Parsing.StringParser\" data-throw-if-not-resolved=\"false\"></xref> is then used to attempt to parse it.  The <xref href=\"VDS.RDF.Parsing.StringParser\" data-throw-if-not-resolved=\"false\"></xref> uses some simple rules to guess which format the input is likely to be and chooses a parser based on it&apos;s guess.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, string filename)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, filename As String)
+  overload: VDS.RDF.Parsing.FileLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IRdfReader)
+  commentId: M:VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IRdfReader)
+  id: Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IRdfReader)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, String, IRdfReader)
+  nameWithType: FileLoader.Load(IRdfHandler, String, IRdfReader)
+  fullName: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler, System.String, VDS.RDF.IRdfReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 140
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File using a RDF Handler using the given RDF Parser.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> FileLoader will assign the Graph a file URI as it&apos;s Base URI unless the Graph already has a Base URI or is non-empty prior to attempting parsing.  Note that any Base URI specified in the RDF contained in the file will override this initial Base URI.  In some cases this may lead to invalid RDF being accepted and generating strange relative URIs, if you encounter this either set a Base URI prior to calling this method or create an instance of the relevant parser and invoke it directly.\n</p>\n<p>\nIf a File URI is assigned it will always be an absolute URI for the file.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, string filename, IRdfReader parser)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    - id: parser
+      type: VDS.RDF.IRdfReader
+      description: Parser to use.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, filename As String, parser As IRdfReader)
+  overload: VDS.RDF.Parsing.FileLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  id: Load(VDS.RDF.ITripleStore,System.String,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, String, IStoreReader)
+  nameWithType: FileLoader.Load(ITripleStore, String, IStoreReader)
+  fullName: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore, System.String, VDS.RDF.IStoreReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 192
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File into a Triple Store providing the RDF dataset format can be determined.\n"
+  remarks: "\n<p>\nIf the <code data-dev-comment-type=\"paramref\" class=\"paramref\">parser</code> parameter is set to null then the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> attempts to select a Store Parser by examining the file extension to select the most likely MIME type for the file.  This assume that the file extension corresponds to one of the recognized file extensions for a RDF dataset format the library supports.  If this suceeds then a parser is chosen and used to parse the input file.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(ITripleStore store, string filename, IStoreReader parser)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    - id: parser
+      type: VDS.RDF.IStoreReader
+      description: Parser to use to parse the given file.
+    content.vb: Public Shared Sub Load(store As ITripleStore, filename As String, parser As IStoreReader)
+  overload: VDS.RDF.Parsing.FileLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore,System.String)
+  id: Load(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, String)
+  nameWithType: FileLoader.Load(ITripleStore, String)
+  fullName: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.ITripleStore, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 208
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File into a Triple Store providing the RDF dataset format can be determined.\n"
+  remarks: "\n<p>\nThe <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> attempts to select a Store Parser by examining the file extension to select the most likely MIME type for the file.  This assume that the file extension corresponds to one of the recognized file extensions for a RDF dataset format the library supports.  If this suceeds then a parser is chosen and used to parse the input file.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(ITripleStore store, string filename)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    content.vb: Public Shared Sub Load(store As ITripleStore, filename As String)
+  overload: VDS.RDF.Parsing.FileLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IStoreReader)
+  commentId: M:VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IStoreReader)
+  id: Load(VDS.RDF.IRdfHandler,System.String,VDS.RDF.IStoreReader)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, String, IStoreReader)
+  nameWithType: FileLoader.Load(IRdfHandler, String, IStoreReader)
+  fullName: VDS.RDF.Parsing.FileLoader.Load(VDS.RDF.IRdfHandler, System.String, VDS.RDF.IStoreReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 224
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File using a RDF Handler providing the RDF dataset format can be determined.\n"
+  remarks: "\n<p>\nIf the <code data-dev-comment-type=\"paramref\" class=\"paramref\">parser</code> parameter is set to null then the <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> attempts to select a Store Parser by examining the file extension to select the most likely MIME type for the file.  This assume that the file extension corresponds to one of the recognized file extensions for a RDF dataset format the library supports.  If this suceeds then a parser is chosen and used to parse the input file.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void Load(IRdfHandler handler, string filename, IStoreReader parser)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    - id: parser
+      type: VDS.RDF.IStoreReader
+      description: Parser to use to parse the given file.
+    content.vb: Public Shared Sub Load(handler As IRdfHandler, filename As String, parser As IStoreReader)
+  overload: VDS.RDF.Parsing.FileLoader.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.LoadDataset(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Parsing.FileLoader.LoadDataset(VDS.RDF.IRdfHandler,System.String)
+  id: LoadDataset(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadDataset(IRdfHandler, String)
+  nameWithType: FileLoader.LoadDataset(IRdfHandler, String)
+  fullName: VDS.RDF.Parsing.FileLoader.LoadDataset(VDS.RDF.IRdfHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 289
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the contents of the given File using a RDF Handler providing the RDF dataset format can be determined.\n"
+  remarks: "\n<p>\nThe <xref href=\"VDS.RDF.Parsing.FileLoader\" data-throw-if-not-resolved=\"false\"></xref> attempts to select a Store Parser by examining the file extension to select the most likely MIME type for the file.  This assume that the file extension corresponds to one of the recognized file extensions for a RDF dataset format the library supports.  If this suceeds then a parser is chosen and used to parse the input file.\n</p>\n"
+  example: []
+  syntax:
+    content: public static void LoadDataset(IRdfHandler handler, string filename)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    content.vb: Public Shared Sub LoadDataset(handler As IRdfHandler, filename As String)
+  overload: VDS.RDF.Parsing.FileLoader.LoadDataset*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.Warning
+  commentId: E:VDS.RDF.Parsing.FileLoader.Warning
+  id: Warning
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: FileLoader.Warning
+  fullName: VDS.RDF.Parsing.FileLoader.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 323
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nEvent which is raised when the parser invoked by the FileLoader detects a non-fatal issue with the RDF syntax\n"
+  example: []
+  syntax:
+    content: public static event RdfReaderWarning Warning
+    return:
+      type: VDS.RDF.RdfReaderWarning
+    content.vb: Public Shared Event Warning As RdfReaderWarning
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Parsing.FileLoader.StoreWarning
+  commentId: E:VDS.RDF.Parsing.FileLoader.StoreWarning
+  id: StoreWarning
+  parent: VDS.RDF.Parsing.FileLoader
+  langs:
+  - csharp
+  - vb
+  name: StoreWarning
+  nameWithType: FileLoader.StoreWarning
+  fullName: VDS.RDF.Parsing.FileLoader.StoreWarning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/FileLoader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StoreWarning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/FileLoader.cs
+    startLine: 328
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nEvent which is raised when the Store parser invoked by the FileLoader detects a non-fatal issue with the RDF syntax\n"
+  example: []
+  syntax:
+    content: public static event StoreReaderWarning StoreWarning
+    return:
+      type: VDS.RDF.StoreReaderWarning
+    content.vb: Public Shared Event StoreWarning As StoreReaderWarning
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Parsing.FileLoader
+  commentId: T:VDS.RDF.Parsing.FileLoader
+  name: FileLoader
+  nameWithType: FileLoader
+  fullName: VDS.RDF.Parsing.FileLoader
+- uid: VDS.RDF.Parsing.StringParser
+  commentId: T:VDS.RDF.Parsing.StringParser
+  name: StringParser
+  nameWithType: StringParser
+  fullName: VDS.RDF.Parsing.StringParser
+- uid: VDS.RDF.Parsing.FileLoader.Load*
+  commentId: Overload:VDS.RDF.Parsing.FileLoader.Load
+  name: Load
+  nameWithType: FileLoader.Load
+  fullName: VDS.RDF.Parsing.FileLoader.Load
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.IRdfReader
+  commentId: T:VDS.RDF.IRdfReader
+  parent: VDS.RDF
+  name: IRdfReader
+  nameWithType: IRdfReader
+  fullName: VDS.RDF.IRdfReader
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ITripleStore
+  commentId: T:VDS.RDF.ITripleStore
+  parent: VDS.RDF
+  name: ITripleStore
+  nameWithType: ITripleStore
+  fullName: VDS.RDF.ITripleStore
+- uid: VDS.RDF.IStoreReader
+  commentId: T:VDS.RDF.IStoreReader
+  parent: VDS.RDF
+  name: IStoreReader
+  nameWithType: IStoreReader
+  fullName: VDS.RDF.IStoreReader
+- uid: VDS.RDF.Parsing.FileLoader.LoadDataset*
+  commentId: Overload:VDS.RDF.Parsing.FileLoader.LoadDataset
+  name: LoadDataset
+  nameWithType: FileLoader.LoadDataset
+  fullName: VDS.RDF.Parsing.FileLoader.LoadDataset
+- uid: VDS.RDF.RdfReaderWarning
+  commentId: T:VDS.RDF.RdfReaderWarning
+  parent: VDS.RDF
+  name: RdfReaderWarning
+  nameWithType: RdfReaderWarning
+  fullName: VDS.RDF.RdfReaderWarning
+- uid: VDS.RDF.StoreReaderWarning
+  commentId: T:VDS.RDF.StoreReaderWarning
+  parent: VDS.RDF
+  name: StoreReaderWarning
+  nameWithType: StoreReaderWarning
+  fullName: VDS.RDF.StoreReaderWarning

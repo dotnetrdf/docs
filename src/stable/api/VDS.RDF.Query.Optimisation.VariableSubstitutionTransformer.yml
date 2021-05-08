@@ -1,0 +1,1008 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  commentId: T:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  id: VariableSubstitutionTransformer
+  parent: VDS.RDF.Query.Optimisation
+  children:
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor(System.String,System.String)
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor(System.String,VDS.RDF.INode)
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  langs:
+  - csharp
+  - vb
+  name: VariableSubstitutionTransformer
+  nameWithType: VariableSubstitutionTransformer
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: VariableSubstitutionTransformer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nAn optimiser for walking algebra and expression trees and replacing a Variable with another Variable or a Constant.\n"
+  example: []
+  syntax:
+    content: 'public class VariableSubstitutionTransformer : PrimaryExpressionSubstituter, IExpressionTransformer, IAlgebraOptimiser'
+    content.vb: >-
+      Public Class VariableSubstitutionTransformer
+          Inherits PrimaryExpressionSubstituter
+          Implements IExpressionTransformer, IAlgebraOptimiser
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter
+  implements:
+  - VDS.RDF.Query.Expressions.IExpressionTransformer
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  inheritedMembers:
+  - VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor(System.String,System.String)
+  commentId: M:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  langs:
+  - csharp
+  - vb
+  name: VariableSubstitutionTransformer(String, String)
+  nameWithType: VariableSubstitutionTransformer.VariableSubstitutionTransformer(String, String)
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.VariableSubstitutionTransformer(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nCreate a transform that replaces one variable with another.\n"
+  example: []
+  syntax:
+    content: public VariableSubstitutionTransformer(string findVar, string replaceVar)
+    parameters:
+    - id: findVar
+      type: System.String
+      description: Find Variable.
+    - id: replaceVar
+      type: System.String
+      description: Replace Variable.
+    content.vb: Public Sub New(findVar As String, replaceVar As String)
+  overload: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor(System.String,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor(System.String,VDS.RDF.INode)
+  id: '#ctor(System.String,VDS.RDF.INode)'
+  parent: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  langs:
+  - csharp
+  - vb
+  name: VariableSubstitutionTransformer(String, INode)
+  nameWithType: VariableSubstitutionTransformer.VariableSubstitutionTransformer(String, INode)
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.VariableSubstitutionTransformer(System.String, VDS.RDF.INode)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 71
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nCreate a transform that replaces a variable with a constant.\n"
+  example: []
+  syntax:
+    content: public VariableSubstitutionTransformer(string findVar, INode replaceTerm)
+    parameters:
+    - id: findVar
+      type: System.String
+      description: Find Variable.
+    - id: replaceTerm
+      type: VDS.RDF.INode
+      description: Replace Constant.
+    content.vb: Public Sub New(findVar As String, replaceTerm As INode)
+  overload: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects
+  commentId: P:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects
+  id: CanReplaceObjects
+  parent: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  langs:
+  - csharp
+  - vb
+  name: CanReplaceObjects
+  nameWithType: VariableSubstitutionTransformer.CanReplaceObjects
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CanReplaceObjects
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 91
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nGets/Sets whethe the Transformer is allowed to replace objects.\n"
+  remarks: "\n<p>\nThe transformer will intelligently select this depending on whether it is replacing with a constant (defaults to true) or a variable (defaults to false),  when replacing a variable the behaviour changes automatically.  If you set it explicitly the transformer will respect your setting regardless.\n</p>\n"
+  example: []
+  syntax:
+    content: public bool CanReplaceObjects { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CanReplaceObjects As Boolean
+  overload: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  id: Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  parent: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  langs:
+  - csharp
+  - vb
+  name: Optimise(ISparqlAlgebra)
+  nameWithType: VariableSubstitutionTransformer.Optimise(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Optimise
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 109
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nAttempts to do variable substitution within the given algebra.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra Optimise(ISparqlAlgebra algebra)
+    parameters:
+    - id: algebra
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: Algebra.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public Function Optimise(algebra As ISparqlAlgebra) As ISparqlAlgebra
+  overload: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise*
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  id: IsApplicable(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable(SparqlQuery)
+  nameWithType: VariableSubstitutionTransformer.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsApplicable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 215
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nReturns false because this optimiser is never globally applicable.\n"
+  example: []
+  syntax:
+    content: public bool IsApplicable(SparqlQuery q)
+    parameters:
+    - id: q
+      type: VDS.RDF.Query.SparqlQuery
+      description: Query.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsApplicable(q As SparqlQuery) As Boolean
+  overload: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable*
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  id: IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: VariableSubstitutionTransformer.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsApplicable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 225
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nReturns false because this optimiser is never globally applicable.\n"
+  example: []
+  syntax:
+    content: public bool IsApplicable(SparqlUpdateCommandSet cmds)
+    parameters:
+    - id: cmds
+      type: VDS.RDF.Update.SparqlUpdateCommandSet
+      description: Update Commands.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsApplicable(cmds As SparqlUpdateCommandSet) As Boolean
+  overload: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable*
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  id: SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  parent: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer
+  langs:
+  - csharp
+  - vb
+  name: SubstitutePrimaryExpression(ISparqlExpression)
+  nameWithType: VariableSubstitutionTransformer.SubstitutePrimaryExpression(ISparqlExpression)
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SubstitutePrimaryExpression
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VariableSubstitutionTransformer.cs
+    startLine: 235
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nTries to substitute variables within primary expressions.\n"
+  example: []
+  syntax:
+    content: protected override ISparqlExpression SubstitutePrimaryExpression(ISparqlExpression expr)
+    parameters:
+    - id: expr
+      type: VDS.RDF.Query.Expressions.ISparqlExpression
+      description: Expression.
+    return:
+      type: VDS.RDF.Query.Expressions.ISparqlExpression
+      description: ''
+    content.vb: Protected Overrides Function SubstitutePrimaryExpression(expr As ISparqlExpression) As ISparqlExpression
+  overridden: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  overload: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter
+  commentId: T:VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter
+  parent: VDS.RDF.Query.Expressions
+  name: PrimaryExpressionSubstituter
+  nameWithType: PrimaryExpressionSubstituter
+  fullName: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter
+- uid: VDS.RDF.Query.Expressions.IExpressionTransformer
+  commentId: T:VDS.RDF.Query.Expressions.IExpressionTransformer
+  parent: VDS.RDF.Query.Expressions
+  name: IExpressionTransformer
+  nameWithType: IExpressionTransformer
+  fullName: VDS.RDF.Query.Expressions.IExpressionTransformer
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  parent: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter
+  name: Transform(ISparqlExpression)
+  nameWithType: PrimaryExpressionSubstituter.Transform(ISparqlExpression)
+  fullName: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: Transform
+    nameWithType: PrimaryExpressionSubstituter.Transform
+    fullName: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: Transform
+    nameWithType: PrimaryExpressionSubstituter.Transform
+    fullName: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<VariableSubstitutionTransformer>()
+  nameWithType: Extensions.AsEnumerable<VariableSubstitutionTransformer>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer>()
+  nameWithType.vb: Extensions.AsEnumerable(Of VariableSubstitutionTransformer)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer)()
+  name.vb: AsEnumerable(Of VariableSubstitutionTransformer)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<VariableSubstitutionTransformer>
+    nameWithType: Extensions.AsEnumerable<VariableSubstitutionTransformer>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of VariableSubstitutionTransformer)
+    nameWithType: Extensions.AsEnumerable(Of VariableSubstitutionTransformer)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Query.Expressions
+  commentId: N:VDS.RDF.Query.Expressions
+  name: VDS.RDF.Query.Expressions
+  nameWithType: VDS.RDF.Query.Expressions
+  fullName: VDS.RDF.Query.Expressions
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor*
+  commentId: Overload:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.#ctor
+  name: VariableSubstitutionTransformer
+  nameWithType: VariableSubstitutionTransformer.VariableSubstitutionTransformer
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.VariableSubstitutionTransformer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects*
+  commentId: Overload:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects
+  name: CanReplaceObjects
+  nameWithType: VariableSubstitutionTransformer.CanReplaceObjects
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.CanReplaceObjects
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise*
+  commentId: Overload:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise
+  name: Optimise
+  nameWithType: VariableSubstitutionTransformer.Optimise
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.Optimise
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  parent: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  name: Optimise(ISparqlAlgebra)
+  nameWithType: IAlgebraOptimiser.Optimise(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: IAlgebraOptimiser.Optimise
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: IAlgebraOptimiser.Optimise
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable*
+  commentId: Overload:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable
+  name: IsApplicable
+  nameWithType: VariableSubstitutionTransformer.IsApplicable
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.IsApplicable
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  name: IsApplicable(SparqlQuery)
+  nameWithType: IAlgebraOptimiser.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: IAlgebraOptimiser.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: IAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.SparqlUpdateCommandSet
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommandSet
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommandSet
+  nameWithType: SparqlUpdateCommandSet
+  fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  parent: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter
+  name: SubstitutePrimaryExpression(ISparqlExpression)
+  nameWithType: PrimaryExpressionSubstituter.SubstitutePrimaryExpression(ISparqlExpression)
+  fullName: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: SubstitutePrimaryExpression
+    nameWithType: PrimaryExpressionSubstituter.SubstitutePrimaryExpression
+    fullName: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: SubstitutePrimaryExpression
+    nameWithType: PrimaryExpressionSubstituter.SubstitutePrimaryExpression
+    fullName: VDS.RDF.Query.Expressions.PrimaryExpressionSubstituter.SubstitutePrimaryExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression*
+  commentId: Overload:VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression
+  name: SubstitutePrimaryExpression
+  nameWithType: VariableSubstitutionTransformer.SubstitutePrimaryExpression
+  fullName: VDS.RDF.Query.Optimisation.VariableSubstitutionTransformer.SubstitutePrimaryExpression
+- uid: VDS.RDF.Query.Expressions.ISparqlExpression
+  commentId: T:VDS.RDF.Query.Expressions.ISparqlExpression
+  parent: VDS.RDF.Query.Expressions
+  name: ISparqlExpression
+  nameWithType: ISparqlExpression
+  fullName: VDS.RDF.Query.Expressions.ISparqlExpression

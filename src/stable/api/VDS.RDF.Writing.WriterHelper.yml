@@ -1,0 +1,1035 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.WriterHelper
+  commentId: T:VDS.RDF.Writing.WriterHelper
+  id: WriterHelper
+  parent: VDS.RDF.Writing
+  children:
+  - VDS.RDF.Writing.WriterHelper.EncodeForXml(System.String)
+  - VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.IGraph,VDS.RDF.BaseTripleCollection)
+  - VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext)
+  - VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext,VDS.RDF.Writing.CollectionSearchMode)
+  - VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate(VDS.RDF.IGraph)
+  - VDS.RDF.Writing.WriterHelper.IsDefaultGraph(System.Uri)
+  - VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID(System.String)
+  - VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID(System.String)
+  - VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate(System.Collections.Generic.List{VDS.RDF.Triple})
+  langs:
+  - csharp
+  - vb
+  name: WriterHelper
+  nameWithType: WriterHelper
+  fullName: VDS.RDF.Writing.WriterHelper
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WriterHelper
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 326
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nHelper methods for writers.\n"
+  example: []
+  syntax:
+    content: public static class WriterHelper
+    content.vb: Public Module WriterHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID(System.String)
+  commentId: M:VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID(System.String)
+  id: IsValidBlankNodeID(System.String)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: IsValidBlankNodeID(String)
+  nameWithType: WriterHelper.IsValidBlankNodeID(String)
+  fullName: VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsValidBlankNodeID
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 336
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nDetermines whether a Blank Node ID is valid as-is when serialised in NTriple like syntaxes (Turtle/N3/SPARQL).\n"
+  remarks: If false is returned then the writer will alter the ID in some way.
+  example: []
+  syntax:
+    content: public static bool IsValidBlankNodeID(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: ID to test.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsValidBlankNodeID(id As String) As Boolean
+  overload: VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID(System.String)
+  commentId: M:VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID(System.String)
+  id: IsValidStrictBlankNodeID(System.String)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: IsValidStrictBlankNodeID(String)
+  nameWithType: WriterHelper.IsValidStrictBlankNodeID(String)
+  fullName: VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsValidStrictBlankNodeID
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 370
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nDetermines whether a Blank Node ID is valid as-is when serialised as NTriples.\n"
+  example: []
+  syntax:
+    content: public static bool IsValidStrictBlankNodeID(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsValidStrictBlankNodeID(id As String) As Boolean
+  overload: VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.IsDefaultGraph(System.Uri)
+  commentId: M:VDS.RDF.Writing.WriterHelper.IsDefaultGraph(System.Uri)
+  id: IsDefaultGraph(System.Uri)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: IsDefaultGraph(Uri)
+  nameWithType: WriterHelper.IsDefaultGraph(Uri)
+  fullName: VDS.RDF.Writing.WriterHelper.IsDefaultGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsDefaultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 395
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nDetermines whether a given Uri refers to one of the Default Graph URIs assigned to the default Graph when parsing from some RDF dataset syntax.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("No longer required since all code that uses 'magic' URIs to refer to the default graph has been removed from the API", true)]
+
+      public static bool IsDefaultGraph(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Uri to test.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: >-
+      <Obsolete("No longer required since all code that uses 'magic' URIs to refer to the default graph has been removed from the API", True)>
+
+      Public Shared Function IsDefaultGraph(u As Uri) As Boolean
+  overload: VDS.RDF.Writing.WriterHelper.IsDefaultGraph*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: No longer required since all code that uses 'magic' URIs to refer to the default graph has been removed from the API
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.IGraph,VDS.RDF.BaseTripleCollection)
+  commentId: M:VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.IGraph,VDS.RDF.BaseTripleCollection)
+  id: FindCollections(VDS.RDF.IGraph,VDS.RDF.BaseTripleCollection)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: FindCollections(IGraph, BaseTripleCollection)
+  nameWithType: WriterHelper.FindCollections(IGraph, BaseTripleCollection)
+  fullName: VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.IGraph, VDS.RDF.BaseTripleCollection)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FindCollections
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 406
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nHelper method which finds Collections expressed in the Graph which can be compressed into concise collection syntax constructs in some RDF syntaxes.\n"
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use the alternative overloads of this method which take an ICollectionCompressingWriterContext instead", true)]
+
+      public static Dictionary<INode, OutputRdfCollection> FindCollections(IGraph g, BaseTripleCollection triplesDone)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to find collections in.
+    - id: triplesDone
+      type: VDS.RDF.BaseTripleCollection
+      description: Triple Collection in which Triples that have been output are to be listed.
+    return:
+      type: System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.Writing.OutputRdfCollection}
+    content.vb: >-
+      <Obsolete("Use the alternative overloads of this method which take an ICollectionCompressingWriterContext instead", True)>
+
+      Public Shared Function FindCollections(g As IGraph, triplesDone As BaseTripleCollection) As Dictionary(Of INode, OutputRdfCollection)
+  overload: VDS.RDF.Writing.WriterHelper.FindCollections*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: Use the alternative overloads of this method which take an ICollectionCompressingWriterContext instead
+    - type: System.Boolean
+      value: true
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext,VDS.RDF.Writing.CollectionSearchMode)
+  commentId: M:VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext,VDS.RDF.Writing.CollectionSearchMode)
+  id: FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext,VDS.RDF.Writing.CollectionSearchMode)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: FindCollections(ICollectionCompressingWriterContext, CollectionSearchMode)
+  nameWithType: WriterHelper.FindCollections(ICollectionCompressingWriterContext, CollectionSearchMode)
+  fullName: VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext, VDS.RDF.Writing.CollectionSearchMode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FindCollections
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 417
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nHelper method which finds Collections expressed in the Graph which can be compressed into concise collection syntax constructs in some RDF syntaxes.\n"
+  example: []
+  syntax:
+    content: public static void FindCollections(ICollectionCompressingWriterContext context, CollectionSearchMode mode)
+    parameters:
+    - id: context
+      type: VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext
+      description: Writer Context.
+    - id: mode
+      type: VDS.RDF.Writing.CollectionSearchMode
+      description: Collection Search Mode.
+    content.vb: Public Shared Sub FindCollections(context As ICollectionCompressingWriterContext, mode As CollectionSearchMode)
+  overload: VDS.RDF.Writing.WriterHelper.FindCollections*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext)
+  commentId: M:VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext)
+  id: FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: FindCollections(ICollectionCompressingWriterContext)
+  nameWithType: WriterHelper.FindCollections(ICollectionCompressingWriterContext)
+  fullName: VDS.RDF.Writing.WriterHelper.FindCollections(VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FindCollections
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 692
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nHelper method which finds Collections expressed in the Graph which can be compressed into concise collection syntax constructs in some RDF syntaxes.\n"
+  example: []
+  syntax:
+    content: public static void FindCollections(ICollectionCompressingWriterContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext
+      description: Writer Context.
+    content.vb: Public Shared Sub FindCollections(context As ICollectionCompressingWriterContext)
+  overload: VDS.RDF.Writing.WriterHelper.FindCollections*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.EncodeForXml(System.String)
+  commentId: M:VDS.RDF.Writing.WriterHelper.EncodeForXml(System.String)
+  id: EncodeForXml(System.String)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: EncodeForXml(String)
+  nameWithType: WriterHelper.EncodeForXml(String)
+  fullName: VDS.RDF.Writing.WriterHelper.EncodeForXml(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: EncodeForXml
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 704
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nEncodes values for use in XML.\n"
+  example: []
+  syntax:
+    content: public static string EncodeForXml(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: Value to encode.
+    return:
+      type: System.String
+      description: "\nThe value with any ampersands escaped to &amp;.\n"
+    content.vb: Public Shared Function EncodeForXml(value As String) As String
+  overload: VDS.RDF.Writing.WriterHelper.EncodeForXml*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate(VDS.RDF.IGraph)
+  id: GetTriplesSortedBySubjectPredicate(VDS.RDF.IGraph)
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesSortedBySubjectPredicate(IGraph)
+  nameWithType: WriterHelper.GetTriplesSortedBySubjectPredicate(IGraph)
+  fullName: VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesSortedBySubjectPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 726
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGet a list of all triples in the specified graph, sorted by subject and then predicate.\n"
+  example: []
+  syntax:
+    content: public static List<Triple> GetTriplesSortedBySubjectPredicate(IGraph graph)
+    parameters:
+    - id: graph
+      type: VDS.RDF.IGraph
+      description: The graph whose triples are to be returned.
+    return:
+      type: System.Collections.Generic.List{VDS.RDF.Triple}
+      description: A list of the triples in <code data-dev-comment-type="paramref" class="paramref">graph</code> sorted by their subject and then predicate.
+    content.vb: Public Shared Function GetTriplesSortedBySubjectPredicate(graph As IGraph) As List(Of Triple)
+  overload: VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate(System.Collections.Generic.List{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate(System.Collections.Generic.List{VDS.RDF.Triple})
+  id: SortTriplesBySubjectPredicate(System.Collections.Generic.List{VDS.RDF.Triple})
+  parent: VDS.RDF.Writing.WriterHelper
+  langs:
+  - csharp
+  - vb
+  name: SortTriplesBySubjectPredicate(List<Triple>)
+  nameWithType: WriterHelper.SortTriplesBySubjectPredicate(List<Triple>)
+  fullName: VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate(System.Collections.Generic.List<VDS.RDF.Triple>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/WriterUtilities.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SortTriplesBySubjectPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/WriterUtilities.cs
+    startLine: 737
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSort the provided list of triples by subject and then predicate. The list is modified in-place.\n"
+  example: []
+  syntax:
+    content: public static void SortTriplesBySubjectPredicate(List<Triple> ts)
+    parameters:
+    - id: ts
+      type: System.Collections.Generic.List{VDS.RDF.Triple}
+      description: The list of triples to be sorted.
+    content.vb: Public Shared Sub SortTriplesBySubjectPredicate(ts As List(Of Triple))
+  overload: VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate*
+  nameWithType.vb: WriterHelper.SortTriplesBySubjectPredicate(List(Of Triple))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate(System.Collections.Generic.List(Of VDS.RDF.Triple))
+  name.vb: SortTriplesBySubjectPredicate(List(Of Triple))
+references:
+- uid: VDS.RDF.Writing
+  commentId: N:VDS.RDF.Writing
+  name: VDS.RDF.Writing
+  nameWithType: VDS.RDF.Writing
+  fullName: VDS.RDF.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID*
+  commentId: Overload:VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID
+  name: IsValidBlankNodeID
+  nameWithType: WriterHelper.IsValidBlankNodeID
+  fullName: VDS.RDF.Writing.WriterHelper.IsValidBlankNodeID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID*
+  commentId: Overload:VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID
+  name: IsValidStrictBlankNodeID
+  nameWithType: WriterHelper.IsValidStrictBlankNodeID
+  fullName: VDS.RDF.Writing.WriterHelper.IsValidStrictBlankNodeID
+- uid: VDS.RDF.Writing.WriterHelper.IsDefaultGraph*
+  commentId: Overload:VDS.RDF.Writing.WriterHelper.IsDefaultGraph
+  name: IsDefaultGraph
+  nameWithType: WriterHelper.IsDefaultGraph
+  fullName: VDS.RDF.Writing.WriterHelper.IsDefaultGraph
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Writing.WriterHelper.FindCollections*
+  commentId: Overload:VDS.RDF.Writing.WriterHelper.FindCollections
+  name: FindCollections
+  nameWithType: WriterHelper.FindCollections
+  fullName: VDS.RDF.Writing.WriterHelper.FindCollections
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.BaseTripleCollection
+  commentId: T:VDS.RDF.BaseTripleCollection
+  parent: VDS.RDF
+  name: BaseTripleCollection
+  nameWithType: BaseTripleCollection
+  fullName: VDS.RDF.BaseTripleCollection
+- uid: System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.Writing.OutputRdfCollection}
+  commentId: T:System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.Writing.OutputRdfCollection}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<INode, OutputRdfCollection>
+  nameWithType: Dictionary<INode, OutputRdfCollection>
+  fullName: System.Collections.Generic.Dictionary<VDS.RDF.INode, VDS.RDF.Writing.OutputRdfCollection>
+  nameWithType.vb: Dictionary(Of INode, OutputRdfCollection)
+  fullName.vb: System.Collections.Generic.Dictionary(Of VDS.RDF.INode, VDS.RDF.Writing.OutputRdfCollection)
+  name.vb: Dictionary(Of INode, OutputRdfCollection)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Writing.OutputRdfCollection
+    name: OutputRdfCollection
+    nameWithType: OutputRdfCollection
+    fullName: VDS.RDF.Writing.OutputRdfCollection
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Writing.OutputRdfCollection
+    name: OutputRdfCollection
+    nameWithType: OutputRdfCollection
+    fullName: VDS.RDF.Writing.OutputRdfCollection
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext
+  commentId: T:VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext
+  parent: VDS.RDF.Writing.Contexts
+  name: ICollectionCompressingWriterContext
+  nameWithType: ICollectionCompressingWriterContext
+  fullName: VDS.RDF.Writing.Contexts.ICollectionCompressingWriterContext
+- uid: VDS.RDF.Writing.CollectionSearchMode
+  commentId: T:VDS.RDF.Writing.CollectionSearchMode
+  parent: VDS.RDF.Writing
+  name: CollectionSearchMode
+  nameWithType: CollectionSearchMode
+  fullName: VDS.RDF.Writing.CollectionSearchMode
+- uid: VDS.RDF.Writing.Contexts
+  commentId: N:VDS.RDF.Writing.Contexts
+  name: VDS.RDF.Writing.Contexts
+  nameWithType: VDS.RDF.Writing.Contexts
+  fullName: VDS.RDF.Writing.Contexts
+- uid: VDS.RDF.Writing.WriterHelper.EncodeForXml*
+  commentId: Overload:VDS.RDF.Writing.WriterHelper.EncodeForXml
+  name: EncodeForXml
+  nameWithType: WriterHelper.EncodeForXml
+  fullName: VDS.RDF.Writing.WriterHelper.EncodeForXml
+- uid: VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate*
+  commentId: Overload:VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate
+  name: GetTriplesSortedBySubjectPredicate
+  nameWithType: WriterHelper.GetTriplesSortedBySubjectPredicate
+  fullName: VDS.RDF.Writing.WriterHelper.GetTriplesSortedBySubjectPredicate
+- uid: System.Collections.Generic.List{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.List{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Triple>
+  nameWithType: List<Triple>
+  fullName: System.Collections.Generic.List<VDS.RDF.Triple>
+  nameWithType.vb: List(Of Triple)
+  fullName.vb: System.Collections.Generic.List(Of VDS.RDF.Triple)
+  name.vb: List(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate*
+  commentId: Overload:VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate
+  name: SortTriplesBySubjectPredicate
+  nameWithType: WriterHelper.SortTriplesBySubjectPredicate
+  fullName: VDS.RDF.Writing.WriterHelper.SortTriplesBySubjectPredicate

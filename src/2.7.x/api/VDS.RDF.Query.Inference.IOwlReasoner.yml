@@ -1,0 +1,712 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Inference.IOwlReasoner
+  commentId: T:VDS.RDF.Query.Inference.IOwlReasoner
+  id: IOwlReasoner
+  parent: VDS.RDF.Query.Inference
+  children:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  - VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  - VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  - VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  - VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  - VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  - VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  langs:
+  - csharp
+  - vb
+  name: IOwlReasoner
+  nameWithType: IOwlReasoner
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IOwlReasoner
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 43
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nProposed interface for OWL Reasoners - currently incomplete.\n"
+  remarks: "\n<p>\n<strong>Important:</strong> This interface is specifically designed so that it does not require the provision of a Graph to methods unless the method does not make sense without taking an <xref href=\"VDS.RDF.IGraph\" data-throw-if-not-resolved=\"false\"></xref> as a parameter.  This is because we envisage the use of this interface for connecting to reasoners which have their own access to the data over which they are reasoning and do not need it providing explicitly to them.\n</p>\n<p>\nReasoner implementations may throw <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref> for operations they don&apos;t support and may throw any other appropriate exceptions as appropriate for operations that encounter errors.\n</p>\n"
+  example: []
+  syntax:
+    content: public interface IOwlReasoner
+    content.vb: Public Interface IOwlReasoner
+  extensionMethods:
+  - VDS.RDF.Query.Inference.IOwlReasoner.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  id: Add(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: Add(IGraph)
+  nameWithType: IOwlReasoner.Add(IGraph)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Add
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nAdds a Graph to the reasoners knowledge base.\n"
+  remarks: "\n<p>\nA reasoner may choose to do nothing in this method if that reasoner especially if it operates using some pre-defined, remote or otherwise immutable knowledge base.\n</p>\n"
+  example: []
+  syntax:
+    content: void Add(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    content.vb: Sub Add(g As IGraph)
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.Add*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  id: Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: Extract(IGraph, INode)
+  nameWithType: IOwlReasoner.Extract(IGraph, INode)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Extract
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 63
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtract a reasoning enhanced sub-graph from the given Graph rooted at the given Node.\n"
+  example: []
+  syntax:
+    content: IGraph Extract(IGraph g, INode n)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    - id: n
+      type: VDS.RDF.INode
+      description: Root Node.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Function Extract(g As IGraph, n As INode) As IGraph
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.Extract*
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  id: Extract(System.String)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: Extract(String)
+  nameWithType: IOwlReasoner.Extract(String)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Extract
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 74
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts all possible triples using the given extraction mode.\n"
+  remarks: "\nThe <code data-dev-comment-type=\"paramref\" class=\"paramref\">mode</code> permits for the specification of an extraction mode for reasoners that can extract specific subsets of reasoning.  Where this is not supported the reasoner should simply extract all triples that can be inferred by reasoning.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> Extract(string mode)
+    parameters:
+    - id: mode
+      type: System.String
+      description: Extraction Mode.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function Extract(mode As String) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.Extract*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  id: Extract(System.Collections.Generic.IEnumerable{System.String})
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: Extract(IEnumerable<String>)
+  nameWithType: IOwlReasoner.Extract(IEnumerable<String>)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Extract
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 85
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts all possible triples using the given extraction modes.\n"
+  remarks: "\nThe <code data-dev-comment-type=\"paramref\" class=\"paramref\">modes</code> permits for the specification of an extraction mode for reasoners that can extract specific subsets of reasoning.  Where this is not supported the reasoner should simply extract all triples that can be inferred by reasoning.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> Extract(IEnumerable<string> modes)
+    parameters:
+    - id: modes
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Extraction Modes.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function Extract(modes As IEnumerable(Of String)) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.Extract*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+  nameWithType.vb: IOwlReasoner.Extract(IEnumerable(Of String))
+  fullName.vb: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Extract(IEnumerable(Of String))
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  id: Classify
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: Classify()
+  nameWithType: IOwlReasoner.Classify()
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Classify()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Classify
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 92
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts the triples which comprise the class hierarchy.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> Classify()
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function Classify As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.Classify*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  id: Realize
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: Realize()
+  nameWithType: IOwlReasoner.Realize()
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Realize()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Realize
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 99
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts the triples which comprise the class hierarchy and individuals of those classes.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> Realize()
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function Realize As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.Realize*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  id: IsConsistent
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: IsConsistent()
+  nameWithType: IOwlReasoner.IsConsistent()
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsConsistent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 106
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nReturns whether the underlying knowledge base is consistent.\n"
+  example: []
+  syntax:
+    content: bool IsConsistent()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function IsConsistent As Boolean
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  id: IsConsistent(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: IsConsistent(IGraph)
+  nameWithType: IOwlReasoner.IsConsistent(IGraph)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsConsistent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 114
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nReturns whether the given Graph is consistent with the underlying knowledge base.\n"
+  example: []
+  syntax:
+    content: bool IsConsistent(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function IsConsistent(g As IGraph) As Boolean
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  commentId: P:VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  id: Unsatisfiable
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  langs:
+  - csharp
+  - vb
+  name: Unsatisfiable
+  nameWithType: IOwlReasoner.Unsatisfiable
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Unsatisfiable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/IOwlReasoner.cs
+    startLine: 120
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nReturns the enumeration of unsatisfiable classes.\n"
+  example: []
+  syntax:
+    content: IEnumerable<OntologyResource> Unsatisfiable { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Ontology.OntologyResource}
+    content.vb: ReadOnly Property Unsatisfiable As IEnumerable(Of OntologyResource)
+  overload: VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Reasoner does not support such an operation.
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+- uid: VDS.RDF.Query.Inference
+  commentId: N:VDS.RDF.Query.Inference
+  name: VDS.RDF.Query.Inference
+  nameWithType: VDS.RDF.Query.Inference
+  fullName: VDS.RDF.Query.Inference
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IOwlReasoner>()
+  nameWithType: Extensions.AsEnumerable<IOwlReasoner>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Inference.IOwlReasoner>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IOwlReasoner)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Inference.IOwlReasoner)()
+  name.vb: AsEnumerable(Of IOwlReasoner)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IOwlReasoner>
+    nameWithType: Extensions.AsEnumerable<IOwlReasoner>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Inference.IOwlReasoner>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IOwlReasoner)
+    nameWithType: Extensions.AsEnumerable(Of IOwlReasoner)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Inference.IOwlReasoner)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Add*
+  commentId: Overload:VDS.RDF.Query.Inference.IOwlReasoner.Add
+  name: Add
+  nameWithType: IOwlReasoner.Add
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Add
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract*
+  commentId: Overload:VDS.RDF.Query.Inference.IOwlReasoner.Extract
+  name: Extract
+  nameWithType: IOwlReasoner.Extract
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Triple>
+  nameWithType: IEnumerable<Triple>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerable(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple)
+  name.vb: IEnumerable(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Classify*
+  commentId: Overload:VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  name: Classify
+  nameWithType: IOwlReasoner.Classify
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Classify
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Realize*
+  commentId: Overload:VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  name: Realize
+  nameWithType: IOwlReasoner.Realize
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Realize
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent*
+  commentId: Overload:VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  name: IsConsistent
+  nameWithType: IOwlReasoner.IsConsistent
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable*
+  commentId: Overload:VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  name: Unsatisfiable
+  nameWithType: IOwlReasoner.Unsatisfiable
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Ontology.OntologyResource}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Ontology.OntologyResource}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<OntologyResource>
+  nameWithType: IEnumerable<OntologyResource>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Ontology.OntologyResource>
+  nameWithType.vb: IEnumerable(Of OntologyResource)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Ontology.OntologyResource)
+  name.vb: IEnumerable(Of OntologyResource)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Ontology.OntologyResource
+    name: OntologyResource
+    nameWithType: OntologyResource
+    fullName: VDS.RDF.Ontology.OntologyResource
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Ontology.OntologyResource
+    name: OntologyResource
+    nameWithType: OntologyResource
+    fullName: VDS.RDF.Ontology.OntologyResource
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,980 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.TriXParser
+  commentId: T:VDS.RDF.Parsing.TriXParser
+  id: TriXParser
+  parent: VDS.RDF.Parsing
+  children:
+  - VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  - VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+  - VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore,System.String)
+  - VDS.RDF.Parsing.TriXParser.ToString
+  - VDS.RDF.Parsing.TriXParser.TriXNamespaceURI
+  - VDS.RDF.Parsing.TriXParser.Warning
+  langs:
+  - csharp
+  - vb
+  name: TriXParser
+  nameWithType: TriXParser
+  fullName: VDS.RDF.Parsing.TriXParser
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TriXParser
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 50
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nParser for parsing TriX (a named Graph XML format for RDF).\n"
+  remarks: "\n<p>\nThe Default Graph (if any) will be given the special Uri. <strong>trix:default-graph</strong>\n</p>\n<p>\nTriX permits Graphs to be named with Blank Node IDs, since the library only supports Graphs named with URIs these are converted to URIs of the form. <strong>trix:local:ID</strong>\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class TriXParser : IStoreReader'
+    content.vb: >-
+      Public Class TriXParser
+          Implements IStoreReader
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.IStoreReader
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Parsing.TriXParser.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Parsing.TriXParser.TriXNamespaceURI
+  commentId: F:VDS.RDF.Parsing.TriXParser.TriXNamespaceURI
+  id: TriXNamespaceURI
+  parent: VDS.RDF.Parsing.TriXParser
+  langs:
+  - csharp
+  - vb
+  name: TriXNamespaceURI
+  nameWithType: TriXParser.TriXNamespaceURI
+  fullName: VDS.RDF.Parsing.TriXParser.TriXNamespaceURI
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TriXNamespaceURI
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nCurrent W3C Namespace Uri for TriX.\n"
+  example: []
+  syntax:
+    content: public const string TriXNamespaceURI = "http://www.w3.org/2004/03/trix/trix-1/"
+    return:
+      type: System.String
+    content.vb: Public Const TriXNamespaceURI As String = "http://www.w3.org/2004/03/trix/trix-1/"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore,System.String)
+  id: Load(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.Parsing.TriXParser
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, String)
+  nameWithType: TriXParser.Load(ITripleStore, String)
+  fullName: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the RDF Dataset from the TriX input into the given Triple Store.\n"
+  example: []
+  syntax:
+    content: public void Load(ITripleStore store, string filename)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    content.vb: Public Sub Load(store As ITripleStore, filename As String)
+  overload: VDS.RDF.Parsing.TriXParser.Load*
+  implements:
+  - VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+  commentId: M:VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+  id: Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+  parent: VDS.RDF.Parsing.TriXParser
+  langs:
+  - csharp
+  - vb
+  name: Load(ITripleStore, TextReader)
+  nameWithType: TriXParser.Load(ITripleStore, TextReader)
+  fullName: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.ITripleStore, System.IO.TextReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 75
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the RDF Dataset from the TriX input into the given Triple Store.\n"
+  example: []
+  syntax:
+    content: public void Load(ITripleStore store, TextReader input)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to load into.
+    - id: input
+      type: System.IO.TextReader
+      description: Input to load from.
+    content.vb: Public Sub Load(store As ITripleStore, input As TextReader)
+  overload: VDS.RDF.Parsing.TriXParser.Load*
+  implements:
+  - VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler,System.String)
+  id: Load(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Parsing.TriXParser
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, String)
+  nameWithType: TriXParser.Load(IRdfHandler, String)
+  fullName: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 87
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads the RDF Dataset from the TriX input using a RDF Handler.\n"
+  example: []
+  syntax:
+    content: public void Load(IRdfHandler handler, string filename)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: filename
+      type: System.String
+      description: File to load from.
+    content.vb: Public Sub Load(handler As IRdfHandler, filename As String)
+  overload: VDS.RDF.Parsing.TriXParser.Load*
+  implements:
+  - VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  commentId: M:VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  id: Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  parent: VDS.RDF.Parsing.TriXParser
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, TextReader)
+  nameWithType: TriXParser.Load(IRdfHandler, TextReader)
+  fullName: VDS.RDF.Parsing.TriXParser.Load(VDS.RDF.IRdfHandler, System.IO.TextReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 376
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nLoads a RDF dataset using a RDF Handler.\n"
+  example: []
+  syntax:
+    content: public void Load(IRdfHandler handler, TextReader input)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: input
+      type: System.IO.TextReader
+      description: Input to load from.
+    content.vb: Public Sub Load(handler As IRdfHandler, input As TextReader)
+  overload: VDS.RDF.Parsing.TriXParser.Load*
+  implements:
+  - VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.TriXParser.Warning
+  commentId: E:VDS.RDF.Parsing.TriXParser.Warning
+  id: Warning
+  parent: VDS.RDF.Parsing.TriXParser
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: TriXParser.Warning
+  fullName: VDS.RDF.Parsing.TriXParser.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 455
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nEvent which Readers can raise when they notice syntax that is ambigious/deprecated etc which can still be parsed\n"
+  example: []
+  syntax:
+    content: public event StoreReaderWarning Warning
+    return:
+      type: VDS.RDF.StoreReaderWarning
+    content.vb: Public Event Warning As StoreReaderWarning
+  implements:
+  - VDS.RDF.IStoreReader.Warning
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.TriXParser.ToString
+  commentId: M:VDS.RDF.Parsing.TriXParser.ToString
+  id: ToString
+  parent: VDS.RDF.Parsing.TriXParser
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TriXParser.ToString()
+  fullName: VDS.RDF.Parsing.TriXParser.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/TriXParser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/TriXParser.cs
+    startLine: 461
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nGets the String representation of the Parser which is a description of the syntax it parses.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Parsing.TriXParser.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.IStoreReader
+  commentId: T:VDS.RDF.IStoreReader
+  parent: VDS.RDF
+  name: IStoreReader
+  nameWithType: IStoreReader
+  fullName: VDS.RDF.IStoreReader
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.TriXParser.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<TriXParser>()
+  nameWithType: Extensions.AsEnumerable<TriXParser>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.TriXParser>()
+  nameWithType.vb: Extensions.AsEnumerable(Of TriXParser)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.TriXParser)()
+  name.vb: AsEnumerable(Of TriXParser)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<TriXParser>
+    nameWithType: Extensions.AsEnumerable<TriXParser>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.TriXParser>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of TriXParser)
+    nameWithType: Extensions.AsEnumerable(Of TriXParser)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.TriXParser)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Parsing.TriXParser.Load*
+  commentId: Overload:VDS.RDF.Parsing.TriXParser.Load
+  name: Load
+  nameWithType: TriXParser.Load
+  fullName: VDS.RDF.Parsing.TriXParser.Load
+- uid: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.IStoreReader
+  isExternal: true
+  name: Load(ITripleStore, String)
+  nameWithType: IStoreReader.Load(ITripleStore, String)
+  fullName: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.String)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.String)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore
+  commentId: T:VDS.RDF.ITripleStore
+  parent: VDS.RDF
+  name: ITripleStore
+  nameWithType: ITripleStore
+  fullName: VDS.RDF.ITripleStore
+- uid: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+  commentId: M:VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+  parent: VDS.RDF.IStoreReader
+  isExternal: true
+  name: Load(ITripleStore, TextReader)
+  nameWithType: IStoreReader.Load(ITripleStore, TextReader)
+  fullName: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore, System.IO.TextReader)
+  spec.csharp:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.ITripleStore,System.IO.TextReader)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader
+  commentId: T:System.IO.TextReader
+  parent: System.IO
+  isExternal: true
+  name: TextReader
+  nameWithType: TextReader
+  fullName: System.IO.TextReader
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.IStoreReader
+  isExternal: true
+  name: Load(IRdfHandler, String)
+  nameWithType: IStoreReader.Load(IRdfHandler, String)
+  fullName: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.String)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.String)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  commentId: M:VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  parent: VDS.RDF.IStoreReader
+  isExternal: true
+  name: Load(IRdfHandler, TextReader)
+  nameWithType: IStoreReader.Load(IRdfHandler, TextReader)
+  fullName: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler, System.IO.TextReader)
+  spec.csharp:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IStoreReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+    name: Load
+    nameWithType: IStoreReader.Load
+    fullName: VDS.RDF.IStoreReader.Load
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IStoreReader.Warning
+  commentId: E:VDS.RDF.IStoreReader.Warning
+  parent: VDS.RDF.IStoreReader
+  name: Warning
+  nameWithType: IStoreReader.Warning
+  fullName: VDS.RDF.IStoreReader.Warning
+- uid: VDS.RDF.StoreReaderWarning
+  commentId: T:VDS.RDF.StoreReaderWarning
+  parent: VDS.RDF
+  name: StoreReaderWarning
+  nameWithType: StoreReaderWarning
+  fullName: VDS.RDF.StoreReaderWarning
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.TriXParser.ToString*
+  commentId: Overload:VDS.RDF.Parsing.TriXParser.ToString
+  name: ToString
+  nameWithType: TriXParser.ToString
+  fullName: VDS.RDF.Parsing.TriXParser.ToString

@@ -1,0 +1,1904 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  commentId: T:VDS.RDF.Parsing.Tokens.BaseTokeniser
+  id: BaseTokeniser
+  parent: VDS.RDF.Parsing.Tokens
+  children:
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.#ctor(System.IO.TextReader)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter(System.Boolean)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean,System.Boolean)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.Format
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit(System.Char)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.Length
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter(System.Char,System.String)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput(System.String)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine(System.String)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken(System.String,VDS.RDF.Parsing.Tokens.IToken)
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.Value
+  langs:
+  - csharp
+  - vb
+  name: BaseTokeniser
+  nameWithType: BaseTokeniser
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseTokeniser
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nAbstract Base Class for Tokeniser which handles the Position tracking.\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseTokeniser : ITokeniser'
+    content.vb: >-
+      Public MustInherit Class BaseTokeniser
+          Implements ITokeniser
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Parsing.Tokens.CsvTokeniser
+  - VDS.RDF.Parsing.Tokens.Notation3Tokeniser
+  - VDS.RDF.Parsing.Tokens.NTriplesTokeniser
+  - VDS.RDF.Parsing.Tokens.SparqlTokeniser
+  - VDS.RDF.Parsing.Tokens.TriGTokeniser
+  - VDS.RDF.Parsing.Tokens.TsvTokeniser
+  - VDS.RDF.Parsing.Tokens.TurtleTokeniser
+  implements:
+  - VDS.RDF.Parsing.Tokens.ITokeniser
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Parsing.Tokens.BaseTokeniser.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.#ctor(System.IO.TextReader)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.#ctor(System.IO.TextReader)
+  id: '#ctor(System.IO.TextReader)'
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: BaseTokeniser(TextReader)
+  nameWithType: BaseTokeniser.BaseTokeniser(TextReader)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.BaseTokeniser(System.IO.TextReader)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 86
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nConstructor for the BaseTokeniser which takes in a TextReader that the Tokeniser will generate Tokens from.\n"
+  example: []
+  syntax:
+    content: protected BaseTokeniser(TextReader reader)
+    parameters:
+    - id: reader
+      type: System.IO.TextReader
+      description: TextReader to generator Tokens from.
+    content.vb: Protected Sub New(reader As TextReader)
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Format
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.Format
+  id: Format
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: Format
+  nameWithType: BaseTokeniser.Format
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Format
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Format
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 95
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets/Sets the Format that this Tokeniser is used for.\n"
+  remarks: The value set here will replace any instances of {0} specified in inputs to the <xref href="VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)" data-throw-if-not-resolved="false"></xref> function allowing messages regarding certain syntaxes not being valid in a given format to be provided.
+  example: []
+  syntax:
+    content: protected string Format { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Protected Property Format As String
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.Format*
+  modifiers.csharp:
+  - protected
+  - get
+  - set
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken
+  id: GetNextToken
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: GetNextToken()
+  nameWithType: BaseTokeniser.GetNextToken()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetNextToken
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 112
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the Next available Token from the Input.\n"
+  example: []
+  syntax:
+    content: public abstract IToken GetNextToken()
+    return:
+      type: VDS.RDF.Parsing.Tokens.IToken
+      description: ''
+    content.vb: Public MustOverride Function GetNextToken As IToken
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken*
+  exceptions:
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Parser Exception if a valid Token cannot be retrieved.
+  implements:
+  - VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken
+  id: StartNewToken
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: StartNewToken()
+  nameWithType: BaseTokeniser.StartNewToken()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StartNewToken
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 117
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nInforms the Helper that you wish to start reading a new Token.\n"
+  example: []
+  syntax:
+    content: protected void StartNewToken()
+    content.vb: Protected Sub StartNewToken
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek
+  id: Peek
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: Peek()
+  nameWithType: BaseTokeniser.Peek()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Peek
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 133
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nPeeks at the next Character.\n"
+  example: []
+  syntax:
+    content: protected char Peek()
+    return:
+      type: System.Char
+      description: ''
+    content.vb: Protected Function Peek As Char
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack
+  id: Backtrack
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: Backtrack()
+  nameWithType: BaseTokeniser.Backtrack()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Backtrack
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 149
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nAllows you to Backtrack one character (and no more).\n"
+  example: []
+  syntax:
+    content: protected void Backtrack()
+    content.vb: Protected Sub Backtrack
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Value
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.Value
+  id: Value
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: BaseTokeniser.Value
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Value
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Value
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 161
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the value of the Output Buffer.\n"
+  example: []
+  syntax:
+    content: protected string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly Property Value As String
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.Value*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Length
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.Length
+  id: Length
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: BaseTokeniser.Length
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Length
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Length
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 172
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the current length of the Output Buffer.\n"
+  example: []
+  syntax:
+    content: protected int Length { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Property Length As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.Length*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine
+  id: CurrentLine
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: CurrentLine
+  nameWithType: BaseTokeniser.CurrentLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CurrentLine
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 183
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the Current Line in the Input Stream.\n"
+  example: []
+  syntax:
+    content: protected int CurrentLine { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Property CurrentLine As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition
+  id: CurrentPosition
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: CurrentPosition
+  nameWithType: BaseTokeniser.CurrentPosition
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CurrentPosition
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 194
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the Current Position in the Input Stream.\n"
+  example: []
+  syntax:
+    content: protected int CurrentPosition { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Property CurrentPosition As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine
+  id: StartLine
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: StartLine
+  nameWithType: BaseTokeniser.StartLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StartLine
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 205
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the Start Line in the Input Stream of the current Token.\n"
+  example: []
+  syntax:
+    content: protected int StartLine { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Property StartLine As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition
+  id: StartPosition
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: StartPosition
+  nameWithType: BaseTokeniser.StartPosition
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StartPosition
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 216
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the Start Position in the Input Stream of the current Token.\n"
+  example: []
+  syntax:
+    content: protected int StartPosition { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Property StartPosition As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine
+  id: EndLine
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: EndLine
+  nameWithType: BaseTokeniser.EndLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: EndLine
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 227
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the End Line in the Input Stream of the current Token.\n"
+  example: []
+  syntax:
+    content: protected int EndLine { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Property EndLine As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition
+  id: EndPosition
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: EndPosition
+  nameWithType: BaseTokeniser.EndPosition
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: EndPosition
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 238
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets the End Position in the Input Stream of the current Token.\n"
+  example: []
+  syntax:
+    content: protected int EndPosition { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected ReadOnly Property EndPosition As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType
+  id: LastTokenType
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: LastTokenType
+  nameWithType: BaseTokeniser.LastTokenType
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LastTokenType
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 249
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets/Sets the Last Token Type.\n"
+  example: []
+  syntax:
+    content: protected int LastTokenType { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected Property LastTokenType As Integer
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType*
+  modifiers.csharp:
+  - protected
+  - get
+  - set
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked
+  commentId: P:VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked
+  id: HasBacktracked
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: HasBacktracked
+  nameWithType: BaseTokeniser.HasBacktracked
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasBacktracked
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 264
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nGets whether the Tokeniser has backtracked.\n"
+  example: []
+  syntax:
+    content: protected bool HasBacktracked { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected ReadOnly Property HasBacktracked As Boolean
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter
+  id: ConsumeCharacter
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: ConsumeCharacter()
+  nameWithType: BaseTokeniser.ConsumeCharacter()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ConsumeCharacter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 276
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nConsumes a single Character into the Output Buffer and increments the Position Counters.\n"
+  example: []
+  syntax:
+    content: protected void ConsumeCharacter()
+    content.vb: Protected Sub ConsumeCharacter
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter*
+  exceptions:
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the caller tries to read beyond the end of the Stream.
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter(System.Boolean)
+  id: ConsumeCharacter(System.Boolean)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: ConsumeCharacter(Boolean)
+  nameWithType: BaseTokeniser.ConsumeCharacter(Boolean)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ConsumeCharacter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 307
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nConsumes a single Character into the Output Buffer and increments the Position Counters.\n"
+  remarks: "\nIf <code data-dev-comment-type=\"paramref\" class=\"paramref\">allowEOF</code> is set to false then the normal behaviour is used and an error will be thrown on end of file.\n"
+  example: []
+  syntax:
+    content: protected bool ConsumeCharacter(bool allowEOF)
+    parameters:
+    - id: allowEOF
+      type: System.Boolean
+      description: Whether EOF is allowed.
+    return:
+      type: System.Boolean
+      description: True if the EOF is reached.
+    content.vb: Protected Function ConsumeCharacter(allowEOF As Boolean) As Boolean
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean)
+  id: ConsumeNewLine(System.Boolean)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: ConsumeNewLine(Boolean)
+  nameWithType: BaseTokeniser.ConsumeNewLine(Boolean)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ConsumeNewLine
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 326
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nConsumes a New Line (which may be a single \\n or \\r or the two characters following each other).\n"
+  example: []
+  syntax:
+    content: protected void ConsumeNewLine(bool asOutput)
+    parameters:
+    - id: asOutput
+      type: System.Boolean
+      description: Whether the New Line should be added to the Output Buffer.
+    content.vb: Protected Sub ConsumeNewLine(asOutput As Boolean)
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean,System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean,System.Boolean)
+  id: ConsumeNewLine(System.Boolean,System.Boolean)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: ConsumeNewLine(Boolean, Boolean)
+  nameWithType: BaseTokeniser.ConsumeNewLine(Boolean, Boolean)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine(System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ConsumeNewLine
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 336
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nConsumes a New Line (which may be a single \\n or \\r or the two characters following each other).\n"
+  example: []
+  syntax:
+    content: protected void ConsumeNewLine(bool asOutput, bool allowEOF)
+    parameters:
+    - id: asOutput
+      type: System.Boolean
+      description: Whether the New Line should be added to the Output Buffer.
+    - id: allowEOF
+      type: System.Boolean
+      description: Whether EOF is permitted instead of a New Line.
+    content.vb: Protected Sub ConsumeNewLine(asOutput As Boolean, allowEOF As Boolean)
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter
+  id: SkipCharacter
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: SkipCharacter()
+  nameWithType: BaseTokeniser.SkipCharacter()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SkipCharacter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 405
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nSkips a single Character and increments the Position Counters.\n"
+  remarks: Use when you are reading characters into some local buffer and not the global token buffer, used in String escaping.
+  example: []
+  syntax:
+    content: protected char SkipCharacter()
+    return:
+      type: System.Char
+    content.vb: Protected Function SkipCharacter As Char
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter*
+  exceptions:
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the caller tries to read beyond the end of the Stream.
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace
+  id: DiscardWhiteSpace
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: DiscardWhiteSpace()
+  nameWithType: BaseTokeniser.DiscardWhiteSpace()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DiscardWhiteSpace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 430
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHelper function which discards White Space which the Tokeniser doesn&apos;t care about and increments position counters correctly.\n"
+  example: []
+  syntax:
+    content: protected void DiscardWhiteSpace()
+    content.vb: Protected Sub DiscardWhiteSpace
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  id: HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: HandleEscapes(TokeniserEscapeMode)
+  nameWithType: BaseTokeniser.HandleEscapes(TokeniserEscapeMode)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleEscapes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 460
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHandles the standard escapes supported in all the  UTF-8 based RDF serializations.\n"
+  example: []
+  syntax:
+    content: protected void HandleEscapes(TokeniserEscapeMode mode)
+    parameters:
+    - id: mode
+      type: VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+    content.vb: Protected Sub HandleEscapes(mode As TokeniserEscapeMode)
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes
+  id: HandleComplexLocalNameEscapes
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: HandleComplexLocalNameEscapes()
+  nameWithType: BaseTokeniser.HandleComplexLocalNameEscapes()
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleComplexLocalNameEscapes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 626
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHandles the complex escapes that can occur in a local name.\n"
+  remarks: "\nUnlike <xref href=\"VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)\" data-throw-if-not-resolved=\"false\"></xref> this only unescapes unicode escapes, other escapes are simply validated and passed through for later unescaping.\n"
+  example: []
+  syntax:
+    content: protected void HandleComplexLocalNameEscapes()
+    content.vb: Protected Sub HandleComplexLocalNameEscapes
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit(System.Char)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit(System.Char)
+  id: IsHexDigit(System.Char)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: IsHexDigit(Char)
+  nameWithType: BaseTokeniser.IsHexDigit(Char)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit(System.Char)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsHexDigit
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 705
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nDetermines whether a given Character can be valid as a Hex Digit.\n"
+  example: []
+  syntax:
+    content: protected bool IsHexDigit(char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: Character to test.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Function IsHexDigit(c As Char) As Boolean
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+  id: Error(System.String)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: Error(String)
+  nameWithType: BaseTokeniser.Error(String)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Error
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 739
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHelper Function for generating Standardised Parser Errors.\n"
+  example: []
+  syntax:
+    content: protected RdfParseException Error(string detail)
+    parameters:
+    - id: detail
+      type: System.String
+      description: The Error Message.
+    return:
+      type: VDS.RDF.Parsing.RdfParseException
+      description: ''
+    content.vb: Protected Function Error(detail As String) As RdfParseException
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter(System.Char,System.String)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter(System.Char,System.String)
+  id: UnexpectedCharacter(System.Char,System.String)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: UnexpectedCharacter(Char, String)
+  nameWithType: BaseTokeniser.UnexpectedCharacter(Char, String)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter(System.Char, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UnexpectedCharacter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 758
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHelper Function for generating Standardised Parser Errors about unexpected characters.\n"
+  example: []
+  syntax:
+    content: protected RdfParseException UnexpectedCharacter(char c, string expected)
+    parameters:
+    - id: c
+      type: System.Char
+      description: Unexpected Character.
+    - id: expected
+      type: System.String
+      description: Message detailing what was expected (may be empty if no explicit expectation).
+    return:
+      type: VDS.RDF.Parsing.RdfParseException
+      description: ''
+    content.vb: Protected Function UnexpectedCharacter(c As Char, expected As String) As RdfParseException
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput(System.String)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput(System.String)
+  id: UnexpectedEndOfInput(System.String)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: UnexpectedEndOfInput(String)
+  nameWithType: BaseTokeniser.UnexpectedEndOfInput(String)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UnexpectedEndOfInput
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 774
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHelper Function for generating Standardised Parser Errors about unexpected end of input.\n"
+  example: []
+  syntax:
+    content: protected RdfParseException UnexpectedEndOfInput(string expected)
+    parameters:
+    - id: expected
+      type: System.String
+      description: Message detailing what was expected (may be empty if no explicit expectation).
+    return:
+      type: VDS.RDF.Parsing.RdfParseException
+      description: ''
+    content.vb: Protected Function UnexpectedEndOfInput(expected As String) As RdfParseException
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine(System.String)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine(System.String)
+  id: UnexpectedNewLine(System.String)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: UnexpectedNewLine(String)
+  nameWithType: BaseTokeniser.UnexpectedNewLine(String)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UnexpectedNewLine
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 791
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHelper Function for generating Standardised Parser Errors about unexpected new lines.\n"
+  example: []
+  syntax:
+    content: protected RdfParseException UnexpectedNewLine(string expected)
+    parameters:
+    - id: expected
+      type: System.String
+      description: Message detailing what was expected (may be empty if no explicit expectation).
+    return:
+      type: VDS.RDF.Parsing.RdfParseException
+      description: ''
+    content.vb: Protected Function UnexpectedNewLine(expected As String) As RdfParseException
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken(System.String,VDS.RDF.Parsing.Tokens.IToken)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken(System.String,VDS.RDF.Parsing.Tokens.IToken)
+  id: UnexpectedToken(System.String,VDS.RDF.Parsing.Tokens.IToken)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  langs:
+  - csharp
+  - vb
+  name: UnexpectedToken(String, IToken)
+  nameWithType: BaseTokeniser.UnexpectedToken(String, IToken)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken(System.String, VDS.RDF.Parsing.Tokens.IToken)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UnexpectedToken
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Tokens/BaseTokeniser.cs
+    startLine: 809
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Tokens
+  summary: "\nHelper Function for generating Standardised Parser Errors about unexpected tokens.\n"
+  example: []
+  syntax:
+    content: protected RdfParseException UnexpectedToken(string expected, IToken t)
+    parameters:
+    - id: expected
+      type: System.String
+      description: Message detailing what was expected (may be empty if no explicity expectation).
+    - id: t
+      type: VDS.RDF.Parsing.Tokens.IToken
+      description: Token that was parsed.
+    return:
+      type: VDS.RDF.Parsing.RdfParseException
+      description: ''
+    content.vb: Protected Function UnexpectedToken(expected As String, t As IToken) As RdfParseException
+  overload: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: VDS.RDF.Parsing.Tokens
+  commentId: N:VDS.RDF.Parsing.Tokens
+  name: VDS.RDF.Parsing.Tokens
+  nameWithType: VDS.RDF.Parsing.Tokens
+  fullName: VDS.RDF.Parsing.Tokens
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Parsing.Tokens.ITokeniser
+  commentId: T:VDS.RDF.Parsing.Tokens.ITokeniser
+  parent: VDS.RDF.Parsing.Tokens
+  name: ITokeniser
+  nameWithType: ITokeniser
+  fullName: VDS.RDF.Parsing.Tokens.ITokeniser
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseTokeniser>()
+  nameWithType: Extensions.AsEnumerable<BaseTokeniser>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Tokens.BaseTokeniser>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseTokeniser)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Tokens.BaseTokeniser)()
+  name.vb: AsEnumerable(Of BaseTokeniser)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseTokeniser>
+    nameWithType: Extensions.AsEnumerable<BaseTokeniser>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Tokens.BaseTokeniser>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseTokeniser)
+    nameWithType: Extensions.AsEnumerable(Of BaseTokeniser)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Tokens.BaseTokeniser)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.#ctor*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.#ctor
+  name: BaseTokeniser
+  nameWithType: BaseTokeniser.BaseTokeniser
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.BaseTokeniser
+- uid: System.IO.TextReader
+  commentId: T:System.IO.TextReader
+  parent: System.IO
+  isExternal: true
+  name: TextReader
+  nameWithType: TextReader
+  fullName: System.IO.TextReader
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  isExternal: true
+  name: Error(String)
+  nameWithType: BaseTokeniser.Error(String)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+    name: Error
+    nameWithType: BaseTokeniser.Error
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error(System.String)
+    name: Error
+    nameWithType: BaseTokeniser.Error
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Format*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.Format
+  name: Format
+  nameWithType: BaseTokeniser.Format
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Format
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  commentId: T:VDS.RDF.Parsing.Tokens.BaseTokeniser
+  parent: VDS.RDF.Parsing.Tokens
+  name: BaseTokeniser
+  nameWithType: BaseTokeniser
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser
+- uid: VDS.RDF.Parsing.RdfParseException
+  commentId: T:VDS.RDF.Parsing.RdfParseException
+  parent: VDS.RDF.Parsing
+  name: RdfParseException
+  nameWithType: RdfParseException
+  fullName: VDS.RDF.Parsing.RdfParseException
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken
+  name: GetNextToken
+  nameWithType: BaseTokeniser.GetNextToken
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.GetNextToken
+- uid: VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken
+  commentId: M:VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken
+  parent: VDS.RDF.Parsing.Tokens.ITokeniser
+  name: GetNextToken()
+  nameWithType: ITokeniser.GetNextToken()
+  fullName: VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken
+    name: GetNextToken
+    nameWithType: ITokeniser.GetNextToken
+    fullName: VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken
+    name: GetNextToken
+    nameWithType: ITokeniser.GetNextToken
+    fullName: VDS.RDF.Parsing.Tokens.ITokeniser.GetNextToken
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.IToken
+  commentId: T:VDS.RDF.Parsing.Tokens.IToken
+  parent: VDS.RDF.Parsing.Tokens
+  name: IToken
+  nameWithType: IToken
+  fullName: VDS.RDF.Parsing.Tokens.IToken
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken
+  name: StartNewToken
+  nameWithType: BaseTokeniser.StartNewToken
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartNewToken
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek
+  name: Peek
+  nameWithType: BaseTokeniser.Peek
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Peek
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  name: Char
+  nameWithType: Char
+  fullName: System.Char
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack
+  name: Backtrack
+  nameWithType: BaseTokeniser.Backtrack
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Backtrack
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Value*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.Value
+  name: Value
+  nameWithType: BaseTokeniser.Value
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Value
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Length*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.Length
+  name: Length
+  nameWithType: BaseTokeniser.Length
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Length
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine
+  name: CurrentLine
+  nameWithType: BaseTokeniser.CurrentLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentLine
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition
+  name: CurrentPosition
+  nameWithType: BaseTokeniser.CurrentPosition
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.CurrentPosition
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine
+  name: StartLine
+  nameWithType: BaseTokeniser.StartLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartLine
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition
+  name: StartPosition
+  nameWithType: BaseTokeniser.StartPosition
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.StartPosition
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine
+  name: EndLine
+  nameWithType: BaseTokeniser.EndLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndLine
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition
+  name: EndPosition
+  nameWithType: BaseTokeniser.EndPosition
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.EndPosition
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType
+  name: LastTokenType
+  nameWithType: BaseTokeniser.LastTokenType
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.LastTokenType
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked
+  name: HasBacktracked
+  nameWithType: BaseTokeniser.HasBacktracked
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HasBacktracked
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter
+  name: ConsumeCharacter
+  nameWithType: BaseTokeniser.ConsumeCharacter
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeCharacter
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine
+  name: ConsumeNewLine
+  nameWithType: BaseTokeniser.ConsumeNewLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.ConsumeNewLine
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter
+  name: SkipCharacter
+  nameWithType: BaseTokeniser.SkipCharacter
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.SkipCharacter
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace
+  name: DiscardWhiteSpace
+  nameWithType: BaseTokeniser.DiscardWhiteSpace
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.DiscardWhiteSpace
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes
+  name: HandleEscapes
+  nameWithType: BaseTokeniser.HandleEscapes
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes
+- uid: VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+  commentId: T:VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+  parent: VDS.RDF.Parsing.Tokens
+  name: TokeniserEscapeMode
+  nameWithType: TokeniserEscapeMode
+  fullName: VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  commentId: M:VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  parent: VDS.RDF.Parsing.Tokens.BaseTokeniser
+  name: HandleEscapes(TokeniserEscapeMode)
+  nameWithType: BaseTokeniser.HandleEscapes(TokeniserEscapeMode)
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+    name: HandleEscapes
+    nameWithType: BaseTokeniser.HandleEscapes
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+    name: TokeniserEscapeMode
+    nameWithType: TokeniserEscapeMode
+    fullName: VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes(VDS.RDF.Parsing.Tokens.TokeniserEscapeMode)
+    name: HandleEscapes
+    nameWithType: BaseTokeniser.HandleEscapes
+    fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleEscapes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+    name: TokeniserEscapeMode
+    nameWithType: TokeniserEscapeMode
+    fullName: VDS.RDF.Parsing.Tokens.TokeniserEscapeMode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes
+  name: HandleComplexLocalNameEscapes
+  nameWithType: BaseTokeniser.HandleComplexLocalNameEscapes
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.HandleComplexLocalNameEscapes
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit
+  name: IsHexDigit
+  nameWithType: BaseTokeniser.IsHexDigit
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.IsHexDigit
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.Error
+  name: Error
+  nameWithType: BaseTokeniser.Error
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.Error
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter
+  name: UnexpectedCharacter
+  nameWithType: BaseTokeniser.UnexpectedCharacter
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedCharacter
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput
+  name: UnexpectedEndOfInput
+  nameWithType: BaseTokeniser.UnexpectedEndOfInput
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedEndOfInput
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine
+  name: UnexpectedNewLine
+  nameWithType: BaseTokeniser.UnexpectedNewLine
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedNewLine
+- uid: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken*
+  commentId: Overload:VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken
+  name: UnexpectedToken
+  nameWithType: BaseTokeniser.UnexpectedToken
+  fullName: VDS.RDF.Parsing.Tokens.BaseTokeniser.UnexpectedToken

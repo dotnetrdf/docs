@@ -1,0 +1,983 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Algebra.LazyBgp
+  commentId: T:VDS.RDF.Query.Algebra.LazyBgp
+  id: LazyBgp
+  parent: VDS.RDF.Query.Algebra
+  children:
+  - VDS.RDF.Query.Algebra.LazyBgp.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern})
+  - VDS.RDF.Query.Algebra.LazyBgp.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern},System.Int32)
+  - VDS.RDF.Query.Algebra.LazyBgp.#ctor(VDS.RDF.Query.Patterns.ITriplePattern)
+  - VDS.RDF.Query.Algebra.LazyBgp.#ctor(VDS.RDF.Query.Patterns.ITriplePattern,System.Int32)
+  - VDS.RDF.Query.Algebra.LazyBgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Algebra.LazyBgp.ToString
+  langs:
+  - csharp
+  - vb
+  name: LazyBgp
+  nameWithType: LazyBgp
+  fullName: VDS.RDF.Query.Algebra.LazyBgp
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LazyBgp
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+    startLine: 48
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nRepresents a BGP which is a set of Triple Patterns.\n"
+  remarks: "\n<p>\nA Lazy BGP differs from a BGP in that rather than evaluating each Triple Pattern in turn it evaluates across all Triple Patterns.  This is used for queries where we are only want to retrieve a limited number of solutions.\n</p>\n<p>\nA Lazy BGP can only contain concrete Triple Patterns and/or FILTERs and not any of other the specialised Triple Pattern classes.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class LazyBgp : Bgp, IBgp, ITerminalOperator, ISparqlAlgebra'
+    content.vb: >-
+      Public Class LazyBgp
+          Inherits Bgp
+          Implements IBgp, ITerminalOperator, ISparqlAlgebra
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Algebra.Bgp
+  implements:
+  - VDS.RDF.Query.Algebra.IBgp
+  - VDS.RDF.Query.Algebra.ITerminalOperator
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra
+  inheritedMembers:
+  - VDS.RDF.Query.Algebra.Bgp._triplePatterns
+  - VDS.RDF.Query.Algebra.Bgp.PatternCount
+  - VDS.RDF.Query.Algebra.Bgp.TriplePatterns
+  - VDS.RDF.Query.Algebra.Bgp.Variables
+  - VDS.RDF.Query.Algebra.Bgp.FixedVariables
+  - VDS.RDF.Query.Algebra.Bgp.FloatingVariables
+  - VDS.RDF.Query.Algebra.Bgp.IsEmpty
+  - VDS.RDF.Query.Algebra.Bgp.ToQuery
+  - VDS.RDF.Query.Algebra.Bgp.ToGraphPattern
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Algebra.LazyBgp.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Algebra.LazyBgp.#ctor(VDS.RDF.Query.Patterns.ITriplePattern)
+  commentId: M:VDS.RDF.Query.Algebra.LazyBgp.#ctor(VDS.RDF.Query.Patterns.ITriplePattern)
+  id: '#ctor(VDS.RDF.Query.Patterns.ITriplePattern)'
+  parent: VDS.RDF.Query.Algebra.LazyBgp
+  langs:
+  - csharp
+  - vb
+  name: LazyBgp(ITriplePattern)
+  nameWithType: LazyBgp.LazyBgp(ITriplePattern)
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.LazyBgp(VDS.RDF.Query.Patterns.ITriplePattern)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a Streamed BGP containing a single Triple Pattern.\n"
+  example: []
+  syntax:
+    content: public LazyBgp(ITriplePattern p)
+    parameters:
+    - id: p
+      type: VDS.RDF.Query.Patterns.ITriplePattern
+      description: Triple Pattern.
+    content.vb: Public Sub New(p As ITriplePattern)
+  overload: VDS.RDF.Query.Algebra.LazyBgp.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.LazyBgp.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern})
+  commentId: M:VDS.RDF.Query.Algebra.LazyBgp.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern})
+  id: '#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern})'
+  parent: VDS.RDF.Query.Algebra.LazyBgp
+  langs:
+  - csharp
+  - vb
+  name: LazyBgp(IEnumerable<ITriplePattern>)
+  nameWithType: LazyBgp.LazyBgp(IEnumerable<ITriplePattern>)
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.LazyBgp(System.Collections.Generic.IEnumerable<VDS.RDF.Query.Patterns.ITriplePattern>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a Streamed BGP containing a set of Triple Patterns.\n"
+  example: []
+  syntax:
+    content: public LazyBgp(IEnumerable<ITriplePattern> ps)
+    parameters:
+    - id: ps
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern}
+      description: Triple Patterns.
+    content.vb: Public Sub New(ps As IEnumerable(Of ITriplePattern))
+  overload: VDS.RDF.Query.Algebra.LazyBgp.#ctor*
+  nameWithType.vb: LazyBgp.LazyBgp(IEnumerable(Of ITriplePattern))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.Algebra.LazyBgp.LazyBgp(System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.Patterns.ITriplePattern))
+  name.vb: LazyBgp(IEnumerable(Of ITriplePattern))
+- uid: VDS.RDF.Query.Algebra.LazyBgp.#ctor(VDS.RDF.Query.Patterns.ITriplePattern,System.Int32)
+  commentId: M:VDS.RDF.Query.Algebra.LazyBgp.#ctor(VDS.RDF.Query.Patterns.ITriplePattern,System.Int32)
+  id: '#ctor(VDS.RDF.Query.Patterns.ITriplePattern,System.Int32)'
+  parent: VDS.RDF.Query.Algebra.LazyBgp
+  langs:
+  - csharp
+  - vb
+  name: LazyBgp(ITriplePattern, Int32)
+  nameWithType: LazyBgp.LazyBgp(ITriplePattern, Int32)
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.LazyBgp(VDS.RDF.Query.Patterns.ITriplePattern, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+    startLine: 78
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a Streamed BGP containing a single Triple Pattern.\n"
+  example: []
+  syntax:
+    content: public LazyBgp(ITriplePattern p, int requiredResults)
+    parameters:
+    - id: p
+      type: VDS.RDF.Query.Patterns.ITriplePattern
+      description: Triple Pattern.
+    - id: requiredResults
+      type: System.Int32
+      description: The number of Results the BGP should attempt to return.
+    content.vb: Public Sub New(p As ITriplePattern, requiredResults As Integer)
+  overload: VDS.RDF.Query.Algebra.LazyBgp.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.LazyBgp.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern},System.Int32)
+  commentId: M:VDS.RDF.Query.Algebra.LazyBgp.#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern},System.Int32)
+  id: '#ctor(System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern},System.Int32)'
+  parent: VDS.RDF.Query.Algebra.LazyBgp
+  langs:
+  - csharp
+  - vb
+  name: LazyBgp(IEnumerable<ITriplePattern>, Int32)
+  nameWithType: LazyBgp.LazyBgp(IEnumerable<ITriplePattern>, Int32)
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.LazyBgp(System.Collections.Generic.IEnumerable<VDS.RDF.Query.Patterns.ITriplePattern>, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+    startLine: 90
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a Streamed BGP containing a set of Triple Patterns.\n"
+  example: []
+  syntax:
+    content: public LazyBgp(IEnumerable<ITriplePattern> ps, int requiredResults)
+    parameters:
+    - id: ps
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern}
+      description: Triple Patterns.
+    - id: requiredResults
+      type: System.Int32
+      description: The number of Results the BGP should attempt to return.
+    content.vb: Public Sub New(ps As IEnumerable(Of ITriplePattern), requiredResults As Integer)
+  overload: VDS.RDF.Query.Algebra.LazyBgp.#ctor*
+  nameWithType.vb: LazyBgp.LazyBgp(IEnumerable(Of ITriplePattern), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.Algebra.LazyBgp.LazyBgp(System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.Patterns.ITriplePattern), System.Int32)
+  name.vb: LazyBgp(IEnumerable(Of ITriplePattern), Int32)
+- uid: VDS.RDF.Query.Algebra.LazyBgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.LazyBgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  id: Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.LazyBgp
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: LazyBgp.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+    startLine: 107
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nEvaluates the BGP against the Evaluation Context.\n"
+  example: []
+  syntax:
+    content: public override BaseMultiset Evaluate(SparqlEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: Evaluation Context.
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+      description: ''
+    content.vb: Public Overrides Function Evaluate(context As SparqlEvaluationContext) As BaseMultiset
+  overridden: VDS.RDF.Query.Algebra.Bgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  overload: VDS.RDF.Query.Algebra.LazyBgp.Evaluate*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Algebra.LazyBgp.ToString
+  commentId: M:VDS.RDF.Query.Algebra.LazyBgp.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Algebra.LazyBgp
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: LazyBgp.ToString()
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/LazyBgp.cs
+    startLine: 553
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the String representation of the Algebra.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: VDS.RDF.Query.Algebra.Bgp.ToString
+  overload: VDS.RDF.Query.Algebra.LazyBgp.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Algebra.Bgp
+  commentId: T:VDS.RDF.Query.Algebra.Bgp
+  parent: VDS.RDF.Query.Algebra
+  name: Bgp
+  nameWithType: Bgp
+  fullName: VDS.RDF.Query.Algebra.Bgp
+- uid: VDS.RDF.Query.Algebra.IBgp
+  commentId: T:VDS.RDF.Query.Algebra.IBgp
+  parent: VDS.RDF.Query.Algebra
+  name: IBgp
+  nameWithType: IBgp
+  fullName: VDS.RDF.Query.Algebra.IBgp
+- uid: VDS.RDF.Query.Algebra.ITerminalOperator
+  commentId: T:VDS.RDF.Query.Algebra.ITerminalOperator
+  parent: VDS.RDF.Query.Algebra
+  name: ITerminalOperator
+  nameWithType: ITerminalOperator
+  fullName: VDS.RDF.Query.Algebra.ITerminalOperator
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: VDS.RDF.Query.Algebra.Bgp._triplePatterns
+  commentId: F:VDS.RDF.Query.Algebra.Bgp._triplePatterns
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: _triplePatterns
+  nameWithType: Bgp._triplePatterns
+  fullName: VDS.RDF.Query.Algebra.Bgp._triplePatterns
+- uid: VDS.RDF.Query.Algebra.Bgp.PatternCount
+  commentId: P:VDS.RDF.Query.Algebra.Bgp.PatternCount
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: PatternCount
+  nameWithType: Bgp.PatternCount
+  fullName: VDS.RDF.Query.Algebra.Bgp.PatternCount
+- uid: VDS.RDF.Query.Algebra.Bgp.TriplePatterns
+  commentId: P:VDS.RDF.Query.Algebra.Bgp.TriplePatterns
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: TriplePatterns
+  nameWithType: Bgp.TriplePatterns
+  fullName: VDS.RDF.Query.Algebra.Bgp.TriplePatterns
+- uid: VDS.RDF.Query.Algebra.Bgp.Variables
+  commentId: P:VDS.RDF.Query.Algebra.Bgp.Variables
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: Variables
+  nameWithType: Bgp.Variables
+  fullName: VDS.RDF.Query.Algebra.Bgp.Variables
+- uid: VDS.RDF.Query.Algebra.Bgp.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.Bgp.FixedVariables
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: FixedVariables
+  nameWithType: Bgp.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.Bgp.FixedVariables
+- uid: VDS.RDF.Query.Algebra.Bgp.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.Bgp.FloatingVariables
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: FloatingVariables
+  nameWithType: Bgp.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.Bgp.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.Bgp.IsEmpty
+  commentId: P:VDS.RDF.Query.Algebra.Bgp.IsEmpty
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: IsEmpty
+  nameWithType: Bgp.IsEmpty
+  fullName: VDS.RDF.Query.Algebra.Bgp.IsEmpty
+- uid: VDS.RDF.Query.Algebra.Bgp.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.Bgp.ToQuery
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: ToQuery()
+  nameWithType: Bgp.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.Bgp.ToQuery()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.Bgp.ToQuery
+    name: ToQuery
+    nameWithType: Bgp.ToQuery
+    fullName: VDS.RDF.Query.Algebra.Bgp.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.Bgp.ToQuery
+    name: ToQuery
+    nameWithType: Bgp.ToQuery
+    fullName: VDS.RDF.Query.Algebra.Bgp.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.Bgp.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.Bgp.ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: ToGraphPattern()
+  nameWithType: Bgp.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.Bgp.ToGraphPattern()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.Bgp.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: Bgp.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.Bgp.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.Bgp.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: Bgp.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.Bgp.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.LazyBgp.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<LazyBgp>()
+  nameWithType: Extensions.AsEnumerable<LazyBgp>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.LazyBgp>()
+  nameWithType.vb: Extensions.AsEnumerable(Of LazyBgp)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.LazyBgp)()
+  name.vb: AsEnumerable(Of LazyBgp)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<LazyBgp>
+    nameWithType: Extensions.AsEnumerable<LazyBgp>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.LazyBgp>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of LazyBgp)
+    nameWithType: Extensions.AsEnumerable(Of LazyBgp)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.LazyBgp)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Algebra.LazyBgp.#ctor*
+  commentId: Overload:VDS.RDF.Query.Algebra.LazyBgp.#ctor
+  name: LazyBgp
+  nameWithType: LazyBgp.LazyBgp
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.LazyBgp
+- uid: VDS.RDF.Query.Patterns.ITriplePattern
+  commentId: T:VDS.RDF.Query.Patterns.ITriplePattern
+  parent: VDS.RDF.Query.Patterns
+  name: ITriplePattern
+  nameWithType: ITriplePattern
+  fullName: VDS.RDF.Query.Patterns.ITriplePattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.Patterns.ITriplePattern}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ITriplePattern>
+  nameWithType: IEnumerable<ITriplePattern>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.Patterns.ITriplePattern>
+  nameWithType.vb: IEnumerable(Of ITriplePattern)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.Patterns.ITriplePattern)
+  name.vb: IEnumerable(Of ITriplePattern)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.Patterns.ITriplePattern
+    name: ITriplePattern
+    nameWithType: ITriplePattern
+    fullName: VDS.RDF.Query.Patterns.ITriplePattern
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.Patterns.ITriplePattern
+    name: ITriplePattern
+    nameWithType: ITriplePattern
+    fullName: VDS.RDF.Query.Patterns.ITriplePattern
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.Algebra.Bgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.Bgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: Bgp.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.Bgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.Bgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: Bgp.Evaluate
+    fullName: VDS.RDF.Query.Algebra.Bgp.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.Bgp.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: Bgp.Evaluate
+    fullName: VDS.RDF.Query.Algebra.Bgp.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.LazyBgp.Evaluate*
+  commentId: Overload:VDS.RDF.Query.Algebra.LazyBgp.Evaluate
+  name: Evaluate
+  nameWithType: LazyBgp.Evaluate
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.Evaluate
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: VDS.RDF.Query.Algebra.BaseMultiset
+  commentId: T:VDS.RDF.Query.Algebra.BaseMultiset
+  parent: VDS.RDF.Query.Algebra
+  name: BaseMultiset
+  nameWithType: BaseMultiset
+  fullName: VDS.RDF.Query.Algebra.BaseMultiset
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Algebra.Bgp.ToString
+  commentId: M:VDS.RDF.Query.Algebra.Bgp.ToString
+  parent: VDS.RDF.Query.Algebra.Bgp
+  name: ToString()
+  nameWithType: Bgp.ToString()
+  fullName: VDS.RDF.Query.Algebra.Bgp.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.Bgp.ToString
+    name: ToString
+    nameWithType: Bgp.ToString
+    fullName: VDS.RDF.Query.Algebra.Bgp.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.Bgp.ToString
+    name: ToString
+    nameWithType: Bgp.ToString
+    fullName: VDS.RDF.Query.Algebra.Bgp.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.LazyBgp.ToString*
+  commentId: Overload:VDS.RDF.Query.Algebra.LazyBgp.ToString
+  name: ToString
+  nameWithType: LazyBgp.ToString
+  fullName: VDS.RDF.Query.Algebra.LazyBgp.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

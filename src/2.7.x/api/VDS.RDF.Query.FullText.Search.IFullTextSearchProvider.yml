@@ -1,0 +1,657 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  commentId: T:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  id: IFullTextSearchProvider
+  parent: VDS.RDF.Query.FullText.Search
+  children:
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String)
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Double)
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Double,System.Int32)
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Int32)
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String)
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Double)
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Double,System.Int32)
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IFullTextSearchProvider
+  nameWithType: IFullTextSearchProvider
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IFullTextSearchProvider
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 39
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nInterface for classes that provide full text search capability.\n"
+  remarks: "\nThe <strong>Match()</strong> methods may allow for provider specific query syntaxes depending on the the underlying provider.\n"
+  example: []
+  syntax:
+    content: 'public interface IFullTextSearchProvider : IDisposable'
+    content.vb: >-
+      Public Interface IFullTextSearchProvider
+          Inherits IDisposable
+  extensionMethods:
+  - VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Double,System.Int32)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Double,System.Int32)
+  id: Match(String,System.Double,System.Int32)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(String, Double, Int32)
+  nameWithType: IFullTextSearchProvider.Match(String, Double, Int32)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String, System.Double, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 49
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(String text, double scoreThreshold, int limit)
+    parameters:
+    - id: text
+      type: String
+      description: Search Query.
+    - id: scoreThreshold
+      type: System.Double
+      description: Score Threshold.
+    - id: limit
+      type: System.Int32
+      description: Result Limit.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+      description: ''
+    content.vb: Function Match(text As String, scoreThreshold As Double, limit As Integer) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Double)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Double)
+  id: Match(String,System.Double)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(String, Double)
+  nameWithType: IFullTextSearchProvider.Match(String, Double)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String, System.Double)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(String text, double scoreThreshold)
+    parameters:
+    - id: text
+      type: String
+      description: Search Query.
+    - id: scoreThreshold
+      type: System.Double
+      description: Score Threshold.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+    content.vb: Function Match(text As String, scoreThreshold As Double) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Int32)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String,System.Int32)
+  id: Match(String,System.Int32)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(String, Int32)
+  nameWithType: IFullTextSearchProvider.Match(String, Int32)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 63
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(String text, int limit)
+    parameters:
+    - id: text
+      type: String
+      description: Search Query.
+    - id: limit
+      type: System.Int32
+      description: Result Limit.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+    content.vb: Function Match(text As String, limit As Integer) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String)
+  id: Match(String)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(String)
+  nameWithType: IFullTextSearchProvider.Match(String)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 69
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(String text)
+    parameters:
+    - id: text
+      type: String
+      description: Search Query.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+    content.vb: Function Match(text As String) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Double,System.Int32)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Double,System.Int32)
+  id: Match(IEnumerable{Uri},String,System.Double,System.Int32)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(IEnumerable<Uri>, String, Double, Int32)
+  nameWithType: IFullTextSearchProvider.Match(IEnumerable<Uri>, String, Double, Int32)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable<Uri>, String, System.Double, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 79
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(IEnumerable<Uri> graphUris, String text, double scoreThreshold, int limit)
+    parameters:
+    - id: graphUris
+      type: IEnumerable{Uri}
+      description: Graph URIs.
+    - id: text
+      type: String
+      description: Search Query.
+    - id: scoreThreshold
+      type: System.Double
+      description: Score Threshold.
+    - id: limit
+      type: System.Int32
+      description: Result Limit.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+      description: ''
+    content.vb: Function Match(graphUris As IEnumerable(Of Uri), text As String, scoreThreshold As Double, limit As Integer) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+  nameWithType.vb: IFullTextSearchProvider.Match(IEnumerable(Of Uri), String, Double, Int32)
+  fullName.vb: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable(Of Uri), String, System.Double, System.Int32)
+  name.vb: Match(IEnumerable(Of Uri), String, Double, Int32)
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Double)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Double)
+  id: Match(IEnumerable{Uri},String,System.Double)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(IEnumerable<Uri>, String, Double)
+  nameWithType: IFullTextSearchProvider.Match(IEnumerable<Uri>, String, Double)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable<Uri>, String, System.Double)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 87
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(IEnumerable<Uri> graphUris, String text, double scoreThreshold)
+    parameters:
+    - id: graphUris
+      type: IEnumerable{Uri}
+      description: Graph URIs.
+    - id: text
+      type: String
+      description: Search Query.
+    - id: scoreThreshold
+      type: System.Double
+      description: Score Threshold.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+    content.vb: Function Match(graphUris As IEnumerable(Of Uri), text As String, scoreThreshold As Double) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+  nameWithType.vb: IFullTextSearchProvider.Match(IEnumerable(Of Uri), String, Double)
+  fullName.vb: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable(Of Uri), String, System.Double)
+  name.vb: Match(IEnumerable(Of Uri), String, Double)
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Int32)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String,System.Int32)
+  id: Match(IEnumerable{Uri},String,System.Int32)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(IEnumerable<Uri>, String, Int32)
+  nameWithType: IFullTextSearchProvider.Match(IEnumerable<Uri>, String, Int32)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable<Uri>, String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 95
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(IEnumerable<Uri> graphUris, String text, int limit)
+    parameters:
+    - id: graphUris
+      type: IEnumerable{Uri}
+      description: Graph URIs.
+    - id: text
+      type: String
+      description: Search Query.
+    - id: limit
+      type: System.Int32
+      description: Result Limit.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+    content.vb: Function Match(graphUris As IEnumerable(Of Uri), text As String, limit As Integer) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+  nameWithType.vb: IFullTextSearchProvider.Match(IEnumerable(Of Uri), String, Int32)
+  fullName.vb: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable(Of Uri), String, System.Int32)
+  name.vb: Match(IEnumerable(Of Uri), String, Int32)
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String)
+  commentId: M:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable{Uri},String)
+  id: Match(IEnumerable{Uri},String)
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: Match(IEnumerable<Uri>, String)
+  nameWithType: IFullTextSearchProvider.Match(IEnumerable<Uri>, String)
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable<Uri>, String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Match
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 102
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nSearches for matches for specific text.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IFullTextSearchResult> Match(IEnumerable<Uri> graphUris, String text)
+    parameters:
+    - id: graphUris
+      type: IEnumerable{Uri}
+      description: Graph URIs.
+    - id: text
+      type: String
+      description: Search Query.
+    return:
+      type: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+    content.vb: Function Match(graphUris As IEnumerable(Of Uri), text As String) As IEnumerable(Of IFullTextSearchResult)
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+  nameWithType.vb: IFullTextSearchProvider.Match(IEnumerable(Of Uri), String)
+  fullName.vb: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match(IEnumerable(Of Uri), String)
+  name.vb: Match(IEnumerable(Of Uri), String)
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced
+  commentId: P:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced
+  id: IsAutoSynced
+  parent: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider
+  langs:
+  - csharp
+  - vb
+  name: IsAutoSynced
+  nameWithType: IFullTextSearchProvider.IsAutoSynced
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsAutoSynced
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/FullText/Search/IFullTextSearchProvider.cs
+    startLine: 110
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.FullText.Search
+  summary: "\nGets whether the search provider is automatically synced with the index i.e. whether queries will always return results based on the latest state of the index.\n"
+  remarks: "\nSome implementations may allow this behaviour to be configured while for others this feature may always be on/off.\n"
+  example: []
+  syntax:
+    content: bool IsAutoSynced { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsAutoSynced As Boolean
+  overload: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: VDS.RDF.Query.FullText.Search
+  commentId: N:VDS.RDF.Query.FullText.Search
+  name: VDS.RDF.Query.FullText.Search
+  nameWithType: VDS.RDF.Query.FullText.Search
+  fullName: VDS.RDF.Query.FullText.Search
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IFullTextSearchProvider>()
+  nameWithType: Extensions.AsEnumerable<IFullTextSearchProvider>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.FullText.Search.IFullTextSearchProvider>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IFullTextSearchProvider)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.FullText.Search.IFullTextSearchProvider)()
+  name.vb: AsEnumerable(Of IFullTextSearchProvider)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IFullTextSearchProvider>
+    nameWithType: Extensions.AsEnumerable<IFullTextSearchProvider>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.FullText.Search.IFullTextSearchProvider>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IFullTextSearchProvider)
+    nameWithType: Extensions.AsEnumerable(Of IFullTextSearchProvider)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.FullText.Search.IFullTextSearchProvider)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match*
+  commentId: Overload:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match
+  name: Match
+  nameWithType: IFullTextSearchProvider.Match
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.Match
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}
+  commentId: '!:IEnumerable{VDS.RDF.Query.FullText.Search.IFullTextSearchResult}'
+  definition: IEnumerable`1
+  name: IEnumerable<IFullTextSearchResult>
+  nameWithType: IEnumerable<IFullTextSearchResult>
+  fullName: IEnumerable<VDS.RDF.Query.FullText.Search.IFullTextSearchResult>
+  nameWithType.vb: IEnumerable(Of IFullTextSearchResult)
+  fullName.vb: IEnumerable(Of VDS.RDF.Query.FullText.Search.IFullTextSearchResult)
+  name.vb: IEnumerable(Of IFullTextSearchResult)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.FullText.Search.IFullTextSearchResult
+    name: IFullTextSearchResult
+    nameWithType: IFullTextSearchResult
+    fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.FullText.Search.IFullTextSearchResult
+    name: IFullTextSearchResult
+    nameWithType: IFullTextSearchResult
+    fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable{Uri}
+  commentId: '!:IEnumerable{Uri}'
+  definition: IEnumerable`1
+  name: IEnumerable<Uri>
+  nameWithType: IEnumerable<Uri>
+  fullName: IEnumerable<Uri>
+  nameWithType.vb: IEnumerable(Of Uri)
+  fullName.vb: IEnumerable(Of Uri)
+  name.vb: IEnumerable(Of Uri)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced*
+  commentId: Overload:VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced
+  name: IsAutoSynced
+  nameWithType: IFullTextSearchProvider.IsAutoSynced
+  fullName: VDS.RDF.Query.FullText.Search.IFullTextSearchProvider.IsAutoSynced
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

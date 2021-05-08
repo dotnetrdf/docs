@@ -1,0 +1,904 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  commentId: T:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  id: PropertyFunctionFactory
+  parent: VDS.RDF.Query.PropertyFunctions
+  children:
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri)
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory})
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(System.Type)
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory},VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  - VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  langs:
+  - csharp
+  - vb
+  name: PropertyFunctionFactory
+  nameWithType: PropertyFunctionFactory
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PropertyFunctionFactory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 36
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nFactory for creating property functions.\n"
+  example: []
+  syntax:
+    content: public static class PropertyFunctionFactory
+    content.vb: Public Module PropertyFunctionFactory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount
+  commentId: P:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount
+  id: FactoryCount
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: FactoryCount
+  nameWithType: PropertyFunctionFactory.FactoryCount
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FactoryCount
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 43
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nGets the number of globally registered factories.\n"
+  example: []
+  syntax:
+    content: public static int FactoryCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared ReadOnly Property FactoryCount As Integer
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  id: AddFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: AddFactory(IPropertyFunctionFactory)
+  nameWithType: PropertyFunctionFactory.AddFactory(IPropertyFunctionFactory)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddFactory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nAdds a globally registered factory.\n"
+  example: []
+  syntax:
+    content: public static void AddFactory(IPropertyFunctionFactory factory)
+    parameters:
+    - id: factory
+      type: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+      description: Factory.
+    content.vb: Public Shared Sub AddFactory(factory As IPropertyFunctionFactory)
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  id: RemoveFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: RemoveFactory(IPropertyFunctionFactory)
+  nameWithType: PropertyFunctionFactory.RemoveFactory(IPropertyFunctionFactory)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveFactory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nRemoves a globally registered factory.\n"
+  example: []
+  syntax:
+    content: public static void RemoveFactory(IPropertyFunctionFactory factory)
+    parameters:
+    - id: factory
+      type: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+      description: Factory.
+    content.vb: Public Shared Sub RemoveFactory(factory As IPropertyFunctionFactory)
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(System.Type)
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(System.Type)
+  id: IsRegisteredFactory(System.Type)
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: IsRegisteredFactory(Type)
+  nameWithType: PropertyFunctionFactory.IsRegisteredFactory(Type)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsRegisteredFactory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 80
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nGets whether a factory is registered.\n"
+  example: []
+  syntax:
+    content: public static bool IsRegisteredFactory(Type factoryType)
+    parameters:
+    - id: factoryType
+      type: System.Type
+      description: Factory Type.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsRegisteredFactory(factoryType As Type) As Boolean
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  id: IsRegisteredFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: IsRegisteredFactory(IPropertyFunctionFactory)
+  nameWithType: PropertyFunctionFactory.IsRegisteredFactory(IPropertyFunctionFactory)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory(VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsRegisteredFactory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nGets whether a factory is registered.\n"
+  example: []
+  syntax:
+    content: public static bool IsRegisteredFactory(IPropertyFunctionFactory factory)
+    parameters:
+    - id: factory
+      type: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+      description: Factory.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsRegisteredFactory(factory As IPropertyFunctionFactory) As Boolean
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri)
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri)
+  id: IsPropertyFunction(System.Uri)
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: IsPropertyFunction(Uri)
+  nameWithType: PropertyFunctionFactory.IsPropertyFunction(Uri)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsPropertyFunction
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 106
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nGets whether a URI is considered a property function by the global factories.\n"
+  example: []
+  syntax:
+    content: public static bool IsPropertyFunction(Uri u)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Function URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsPropertyFunction(u As Uri) As Boolean
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory})
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory})
+  id: IsPropertyFunction(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory})
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: IsPropertyFunction(Uri, IEnumerable<IPropertyFunctionFactory>)
+  nameWithType: PropertyFunctionFactory.IsPropertyFunction(Uri, IEnumerable<IPropertyFunctionFactory>)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsPropertyFunction
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 117
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nGets whether a URI is considered a property function by any global/local factory.\n"
+  example: []
+  syntax:
+    content: public static bool IsPropertyFunction(Uri u, IEnumerable<IPropertyFunctionFactory> localFactories)
+    parameters:
+    - id: u
+      type: System.Uri
+      description: Function URI.
+    - id: localFactories
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory}
+      description: Locally scoped factories.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsPropertyFunction(u As Uri, localFactories As IEnumerable(Of IPropertyFunctionFactory)) As Boolean
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction*
+  nameWithType.vb: PropertyFunctionFactory.IsPropertyFunction(Uri, IEnumerable(Of IPropertyFunctionFactory))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory))
+  name.vb: IsPropertyFunction(Uri, IEnumerable(Of IPropertyFunctionFactory))
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  id: TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: TryCreatePropertyFunction(PropertyFunctionInfo, out IPropertyFunctionPattern)
+  nameWithType: PropertyFunctionFactory.TryCreatePropertyFunction(PropertyFunctionInfo, out IPropertyFunctionPattern)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo, out VDS.RDF.Query.Patterns.IPropertyFunctionPattern)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TryCreatePropertyFunction
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 128
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nTries to create a property function.\n"
+  example: []
+  syntax:
+    content: public static bool TryCreatePropertyFunction(PropertyFunctionInfo info, out IPropertyFunctionPattern function)
+    parameters:
+    - id: info
+      type: VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo
+      description: Property Function information.
+    - id: function
+      type: VDS.RDF.Query.Patterns.IPropertyFunctionPattern
+      description: Property Function.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function TryCreatePropertyFunction(info As PropertyFunctionInfo, ByRef function As IPropertyFunctionPattern) As Boolean
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction*
+  nameWithType.vb: PropertyFunctionFactory.TryCreatePropertyFunction(PropertyFunctionInfo, ByRef IPropertyFunctionPattern)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo, ByRef VDS.RDF.Query.Patterns.IPropertyFunctionPattern)
+  name.vb: TryCreatePropertyFunction(PropertyFunctionInfo, ByRef IPropertyFunctionPattern)
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory},VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  commentId: M:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory},VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  id: TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo,System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory},VDS.RDF.Query.Patterns.IPropertyFunctionPattern@)
+  parent: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory
+  langs:
+  - csharp
+  - vb
+  name: TryCreatePropertyFunction(PropertyFunctionInfo, IEnumerable<IPropertyFunctionFactory>, out IPropertyFunctionPattern)
+  nameWithType: PropertyFunctionFactory.TryCreatePropertyFunction(PropertyFunctionInfo, IEnumerable<IPropertyFunctionFactory>, out IPropertyFunctionPattern)
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo, System.Collections.Generic.IEnumerable<VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory>, out VDS.RDF.Query.Patterns.IPropertyFunctionPattern)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TryCreatePropertyFunction
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/PropertyFunctions/PropertyFunctionFactory.cs
+    startLine: 140
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.PropertyFunctions
+  summary: "\nTries to create a property function.\n"
+  example: []
+  syntax:
+    content: public static bool TryCreatePropertyFunction(PropertyFunctionInfo info, IEnumerable<IPropertyFunctionFactory> localFactories, out IPropertyFunctionPattern function)
+    parameters:
+    - id: info
+      type: VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo
+      description: Property Function information.
+    - id: localFactories
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory}
+      description: Locally Scoped factories.
+    - id: function
+      type: VDS.RDF.Query.Patterns.IPropertyFunctionPattern
+      description: Property Function.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function TryCreatePropertyFunction(info As PropertyFunctionInfo, localFactories As IEnumerable(Of IPropertyFunctionFactory), ByRef function As IPropertyFunctionPattern) As Boolean
+  overload: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction*
+  nameWithType.vb: PropertyFunctionFactory.TryCreatePropertyFunction(PropertyFunctionInfo, IEnumerable(Of IPropertyFunctionFactory), ByRef IPropertyFunctionPattern)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction(VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo, System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory), ByRef VDS.RDF.Query.Patterns.IPropertyFunctionPattern)
+  name.vb: TryCreatePropertyFunction(PropertyFunctionInfo, IEnumerable(Of IPropertyFunctionFactory), ByRef IPropertyFunctionPattern)
+references:
+- uid: VDS.RDF.Query.PropertyFunctions
+  commentId: N:VDS.RDF.Query.PropertyFunctions
+  name: VDS.RDF.Query.PropertyFunctions
+  nameWithType: VDS.RDF.Query.PropertyFunctions
+  fullName: VDS.RDF.Query.PropertyFunctions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount*
+  commentId: Overload:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount
+  name: FactoryCount
+  nameWithType: PropertyFunctionFactory.FactoryCount
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.FactoryCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory*
+  commentId: Overload:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory
+  name: AddFactory
+  nameWithType: PropertyFunctionFactory.AddFactory
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.AddFactory
+- uid: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+  commentId: T:VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+  parent: VDS.RDF.Query.PropertyFunctions
+  name: IPropertyFunctionFactory
+  nameWithType: IPropertyFunctionFactory
+  fullName: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory*
+  commentId: Overload:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory
+  name: RemoveFactory
+  nameWithType: PropertyFunctionFactory.RemoveFactory
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.RemoveFactory
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory*
+  commentId: Overload:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory
+  name: IsRegisteredFactory
+  nameWithType: PropertyFunctionFactory.IsRegisteredFactory
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsRegisteredFactory
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction*
+  commentId: Overload:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction
+  name: IsPropertyFunction
+  nameWithType: PropertyFunctionFactory.IsPropertyFunction
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.IsPropertyFunction
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IPropertyFunctionFactory>
+  nameWithType: IEnumerable<IPropertyFunctionFactory>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory>
+  nameWithType.vb: IEnumerable(Of IPropertyFunctionFactory)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory)
+  name.vb: IEnumerable(Of IPropertyFunctionFactory)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+    name: IPropertyFunctionFactory
+    nameWithType: IPropertyFunctionFactory
+    fullName: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+    name: IPropertyFunctionFactory
+    nameWithType: IPropertyFunctionFactory
+    fullName: VDS.RDF.Query.PropertyFunctions.IPropertyFunctionFactory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction*
+  commentId: Overload:VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction
+  name: TryCreatePropertyFunction
+  nameWithType: PropertyFunctionFactory.TryCreatePropertyFunction
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionFactory.TryCreatePropertyFunction
+- uid: VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo
+  commentId: T:VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo
+  parent: VDS.RDF.Query.PropertyFunctions
+  name: PropertyFunctionInfo
+  nameWithType: PropertyFunctionInfo
+  fullName: VDS.RDF.Query.PropertyFunctions.PropertyFunctionInfo
+- uid: VDS.RDF.Query.Patterns.IPropertyFunctionPattern
+  commentId: T:VDS.RDF.Query.Patterns.IPropertyFunctionPattern
+  parent: VDS.RDF.Query.Patterns
+  name: IPropertyFunctionPattern
+  nameWithType: IPropertyFunctionPattern
+  fullName: VDS.RDF.Query.Patterns.IPropertyFunctionPattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns

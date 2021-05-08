@@ -1,0 +1,2665 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection
+  commentId: T:VDS.RDF.Dynamic.DynamicSubjectCollection
+  id: DynamicSubjectCollection
+  parent: VDS.RDF.Dynamic
+  children:
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.#ctor(VDS.RDF.INode,VDS.RDF.Dynamic.DynamicNode)
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.Add(VDS.RDF.INode)
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.Clear
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.Contains(VDS.RDF.INode)
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo(VDS.RDF.INode[],System.Int32)
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.Count
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.Remove(VDS.RDF.INode)
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.System#Collections#IEnumerable#GetEnumerator
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject(System.Linq.Expressions.Expression)
+  langs:
+  - csharp
+  - vb
+  name: DynamicSubjectCollection
+  nameWithType: DynamicSubjectCollection
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DynamicSubjectCollection
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 38
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nRepresents a read/write dynamic collection of subjects by predicate and object.\n"
+  example: []
+  syntax:
+    content: 'public class DynamicSubjectCollection : ICollection<INode>, IEnumerable<INode>, IEnumerable, IDynamicMetaObjectProvider'
+    content.vb: >-
+      Public Class DynamicSubjectCollection
+          Implements ICollection(Of INode), IEnumerable(Of INode), IEnumerable, IDynamicMetaObjectProvider
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Dynamic.DynamicSubjectCollection`1
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  - System.Collections.IEnumerable
+  - System.Dynamic.IDynamicMetaObjectProvider
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Dynamic.DynamicSubjectCollection.VDS.RDF.Extensions.AsEnumerable``1
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.BlankNodes
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.GraphLiteralNodes
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.LiteralNodes
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.UriNodes
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.VariableNodes
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.#ctor(VDS.RDF.INode,VDS.RDF.Dynamic.DynamicNode)
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.#ctor(VDS.RDF.INode,VDS.RDF.Dynamic.DynamicNode)
+  id: '#ctor(VDS.RDF.INode,VDS.RDF.Dynamic.DynamicNode)'
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: DynamicSubjectCollection(INode, DynamicNode)
+  nameWithType: DynamicSubjectCollection.DynamicSubjectCollection(INode, DynamicNode)
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.DynamicSubjectCollection(VDS.RDF.INode, VDS.RDF.Dynamic.DynamicNode)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 49
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nInitializes a new instance of the <xref href=\"VDS.RDF.Dynamic.DynamicSubjectCollection\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DynamicSubjectCollection(INode predicate, DynamicNode object)
+    parameters:
+    - id: predicate
+      type: VDS.RDF.INode
+      description: The predicate to use.
+    - id: object
+      type: VDS.RDF.Dynamic.DynamicNode
+      description: The object to use.
+    content.vb: Public Sub New(predicate As INode, object As DynamicNode)
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: When <code data-dev-comment-type="paramref" class="paramref">predicate</code> or <code data-dev-comment-type="paramref" class="paramref">object</code> are null.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Count
+  commentId: P:VDS.RDF.Dynamic.DynamicSubjectCollection.Count
+  id: Count
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: DynamicSubjectCollection.Count
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Count
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Count
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nGets the number of statements with given predicate and object.\n"
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.Count*
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}.Count
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly
+  commentId: P:VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly
+  id: IsReadOnly
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: DynamicSubjectCollection.IsReadOnly
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsReadOnly
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 79
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nGets a value indicating whether this collection is read only (always false).\n"
+  example: []
+  syntax:
+    content: public bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadOnly As Boolean
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly*
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}.IsReadOnly
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects
+  commentId: P:VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects
+  id: Subjects
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: Subjects
+  nameWithType: DynamicSubjectCollection.Subjects
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Subjects
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 91
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nGets subjects of statements with given predicate and object.\n"
+  remarks: Nodes are wrapped in a <xref href="VDS.RDF.Dynamic.DynamicNode" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected IEnumerable<INode> Subjects { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+    content.vb: Protected ReadOnly Property Subjects As IEnumerable(Of INode)
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Add(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.Add(VDS.RDF.INode)
+  id: Add(VDS.RDF.INode)
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: Add(INode)
+  nameWithType: DynamicSubjectCollection.Add(INode)
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Add(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Add
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 106
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nAsserts a statement with <code data-dev-comment-type=\"paramref\" class=\"paramref\">subject</code> and given predicate and object.\n"
+  example: []
+  syntax:
+    content: public void Add(INode subject)
+    parameters:
+    - id: subject
+      type: VDS.RDF.INode
+      description: The subject to assert.
+    content.vb: Public Sub Add(subject As INode)
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.Add*
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}.Add(VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Clear
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.Clear
+  id: Clear
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: DynamicSubjectCollection.Clear()
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Clear()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Clear
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 114
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nRetracts statements with given predicate and object.\n"
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.Clear*
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}.Clear
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Contains(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.Contains(VDS.RDF.INode)
+  id: Contains(VDS.RDF.INode)
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: Contains(INode)
+  nameWithType: DynamicSubjectCollection.Contains(INode)
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Contains(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Contains
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 124
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nChecks whether a statement exists with <code data-dev-comment-type=\"paramref\" class=\"paramref\">subject</code> and given predicate and object.\n"
+  example: []
+  syntax:
+    content: public bool Contains(INode subject)
+    parameters:
+    - id: subject
+      type: VDS.RDF.INode
+      description: The subject to check.
+    return:
+      type: System.Boolean
+      description: Whether a statement exists with <code data-dev-comment-type="paramref" class="paramref">subject</code> and given predicate and object.
+    content.vb: Public Function Contains(subject As INode) As Boolean
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.Contains*
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}.Contains(VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo(VDS.RDF.INode[],System.Int32)
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo(VDS.RDF.INode[],System.Int32)
+  id: CopyTo(VDS.RDF.INode[],System.Int32)
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(INode[], Int32)
+  nameWithType: DynamicSubjectCollection.CopyTo(INode[], Int32)
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo(VDS.RDF.INode[], System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CopyTo
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 135
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nCopies subjects of statements with given predicate and object to <code data-dev-comment-type=\"paramref\" class=\"paramref\">array</code> starting at <code data-dev-comment-type=\"paramref\" class=\"paramref\">index</code>.\n"
+  remarks: Nodes are wrapped in a <xref href="VDS.RDF.Dynamic.DynamicNode" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void CopyTo(INode[] array, int index)
+    parameters:
+    - id: array
+      type: VDS.RDF.INode[]
+      description: The destination of subjects copied.
+    - id: index
+      type: System.Int32
+      description: The index at which copying begins.
+    content.vb: Public Sub CopyTo(array As INode(), index As Integer)
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo*
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}.CopyTo(VDS.RDF.INode[],System.Int32)
+  nameWithType.vb: DynamicSubjectCollection.CopyTo(INode(), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo(VDS.RDF.INode(), System.Int32)
+  name.vb: CopyTo(INode(), Int32)
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator
+  id: GetEnumerator
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: DynamicSubjectCollection.GetEnumerator()
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetEnumerator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 145
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nReturns an enumerator that iterates through subjects of statements with given predicate and object.\n"
+  remarks: Nodes are wrapped in a <xref href="VDS.RDF.Dynamic.DynamicNode" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IEnumerator<INode> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{VDS.RDF.INode}
+      description: An enumerator that can be used to iterate through subjects of statements with given predicate and object.
+    content.vb: Public Function GetEnumerator As IEnumerator(Of INode)
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{VDS.RDF.INode}.GetEnumerator
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Remove(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.Remove(VDS.RDF.INode)
+  id: Remove(VDS.RDF.INode)
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: Remove(INode)
+  nameWithType: DynamicSubjectCollection.Remove(INode)
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Remove(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Remove
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 155
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  summary: "\nRetracts statements with <code data-dev-comment-type=\"paramref\" class=\"paramref\">subject</code> and given predicate and object.\n"
+  example: []
+  syntax:
+    content: public bool Remove(INode subject)
+    parameters:
+    - id: subject
+      type: VDS.RDF.INode
+      description: The subject to retract.
+    return:
+      type: System.Boolean
+      description: Whether any statements were retracted.
+    content.vb: Public Function Remove(subject As INode) As Boolean
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.Remove*
+  implements:
+  - System.Collections.Generic.ICollection{VDS.RDF.INode}.Remove(VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.System#Collections#IEnumerable#GetEnumerator
+  id: System#Collections#IEnumerable#GetEnumerator
+  isEii: true
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: IEnumerable.GetEnumerator()
+  nameWithType: DynamicSubjectCollection.IEnumerable.GetEnumerator()
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.System.Collections.IEnumerable.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: System.Collections.IEnumerable.GetEnumerator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 161
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  example: []
+  syntax:
+    content: IEnumerator IEnumerable.GetEnumerator()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Function System.Collections.IEnumerable.GetEnumerator As IEnumerator Implements IEnumerable.GetEnumerator
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.System#Collections#IEnumerable#GetEnumerator*
+  implements:
+  - System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: DynamicSubjectCollection.System.Collections.IEnumerable.GetEnumerator()
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:VDS.RDF.Dynamic.DynamicSubjectCollection.System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject(System.Linq.Expressions.Expression)
+  id: System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject(System.Linq.Expressions.Expression)
+  isEii: true
+  parent: VDS.RDF.Dynamic.DynamicSubjectCollection
+  langs:
+  - csharp
+  - vb
+  name: IDynamicMetaObjectProvider.GetMetaObject(Expression)
+  nameWithType: DynamicSubjectCollection.IDynamicMetaObjectProvider.GetMetaObject(Expression)
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Dynamic/DynamicSubjectCollection.cs
+    startLine: 167
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Dynamic
+  example: []
+  syntax:
+    content: DynamicMetaObject IDynamicMetaObjectProvider.GetMetaObject(Expression parameter)
+    parameters:
+    - id: parameter
+      type: System.Linq.Expressions.Expression
+    return:
+      type: System.Dynamic.DynamicMetaObject
+    content.vb: Function System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(parameter As Expression) As DynamicMetaObject Implements IDynamicMetaObjectProvider.GetMetaObject
+  overload: VDS.RDF.Dynamic.DynamicSubjectCollection.System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject*
+  implements:
+  - System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  nameWithType.vb: DynamicSubjectCollection.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(Expression)
+  name.vb: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(Expression)
+references:
+- uid: VDS.RDF.Dynamic
+  commentId: N:VDS.RDF.Dynamic
+  name: VDS.RDF.Dynamic
+  nameWithType: VDS.RDF.Dynamic
+  fullName: VDS.RDF.Dynamic
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.ICollection{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<INode>
+  nameWithType: ICollection<INode>
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>
+  nameWithType.vb: ICollection(Of INode)
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode)
+  name.vb: ICollection(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<INode>
+  nameWithType: IEnumerable<INode>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.INode>
+  nameWithType.vb: IEnumerable(Of INode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.INode)
+  name.vb: IEnumerable(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Dynamic.IDynamicMetaObjectProvider
+  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
+  parent: System.Dynamic
+  isExternal: true
+  name: IDynamicMetaObjectProvider
+  nameWithType: IDynamicMetaObjectProvider
+  fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<DynamicSubjectCollection>()
+  nameWithType: Extensions.AsEnumerable<DynamicSubjectCollection>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Dynamic.DynamicSubjectCollection>()
+  nameWithType.vb: Extensions.AsEnumerable(Of DynamicSubjectCollection)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Dynamic.DynamicSubjectCollection)()
+  name.vb: AsEnumerable(Of DynamicSubjectCollection)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<DynamicSubjectCollection>
+    nameWithType: Extensions.AsEnumerable<DynamicSubjectCollection>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Dynamic.DynamicSubjectCollection>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of DynamicSubjectCollection)
+    nameWithType: Extensions.AsEnumerable(Of DynamicSubjectCollection)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Dynamic.DynamicSubjectCollection)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name: IsDisjoint<INode>(IEnumerable<INode>)
+  nameWithType: Extensions.IsDisjoint<INode>(IEnumerable<INode>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<VDS.RDF.INode>(System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  nameWithType.vb: Extensions.IsDisjoint(Of INode)(IEnumerable(Of INode))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of VDS.RDF.INode)(System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: IsDisjoint(Of INode)(IEnumerable(Of INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<INode>
+    nameWithType: Extensions.IsDisjoint<INode>
+    fullName: VDS.RDF.Extensions.IsDisjoint<VDS.RDF.INode>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of INode)
+    nameWithType: Extensions.IsDisjoint(Of INode)
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of VDS.RDF.INode)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: ChunkBy<INode>(Int32)
+  nameWithType: Extensions.ChunkBy<INode>(Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<VDS.RDF.INode>(System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of INode)(Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of VDS.RDF.INode)(System.Int32)
+  name.vb: ChunkBy(Of INode)(Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy<INode>
+    nameWithType: Extensions.ChunkBy<INode>
+    fullName: VDS.RDF.Extensions.ChunkBy<VDS.RDF.INode>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy(Of INode)
+    nameWithType: Extensions.ChunkBy(Of INode)
+    fullName: VDS.RDF.Extensions.ChunkBy(Of VDS.RDF.INode)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.BlankNodes
+  commentId: M:VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  name: BlankNodes()
+  nameWithType: Extensions.BlankNodes()
+  fullName: VDS.RDF.Extensions.BlankNodes()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.BlankNodes
+    name: BlankNodes
+    nameWithType: Extensions.BlankNodes
+    fullName: VDS.RDF.Extensions.BlankNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.BlankNodes
+    name: BlankNodes
+    nameWithType: Extensions.BlankNodes
+    fullName: VDS.RDF.Extensions.BlankNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.GraphLiteralNodes
+  commentId: M:VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  name: GraphLiteralNodes()
+  nameWithType: Extensions.GraphLiteralNodes()
+  fullName: VDS.RDF.Extensions.GraphLiteralNodes()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.GraphLiteralNodes
+    name: GraphLiteralNodes
+    nameWithType: Extensions.GraphLiteralNodes
+    fullName: VDS.RDF.Extensions.GraphLiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.GraphLiteralNodes
+    name: GraphLiteralNodes
+    nameWithType: Extensions.GraphLiteralNodes
+    fullName: VDS.RDF.Extensions.GraphLiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.LiteralNodes
+  commentId: M:VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  name: LiteralNodes()
+  nameWithType: Extensions.LiteralNodes()
+  fullName: VDS.RDF.Extensions.LiteralNodes()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.LiteralNodes
+    name: LiteralNodes
+    nameWithType: Extensions.LiteralNodes
+    fullName: VDS.RDF.Extensions.LiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.LiteralNodes
+    name: LiteralNodes
+    nameWithType: Extensions.LiteralNodes
+    fullName: VDS.RDF.Extensions.LiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.UriNodes
+  commentId: M:VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  name: UriNodes()
+  nameWithType: Extensions.UriNodes()
+  fullName: VDS.RDF.Extensions.UriNodes()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.UriNodes
+    name: UriNodes
+    nameWithType: Extensions.UriNodes
+    fullName: VDS.RDF.Extensions.UriNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.UriNodes
+    name: UriNodes
+    nameWithType: Extensions.UriNodes
+    fullName: VDS.RDF.Extensions.UriNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.VDS.RDF.Extensions.VariableNodes
+  commentId: M:VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  name: VariableNodes()
+  nameWithType: Extensions.VariableNodes()
+  fullName: VDS.RDF.Extensions.VariableNodes()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.VariableNodes
+    name: VariableNodes
+    nameWithType: Extensions.VariableNodes
+    fullName: VDS.RDF.Extensions.VariableNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.VariableNodes
+    name: VariableNodes
+    nameWithType: Extensions.VariableNodes
+    fullName: VDS.RDF.Extensions.VariableNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: System.Dynamic
+  commentId: N:System.Dynamic
+  isExternal: true
+  name: System.Dynamic
+  nameWithType: System.Dynamic
+  fullName: System.Dynamic
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  name: IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType: Extensions.IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: Extensions.IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<T>
+    nameWithType: Extensions.IsDisjoint<T>
+    fullName: VDS.RDF.Extensions.IsDisjoint<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of T)
+    nameWithType: Extensions.IsDisjoint(Of T)
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  isExternal: true
+  name: ChunkBy<T>(IEnumerable<T>, Int32)
+  nameWithType: Extensions.ChunkBy<T>(IEnumerable<T>, Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  name.vb: ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy<T>
+    nameWithType: Extensions.ChunkBy<T>
+    fullName: VDS.RDF.Extensions.ChunkBy<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy(Of T)
+    nameWithType: Extensions.ChunkBy(Of T)
+    fullName: VDS.RDF.Extensions.ChunkBy(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  isExternal: true
+  name: BlankNodes(IEnumerable<INode>)
+  nameWithType: Extensions.BlankNodes(IEnumerable<INode>)
+  fullName: VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  nameWithType.vb: Extensions.BlankNodes(IEnumerable(Of INode))
+  fullName.vb: VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: BlankNodes(IEnumerable(Of INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: BlankNodes
+    nameWithType: Extensions.BlankNodes
+    fullName: VDS.RDF.Extensions.BlankNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.BlankNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: BlankNodes
+    nameWithType: Extensions.BlankNodes
+    fullName: VDS.RDF.Extensions.BlankNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  isExternal: true
+  name: GraphLiteralNodes(IEnumerable<INode>)
+  nameWithType: Extensions.GraphLiteralNodes(IEnumerable<INode>)
+  fullName: VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  nameWithType.vb: Extensions.GraphLiteralNodes(IEnumerable(Of INode))
+  fullName.vb: VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: GraphLiteralNodes(IEnumerable(Of INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: GraphLiteralNodes
+    nameWithType: Extensions.GraphLiteralNodes
+    fullName: VDS.RDF.Extensions.GraphLiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.GraphLiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: GraphLiteralNodes
+    nameWithType: Extensions.GraphLiteralNodes
+    fullName: VDS.RDF.Extensions.GraphLiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  isExternal: true
+  name: LiteralNodes(IEnumerable<INode>)
+  nameWithType: Extensions.LiteralNodes(IEnumerable<INode>)
+  fullName: VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  nameWithType.vb: Extensions.LiteralNodes(IEnumerable(Of INode))
+  fullName.vb: VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: LiteralNodes(IEnumerable(Of INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: LiteralNodes
+    nameWithType: Extensions.LiteralNodes
+    fullName: VDS.RDF.Extensions.LiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.LiteralNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: LiteralNodes
+    nameWithType: Extensions.LiteralNodes
+    fullName: VDS.RDF.Extensions.LiteralNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  isExternal: true
+  name: UriNodes(IEnumerable<INode>)
+  nameWithType: Extensions.UriNodes(IEnumerable<INode>)
+  fullName: VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  nameWithType.vb: Extensions.UriNodes(IEnumerable(Of INode))
+  fullName.vb: VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: UriNodes(IEnumerable(Of INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: UriNodes
+    nameWithType: Extensions.UriNodes
+    fullName: VDS.RDF.Extensions.UriNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.UriNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: UriNodes
+    nameWithType: Extensions.UriNodes
+    fullName: VDS.RDF.Extensions.UriNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+  isExternal: true
+  name: VariableNodes(IEnumerable<INode>)
+  nameWithType: Extensions.VariableNodes(IEnumerable<INode>)
+  fullName: VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable<VDS.RDF.INode>)
+  nameWithType.vb: Extensions.VariableNodes(IEnumerable(Of INode))
+  fullName.vb: VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable(Of VDS.RDF.INode))
+  name.vb: VariableNodes(IEnumerable(Of INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: VariableNodes
+    nameWithType: Extensions.VariableNodes
+    fullName: VDS.RDF.Extensions.VariableNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.VariableNodes(System.Collections.Generic.IEnumerable{VDS.RDF.INode})
+    name: VariableNodes
+    nameWithType: Extensions.VariableNodes
+    fullName: VDS.RDF.Extensions.VariableNodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection
+  commentId: T:VDS.RDF.Dynamic.DynamicSubjectCollection
+  parent: VDS.RDF.Dynamic
+  name: DynamicSubjectCollection
+  nameWithType: DynamicSubjectCollection
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.#ctor*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.#ctor
+  name: DynamicSubjectCollection
+  nameWithType: DynamicSubjectCollection.DynamicSubjectCollection
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.DynamicSubjectCollection
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Dynamic.DynamicNode
+  commentId: T:VDS.RDF.Dynamic.DynamicNode
+  parent: VDS.RDF.Dynamic
+  name: DynamicNode
+  nameWithType: DynamicNode
+  fullName: VDS.RDF.Dynamic.DynamicNode
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Count*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.Count
+  name: Count
+  nameWithType: DynamicSubjectCollection.Count
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Count
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}.Count
+  commentId: P:System.Collections.Generic.ICollection{VDS.RDF.INode}.Count
+  parent: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  definition: System.Collections.Generic.ICollection`1.Count
+  name: Count
+  nameWithType: ICollection<INode>.Count
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Count
+  nameWithType.vb: ICollection(Of INode).Count
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.ICollection`1.Count
+  commentId: P:System.Collections.Generic.ICollection`1.Count
+  isExternal: true
+  name: Count
+  nameWithType: ICollection<T>.Count
+  fullName: System.Collections.Generic.ICollection<T>.Count
+  nameWithType.vb: ICollection(Of T).Count
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Count
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly
+  name: IsReadOnly
+  nameWithType: DynamicSubjectCollection.IsReadOnly
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.IsReadOnly
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}.IsReadOnly
+  commentId: P:System.Collections.Generic.ICollection{VDS.RDF.INode}.IsReadOnly
+  parent: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  definition: System.Collections.Generic.ICollection`1.IsReadOnly
+  name: IsReadOnly
+  nameWithType: ICollection<INode>.IsReadOnly
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.IsReadOnly
+  nameWithType.vb: ICollection(Of INode).IsReadOnly
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode).IsReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.ICollection`1.IsReadOnly
+  commentId: P:System.Collections.Generic.ICollection`1.IsReadOnly
+  isExternal: true
+  name: IsReadOnly
+  nameWithType: ICollection<T>.IsReadOnly
+  fullName: System.Collections.Generic.ICollection<T>.IsReadOnly
+  nameWithType.vb: ICollection(Of T).IsReadOnly
+  fullName.vb: System.Collections.Generic.ICollection(Of T).IsReadOnly
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects
+  name: Subjects
+  nameWithType: DynamicSubjectCollection.Subjects
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Subjects
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Add*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.Add
+  name: Add
+  nameWithType: DynamicSubjectCollection.Add
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Add
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}.Add(VDS.RDF.INode)
+  commentId: M:System.Collections.Generic.ICollection{VDS.RDF.INode}.Add(VDS.RDF.INode)
+  parent: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  definition: System.Collections.Generic.ICollection`1.Add(`0)
+  name: Add(INode)
+  nameWithType: ICollection<INode>.Add(INode)
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Add(VDS.RDF.INode)
+  nameWithType.vb: ICollection(Of INode).Add(INode)
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Add(VDS.RDF.INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection<INode>.Add
+    fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection(Of INode).Add
+    fullName: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1.Add(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Add(`0)
+  isExternal: true
+  name: Add(T)
+  nameWithType: ICollection<T>.Add(T)
+  fullName: System.Collections.Generic.ICollection<T>.Add(T)
+  nameWithType.vb: ICollection(Of T).Add(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Add(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection<T>.Add
+    fullName: System.Collections.Generic.ICollection<T>.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection(Of T).Add
+    fullName: System.Collections.Generic.ICollection(Of T).Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Clear*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.Clear
+  name: Clear
+  nameWithType: DynamicSubjectCollection.Clear
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Clear
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}.Clear
+  commentId: M:System.Collections.Generic.ICollection{VDS.RDF.INode}.Clear
+  parent: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  definition: System.Collections.Generic.ICollection`1.Clear
+  name: Clear()
+  nameWithType: ICollection<INode>.Clear()
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Clear()
+  nameWithType.vb: ICollection(Of INode).Clear()
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Clear()
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection<INode>.Clear
+    fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection(Of INode).Clear
+    fullName: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1.Clear
+  commentId: M:System.Collections.Generic.ICollection`1.Clear
+  isExternal: true
+  name: Clear()
+  nameWithType: ICollection<T>.Clear()
+  fullName: System.Collections.Generic.ICollection<T>.Clear()
+  nameWithType.vb: ICollection(Of T).Clear()
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Clear()
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection<T>.Clear
+    fullName: System.Collections.Generic.ICollection<T>.Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection(Of T).Clear
+    fullName: System.Collections.Generic.ICollection(Of T).Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Contains*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.Contains
+  name: Contains
+  nameWithType: DynamicSubjectCollection.Contains
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Contains
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}.Contains(VDS.RDF.INode)
+  commentId: M:System.Collections.Generic.ICollection{VDS.RDF.INode}.Contains(VDS.RDF.INode)
+  parent: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  definition: System.Collections.Generic.ICollection`1.Contains(`0)
+  name: Contains(INode)
+  nameWithType: ICollection<INode>.Contains(INode)
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Contains(VDS.RDF.INode)
+  nameWithType.vb: ICollection(Of INode).Contains(INode)
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Contains(VDS.RDF.INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection<INode>.Contains
+    fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection(Of INode).Contains
+    fullName: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1.Contains(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Contains(`0)
+  isExternal: true
+  name: Contains(T)
+  nameWithType: ICollection<T>.Contains(T)
+  fullName: System.Collections.Generic.ICollection<T>.Contains(T)
+  nameWithType.vb: ICollection(Of T).Contains(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Contains(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection<T>.Contains
+    fullName: System.Collections.Generic.ICollection<T>.Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection(Of T).Contains
+    fullName: System.Collections.Generic.ICollection(Of T).Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo
+  name: CopyTo
+  nameWithType: DynamicSubjectCollection.CopyTo
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.CopyTo
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}.CopyTo(VDS.RDF.INode[],System.Int32)
+  commentId: M:System.Collections.Generic.ICollection{VDS.RDF.INode}.CopyTo(VDS.RDF.INode[],System.Int32)
+  parent: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  definition: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  name: CopyTo(INode[], Int32)
+  nameWithType: ICollection<INode>.CopyTo(INode[], Int32)
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.CopyTo(VDS.RDF.INode[], System.Int32)
+  nameWithType.vb: ICollection(Of INode).CopyTo(INode(), Int32)
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode).CopyTo(VDS.RDF.INode(), System.Int32)
+  name.vb: CopyTo(INode(), Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection<INode>.CopyTo
+    fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection(Of INode).CopyTo
+    fullName: System.Collections.Generic.ICollection(Of VDS.RDF.INode).CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.INode[]
+  isExternal: true
+  name: INode[]
+  nameWithType: INode[]
+  fullName: VDS.RDF.INode[]
+  nameWithType.vb: INode()
+  fullName.vb: VDS.RDF.INode()
+  name.vb: INode()
+  spec.csharp:
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  commentId: M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  isExternal: true
+  name: CopyTo(T[], Int32)
+  nameWithType: ICollection<T>.CopyTo(T[], Int32)
+  fullName: System.Collections.Generic.ICollection<T>.CopyTo(T[], System.Int32)
+  nameWithType.vb: ICollection(Of T).CopyTo(T(), Int32)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).CopyTo(T(), System.Int32)
+  name.vb: CopyTo(T(), Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection<T>.CopyTo
+    fullName: System.Collections.Generic.ICollection<T>.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection(Of T).CopyTo
+    fullName: System.Collections.Generic.ICollection(Of T).CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator
+  name: GetEnumerator
+  nameWithType: DynamicSubjectCollection.GetEnumerator
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{VDS.RDF.INode}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<INode>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.INode>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of INode).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.INode).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<INode>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<VDS.RDF.INode>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of INode).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of VDS.RDF.INode).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IEnumerator{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<INode>
+  nameWithType: IEnumerator<INode>
+  fullName: System.Collections.Generic.IEnumerator<VDS.RDF.INode>
+  nameWithType.vb: IEnumerator(Of INode)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of VDS.RDF.INode)
+  name.vb: IEnumerator(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<T>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of T).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of T).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.Remove*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.Remove
+  name: Remove
+  nameWithType: DynamicSubjectCollection.Remove
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.Remove
+- uid: System.Collections.Generic.ICollection{VDS.RDF.INode}.Remove(VDS.RDF.INode)
+  commentId: M:System.Collections.Generic.ICollection{VDS.RDF.INode}.Remove(VDS.RDF.INode)
+  parent: System.Collections.Generic.ICollection{VDS.RDF.INode}
+  definition: System.Collections.Generic.ICollection`1.Remove(`0)
+  name: Remove(INode)
+  nameWithType: ICollection<INode>.Remove(INode)
+  fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Remove(VDS.RDF.INode)
+  nameWithType.vb: ICollection(Of INode).Remove(INode)
+  fullName.vb: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Remove(VDS.RDF.INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection<INode>.Remove
+    fullName: System.Collections.Generic.ICollection<VDS.RDF.INode>.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection(Of INode).Remove
+    fullName: System.Collections.Generic.ICollection(Of VDS.RDF.INode).Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1.Remove(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Remove(`0)
+  isExternal: true
+  name: Remove(T)
+  nameWithType: ICollection<T>.Remove(T)
+  fullName: System.Collections.Generic.ICollection<T>.Remove(T)
+  nameWithType.vb: ICollection(Of T).Remove(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Remove(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection<T>.Remove
+    fullName: System.Collections.Generic.ICollection<T>.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection(Of T).Remove
+    fullName: System.Collections.Generic.ICollection(Of T).Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.System#Collections#IEnumerable#GetEnumerator*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator
+  nameWithType: DynamicSubjectCollection.IEnumerable.GetEnumerator
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: DynamicSubjectCollection.System.Collections.IEnumerable.GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+- uid: System.Collections.IEnumerable.GetEnumerator
+  commentId: M:System.Collections.IEnumerable.GetEnumerator
+  parent: System.Collections.IEnumerable
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable.GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: VDS.RDF.Dynamic.DynamicSubjectCollection.System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject*
+  commentId: Overload:VDS.RDF.Dynamic.DynamicSubjectCollection.System#Dynamic#IDynamicMetaObjectProvider#GetMetaObject
+  name: IDynamicMetaObjectProvider.GetMetaObject
+  nameWithType: DynamicSubjectCollection.IDynamicMetaObjectProvider.GetMetaObject
+  fullName: VDS.RDF.Dynamic.DynamicSubjectCollection.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+  nameWithType.vb: DynamicSubjectCollection.System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+  name.vb: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+- uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  parent: System.Dynamic.IDynamicMetaObjectProvider
+  isExternal: true
+  name: GetMetaObject(Expression)
+  nameWithType: IDynamicMetaObjectProvider.GetMetaObject(Expression)
+  fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  spec.csharp:
+  - uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: IDynamicMetaObjectProvider.GetMetaObject
+    fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: IDynamicMetaObjectProvider.GetMetaObject
+    fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions.Expression
+  commentId: T:System.Linq.Expressions.Expression
+  parent: System.Linq.Expressions
+  isExternal: true
+  name: Expression
+  nameWithType: Expression
+  fullName: System.Linq.Expressions.Expression
+- uid: System.Dynamic.DynamicMetaObject
+  commentId: T:System.Dynamic.DynamicMetaObject
+  parent: System.Dynamic
+  isExternal: true
+  name: DynamicMetaObject
+  nameWithType: DynamicMetaObject
+  fullName: System.Dynamic.DynamicMetaObject
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions

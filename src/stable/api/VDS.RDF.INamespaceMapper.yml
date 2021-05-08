@@ -1,0 +1,742 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.INamespaceMapper
+  commentId: T:VDS.RDF.INamespaceMapper
+  id: INamespaceMapper
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+  - VDS.RDF.INamespaceMapper.Clear
+  - VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  - VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  - VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  - VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  - VDS.RDF.INamespaceMapper.NamespaceAdded
+  - VDS.RDF.INamespaceMapper.NamespaceModified
+  - VDS.RDF.INamespaceMapper.NamespaceRemoved
+  - VDS.RDF.INamespaceMapper.Prefixes
+  - VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+  - VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  langs:
+  - csharp
+  - vb
+  name: INamespaceMapper
+  nameWithType: INamespaceMapper
+  fullName: VDS.RDF.INamespaceMapper
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: INamespaceMapper
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nInterface for Namespace Maps which provide mappings between Namespace Prefixes and Namespace URIs.\n"
+  example: []
+  syntax:
+    content: 'public interface INamespaceMapper : IDisposable'
+    content.vb: >-
+      Public Interface INamespaceMapper
+          Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  extensionMethods:
+  - VDS.RDF.INamespaceMapper.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+  commentId: M:VDS.RDF.INamespaceMapper.AddNamespace(System.String,System.Uri)
+  id: AddNamespace(System.String,System.Uri)
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: AddNamespace(String, Uri)
+  nameWithType: INamespaceMapper.AddNamespace(String, Uri)
+  fullName: VDS.RDF.INamespaceMapper.AddNamespace(System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddNamespace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nAdds a Namespace to the Namespace Map.\n"
+  example: []
+  syntax:
+    content: void AddNamespace(string prefix, Uri uri)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Namespace Prefix.
+    - id: uri
+      type: System.Uri
+      description: Namespace Uri.
+    content.vb: Sub AddNamespace(prefix As String, uri As Uri)
+  overload: VDS.RDF.INamespaceMapper.AddNamespace*
+- uid: VDS.RDF.INamespaceMapper.Clear
+  commentId: M:VDS.RDF.INamespaceMapper.Clear
+  id: Clear
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: INamespaceMapper.Clear()
+  fullName: VDS.RDF.INamespaceMapper.Clear()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Clear
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 46
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nClears the Namespace Map.\n"
+  example: []
+  syntax:
+    content: void Clear()
+    content.vb: Sub Clear
+  overload: VDS.RDF.INamespaceMapper.Clear*
+- uid: VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  commentId: M:VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  id: GetNamespaceUri(System.String)
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: GetNamespaceUri(String)
+  nameWithType: INamespaceMapper.GetNamespaceUri(String)
+  fullName: VDS.RDF.INamespaceMapper.GetNamespaceUri(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetNamespaceUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 53
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nReturns the Namespace URI associated with the given Prefix.\n"
+  example: []
+  syntax:
+    content: Uri GetNamespaceUri(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: The Prefix to lookup the Namespace URI for.
+    return:
+      type: System.Uri
+      description: URI for the Namespace.
+    content.vb: Function GetNamespaceUri(prefix As String) As Uri
+  overload: VDS.RDF.INamespaceMapper.GetNamespaceUri*
+- uid: VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  commentId: M:VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  id: GetPrefix(System.Uri)
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: GetPrefix(Uri)
+  nameWithType: INamespaceMapper.GetPrefix(Uri)
+  fullName: VDS.RDF.INamespaceMapper.GetPrefix(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetPrefix
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 60
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nReturns the Prefix associated with the given Namespace URI.\n"
+  example: []
+  syntax:
+    content: string GetPrefix(Uri uri)
+    parameters:
+    - id: uri
+      type: System.Uri
+      description: The Namespace URI to lookup the Prefix for.
+    return:
+      type: System.String
+      description: String prefix for the Namespace.
+    content.vb: Function GetPrefix(uri As Uri) As String
+  overload: VDS.RDF.INamespaceMapper.GetPrefix*
+- uid: VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  commentId: M:VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  id: HasNamespace(System.String)
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: HasNamespace(String)
+  nameWithType: INamespaceMapper.HasNamespace(String)
+  fullName: VDS.RDF.INamespaceMapper.HasNamespace(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasNamespace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod which checks whether a given Namespace Prefix is defined.\n"
+  example: []
+  syntax:
+    content: bool HasNamespace(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Prefix to test.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function HasNamespace(prefix As String) As Boolean
+  overload: VDS.RDF.INamespaceMapper.HasNamespace*
+- uid: VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  commentId: M:VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  id: Import(VDS.RDF.INamespaceMapper)
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: Import(INamespaceMapper)
+  nameWithType: INamespaceMapper.Import(INamespaceMapper)
+  fullName: VDS.RDF.INamespaceMapper.Import(VDS.RDF.INamespaceMapper)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Import
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 76
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nImports the contents of another Namespace Map into this Namespace Map.\n"
+  remarks: "\nPrefixes in the imported Map which are already defined in this Map are ignored, this may change in future releases.\n"
+  example: []
+  syntax:
+    content: void Import(INamespaceMapper nsmap)
+    parameters:
+    - id: nsmap
+      type: VDS.RDF.INamespaceMapper
+      description: Namespace Map to import.
+    content.vb: Sub Import(nsmap As INamespaceMapper)
+  overload: VDS.RDF.INamespaceMapper.Import*
+- uid: VDS.RDF.INamespaceMapper.NamespaceAdded
+  commentId: E:VDS.RDF.INamespaceMapper.NamespaceAdded
+  id: NamespaceAdded
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NamespaceAdded
+  nameWithType: INamespaceMapper.NamespaceAdded
+  fullName: VDS.RDF.INamespaceMapper.NamespaceAdded
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamespaceAdded
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 81
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEvent which is raised when a Namespace is Added\n"
+  example: []
+  syntax:
+    content: event NamespaceChanged NamespaceAdded
+    return:
+      type: VDS.RDF.NamespaceChanged
+    content.vb: Event NamespaceAdded As NamespaceChanged
+- uid: VDS.RDF.INamespaceMapper.NamespaceModified
+  commentId: E:VDS.RDF.INamespaceMapper.NamespaceModified
+  id: NamespaceModified
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NamespaceModified
+  nameWithType: INamespaceMapper.NamespaceModified
+  fullName: VDS.RDF.INamespaceMapper.NamespaceModified
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamespaceModified
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 86
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEvent which is raised when a Namespace is Modified\n"
+  example: []
+  syntax:
+    content: event NamespaceChanged NamespaceModified
+    return:
+      type: VDS.RDF.NamespaceChanged
+    content.vb: Event NamespaceModified As NamespaceChanged
+- uid: VDS.RDF.INamespaceMapper.NamespaceRemoved
+  commentId: E:VDS.RDF.INamespaceMapper.NamespaceRemoved
+  id: NamespaceRemoved
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: NamespaceRemoved
+  nameWithType: INamespaceMapper.NamespaceRemoved
+  fullName: VDS.RDF.INamespaceMapper.NamespaceRemoved
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NamespaceRemoved
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 91
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEvent which is raised when a Namespace is Removed\n"
+  example: []
+  syntax:
+    content: event NamespaceChanged NamespaceRemoved
+    return:
+      type: VDS.RDF.NamespaceChanged
+    content.vb: Event NamespaceRemoved As NamespaceChanged
+- uid: VDS.RDF.INamespaceMapper.Prefixes
+  commentId: P:VDS.RDF.INamespaceMapper.Prefixes
+  id: Prefixes
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: Prefixes
+  nameWithType: INamespaceMapper.Prefixes
+  fullName: VDS.RDF.INamespaceMapper.Prefixes
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Prefixes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 96
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets a Enumeratorion of all the Prefixes.\n"
+  example: []
+  syntax:
+    content: IEnumerable<string> Prefixes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: ReadOnly Property Prefixes As IEnumerable(Of String)
+  overload: VDS.RDF.INamespaceMapper.Prefixes*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+  commentId: M:VDS.RDF.INamespaceMapper.ReduceToQName(System.String,System.String@)
+  id: ReduceToQName(System.String,System.String@)
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: ReduceToQName(String, out String)
+  nameWithType: INamespaceMapper.ReduceToQName(String, out String)
+  fullName: VDS.RDF.INamespaceMapper.ReduceToQName(System.String, out System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ReduceToQName
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 110
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nA Function which attempts to reduce a Uri to a QName.\n"
+  remarks: "\nThis function will return a Boolean indicated whether it succeeded in reducing the Uri to a QName.  If it did then the out parameter qname will contain the reduction, otherwise it will be the empty string.\n"
+  example: []
+  syntax:
+    content: bool ReduceToQName(string uri, out string qname)
+    parameters:
+    - id: uri
+      type: System.String
+      description: The Uri to attempt to reduce.
+    - id: qname
+      type: System.String
+      description: The value to output the QName to if possible.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function ReduceToQName(uri As String, ByRef qname As String) As Boolean
+  overload: VDS.RDF.INamespaceMapper.ReduceToQName*
+  nameWithType.vb: INamespaceMapper.ReduceToQName(String, ByRef String)
+  fullName.vb: VDS.RDF.INamespaceMapper.ReduceToQName(System.String, ByRef System.String)
+  name.vb: ReduceToQName(String, ByRef String)
+- uid: VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  commentId: M:VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  id: RemoveNamespace(System.String)
+  parent: VDS.RDF.INamespaceMapper
+  langs:
+  - csharp
+  - vb
+  name: RemoveNamespace(String)
+  nameWithType: INamespaceMapper.RemoveNamespace(String)
+  fullName: VDS.RDF.INamespaceMapper.RemoveNamespace(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/INamespaceMapper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveNamespace
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/INamespaceMapper.cs
+    startLine: 116
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nRemoves a Namespace from the Namespace Map.\n"
+  example: []
+  syntax:
+    content: void RemoveNamespace(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: Namespace Prefix of the Namespace to remove.
+    content.vb: Sub RemoveNamespace(prefix As String)
+  overload: VDS.RDF.INamespaceMapper.RemoveNamespace*
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.INamespaceMapper.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<INamespaceMapper>()
+  nameWithType: Extensions.AsEnumerable<INamespaceMapper>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.INamespaceMapper>()
+  nameWithType.vb: Extensions.AsEnumerable(Of INamespaceMapper)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.INamespaceMapper)()
+  name.vb: AsEnumerable(Of INamespaceMapper)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<INamespaceMapper>
+    nameWithType: Extensions.AsEnumerable<INamespaceMapper>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.INamespaceMapper>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of INamespaceMapper)
+    nameWithType: Extensions.AsEnumerable(Of INamespaceMapper)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.INamespaceMapper)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.INamespaceMapper.AddNamespace*
+  commentId: Overload:VDS.RDF.INamespaceMapper.AddNamespace
+  name: AddNamespace
+  nameWithType: INamespaceMapper.AddNamespace
+  fullName: VDS.RDF.INamespaceMapper.AddNamespace
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.INamespaceMapper.Clear*
+  commentId: Overload:VDS.RDF.INamespaceMapper.Clear
+  name: Clear
+  nameWithType: INamespaceMapper.Clear
+  fullName: VDS.RDF.INamespaceMapper.Clear
+- uid: VDS.RDF.INamespaceMapper.GetNamespaceUri*
+  commentId: Overload:VDS.RDF.INamespaceMapper.GetNamespaceUri
+  name: GetNamespaceUri
+  nameWithType: INamespaceMapper.GetNamespaceUri
+  fullName: VDS.RDF.INamespaceMapper.GetNamespaceUri
+- uid: VDS.RDF.INamespaceMapper.GetPrefix*
+  commentId: Overload:VDS.RDF.INamespaceMapper.GetPrefix
+  name: GetPrefix
+  nameWithType: INamespaceMapper.GetPrefix
+  fullName: VDS.RDF.INamespaceMapper.GetPrefix
+- uid: VDS.RDF.INamespaceMapper.HasNamespace*
+  commentId: Overload:VDS.RDF.INamespaceMapper.HasNamespace
+  name: HasNamespace
+  nameWithType: INamespaceMapper.HasNamespace
+  fullName: VDS.RDF.INamespaceMapper.HasNamespace
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.INamespaceMapper.Import*
+  commentId: Overload:VDS.RDF.INamespaceMapper.Import
+  name: Import
+  nameWithType: INamespaceMapper.Import
+  fullName: VDS.RDF.INamespaceMapper.Import
+- uid: VDS.RDF.INamespaceMapper
+  commentId: T:VDS.RDF.INamespaceMapper
+  parent: VDS.RDF
+  name: INamespaceMapper
+  nameWithType: INamespaceMapper
+  fullName: VDS.RDF.INamespaceMapper
+- uid: VDS.RDF.NamespaceChanged
+  commentId: T:VDS.RDF.NamespaceChanged
+  parent: VDS.RDF
+  name: NamespaceChanged
+  nameWithType: NamespaceChanged
+  fullName: VDS.RDF.NamespaceChanged
+- uid: VDS.RDF.INamespaceMapper.Prefixes*
+  commentId: Overload:VDS.RDF.INamespaceMapper.Prefixes
+  name: Prefixes
+  nameWithType: INamespaceMapper.Prefixes
+  fullName: VDS.RDF.INamespaceMapper.Prefixes
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.INamespaceMapper.ReduceToQName*
+  commentId: Overload:VDS.RDF.INamespaceMapper.ReduceToQName
+  name: ReduceToQName
+  nameWithType: INamespaceMapper.ReduceToQName
+  fullName: VDS.RDF.INamespaceMapper.ReduceToQName
+- uid: VDS.RDF.INamespaceMapper.RemoveNamespace*
+  commentId: Overload:VDS.RDF.INamespaceMapper.RemoveNamespace
+  name: RemoveNamespace
+  nameWithType: INamespaceMapper.RemoveNamespace
+  fullName: VDS.RDF.INamespaceMapper.RemoveNamespace

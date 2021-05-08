@@ -1,0 +1,802 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter
+  commentId: T:VDS.RDF.Writing.BaseGZipResultsWriter
+  id: BaseGZipResultsWriter
+  parent: VDS.RDF.Writing
+  children:
+  - VDS.RDF.Writing.BaseGZipResultsWriter.#ctor(VDS.RDF.ISparqlResultsWriter)
+  - VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  - VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  - VDS.RDF.Writing.BaseGZipResultsWriter.ToString
+  - VDS.RDF.Writing.BaseGZipResultsWriter.Warning
+  langs:
+  - csharp
+  - vb
+  name: BaseGZipResultsWriter
+  nameWithType: BaseGZipResultsWriter
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseGZipResultsWriter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nAbstract Base class for Results writers which generate GZipped output.\n"
+  remarks: "\n<p>\nWhile the normal witers can be used with GZip streams directly this class just abstracts the wrapping of file/stream output into a GZip stream if it is not already passed as such.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseGZipResultsWriter : ISparqlResultsWriter'
+    content.vb: >-
+      Public MustInherit Class BaseGZipResultsWriter
+          Implements ISparqlResultsWriter
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Writing.GZippedSparqlCsvWriter
+  - VDS.RDF.Writing.GZippedSparqlJsonWriter
+  - VDS.RDF.Writing.GZippedSparqlTsvWriter
+  - VDS.RDF.Writing.GZippedSparqlXmlWriter
+  implements:
+  - VDS.RDF.ISparqlResultsWriter
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Writing.BaseGZipResultsWriter.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.#ctor(VDS.RDF.ISparqlResultsWriter)
+  commentId: M:VDS.RDF.Writing.BaseGZipResultsWriter.#ctor(VDS.RDF.ISparqlResultsWriter)
+  id: '#ctor(VDS.RDF.ISparqlResultsWriter)'
+  parent: VDS.RDF.Writing.BaseGZipResultsWriter
+  langs:
+  - csharp
+  - vb
+  name: BaseGZipResultsWriter(ISparqlResultsWriter)
+  nameWithType: BaseGZipResultsWriter.BaseGZipResultsWriter(ISparqlResultsWriter)
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.BaseGZipResultsWriter(VDS.RDF.ISparqlResultsWriter)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+    startLine: 50
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nCreates a new GZipped Results writer.\n"
+  example: []
+  syntax:
+    content: public BaseGZipResultsWriter(ISparqlResultsWriter writer)
+    parameters:
+    - id: writer
+      type: VDS.RDF.ISparqlResultsWriter
+      description: Underlying writer.
+    content.vb: Public Sub New(writer As ISparqlResultsWriter)
+  overload: VDS.RDF.Writing.BaseGZipResultsWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  commentId: M:VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  id: Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  parent: VDS.RDF.Writing.BaseGZipResultsWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(SparqlResultSet, String)
+  nameWithType: BaseGZipResultsWriter.Save(SparqlResultSet, String)
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+    startLine: 62
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a Result Set as GZipped output.\n"
+  example: []
+  syntax:
+    content: public void Save(SparqlResultSet results, string filename)
+    parameters:
+    - id: results
+      type: VDS.RDF.Query.SparqlResultSet
+      description: Result Set to save.
+    - id: filename
+      type: System.String
+      description: File to save to.
+    content.vb: Public Sub Save(results As SparqlResultSet, filename As String)
+  overload: VDS.RDF.Writing.BaseGZipResultsWriter.Save*
+  implements:
+  - VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  id: Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.BaseGZipResultsWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(SparqlResultSet, TextWriter)
+  nameWithType: BaseGZipResultsWriter.Save(SparqlResultSet, TextWriter)
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.Save(VDS.RDF.Query.SparqlResultSet, System.IO.TextWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a Result Set as GZipped output.\n"
+  example: []
+  syntax:
+    content: public void Save(SparqlResultSet results, TextWriter output)
+    parameters:
+    - id: results
+      type: VDS.RDF.Query.SparqlResultSet
+      description: Result Set to save.
+    - id: output
+      type: System.IO.TextWriter
+      description: Writer to save to.
+    content.vb: Public Sub Save(results As SparqlResultSet, output As TextWriter)
+  overload: VDS.RDF.Writing.BaseGZipResultsWriter.Save*
+  implements:
+  - VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.Warning
+  commentId: E:VDS.RDF.Writing.BaseGZipResultsWriter.Warning
+  id: Warning
+  parent: VDS.RDF.Writing.BaseGZipResultsWriter
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: BaseGZipResultsWriter.Warning
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+    startLine: 110
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nEvent which is raised if non-fatal errors occur writing results\n"
+  example: []
+  syntax:
+    content: public event SparqlWarning Warning
+    return:
+      type: VDS.RDF.SparqlWarning
+    content.vb: Public Event Warning As SparqlWarning
+  implements:
+  - VDS.RDF.ISparqlResultsWriter.Warning
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.ToString
+  commentId: M:VDS.RDF.Writing.BaseGZipResultsWriter.ToString
+  id: ToString
+  parent: VDS.RDF.Writing.BaseGZipResultsWriter
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: BaseGZipResultsWriter.ToString()
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/BaseGZipResultsWriter.cs
+    startLine: 116
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets the description of the writer.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Writing.BaseGZipResultsWriter.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Writing
+  commentId: N:VDS.RDF.Writing
+  name: VDS.RDF.Writing
+  nameWithType: VDS.RDF.Writing
+  fullName: VDS.RDF.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.ISparqlResultsWriter
+  commentId: T:VDS.RDF.ISparqlResultsWriter
+  parent: VDS.RDF
+  name: ISparqlResultsWriter
+  nameWithType: ISparqlResultsWriter
+  fullName: VDS.RDF.ISparqlResultsWriter
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseGZipResultsWriter>()
+  nameWithType: Extensions.AsEnumerable<BaseGZipResultsWriter>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.BaseGZipResultsWriter>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseGZipResultsWriter)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.BaseGZipResultsWriter)()
+  name.vb: AsEnumerable(Of BaseGZipResultsWriter)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseGZipResultsWriter>
+    nameWithType: Extensions.AsEnumerable<BaseGZipResultsWriter>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.BaseGZipResultsWriter>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseGZipResultsWriter)
+    nameWithType: Extensions.AsEnumerable(Of BaseGZipResultsWriter)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.BaseGZipResultsWriter)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.#ctor*
+  commentId: Overload:VDS.RDF.Writing.BaseGZipResultsWriter.#ctor
+  name: BaseGZipResultsWriter
+  nameWithType: BaseGZipResultsWriter.BaseGZipResultsWriter
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.BaseGZipResultsWriter
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.Save*
+  commentId: Overload:VDS.RDF.Writing.BaseGZipResultsWriter.Save
+  name: Save
+  nameWithType: BaseGZipResultsWriter.Save
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.Save
+- uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  commentId: M:VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  parent: VDS.RDF.ISparqlResultsWriter
+  isExternal: true
+  name: Save(SparqlResultSet, String)
+  nameWithType: ISparqlResultsWriter.Save(SparqlResultSet, String)
+  fullName: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  commentId: M:VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  parent: VDS.RDF.ISparqlResultsWriter
+  isExternal: true
+  name: Save(SparqlResultSet, TextWriter)
+  nameWithType: ISparqlResultsWriter.Save(SparqlResultSet, TextWriter)
+  fullName: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.ISparqlResultsWriter.Warning
+  commentId: E:VDS.RDF.ISparqlResultsWriter.Warning
+  parent: VDS.RDF.ISparqlResultsWriter
+  name: Warning
+  nameWithType: ISparqlResultsWriter.Warning
+  fullName: VDS.RDF.ISparqlResultsWriter.Warning
+- uid: VDS.RDF.SparqlWarning
+  commentId: T:VDS.RDF.SparqlWarning
+  parent: VDS.RDF
+  name: SparqlWarning
+  nameWithType: SparqlWarning
+  fullName: VDS.RDF.SparqlWarning
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.BaseGZipResultsWriter.ToString*
+  commentId: Overload:VDS.RDF.Writing.BaseGZipResultsWriter.ToString
+  name: ToString
+  nameWithType: BaseGZipResultsWriter.ToString
+  fullName: VDS.RDF.Writing.BaseGZipResultsWriter.ToString

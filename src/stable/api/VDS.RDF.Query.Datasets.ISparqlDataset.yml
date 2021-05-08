@@ -1,0 +1,1514 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  id: ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  children:
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  - VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  - VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  - VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  langs:
+  - csharp
+  - vb
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ISparqlDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nInterfaces for Datasets that SPARQL Queries and Updates can be applied to.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> For all operations that take a Graph URI a <em>null</em> Uri should be considered to refer to the Default Graph of the dataset.\n</p>\n<h3>Default and Active Graph</h3>\n<p>\nLeviathan expects that a Query operates over the Dataset in the following order:\n<ol>\n<li>If an Active Graph is set then Queries operate over that</li>\n<li>Otherwise if a Default Graph is set then Queries operate over that</li>\n<li>Finally the Queries operate over the all triples, the notion of all triples may be dataset implementation specific i.e. may be union of all graphs, the default unnamed graph only or something else entirely</li>\n</ol>\nPlease note that the Query may change the Active and Default Graph over the course of the query depending on the Query e.g. FROM, FROM NAMED and GRAPH all can potentially change these.\n</p>\n<p>\nYou can limit your queries to use specific portions of your dataset by using the SetActiveGraph() and SetDefaultGraph() methods on your dataset instance before then passing it to the <xref href=\"VDS.RDF.Query.LeviathanQueryProcessor\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n<p>\n<strong>Note: </strong> By default the <xref href=\"VDS.RDF.Query.Datasets.InMemoryDataset\" data-throw-if-not-resolved=\"false\"></xref> uses the Union of all Graphs in the Dataset if no Active/Default Graph is otherwise specified.  Use the <xref href=\"VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph\" data-throw-if-not-resolved=\"false\"></xref> property to see whether a Dataset implementation behaves in this way.\n</p>\n"
+  example: []
+  syntax:
+    content: public interface ISparqlDataset
+    content.vb: Public Interface ISparqlDataset
+  extensionMethods:
+  - VDS.RDF.Query.Datasets.ISparqlDataset.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  id: SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: SetActiveGraph(IEnumerable<Uri>)
+  nameWithType: ISparqlDataset.SetActiveGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetActiveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nSets the Active Graph to be the merge of the Graphs with the given URIs.\n"
+  example: []
+  syntax:
+    content: void SetActiveGraph(IEnumerable<Uri> graphUris)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+      description: Graph URIs.
+    content.vb: Sub SetActiveGraph(graphUris As IEnumerable(Of Uri))
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph*
+  nameWithType.vb: ISparqlDataset.SetActiveGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetActiveGraph(IEnumerable(Of Uri))
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  id: SetActiveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: SetActiveGraph(Uri)
+  nameWithType: ISparqlDataset.SetActiveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetActiveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 70
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nSets the Active Graph to be the Graph with the given URI.\n"
+  example: []
+  syntax:
+    content: void SetActiveGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    content.vb: Sub SetActiveGraph(graphUri As Uri)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  id: SetDefaultGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: SetDefaultGraph(Uri)
+  nameWithType: ISparqlDataset.SetDefaultGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetDefaultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 76
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nSets the Default Graph to be the Graph with the given URI.\n"
+  example: []
+  syntax:
+    content: void SetDefaultGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    content.vb: Sub SetDefaultGraph(graphUri As Uri)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  id: SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: SetDefaultGraph(IEnumerable<Uri>)
+  nameWithType: ISparqlDataset.SetDefaultGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetDefaultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 82
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nSets the Default Graph to be the merge of the Graphs with the given URIs.\n"
+  example: []
+  syntax:
+    content: void SetDefaultGraph(IEnumerable<Uri> graphUris)
+    parameters:
+    - id: graphUris
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+      description: Graph URIs.
+    content.vb: Sub SetDefaultGraph(graphUris As IEnumerable(Of Uri))
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph*
+  nameWithType.vb: ISparqlDataset.SetDefaultGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetDefaultGraph(IEnumerable(Of Uri))
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  id: ResetActiveGraph
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: ResetActiveGraph()
+  nameWithType: ISparqlDataset.ResetActiveGraph()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ResetActiveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 87
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nResets the Active Graph to the previous Active Graph.\n"
+  example: []
+  syntax:
+    content: void ResetActiveGraph()
+    content.vb: Sub ResetActiveGraph
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  id: ResetDefaultGraph
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: ResetDefaultGraph()
+  nameWithType: ISparqlDataset.ResetDefaultGraph()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ResetDefaultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 92
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nResets the Default Graph to the previous Default Graph.\n"
+  example: []
+  syntax:
+    content: void ResetDefaultGraph()
+    content.vb: Sub ResetDefaultGraph
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  id: DefaultGraphUris
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: DefaultGraphUris
+  nameWithType: ISparqlDataset.DefaultGraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DefaultGraphUris
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 97
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets the enumeration of the Graph URIs that currently make up the default graph.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Uri> DefaultGraphUris { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+    content.vb: ReadOnly Property DefaultGraphUris As IEnumerable(Of Uri)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  id: ActiveGraphUris
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: ActiveGraphUris
+  nameWithType: ISparqlDataset.ActiveGraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ActiveGraphUris
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 105
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets the enumeration of the Graph URIs that currently make up the active graph.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Uri> ActiveGraphUris { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+    content.vb: ReadOnly Property ActiveGraphUris As IEnumerable(Of Uri)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  id: UsesUnionDefaultGraph
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: UsesUnionDefaultGraph
+  nameWithType: ISparqlDataset.UsesUnionDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UsesUnionDefaultGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 113
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets whether the Default Graph is treated as being the union of all Graphs in the dataset when no Default Graph is otherwise set.\n"
+  example: []
+  syntax:
+    content: bool UsesUnionDefaultGraph { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property UsesUnionDefaultGraph As Boolean
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  id: AddGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: AddGraph(IGraph)
+  nameWithType: ISparqlDataset.AddGraph(IGraph)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 127
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nAdds a Graph to the Dataset.\n"
+  example: []
+  syntax:
+    content: bool AddGraph(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    return:
+      type: System.Boolean
+    content.vb: Function AddGraph(g As IGraph) As Boolean
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Dataset is immutable i.e. Updates not supported.
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Dataset is immutable.
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  id: RemoveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: RemoveGraph(Uri)
+  nameWithType: ISparqlDataset.RemoveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 134
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nRemoves a Graph from the Dataset.\n"
+  example: []
+  syntax:
+    content: bool RemoveGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+    content.vb: Function RemoveGraph(graphUri As Uri) As Boolean
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Dataset is immutable i.e. Updates not supported.
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Dataset is immutable.
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  id: HasGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: HasGraph(Uri)
+  nameWithType: ISparqlDataset.HasGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 141
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets whether a Graph with the given URI is the Dataset.\n"
+  example: []
+  syntax:
+    content: bool HasGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function HasGraph(graphUri As Uri) As Boolean
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  id: Graphs
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: Graphs
+  nameWithType: ISparqlDataset.Graphs
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Graphs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 146
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Graphs in the Dataset.\n"
+  example: []
+  syntax:
+    content: IEnumerable<IGraph> Graphs { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}
+    content.vb: ReadOnly Property Graphs As IEnumerable(Of IGraph)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.Graphs*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  id: GraphUris
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GraphUris
+  nameWithType: ISparqlDataset.GraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GraphUris
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 154
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the URIs of Graphs in the Dataset.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Uri> GraphUris { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+    content.vb: ReadOnly Property GraphUris As IEnumerable(Of Uri)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  id: Item(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: Item[Uri]
+  nameWithType: ISparqlDataset.Item[Uri]
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Item[System.Uri]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 169
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets the Graph with the given URI from the Dataset.\n"
+  remarks: "\n<p>\nThis property need only return a read-only view of the Graph, code which wishes to modify Graphs should use the <xref href=\"VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)\" data-throw-if-not-resolved=\"false\"></xref> method to guarantee a Graph they can modify and will be persisted to the underlying storage.\n</p>\n"
+  example: []
+  syntax:
+    content: IGraph this[Uri graphUri] { get; }
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: ReadOnly Property Item(graphUri As Uri) As IGraph
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.Item*
+  nameWithType.vb: ISparqlDataset.Item(Uri)
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  name.vb: Item(Uri)
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  id: GetModifiableGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GetModifiableGraph(Uri)
+  nameWithType: ISparqlDataset.GetModifiableGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetModifiableGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 185
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets the Graph with the given URI from the Dataset.\n"
+  remarks: "\n<p>\nGraphs returned from this method must be modifiable and the Dataset must guarantee that when it is Flushed or Disposed of that any changes to the Graph are persisted.\n</p>\n"
+  example: []
+  syntax:
+    content: IGraph GetModifiableGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Function GetModifiableGraph(graphUri As Uri) As IGraph
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph*
+  exceptions:
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Dataset is immutable i.e. Updates not supported.
+  - type: System.NotSupportedException
+    commentId: T:System.NotSupportedException
+    description: May be thrown if the Dataset is immutable.
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  id: HasTriples
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: HasTriples
+  nameWithType: ISparqlDataset.HasTriples
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasTriples
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 194
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets whether the Dataset has any Triples.\n"
+  example: []
+  syntax:
+    content: bool HasTriples { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property HasTriples As Boolean
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  id: ContainsTriple(VDS.RDF.Triple)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: ContainsTriple(Triple)
+  nameWithType: ISparqlDataset.ContainsTriple(Triple)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ContainsTriple
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 204
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets whether the Dataset contains a specific Triple.\n"
+  example: []
+  syntax:
+    content: bool ContainsTriple(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function ContainsTriple(t As Triple) As Boolean
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  id: Triples
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: Triples
+  nameWithType: ISparqlDataset.Triples
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Triples
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 214
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Triples in the Dataset.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The Triples returned from the method should be limited to those in the current Active Graph if present, otherwise those in the current Default Graph if present and finally the entire Dataset.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> Triples { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+    content.vb: ReadOnly Property Triples As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.Triples*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  id: GetTriplesWithSubject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubject(INode)
+  nameWithType: ISparqlDataset.GetTriplesWithSubject(INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 229
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Triples in the Dataset with the given Subject.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The Triples returned from the method should be limited to those in the current Active Graph if present, otherwise those in the current Default Graph if present and finally the entire Dataset.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubject(INode subj)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubject(subj As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  id: GetTriplesWithPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithPredicate(INode)
+  nameWithType: ISparqlDataset.GetTriplesWithPredicate(INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 241
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Triples in the Dataset with the given Predicate.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The Triples returned from the method should be limited to those in the current Active Graph if present, otherwise those in the current Default Graph if present and finally the entire Dataset.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithPredicate(INode pred)
+    parameters:
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithPredicate(pred As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  id: GetTriplesWithObject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithObject(INode)
+  nameWithType: ISparqlDataset.GetTriplesWithObject(INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 253
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Triples in the Dataset with the given Object.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The Triples returned from the method should be limited to those in the current Active Graph if present, otherwise those in the current Default Graph if present and finally the entire Dataset.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithObject(INode obj)
+    parameters:
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithObject(obj As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  id: GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubjectPredicate(INode, INode)
+  nameWithType: ISparqlDataset.GetTriplesWithSubjectPredicate(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubjectPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 266
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Triples in the Dataset with the given Subject and Predicate.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The Triples returned from the method should be limited to those in the current Active Graph if present, otherwise those in the current Default Graph if present and finally the entire Dataset.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubjectPredicate(INode subj, INode pred)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubjectPredicate(subj As INode, pred As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  id: GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithSubjectObject(INode, INode)
+  nameWithType: ISparqlDataset.GetTriplesWithSubjectObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithSubjectObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 279
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Triples in the Dataset with the given Subject and Object.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The Triples returned from the method should be limited to those in the current Active Graph if present, otherwise those in the current Default Graph if present and finally the entire Dataset.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithSubjectObject(INode subj, INode obj)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithSubjectObject(subj As INode, obj As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  id: GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: GetTriplesWithPredicateObject(INode, INode)
+  nameWithType: ISparqlDataset.GetTriplesWithPredicateObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplesWithPredicateObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 292
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets all the Triples in the Dataset with the given Predicate and Object.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> The Triples returned from the method should be limited to those in the current Active Graph if present, otherwise those in the current Default Graph if present and finally the entire Dataset.\n</p>\n"
+  example: []
+  syntax:
+    content: IEnumerable<Triple> GetTriplesWithPredicateObject(INode pred, INode obj)
+    parameters:
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Function GetTriplesWithPredicateObject(pred As INode, obj As INode) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  id: Flush
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: ISparqlDataset.Flush()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Flush()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Flush
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 304
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nEnsures that any changes to the Dataset (if any) are flushed to the underlying Storage.\n"
+  remarks: "\n<p>\nWhile partly intended for use in implementations which support transactions though other implementations may wish to use this to ensure that changes to the dataset are persisted properly.\n</p>\n"
+  example: []
+  syntax:
+    content: void Flush()
+    content.vb: Sub Flush
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.Flush*
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  id: Discard
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  langs:
+  - csharp
+  - vb
+  name: Discard()
+  nameWithType: ISparqlDataset.Discard()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Discard()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Discard
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 314
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nEnsures that any changes to the Dataset (if any) are discarded.\n"
+  remarks: "\n<p>\nPrimarily intended for use in implementations which support transactions though other implementations may wish to use this to ensure that changes to the dataset are persisted properly.\n</p>\n"
+  example: []
+  syntax:
+    content: void Discard()
+    content.vb: Sub Discard
+  overload: VDS.RDF.Query.Datasets.ISparqlDataset.Discard*
+references:
+- uid: VDS.RDF.Query.LeviathanQueryProcessor
+  commentId: T:VDS.RDF.Query.LeviathanQueryProcessor
+  parent: VDS.RDF.Query
+  name: LeviathanQueryProcessor
+  nameWithType: LeviathanQueryProcessor
+  fullName: VDS.RDF.Query.LeviathanQueryProcessor
+- uid: VDS.RDF.Query.Datasets.InMemoryDataset
+  commentId: T:VDS.RDF.Query.Datasets.InMemoryDataset
+  name: InMemoryDataset
+  nameWithType: InMemoryDataset
+  fullName: VDS.RDF.Query.Datasets.InMemoryDataset
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: UsesUnionDefaultGraph
+  nameWithType: ISparqlDataset.UsesUnionDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ISparqlDataset>()
+  nameWithType: Extensions.AsEnumerable<ISparqlDataset>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.ISparqlDataset>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ISparqlDataset)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.ISparqlDataset)()
+  name.vb: AsEnumerable(Of ISparqlDataset)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ISparqlDataset>
+    nameWithType: Extensions.AsEnumerable<ISparqlDataset>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.ISparqlDataset>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ISparqlDataset)
+    nameWithType: Extensions.AsEnumerable(Of ISparqlDataset)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.ISparqlDataset)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph
+  name: SetActiveGraph
+  nameWithType: ISparqlDataset.SetActiveGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph
+- uid: System.Collections.Generic.IEnumerable{System.Uri}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Uri}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Uri>
+  nameWithType: IEnumerable<Uri>
+  fullName: System.Collections.Generic.IEnumerable<System.Uri>
+  nameWithType.vb: IEnumerable(Of Uri)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Uri)
+  name.vb: IEnumerable(Of Uri)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph
+  name: SetDefaultGraph
+  nameWithType: ISparqlDataset.SetDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  name: ResetActiveGraph
+  nameWithType: ISparqlDataset.ResetActiveGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  name: ResetDefaultGraph
+  nameWithType: ISparqlDataset.ResetDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  name: DefaultGraphUris
+  nameWithType: ISparqlDataset.DefaultGraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  name: ActiveGraphUris
+  nameWithType: ISparqlDataset.ActiveGraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  name: UsesUnionDefaultGraph
+  nameWithType: ISparqlDataset.UsesUnionDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph
+  name: AddGraph
+  nameWithType: ISparqlDataset.AddGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph
+  name: RemoveGraph
+  nameWithType: ISparqlDataset.RemoveGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph
+  name: HasGraph
+  nameWithType: ISparqlDataset.HasGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Graphs*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  name: Graphs
+  nameWithType: ISparqlDataset.Graphs
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IGraph>
+  nameWithType: IEnumerable<IGraph>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.IGraph>
+  nameWithType.vb: IEnumerable(Of IGraph)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.IGraph)
+  name.vb: IEnumerable(Of IGraph)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  name: GraphUris
+  nameWithType: ISparqlDataset.GraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: GetModifiableGraph(Uri)
+  nameWithType: ISparqlDataset.GetModifiableGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: ISparqlDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: ISparqlDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Item*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.Item
+  name: Item
+  nameWithType: ISparqlDataset.Item
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Item
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph
+  name: GetModifiableGraph
+  nameWithType: ISparqlDataset.GetModifiableGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  name: HasTriples
+  nameWithType: ISparqlDataset.HasTriples
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple
+  name: ContainsTriple
+  nameWithType: ISparqlDataset.ContainsTriple
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple
+- uid: VDS.RDF.Triple
+  commentId: T:VDS.RDF.Triple
+  parent: VDS.RDF
+  name: Triple
+  nameWithType: Triple
+  fullName: VDS.RDF.Triple
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Triples*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  name: Triples
+  nameWithType: ISparqlDataset.Triples
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Triple>
+  nameWithType: IEnumerable<Triple>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerable(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple)
+  name.vb: IEnumerable(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject
+  name: GetTriplesWithSubject
+  nameWithType: ISparqlDataset.GetTriplesWithSubject
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate
+  name: GetTriplesWithPredicate
+  nameWithType: ISparqlDataset.GetTriplesWithPredicate
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject
+  name: GetTriplesWithObject
+  nameWithType: ISparqlDataset.GetTriplesWithObject
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate
+  name: GetTriplesWithSubjectPredicate
+  nameWithType: ISparqlDataset.GetTriplesWithSubjectPredicate
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject
+  name: GetTriplesWithSubjectObject
+  nameWithType: ISparqlDataset.GetTriplesWithSubjectObject
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject
+  name: GetTriplesWithPredicateObject
+  nameWithType: ISparqlDataset.GetTriplesWithPredicateObject
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Flush*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  name: Flush
+  nameWithType: ISparqlDataset.Flush
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Discard*
+  commentId: Overload:VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  name: Discard
+  nameWithType: ISparqlDataset.Discard
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Discard

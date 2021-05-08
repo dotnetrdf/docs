@@ -1,0 +1,801 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate
+  commentId: T:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate
+  id: SesameHttpTemplate
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame
+  children:
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.#ctor(System.String)
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer
+  langs:
+  - csharp
+  - vb
+  name: SesameHttpTemplate
+  nameWithType: SesameHttpTemplate
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SesameHttpTemplate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management.Provisioning.Sesame
+  summary: "\nTemplates for creating remote Sesame stores.\n"
+  remarks: "\n<p>\nThis template generates a Sesame repository config graph like the following, depending on exact options the graph may differ:\n</p>\n<pre><code>@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#>.\n@prefix rep: &lt;http://www.openrdf.org/config/repository#>.\n@prefix hr: &lt;http://www.openrdf.org/config/repository/http#>.\n\n[] a rep:Repository ;\nrep:repositoryImpl [\n      rep:repositoryType &quot;openrdf:HTTPRepository&quot; ;\n      hr:repositoryURL &lt;{%Sesame server location|http://localhost:8080/openrdf-sesame%}/repositories/{%Remote repository ID|SYSTEM%}>\n   ];\n   rep:repositoryID &quot;{this.ID}&quot; ;\n   rdfs:label &quot;{this.Label}&quot; .</code></pre>\n<p>\nThe placeholders of the form <strong>{this.Property}</strong> represent properties of this class whose values will be inserted into the repository config graph and used to create a new store in Sesame.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class SesameHttpTemplate : BaseSesameTemplate, IStoreTemplate'
+    content.vb: >-
+      Public Class SesameHttpTemplate
+          Inherits BaseSesameTemplate
+          Implements IStoreTemplate
+  inheritance:
+  - System.Object
+  - VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  implements:
+  - VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  inheritedMembers:
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryNamespace
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositorySailNamespace
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryHttpNamespace
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNamespace
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailMemoryNamespace
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNativeNamespace
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.Label
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.ContextNode
+  - VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ID
+  - VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateName
+  - VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateDescription
+  - VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate
+  - VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.#ctor(System.String)
+  commentId: M:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate
+  langs:
+  - csharp
+  - vb
+  name: SesameHttpTemplate(String)
+  nameWithType: SesameHttpTemplate.SesameHttpTemplate(String)
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.SesameHttpTemplate(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+    startLine: 62
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management.Provisioning.Sesame
+  summary: "\nCreates a new Template.\n"
+  example: []
+  syntax:
+    content: public SesameHttpTemplate(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: Store ID.
+    content.vb: Public Sub New(id As String)
+  overload: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer
+  commentId: P:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer
+  id: RemoteServer
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate
+  langs:
+  - csharp
+  - vb
+  name: RemoteServer
+  nameWithType: SesameHttpTemplate.RemoteServer
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoteServer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management.Provisioning.Sesame
+  summary: "\nGets/Sets the remote Sesame server to connect to.\n"
+  example: []
+  syntax:
+    content: public string RemoteServer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RemoteServer As String
+  overload: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID
+  commentId: P:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID
+  id: RemoteRepositoryID
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate
+  langs:
+  - csharp
+  - vb
+  name: RemoteRepositoryID
+  nameWithType: SesameHttpTemplate.RemoteRepositoryID
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoteRepositoryID
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+    startLine: 78
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management.Provisioning.Sesame
+  summary: "\nGets/Sets the ID of the remote repository to connect to.\n"
+  example: []
+  syntax:
+    content: public string RemoteRepositoryID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RemoteRepositoryID As String
+  overload: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph
+  commentId: M:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph
+  id: GetTemplateGraph
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate
+  langs:
+  - csharp
+  - vb
+  name: GetTemplateGraph()
+  nameWithType: SesameHttpTemplate.GetTemplateGraph()
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTemplateGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/Provisioning/Sesame/SesameHttpTemplate.cs
+    startLine: 89
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management.Provisioning.Sesame
+  summary: "\nGets the template graph.\n"
+  example: []
+  syntax:
+    content: public override IGraph GetTemplateGraph()
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public Overrides Function GetTemplateGraph As IGraph
+  overridden: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph
+  overload: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame
+  commentId: N:VDS.RDF.Storage.Management.Provisioning.Sesame
+  name: VDS.RDF.Storage.Management.Provisioning.Sesame
+  nameWithType: VDS.RDF.Storage.Management.Provisioning.Sesame
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  commentId: T:VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  parent: VDS.RDF.Storage.Management.Provisioning
+  name: StoreTemplate
+  nameWithType: StoreTemplate
+  fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  commentId: T:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame
+  name: BaseSesameTemplate
+  nameWithType: BaseSesameTemplate
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+- uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  commentId: T:VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  parent: VDS.RDF.Storage.Management.Provisioning
+  name: IStoreTemplate
+  nameWithType: IStoreTemplate
+  fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryNamespace
+  commentId: F:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryNamespace
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: RepositoryNamespace
+  nameWithType: BaseSesameTemplate.RepositoryNamespace
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryNamespace
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositorySailNamespace
+  commentId: F:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositorySailNamespace
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: RepositorySailNamespace
+  nameWithType: BaseSesameTemplate.RepositorySailNamespace
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositorySailNamespace
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryHttpNamespace
+  commentId: F:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryHttpNamespace
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: RepositoryHttpNamespace
+  nameWithType: BaseSesameTemplate.RepositoryHttpNamespace
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.RepositoryHttpNamespace
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNamespace
+  commentId: F:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNamespace
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: SailNamespace
+  nameWithType: BaseSesameTemplate.SailNamespace
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNamespace
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailMemoryNamespace
+  commentId: F:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailMemoryNamespace
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: SailMemoryNamespace
+  nameWithType: BaseSesameTemplate.SailMemoryNamespace
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailMemoryNamespace
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNativeNamespace
+  commentId: F:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNativeNamespace
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: SailNativeNamespace
+  nameWithType: BaseSesameTemplate.SailNativeNamespace
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.SailNativeNamespace
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.Label
+  commentId: P:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.Label
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: Label
+  nameWithType: BaseSesameTemplate.Label
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.Label
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph
+  commentId: M:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: GetBaseTemplateGraph()
+  nameWithType: BaseSesameTemplate.GetBaseTemplateGraph()
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph
+    name: GetBaseTemplateGraph
+    nameWithType: BaseSesameTemplate.GetBaseTemplateGraph
+    fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph
+    name: GetBaseTemplateGraph
+    nameWithType: BaseSesameTemplate.GetBaseTemplateGraph
+    fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetBaseTemplateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.ContextNode
+  commentId: P:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.ContextNode
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: ContextNode
+  nameWithType: BaseSesameTemplate.ContextNode
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.ContextNode
+- uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ID
+  commentId: P:VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ID
+  parent: VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  name: ID
+  nameWithType: StoreTemplate.ID
+  fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ID
+- uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateName
+  commentId: P:VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateName
+  parent: VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  name: TemplateName
+  nameWithType: StoreTemplate.TemplateName
+  fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateName
+- uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateDescription
+  commentId: P:VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateDescription
+  parent: VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  name: TemplateDescription
+  nameWithType: StoreTemplate.TemplateDescription
+  fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.TemplateDescription
+- uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate
+  commentId: M:VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate
+  parent: VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  name: Validate()
+  nameWithType: StoreTemplate.Validate()
+  fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate
+    name: Validate
+    nameWithType: StoreTemplate.Validate
+    fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate
+    name: Validate
+    nameWithType: StoreTemplate.Validate
+    fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.Validate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString
+  commentId: M:VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString
+  parent: VDS.RDF.Storage.Management.Provisioning.StoreTemplate
+  name: ToString()
+  nameWithType: StoreTemplate.ToString()
+  fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString
+    name: ToString
+    nameWithType: StoreTemplate.ToString
+    fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString
+    name: ToString
+    nameWithType: StoreTemplate.ToString
+    fullName: VDS.RDF.Storage.Management.Provisioning.StoreTemplate.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SesameHttpTemplate>()
+  nameWithType: Extensions.AsEnumerable<SesameHttpTemplate>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SesameHttpTemplate)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate)()
+  name.vb: AsEnumerable(Of SesameHttpTemplate)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SesameHttpTemplate>
+    nameWithType: Extensions.AsEnumerable<SesameHttpTemplate>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SesameHttpTemplate)
+    nameWithType: Extensions.AsEnumerable(Of SesameHttpTemplate)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Storage.Management.Provisioning
+  commentId: N:VDS.RDF.Storage.Management.Provisioning
+  name: VDS.RDF.Storage.Management.Provisioning
+  nameWithType: VDS.RDF.Storage.Management.Provisioning
+  fullName: VDS.RDF.Storage.Management.Provisioning
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.#ctor*
+  commentId: Overload:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.#ctor
+  name: SesameHttpTemplate
+  nameWithType: SesameHttpTemplate.SesameHttpTemplate
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.SesameHttpTemplate
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer*
+  commentId: Overload:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer
+  name: RemoteServer
+  nameWithType: SesameHttpTemplate.RemoteServer
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteServer
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID*
+  commentId: Overload:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID
+  name: RemoteRepositoryID
+  nameWithType: SesameHttpTemplate.RemoteRepositoryID
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.RemoteRepositoryID
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph
+  commentId: M:VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph
+  parent: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate
+  name: GetTemplateGraph()
+  nameWithType: BaseSesameTemplate.GetTemplateGraph()
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph
+    name: GetTemplateGraph
+    nameWithType: BaseSesameTemplate.GetTemplateGraph
+    fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph
+    name: GetTemplateGraph
+    nameWithType: BaseSesameTemplate.GetTemplateGraph
+    fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.BaseSesameTemplate.GetTemplateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph*
+  commentId: Overload:VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph
+  name: GetTemplateGraph
+  nameWithType: SesameHttpTemplate.GetTemplateGraph
+  fullName: VDS.RDF.Storage.Management.Provisioning.Sesame.SesameHttpTemplate.GetTemplateGraph
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph

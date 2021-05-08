@@ -1,0 +1,1391 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.BaseDemandGraphCollection
+  commentId: T:VDS.RDF.BaseDemandGraphCollection
+  id: BaseDemandGraphCollection
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.BaseDemandGraphCollection.#ctor
+  - VDS.RDF.BaseDemandGraphCollection.#ctor(VDS.RDF.BaseGraphCollection)
+  - VDS.RDF.BaseDemandGraphCollection.Contains(System.Uri)
+  - VDS.RDF.BaseDemandGraphCollection.LoadOnDemand(System.Uri)
+  langs:
+  - csharp
+  - vb
+  name: BaseDemandGraphCollection
+  nameWithType: BaseDemandGraphCollection
+  fullName: VDS.RDF.BaseDemandGraphCollection
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseDemandGraphCollection
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nA decorator for graph collections that allows for graphs to be loaded on demand if they don&apos;t exist in the underlying graph collection.\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseDemandGraphCollection : WrapperGraphCollection, IEnumerable<IGraph>, IEnumerable, IDisposable'
+    content.vb: >-
+      Public MustInherit Class BaseDemandGraphCollection
+          Inherits WrapperGraphCollection
+          Implements IEnumerable(Of IGraph), IEnumerable, IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.BaseGraphCollection
+  - VDS.RDF.WrapperGraphCollection
+  derivedClasses:
+  - VDS.RDF.DiskDemandGraphCollection
+  - VDS.RDF.WebDemandGraphCollection
+  implements:
+  - System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}
+  - System.Collections.IEnumerable
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.WrapperGraphCollection._graphs
+  - VDS.RDF.WrapperGraphCollection.Add(VDS.RDF.IGraph,System.Boolean)
+  - VDS.RDF.WrapperGraphCollection.Count
+  - VDS.RDF.WrapperGraphCollection.Dispose
+  - VDS.RDF.WrapperGraphCollection.GetEnumerator
+  - VDS.RDF.WrapperGraphCollection.GraphUris
+  - VDS.RDF.WrapperGraphCollection.Remove(System.Uri)
+  - VDS.RDF.WrapperGraphCollection.Item(System.Uri)
+  - VDS.RDF.BaseGraphCollection.System#Collections#IEnumerable#GetEnumerator
+  - VDS.RDF.BaseGraphCollection.GraphAdded
+  - VDS.RDF.BaseGraphCollection.GraphRemoved
+  - VDS.RDF.BaseGraphCollection.RaiseGraphAdded(VDS.RDF.IGraph)
+  - VDS.RDF.BaseGraphCollection.RaiseGraphRemoved(VDS.RDF.IGraph)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.BaseDemandGraphCollection.VDS.RDF.Extensions.AsEnumerable``1
+  - System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{VDS.RDF.IGraph})
+  - System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.BaseDemandGraphCollection.#ctor
+  commentId: M:VDS.RDF.BaseDemandGraphCollection.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.BaseDemandGraphCollection
+  langs:
+  - csharp
+  - vb
+  name: BaseDemandGraphCollection()
+  nameWithType: BaseDemandGraphCollection.BaseDemandGraphCollection()
+  fullName: VDS.RDF.BaseDemandGraphCollection.BaseDemandGraphCollection()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+    startLine: 40
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new decorator.\n"
+  example: []
+  syntax:
+    content: public BaseDemandGraphCollection()
+    content.vb: Public Sub New
+  overload: VDS.RDF.BaseDemandGraphCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseDemandGraphCollection.#ctor(VDS.RDF.BaseGraphCollection)
+  commentId: M:VDS.RDF.BaseDemandGraphCollection.#ctor(VDS.RDF.BaseGraphCollection)
+  id: '#ctor(VDS.RDF.BaseGraphCollection)'
+  parent: VDS.RDF.BaseDemandGraphCollection
+  langs:
+  - csharp
+  - vb
+  name: BaseDemandGraphCollection(BaseGraphCollection)
+  nameWithType: BaseDemandGraphCollection.BaseDemandGraphCollection(BaseGraphCollection)
+  fullName: VDS.RDF.BaseDemandGraphCollection.BaseDemandGraphCollection(VDS.RDF.BaseGraphCollection)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+    startLine: 47
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new decorator over the given graph collection.\n"
+  example: []
+  syntax:
+    content: public BaseDemandGraphCollection(BaseGraphCollection collection)
+    parameters:
+    - id: collection
+      type: VDS.RDF.BaseGraphCollection
+      description: Graph Collection.
+    content.vb: Public Sub New(collection As BaseGraphCollection)
+  overload: VDS.RDF.BaseDemandGraphCollection.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseDemandGraphCollection.Contains(System.Uri)
+  commentId: M:VDS.RDF.BaseDemandGraphCollection.Contains(System.Uri)
+  id: Contains(System.Uri)
+  parent: VDS.RDF.BaseDemandGraphCollection
+  langs:
+  - csharp
+  - vb
+  name: Contains(Uri)
+  nameWithType: BaseDemandGraphCollection.Contains(Uri)
+  fullName: VDS.RDF.BaseDemandGraphCollection.Contains(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Contains
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nChecks whether the collection contains a Graph invoking an on-demand load if not present in the underlying collection.\n"
+  example: []
+  syntax:
+    content: public override bool Contains(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Contains(graphUri As Uri) As Boolean
+  overridden: VDS.RDF.WrapperGraphCollection.Contains(System.Uri)
+  overload: VDS.RDF.BaseDemandGraphCollection.Contains*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.BaseDemandGraphCollection.LoadOnDemand(System.Uri)
+  commentId: M:VDS.RDF.BaseDemandGraphCollection.LoadOnDemand(System.Uri)
+  id: LoadOnDemand(System.Uri)
+  parent: VDS.RDF.BaseDemandGraphCollection
+  langs:
+  - csharp
+  - vb
+  name: LoadOnDemand(Uri)
+  nameWithType: BaseDemandGraphCollection.LoadOnDemand(Uri)
+  fullName: VDS.RDF.BaseDemandGraphCollection.LoadOnDemand(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadOnDemand
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseDemandGraphCollection.cs
+    startLine: 87
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nLoads a Graph on demand.\n"
+  example: []
+  syntax:
+    content: protected abstract IGraph LoadOnDemand(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: URI of the Graph to load.
+    return:
+      type: VDS.RDF.IGraph
+      description: A Graph if it could be loaded and throws an error otherwise.
+    content.vb: Protected MustOverride Function LoadOnDemand(graphUri As Uri) As IGraph
+  overload: VDS.RDF.BaseDemandGraphCollection.LoadOnDemand*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.BaseGraphCollection
+  commentId: T:VDS.RDF.BaseGraphCollection
+  parent: VDS.RDF
+  name: BaseGraphCollection
+  nameWithType: BaseGraphCollection
+  fullName: VDS.RDF.BaseGraphCollection
+- uid: VDS.RDF.WrapperGraphCollection
+  commentId: T:VDS.RDF.WrapperGraphCollection
+  parent: VDS.RDF
+  name: WrapperGraphCollection
+  nameWithType: WrapperGraphCollection
+  fullName: VDS.RDF.WrapperGraphCollection
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IGraph>
+  nameWithType: IEnumerable<IGraph>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.IGraph>
+  nameWithType.vb: IEnumerable(Of IGraph)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.IGraph)
+  name.vb: IEnumerable(Of IGraph)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.WrapperGraphCollection._graphs
+  commentId: F:VDS.RDF.WrapperGraphCollection._graphs
+  parent: VDS.RDF.WrapperGraphCollection
+  name: _graphs
+  nameWithType: WrapperGraphCollection._graphs
+  fullName: VDS.RDF.WrapperGraphCollection._graphs
+- uid: VDS.RDF.WrapperGraphCollection.Add(VDS.RDF.IGraph,System.Boolean)
+  commentId: M:VDS.RDF.WrapperGraphCollection.Add(VDS.RDF.IGraph,System.Boolean)
+  parent: VDS.RDF.WrapperGraphCollection
+  isExternal: true
+  name: Add(IGraph, Boolean)
+  nameWithType: WrapperGraphCollection.Add(IGraph, Boolean)
+  fullName: VDS.RDF.WrapperGraphCollection.Add(VDS.RDF.IGraph, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperGraphCollection.Add(VDS.RDF.IGraph,System.Boolean)
+    name: Add
+    nameWithType: WrapperGraphCollection.Add
+    fullName: VDS.RDF.WrapperGraphCollection.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperGraphCollection.Add(VDS.RDF.IGraph,System.Boolean)
+    name: Add
+    nameWithType: WrapperGraphCollection.Add
+    fullName: VDS.RDF.WrapperGraphCollection.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.WrapperGraphCollection.Count
+  commentId: P:VDS.RDF.WrapperGraphCollection.Count
+  parent: VDS.RDF.WrapperGraphCollection
+  name: Count
+  nameWithType: WrapperGraphCollection.Count
+  fullName: VDS.RDF.WrapperGraphCollection.Count
+- uid: VDS.RDF.WrapperGraphCollection.Dispose
+  commentId: M:VDS.RDF.WrapperGraphCollection.Dispose
+  parent: VDS.RDF.WrapperGraphCollection
+  name: Dispose()
+  nameWithType: WrapperGraphCollection.Dispose()
+  fullName: VDS.RDF.WrapperGraphCollection.Dispose()
+  spec.csharp:
+  - uid: VDS.RDF.WrapperGraphCollection.Dispose
+    name: Dispose
+    nameWithType: WrapperGraphCollection.Dispose
+    fullName: VDS.RDF.WrapperGraphCollection.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperGraphCollection.Dispose
+    name: Dispose
+    nameWithType: WrapperGraphCollection.Dispose
+    fullName: VDS.RDF.WrapperGraphCollection.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.WrapperGraphCollection.GetEnumerator
+  commentId: M:VDS.RDF.WrapperGraphCollection.GetEnumerator
+  parent: VDS.RDF.WrapperGraphCollection
+  name: GetEnumerator()
+  nameWithType: WrapperGraphCollection.GetEnumerator()
+  fullName: VDS.RDF.WrapperGraphCollection.GetEnumerator()
+  spec.csharp:
+  - uid: VDS.RDF.WrapperGraphCollection.GetEnumerator
+    name: GetEnumerator
+    nameWithType: WrapperGraphCollection.GetEnumerator
+    fullName: VDS.RDF.WrapperGraphCollection.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperGraphCollection.GetEnumerator
+    name: GetEnumerator
+    nameWithType: WrapperGraphCollection.GetEnumerator
+    fullName: VDS.RDF.WrapperGraphCollection.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.WrapperGraphCollection.GraphUris
+  commentId: P:VDS.RDF.WrapperGraphCollection.GraphUris
+  parent: VDS.RDF.WrapperGraphCollection
+  name: GraphUris
+  nameWithType: WrapperGraphCollection.GraphUris
+  fullName: VDS.RDF.WrapperGraphCollection.GraphUris
+- uid: VDS.RDF.WrapperGraphCollection.Remove(System.Uri)
+  commentId: M:VDS.RDF.WrapperGraphCollection.Remove(System.Uri)
+  parent: VDS.RDF.WrapperGraphCollection
+  isExternal: true
+  name: Remove(Uri)
+  nameWithType: WrapperGraphCollection.Remove(Uri)
+  fullName: VDS.RDF.WrapperGraphCollection.Remove(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperGraphCollection.Remove(System.Uri)
+    name: Remove
+    nameWithType: WrapperGraphCollection.Remove
+    fullName: VDS.RDF.WrapperGraphCollection.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperGraphCollection.Remove(System.Uri)
+    name: Remove
+    nameWithType: WrapperGraphCollection.Remove
+    fullName: VDS.RDF.WrapperGraphCollection.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.WrapperGraphCollection.Item(System.Uri)
+  commentId: P:VDS.RDF.WrapperGraphCollection.Item(System.Uri)
+  parent: VDS.RDF.WrapperGraphCollection
+  isExternal: true
+  name: Item[Uri]
+  nameWithType: WrapperGraphCollection.Item[Uri]
+  fullName: VDS.RDF.WrapperGraphCollection.Item[System.Uri]
+  nameWithType.vb: WrapperGraphCollection.Item(Uri)
+  fullName.vb: VDS.RDF.WrapperGraphCollection.Item(System.Uri)
+  name.vb: Item(Uri)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperGraphCollection.Item(System.Uri)
+    name: Item
+    nameWithType: WrapperGraphCollection.Item
+    fullName: VDS.RDF.WrapperGraphCollection.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: VDS.RDF.WrapperGraphCollection.Item(System.Uri)
+    name: Item
+    nameWithType: WrapperGraphCollection.Item
+    fullName: VDS.RDF.WrapperGraphCollection.Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseGraphCollection.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:VDS.RDF.BaseGraphCollection.System#Collections#IEnumerable#GetEnumerator
+  parent: VDS.RDF.BaseGraphCollection
+  name: IEnumerable.GetEnumerator()
+  nameWithType: BaseGraphCollection.IEnumerable.GetEnumerator()
+  fullName: VDS.RDF.BaseGraphCollection.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType.vb: BaseGraphCollection.System.Collections.IEnumerable.GetEnumerator()
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: VDS.RDF.BaseGraphCollection.System#Collections#IEnumerable#GetEnumerator
+    name: IEnumerable.GetEnumerator
+    nameWithType: BaseGraphCollection.IEnumerable.GetEnumerator
+    fullName: VDS.RDF.BaseGraphCollection.System.Collections.IEnumerable.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseGraphCollection.System#Collections#IEnumerable#GetEnumerator
+    name: System.Collections.IEnumerable.GetEnumerator
+    nameWithType: BaseGraphCollection.System.Collections.IEnumerable.GetEnumerator
+    fullName: VDS.RDF.BaseGraphCollection.System.Collections.IEnumerable.GetEnumerator
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseGraphCollection.GraphAdded
+  commentId: E:VDS.RDF.BaseGraphCollection.GraphAdded
+  parent: VDS.RDF.BaseGraphCollection
+  name: GraphAdded
+  nameWithType: BaseGraphCollection.GraphAdded
+  fullName: VDS.RDF.BaseGraphCollection.GraphAdded
+- uid: VDS.RDF.BaseGraphCollection.GraphRemoved
+  commentId: E:VDS.RDF.BaseGraphCollection.GraphRemoved
+  parent: VDS.RDF.BaseGraphCollection
+  name: GraphRemoved
+  nameWithType: BaseGraphCollection.GraphRemoved
+  fullName: VDS.RDF.BaseGraphCollection.GraphRemoved
+- uid: VDS.RDF.BaseGraphCollection.RaiseGraphAdded(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.BaseGraphCollection.RaiseGraphAdded(VDS.RDF.IGraph)
+  parent: VDS.RDF.BaseGraphCollection
+  name: RaiseGraphAdded(IGraph)
+  nameWithType: BaseGraphCollection.RaiseGraphAdded(IGraph)
+  fullName: VDS.RDF.BaseGraphCollection.RaiseGraphAdded(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.BaseGraphCollection.RaiseGraphAdded(VDS.RDF.IGraph)
+    name: RaiseGraphAdded
+    nameWithType: BaseGraphCollection.RaiseGraphAdded
+    fullName: VDS.RDF.BaseGraphCollection.RaiseGraphAdded
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseGraphCollection.RaiseGraphAdded(VDS.RDF.IGraph)
+    name: RaiseGraphAdded
+    nameWithType: BaseGraphCollection.RaiseGraphAdded
+    fullName: VDS.RDF.BaseGraphCollection.RaiseGraphAdded
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseGraphCollection.RaiseGraphRemoved(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.BaseGraphCollection.RaiseGraphRemoved(VDS.RDF.IGraph)
+  parent: VDS.RDF.BaseGraphCollection
+  name: RaiseGraphRemoved(IGraph)
+  nameWithType: BaseGraphCollection.RaiseGraphRemoved(IGraph)
+  fullName: VDS.RDF.BaseGraphCollection.RaiseGraphRemoved(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.BaseGraphCollection.RaiseGraphRemoved(VDS.RDF.IGraph)
+    name: RaiseGraphRemoved
+    nameWithType: BaseGraphCollection.RaiseGraphRemoved
+    fullName: VDS.RDF.BaseGraphCollection.RaiseGraphRemoved
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseGraphCollection.RaiseGraphRemoved(VDS.RDF.IGraph)
+    name: RaiseGraphRemoved
+    nameWithType: BaseGraphCollection.RaiseGraphRemoved
+    fullName: VDS.RDF.BaseGraphCollection.RaiseGraphRemoved
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseDemandGraphCollection.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseDemandGraphCollection>()
+  nameWithType: Extensions.AsEnumerable<BaseDemandGraphCollection>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.BaseDemandGraphCollection>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseDemandGraphCollection)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.BaseDemandGraphCollection)()
+  name.vb: AsEnumerable(Of BaseDemandGraphCollection)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseDemandGraphCollection>
+    nameWithType: Extensions.AsEnumerable<BaseDemandGraphCollection>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.BaseDemandGraphCollection>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseDemandGraphCollection)
+    nameWithType: Extensions.AsEnumerable(Of BaseDemandGraphCollection)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.BaseDemandGraphCollection)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{VDS.RDF.IGraph})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name: IsDisjoint<IGraph>(IEnumerable<IGraph>)
+  nameWithType: Extensions.IsDisjoint<IGraph>(IEnumerable<IGraph>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<VDS.RDF.IGraph>(System.Collections.Generic.IEnumerable<VDS.RDF.IGraph>)
+  nameWithType.vb: Extensions.IsDisjoint(Of IGraph)(IEnumerable(Of IGraph))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of VDS.RDF.IGraph)(System.Collections.Generic.IEnumerable(Of VDS.RDF.IGraph))
+  name.vb: IsDisjoint(Of IGraph)(IEnumerable(Of IGraph))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<IGraph>
+    nameWithType: Extensions.IsDisjoint<IGraph>
+    fullName: VDS.RDF.Extensions.IsDisjoint<VDS.RDF.IGraph>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of IGraph)
+    nameWithType: Extensions.IsDisjoint(Of IGraph)
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of VDS.RDF.IGraph)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.IGraph}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: ChunkBy<IGraph>(Int32)
+  nameWithType: Extensions.ChunkBy<IGraph>(Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<VDS.RDF.IGraph>(System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of IGraph)(Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of VDS.RDF.IGraph)(System.Int32)
+  name.vb: ChunkBy(Of IGraph)(Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy<IGraph>
+    nameWithType: Extensions.ChunkBy<IGraph>
+    fullName: VDS.RDF.Extensions.ChunkBy<VDS.RDF.IGraph>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy(Of IGraph)
+    nameWithType: Extensions.ChunkBy(Of IGraph)
+    fullName: VDS.RDF.Extensions.ChunkBy(Of VDS.RDF.IGraph)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  name: IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType: Extensions.IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: Extensions.IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<T>
+    nameWithType: Extensions.IsDisjoint<T>
+    fullName: VDS.RDF.Extensions.IsDisjoint<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of T)
+    nameWithType: Extensions.IsDisjoint(Of T)
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  isExternal: true
+  name: ChunkBy<T>(IEnumerable<T>, Int32)
+  nameWithType: Extensions.ChunkBy<T>(IEnumerable<T>, Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  name.vb: ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy<T>
+    nameWithType: Extensions.ChunkBy<T>
+    fullName: VDS.RDF.Extensions.ChunkBy<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy(Of T)
+    nameWithType: Extensions.ChunkBy(Of T)
+    fullName: VDS.RDF.Extensions.ChunkBy(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseDemandGraphCollection.#ctor*
+  commentId: Overload:VDS.RDF.BaseDemandGraphCollection.#ctor
+  name: BaseDemandGraphCollection
+  nameWithType: BaseDemandGraphCollection.BaseDemandGraphCollection
+  fullName: VDS.RDF.BaseDemandGraphCollection.BaseDemandGraphCollection
+- uid: VDS.RDF.WrapperGraphCollection.Contains(System.Uri)
+  commentId: M:VDS.RDF.WrapperGraphCollection.Contains(System.Uri)
+  parent: VDS.RDF.WrapperGraphCollection
+  isExternal: true
+  name: Contains(Uri)
+  nameWithType: WrapperGraphCollection.Contains(Uri)
+  fullName: VDS.RDF.WrapperGraphCollection.Contains(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.WrapperGraphCollection.Contains(System.Uri)
+    name: Contains
+    nameWithType: WrapperGraphCollection.Contains
+    fullName: VDS.RDF.WrapperGraphCollection.Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.WrapperGraphCollection.Contains(System.Uri)
+    name: Contains
+    nameWithType: WrapperGraphCollection.Contains
+    fullName: VDS.RDF.WrapperGraphCollection.Contains
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseDemandGraphCollection.Contains*
+  commentId: Overload:VDS.RDF.BaseDemandGraphCollection.Contains
+  name: Contains
+  nameWithType: BaseDemandGraphCollection.Contains
+  fullName: VDS.RDF.BaseDemandGraphCollection.Contains
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.BaseDemandGraphCollection.LoadOnDemand*
+  commentId: Overload:VDS.RDF.BaseDemandGraphCollection.LoadOnDemand
+  name: LoadOnDemand
+  nameWithType: BaseDemandGraphCollection.LoadOnDemand
+  fullName: VDS.RDF.BaseDemandGraphCollection.LoadOnDemand
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph

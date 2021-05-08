@@ -1,0 +1,2670 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Triple
+  commentId: T:VDS.RDF.Triple
+  id: Triple
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,System.Uri)
+  - VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.IGraph)
+  - VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext)
+  - VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext,System.Uri)
+  - VDS.RDF.Triple.CompareTo(VDS.RDF.Triple)
+  - VDS.RDF.Triple.Context
+  - VDS.RDF.Triple.Equals(System.Object)
+  - VDS.RDF.Triple.GetHashCode
+  - VDS.RDF.Triple.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - VDS.RDF.Triple.GetSchema
+  - VDS.RDF.Triple.Graph
+  - VDS.RDF.Triple.GraphUri
+  - VDS.RDF.Triple.HasObject(VDS.RDF.INode)
+  - VDS.RDF.Triple.HasPredicate(VDS.RDF.INode)
+  - VDS.RDF.Triple.HasSubject(VDS.RDF.INode)
+  - VDS.RDF.Triple.Involves(System.Uri)
+  - VDS.RDF.Triple.Involves(VDS.RDF.INode)
+  - VDS.RDF.Triple.IsGroundTriple
+  - VDS.RDF.Triple.Nodes
+  - VDS.RDF.Triple.Object
+  - VDS.RDF.Triple.Predicate
+  - VDS.RDF.Triple.ReadXml(System.Xml.XmlReader)
+  - VDS.RDF.Triple.Subject
+  - VDS.RDF.Triple.ToString
+  - VDS.RDF.Triple.ToString(System.Boolean)
+  - VDS.RDF.Triple.ToString(VDS.RDF.Writing.Formatting.ITripleFormatter)
+  - VDS.RDF.Triple.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: Triple
+  nameWithType: Triple
+  fullName: VDS.RDF.Triple
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Triple
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nClass for representing RDF Triples in memory.\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public sealed class Triple : IComparable<Triple>, ISerializable, IXmlSerializable
+    content.vb: >-
+      <Serializable>
+
+      Public NotInheritable Class Triple
+          Implements IComparable(Of Triple), ISerializable, IXmlSerializable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IComparable{VDS.RDF.Triple}
+  - System.Runtime.Serialization.ISerializable
+  - System.Xml.Serialization.IXmlSerializable
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Triple.VDS.RDF.Extensions.AsEnumerable``1
+  - VDS.RDF.Triple.VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph)
+  - VDS.RDF.Triple.VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph,System.Boolean)
+  - VDS.RDF.Triple.VDS.RDF.Extensions.MapTriple(VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode)
+  id: '#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode)'
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Triple(INode, INode, INode)
+  nameWithType: Triple.Triple(INode, INode, INode)
+  fullName: VDS.RDF.Triple.Triple(VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.INode)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nConstructs a Triple from Nodes that belong to the same Graph/Node Factory.\n"
+  remarks: Will throw an RdfException if the Nodes don&apos;t belong to the same Graph/Node Factory.
+  example: []
+  syntax:
+    content: public Triple(INode subj, INode pred, INode obj)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject of the Triple.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate of the Triple.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object of the Triple.
+    content.vb: Public Sub New(subj As INode, pred As INode, obj As INode)
+  overload: VDS.RDF.Triple.#ctor*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Nodes aren&apos;t all from the same Graph/Node Factory.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.IGraph)
+  id: '#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.IGraph)'
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Triple(INode, INode, INode, IGraph)
+  nameWithType: Triple.Triple(INode, INode, INode, IGraph)
+  fullName: VDS.RDF.Triple.Triple(VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.IGraph)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 95
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nConstructs a Triple from Nodes that belong to the same Graph/Node Factory and associates this Triple with the given Graph (doesn&apos;t assert the Triple).\n"
+  remarks: Will throw an RdfException if the Nodes don&apos;t belong to the same Graph/Node Factory.
+  example: []
+  syntax:
+    content: public Triple(INode subj, INode pred, INode obj, IGraph g)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object.
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    content.vb: Public Sub New(subj As INode, pred As INode, obj As INode, g As IGraph)
+  overload: VDS.RDF.Triple.#ctor*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Nodes aren&apos;t all from the same Graph/Node Factory.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext)
+  commentId: M:VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext)
+  id: '#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext)'
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Triple(INode, INode, INode, ITripleContext)
+  nameWithType: Triple.Triple(INode, INode, INode, ITripleContext)
+  fullName: VDS.RDF.Triple.Triple(VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.ITripleContext)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 110
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nConstructs a Triple from Nodes that belong to the same Graph/Node Factory with some Context.\n"
+  remarks: Will throw an RdfException if the Nodes don&apos;t belong to the same Graph/Node Factory.
+  example: []
+  syntax:
+    content: public Triple(INode subj, INode pred, INode obj, ITripleContext context)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject of the Triple.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate of the Triple.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object of the Triple.
+    - id: context
+      type: VDS.RDF.ITripleContext
+      description: Context Information for the Triple.
+    content.vb: Public Sub New(subj As INode, pred As INode, obj As INode, context As ITripleContext)
+  overload: VDS.RDF.Triple.#ctor*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Nodes aren&apos;t all from the same Graph/Node Factory.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,System.Uri)
+  commentId: M:VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,System.Uri)
+  id: '#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,System.Uri)'
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Triple(INode, INode, INode, Uri)
+  nameWithType: Triple.Triple(INode, INode, INode, Uri)
+  fullName: VDS.RDF.Triple.Triple(VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.INode, System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 125
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a Triple and associates it with the given Graph URI permanently (though not with a specific Graph as such).\n"
+  remarks: Will throw an RdfException if the Nodes don&apos;t belong to the same Graph/Node Factory.
+  example: []
+  syntax:
+    content: public Triple(INode subj, INode pred, INode obj, Uri graphUri)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject of the Triple.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate of the Triple.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object of the Triple.
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    content.vb: Public Sub New(subj As INode, pred As INode, obj As INode, graphUri As Uri)
+  overload: VDS.RDF.Triple.#ctor*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Nodes aren&apos;t all from the same Graph/Node Factory.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext,System.Uri)
+  commentId: M:VDS.RDF.Triple.#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext,System.Uri)
+  id: '#ctor(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.ITripleContext,System.Uri)'
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Triple(INode, INode, INode, ITripleContext, Uri)
+  nameWithType: Triple.Triple(INode, INode, INode, ITripleContext, Uri)
+  fullName: VDS.RDF.Triple.Triple(VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.INode, VDS.RDF.ITripleContext, System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 141
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nConstructs a Triple from Nodes that belong to the same Graph/Node Factory with some Context.\n"
+  remarks: Will throw an RdfException if the Nodes don&apos;t belong to the same Graph/Node Factory.
+  example: []
+  syntax:
+    content: public Triple(INode subj, INode pred, INode obj, ITripleContext context, Uri graphUri)
+    parameters:
+    - id: subj
+      type: VDS.RDF.INode
+      description: Subject of the Triple.
+    - id: pred
+      type: VDS.RDF.INode
+      description: Predicate of the Triple.
+    - id: obj
+      type: VDS.RDF.INode
+      description: Object of the Triple.
+    - id: context
+      type: VDS.RDF.ITripleContext
+      description: Context Information for the Triple.
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    content.vb: Public Sub New(subj As INode, pred As INode, obj As INode, context As ITripleContext, graphUri As Uri)
+  overload: VDS.RDF.Triple.#ctor*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Nodes aren&apos;t all from the same Graph/Node Factory.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.Subject
+  commentId: P:VDS.RDF.Triple.Subject
+  id: Subject
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Subject
+  nameWithType: Triple.Subject
+  fullName: VDS.RDF.Triple.Subject
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Subject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 165
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Subject of the Triple.\n"
+  example: []
+  syntax:
+    content: public INode Subject { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.INode
+    content.vb: Public ReadOnly Property Subject As INode
+  overload: VDS.RDF.Triple.Subject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Triple.Predicate
+  commentId: P:VDS.RDF.Triple.Predicate
+  id: Predicate
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Predicate
+  nameWithType: Triple.Predicate
+  fullName: VDS.RDF.Triple.Predicate
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Predicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 176
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Predicate of the Triple.\n"
+  example: []
+  syntax:
+    content: public INode Predicate { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.INode
+    content.vb: Public ReadOnly Property Predicate As INode
+  overload: VDS.RDF.Triple.Predicate*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Triple.Object
+  commentId: P:VDS.RDF.Triple.Object
+  id: Object
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Object
+  nameWithType: Triple.Object
+  fullName: VDS.RDF.Triple.Object
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Object
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 187
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Object of the Triple.\n"
+  example: []
+  syntax:
+    content: public INode Object { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.INode
+    content.vb: Public ReadOnly Property Object As INode
+  overload: VDS.RDF.Triple.Object*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Triple.Graph
+  commentId: P:VDS.RDF.Triple.Graph
+  id: Graph
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Graph
+  nameWithType: Triple.Graph
+  fullName: VDS.RDF.Triple.Graph
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Graph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 199
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Graph this Triple was created for.\n"
+  remarks: This is not necessarily the actual Graph this Triple is asserted in since this property is set from the Subject of the Triple when it is created and it is possible to create a Triple without asserting it into an actual Graph or to then assert it into a different Graph.
+  example: []
+  syntax:
+    content: public IGraph Graph { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.IGraph
+    content.vb: Public ReadOnly Property Graph As IGraph
+  overload: VDS.RDF.Triple.Graph*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Triple.GraphUri
+  commentId: P:VDS.RDF.Triple.GraphUri
+  id: GraphUri
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: GraphUri
+  nameWithType: Triple.GraphUri
+  fullName: VDS.RDF.Triple.GraphUri
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GraphUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 211
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Uri of the Graph this Triple was created for.\n"
+  remarks: This is not necessarily the actual Graph Uri of the Graph this Triple is asserted in since this property is set from the Subject of the Triple when it is created and it is possible to create a Triple without asserting it into an actual Graph or to then assert it into a different Graph.
+  example: []
+  syntax:
+    content: public Uri GraphUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property GraphUri As Uri
+  overload: VDS.RDF.Triple.GraphUri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Triple.Context
+  commentId: P:VDS.RDF.Triple.Context
+  id: Context
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Context
+  nameWithType: Triple.Context
+  fullName: VDS.RDF.Triple.Context
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Context
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 236
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Context Information for this Triple.\n"
+  remarks: "\nContext may be null where no Context for the Triple has been defined.\n"
+  example: []
+  syntax:
+    content: public ITripleContext Context { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.ITripleContext
+    content.vb: Public Property Context As ITripleContext
+  overload: VDS.RDF.Triple.Context*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.Nodes
+  commentId: P:VDS.RDF.Triple.Nodes
+  id: Nodes
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Nodes
+  nameWithType: Triple.Nodes
+  fullName: VDS.RDF.Triple.Nodes
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Nodes
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 254
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets an enumeration of the Nodes in the Triple.\n"
+  remarks: "\nReturned as subject, predicate, object.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<INode> Nodes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+    content.vb: Public ReadOnly Property Nodes As IEnumerable(Of INode)
+  overload: VDS.RDF.Triple.Nodes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Triple.IsGroundTriple
+  commentId: P:VDS.RDF.Triple.IsGroundTriple
+  id: IsGroundTriple
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: IsGroundTriple
+  nameWithType: Triple.IsGroundTriple
+  fullName: VDS.RDF.Triple.IsGroundTriple
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsGroundTriple
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 270
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets whether the Triple is a Ground Triple.\n"
+  remarks: "\n<p>\nA <strong>Ground Triple</strong> is any Triple considered to state a single fixed fact.  In practise this means that the Triple does not contain any Blank Nodes.\n</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroundTriple { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroundTriple As Boolean
+  overload: VDS.RDF.Triple.IsGroundTriple*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Triple.Involves(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Triple.Involves(VDS.RDF.INode)
+  id: Involves(VDS.RDF.INode)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Involves(INode)
+  nameWithType: Triple.Involves(INode)
+  fullName: VDS.RDF.Triple.Involves(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Involves
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 283
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nChecks whether the Triple involves a given Node.\n"
+  example: []
+  syntax:
+    content: public bool Involves(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: The Node to test upon.
+    return:
+      type: System.Boolean
+      description: True if the Triple contains the given Node.
+    content.vb: Public Function Involves(n As INode) As Boolean
+  overload: VDS.RDF.Triple.Involves*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.Involves(System.Uri)
+  commentId: M:VDS.RDF.Triple.Involves(System.Uri)
+  id: Involves(System.Uri)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Involves(Uri)
+  nameWithType: Triple.Involves(Uri)
+  fullName: VDS.RDF.Triple.Involves(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Involves
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 293
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nChecks whether the Triple involves a given Uri.\n"
+  example: []
+  syntax:
+    content: public bool Involves(Uri uri)
+    parameters:
+    - id: uri
+      type: System.Uri
+      description: The Uri to test upon.
+    return:
+      type: System.Boolean
+      description: True if the Triple has a UriNode with the given Uri.
+    content.vb: Public Function Involves(uri As Uri) As Boolean
+  overload: VDS.RDF.Triple.Involves*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.HasSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Triple.HasSubject(VDS.RDF.INode)
+  id: HasSubject(VDS.RDF.INode)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: HasSubject(INode)
+  nameWithType: Triple.HasSubject(INode)
+  fullName: VDS.RDF.Triple.HasSubject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasSubject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 312
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nIndicates whether the Triple has the given Node as the Subject.\n"
+  example: []
+  syntax:
+    content: public bool HasSubject(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node to test upon.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function HasSubject(n As INode) As Boolean
+  overload: VDS.RDF.Triple.HasSubject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.HasPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Triple.HasPredicate(VDS.RDF.INode)
+  id: HasPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: HasPredicate(INode)
+  nameWithType: Triple.HasPredicate(INode)
+  fullName: VDS.RDF.Triple.HasPredicate(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasPredicate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 323
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nIndicates whether the Triple has the given Node as the Predicate.\n"
+  example: []
+  syntax:
+    content: public bool HasPredicate(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node to test upon.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function HasPredicate(n As INode) As Boolean
+  overload: VDS.RDF.Triple.HasPredicate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.HasObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Triple.HasObject(VDS.RDF.INode)
+  id: HasObject(VDS.RDF.INode)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: HasObject(INode)
+  nameWithType: Triple.HasObject(INode)
+  fullName: VDS.RDF.Triple.HasObject(VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 334
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nIndicates whether the Triple has the given Node as the Object.\n"
+  example: []
+  syntax:
+    content: public bool HasObject(INode n)
+    parameters:
+    - id: n
+      type: VDS.RDF.INode
+      description: Node to test upon.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function HasObject(n As INode) As Boolean
+  overload: VDS.RDF.Triple.HasObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.Equals(System.Object)
+  commentId: M:VDS.RDF.Triple.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Triple.Equals(Object)
+  fullName: VDS.RDF.Triple.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Equals
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 352
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nImplementation of Equality for Triples.\n"
+  remarks: "\nTriples are considered equal on the basis of two things:.\n<ol>\n<li>The Hash Codes of the Triples are identical</li>\n<li>The logical conjunction (AND) of the equality of the Subject, Predicate and Object is true.  Each pair of Nodes must either be Equal using Node Equality or are both Blank Nodes and have identical Node IDs (i.e. are indistinguishable for equality purposes on a single Triple level)</li>\n</ol>\n"
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: Object to compare with.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: VDS.RDF.Triple.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Triple.GetHashCode
+  commentId: M:VDS.RDF.Triple.GetHashCode
+  id: GetHashCode
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Triple.GetHashCode()
+  fullName: VDS.RDF.Triple.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetHashCode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 385
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nImplementation of Hash Codes for Triples.\n"
+  remarks: "\n<p>\nReturns the Hash Code of the Triple which is calculated as the Hash Code of the String formed by concatenating the Hash Codes of its constituent Nodes.  This Hash Code is precomputed in the Constructor of a Triple since it will be used a lot (in Triple Equality calculation, Triple Collections etc).\n</p>\n<p>\nSince Hash Codes are based on a String representation there is no guarantee of uniqueness though the same Triple will always give the same Hash Code (on a given Platform - see the MSDN Documentation for <xref href=\"System.String.GetHashCode\" data-throw-if-not-resolved=\"false\"></xref> for further details).\n</p>\n"
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: VDS.RDF.Triple.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Triple.ToString
+  commentId: M:VDS.RDF.Triple.ToString
+  id: ToString
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Triple.ToString()
+  fullName: VDS.RDF.Triple.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 394
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets a String representation of a Triple in the form &apos;Subject , Predicate , Object&apos;.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Triple.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Triple.ToString(System.Boolean)
+  commentId: M:VDS.RDF.Triple.ToString(System.Boolean)
+  id: ToString(System.Boolean)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: ToString(Boolean)
+  nameWithType: Triple.ToString(Boolean)
+  fullName: VDS.RDF.Triple.ToString(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 411
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets a String representation of a Triple in the form &apos;Subject , Predicate , Object&apos; with optional compression of URIs to QNames.\n"
+  example: []
+  syntax:
+    content: public string ToString(bool compress)
+    parameters:
+    - id: compress
+      type: System.Boolean
+      description: Controls whether URIs will be compressed to QNames in the String representation.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function ToString(compress As Boolean) As String
+  overload: VDS.RDF.Triple.ToString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.ToString(VDS.RDF.Writing.Formatting.ITripleFormatter)
+  commentId: M:VDS.RDF.Triple.ToString(VDS.RDF.Writing.Formatting.ITripleFormatter)
+  id: ToString(VDS.RDF.Writing.Formatting.ITripleFormatter)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: ToString(ITripleFormatter)
+  nameWithType: Triple.ToString(ITripleFormatter)
+  fullName: VDS.RDF.Triple.ToString(VDS.RDF.Writing.Formatting.ITripleFormatter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 429
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the String representation of a Triple using the given Triple Formatter.\n"
+  example: []
+  syntax:
+    content: public string ToString(ITripleFormatter formatter)
+    parameters:
+    - id: formatter
+      type: VDS.RDF.Writing.Formatting.ITripleFormatter
+      description: Formatter.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function ToString(formatter As ITripleFormatter) As String
+  overload: VDS.RDF.Triple.ToString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.CompareTo(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Triple.CompareTo(VDS.RDF.Triple)
+  id: CompareTo(VDS.RDF.Triple)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(Triple)
+  nameWithType: Triple.CompareTo(Triple)
+  fullName: VDS.RDF.Triple.CompareTo(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CompareTo
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 440
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nImplementation of CompareTo for Triples which allows Triples to be sorted.\n"
+  remarks: Triples are Ordered by Subjects, Predicates and then Objects.  Triples are only partially orderable since the CompareTo methods on Nodes only define a partial ordering over Nodes.
+  example: []
+  syntax:
+    content: public int CompareTo(Triple other)
+    parameters:
+    - id: other
+      type: VDS.RDF.Triple
+      description: Triple to compare to.
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Function CompareTo(other As Triple) As Integer
+  overload: VDS.RDF.Triple.CompareTo*
+  implements:
+  - System.IComparable{VDS.RDF.Triple}.CompareTo(VDS.RDF.Triple)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:VDS.RDF.Triple.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: Triple.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: VDS.RDF.Triple.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetObjectData
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 484
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the data for serialization.\n"
+  example: []
+  syntax:
+    content: public void GetObjectData(SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+      description: Serilization Information.
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+      description: Streaming Context.
+    content.vb: Public Sub GetObjectData(info As SerializationInfo, context As StreamingContext)
+  overload: VDS.RDF.Triple.GetObjectData*
+  implements:
+  - System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.GetSchema
+  commentId: M:VDS.RDF.Triple.GetSchema
+  id: GetSchema
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: GetSchema()
+  nameWithType: Triple.GetSchema()
+  fullName: VDS.RDF.Triple.GetSchema()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetSchema
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 499
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the schema for XML serialization.\n"
+  example: []
+  syntax:
+    content: public XmlSchema GetSchema()
+    return:
+      type: System.Xml.Schema.XmlSchema
+      description: ''
+    content.vb: Public Function GetSchema As XmlSchema
+  overload: VDS.RDF.Triple.GetSchema*
+  implements:
+  - System.Xml.Serialization.IXmlSerializable.GetSchema
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.ReadXml(System.Xml.XmlReader)
+  commentId: M:VDS.RDF.Triple.ReadXml(System.Xml.XmlReader)
+  id: ReadXml(System.Xml.XmlReader)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: ReadXml(XmlReader)
+  nameWithType: Triple.ReadXml(XmlReader)
+  fullName: VDS.RDF.Triple.ReadXml(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ReadXml
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 508
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nReads the data for XML deserialization.\n"
+  example: []
+  syntax:
+    content: public void ReadXml(XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: XML Reader.
+    content.vb: Public Sub ReadXml(reader As XmlReader)
+  overload: VDS.RDF.Triple.ReadXml*
+  implements:
+  - System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Triple.WriteXml(System.Xml.XmlWriter)
+  commentId: M:VDS.RDF.Triple.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: VDS.RDF.Triple
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(XmlWriter)
+  nameWithType: Triple.WriteXml(XmlWriter)
+  fullName: VDS.RDF.Triple.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/Triple.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WriteXml
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/Triple.cs
+    startLine: 523
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nWrites the data for XML serialization.\n"
+  example: []
+  syntax:
+    content: public void WriteXml(XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+      description: XML Writer.
+    content.vb: Public Sub WriteXml(writer As XmlWriter)
+  overload: VDS.RDF.Triple.WriteXml*
+  implements:
+  - System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IComparable{VDS.RDF.Triple}
+  commentId: T:System.IComparable{VDS.RDF.Triple}
+  parent: System
+  definition: System.IComparable`1
+  name: IComparable<Triple>
+  nameWithType: IComparable<Triple>
+  fullName: System.IComparable<VDS.RDF.Triple>
+  nameWithType.vb: IComparable(Of Triple)
+  fullName.vb: System.IComparable(Of VDS.RDF.Triple)
+  name.vb: IComparable(Of Triple)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: System.Xml.Serialization.IXmlSerializable
+  commentId: T:System.Xml.Serialization.IXmlSerializable
+  parent: System.Xml.Serialization
+  isExternal: true
+  name: IXmlSerializable
+  nameWithType: IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<Triple>()
+  nameWithType: Extensions.AsEnumerable<Triple>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Triple>()
+  nameWithType.vb: Extensions.AsEnumerable(Of Triple)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Triple)()
+  name.vb: AsEnumerable(Of Triple)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<Triple>
+    nameWithType: Extensions.AsEnumerable<Triple>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Triple>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of Triple)
+    nameWithType: Extensions.AsEnumerable(Of Triple)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Triple)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph)
+  name: CopyTriple(IGraph)
+  nameWithType: Extensions.CopyTriple(IGraph)
+  fullName: VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph,System.Boolean)
+  commentId: M:VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Boolean)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Boolean)
+  name: CopyTriple(IGraph, Boolean)
+  nameWithType: Extensions.CopyTriple(IGraph, Boolean)
+  fullName: VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph,System.Boolean)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.IGraph,System.Boolean)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.VDS.RDF.Extensions.MapTriple(VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+  name: MapTriple(IGraph, Dictionary<INode, INode>)
+  nameWithType: Extensions.MapTriple(IGraph, Dictionary<INode, INode>)
+  fullName: VDS.RDF.Extensions.MapTriple(VDS.RDF.IGraph, System.Collections.Generic.Dictionary<VDS.RDF.INode, VDS.RDF.INode>)
+  nameWithType.vb: Extensions.MapTriple(IGraph, Dictionary(Of INode, INode))
+  fullName.vb: VDS.RDF.Extensions.MapTriple(VDS.RDF.IGraph, System.Collections.Generic.Dictionary(Of VDS.RDF.INode, VDS.RDF.INode))
+  name.vb: MapTriple(IGraph, Dictionary(Of INode, INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.MapTriple(VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+    name: MapTriple
+    nameWithType: Extensions.MapTriple
+    fullName: VDS.RDF.Extensions.MapTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.MapTriple(VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+    name: MapTriple
+    nameWithType: Extensions.MapTriple
+    fullName: VDS.RDF.Extensions.MapTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: System.IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+- uid: System.Xml.Serialization
+  commentId: N:System.Xml.Serialization
+  isExternal: true
+  name: System.Xml.Serialization
+  nameWithType: System.Xml.Serialization
+  fullName: System.Xml.Serialization
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph)
+  name: CopyTriple(Triple, IGraph)
+  nameWithType: Extensions.CopyTriple(Triple, IGraph)
+  fullName: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple, VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Boolean)
+  commentId: M:VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Boolean)
+  isExternal: true
+  name: CopyTriple(Triple, IGraph, Boolean)
+  nameWithType: Extensions.CopyTriple(Triple, IGraph, Boolean)
+  fullName: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple, VDS.RDF.IGraph, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Boolean)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.CopyTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Boolean)
+    name: CopyTriple
+    nameWithType: Extensions.CopyTriple
+    fullName: VDS.RDF.Extensions.CopyTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+  commentId: M:VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+  isExternal: true
+  name: MapTriple(Triple, IGraph, Dictionary<INode, INode>)
+  nameWithType: Extensions.MapTriple(Triple, IGraph, Dictionary<INode, INode>)
+  fullName: VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple, VDS.RDF.IGraph, System.Collections.Generic.Dictionary<VDS.RDF.INode, VDS.RDF.INode>)
+  nameWithType.vb: Extensions.MapTriple(Triple, IGraph, Dictionary(Of INode, INode))
+  fullName.vb: VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple, VDS.RDF.IGraph, System.Collections.Generic.Dictionary(Of VDS.RDF.INode, VDS.RDF.INode))
+  name.vb: MapTriple(Triple, IGraph, Dictionary(Of INode, INode))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+    name: MapTriple
+    nameWithType: Extensions.MapTriple
+    fullName: VDS.RDF.Extensions.MapTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.MapTriple(VDS.RDF.Triple,VDS.RDF.IGraph,System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode})
+    name: MapTriple
+    nameWithType: Extensions.MapTriple
+    fullName: VDS.RDF.Extensions.MapTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.RdfException
+  commentId: T:VDS.RDF.RdfException
+  parent: VDS.RDF
+  name: RdfException
+  nameWithType: RdfException
+  fullName: VDS.RDF.RdfException
+- uid: VDS.RDF.Triple.#ctor*
+  commentId: Overload:VDS.RDF.Triple.#ctor
+  name: Triple
+  nameWithType: Triple.Triple
+  fullName: VDS.RDF.Triple.Triple
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.ITripleContext
+  commentId: T:VDS.RDF.ITripleContext
+  parent: VDS.RDF
+  name: ITripleContext
+  nameWithType: ITripleContext
+  fullName: VDS.RDF.ITripleContext
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Triple.Subject*
+  commentId: Overload:VDS.RDF.Triple.Subject
+  name: Subject
+  nameWithType: Triple.Subject
+  fullName: VDS.RDF.Triple.Subject
+- uid: VDS.RDF.Triple.Predicate*
+  commentId: Overload:VDS.RDF.Triple.Predicate
+  name: Predicate
+  nameWithType: Triple.Predicate
+  fullName: VDS.RDF.Triple.Predicate
+- uid: VDS.RDF.Triple.Object*
+  commentId: Overload:VDS.RDF.Triple.Object
+  name: Object
+  nameWithType: Triple.Object
+  fullName: VDS.RDF.Triple.Object
+- uid: VDS.RDF.Triple.Graph*
+  commentId: Overload:VDS.RDF.Triple.Graph
+  name: Graph
+  nameWithType: Triple.Graph
+  fullName: VDS.RDF.Triple.Graph
+- uid: VDS.RDF.Triple.GraphUri*
+  commentId: Overload:VDS.RDF.Triple.GraphUri
+  name: GraphUri
+  nameWithType: Triple.GraphUri
+  fullName: VDS.RDF.Triple.GraphUri
+- uid: VDS.RDF.Triple.Context*
+  commentId: Overload:VDS.RDF.Triple.Context
+  name: Context
+  nameWithType: Triple.Context
+  fullName: VDS.RDF.Triple.Context
+- uid: VDS.RDF.Triple.Nodes*
+  commentId: Overload:VDS.RDF.Triple.Nodes
+  name: Nodes
+  nameWithType: Triple.Nodes
+  fullName: VDS.RDF.Triple.Nodes
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<INode>
+  nameWithType: IEnumerable<INode>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.INode>
+  nameWithType.vb: IEnumerable(Of INode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.INode)
+  name.vb: IEnumerable(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Triple.IsGroundTriple*
+  commentId: Overload:VDS.RDF.Triple.IsGroundTriple
+  name: IsGroundTriple
+  nameWithType: Triple.IsGroundTriple
+  fullName: VDS.RDF.Triple.IsGroundTriple
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Triple.Involves*
+  commentId: Overload:VDS.RDF.Triple.Involves
+  name: Involves
+  nameWithType: Triple.Involves
+  fullName: VDS.RDF.Triple.Involves
+- uid: VDS.RDF.Triple.HasSubject*
+  commentId: Overload:VDS.RDF.Triple.HasSubject
+  name: HasSubject
+  nameWithType: Triple.HasSubject
+  fullName: VDS.RDF.Triple.HasSubject
+- uid: VDS.RDF.Triple.HasPredicate*
+  commentId: Overload:VDS.RDF.Triple.HasPredicate
+  name: HasPredicate
+  nameWithType: Triple.HasPredicate
+  fullName: VDS.RDF.Triple.HasPredicate
+- uid: VDS.RDF.Triple.HasObject*
+  commentId: Overload:VDS.RDF.Triple.HasObject
+  name: HasObject
+  nameWithType: Triple.HasObject
+  fullName: VDS.RDF.Triple.HasObject
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.Equals*
+  commentId: Overload:VDS.RDF.Triple.Equals
+  name: Equals
+  nameWithType: Triple.Equals
+  fullName: VDS.RDF.Triple.Equals
+- uid: System.String.GetHashCode
+  commentId: M:System.String.GetHashCode
+  isExternal: true
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.GetHashCode*
+  commentId: Overload:VDS.RDF.Triple.GetHashCode
+  name: GetHashCode
+  nameWithType: Triple.GetHashCode
+  fullName: VDS.RDF.Triple.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.ToString*
+  commentId: Overload:VDS.RDF.Triple.ToString
+  name: ToString
+  nameWithType: Triple.ToString
+  fullName: VDS.RDF.Triple.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Writing.Formatting.ITripleFormatter
+  commentId: T:VDS.RDF.Writing.Formatting.ITripleFormatter
+  parent: VDS.RDF.Writing.Formatting
+  name: ITripleFormatter
+  nameWithType: ITripleFormatter
+  fullName: VDS.RDF.Writing.Formatting.ITripleFormatter
+- uid: VDS.RDF.Writing.Formatting
+  commentId: N:VDS.RDF.Writing.Formatting
+  name: VDS.RDF.Writing.Formatting
+  nameWithType: VDS.RDF.Writing.Formatting
+  fullName: VDS.RDF.Writing.Formatting
+- uid: VDS.RDF.Triple.CompareTo*
+  commentId: Overload:VDS.RDF.Triple.CompareTo
+  name: CompareTo
+  nameWithType: Triple.CompareTo
+  fullName: VDS.RDF.Triple.CompareTo
+- uid: System.IComparable{VDS.RDF.Triple}.CompareTo(VDS.RDF.Triple)
+  commentId: M:System.IComparable{VDS.RDF.Triple}.CompareTo(VDS.RDF.Triple)
+  parent: System.IComparable{VDS.RDF.Triple}
+  definition: System.IComparable`1.CompareTo(`0)
+  name: CompareTo(Triple)
+  nameWithType: IComparable<Triple>.CompareTo(Triple)
+  fullName: System.IComparable<VDS.RDF.Triple>.CompareTo(VDS.RDF.Triple)
+  nameWithType.vb: IComparable(Of Triple).CompareTo(Triple)
+  fullName.vb: System.IComparable(Of VDS.RDF.Triple).CompareTo(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<Triple>.CompareTo
+    fullName: System.IComparable<VDS.RDF.Triple>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of Triple).CompareTo
+    fullName: System.IComparable(Of VDS.RDF.Triple).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple
+  commentId: T:VDS.RDF.Triple
+  parent: VDS.RDF
+  name: Triple
+  nameWithType: Triple
+  fullName: VDS.RDF.Triple
+- uid: System.IComparable`1.CompareTo(`0)
+  commentId: M:System.IComparable`1.CompareTo(`0)
+  isExternal: true
+  name: CompareTo(T)
+  nameWithType: IComparable<T>.CompareTo(T)
+  fullName: System.IComparable<T>.CompareTo(T)
+  nameWithType.vb: IComparable(Of T).CompareTo(T)
+  fullName.vb: System.IComparable(Of T).CompareTo(T)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable<T>.CompareTo
+    fullName: System.IComparable<T>.CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    nameWithType: IComparable(Of T).CompareTo
+    fullName: System.IComparable(Of T).CompareTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Triple.GetObjectData*
+  commentId: Overload:VDS.RDF.Triple.GetObjectData
+  name: GetObjectData
+  nameWithType: Triple.GetObjectData
+  fullName: VDS.RDF.Triple.GetObjectData
+- uid: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Runtime.Serialization.ISerializable
+  isExternal: true
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: ISerializable.GetObjectData
+    fullName: System.Runtime.Serialization.ISerializable.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: ISerializable.GetObjectData
+    fullName: System.Runtime.Serialization.ISerializable.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Runtime.Serialization.SerializationInfo
+  commentId: T:System.Runtime.Serialization.SerializationInfo
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  commentId: T:System.Runtime.Serialization.StreamingContext
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext
+- uid: VDS.RDF.Triple.GetSchema*
+  commentId: Overload:VDS.RDF.Triple.GetSchema
+  name: GetSchema
+  nameWithType: Triple.GetSchema
+  fullName: VDS.RDF.Triple.GetSchema
+- uid: System.Xml.Serialization.IXmlSerializable.GetSchema
+  commentId: M:System.Xml.Serialization.IXmlSerializable.GetSchema
+  parent: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: GetSchema()
+  nameWithType: IXmlSerializable.GetSchema()
+  fullName: System.Xml.Serialization.IXmlSerializable.GetSchema()
+  spec.csharp:
+  - uid: System.Xml.Serialization.IXmlSerializable.GetSchema
+    name: GetSchema
+    nameWithType: IXmlSerializable.GetSchema
+    fullName: System.Xml.Serialization.IXmlSerializable.GetSchema
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.Serialization.IXmlSerializable.GetSchema
+    name: GetSchema
+    nameWithType: IXmlSerializable.GetSchema
+    fullName: System.Xml.Serialization.IXmlSerializable.GetSchema
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.Schema.XmlSchema
+  commentId: T:System.Xml.Schema.XmlSchema
+  parent: System.Xml.Schema
+  isExternal: true
+  name: XmlSchema
+  nameWithType: XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: System.Xml.Schema
+  commentId: N:System.Xml.Schema
+  isExternal: true
+  name: System.Xml.Schema
+  nameWithType: System.Xml.Schema
+  fullName: System.Xml.Schema
+- uid: VDS.RDF.Triple.ReadXml*
+  commentId: Overload:VDS.RDF.Triple.ReadXml
+  name: ReadXml
+  nameWithType: Triple.ReadXml
+  fullName: VDS.RDF.Triple.ReadXml
+- uid: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  commentId: M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  parent: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: ReadXml(XmlReader)
+  nameWithType: IXmlSerializable.ReadXml(XmlReader)
+  fullName: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  spec.csharp:
+  - uid: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: IXmlSerializable.ReadXml
+    fullName: System.Xml.Serialization.IXmlSerializable.ReadXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: XmlReader
+    nameWithType: XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: IXmlSerializable.ReadXml
+    fullName: System.Xml.Serialization.IXmlSerializable.ReadXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: XmlReader
+    nameWithType: XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.XmlReader
+  commentId: T:System.Xml.XmlReader
+  parent: System.Xml
+  isExternal: true
+  name: XmlReader
+  nameWithType: XmlReader
+  fullName: System.Xml.XmlReader
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: true
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml
+- uid: VDS.RDF.Triple.WriteXml*
+  commentId: Overload:VDS.RDF.Triple.WriteXml
+  name: WriteXml
+  nameWithType: Triple.WriteXml
+  fullName: VDS.RDF.Triple.WriteXml
+- uid: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  commentId: M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  parent: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: WriteXml(XmlWriter)
+  nameWithType: IXmlSerializable.WriteXml(XmlWriter)
+  fullName: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: IXmlSerializable.WriteXml
+    fullName: System.Xml.Serialization.IXmlSerializable.WriteXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: XmlWriter
+    nameWithType: XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: IXmlSerializable.WriteXml
+    fullName: System.Xml.Serialization.IXmlSerializable.WriteXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: XmlWriter
+    nameWithType: XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.XmlWriter
+  commentId: T:System.Xml.XmlWriter
+  parent: System.Xml
+  isExternal: true
+  name: XmlWriter
+  nameWithType: XmlWriter
+  fullName: System.Xml.XmlWriter

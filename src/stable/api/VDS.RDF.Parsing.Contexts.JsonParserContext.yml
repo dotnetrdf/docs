@@ -1,0 +1,737 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext
+  commentId: T:VDS.RDF.Parsing.Contexts.JsonParserContext
+  id: JsonParserContext
+  parent: VDS.RDF.Parsing.Contexts
+  children:
+  - VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor(VDS.RDF.IGraph,Newtonsoft.Json.JsonTextReader)
+  - VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor(VDS.RDF.IRdfHandler,Newtonsoft.Json.JsonTextReader)
+  - VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition
+  - VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange(VDS.RDF.Parsing.PositionInfo)
+  - VDS.RDF.Parsing.Contexts.JsonParserContext.Input
+  langs:
+  - csharp
+  - vb
+  name: JsonParserContext
+  nameWithType: JsonParserContext
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: JsonParserContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+    startLine: 33
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Contexts
+  summary: "\nParser Context for RDF/JSON Parsers.\n"
+  example: []
+  syntax:
+    content: 'public class JsonParserContext : BaseParserContext, IParserContext'
+    content.vb: >-
+      Public Class JsonParserContext
+          Inherits BaseParserContext
+          Implements IParserContext
+  inheritance:
+  - System.Object
+  - VDS.RDF.Parsing.Contexts.BaseParserContext
+  implements:
+  - VDS.RDF.Parsing.Contexts.IParserContext
+  inheritedMembers:
+  - VDS.RDF.Parsing.Contexts.BaseParserContext._handler
+  - VDS.RDF.Parsing.Contexts.BaseParserContext._traceParsing
+  - VDS.RDF.Parsing.Contexts.BaseParserContext.Handler
+  - VDS.RDF.Parsing.Contexts.BaseParserContext.TraceParsing
+  - VDS.RDF.Parsing.Contexts.BaseParserContext.Namespaces
+  - VDS.RDF.Parsing.Contexts.BaseParserContext.BaseUri
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Parsing.Contexts.JsonParserContext.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor(VDS.RDF.IGraph,Newtonsoft.Json.JsonTextReader)
+  commentId: M:VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor(VDS.RDF.IGraph,Newtonsoft.Json.JsonTextReader)
+  id: '#ctor(VDS.RDF.IGraph,Newtonsoft.Json.JsonTextReader)'
+  parent: VDS.RDF.Parsing.Contexts.JsonParserContext
+  langs:
+  - csharp
+  - vb
+  name: JsonParserContext(IGraph, JsonTextReader)
+  nameWithType: JsonParserContext.JsonParserContext(IGraph, JsonTextReader)
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.JsonParserContext(VDS.RDF.IGraph, Newtonsoft.Json.JsonTextReader)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Contexts
+  summary: "\nCreates a new JSON Parser Context.\n"
+  example: []
+  syntax:
+    content: public JsonParserContext(IGraph g, JsonTextReader input)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to parse into.
+    - id: input
+      type: Newtonsoft.Json.JsonTextReader
+      description: JSON Text Reader to read from.
+    content.vb: Public Sub New(g As IGraph, input As JsonTextReader)
+  overload: VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor(VDS.RDF.IRdfHandler,Newtonsoft.Json.JsonTextReader)
+  commentId: M:VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor(VDS.RDF.IRdfHandler,Newtonsoft.Json.JsonTextReader)
+  id: '#ctor(VDS.RDF.IRdfHandler,Newtonsoft.Json.JsonTextReader)'
+  parent: VDS.RDF.Parsing.Contexts.JsonParserContext
+  langs:
+  - csharp
+  - vb
+  name: JsonParserContext(IRdfHandler, JsonTextReader)
+  nameWithType: JsonParserContext.JsonParserContext(IRdfHandler, JsonTextReader)
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.JsonParserContext(VDS.RDF.IRdfHandler, Newtonsoft.Json.JsonTextReader)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+    startLine: 53
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Contexts
+  summary: "\nCreates a new JSON Parser Context.\n"
+  example: []
+  syntax:
+    content: public JsonParserContext(IRdfHandler handler, JsonTextReader input)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: input
+      type: Newtonsoft.Json.JsonTextReader
+      description: JSON Text Reader to read from.
+    content.vb: Public Sub New(handler As IRdfHandler, input As JsonTextReader)
+  overload: VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.Input
+  commentId: P:VDS.RDF.Parsing.Contexts.JsonParserContext.Input
+  id: Input
+  parent: VDS.RDF.Parsing.Contexts.JsonParserContext
+  langs:
+  - csharp
+  - vb
+  name: Input
+  nameWithType: JsonParserContext.Input
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.Input
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Input
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+    startLine: 62
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Contexts
+  summary: "\nGets the JSON Text Reader which input is read from.\n"
+  example: []
+  syntax:
+    content: public JsonTextReader Input { get; }
+    parameters: []
+    return:
+      type: Newtonsoft.Json.JsonTextReader
+    content.vb: Public ReadOnly Property Input As JsonTextReader
+  overload: VDS.RDF.Parsing.Contexts.JsonParserContext.Input*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition
+  commentId: P:VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition
+  id: CurrentPosition
+  parent: VDS.RDF.Parsing.Contexts.JsonParserContext
+  langs:
+  - csharp
+  - vb
+  name: CurrentPosition
+  nameWithType: JsonParserContext.CurrentPosition
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CurrentPosition
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Contexts
+  summary: "\nGets the Current Position of the JSON Text Reader.\n"
+  example: []
+  syntax:
+    content: public PositionInfo CurrentPosition { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Parsing.PositionInfo
+    content.vb: Public ReadOnly Property CurrentPosition As PositionInfo
+  overload: VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange(VDS.RDF.Parsing.PositionInfo)
+  commentId: M:VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange(VDS.RDF.Parsing.PositionInfo)
+  id: GetPositionRange(VDS.RDF.Parsing.PositionInfo)
+  parent: VDS.RDF.Parsing.Contexts.JsonParserContext
+  langs:
+  - csharp
+  - vb
+  name: GetPositionRange(PositionInfo)
+  nameWithType: JsonParserContext.GetPositionRange(PositionInfo)
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange(VDS.RDF.Parsing.PositionInfo)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetPositionRange
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/Contexts/JSONParserContext.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing.Contexts
+  summary: "\nGets the Position range from the given Start Position to the current Position.\n"
+  example: []
+  syntax:
+    content: public PositionInfo GetPositionRange(PositionInfo startPosition)
+    parameters:
+    - id: startPosition
+      type: VDS.RDF.Parsing.PositionInfo
+      description: Start Position.
+    return:
+      type: VDS.RDF.Parsing.PositionInfo
+      description: ''
+    content.vb: Public Function GetPositionRange(startPosition As PositionInfo) As PositionInfo
+  overload: VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Parsing.Contexts
+  commentId: N:VDS.RDF.Parsing.Contexts
+  name: VDS.RDF.Parsing.Contexts
+  nameWithType: VDS.RDF.Parsing.Contexts
+  fullName: VDS.RDF.Parsing.Contexts
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Parsing.Contexts.BaseParserContext
+  commentId: T:VDS.RDF.Parsing.Contexts.BaseParserContext
+  parent: VDS.RDF.Parsing.Contexts
+  name: BaseParserContext
+  nameWithType: BaseParserContext
+  fullName: VDS.RDF.Parsing.Contexts.BaseParserContext
+- uid: VDS.RDF.Parsing.Contexts.IParserContext
+  commentId: T:VDS.RDF.Parsing.Contexts.IParserContext
+  parent: VDS.RDF.Parsing.Contexts
+  name: IParserContext
+  nameWithType: IParserContext
+  fullName: VDS.RDF.Parsing.Contexts.IParserContext
+- uid: VDS.RDF.Parsing.Contexts.BaseParserContext._handler
+  commentId: F:VDS.RDF.Parsing.Contexts.BaseParserContext._handler
+  parent: VDS.RDF.Parsing.Contexts.BaseParserContext
+  name: _handler
+  nameWithType: BaseParserContext._handler
+  fullName: VDS.RDF.Parsing.Contexts.BaseParserContext._handler
+- uid: VDS.RDF.Parsing.Contexts.BaseParserContext._traceParsing
+  commentId: F:VDS.RDF.Parsing.Contexts.BaseParserContext._traceParsing
+  parent: VDS.RDF.Parsing.Contexts.BaseParserContext
+  name: _traceParsing
+  nameWithType: BaseParserContext._traceParsing
+  fullName: VDS.RDF.Parsing.Contexts.BaseParserContext._traceParsing
+- uid: VDS.RDF.Parsing.Contexts.BaseParserContext.Handler
+  commentId: P:VDS.RDF.Parsing.Contexts.BaseParserContext.Handler
+  parent: VDS.RDF.Parsing.Contexts.BaseParserContext
+  name: Handler
+  nameWithType: BaseParserContext.Handler
+  fullName: VDS.RDF.Parsing.Contexts.BaseParserContext.Handler
+- uid: VDS.RDF.Parsing.Contexts.BaseParserContext.TraceParsing
+  commentId: P:VDS.RDF.Parsing.Contexts.BaseParserContext.TraceParsing
+  parent: VDS.RDF.Parsing.Contexts.BaseParserContext
+  name: TraceParsing
+  nameWithType: BaseParserContext.TraceParsing
+  fullName: VDS.RDF.Parsing.Contexts.BaseParserContext.TraceParsing
+- uid: VDS.RDF.Parsing.Contexts.BaseParserContext.Namespaces
+  commentId: P:VDS.RDF.Parsing.Contexts.BaseParserContext.Namespaces
+  parent: VDS.RDF.Parsing.Contexts.BaseParserContext
+  name: Namespaces
+  nameWithType: BaseParserContext.Namespaces
+  fullName: VDS.RDF.Parsing.Contexts.BaseParserContext.Namespaces
+- uid: VDS.RDF.Parsing.Contexts.BaseParserContext.BaseUri
+  commentId: P:VDS.RDF.Parsing.Contexts.BaseParserContext.BaseUri
+  parent: VDS.RDF.Parsing.Contexts.BaseParserContext
+  name: BaseUri
+  nameWithType: BaseParserContext.BaseUri
+  fullName: VDS.RDF.Parsing.Contexts.BaseParserContext.BaseUri
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<JsonParserContext>()
+  nameWithType: Extensions.AsEnumerable<JsonParserContext>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Contexts.JsonParserContext>()
+  nameWithType.vb: Extensions.AsEnumerable(Of JsonParserContext)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Contexts.JsonParserContext)()
+  name.vb: AsEnumerable(Of JsonParserContext)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<JsonParserContext>
+    nameWithType: Extensions.AsEnumerable<JsonParserContext>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.Contexts.JsonParserContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of JsonParserContext)
+    nameWithType: Extensions.AsEnumerable(Of JsonParserContext)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.Contexts.JsonParserContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor*
+  commentId: Overload:VDS.RDF.Parsing.Contexts.JsonParserContext.#ctor
+  name: JsonParserContext
+  nameWithType: JsonParserContext.JsonParserContext
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.JsonParserContext
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: Newtonsoft.Json.JsonTextReader
+  commentId: T:Newtonsoft.Json.JsonTextReader
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonTextReader
+  nameWithType: JsonTextReader
+  fullName: Newtonsoft.Json.JsonTextReader
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: true
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.Input*
+  commentId: Overload:VDS.RDF.Parsing.Contexts.JsonParserContext.Input
+  name: Input
+  nameWithType: JsonParserContext.Input
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.Input
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition*
+  commentId: Overload:VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition
+  name: CurrentPosition
+  nameWithType: JsonParserContext.CurrentPosition
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.CurrentPosition
+- uid: VDS.RDF.Parsing.PositionInfo
+  commentId: T:VDS.RDF.Parsing.PositionInfo
+  parent: VDS.RDF.Parsing
+  name: PositionInfo
+  nameWithType: PositionInfo
+  fullName: VDS.RDF.Parsing.PositionInfo
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange*
+  commentId: Overload:VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange
+  name: GetPositionRange
+  nameWithType: JsonParserContext.GetPositionRange
+  fullName: VDS.RDF.Parsing.Contexts.JsonParserContext.GetPositionRange

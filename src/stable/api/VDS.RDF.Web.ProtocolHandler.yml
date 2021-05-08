@@ -1,0 +1,429 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Web.ProtocolHandler
+  commentId: T:VDS.RDF.Web.ProtocolHandler
+  id: ProtocolHandler
+  parent: VDS.RDF.Web
+  children:
+  - VDS.RDF.Web.ProtocolHandler.LoadConfig(HttpContext,String@)
+  - VDS.RDF.Web.ProtocolHandler.UpdateConfig(HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: ProtocolHandler
+  nameWithType: ProtocolHandler
+  fullName: VDS.RDF.Web.ProtocolHandler
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/ProtocolHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProtocolHandler
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/ProtocolHandler.cs
+    startLine: 60
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHTTP Handler for adding SPARQL Graph Store HTTP Protocol for RDF Graph Management endpoints to ASP.Net applications\n"
+  remarks: "\n<p>\nUsed to create a Protocol endpoint at a specific fixed URL, if you want to allow URIs relative to this URI to be used to refer to Graphs then use the <xref href=\"VDS.RDF.Web.WildcardProtocolHandler\" data-throw-if-not-resolved=\"false\"></xref> instead\n</p>\n<p>\nThis Handler is configured using the new Configuration API introduced in the 0.3.0 release.  This requires just one setting to be defined in the &lt;appSettings> section of your Web.config file which points to a Configuration Graph like so:\n<pre><code>&lt;add key=&quot;dotNetRDFConfig&quot; value=&quot;~/App_Data/config.ttl&quot; /></code></pre>\nThe Configuration Graph must then contain Triples like the following to specify a Protocol Endpoint:\n<pre><code>&lt;dotnetrdf:/folder/protocol> a dnr:HttpHandler ;\n                                   dnr:type &quot;VDS.RDF.Web.ProtocolHandler&quot; ;\n                                   dnr:protocolProcessor _:proc .\n\n_:proc a dnr:SparqlHttpProtocolProcessor ;\n       dnr:type &quot;VDS.RDF.Update.Protocol.LeviathanProtocolProcessor&quot; ;\n       dnr:usingStore _:store .\n\n_:store a dnr:TripleStore ;\n        dnr:type &quot;VDS.RDF.TripleStore&quot; .</code></pre>\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class ProtocolHandler : BaseSparqlHttpProtocolHandler'
+    content.vb: >-
+      Public Class ProtocolHandler
+          Inherits BaseSparqlHttpProtocolHandler
+  inheritance:
+  - System.Object
+  - VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  inheritedMembers:
+  - VDS.RDF.Web.BaseSparqlHttpProtocolHandler._config
+  - VDS.RDF.Web.BaseSparqlHttpProtocolHandler._basePath
+  - VDS.RDF.Web.BaseSparqlHttpProtocolHandler.IsReusable
+  - VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest(HttpContext)
+  extensionMethods:
+  - VDS.RDF.Web.ProtocolHandler.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Web.ProtocolHandler.LoadConfig(HttpContext,String@)
+  commentId: M:VDS.RDF.Web.ProtocolHandler.LoadConfig(HttpContext,String@)
+  id: LoadConfig(HttpContext,String@)
+  parent: VDS.RDF.Web.ProtocolHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig(HttpContext, out String)
+  nameWithType: ProtocolHandler.LoadConfig(HttpContext, out String)
+  fullName: VDS.RDF.Web.ProtocolHandler.LoadConfig(HttpContext, out String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/ProtocolHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/ProtocolHandler.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nLoads the Handler Configuration\n"
+  example: []
+  syntax:
+    content: protected override BaseProtocolHandlerConfiguration LoadConfig(HttpContext context, out String basePath)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    - id: basePath
+      type: String
+      description: Base Path of the Handler which this method will determine
+    return:
+      type: VDS.RDF.Web.Configuration.Protocol.BaseProtocolHandlerConfiguration
+      description: ''
+    content.vb: Protected Overrides Function LoadConfig(context As HttpContext, ByRef basePath As String) As BaseProtocolHandlerConfiguration
+  overridden: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig(HttpContext,String@)
+  overload: VDS.RDF.Web.ProtocolHandler.LoadConfig*
+  nameWithType.vb: ProtocolHandler.LoadConfig(HttpContext, ByRef String)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: VDS.RDF.Web.ProtocolHandler.LoadConfig(HttpContext, ByRef String)
+  name.vb: LoadConfig(HttpContext, ByRef String)
+- uid: VDS.RDF.Web.ProtocolHandler.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.ProtocolHandler.UpdateConfig(HttpContext)
+  id: UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.ProtocolHandler
+  langs:
+  - csharp
+  - vb
+  name: UpdateConfig(HttpContext)
+  nameWithType: ProtocolHandler.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.ProtocolHandler.UpdateConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/ProtocolHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/ProtocolHandler.cs
+    startLine: 113
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nUpdates the Handler Configuration\n"
+  example: []
+  syntax:
+    content: protected override void UpdateConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    content.vb: Protected Overrides Sub UpdateConfig(context As HttpContext)
+  overridden: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig(HttpContext)
+  overload: VDS.RDF.Web.ProtocolHandler.UpdateConfig*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Web.WildcardProtocolHandler
+  commentId: T:VDS.RDF.Web.WildcardProtocolHandler
+  name: WildcardProtocolHandler
+  nameWithType: WildcardProtocolHandler
+  fullName: VDS.RDF.Web.WildcardProtocolHandler
+- uid: VDS.RDF.Web
+  commentId: N:VDS.RDF.Web
+  name: VDS.RDF.Web
+  nameWithType: VDS.RDF.Web
+  fullName: VDS.RDF.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  commentId: T:VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  parent: VDS.RDF.Web
+  name: BaseSparqlHttpProtocolHandler
+  nameWithType: BaseSparqlHttpProtocolHandler
+  fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+- uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler._config
+  commentId: F:VDS.RDF.Web.BaseSparqlHttpProtocolHandler._config
+  parent: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  name: _config
+  nameWithType: BaseSparqlHttpProtocolHandler._config
+  fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler._config
+- uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler._basePath
+  commentId: F:VDS.RDF.Web.BaseSparqlHttpProtocolHandler._basePath
+  parent: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  name: _basePath
+  nameWithType: BaseSparqlHttpProtocolHandler._basePath
+  fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler._basePath
+- uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.IsReusable
+  commentId: P:VDS.RDF.Web.BaseSparqlHttpProtocolHandler.IsReusable
+  parent: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  name: IsReusable
+  nameWithType: BaseSparqlHttpProtocolHandler.IsReusable
+  fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.IsReusable
+- uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  isExternal: true
+  name: ProcessRequest(HttpContext)
+  nameWithType: BaseSparqlHttpProtocolHandler.ProcessRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseSparqlHttpProtocolHandler.ProcessRequest
+    fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseSparqlHttpProtocolHandler.ProcessRequest
+    fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.ProtocolHandler.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ProtocolHandler>()
+  nameWithType: Extensions.AsEnumerable<ProtocolHandler>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.ProtocolHandler>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ProtocolHandler)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.ProtocolHandler)()
+  name.vb: AsEnumerable(Of ProtocolHandler)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ProtocolHandler>
+    nameWithType: Extensions.AsEnumerable<ProtocolHandler>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.ProtocolHandler>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ProtocolHandler)
+    nameWithType: Extensions.AsEnumerable(Of ProtocolHandler)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.ProtocolHandler)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig(HttpContext,String@)
+  commentId: M:VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig(HttpContext,String@)
+  parent: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  isExternal: true
+  name: LoadConfig(HttpContext, String)
+  nameWithType: BaseSparqlHttpProtocolHandler.LoadConfig(HttpContext, String)
+  fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig(HttpContext, String)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig(HttpContext,String@)
+    name: LoadConfig
+    nameWithType: BaseSparqlHttpProtocolHandler.LoadConfig
+    fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig(HttpContext,String@)
+    name: LoadConfig
+    nameWithType: BaseSparqlHttpProtocolHandler.LoadConfig
+    fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.ProtocolHandler.LoadConfig*
+  commentId: Overload:VDS.RDF.Web.ProtocolHandler.LoadConfig
+  name: LoadConfig
+  nameWithType: ProtocolHandler.LoadConfig
+  fullName: VDS.RDF.Web.ProtocolHandler.LoadConfig
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: VDS.RDF.Web.Configuration.Protocol.BaseProtocolHandlerConfiguration
+  commentId: T:VDS.RDF.Web.Configuration.Protocol.BaseProtocolHandlerConfiguration
+  parent: VDS.RDF.Web.Configuration.Protocol
+  name: BaseProtocolHandlerConfiguration
+  nameWithType: BaseProtocolHandlerConfiguration
+  fullName: VDS.RDF.Web.Configuration.Protocol.BaseProtocolHandlerConfiguration
+- uid: VDS.RDF.Web.Configuration.Protocol
+  commentId: N:VDS.RDF.Web.Configuration.Protocol
+  name: VDS.RDF.Web.Configuration.Protocol
+  nameWithType: VDS.RDF.Web.Configuration.Protocol
+  fullName: VDS.RDF.Web.Configuration.Protocol
+- uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlHttpProtocolHandler
+  isExternal: true
+  name: UpdateConfig(HttpContext)
+  nameWithType: BaseSparqlHttpProtocolHandler.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: BaseSparqlHttpProtocolHandler.UpdateConfig
+    fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: BaseSparqlHttpProtocolHandler.UpdateConfig
+    fullName: VDS.RDF.Web.BaseSparqlHttpProtocolHandler.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.ProtocolHandler.UpdateConfig*
+  commentId: Overload:VDS.RDF.Web.ProtocolHandler.UpdateConfig
+  name: UpdateConfig
+  nameWithType: ProtocolHandler.UpdateConfig
+  fullName: VDS.RDF.Web.ProtocolHandler.UpdateConfig

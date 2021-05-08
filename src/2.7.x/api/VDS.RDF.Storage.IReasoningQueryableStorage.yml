@@ -1,0 +1,1014 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.IReasoningQueryableStorage
+  commentId: T:VDS.RDF.Storage.IReasoningQueryableStorage
+  id: IReasoningQueryableStorage
+  parent: VDS.RDF.Storage
+  children:
+  - VDS.RDF.Storage.IReasoningQueryableStorage.Query(System.String,System.Boolean)
+  - VDS.RDF.Storage.IReasoningQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IReasoningQueryableStorage
+  nameWithType: IReasoningQueryableStorage
+  fullName: VDS.RDF.Storage.IReasoningQueryableStorage
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IReasoningQueryableStorage
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 298
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nInterface for storage providers which allow SPARQL Queries to be made against them with reasoning set by query.\n"
+  example: []
+  syntax:
+    content: 'public interface IReasoningQueryableStorage : IStorageProvider, IStorageCapabilities, IDisposable'
+    content.vb: >-
+      Public Interface IReasoningQueryableStorage
+          Inherits IStorageProvider
+  inheritedMembers:
+  - VDS.RDF.Storage.IStorageProvider.ParentServer
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  - VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  - VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  - VDS.RDF.Storage.IStorageProvider.ListGraphs
+  - VDS.RDF.Storage.IStorageCapabilities.IsReady
+  - VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  - VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  - VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  - VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  - VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  - System.IDisposable.Dispose
+  extensionMethods:
+  - VDS.RDF.Storage.IReasoningQueryableStorage.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Storage.IReasoningQueryableStorage.Query(System.String,System.Boolean)
+  commentId: M:VDS.RDF.Storage.IReasoningQueryableStorage.Query(System.String,System.Boolean)
+  id: Query(System.String,System.Boolean)
+  parent: VDS.RDF.Storage.IReasoningQueryableStorage
+  langs:
+  - csharp
+  - vb
+  name: Query(String, Boolean)
+  nameWithType: IReasoningQueryableStorage.Query(String, Boolean)
+  fullName: VDS.RDF.Storage.IReasoningQueryableStorage.Query(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Query
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 311
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nMakes a SPARQL Query against the underlying store.\n"
+  example: []
+  syntax:
+    content: object Query(string sparqlQuery, bool reasoning)
+    parameters:
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query.
+    - id: reasoning
+      type: System.Boolean
+      description: rReasoning On demand by query.
+    return:
+      type: System.Object
+      description: <xref href="VDS.RDF.Query.SparqlResultSet" data-throw-if-not-resolved="false"></xref> or a <xref href="VDS.RDF.Graph" data-throw-if-not-resolved="false"></xref> depending on the Sparql Query.
+    content.vb: Function Query(sparqlQuery As String, reasoning As Boolean) As Object
+  overload: VDS.RDF.Storage.IReasoningQueryableStorage.Query*
+  exceptions:
+  - type: VDS.RDF.Query.RdfQueryException
+    commentId: T:VDS.RDF.Query.RdfQueryException
+    description: Thrown if an error occurs performing the query.
+  - type: VDS.RDF.Storage.RdfStorageException
+    commentId: T:VDS.RDF.Storage.RdfStorageException
+    description: Thrown if an error occurs performing the query.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the query is invalid when validated by dotNetRDF prior to passing the query request to the store or if the request succeeds but the store returns malformed results.
+  - type: VDS.RDF.Parsing.RdfParserSelectionException
+    commentId: T:VDS.RDF.Parsing.RdfParserSelectionException
+    description: Thrown if the store returns results in a format dotNetRDF does not understand.
+- uid: VDS.RDF.Storage.IReasoningQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,System.Boolean)
+  commentId: M:VDS.RDF.Storage.IReasoningQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,System.Boolean)
+  id: Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,System.Boolean)
+  parent: VDS.RDF.Storage.IReasoningQueryableStorage
+  langs:
+  - csharp
+  - vb
+  name: Query(IRdfHandler, ISparqlResultsHandler, String, Boolean)
+  nameWithType: IReasoningQueryableStorage.Query(IRdfHandler, ISparqlResultsHandler, String, Boolean)
+  fullName: VDS.RDF.Storage.IReasoningQueryableStorage.Query(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Query
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 324
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nMakes a SPARQL Query against the underlying store processing the resulting Graph/Result Set with a handler of your choice.\n"
+  example: []
+  syntax:
+    content: void Query(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, string sparqlQuery, bool reasoning)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: SPARQL Results Handler.
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query.
+    - id: reasoning
+      type: System.Boolean
+      description: rReasoning On demand by query.
+    content.vb: Sub Query(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, sparqlQuery As String, reasoning As Boolean)
+  overload: VDS.RDF.Storage.IReasoningQueryableStorage.Query*
+  exceptions:
+  - type: VDS.RDF.Query.RdfQueryException
+    commentId: T:VDS.RDF.Query.RdfQueryException
+    description: Thrown if an error occurs performing the query.
+  - type: VDS.RDF.Storage.RdfStorageException
+    commentId: T:VDS.RDF.Storage.RdfStorageException
+    description: Thrown if an error occurs performing the query.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the query is invalid when validated by dotNetRDF prior to passing the query request to the store or if the request succeeds but the store returns malformed results.
+  - type: VDS.RDF.Parsing.RdfParserSelectionException
+    commentId: T:VDS.RDF.Parsing.RdfParserSelectionException
+    description: Thrown if the store returns results in a format dotNetRDF does not understand.
+references:
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: VDS.RDF.Storage.IStorageProvider.ParentServer
+  commentId: P:VDS.RDF.Storage.IStorageProvider.ParentServer
+  parent: VDS.RDF.Storage.IStorageProvider
+  name: ParentServer
+  nameWithType: IStorageProvider.ParentServer
+  fullName: VDS.RDF.Storage.IStorageProvider.ParentServer
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: LoadGraph(IGraph, Uri)
+  nameWithType: IStorageProvider.LoadGraph(IGraph, Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: LoadGraph(IGraph, String)
+  nameWithType: IStorageProvider.LoadGraph(IGraph, String)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: LoadGraph(IRdfHandler, Uri)
+  nameWithType: IStorageProvider.LoadGraph(IRdfHandler, Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: LoadGraph(IRdfHandler, String)
+  nameWithType: IStorageProvider.LoadGraph(IRdfHandler, String)
+  fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: IStorageProvider.LoadGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.IStorageProvider
+  name: SaveGraph(IGraph)
+  nameWithType: IStorageProvider.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: IStorageProvider.SaveGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: IStorageProvider.SaveGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: IStorageProvider.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: IStorageProvider.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: IStorageProvider.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: IStorageProvider.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: DeleteGraph(Uri)
+  nameWithType: IStorageProvider.DeleteGraph(Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: DeleteGraph(String)
+  nameWithType: IStorageProvider.DeleteGraph(String)
+  fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.ListGraphs
+  commentId: M:VDS.RDF.Storage.IStorageProvider.ListGraphs
+  parent: VDS.RDF.Storage.IStorageProvider
+  name: ListGraphs()
+  nameWithType: IStorageProvider.ListGraphs()
+  fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.ListGraphs
+    name: ListGraphs
+    nameWithType: IStorageProvider.ListGraphs
+    fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.ListGraphs
+    name: ListGraphs
+    nameWithType: IStorageProvider.ListGraphs
+    fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReady
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IsReady
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IsReady
+  nameWithType: IStorageCapabilities.IsReady
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReady
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IsReadOnly
+  nameWithType: IStorageCapabilities.IsReadOnly
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IOBehaviour
+  nameWithType: IStorageCapabilities.IOBehaviour
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+- uid: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: UpdateSupported
+  nameWithType: IStorageCapabilities.UpdateSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: DeleteSupported
+  nameWithType: IStorageCapabilities.DeleteSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: ListGraphsSupported
+  nameWithType: IStorageCapabilities.ListGraphsSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IReasoningQueryableStorage.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IReasoningQueryableStorage>()
+  nameWithType: Extensions.AsEnumerable<IReasoningQueryableStorage>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.IReasoningQueryableStorage>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IReasoningQueryableStorage)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.IReasoningQueryableStorage)()
+  name.vb: AsEnumerable(Of IReasoningQueryableStorage)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IReasoningQueryableStorage>
+    nameWithType: Extensions.AsEnumerable<IReasoningQueryableStorage>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.IReasoningQueryableStorage>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IReasoningQueryableStorage)
+    nameWithType: Extensions.AsEnumerable(Of IReasoningQueryableStorage)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.IReasoningQueryableStorage)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider
+  commentId: T:VDS.RDF.Storage.IStorageProvider
+  parent: VDS.RDF.Storage
+  name: IStorageProvider
+  nameWithType: IStorageProvider
+  fullName: VDS.RDF.Storage.IStorageProvider
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  parent: VDS.RDF.Storage
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.Graph
+  commentId: T:VDS.RDF.Graph
+  parent: VDS.RDF
+  name: Graph
+  nameWithType: Graph
+  fullName: VDS.RDF.Graph
+- uid: VDS.RDF.Query.RdfQueryException
+  commentId: T:VDS.RDF.Query.RdfQueryException
+  parent: VDS.RDF.Query
+  name: RdfQueryException
+  nameWithType: RdfQueryException
+  fullName: VDS.RDF.Query.RdfQueryException
+- uid: VDS.RDF.Storage.RdfStorageException
+  commentId: T:VDS.RDF.Storage.RdfStorageException
+  parent: VDS.RDF.Storage
+  name: RdfStorageException
+  nameWithType: RdfStorageException
+  fullName: VDS.RDF.Storage.RdfStorageException
+- uid: VDS.RDF.Parsing.RdfParseException
+  commentId: T:VDS.RDF.Parsing.RdfParseException
+  parent: VDS.RDF.Parsing
+  name: RdfParseException
+  nameWithType: RdfParseException
+  fullName: VDS.RDF.Parsing.RdfParseException
+- uid: VDS.RDF.Parsing.RdfParserSelectionException
+  commentId: T:VDS.RDF.Parsing.RdfParserSelectionException
+  name: RdfParserSelectionException
+  nameWithType: RdfParserSelectionException
+  fullName: VDS.RDF.Parsing.RdfParserSelectionException
+- uid: VDS.RDF.Storage.IReasoningQueryableStorage.Query*
+  commentId: Overload:VDS.RDF.Storage.IReasoningQueryableStorage.Query
+  name: Query
+  nameWithType: IReasoningQueryableStorage.Query
+  fullName: VDS.RDF.Storage.IReasoningQueryableStorage.Query
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler

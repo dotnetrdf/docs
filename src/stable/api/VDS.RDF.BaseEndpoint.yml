@@ -1,0 +1,1579 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.BaseEndpoint
+  commentId: T:VDS.RDF.BaseEndpoint
+  id: BaseEndpoint
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.BaseEndpoint.#ctor
+  - VDS.RDF.BaseEndpoint.#ctor(System.Uri)
+  - VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  - VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  - VDS.RDF.BaseEndpoint.ClearCredentials
+  - VDS.RDF.BaseEndpoint.ClearProxy
+  - VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  - VDS.RDF.BaseEndpoint.Credentials
+  - VDS.RDF.BaseEndpoint.HttpMode
+  - VDS.RDF.BaseEndpoint.Proxy
+  - VDS.RDF.BaseEndpoint.ProxyCredentials
+  - VDS.RDF.BaseEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  - VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  - VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+  - VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  - VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  - VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+  - VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+  - VDS.RDF.BaseEndpoint.Timeout
+  - VDS.RDF.BaseEndpoint.Uri
+  - VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  - VDS.RDF.BaseEndpoint.UserAgent
+  langs:
+  - csharp
+  - vb
+  name: BaseEndpoint
+  nameWithType: BaseEndpoint
+  fullName: VDS.RDF.BaseEndpoint
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseEndpoint
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 37
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nAbstract Base class for HTTP endpoints.\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseEndpoint : IConfigurationSerializable'
+    content.vb: >-
+      Public MustInherit Class BaseEndpoint
+          Implements IConfigurationSerializable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Query.SparqlRemoteEndpoint
+  - VDS.RDF.Update.SparqlRemoteUpdateEndpoint
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.BaseEndpoint.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.BaseEndpoint.#ctor
+  commentId: M:VDS.RDF.BaseEndpoint.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: BaseEndpoint()
+  nameWithType: BaseEndpoint.BaseEndpoint()
+  fullName: VDS.RDF.BaseEndpoint.BaseEndpoint()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 46
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new Base Endpoint.\n"
+  example: []
+  syntax:
+    content: protected BaseEndpoint()
+    content.vb: Protected Sub New
+  overload: VDS.RDF.BaseEndpoint.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.BaseEndpoint.#ctor(System.Uri)
+  commentId: M:VDS.RDF.BaseEndpoint.#ctor(System.Uri)
+  id: '#ctor(System.Uri)'
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: BaseEndpoint(Uri)
+  nameWithType: BaseEndpoint.BaseEndpoint(Uri)
+  fullName: VDS.RDF.BaseEndpoint.BaseEndpoint(System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCreates a new Base Endpoint.\n"
+  example: []
+  syntax:
+    content: protected BaseEndpoint(Uri endpointUri)
+    parameters:
+    - id: endpointUri
+      type: System.Uri
+      description: Endpoint URI.
+    content.vb: Protected Sub New(endpointUri As Uri)
+  overload: VDS.RDF.BaseEndpoint.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.BaseEndpoint.Uri
+  commentId: P:VDS.RDF.BaseEndpoint.Uri
+  id: Uri
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Uri
+  nameWithType: BaseEndpoint.Uri
+  fullName: VDS.RDF.BaseEndpoint.Uri
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Uri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 63
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Endpoints URI.\n"
+  example: []
+  syntax:
+    content: public Uri Uri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property Uri As Uri
+  overload: VDS.RDF.BaseEndpoint.Uri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.BaseEndpoint.Credentials
+  commentId: P:VDS.RDF.BaseEndpoint.Credentials
+  id: Credentials
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Credentials
+  nameWithType: BaseEndpoint.Credentials
+  fullName: VDS.RDF.BaseEndpoint.Credentials
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Credentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 68
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets/Sets the HTTP authentication credentials to be used.\n"
+  example: []
+  syntax:
+    content: public NetworkCredential Credentials { get; set; }
+    parameters: []
+    return:
+      type: System.Net.NetworkCredential
+    content.vb: Public Property Credentials As NetworkCredential
+  overload: VDS.RDF.BaseEndpoint.Credentials*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.UserAgent
+  commentId: P:VDS.RDF.BaseEndpoint.UserAgent
+  id: UserAgent
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: BaseEndpoint.UserAgent
+  fullName: VDS.RDF.BaseEndpoint.UserAgent
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UserAgent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 74
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets/Sets the user agent string to pass in the request header.\n"
+  remarks: Defaults to null, which will not set the header.
+  example: []
+  syntax:
+    content: public string UserAgent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserAgent As String
+  overload: VDS.RDF.BaseEndpoint.UserAgent*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.HttpMode
+  commentId: P:VDS.RDF.BaseEndpoint.HttpMode
+  id: HttpMode
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: HttpMode
+  nameWithType: BaseEndpoint.HttpMode
+  fullName: VDS.RDF.BaseEndpoint.HttpMode
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HttpMode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 89
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets/Sets the HTTP Mode used for requests.\n"
+  remarks: "\n<p>This property defaults to the value AUTO. in AUTO mode GET will be used unless the total length of query parameters exceeeds 2048 characters\nor the query contains non-ASCII characters, and POST will be used for longer queries or where the query contains non-ASCII characters.</p>\n<p>\nOnly AUTO, GET and POST are permitted - implementations may override this property if they wish to support more methods.\n</p>\n"
+  example: []
+  syntax:
+    content: public virtual string HttpMode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property HttpMode As String
+  overload: VDS.RDF.BaseEndpoint.HttpMode*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.BaseEndpoint.Timeout
+  commentId: P:VDS.RDF.BaseEndpoint.Timeout
+  id: Timeout
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: BaseEndpoint.Timeout
+  fullName: VDS.RDF.BaseEndpoint.Timeout
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Timeout
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 125
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets/Sets the HTTP Timeouts used specified in milliseconds.\n"
+  remarks: "\n<p>\nDefaults to 30 Seconds (i.e. the default value is 30,000).\n</p>\n<p>\nIt is important to understand that this timeout only applies to the HTTP request portions of any operation performed and that the timeout may apply more than once if a POST operation is used since the timeout applies separately to obtaining the request stream to POST the request and obtaining the response stream.  Also the timeout does not in any way apply to subsequent work that may be carried out before the operation can return so if you need a hard timeout you should manage that yourself.\n</p>\n<p>\nWhen set to a zero/negative value then the standard .Net timeout of 100 seconds will apply, use <xref href=\"System.Int32.MaxValue\" data-throw-if-not-resolved=\"false\"></xref> if you want the maximum possible timeout i.e. if you expect to launch extremely long running operations.\n</p>\n<p>\nNot supported under Silverlight, Windows Phone and Portable Class Library builds.\n</p>\n"
+  example: []
+  syntax:
+    content: public int Timeout { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Timeout As Integer
+  overload: VDS.RDF.BaseEndpoint.Timeout*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  id: SetCredentials(System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SetCredentials(String, String)
+  nameWithType: BaseEndpoint.SetCredentials(String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetCredentials(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 143
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSets the HTTP Digest authentication credentials to be used.\n"
+  example: []
+  syntax:
+    content: public void SetCredentials(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+      description: Username.
+    - id: password
+      type: System.String
+      description: Password.
+    content.vb: Public Sub SetCredentials(username As String, password As String)
+  overload: VDS.RDF.BaseEndpoint.SetCredentials*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String,System.String)
+  id: SetCredentials(System.String,System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SetCredentials(String, String, String)
+  nameWithType: BaseEndpoint.SetCredentials(String, String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetCredentials(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 154
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSets the HTTP Digest authentication credentials to be used.\n"
+  example: []
+  syntax:
+    content: public void SetCredentials(string username, string password, string domain)
+    parameters:
+    - id: username
+      type: System.String
+      description: Username.
+    - id: password
+      type: System.String
+      description: Password.
+    - id: domain
+      type: System.String
+      description: Domain.
+    content.vb: Public Sub SetCredentials(username As String, password As String, domain As String)
+  overload: VDS.RDF.BaseEndpoint.SetCredentials*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.ClearCredentials
+  commentId: M:VDS.RDF.BaseEndpoint.ClearCredentials
+  id: ClearCredentials
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: ClearCredentials()
+  nameWithType: BaseEndpoint.ClearCredentials()
+  fullName: VDS.RDF.BaseEndpoint.ClearCredentials()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ClearCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 163
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nClears any in-use credentials so subsequent requests will not use HTTP authentication.\n"
+  example: []
+  syntax:
+    content: public void ClearCredentials()
+    content.vb: Public Sub ClearCredentials
+  overload: VDS.RDF.BaseEndpoint.ClearCredentials*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  commentId: P:VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  id: UseCredentialsForProxy
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: UseCredentialsForProxy
+  nameWithType: BaseEndpoint.UseCredentialsForProxy
+  fullName: VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UseCredentialsForProxy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 174
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nControls whether the Credentials set with the <xref href=\"VDS.RDF.BaseEndpoint.SetCredentials(System.String%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref> method or the <xref href=\"VDS.RDF.BaseEndpoint.Credentials\" data-throw-if-not-resolved=\"false\"></xref>are also used for a Proxy (if used).\n"
+  example: []
+  syntax:
+    content: public bool UseCredentialsForProxy { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseCredentialsForProxy As Boolean
+  overload: VDS.RDF.BaseEndpoint.UseCredentialsForProxy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  id: SetProxy(System.String)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SetProxy(String)
+  nameWithType: BaseEndpoint.SetProxy(String)
+  fullName: VDS.RDF.BaseEndpoint.SetProxy(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetProxy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 181
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSets a Proxy Server to be used.\n"
+  example: []
+  syntax:
+    content: public void SetProxy(string address)
+    parameters:
+    - id: address
+      type: System.String
+      description: Proxy Address.
+    content.vb: Public Sub SetProxy(address As String)
+  overload: VDS.RDF.BaseEndpoint.SetProxy*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  id: SetProxy(System.Uri)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SetProxy(Uri)
+  nameWithType: BaseEndpoint.SetProxy(Uri)
+  fullName: VDS.RDF.BaseEndpoint.SetProxy(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetProxy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 190
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSets a Proxy Server to be used.\n"
+  example: []
+  syntax:
+    content: public void SetProxy(Uri address)
+    parameters:
+    - id: address
+      type: System.Uri
+      description: Proxy Address.
+    content.vb: Public Sub SetProxy(address As Uri)
+  overload: VDS.RDF.BaseEndpoint.SetProxy*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.Proxy
+  commentId: P:VDS.RDF.BaseEndpoint.Proxy
+  id: Proxy
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: Proxy
+  nameWithType: BaseEndpoint.Proxy
+  fullName: VDS.RDF.BaseEndpoint.Proxy
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Proxy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 198
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets/Sets a Proxy Server to be used.\n"
+  example: []
+  syntax:
+    content: public IWebProxy Proxy { get; set; }
+    parameters: []
+    return:
+      type: System.Net.IWebProxy
+    content.vb: Public Property Proxy As IWebProxy
+  overload: VDS.RDF.BaseEndpoint.Proxy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.ClearProxy
+  commentId: M:VDS.RDF.BaseEndpoint.ClearProxy
+  id: ClearProxy
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: ClearProxy()
+  nameWithType: BaseEndpoint.ClearProxy()
+  fullName: VDS.RDF.BaseEndpoint.ClearProxy()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ClearProxy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 203
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nClears any in-use credentials so subsequent requests will not use a proxy server.\n"
+  example: []
+  syntax:
+    content: public void ClearProxy()
+    content.vb: Public Sub ClearProxy
+  overload: VDS.RDF.BaseEndpoint.ClearProxy*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String)
+  id: SetProxyCredentials(System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SetProxyCredentials(String, String)
+  nameWithType: BaseEndpoint.SetProxyCredentials(String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetProxyCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 213
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSets Credentials to be used for Proxy Server.\n"
+  example: []
+  syntax:
+    content: public void SetProxyCredentials(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+      description: Username.
+    - id: password
+      type: System.String
+      description: Password.
+    content.vb: Public Sub SetProxyCredentials(username As String, password As String)
+  overload: VDS.RDF.BaseEndpoint.SetProxyCredentials*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String,System.String,System.String)
+  id: SetProxyCredentials(System.String,System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SetProxyCredentials(String, String, String)
+  nameWithType: BaseEndpoint.SetProxyCredentials(String, String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetProxyCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 231
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSets Credentials to be used for Proxy Server.\n"
+  example: []
+  syntax:
+    content: public void SetProxyCredentials(string username, string password, string domain)
+    parameters:
+    - id: username
+      type: System.String
+      description: Username.
+    - id: password
+      type: System.String
+      description: Password.
+    - id: domain
+      type: System.String
+      description: Domain.
+    content.vb: Public Sub SetProxyCredentials(username As String, password As String, domain As String)
+  overload: VDS.RDF.BaseEndpoint.SetProxyCredentials*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.ProxyCredentials
+  commentId: P:VDS.RDF.BaseEndpoint.ProxyCredentials
+  id: ProxyCredentials
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: ProxyCredentials
+  nameWithType: BaseEndpoint.ProxyCredentials
+  fullName: VDS.RDF.BaseEndpoint.ProxyCredentials
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ProxyCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 246
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets/Sets Credentials to be used for Proxy Server.\n"
+  example: []
+  syntax:
+    content: public ICredentials ProxyCredentials { get; set; }
+    parameters: []
+    return:
+      type: System.Net.ICredentials
+    content.vb: Public Property ProxyCredentials As ICredentials
+  overload: VDS.RDF.BaseEndpoint.ProxyCredentials*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  commentId: M:VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  id: ClearProxyCredentials
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: ClearProxyCredentials()
+  nameWithType: BaseEndpoint.ClearProxyCredentials()
+  fullName: VDS.RDF.BaseEndpoint.ClearProxyCredentials()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ClearProxyCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 265
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nClears the in-use proxy credentials so subsequent requests still use the proxy server but without credentials.\n"
+  example: []
+  syntax:
+    content: public void ClearProxyCredentials()
+    content.vb: Public Sub ClearProxyCredentials
+  overload: VDS.RDF.BaseEndpoint.ClearProxyCredentials*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  commentId: M:VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  id: ApplyRequestOptions(System.Net.HttpWebRequest)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: ApplyRequestOptions(HttpWebRequest)
+  nameWithType: BaseEndpoint.ApplyRequestOptions(HttpWebRequest)
+  fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ApplyRequestOptions
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 309
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nApplies generic request options (timeout, authorization and proxy server) to a request.\n"
+  example: []
+  syntax:
+    content: protected void ApplyRequestOptions(HttpWebRequest httpRequest)
+    parameters:
+    - id: httpRequest
+      type: System.Net.HttpWebRequest
+      description: HTTP Request.
+    content.vb: Protected Sub ApplyRequestOptions(httpRequest As HttpWebRequest)
+  overload: VDS.RDF.BaseEndpoint.ApplyRequestOptions*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.BaseEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.BaseEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  id: SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: BaseEndpoint.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.BaseEndpoint.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SerializeConfiguration
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 358
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nSerializes the endpoints Credential and Proxy information.\n"
+  example: []
+  syntax:
+    content: public virtual void SerializeConfiguration(ConfigurationSerializationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Configuration.ConfigurationSerializationContext
+      description: Configuration Serialization Context.
+    content.vb: Public Overridable Sub SerializeConfiguration(context As ConfigurationSerializationContext)
+  overload: VDS.RDF.BaseEndpoint.SerializeConfiguration*
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  commentId: M:VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  id: ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  parent: VDS.RDF.BaseEndpoint
+  langs:
+  - csharp
+  - vb
+  name: ApplyCustomRequestOptions(HttpWebRequest)
+  nameWithType: BaseEndpoint.ApplyCustomRequestOptions(HttpWebRequest)
+  fullName: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions(System.Net.HttpWebRequest)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/BaseEndpoint.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ApplyCustomRequestOptions
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/BaseEndpoint.cs
+    startLine: 382
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod which may be overridden in derived classes to add any additional custom request options/headers to the request.\n"
+  remarks: "\nThis is called at the end of <xref href=\"VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)\" data-throw-if-not-resolved=\"false\"></xref> so can also be used to override that methods default behaviour.\n"
+  example: []
+  syntax:
+    content: protected virtual void ApplyCustomRequestOptions(HttpWebRequest httpRequest)
+    parameters:
+    - id: httpRequest
+      type: System.Net.HttpWebRequest
+      description: HTTP Request.
+    content.vb: Protected Overridable Sub ApplyCustomRequestOptions(httpRequest As HttpWebRequest)
+  overload: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseEndpoint>()
+  nameWithType: Extensions.AsEnumerable<BaseEndpoint>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.BaseEndpoint>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseEndpoint)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.BaseEndpoint)()
+  name.vb: AsEnumerable(Of BaseEndpoint)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseEndpoint>
+    nameWithType: Extensions.AsEnumerable<BaseEndpoint>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.BaseEndpoint>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseEndpoint)
+    nameWithType: Extensions.AsEnumerable(Of BaseEndpoint)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.BaseEndpoint)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.BaseEndpoint.#ctor*
+  commentId: Overload:VDS.RDF.BaseEndpoint.#ctor
+  name: BaseEndpoint
+  nameWithType: BaseEndpoint.BaseEndpoint
+  fullName: VDS.RDF.BaseEndpoint.BaseEndpoint
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.BaseEndpoint.Uri*
+  commentId: Overload:VDS.RDF.BaseEndpoint.Uri
+  name: Uri
+  nameWithType: BaseEndpoint.Uri
+  fullName: VDS.RDF.BaseEndpoint.Uri
+- uid: VDS.RDF.BaseEndpoint.Credentials*
+  commentId: Overload:VDS.RDF.BaseEndpoint.Credentials
+  name: Credentials
+  nameWithType: BaseEndpoint.Credentials
+  fullName: VDS.RDF.BaseEndpoint.Credentials
+- uid: System.Net.NetworkCredential
+  commentId: T:System.Net.NetworkCredential
+  parent: System.Net
+  isExternal: true
+  name: NetworkCredential
+  nameWithType: NetworkCredential
+  fullName: System.Net.NetworkCredential
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: VDS.RDF.BaseEndpoint.UserAgent*
+  commentId: Overload:VDS.RDF.BaseEndpoint.UserAgent
+  name: UserAgent
+  nameWithType: BaseEndpoint.UserAgent
+  fullName: VDS.RDF.BaseEndpoint.UserAgent
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.BaseEndpoint.HttpMode*
+  commentId: Overload:VDS.RDF.BaseEndpoint.HttpMode
+  name: HttpMode
+  nameWithType: BaseEndpoint.HttpMode
+  fullName: VDS.RDF.BaseEndpoint.HttpMode
+- uid: System.Int32.MaxValue
+  commentId: F:System.Int32.MaxValue
+  isExternal: true
+- uid: VDS.RDF.BaseEndpoint.Timeout*
+  commentId: Overload:VDS.RDF.BaseEndpoint.Timeout
+  name: Timeout
+  nameWithType: BaseEndpoint.Timeout
+  fullName: VDS.RDF.BaseEndpoint.Timeout
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.BaseEndpoint.SetCredentials*
+  commentId: Overload:VDS.RDF.BaseEndpoint.SetCredentials
+  name: SetCredentials
+  nameWithType: BaseEndpoint.SetCredentials
+  fullName: VDS.RDF.BaseEndpoint.SetCredentials
+- uid: VDS.RDF.BaseEndpoint.ClearCredentials*
+  commentId: Overload:VDS.RDF.BaseEndpoint.ClearCredentials
+  name: ClearCredentials
+  nameWithType: BaseEndpoint.ClearCredentials
+  fullName: VDS.RDF.BaseEndpoint.ClearCredentials
+- uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: SetCredentials(String, String)
+  nameWithType: BaseEndpoint.SetCredentials(String, String)
+  fullName: VDS.RDF.BaseEndpoint.SetCredentials(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseEndpoint.SetCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseEndpoint.SetCredentials
+    fullName: VDS.RDF.BaseEndpoint.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.Credentials
+  commentId: P:VDS.RDF.BaseEndpoint.Credentials
+  parent: VDS.RDF.BaseEndpoint
+  name: Credentials
+  nameWithType: BaseEndpoint.Credentials
+  fullName: VDS.RDF.BaseEndpoint.Credentials
+- uid: VDS.RDF.BaseEndpoint.UseCredentialsForProxy*
+  commentId: Overload:VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+  name: UseCredentialsForProxy
+  nameWithType: BaseEndpoint.UseCredentialsForProxy
+  fullName: VDS.RDF.BaseEndpoint.UseCredentialsForProxy
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.BaseEndpoint
+  commentId: T:VDS.RDF.BaseEndpoint
+  parent: VDS.RDF
+  name: BaseEndpoint
+  nameWithType: BaseEndpoint
+  fullName: VDS.RDF.BaseEndpoint
+- uid: VDS.RDF.BaseEndpoint.SetProxy*
+  commentId: Overload:VDS.RDF.BaseEndpoint.SetProxy
+  name: SetProxy
+  nameWithType: BaseEndpoint.SetProxy
+  fullName: VDS.RDF.BaseEndpoint.SetProxy
+- uid: VDS.RDF.BaseEndpoint.Proxy*
+  commentId: Overload:VDS.RDF.BaseEndpoint.Proxy
+  name: Proxy
+  nameWithType: BaseEndpoint.Proxy
+  fullName: VDS.RDF.BaseEndpoint.Proxy
+- uid: System.Net.IWebProxy
+  commentId: T:System.Net.IWebProxy
+  parent: System.Net
+  isExternal: true
+  name: IWebProxy
+  nameWithType: IWebProxy
+  fullName: System.Net.IWebProxy
+- uid: VDS.RDF.BaseEndpoint.ClearProxy*
+  commentId: Overload:VDS.RDF.BaseEndpoint.ClearProxy
+  name: ClearProxy
+  nameWithType: BaseEndpoint.ClearProxy
+  fullName: VDS.RDF.BaseEndpoint.ClearProxy
+- uid: VDS.RDF.BaseEndpoint.SetProxyCredentials*
+  commentId: Overload:VDS.RDF.BaseEndpoint.SetProxyCredentials
+  name: SetProxyCredentials
+  nameWithType: BaseEndpoint.SetProxyCredentials
+  fullName: VDS.RDF.BaseEndpoint.SetProxyCredentials
+- uid: VDS.RDF.BaseEndpoint.ProxyCredentials*
+  commentId: Overload:VDS.RDF.BaseEndpoint.ProxyCredentials
+  name: ProxyCredentials
+  nameWithType: BaseEndpoint.ProxyCredentials
+  fullName: VDS.RDF.BaseEndpoint.ProxyCredentials
+- uid: System.Net.ICredentials
+  commentId: T:System.Net.ICredentials
+  parent: System.Net
+  isExternal: true
+  name: ICredentials
+  nameWithType: ICredentials
+  fullName: System.Net.ICredentials
+- uid: VDS.RDF.BaseEndpoint.ClearProxyCredentials*
+  commentId: Overload:VDS.RDF.BaseEndpoint.ClearProxyCredentials
+  name: ClearProxyCredentials
+  nameWithType: BaseEndpoint.ClearProxyCredentials
+  fullName: VDS.RDF.BaseEndpoint.ClearProxyCredentials
+- uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions*
+  commentId: Overload:VDS.RDF.BaseEndpoint.ApplyRequestOptions
+  name: ApplyRequestOptions
+  nameWithType: BaseEndpoint.ApplyRequestOptions
+  fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions
+- uid: System.Net.HttpWebRequest
+  commentId: T:System.Net.HttpWebRequest
+  parent: System.Net
+  isExternal: true
+  name: HttpWebRequest
+  nameWithType: HttpWebRequest
+  fullName: System.Net.HttpWebRequest
+- uid: VDS.RDF.BaseEndpoint.SerializeConfiguration*
+  commentId: Overload:VDS.RDF.BaseEndpoint.SerializeConfiguration
+  name: SerializeConfiguration
+  nameWithType: BaseEndpoint.SerializeConfiguration
+  fullName: VDS.RDF.BaseEndpoint.SerializeConfiguration
+- uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Configuration.IConfigurationSerializable
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: IConfigurationSerializable.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+  commentId: T:VDS.RDF.Configuration.ConfigurationSerializationContext
+  parent: VDS.RDF.Configuration
+  name: ConfigurationSerializationContext
+  nameWithType: ConfigurationSerializationContext
+  fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+- uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  commentId: M:VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  parent: VDS.RDF.BaseEndpoint
+  isExternal: true
+  name: ApplyRequestOptions(HttpWebRequest)
+  nameWithType: BaseEndpoint.ApplyRequestOptions(HttpWebRequest)
+  fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+  spec.csharp:
+  - uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseEndpoint.ApplyRequestOptions
+    fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.BaseEndpoint.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseEndpoint.ApplyRequestOptions
+    fullName: VDS.RDF.BaseEndpoint.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions*
+  commentId: Overload:VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions
+  name: ApplyCustomRequestOptions
+  nameWithType: BaseEndpoint.ApplyCustomRequestOptions
+  fullName: VDS.RDF.BaseEndpoint.ApplyCustomRequestOptions

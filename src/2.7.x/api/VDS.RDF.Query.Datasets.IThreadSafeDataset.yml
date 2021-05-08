@@ -1,0 +1,1075 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Datasets.IThreadSafeDataset
+  commentId: T:VDS.RDF.Query.Datasets.IThreadSafeDataset
+  id: IThreadSafeDataset
+  parent: VDS.RDF.Query.Datasets
+  children:
+  - VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+  langs:
+  - csharp
+  - vb
+  name: IThreadSafeDataset
+  nameWithType: IThreadSafeDataset
+  fullName: VDS.RDF.Query.Datasets.IThreadSafeDataset
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IThreadSafeDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 323
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nInterface for SPARQL Datasets which also provide a Lock by which threading can be controlled.\n"
+  remarks: "\nNote that there is no guarantees that consuming code will respect the fact that a Dataset is Thread Safe and use the <xref href=\"VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock\" data-throw-if-not-resolved=\"false\"></xref> property appropriately.  Additionally some datasets may choose to implement thread safety in other ways which don&apos;t rely on this interface.\n"
+  example: []
+  syntax:
+    content: 'public interface IThreadSafeDataset : ISparqlDataset'
+    content.vb: >-
+      Public Interface IThreadSafeDataset
+          Inherits ISparqlDataset
+  inheritedMembers:
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  - VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  - VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  - VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  - VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  - VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  extensionMethods:
+  - VDS.RDF.Query.Datasets.IThreadSafeDataset.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+  commentId: P:VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+  id: Lock
+  parent: VDS.RDF.Query.Datasets.IThreadSafeDataset
+  langs:
+  - csharp
+  - vb
+  name: Lock
+  nameWithType: IThreadSafeDataset.Lock
+  fullName: VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Lock
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/ISparqlDataset.cs
+    startLine: 328
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets the Lock used to ensure MRSW concurrency of the Dataset when used with the Leviathan SPARQL processors.\n"
+  example: []
+  syntax:
+    content: ReaderWriterLockSlim Lock { get; }
+    parameters: []
+    return:
+      type: System.Threading.ReaderWriterLockSlim
+    content.vb: ReadOnly Property Lock As ReaderWriterLockSlim
+  overload: VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+  commentId: P:VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+  parent: VDS.RDF.Query.Datasets.IThreadSafeDataset
+  name: Lock
+  nameWithType: IThreadSafeDataset.Lock
+  fullName: VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: SetActiveGraph(IEnumerable<Uri>)
+  nameWithType: ISparqlDataset.SetActiveGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  nameWithType.vb: ISparqlDataset.SetActiveGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetActiveGraph(IEnumerable(Of Uri))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetActiveGraph
+    nameWithType: ISparqlDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetActiveGraph
+    nameWithType: ISparqlDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: SetActiveGraph(Uri)
+  nameWithType: ISparqlDataset.SetActiveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+    name: SetActiveGraph
+    nameWithType: ISparqlDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph(System.Uri)
+    name: SetActiveGraph
+    nameWithType: ISparqlDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: SetDefaultGraph(Uri)
+  nameWithType: ISparqlDataset.SetDefaultGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+    name: SetDefaultGraph
+    nameWithType: ISparqlDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Uri)
+    name: SetDefaultGraph
+    nameWithType: ISparqlDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: SetDefaultGraph(IEnumerable<Uri>)
+  nameWithType: ISparqlDataset.SetDefaultGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  nameWithType.vb: ISparqlDataset.SetDefaultGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetDefaultGraph(IEnumerable(Of Uri))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetDefaultGraph
+    nameWithType: ISparqlDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetDefaultGraph
+    nameWithType: ISparqlDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: ResetActiveGraph()
+  nameWithType: ISparqlDataset.ResetActiveGraph()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+    name: ResetActiveGraph
+    nameWithType: ISparqlDataset.ResetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+    name: ResetActiveGraph
+    nameWithType: ISparqlDataset.ResetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: ResetDefaultGraph()
+  nameWithType: ISparqlDataset.ResetDefaultGraph()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+    name: ResetDefaultGraph
+    nameWithType: ISparqlDataset.ResetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+    name: ResetDefaultGraph
+    nameWithType: ISparqlDataset.ResetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ResetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: DefaultGraphUris
+  nameWithType: ISparqlDataset.DefaultGraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.DefaultGraphUris
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: ActiveGraphUris
+  nameWithType: ISparqlDataset.ActiveGraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ActiveGraphUris
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: UsesUnionDefaultGraph
+  nameWithType: ISparqlDataset.UsesUnionDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.UsesUnionDefaultGraph
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: AddGraph(IGraph)
+  nameWithType: ISparqlDataset.AddGraph(IGraph)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+    name: AddGraph
+    nameWithType: ISparqlDataset.AddGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph(VDS.RDF.IGraph)
+    name: AddGraph
+    nameWithType: ISparqlDataset.AddGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.AddGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: RemoveGraph(Uri)
+  nameWithType: ISparqlDataset.RemoveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+    name: RemoveGraph
+    nameWithType: ISparqlDataset.RemoveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph(System.Uri)
+    name: RemoveGraph
+    nameWithType: ISparqlDataset.RemoveGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.RemoveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: HasGraph(Uri)
+  nameWithType: ISparqlDataset.HasGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: ISparqlDataset.HasGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: ISparqlDataset.HasGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: Graphs
+  nameWithType: ISparqlDataset.Graphs
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Graphs
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: GraphUris
+  nameWithType: ISparqlDataset.GraphUris
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GraphUris
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: Item[Uri]
+  nameWithType: ISparqlDataset.Item[Uri]
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Item[System.Uri]
+  nameWithType.vb: ISparqlDataset.Item(Uri)
+  fullName.vb: VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+  name.vb: Item(Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+    name: Item
+    nameWithType: ISparqlDataset.Item
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.Item(System.Uri)
+    name: Item
+    nameWithType: ISparqlDataset.Item
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  isExternal: true
+  name: GetModifiableGraph(Uri)
+  nameWithType: ISparqlDataset.GetModifiableGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: ISparqlDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: ISparqlDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: HasTriples
+  nameWithType: ISparqlDataset.HasTriples
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.HasTriples
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: ContainsTriple(Triple)
+  nameWithType: ISparqlDataset.ContainsTriple(Triple)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+    name: ContainsTriple
+    nameWithType: ISparqlDataset.ContainsTriple
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple(VDS.RDF.Triple)
+    name: ContainsTriple
+    nameWithType: ISparqlDataset.ContainsTriple
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.ContainsTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  commentId: P:VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: Triples
+  nameWithType: ISparqlDataset.Triples
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Triples
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: GetTriplesWithSubject(INode)
+  nameWithType: ISparqlDataset.GetTriplesWithSubject(INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+    name: GetTriplesWithSubject
+    nameWithType: ISparqlDataset.GetTriplesWithSubject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject(VDS.RDF.INode)
+    name: GetTriplesWithSubject
+    nameWithType: ISparqlDataset.GetTriplesWithSubject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: GetTriplesWithPredicate(INode)
+  nameWithType: ISparqlDataset.GetTriplesWithPredicate(INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+    name: GetTriplesWithPredicate
+    nameWithType: ISparqlDataset.GetTriplesWithPredicate
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+    name: GetTriplesWithPredicate
+    nameWithType: ISparqlDataset.GetTriplesWithPredicate
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: GetTriplesWithObject(INode)
+  nameWithType: ISparqlDataset.GetTriplesWithObject(INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+    name: GetTriplesWithObject
+    nameWithType: ISparqlDataset.GetTriplesWithObject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject(VDS.RDF.INode)
+    name: GetTriplesWithObject
+    nameWithType: ISparqlDataset.GetTriplesWithObject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: GetTriplesWithSubjectPredicate(INode, INode)
+  nameWithType: ISparqlDataset.GetTriplesWithSubjectPredicate(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectPredicate
+    nameWithType: ISparqlDataset.GetTriplesWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectPredicate
+    nameWithType: ISparqlDataset.GetTriplesWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: GetTriplesWithSubjectObject(INode, INode)
+  nameWithType: ISparqlDataset.GetTriplesWithSubjectObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectObject
+    nameWithType: ISparqlDataset.GetTriplesWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectObject
+    nameWithType: ISparqlDataset.GetTriplesWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: GetTriplesWithPredicateObject(INode, INode)
+  nameWithType: ISparqlDataset.GetTriplesWithPredicateObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithPredicateObject
+    nameWithType: ISparqlDataset.GetTriplesWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithPredicateObject
+    nameWithType: ISparqlDataset.GetTriplesWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.GetTriplesWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: Flush()
+  nameWithType: ISparqlDataset.Flush()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Flush()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+    name: Flush
+    nameWithType: ISparqlDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+    name: Flush
+    nameWithType: ISparqlDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  commentId: M:VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  parent: VDS.RDF.Query.Datasets.ISparqlDataset
+  name: Discard()
+  nameWithType: ISparqlDataset.Discard()
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Discard()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+    name: Discard
+    nameWithType: ISparqlDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+    name: Discard
+    nameWithType: ISparqlDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.ISparqlDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.IThreadSafeDataset.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IThreadSafeDataset>()
+  nameWithType: Extensions.AsEnumerable<IThreadSafeDataset>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.IThreadSafeDataset>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IThreadSafeDataset)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.IThreadSafeDataset)()
+  name.vb: AsEnumerable(Of IThreadSafeDataset)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IThreadSafeDataset>
+    nameWithType: Extensions.AsEnumerable<IThreadSafeDataset>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.IThreadSafeDataset>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IThreadSafeDataset)
+    nameWithType: Extensions.AsEnumerable(Of IThreadSafeDataset)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.IThreadSafeDataset)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.IThreadSafeDataset
+  commentId: T:VDS.RDF.Query.Datasets.IThreadSafeDataset
+  parent: VDS.RDF.Query.Datasets
+  name: IThreadSafeDataset
+  nameWithType: IThreadSafeDataset
+  fullName: VDS.RDF.Query.Datasets.IThreadSafeDataset
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock*
+  commentId: Overload:VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+  name: Lock
+  nameWithType: IThreadSafeDataset.Lock
+  fullName: VDS.RDF.Query.Datasets.IThreadSafeDataset.Lock
+- uid: System.Threading.ReaderWriterLockSlim
+  commentId: T:System.Threading.ReaderWriterLockSlim
+  parent: System.Threading
+  isExternal: true
+  name: ReaderWriterLockSlim
+  nameWithType: ReaderWriterLockSlim
+  fullName: System.Threading.ReaderWriterLockSlim
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading

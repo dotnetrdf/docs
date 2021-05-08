@@ -1,0 +1,342 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator
+  commentId: T:VDS.RDF.Query.Algebra.IUnaryOperator
+  id: IUnaryOperator
+  parent: VDS.RDF.Query.Algebra
+  children:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  - VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  langs:
+  - csharp
+  - vb
+  name: IUnaryOperator
+  nameWithType: IUnaryOperator
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISparqlAlgebra.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IUnaryOperator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISparqlAlgebra.cs
+    startLine: 82
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nInterface for SPARQL Algebra constructs which are unary operators i.e. they apply over a single inner Algebra.\n"
+  example: []
+  syntax:
+    content: 'public interface IUnaryOperator : ISparqlAlgebra'
+    content.vb: >-
+      Public Interface IUnaryOperator
+          Inherits ISparqlAlgebra
+  inheritedMembers:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  extensionMethods:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  commentId: P:VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  id: InnerAlgebra
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  langs:
+  - csharp
+  - vb
+  name: InnerAlgebra
+  nameWithType: IUnaryOperator.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISparqlAlgebra.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InnerAlgebra
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISparqlAlgebra.cs
+    startLine: 88
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Inner Algebra.\n"
+  example: []
+  syntax:
+    content: ISparqlAlgebra InnerAlgebra { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    content.vb: ReadOnly Property InnerAlgebra As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  commentId: M:VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  id: Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  langs:
+  - csharp
+  - vb
+  name: Transform(IAlgebraOptimiser)
+  nameWithType: IUnaryOperator.Transform(IAlgebraOptimiser)
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISparqlAlgebra.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Transform
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISparqlAlgebra.cs
+    startLine: 101
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nTransforms the Inner Algebra using the given Optimiser.\n"
+  remarks: "\nThe operator should retain all it&apos;s existing properties and just return a new version of itself with the inner algebra having had the given optimiser applied to it.\n"
+  example: []
+  syntax:
+    content: ISparqlAlgebra Transform(IAlgebraOptimiser optimiser)
+    parameters:
+    - id: optimiser
+      type: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+      description: Optimiser.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Function Transform(optimiser As IAlgebraOptimiser) As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.IUnaryOperator.Transform*
+references:
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: ISparqlAlgebra.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Variables
+  nameWithType: ISparqlAlgebra.Variables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FloatingVariables
+  nameWithType: ISparqlAlgebra.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FixedVariables
+  nameWithType: ISparqlAlgebra.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToQuery()
+  nameWithType: ISparqlAlgebra.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToGraphPattern()
+  nameWithType: ISparqlAlgebra.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IUnaryOperator>()
+  nameWithType: Extensions.AsEnumerable<IUnaryOperator>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.IUnaryOperator>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IUnaryOperator)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.IUnaryOperator)()
+  name.vb: AsEnumerable(Of IUnaryOperator)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IUnaryOperator>
+    nameWithType: Extensions.AsEnumerable<IUnaryOperator>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.IUnaryOperator>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IUnaryOperator)
+    nameWithType: Extensions.AsEnumerable(Of IUnaryOperator)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.IUnaryOperator)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra*
+  commentId: Overload:VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  name: InnerAlgebra
+  nameWithType: IUnaryOperator.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform*
+  commentId: Overload:VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+  name: Transform
+  nameWithType: IUnaryOperator.Transform
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation

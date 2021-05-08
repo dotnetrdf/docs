@@ -1,0 +1,800 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Optimisation.LazyBgpOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.LazyBgpOptimiser
+  id: LazyBgpOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  children:
+  - VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: LazyBgpOptimiser
+  nameWithType: LazyBgpOptimiser
+  fullName: VDS.RDF.Query.Optimisation.LazyBgpOptimiser
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LazyBgpOptimiser
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+    startLine: 34
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nAn Algebra Optimiser that optimises Algebra to use <xref href=\"VDS.RDF.Query.Algebra.LazyBgp\" data-throw-if-not-resolved=\"false\"></xref>&apos;s wherever possible.\n"
+  example: []
+  syntax:
+    content: 'public class LazyBgpOptimiser : BaseAlgebraOptimiser, IAlgebraOptimiser'
+    content.vb: >-
+      Public Class LazyBgpOptimiser
+          Inherits BaseAlgebraOptimiser
+          Implements IAlgebraOptimiser
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  inheritedMembers:
+  - VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Optimisation.LazyBgpOptimiser.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+  commentId: M:VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+  id: OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+  parent: VDS.RDF.Query.Optimisation.LazyBgpOptimiser
+  langs:
+  - csharp
+  - vb
+  name: OptimiseInternal(ISparqlAlgebra, Int32)
+  nameWithType: LazyBgpOptimiser.OptimiseInternal(ISparqlAlgebra, Int32)
+  fullName: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: OptimiseInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+    startLine: 48
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nOptimises an Algebra to a form that uses <xref href=\"VDS.RDF.Query.Algebra.LazyBgp\" data-throw-if-not-resolved=\"false\"></xref> where possible.\n"
+  remarks: "\n<p>\nBy transforming a query to use <xref href=\"VDS.RDF.Query.Algebra.LazyBgp\" data-throw-if-not-resolved=\"false\"></xref> we can achieve much more efficient processing of some forms of queries.\n</p>\n"
+  example: []
+  syntax:
+    content: protected override ISparqlAlgebra OptimiseInternal(ISparqlAlgebra algebra, int depth)
+    parameters:
+    - id: algebra
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: Algebra.
+    - id: depth
+      type: System.Int32
+      description: Depth.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Protected Overrides Function OptimiseInternal(algebra As ISparqlAlgebra, depth As Integer) As ISparqlAlgebra
+  overridden: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+  overload: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  id: IsApplicable(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.Optimisation.LazyBgpOptimiser
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable(SparqlQuery)
+  nameWithType: LazyBgpOptimiser.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsApplicable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+    startLine: 105
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nDetermines whether the query can be optimised for lazy evaluation.\n"
+  example: []
+  syntax:
+    content: public override bool IsApplicable(SparqlQuery q)
+    parameters:
+    - id: q
+      type: VDS.RDF.Query.SparqlQuery
+      description: Query.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function IsApplicable(q As SparqlQuery) As Boolean
+  overridden: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  overload: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  id: IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Query.Optimisation.LazyBgpOptimiser
+  langs:
+  - csharp
+  - vb
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: LazyBgpOptimiser.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsApplicable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/BgpOptimisers.cs
+    startLine: 120
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nReturns that the optimiser does not apply to SPARQL Updates.\n"
+  example: []
+  syntax:
+    content: public override bool IsApplicable(SparqlUpdateCommandSet cmds)
+    parameters:
+    - id: cmds
+      type: VDS.RDF.Update.SparqlUpdateCommandSet
+      description: Updates.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function IsApplicable(cmds As SparqlUpdateCommandSet) As Boolean
+  overridden: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  overload: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Algebra.LazyBgp
+  commentId: T:VDS.RDF.Query.Algebra.LazyBgp
+  name: LazyBgp
+  nameWithType: LazyBgp
+  fullName: VDS.RDF.Query.Algebra.LazyBgp
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: BaseAlgebraOptimiser
+  nameWithType: BaseAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  parent: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+  name: Optimise(ISparqlAlgebra)
+  nameWithType: BaseAlgebraOptimiser.Optimise(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: BaseAlgebraOptimiser.Optimise
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: BaseAlgebraOptimiser.Optimise
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<LazyBgpOptimiser>()
+  nameWithType: Extensions.AsEnumerable<LazyBgpOptimiser>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.LazyBgpOptimiser>()
+  nameWithType.vb: Extensions.AsEnumerable(Of LazyBgpOptimiser)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.LazyBgpOptimiser)()
+  name.vb: AsEnumerable(Of LazyBgpOptimiser)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<LazyBgpOptimiser>
+    nameWithType: Extensions.AsEnumerable<LazyBgpOptimiser>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.LazyBgpOptimiser>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of LazyBgpOptimiser)
+    nameWithType: Extensions.AsEnumerable(Of LazyBgpOptimiser)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.LazyBgpOptimiser)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+  commentId: M:VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+  parent: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+  isExternal: true
+  name: OptimiseInternal(ISparqlAlgebra, Int32)
+  nameWithType: BaseAlgebraOptimiser.OptimiseInternal(ISparqlAlgebra, Int32)
+  fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+    name: OptimiseInternal
+    nameWithType: BaseAlgebraOptimiser.OptimiseInternal
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.Int32)
+    name: OptimiseInternal
+    nameWithType: BaseAlgebraOptimiser.OptimiseInternal
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.OptimiseInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal*
+  commentId: Overload:VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal
+  name: OptimiseInternal
+  nameWithType: LazyBgpOptimiser.OptimiseInternal
+  fullName: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.OptimiseInternal
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+  name: IsApplicable(SparqlQuery)
+  nameWithType: BaseAlgebraOptimiser.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: BaseAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: BaseAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable*
+  commentId: Overload:VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable
+  name: IsApplicable
+  nameWithType: LazyBgpOptimiser.IsApplicable
+  fullName: VDS.RDF.Query.Optimisation.LazyBgpOptimiser.IsApplicable
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: BaseAlgebraOptimiser.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: BaseAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: BaseAlgebraOptimiser.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.BaseAlgebraOptimiser.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Update.SparqlUpdateCommandSet
+  commentId: T:VDS.RDF.Update.SparqlUpdateCommandSet
+  parent: VDS.RDF.Update
+  name: SparqlUpdateCommandSet
+  nameWithType: SparqlUpdateCommandSet
+  fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update

@@ -1,0 +1,1194 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Algebra.PropertyFunction
+  commentId: T:VDS.RDF.Query.Algebra.PropertyFunction
+  id: PropertyFunction
+  parent: VDS.RDF.Query.Algebra
+  children:
+  - VDS.RDF.Query.Algebra.PropertyFunction.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction)
+  - VDS.RDF.Query.Algebra.PropertyFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables
+  - VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables
+  - VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra
+  - VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern
+  - VDS.RDF.Query.Algebra.PropertyFunction.ToQuery
+  - VDS.RDF.Query.Algebra.PropertyFunction.ToString
+  - VDS.RDF.Query.Algebra.PropertyFunction.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  - VDS.RDF.Query.Algebra.PropertyFunction.Variables
+  langs:
+  - csharp
+  - vb
+  name: PropertyFunction
+  nameWithType: PropertyFunction
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PropertyFunction
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 38
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nAlgebra that represents the application of a Property Function.\n"
+  example: []
+  syntax:
+    content: 'public class PropertyFunction : IUnaryOperator, ISparqlAlgebra'
+    content.vb: >-
+      Public Class PropertyFunction
+          Implements IUnaryOperator, ISparqlAlgebra
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Algebra.PropertyFunction.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction)
+  commentId: M:VDS.RDF.Query.Algebra.PropertyFunction.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction)
+  id: '#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction)'
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: PropertyFunction(ISparqlAlgebra, ISparqlPropertyFunction)
+  nameWithType: PropertyFunction.PropertyFunction(ISparqlAlgebra, ISparqlPropertyFunction)
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.PropertyFunction(VDS.RDF.Query.Algebra.ISparqlAlgebra, VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 49
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a new Property function algebra.\n"
+  example: []
+  syntax:
+    content: public PropertyFunction(ISparqlAlgebra algebra, ISparqlPropertyFunction function)
+    parameters:
+    - id: algebra
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: Inner algebra.
+    - id: function
+      type: VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction
+      description: Property Function.
+    content.vb: Public Sub New(algebra As ISparqlAlgebra, function As ISparqlPropertyFunction)
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra
+  commentId: P:VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra
+  id: InnerAlgebra
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: InnerAlgebra
+  nameWithType: PropertyFunction.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InnerAlgebra
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Inner Algebra.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra InnerAlgebra { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    content.vb: Public ReadOnly Property InnerAlgebra As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra*
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  commentId: M:VDS.RDF.Query.Algebra.PropertyFunction.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  id: Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: Transform(IAlgebraOptimiser)
+  nameWithType: PropertyFunction.Transform(IAlgebraOptimiser)
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Transform
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 71
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nTransforms this algebra with the given optimiser.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra Transform(IAlgebraOptimiser optimiser)
+    parameters:
+    - id: optimiser
+      type: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+      description: Optimiser.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public Function Transform(optimiser As IAlgebraOptimiser) As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.Transform*
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.PropertyFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  id: Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: PropertyFunction.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 81
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nEvaluates the algebra in the given context.\n"
+  example: []
+  syntax:
+    content: public BaseMultiset Evaluate(SparqlEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: Evaluation Context.
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+      description: ''
+    content.vb: Public Function Evaluate(context As SparqlEvaluationContext) As BaseMultiset
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.Evaluate*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.Variables
+  commentId: P:VDS.RDF.Query.Algebra.PropertyFunction.Variables
+  id: Variables
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: PropertyFunction.Variables
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 90
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the variables used in the algebra.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.Variables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables
+  id: FloatingVariables
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: FloatingVariables
+  nameWithType: PropertyFunction.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FloatingVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 101
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of floating variables in the algebra i.e. variables that are not guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FloatingVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FloatingVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables
+  id: FixedVariables
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: FixedVariables
+  nameWithType: PropertyFunction.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FixedVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 114
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of fixed variables in the algebra i.e. variables that are guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FixedVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FixedVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.PropertyFunction.ToQuery
+  id: ToQuery
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: ToQuery()
+  nameWithType: PropertyFunction.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.ToQuery()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 120
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nThrows an error because property functions cannot be converted back to queries.\n"
+  example: []
+  syntax:
+    content: public SparqlQuery ToQuery()
+    return:
+      type: VDS.RDF.Query.SparqlQuery
+      description: ''
+    content.vb: Public Function ToQuery As SparqlQuery
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.ToQuery*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern
+  id: ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: ToGraphPattern()
+  nameWithType: PropertyFunction.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToGraphPattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 129
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nThrows an error because property functions cannot be converted back to graph patterns.\n"
+  example: []
+  syntax:
+    content: public GraphPattern ToGraphPattern()
+    return:
+      type: VDS.RDF.Query.Patterns.GraphPattern
+      description: ''
+    content.vb: Public Function ToGraphPattern As GraphPattern
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.ToString
+  commentId: M:VDS.RDF.Query.Algebra.PropertyFunction.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Algebra.PropertyFunction
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PropertyFunction.ToString()
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/PropertyFunction.cs
+    startLine: 138
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the string representation of the algebra.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.Algebra.PropertyFunction.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator
+  commentId: T:VDS.RDF.Query.Algebra.IUnaryOperator
+  parent: VDS.RDF.Query.Algebra
+  name: IUnaryOperator
+  nameWithType: IUnaryOperator
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<PropertyFunction>()
+  nameWithType: Extensions.AsEnumerable<PropertyFunction>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.PropertyFunction>()
+  nameWithType.vb: Extensions.AsEnumerable(Of PropertyFunction)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.PropertyFunction)()
+  name.vb: AsEnumerable(Of PropertyFunction)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<PropertyFunction>
+    nameWithType: Extensions.AsEnumerable<PropertyFunction>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.PropertyFunction>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of PropertyFunction)
+    nameWithType: Extensions.AsEnumerable(Of PropertyFunction)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.PropertyFunction)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.#ctor*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.#ctor
+  name: PropertyFunction
+  nameWithType: PropertyFunction.PropertyFunction
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.PropertyFunction
+- uid: VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction
+  commentId: T:VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction
+  parent: VDS.RDF.Query.PropertyFunctions
+  name: ISparqlPropertyFunction
+  nameWithType: ISparqlPropertyFunction
+  fullName: VDS.RDF.Query.PropertyFunctions.ISparqlPropertyFunction
+- uid: VDS.RDF.Query.PropertyFunctions
+  commentId: N:VDS.RDF.Query.PropertyFunctions
+  name: VDS.RDF.Query.PropertyFunctions
+  nameWithType: VDS.RDF.Query.PropertyFunctions
+  fullName: VDS.RDF.Query.PropertyFunctions
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra
+  name: InnerAlgebra
+  nameWithType: PropertyFunction.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.InnerAlgebra
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  commentId: P:VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  name: InnerAlgebra
+  nameWithType: IUnaryOperator.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.Transform*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.Transform
+  name: Transform
+  nameWithType: PropertyFunction.Transform
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.Transform
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  commentId: M:VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  name: Transform(IAlgebraOptimiser)
+  nameWithType: IUnaryOperator.Transform(IAlgebraOptimiser)
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+    name: Transform
+    nameWithType: IUnaryOperator.Transform
+    fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+    name: Transform
+    nameWithType: IUnaryOperator.Transform
+    fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.Evaluate*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.Evaluate
+  name: Evaluate
+  nameWithType: PropertyFunction.Evaluate
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.Evaluate
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: ISparqlAlgebra.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: VDS.RDF.Query.Algebra.BaseMultiset
+  commentId: T:VDS.RDF.Query.Algebra.BaseMultiset
+  parent: VDS.RDF.Query.Algebra
+  name: BaseMultiset
+  nameWithType: BaseMultiset
+  fullName: VDS.RDF.Query.Algebra.BaseMultiset
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.Variables*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.Variables
+  name: Variables
+  nameWithType: PropertyFunction.Variables
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.Variables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Variables
+  nameWithType: ISparqlAlgebra.Variables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables
+  name: FloatingVariables
+  nameWithType: PropertyFunction.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FloatingVariables
+  nameWithType: ISparqlAlgebra.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables
+  name: FixedVariables
+  nameWithType: PropertyFunction.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.FixedVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FixedVariables
+  nameWithType: ISparqlAlgebra.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.ToQuery*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.ToQuery
+  name: ToQuery
+  nameWithType: PropertyFunction.ToQuery
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.ToQuery
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToQuery()
+  nameWithType: ISparqlAlgebra.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern
+  name: ToGraphPattern
+  nameWithType: PropertyFunction.ToGraphPattern
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.ToGraphPattern
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToGraphPattern()
+  nameWithType: ISparqlAlgebra.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Patterns.GraphPattern
+  commentId: T:VDS.RDF.Query.Patterns.GraphPattern
+  parent: VDS.RDF.Query.Patterns
+  name: GraphPattern
+  nameWithType: GraphPattern
+  fullName: VDS.RDF.Query.Patterns.GraphPattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.PropertyFunction.ToString*
+  commentId: Overload:VDS.RDF.Query.Algebra.PropertyFunction.ToString
+  name: ToString
+  nameWithType: PropertyFunction.ToString
+  fullName: VDS.RDF.Query.Algebra.PropertyFunction.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

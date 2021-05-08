@@ -1,0 +1,632 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.GraphFactory
+  commentId: T:VDS.RDF.GraphFactory
+  id: GraphFactory
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.GraphFactory.GetGraph(System.Uri)
+  - VDS.RDF.GraphFactory.Item(System.Uri)
+  - VDS.RDF.GraphFactory.Reset
+  - VDS.RDF.GraphFactory.TryGetGraph(System.Uri,System.Boolean@)
+  langs:
+  - csharp
+  - vb
+  name: GraphFactory
+  nameWithType: GraphFactory
+  fullName: VDS.RDF.GraphFactory
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NodeFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GraphFactory
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NodeFactory.cs
+    startLine: 160
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nA Graph Factory provides access to consistent Graph References so that Nodes and Triples can be instantiated in the correct Graphs.\n"
+  remarks: "\n<p>\nPrimarily designed for internal use in some of our code but may prove useful to other users hence is a public class.  Internally this is just a wrapper around a <xref href=\"VDS.RDF.TripleStore\" data-throw-if-not-resolved=\"false\"></xref> instance.\n</p>\n<p>\nThe main usage for this class is scenarios where consistent graph references matter such as returning node references from out of memory datasets (like SQL backed ones) particularly with regards to blank nodes since blank node equality is predicated upon Graph reference.\n</p>\n"
+  example: []
+  syntax:
+    content: public class GraphFactory
+    content.vb: Public Class GraphFactory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.GraphFactory.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.GraphFactory.Item(System.Uri)
+  commentId: P:VDS.RDF.GraphFactory.Item(System.Uri)
+  id: Item(System.Uri)
+  parent: VDS.RDF.GraphFactory
+  langs:
+  - csharp
+  - vb
+  name: Item[Uri]
+  nameWithType: GraphFactory.Item[Uri]
+  fullName: VDS.RDF.GraphFactory.Item[System.Uri]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NodeFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NodeFactory.cs
+    startLine: 169
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets a Graph Reference for the given Graph URI.\n"
+  example: []
+  syntax:
+    content: public IGraph this[Uri graphUri] { get; }
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public ReadOnly Property Item(graphUri As Uri) As IGraph
+  overload: VDS.RDF.GraphFactory.Item*
+  nameWithType.vb: GraphFactory.Item(Uri)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: VDS.RDF.GraphFactory.Item(System.Uri)
+  name.vb: Item(Uri)
+- uid: VDS.RDF.GraphFactory.GetGraph(System.Uri)
+  commentId: M:VDS.RDF.GraphFactory.GetGraph(System.Uri)
+  id: GetGraph(System.Uri)
+  parent: VDS.RDF.GraphFactory
+  langs:
+  - csharp
+  - vb
+  name: GetGraph(Uri)
+  nameWithType: GraphFactory.GetGraph(Uri)
+  fullName: VDS.RDF.GraphFactory.GetGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NodeFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NodeFactory.cs
+    startLine: 195
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets a Graph Reference for the given Graph URI.\n"
+  remarks: "\nSynonym for the index access method i.e. factory[graphUri].\n"
+  example: []
+  syntax:
+    content: public IGraph GetGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public Function GetGraph(graphUri As Uri) As IGraph
+  overload: VDS.RDF.GraphFactory.GetGraph*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.GraphFactory.TryGetGraph(System.Uri,System.Boolean@)
+  commentId: M:VDS.RDF.GraphFactory.TryGetGraph(System.Uri,System.Boolean@)
+  id: TryGetGraph(System.Uri,System.Boolean@)
+  parent: VDS.RDF.GraphFactory
+  langs:
+  - csharp
+  - vb
+  name: TryGetGraph(Uri, out Boolean)
+  nameWithType: GraphFactory.TryGetGraph(Uri, out Boolean)
+  fullName: VDS.RDF.GraphFactory.TryGetGraph(System.Uri, out System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NodeFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TryGetGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NodeFactory.cs
+    startLine: 206
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets a Graph Reference for the given Graph URI and indicates whether this was a new Graph reference.\n"
+  example: []
+  syntax:
+    content: public IGraph TryGetGraph(Uri graphUri, out bool created)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    - id: created
+      type: System.Boolean
+      description: Indicates whether the returned reference was newly created.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public Function TryGetGraph(graphUri As Uri, ByRef created As Boolean) As IGraph
+  overload: VDS.RDF.GraphFactory.TryGetGraph*
+  nameWithType.vb: GraphFactory.TryGetGraph(Uri, ByRef Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.GraphFactory.TryGetGraph(System.Uri, ByRef System.Boolean)
+  name.vb: TryGetGraph(Uri, ByRef Boolean)
+- uid: VDS.RDF.GraphFactory.Reset
+  commentId: M:VDS.RDF.GraphFactory.Reset
+  id: Reset
+  parent: VDS.RDF.GraphFactory
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: GraphFactory.Reset()
+  fullName: VDS.RDF.GraphFactory.Reset()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/NodeFactory.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Reset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/NodeFactory.cs
+    startLine: 226
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nResets the Factory so any Graphs with contents are emptied.\n"
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset
+  overload: VDS.RDF.GraphFactory.Reset*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.TripleStore
+  commentId: T:VDS.RDF.TripleStore
+  parent: VDS.RDF
+  name: TripleStore
+  nameWithType: TripleStore
+  fullName: VDS.RDF.TripleStore
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.GraphFactory.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<GraphFactory>()
+  nameWithType: Extensions.AsEnumerable<GraphFactory>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.GraphFactory>()
+  nameWithType.vb: Extensions.AsEnumerable(Of GraphFactory)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.GraphFactory)()
+  name.vb: AsEnumerable(Of GraphFactory)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<GraphFactory>
+    nameWithType: Extensions.AsEnumerable<GraphFactory>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.GraphFactory>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of GraphFactory)
+    nameWithType: Extensions.AsEnumerable(Of GraphFactory)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.GraphFactory)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.GraphFactory.Item*
+  commentId: Overload:VDS.RDF.GraphFactory.Item
+  name: Item
+  nameWithType: GraphFactory.Item
+  fullName: VDS.RDF.GraphFactory.Item
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.GraphFactory.GetGraph*
+  commentId: Overload:VDS.RDF.GraphFactory.GetGraph
+  name: GetGraph
+  nameWithType: GraphFactory.GetGraph
+  fullName: VDS.RDF.GraphFactory.GetGraph
+- uid: VDS.RDF.GraphFactory.TryGetGraph*
+  commentId: Overload:VDS.RDF.GraphFactory.TryGetGraph
+  name: TryGetGraph
+  nameWithType: GraphFactory.TryGetGraph
+  fullName: VDS.RDF.GraphFactory.TryGetGraph
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.GraphFactory.Reset*
+  commentId: Overload:VDS.RDF.GraphFactory.Reset
+  name: Reset
+  nameWithType: GraphFactory.Reset
+  fullName: VDS.RDF.GraphFactory.Reset

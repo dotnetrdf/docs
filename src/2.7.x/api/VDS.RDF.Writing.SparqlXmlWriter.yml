@@ -1,0 +1,856 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.SparqlXmlWriter
+  commentId: T:VDS.RDF.Writing.SparqlXmlWriter
+  id: SparqlXmlWriter
+  parent: VDS.RDF.Writing
+  children:
+  - VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput(VDS.RDF.Query.SparqlResultSet,System.Xml.XmlWriter)
+  - VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning(System.String)
+  - VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  - VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  - VDS.RDF.Writing.SparqlXmlWriter.ToString
+  - VDS.RDF.Writing.SparqlXmlWriter.Warning
+  langs:
+  - csharp
+  - vb
+  name: SparqlXmlWriter
+  nameWithType: SparqlXmlWriter
+  fullName: VDS.RDF.Writing.SparqlXmlWriter
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SparqlXmlWriter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+    startLine: 38
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nClass for saving Sparql Result Sets to the Sparql Results XML Format.\n"
+  example: []
+  syntax:
+    content: 'public class SparqlXmlWriter : ISparqlResultsWriter'
+    content.vb: >-
+      Public Class SparqlXmlWriter
+          Implements ISparqlResultsWriter
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Writing.SparqlXsltWriter
+  implements:
+  - VDS.RDF.ISparqlResultsWriter
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Writing.SparqlXmlWriter.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  commentId: M:VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  id: Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  parent: VDS.RDF.Writing.SparqlXmlWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(SparqlResultSet, String)
+  nameWithType: SparqlXmlWriter.Save(SparqlResultSet, String)
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+    startLine: 46
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves the Result Set to the given File in the Sparql Results XML Format.\n"
+  example: []
+  syntax:
+    content: public virtual void Save(SparqlResultSet results, string filename)
+    parameters:
+    - id: results
+      type: VDS.RDF.Query.SparqlResultSet
+      description: Result Set to save.
+    - id: filename
+      type: System.String
+      description: File to save to.
+    content.vb: Public Overridable Sub Save(results As SparqlResultSet, filename As String)
+  overload: VDS.RDF.Writing.SparqlXmlWriter.Save*
+  implements:
+  - VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  id: Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.SparqlXmlWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(SparqlResultSet, TextWriter)
+  nameWithType: SparqlXmlWriter.Save(SparqlResultSet, TextWriter)
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.Save(VDS.RDF.Query.SparqlResultSet, System.IO.TextWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+    startLine: 71
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves the Result Set to the given Stream in the Sparql Results XML Format.\n"
+  example: []
+  syntax:
+    content: public virtual void Save(SparqlResultSet results, TextWriter output)
+    parameters:
+    - id: results
+      type: VDS.RDF.Query.SparqlResultSet
+      description: ''
+    - id: output
+      type: System.IO.TextWriter
+      description: ''
+    content.vb: Public Overridable Sub Save(results As SparqlResultSet, output As TextWriter)
+  overload: VDS.RDF.Writing.SparqlXmlWriter.Save*
+  implements:
+  - VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput(VDS.RDF.Query.SparqlResultSet,System.Xml.XmlWriter)
+  commentId: M:VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput(VDS.RDF.Query.SparqlResultSet,System.Xml.XmlWriter)
+  id: GenerateOutput(VDS.RDF.Query.SparqlResultSet,System.Xml.XmlWriter)
+  parent: VDS.RDF.Writing.SparqlXmlWriter
+  langs:
+  - csharp
+  - vb
+  name: GenerateOutput(SparqlResultSet, XmlWriter)
+  nameWithType: SparqlXmlWriter.GenerateOutput(SparqlResultSet, XmlWriter)
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput(VDS.RDF.Query.SparqlResultSet, System.Xml.XmlWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GenerateOutput
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+    startLine: 97
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nMethod which generates the Sparql Query Results XML Format serialization of the Result Set.\n"
+  example: []
+  syntax:
+    content: protected void GenerateOutput(SparqlResultSet resultSet, XmlWriter writer)
+    parameters:
+    - id: resultSet
+      type: VDS.RDF.Query.SparqlResultSet
+    - id: writer
+      type: System.Xml.XmlWriter
+    content.vb: Protected Sub GenerateOutput(resultSet As SparqlResultSet, writer As XmlWriter)
+  overload: VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning(System.String)
+  commentId: M:VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning(System.String)
+  id: RaiseWarning(System.String)
+  parent: VDS.RDF.Writing.SparqlXmlWriter
+  langs:
+  - csharp
+  - vb
+  name: RaiseWarning(String)
+  nameWithType: SparqlXmlWriter.RaiseWarning(String)
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RaiseWarning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+    startLine: 224
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nHelper Method which raises the Warning event when a non-fatal issue with the SPARQL Results being written is detected.\n"
+  example: []
+  syntax:
+    content: protected void RaiseWarning(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Warning Message.
+    content.vb: Protected Sub RaiseWarning(message As String)
+  overload: VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Writing.SparqlXmlWriter.Warning
+  commentId: E:VDS.RDF.Writing.SparqlXmlWriter.Warning
+  id: Warning
+  parent: VDS.RDF.Writing.SparqlXmlWriter
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: SparqlXmlWriter.Warning
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+    startLine: 236
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nEvent raised when a non-fatal issue with the SPARQL Results being written is detected\n"
+  example: []
+  syntax:
+    content: public event SparqlWarning Warning
+    return:
+      type: VDS.RDF.SparqlWarning
+    content.vb: Public Event Warning As SparqlWarning
+  implements:
+  - VDS.RDF.ISparqlResultsWriter.Warning
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.SparqlXmlWriter.ToString
+  commentId: M:VDS.RDF.Writing.SparqlXmlWriter.ToString
+  id: ToString
+  parent: VDS.RDF.Writing.SparqlXmlWriter
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SparqlXmlWriter.ToString()
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/SPARQLXMLWriter.cs
+    startLine: 242
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nGets the String representation of the writer which is a description of the syntax it produces.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Writing.SparqlXmlWriter.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Writing
+  commentId: N:VDS.RDF.Writing
+  name: VDS.RDF.Writing
+  nameWithType: VDS.RDF.Writing
+  fullName: VDS.RDF.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.ISparqlResultsWriter
+  commentId: T:VDS.RDF.ISparqlResultsWriter
+  parent: VDS.RDF
+  name: ISparqlResultsWriter
+  nameWithType: ISparqlResultsWriter
+  fullName: VDS.RDF.ISparqlResultsWriter
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.SparqlXmlWriter.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SparqlXmlWriter>()
+  nameWithType: Extensions.AsEnumerable<SparqlXmlWriter>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.SparqlXmlWriter>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SparqlXmlWriter)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.SparqlXmlWriter)()
+  name.vb: AsEnumerable(Of SparqlXmlWriter)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SparqlXmlWriter>
+    nameWithType: Extensions.AsEnumerable<SparqlXmlWriter>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.SparqlXmlWriter>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SparqlXmlWriter)
+    nameWithType: Extensions.AsEnumerable(Of SparqlXmlWriter)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.SparqlXmlWriter)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Writing.SparqlXmlWriter.Save*
+  commentId: Overload:VDS.RDF.Writing.SparqlXmlWriter.Save
+  name: Save
+  nameWithType: SparqlXmlWriter.Save
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.Save
+- uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  commentId: M:VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+  parent: VDS.RDF.ISparqlResultsWriter
+  isExternal: true
+  name: Save(SparqlResultSet, String)
+  nameWithType: ISparqlResultsWriter.Save(SparqlResultSet, String)
+  fullName: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.String)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  commentId: M:VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+  parent: VDS.RDF.ISparqlResultsWriter
+  isExternal: true
+  name: Save(SparqlResultSet, TextWriter)
+  nameWithType: ISparqlResultsWriter.Save(SparqlResultSet, TextWriter)
+  fullName: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.ISparqlResultsWriter.Save(VDS.RDF.Query.SparqlResultSet,System.IO.TextWriter)
+    name: Save
+    nameWithType: ISparqlResultsWriter.Save
+    fullName: VDS.RDF.ISparqlResultsWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResultSet
+    name: SparqlResultSet
+    nameWithType: SparqlResultSet
+    fullName: VDS.RDF.Query.SparqlResultSet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput*
+  commentId: Overload:VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput
+  name: GenerateOutput
+  nameWithType: SparqlXmlWriter.GenerateOutput
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.GenerateOutput
+- uid: System.Xml.XmlWriter
+  commentId: T:System.Xml.XmlWriter
+  parent: System.Xml
+  isExternal: true
+  name: XmlWriter
+  nameWithType: XmlWriter
+  fullName: System.Xml.XmlWriter
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: true
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml
+- uid: VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning*
+  commentId: Overload:VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning
+  name: RaiseWarning
+  nameWithType: SparqlXmlWriter.RaiseWarning
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.RaiseWarning
+- uid: VDS.RDF.ISparqlResultsWriter.Warning
+  commentId: E:VDS.RDF.ISparqlResultsWriter.Warning
+  parent: VDS.RDF.ISparqlResultsWriter
+  name: Warning
+  nameWithType: ISparqlResultsWriter.Warning
+  fullName: VDS.RDF.ISparqlResultsWriter.Warning
+- uid: VDS.RDF.SparqlWarning
+  commentId: T:VDS.RDF.SparqlWarning
+  parent: VDS.RDF
+  name: SparqlWarning
+  nameWithType: SparqlWarning
+  fullName: VDS.RDF.SparqlWarning
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.SparqlXmlWriter.ToString*
+  commentId: Overload:VDS.RDF.Writing.SparqlXmlWriter.ToString
+  name: ToString
+  nameWithType: SparqlXmlWriter.ToString
+  fullName: VDS.RDF.Writing.SparqlXmlWriter.ToString

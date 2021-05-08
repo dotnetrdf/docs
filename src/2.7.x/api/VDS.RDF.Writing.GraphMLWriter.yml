@@ -1,0 +1,943 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.GraphMLWriter
+  commentId: T:VDS.RDF.Writing.GraphMLWriter
+  id: GraphMLWriter
+  parent: VDS.RDF.Writing
+  children:
+  - VDS.RDF.Writing.GraphMLWriter.CollapseLiterals
+  - VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+  - VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+  - VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.String)
+  - VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.Xml.XmlWriter)
+  - VDS.RDF.Writing.GraphMLWriter.Warning
+  langs:
+  - csharp
+  - vb
+  name: GraphMLWriter
+  nameWithType: GraphMLWriter
+  fullName: VDS.RDF.Writing.GraphMLWriter
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GraphMLWriter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+    startLine: 36
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nClass for serializing a <xref href=\"VDS.RDF.IGraph\" data-throw-if-not-resolved=\"false\"></xref> in GraphML format.\n"
+  example: []
+  syntax:
+    content: 'public class GraphMLWriter : IStoreWriter, ICollapseLiteralsWriter'
+    content.vb: >-
+      Public Class GraphMLWriter
+          Implements IStoreWriter, ICollapseLiteralsWriter
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.IStoreWriter
+  - VDS.RDF.Writing.ICollapseLiteralsWriter
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Writing.GraphMLWriter.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Writing.GraphMLWriter.CollapseLiterals
+  commentId: P:VDS.RDF.Writing.GraphMLWriter.CollapseLiterals
+  id: CollapseLiterals
+  parent: VDS.RDF.Writing.GraphMLWriter
+  langs:
+  - csharp
+  - vb
+  name: CollapseLiterals
+  nameWithType: GraphMLWriter.CollapseLiterals
+  fullName: VDS.RDF.Writing.GraphMLWriter.CollapseLiterals
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CollapseLiterals
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nControls whether to collapse distinct literals.\n"
+  example: []
+  syntax:
+    content: public bool CollapseLiterals { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CollapseLiterals As Boolean
+  overload: VDS.RDF.Writing.GraphMLWriter.CollapseLiterals*
+  implements:
+  - VDS.RDF.Writing.ICollapseLiteralsWriter.CollapseLiterals
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.GraphMLWriter.Warning
+  commentId: E:VDS.RDF.Writing.GraphMLWriter.Warning
+  id: Warning
+  parent: VDS.RDF.Writing.GraphMLWriter
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: GraphMLWriter.Warning
+  fullName: VDS.RDF.Writing.GraphMLWriter.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+    startLine: 47
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nEvent raised when there is ambiguity in the syntax being producing\n"
+  remarks: This class doesn&apos;t raise this event
+  example: []
+  syntax:
+    content: public event StoreWriterWarning Warning
+    return:
+      type: VDS.RDF.StoreWriterWarning
+    content.vb: Public Event Warning As StoreWriterWarning
+  implements:
+  - VDS.RDF.IStoreWriter.Warning
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.String)
+  id: Save(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.Writing.GraphMLWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(ITripleStore, String)
+  nameWithType: GraphMLWriter.Save(ITripleStore, String)
+  fullName: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+    startLine: 54
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a triple store to a file in GraphML format.\n"
+  example: []
+  syntax:
+    content: public void Save(ITripleStore store, string filename)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: The source triple store.
+    - id: filename
+      type: System.String
+      description: The name of the target file.
+    content.vb: Public Sub Save(store As ITripleStore, filename As String)
+  overload: VDS.RDF.Writing.GraphMLWriter.Save*
+  implements:
+  - VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+  commentId: M:VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+  id: Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+  parent: VDS.RDF.Writing.GraphMLWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(ITripleStore, TextWriter)
+  nameWithType: GraphMLWriter.Save(ITripleStore, TextWriter)
+  fullName: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore, System.IO.TextWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a triple store to a text writer in GraphML format.\n"
+  example: []
+  syntax:
+    content: public void Save(ITripleStore store, TextWriter output)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: The source triple store.
+    - id: output
+      type: System.IO.TextWriter
+      description: The target text writer.
+    content.vb: Public Sub Save(store As ITripleStore, output As TextWriter)
+  overload: VDS.RDF.Writing.GraphMLWriter.Save*
+  implements:
+  - VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+  commentId: M:VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+  id: Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+  parent: VDS.RDF.Writing.GraphMLWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(ITripleStore, TextWriter, Boolean)
+  nameWithType: GraphMLWriter.Save(ITripleStore, TextWriter, Boolean)
+  fullName: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore, System.IO.TextWriter, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+    startLine: 78
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a triple store to a text writer in GraphML format.\n"
+  example: []
+  syntax:
+    content: public void Save(ITripleStore store, TextWriter output, bool leaveOpen)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: The source triple store.
+    - id: output
+      type: System.IO.TextWriter
+      description: The target text writer.
+    - id: leaveOpen
+      type: System.Boolean
+      description: Boolean flag indicating if the output writer should be left open by the writer when it completes.
+    content.vb: Public Sub Save(store As ITripleStore, output As TextWriter, leaveOpen As Boolean)
+  overload: VDS.RDF.Writing.GraphMLWriter.Save*
+  implements:
+  - VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.Xml.XmlWriter)
+  commentId: M:VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore,System.Xml.XmlWriter)
+  id: Save(VDS.RDF.ITripleStore,System.Xml.XmlWriter)
+  parent: VDS.RDF.Writing.GraphMLWriter
+  langs:
+  - csharp
+  - vb
+  name: Save(ITripleStore, XmlWriter)
+  nameWithType: GraphMLWriter.Save(ITripleStore, XmlWriter)
+  fullName: VDS.RDF.Writing.GraphMLWriter.Save(VDS.RDF.ITripleStore, System.Xml.XmlWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Save
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/GraphMLWriter.cs
+    startLine: 91
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing
+  summary: "\nSaves a triple store to an XML writer in GraphML format.\n"
+  example: []
+  syntax:
+    content: public void Save(ITripleStore store, XmlWriter output)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: The source triple store.
+    - id: output
+      type: System.Xml.XmlWriter
+      description: The target XML writer.
+    content.vb: Public Sub Save(store As ITripleStore, output As XmlWriter)
+  overload: VDS.RDF.Writing.GraphMLWriter.Save*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Writing
+  commentId: N:VDS.RDF.Writing
+  name: VDS.RDF.Writing
+  nameWithType: VDS.RDF.Writing
+  fullName: VDS.RDF.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.IStoreWriter
+  commentId: T:VDS.RDF.IStoreWriter
+  parent: VDS.RDF
+  name: IStoreWriter
+  nameWithType: IStoreWriter
+  fullName: VDS.RDF.IStoreWriter
+- uid: VDS.RDF.Writing.ICollapseLiteralsWriter
+  commentId: T:VDS.RDF.Writing.ICollapseLiteralsWriter
+  parent: VDS.RDF.Writing
+  name: ICollapseLiteralsWriter
+  nameWithType: ICollapseLiteralsWriter
+  fullName: VDS.RDF.Writing.ICollapseLiteralsWriter
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.GraphMLWriter.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<GraphMLWriter>()
+  nameWithType: Extensions.AsEnumerable<GraphMLWriter>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.GraphMLWriter>()
+  nameWithType.vb: Extensions.AsEnumerable(Of GraphMLWriter)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.GraphMLWriter)()
+  name.vb: AsEnumerable(Of GraphMLWriter)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<GraphMLWriter>
+    nameWithType: Extensions.AsEnumerable<GraphMLWriter>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.GraphMLWriter>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of GraphMLWriter)
+    nameWithType: Extensions.AsEnumerable(Of GraphMLWriter)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.GraphMLWriter)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Writing.GraphMLWriter.CollapseLiterals*
+  commentId: Overload:VDS.RDF.Writing.GraphMLWriter.CollapseLiterals
+  name: CollapseLiterals
+  nameWithType: GraphMLWriter.CollapseLiterals
+  fullName: VDS.RDF.Writing.GraphMLWriter.CollapseLiterals
+- uid: VDS.RDF.Writing.ICollapseLiteralsWriter.CollapseLiterals
+  commentId: P:VDS.RDF.Writing.ICollapseLiteralsWriter.CollapseLiterals
+  parent: VDS.RDF.Writing.ICollapseLiteralsWriter
+  name: CollapseLiterals
+  nameWithType: ICollapseLiteralsWriter.CollapseLiterals
+  fullName: VDS.RDF.Writing.ICollapseLiteralsWriter.CollapseLiterals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.IStoreWriter.Warning
+  commentId: E:VDS.RDF.IStoreWriter.Warning
+  parent: VDS.RDF.IStoreWriter
+  name: Warning
+  nameWithType: IStoreWriter.Warning
+  fullName: VDS.RDF.IStoreWriter.Warning
+- uid: VDS.RDF.StoreWriterWarning
+  commentId: T:VDS.RDF.StoreWriterWarning
+  parent: VDS.RDF
+  name: StoreWriterWarning
+  nameWithType: StoreWriterWarning
+  fullName: VDS.RDF.StoreWriterWarning
+- uid: VDS.RDF.Writing.GraphMLWriter.Save*
+  commentId: Overload:VDS.RDF.Writing.GraphMLWriter.Save
+  name: Save
+  nameWithType: GraphMLWriter.Save
+  fullName: VDS.RDF.Writing.GraphMLWriter.Save
+- uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.String)
+  commentId: M:VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.String)
+  parent: VDS.RDF.IStoreWriter
+  isExternal: true
+  name: Save(ITripleStore, String)
+  nameWithType: IStoreWriter.Save(ITripleStore, String)
+  fullName: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.String)
+    name: Save
+    nameWithType: IStoreWriter.Save
+    fullName: VDS.RDF.IStoreWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.String)
+    name: Save
+    nameWithType: IStoreWriter.Save
+    fullName: VDS.RDF.IStoreWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.ITripleStore
+  commentId: T:VDS.RDF.ITripleStore
+  parent: VDS.RDF
+  name: ITripleStore
+  nameWithType: ITripleStore
+  fullName: VDS.RDF.ITripleStore
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+  commentId: M:VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+  parent: VDS.RDF.IStoreWriter
+  isExternal: true
+  name: Save(ITripleStore, TextWriter)
+  nameWithType: IStoreWriter.Save(ITripleStore, TextWriter)
+  fullName: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore, System.IO.TextWriter)
+  spec.csharp:
+  - uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+    name: Save
+    nameWithType: IStoreWriter.Save
+    fullName: VDS.RDF.IStoreWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter)
+    name: Save
+    nameWithType: IStoreWriter.Save
+    fullName: VDS.RDF.IStoreWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+  commentId: M:VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+  parent: VDS.RDF.IStoreWriter
+  isExternal: true
+  name: Save(ITripleStore, TextWriter, Boolean)
+  nameWithType: IStoreWriter.Save(ITripleStore, TextWriter, Boolean)
+  fullName: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore, System.IO.TextWriter, System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+    name: Save
+    nameWithType: IStoreWriter.Save
+    fullName: VDS.RDF.IStoreWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.IStoreWriter.Save(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean)
+    name: Save
+    nameWithType: IStoreWriter.Save
+    fullName: VDS.RDF.IStoreWriter.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.ITripleStore
+    name: ITripleStore
+    nameWithType: ITripleStore
+    fullName: VDS.RDF.ITripleStore
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.TextWriter
+    name: TextWriter
+    nameWithType: TextWriter
+    fullName: System.IO.TextWriter
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.XmlWriter
+  commentId: T:System.Xml.XmlWriter
+  parent: System.Xml
+  isExternal: true
+  name: XmlWriter
+  nameWithType: XmlWriter
+  fullName: System.Xml.XmlWriter
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: true
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml

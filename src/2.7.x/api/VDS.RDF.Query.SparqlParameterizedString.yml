@@ -1,0 +1,2446 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.SparqlParameterizedString
+  commentId: T:VDS.RDF.Query.SparqlParameterizedString
+  id: SparqlParameterizedString
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.SparqlParameterizedString.#ctor
+  - VDS.RDF.Query.SparqlParameterizedString.#ctor(System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.Append(System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.Append(VDS.RDF.Query.SparqlParameterizedString)
+  - VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlParameterizedString)
+  - VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.SparqlParameterizedString.BaseUri
+  - VDS.RDF.Query.SparqlParameterizedString.Clear
+  - VDS.RDF.Query.SparqlParameterizedString.ClearParameters
+  - VDS.RDF.Query.SparqlParameterizedString.ClearVariables
+  - VDS.RDF.Query.SparqlParameterizedString.CommandText
+  - VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery
+  - VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler)
+  - VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate
+  - VDS.RDF.Query.SparqlParameterizedString.Namespaces
+  - VDS.RDF.Query.SparqlParameterizedString.Parameters
+  - VDS.RDF.Query.SparqlParameterizedString.QueryProcessor
+  - VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String,System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Boolean)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTime)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTime,System.Boolean)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTimeOffset)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTimeOffset,System.Boolean)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Decimal)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Double)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int16)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int32)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int64)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Single)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String,System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String,System.Uri)
+  - VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.TimeSpan)
+  - VDS.RDF.Query.SparqlParameterizedString.SetParameter(System.String,VDS.RDF.INode)
+  - VDS.RDF.Query.SparqlParameterizedString.SetUri(System.String,System.Uri)
+  - VDS.RDF.Query.SparqlParameterizedString.SetVariable(System.String,VDS.RDF.INode)
+  - VDS.RDF.Query.SparqlParameterizedString.ToString
+  - VDS.RDF.Query.SparqlParameterizedString.UnsetParameter(System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.UnsetVariable(System.String)
+  - VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor
+  - VDS.RDF.Query.SparqlParameterizedString.Variables
+  langs:
+  - csharp
+  - vb
+  name: SparqlParameterizedString
+  nameWithType: SparqlParameterizedString
+  fullName: VDS.RDF.Query.SparqlParameterizedString
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SparqlParameterizedString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 77
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nA SPARQL Parameterized String is a String that can contain parameters in the same fashion as a SQL command string.\n"
+  remarks: "\n<p>\nThis is intended for use in applications which may want to dynamically build SPARQL queries/updates where user input may comprise individual values in the triples patterns and the applications want to avoid SPARQL injection attacks which change the meaning of the query/update.\n</p>\n<p>\nIt works broadly in the same way as a SqlCommand would in that you specify a string with paramters specified in the form <strong>@name</strong> and then use various set methods to set the actual values that should be used.  The values are only substituted for parameters when you actually call the <xref href=\"VDS.RDF.Query.SparqlParameterizedString.ToString\" data-throw-if-not-resolved=\"false\"></xref> method to get the final string representation of the command. E.g.\n</p>\n<pre><code>SparqlParameterizedString queryString = new SparqlParameterizedString();\nqueryString.CommandText = @&quot;SELECT * WHERE\n{\n    ?s a @type .\n}&quot;;\nqueryString.SetUri(&quot;type&quot;, new Uri(&quot;http://example.org/myType&quot;));\nConsole.WriteLine(queryString.ToString());</code></pre>\n<p>\nWould result in the following being printed to the Console:\n</p>\n<pre><code>SELECT * WHERE\n{\n    ?s a &lt;http://example.org/myType>\n}</code></pre>\n<p>\nCalling a Set method to set a parameter that has already been set changes that value and the new value will be used next time you call <xref href=\"VDS.RDF.Query.SparqlParameterizedString.ToString\" data-throw-if-not-resolved=\"false\"></xref> - this may be useful if you plan to execute a series of queries/updates using a series of values since you need not instantiate a completely new parameterized string each time.\n</p>\n<p>\nThis class was added to a library based on a suggestion by Alexander Sidorov and ideas from slides from <a href=\"http://www.slideshare.net/Morelab/sparqlrdqlsparul-injection\">Slideshare</a> by Almedia et al.\n</p>\n<p>\n<strong>PERFORMANCE TIPS:</strong> if building the command text incrementally, avoid using <code> CommandText += </code> and use the AppendSubQuery or Append methods instead.\n</p>\n"
+  example: []
+  syntax:
+    content: public class SparqlParameterizedString
+    content.vb: Public Class SparqlParameterizedString
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.SparqlParameterizedString.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.SparqlParameterizedString.#ctor
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SparqlParameterizedString()
+  nameWithType: SparqlParameterizedString.SparqlParameterizedString()
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SparqlParameterizedString()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 99
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new empty parameterized String.\n"
+  example: []
+  syntax:
+    content: public SparqlParameterizedString()
+    content.vb: Public Sub New
+  overload: VDS.RDF.Query.SparqlParameterizedString.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.#ctor(System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SparqlParameterizedString(String)
+  nameWithType: SparqlParameterizedString.SparqlParameterizedString(String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SparqlParameterizedString(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 108
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new parameterized String.\n"
+  example: []
+  syntax:
+    content: public SparqlParameterizedString(string command)
+    parameters:
+    - id: command
+      type: System.String
+      description: Command Text.
+    content.vb: Public Sub New(command As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.Namespaces
+  commentId: P:VDS.RDF.Query.SparqlParameterizedString.Namespaces
+  id: Namespaces
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: Namespaces
+  nameWithType: SparqlParameterizedString.Namespaces
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Namespaces
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Namespaces
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 117
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Namespace Map that is used to prepend PREFIX declarations to the command.\n"
+  example: []
+  syntax:
+    content: public INamespaceMapper Namespaces { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.INamespaceMapper
+    content.vb: Public Property Namespaces As INamespaceMapper
+  overload: VDS.RDF.Query.SparqlParameterizedString.Namespaces*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.BaseUri
+  commentId: P:VDS.RDF.Query.SparqlParameterizedString.BaseUri
+  id: BaseUri
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: BaseUri
+  nameWithType: SparqlParameterizedString.BaseUri
+  fullName: VDS.RDF.Query.SparqlParameterizedString.BaseUri
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 129
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Base URI which will be used to prepend BASE declarations to the command.\n"
+  example: []
+  syntax:
+    content: public Uri BaseUri { get; set; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public Property BaseUri As Uri
+  overload: VDS.RDF.Query.SparqlParameterizedString.BaseUri*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.CommandText
+  commentId: P:VDS.RDF.Query.SparqlParameterizedString.CommandText
+  id: CommandText
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: CommandText
+  nameWithType: SparqlParameterizedString.CommandText
+  fullName: VDS.RDF.Query.SparqlParameterizedString.CommandText
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CommandText
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 135
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the parameterized Command Text.\n"
+  example: []
+  syntax:
+    content: public virtual string CommandText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property CommandText As String
+  overload: VDS.RDF.Query.SparqlParameterizedString.CommandText*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlQuery)
+  id: AppendSubQuery(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: AppendSubQuery(SparqlQuery)
+  nameWithType: SparqlParameterizedString.AppendSubQuery(SparqlQuery)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlQuery)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AppendSubQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 151
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAppends the given query as a sub-query to the existing command text, any prefixes in the sub-query are moved to the parent query.\n"
+  example: []
+  syntax:
+    content: public void AppendSubQuery(SparqlQuery query)
+    parameters:
+    - id: query
+      type: VDS.RDF.Query.SparqlQuery
+      description: Query.
+    content.vb: Public Sub AppendSubQuery(query As SparqlQuery)
+  overload: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlParameterizedString)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlParameterizedString)
+  id: AppendSubQuery(VDS.RDF.Query.SparqlParameterizedString)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: AppendSubQuery(SparqlParameterizedString)
+  nameWithType: SparqlParameterizedString.AppendSubQuery(SparqlParameterizedString)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery(VDS.RDF.Query.SparqlParameterizedString)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AppendSubQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 161
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAppends the given query as a sub-query to the existing command text, any prefixes in the sub-query are moved to the parent query but any parameter/variable assignments will be lost.\n"
+  example: []
+  syntax:
+    content: public void AppendSubQuery(SparqlParameterizedString query)
+    parameters:
+    - id: query
+      type: VDS.RDF.Query.SparqlParameterizedString
+      description: Query.
+    content.vb: Public Sub AppendSubQuery(query As SparqlParameterizedString)
+  overload: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.Append(VDS.RDF.Query.SparqlParameterizedString)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.Append(VDS.RDF.Query.SparqlParameterizedString)
+  id: Append(VDS.RDF.Query.SparqlParameterizedString)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: Append(SparqlParameterizedString)
+  nameWithType: SparqlParameterizedString.Append(SparqlParameterizedString)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Append(VDS.RDF.Query.SparqlParameterizedString)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Append
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 172
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAppends the given text to the existing command text, any prefixes in the sub-query are moved to the parent query but any parameter/variable assignments will be lost.\n"
+  example: []
+  syntax:
+    content: public void Append(SparqlParameterizedString text)
+    parameters:
+    - id: text
+      type: VDS.RDF.Query.SparqlParameterizedString
+      description: Text.
+    content.vb: Public Sub Append(text As SparqlParameterizedString)
+  overload: VDS.RDF.Query.SparqlParameterizedString.Append*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.Append(System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.Append(System.String)
+  id: Append(System.String)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: Append(String)
+  nameWithType: SparqlParameterizedString.Append(String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Append(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Append
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 185
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nAppends the given text to the existing command text, any prefixes in the command are moved to the parent query.\n"
+  example: []
+  syntax:
+    content: public void Append(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: Text.
+    content.vb: Public Sub Append(text As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.Append*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.QueryProcessor
+  commentId: P:VDS.RDF.Query.SparqlParameterizedString.QueryProcessor
+  id: QueryProcessor
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: QueryProcessor
+  nameWithType: SparqlParameterizedString.QueryProcessor
+  fullName: VDS.RDF.Query.SparqlParameterizedString.QueryProcessor
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 195
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Query processor which is used when you call the <xref href=\"VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: public ISparqlQueryProcessor QueryProcessor { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.ISparqlQueryProcessor
+    content.vb: Public Property QueryProcessor As ISparqlQueryProcessor
+  overload: VDS.RDF.Query.SparqlParameterizedString.QueryProcessor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor
+  commentId: P:VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor
+  id: UpdateProcessor
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: UpdateProcessor
+  nameWithType: SparqlParameterizedString.UpdateProcessor
+  fullName: VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateProcessor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 200
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets/Sets the Query processor which is used when you call the <xref href=\"VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  example: []
+  syntax:
+    content: public ISparqlUpdateProcessor UpdateProcessor { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Update.ISparqlUpdateProcessor
+    content.vb: Public Property UpdateProcessor As ISparqlUpdateProcessor
+  overload: VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.Variables
+  commentId: P:VDS.RDF.Query.SparqlParameterizedString.Variables
+  id: Variables
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: SparqlParameterizedString.Variables
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 205
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets an enumeration of the Variables for which Values have been set.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<KeyValuePair<string, INode>> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of KeyValuePair(Of String, INode))
+  overload: VDS.RDF.Query.SparqlParameterizedString.Variables*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlParameterizedString.Parameters
+  commentId: P:VDS.RDF.Query.SparqlParameterizedString.Parameters
+  id: Parameters
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: SparqlParameterizedString.Parameters
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Parameters
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Parameters
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 210
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets an enumeration of the Parameters for which Values have been set.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<KeyValuePair<string, INode>> Parameters { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+    content.vb: Public ReadOnly Property Parameters As IEnumerable(Of KeyValuePair(Of String, INode))
+  overload: VDS.RDF.Query.SparqlParameterizedString.Parameters*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlParameterizedString.Clear
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.Clear
+  id: Clear
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: SparqlParameterizedString.Clear()
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Clear()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Clear
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 217
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nClears all set Parameters and Variables.\n"
+  example: []
+  syntax:
+    content: public virtual void Clear()
+    content.vb: Public Overridable Sub Clear
+  overload: VDS.RDF.Query.SparqlParameterizedString.Clear*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Query.SparqlParameterizedString.ClearParameters
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ClearParameters
+  id: ClearParameters
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: ClearParameters()
+  nameWithType: SparqlParameterizedString.ClearParameters()
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ClearParameters()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ClearParameters
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 226
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nClears all set Parameters.\n"
+  example: []
+  syntax:
+    content: public virtual void ClearParameters()
+    content.vb: Public Overridable Sub ClearParameters
+  overload: VDS.RDF.Query.SparqlParameterizedString.ClearParameters*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Query.SparqlParameterizedString.ClearVariables
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ClearVariables
+  id: ClearVariables
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: ClearVariables()
+  nameWithType: SparqlParameterizedString.ClearVariables()
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ClearVariables()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ClearVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 234
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nClears all set Variables.\n"
+  example: []
+  syntax:
+    content: public virtual void ClearVariables()
+    content.vb: Public Overridable Sub ClearVariables
+  overload: VDS.RDF.Query.SparqlParameterizedString.ClearVariables*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetParameter(System.String,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetParameter(System.String,VDS.RDF.INode)
+  id: SetParameter(System.String,VDS.RDF.INode)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetParameter(String, INode)
+  nameWithType: SparqlParameterizedString.SetParameter(String, INode)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetParameter(System.String, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetParameter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 247
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Value of a Parameter. \n"
+  remarks: "\nCan be used in derived classes to set the value of parameters if the derived class defines additional methods for adding values for parameters.\n"
+  example: []
+  syntax:
+    content: public void SetParameter(string name, INode value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter Name.
+    - id: value
+      type: VDS.RDF.INode
+      description: Value.
+    content.vb: Public Sub SetParameter(name As String, value As INode)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetParameter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.UnsetParameter(System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.UnsetParameter(System.String)
+  id: UnsetParameter(System.String)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: UnsetParameter(String)
+  nameWithType: SparqlParameterizedString.UnsetParameter(String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.UnsetParameter(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UnsetParameter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 271
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRemoves a previously set value for a Parameter.\n"
+  remarks: "\nThere is generally no reason to do this since you can just set a parameters value to change it.\n"
+  example: []
+  syntax:
+    content: public void UnsetParameter(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter Name.
+    content.vb: Public Sub UnsetParameter(name As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.UnsetParameter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.UnsetVariable(System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.UnsetVariable(System.String)
+  id: UnsetVariable(System.String)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: UnsetVariable(String)
+  nameWithType: SparqlParameterizedString.UnsetVariable(String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.UnsetVariable(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UnsetVariable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 285
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRemoves a previously set value for a Variable.\n"
+  remarks: "\nMay be useful if you have a skeleton query/update into which you sometimes substitute values for variables but don&apos;t always do so.\n"
+  example: []
+  syntax:
+    content: public void UnsetVariable(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Variable Name.
+    content.vb: Public Sub UnsetVariable(name As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.UnsetVariable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetVariable(System.String,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetVariable(System.String,VDS.RDF.INode)
+  id: SetVariable(System.String,VDS.RDF.INode)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetVariable(String, INode)
+  nameWithType: SparqlParameterizedString.SetVariable(String, INode)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetVariable(System.String, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetVariable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 297
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Value of a Variable.\n"
+  example: []
+  syntax:
+    content: public virtual void SetVariable(string name, INode value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Variable Name.
+    - id: value
+      type: VDS.RDF.INode
+      description: Value.
+    content.vb: Public Overridable Sub SetVariable(name As String, value As INode)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetVariable*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int32)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int32)
+  id: SetLiteral(System.String,System.Int32)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, Int32)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, Int32)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 317
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to an Integer Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, int value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Int32
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Integer)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int64)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int64)
+  id: SetLiteral(System.String,System.Int64)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, Int64)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, Int64)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.Int64)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 327
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to an Integer Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, long value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Int64
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Long)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int16)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Int16)
+  id: SetLiteral(System.String,System.Int16)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, Int16)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, Int16)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.Int16)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 337
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to an Integer Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, short value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Int16
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Short)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Decimal)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Decimal)
+  id: SetLiteral(System.String,System.Decimal)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, Decimal)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, Decimal)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.Decimal)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 347
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Decimal Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, decimal value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Decimal
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Decimal)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Single)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Single)
+  id: SetLiteral(System.String,System.Single)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, Single)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, Single)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.Single)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 357
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Float Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, float value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Single
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Single)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Double)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Double)
+  id: SetLiteral(System.String,System.Double)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, Double)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, Double)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.Double)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 367
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Double Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, double value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Double
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Double)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTime)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTime)
+  id: SetLiteral(System.String,System.DateTime)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, DateTime)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, DateTime)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 377
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Date Time Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, DateTime value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.DateTime
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Date)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTime,System.Boolean)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTime,System.Boolean)
+  id: SetLiteral(System.String,System.DateTime,System.Boolean)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, DateTime, Boolean)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, DateTime, Boolean)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.DateTime, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 388
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Date Time Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, DateTime value, bool precise)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.DateTime
+      description: Integer.
+    - id: precise
+      type: System.Boolean
+      description: Whether to preserve precisely i.e. include fractional seconds.
+    content.vb: Public Sub SetLiteral(name As String, value As Date, precise As Boolean)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTimeOffset)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTimeOffset)
+  id: SetLiteral(System.String,System.DateTimeOffset)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, DateTimeOffset)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, DateTimeOffset)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.DateTimeOffset)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 398
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Date Time Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, DateTimeOffset value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.DateTimeOffset
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As DateTimeOffset)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTimeOffset,System.Boolean)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.DateTimeOffset,System.Boolean)
+  id: SetLiteral(System.String,System.DateTimeOffset,System.Boolean)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, DateTimeOffset, Boolean)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, DateTimeOffset, Boolean)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.DateTimeOffset, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 409
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Date Time Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, DateTimeOffset value, bool precise)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.DateTimeOffset
+      description: Integer.
+    - id: precise
+      type: System.Boolean
+      description: Whether to preserve precisely i.e. include fractional seconds.
+    content.vb: Public Sub SetLiteral(name As String, value As DateTimeOffset, precise As Boolean)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.TimeSpan)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.TimeSpan)
+  id: SetLiteral(System.String,System.TimeSpan)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, TimeSpan)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, TimeSpan)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 419
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Duration Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, TimeSpan value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.TimeSpan
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As TimeSpan)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Boolean)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.Boolean)
+  id: SetLiteral(System.String,System.Boolean)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, Boolean)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, Boolean)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 429
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Boolean Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, bool value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Boolean
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As Boolean)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String)
+  id: SetLiteral(System.String,System.String)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, String)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 439
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to an Untyped Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, string value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.String
+      description: Integer.
+    content.vb: Public Sub SetLiteral(name As String, value As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String,System.Uri)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String,System.Uri)
+  id: SetLiteral(System.String,System.String,System.Uri)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, String, Uri)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, String, Uri)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 451
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Typed Literal.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, string value, Uri datatype)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.String
+      description: Integer.
+    - id: datatype
+      type: System.Uri
+      description: Datatype URI.
+    content.vb: Public Sub SetLiteral(name As String, value As String, datatype As Uri)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String,System.String,System.String)
+  id: SetLiteral(System.String,System.String,System.String)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetLiteral(String, String, String)
+  nameWithType: SparqlParameterizedString.SetLiteral(String, String, String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral(System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetLiteral
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 463
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a Literal with a Language Specifier.\n"
+  example: []
+  syntax:
+    content: public void SetLiteral(string name, string value, string lang)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.String
+      description: Integer.
+    - id: lang
+      type: System.String
+      description: Language Specifier.
+    content.vb: Public Sub SetLiteral(name As String, value As String, lang As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetUri(System.String,System.Uri)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetUri(System.String,System.Uri)
+  id: SetUri(System.String,System.Uri)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetUri(String, Uri)
+  nameWithType: SparqlParameterizedString.SetUri(String, Uri)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetUri(System.String, System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 475
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to a URI.\n"
+  example: []
+  syntax:
+    content: public void SetUri(string name, Uri value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.Uri
+      description: URI.
+    content.vb: Public Sub SetUri(name As String, value As Uri)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetUri*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String,System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String,System.String)
+  id: SetBlankNode(System.String,System.String)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetBlankNode(String, String)
+  nameWithType: SparqlParameterizedString.SetBlankNode(String, String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetBlankNode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 489
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to be a Blank Node with the given ID.\n"
+  remarks: "\nOnly guarantees that the Blank Node ID will not clash with any other Blank Nodes added by other calls to this method or it&apos;s overload which generates anonymous Blank Nodes.  If the base query text into which you are inserting parameters contains Blank Nodes then the IDs generated here may clash with those IDs.\n"
+  example: []
+  syntax:
+    content: public void SetBlankNode(string name, string value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    - id: value
+      type: System.String
+      description: Node ID.
+    content.vb: Public Sub SetBlankNode(name As String, value As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String)
+  id: SetBlankNode(System.String)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: SetBlankNode(String)
+  nameWithType: SparqlParameterizedString.SetBlankNode(String)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SetBlankNode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 503
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nSets the Parameter to be a new anonymous Blank Node.\n"
+  remarks: "\nOnly guarantees that the Blank Node ID will not clash with any other Blank Nodes added by other calls to this method or it&apos;s overload which takes an explicit Node ID.  If the base query text into which you are inserting parameters contains Blank Nodes then the IDs generated here may clash with those IDs.\n"
+  example: []
+  syntax:
+    content: public void SetBlankNode(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Parameter.
+    content.vb: Public Sub SetBlankNode(name As String)
+  overload: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery
+  id: ExecuteQuery
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery()
+  nameWithType: SparqlParameterizedString.ExecuteQuery()
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 516
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nExecutes this command as a query.\n"
+  example: []
+  syntax:
+    content: public SparqlResultSet ExecuteQuery()
+    return:
+      type: VDS.RDF.Query.SparqlResultSet
+      description: ''
+    content.vb: Public Function ExecuteQuery As SparqlResultSet
+  overload: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler)
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler)
+  id: ExecuteQuery(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler)
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(IRdfHandler, ISparqlResultsHandler)
+  nameWithType: SparqlParameterizedString.ExecuteQuery(IRdfHandler, ISparqlResultsHandler)
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 528
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nExecutes this command as a query.\n"
+  example: []
+  syntax:
+    content: public void ExecuteQuery(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    content.vb: Public Sub ExecuteQuery(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler)
+  overload: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate
+  id: ExecuteUpdate
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: ExecuteUpdate()
+  nameWithType: SparqlParameterizedString.ExecuteUpdate()
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteUpdate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 540
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nExecutes this command as an update.\n"
+  example: []
+  syntax:
+    content: public void ExecuteUpdate()
+    content.vb: Public Sub ExecuteUpdate
+  overload: VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlParameterizedString.ToString
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ToString
+  id: ToString
+  parent: VDS.RDF.Query.SparqlParameterizedString
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SparqlParameterizedString.ToString()
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SparqlParameterizedString.cs
+    startLine: 717
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nReturns the actual Query/Update String with parameter and variable values inserted.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.SparqlParameterizedString.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.SparqlParameterizedString.ToString
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ToString
+  isExternal: true
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlParameterizedString.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SparqlParameterizedString>()
+  nameWithType: Extensions.AsEnumerable<SparqlParameterizedString>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlParameterizedString>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SparqlParameterizedString)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlParameterizedString)()
+  name.vb: AsEnumerable(Of SparqlParameterizedString)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SparqlParameterizedString>
+    nameWithType: Extensions.AsEnumerable<SparqlParameterizedString>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlParameterizedString>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SparqlParameterizedString)
+    nameWithType: Extensions.AsEnumerable(Of SparqlParameterizedString)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlParameterizedString)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.SparqlParameterizedString.#ctor*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.#ctor
+  name: SparqlParameterizedString
+  nameWithType: SparqlParameterizedString.SparqlParameterizedString
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SparqlParameterizedString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.SparqlParameterizedString.Namespaces*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.Namespaces
+  name: Namespaces
+  nameWithType: SparqlParameterizedString.Namespaces
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Namespaces
+- uid: VDS.RDF.INamespaceMapper
+  commentId: T:VDS.RDF.INamespaceMapper
+  parent: VDS.RDF
+  name: INamespaceMapper
+  nameWithType: INamespaceMapper
+  fullName: VDS.RDF.INamespaceMapper
+- uid: VDS.RDF.Query.SparqlParameterizedString.BaseUri*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.BaseUri
+  name: BaseUri
+  nameWithType: SparqlParameterizedString.BaseUri
+  fullName: VDS.RDF.Query.SparqlParameterizedString.BaseUri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Query.SparqlParameterizedString.CommandText*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.CommandText
+  name: CommandText
+  nameWithType: SparqlParameterizedString.CommandText
+  fullName: VDS.RDF.Query.SparqlParameterizedString.CommandText
+- uid: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery
+  name: AppendSubQuery
+  nameWithType: SparqlParameterizedString.AppendSubQuery
+  fullName: VDS.RDF.Query.SparqlParameterizedString.AppendSubQuery
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query.SparqlParameterizedString
+  commentId: T:VDS.RDF.Query.SparqlParameterizedString
+  parent: VDS.RDF.Query
+  name: SparqlParameterizedString
+  nameWithType: SparqlParameterizedString
+  fullName: VDS.RDF.Query.SparqlParameterizedString
+- uid: VDS.RDF.Query.SparqlParameterizedString.Append*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.Append
+  name: Append
+  nameWithType: SparqlParameterizedString.Append
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Append
+- uid: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlParameterizedString.QueryProcessor*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.QueryProcessor
+  name: QueryProcessor
+  nameWithType: SparqlParameterizedString.QueryProcessor
+  fullName: VDS.RDF.Query.SparqlParameterizedString.QueryProcessor
+- uid: VDS.RDF.Query.ISparqlQueryProcessor
+  commentId: T:VDS.RDF.Query.ISparqlQueryProcessor
+  parent: VDS.RDF.Query
+  name: ISparqlQueryProcessor
+  nameWithType: ISparqlQueryProcessor
+  fullName: VDS.RDF.Query.ISparqlQueryProcessor
+- uid: VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate
+  commentId: M:VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor
+  name: UpdateProcessor
+  nameWithType: SparqlParameterizedString.UpdateProcessor
+  fullName: VDS.RDF.Query.SparqlParameterizedString.UpdateProcessor
+- uid: VDS.RDF.Update.ISparqlUpdateProcessor
+  commentId: T:VDS.RDF.Update.ISparqlUpdateProcessor
+  parent: VDS.RDF.Update
+  name: ISparqlUpdateProcessor
+  nameWithType: ISparqlUpdateProcessor
+  fullName: VDS.RDF.Update.ISparqlUpdateProcessor
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: VDS.RDF.Query.SparqlParameterizedString.Variables*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.Variables
+  name: Variables
+  nameWithType: SparqlParameterizedString.Variables
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Variables
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyValuePair<String, INode>>
+  nameWithType: IEnumerable<KeyValuePair<String, INode>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, INode))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode))
+  name.vb: IEnumerable(Of KeyValuePair(Of String, INode))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.SparqlParameterizedString.Parameters*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.Parameters
+  name: Parameters
+  nameWithType: SparqlParameterizedString.Parameters
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Parameters
+- uid: VDS.RDF.Query.SparqlParameterizedString.Clear*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.Clear
+  name: Clear
+  nameWithType: SparqlParameterizedString.Clear
+  fullName: VDS.RDF.Query.SparqlParameterizedString.Clear
+- uid: VDS.RDF.Query.SparqlParameterizedString.ClearParameters*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.ClearParameters
+  name: ClearParameters
+  nameWithType: SparqlParameterizedString.ClearParameters
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ClearParameters
+- uid: VDS.RDF.Query.SparqlParameterizedString.ClearVariables*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.ClearVariables
+  name: ClearVariables
+  nameWithType: SparqlParameterizedString.ClearVariables
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ClearVariables
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetParameter*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.SetParameter
+  name: SetParameter
+  nameWithType: SparqlParameterizedString.SetParameter
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetParameter
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.SparqlParameterizedString.UnsetParameter*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.UnsetParameter
+  name: UnsetParameter
+  nameWithType: SparqlParameterizedString.UnsetParameter
+  fullName: VDS.RDF.Query.SparqlParameterizedString.UnsetParameter
+- uid: VDS.RDF.Query.SparqlParameterizedString.UnsetVariable*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.UnsetVariable
+  name: UnsetVariable
+  nameWithType: SparqlParameterizedString.UnsetVariable
+  fullName: VDS.RDF.Query.SparqlParameterizedString.UnsetVariable
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetVariable*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.SetVariable
+  name: SetVariable
+  nameWithType: SparqlParameterizedString.SetVariable
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetVariable
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetLiteral*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.SetLiteral
+  name: SetLiteral
+  nameWithType: SparqlParameterizedString.SetLiteral
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetLiteral
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  name: Int16
+  nameWithType: Int16
+  fullName: System.Int16
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.DateTimeOffset
+  commentId: T:System.DateTimeOffset
+  parent: System
+  isExternal: true
+  name: DateTimeOffset
+  nameWithType: DateTimeOffset
+  fullName: System.DateTimeOffset
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetUri*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.SetUri
+  name: SetUri
+  nameWithType: SparqlParameterizedString.SetUri
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetUri
+- uid: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.SetBlankNode
+  name: SetBlankNode
+  nameWithType: SparqlParameterizedString.SetBlankNode
+  fullName: VDS.RDF.Query.SparqlParameterizedString.SetBlankNode
+- uid: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery
+  name: ExecuteQuery
+  nameWithType: SparqlParameterizedString.ExecuteQuery
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ExecuteQuery
+- uid: VDS.RDF.Query.SparqlResultSet
+  commentId: T:VDS.RDF.Query.SparqlResultSet
+  parent: VDS.RDF.Query
+  name: SparqlResultSet
+  nameWithType: SparqlResultSet
+  fullName: VDS.RDF.Query.SparqlResultSet
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler
+- uid: VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate
+  name: ExecuteUpdate
+  nameWithType: SparqlParameterizedString.ExecuteUpdate
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ExecuteUpdate
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlParameterizedString.ToString*
+  commentId: Overload:VDS.RDF.Query.SparqlParameterizedString.ToString
+  name: ToString
+  nameWithType: SparqlParameterizedString.ToString
+  fullName: VDS.RDF.Query.SparqlParameterizedString.ToString

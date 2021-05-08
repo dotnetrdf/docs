@@ -1,0 +1,1306 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  commentId: T:VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  id: VariableRestrictionFilter
+  parent: VDS.RDF.Query.Algebra
+  children:
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.String,VDS.RDF.Query.Filters.ISparqlFilter)
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables
+  langs:
+  - csharp
+  - vb
+  name: VariableRestrictionFilter
+  nameWithType: VariableRestrictionFilter
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: VariableRestrictionFilter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nAbstract Base Class for specialised Filters which restrict the value of a variable to some values.\n"
+  example: []
+  syntax:
+    content: 'public abstract class VariableRestrictionFilter : IFilter, IUnaryOperator, ISparqlAlgebra'
+    content.vb: >-
+      Public MustInherit Class VariableRestrictionFilter
+          Implements IFilter, IUnaryOperator, ISparqlAlgebra
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Query.Algebra.SingleValueRestrictionFilter
+  implements:
+  - VDS.RDF.Query.Algebra.IFilter
+  - VDS.RDF.Query.Algebra.IUnaryOperator
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Algebra.VariableRestrictionFilter.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.String,VDS.RDF.Query.Filters.ISparqlFilter)
+  commentId: M:VDS.RDF.Query.Algebra.VariableRestrictionFilter.#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.String,VDS.RDF.Query.Filters.ISparqlFilter)
+  id: '#ctor(VDS.RDF.Query.Algebra.ISparqlAlgebra,System.String,VDS.RDF.Query.Filters.ISparqlFilter)'
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: VariableRestrictionFilter(ISparqlAlgebra, String, ISparqlFilter)
+  nameWithType: VariableRestrictionFilter.VariableRestrictionFilter(ISparqlAlgebra, String, ISparqlFilter)
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.VariableRestrictionFilter(VDS.RDF.Query.Algebra.ISparqlAlgebra, System.String, VDS.RDF.Query.Filters.ISparqlFilter)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCreates a new Variable Restriction Filter.\n"
+  example: []
+  syntax:
+    content: public VariableRestrictionFilter(ISparqlAlgebra pattern, string var, ISparqlFilter filter)
+    parameters:
+    - id: pattern
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: Algebra the filter applies over.
+    - id: var
+      type: System.String
+      description: Variable to restrict on.
+    - id: filter
+      type: VDS.RDF.Query.Filters.ISparqlFilter
+      description: Filter to use.
+    content.vb: Public Sub New(pattern As ISparqlAlgebra, var As String, filter As ISparqlFilter)
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  id: Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: VariableRestrictionFilter.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Evaluate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nEvalutes the algebra for the given evaluation context.\n"
+  example: []
+  syntax:
+    content: public abstract BaseMultiset Evaluate(SparqlEvaluationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.SparqlEvaluationContext
+      description: Evaluation Context.
+    return:
+      type: VDS.RDF.Query.Algebra.BaseMultiset
+      description: ''
+    content.vb: Public MustOverride Function Evaluate(context As SparqlEvaluationContext) As BaseMultiset
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable
+  commentId: P:VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable
+  id: RestrictionVariable
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: RestrictionVariable
+  nameWithType: VariableRestrictionFilter.RestrictionVariable
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RestrictionVariable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 72
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Variable that this filter restricts the value of.\n"
+  example: []
+  syntax:
+    content: public string RestrictionVariable { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RestrictionVariable As String
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables
+  commentId: P:VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables
+  id: Variables
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: VariableRestrictionFilter.Variables
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 83
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Variables used in the Algebra.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables
+  id: FloatingVariables
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: FloatingVariables
+  nameWithType: VariableRestrictionFilter.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FloatingVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 94
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of floating variables in the algebra i.e. variables that are not guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FloatingVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FloatingVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables
+  id: FixedVariables
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: FixedVariables
+  nameWithType: VariableRestrictionFilter.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FixedVariables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 99
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the enumeration of fixed variables in the algebra i.e. variables that are guaranteed to have a bound value.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> FixedVariables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property FixedVariables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter
+  commentId: P:VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter
+  id: SparqlFilter
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: SparqlFilter
+  nameWithType: VariableRestrictionFilter.SparqlFilter
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SparqlFilter
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 104
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Filter to be used.\n"
+  example: []
+  syntax:
+    content: public ISparqlFilter SparqlFilter { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Filters.ISparqlFilter
+    content.vb: Public ReadOnly Property SparqlFilter As ISparqlFilter
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter*
+  implements:
+  - VDS.RDF.Query.Algebra.IFilter.SparqlFilter
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra
+  commentId: P:VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra
+  id: InnerAlgebra
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: InnerAlgebra
+  nameWithType: VariableRestrictionFilter.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: InnerAlgebra
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 115
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Inner Algebra.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra InnerAlgebra { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    content.vb: Public ReadOnly Property InnerAlgebra As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra*
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString
+  commentId: M:VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: VariableRestrictionFilter.ToString()
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 127
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the String representation of the FILTER.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery
+  id: ToQuery
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: ToQuery()
+  nameWithType: VariableRestrictionFilter.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 138
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nConverts the Algebra back to a SPARQL Query.\n"
+  example: []
+  syntax:
+    content: public SparqlQuery ToQuery()
+    return:
+      type: VDS.RDF.Query.SparqlQuery
+      description: ''
+    content.vb: Public Function ToQuery As SparqlQuery
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern
+  id: ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: ToGraphPattern()
+  nameWithType: VariableRestrictionFilter.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToGraphPattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 150
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nConverts the Algebra back to a Graph Pattern.\n"
+  example: []
+  syntax:
+    content: public GraphPattern ToGraphPattern()
+    return:
+      type: VDS.RDF.Query.Patterns.GraphPattern
+      description: ''
+    content.vb: Public Function ToGraphPattern As GraphPattern
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern*
+  implements:
+  - VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  commentId: M:VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  id: Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  parent: VDS.RDF.Query.Algebra.VariableRestrictionFilter
+  langs:
+  - csharp
+  - vb
+  name: Transform(IAlgebraOptimiser)
+  nameWithType: VariableRestrictionFilter.Transform(IAlgebraOptimiser)
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Transform
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/RestrictionFilters.cs
+    startLine: 164
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nTransforms the Inner Algebra using the given Optimiser.\n"
+  example: []
+  syntax:
+    content: public abstract ISparqlAlgebra Transform(IAlgebraOptimiser optimiser)
+    parameters:
+    - id: optimiser
+      type: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+      description: Optimiser.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public MustOverride Function Transform(optimiser As IAlgebraOptimiser) As ISparqlAlgebra
+  overload: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform*
+  implements:
+  - VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+references:
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Algebra.IFilter
+  commentId: T:VDS.RDF.Query.Algebra.IFilter
+  parent: VDS.RDF.Query.Algebra
+  name: IFilter
+  nameWithType: IFilter
+  fullName: VDS.RDF.Query.Algebra.IFilter
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator
+  commentId: T:VDS.RDF.Query.Algebra.IUnaryOperator
+  parent: VDS.RDF.Query.Algebra
+  name: IUnaryOperator
+  nameWithType: IUnaryOperator
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<VariableRestrictionFilter>()
+  nameWithType: Extensions.AsEnumerable<VariableRestrictionFilter>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.VariableRestrictionFilter>()
+  nameWithType.vb: Extensions.AsEnumerable(Of VariableRestrictionFilter)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.VariableRestrictionFilter)()
+  name.vb: AsEnumerable(Of VariableRestrictionFilter)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<VariableRestrictionFilter>
+    nameWithType: Extensions.AsEnumerable<VariableRestrictionFilter>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.VariableRestrictionFilter>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of VariableRestrictionFilter)
+    nameWithType: Extensions.AsEnumerable(Of VariableRestrictionFilter)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.VariableRestrictionFilter)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.#ctor*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.#ctor
+  name: VariableRestrictionFilter
+  nameWithType: VariableRestrictionFilter.VariableRestrictionFilter
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.VariableRestrictionFilter
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.Filters.ISparqlFilter
+  commentId: T:VDS.RDF.Query.Filters.ISparqlFilter
+  parent: VDS.RDF.Query.Filters
+  name: ISparqlFilter
+  nameWithType: ISparqlFilter
+  fullName: VDS.RDF.Query.Filters.ISparqlFilter
+- uid: VDS.RDF.Query.Filters
+  commentId: N:VDS.RDF.Query.Filters
+  name: VDS.RDF.Query.Filters
+  nameWithType: VDS.RDF.Query.Filters
+  fullName: VDS.RDF.Query.Filters
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate
+  name: Evaluate
+  nameWithType: VariableRestrictionFilter.Evaluate
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Evaluate
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Evaluate(SparqlEvaluationContext)
+  nameWithType: ISparqlAlgebra.Evaluate(SparqlEvaluationContext)
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate(VDS.RDF.Query.SparqlEvaluationContext)
+    name: Evaluate
+    nameWithType: ISparqlAlgebra.Evaluate
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Evaluate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlEvaluationContext
+    name: SparqlEvaluationContext
+    nameWithType: SparqlEvaluationContext
+    fullName: VDS.RDF.Query.SparqlEvaluationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlEvaluationContext
+  commentId: T:VDS.RDF.Query.SparqlEvaluationContext
+  parent: VDS.RDF.Query
+  name: SparqlEvaluationContext
+  nameWithType: SparqlEvaluationContext
+  fullName: VDS.RDF.Query.SparqlEvaluationContext
+- uid: VDS.RDF.Query.Algebra.BaseMultiset
+  commentId: T:VDS.RDF.Query.Algebra.BaseMultiset
+  parent: VDS.RDF.Query.Algebra
+  name: BaseMultiset
+  nameWithType: BaseMultiset
+  fullName: VDS.RDF.Query.Algebra.BaseMultiset
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable
+  name: RestrictionVariable
+  nameWithType: VariableRestrictionFilter.RestrictionVariable
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.RestrictionVariable
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables
+  name: Variables
+  nameWithType: VariableRestrictionFilter.Variables
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Variables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: Variables
+  nameWithType: ISparqlAlgebra.Variables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.Variables
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables
+  name: FloatingVariables
+  nameWithType: VariableRestrictionFilter.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FloatingVariables
+  nameWithType: ISparqlAlgebra.FloatingVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FloatingVariables
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables
+  name: FixedVariables
+  nameWithType: VariableRestrictionFilter.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.FixedVariables
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  commentId: P:VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: FixedVariables
+  nameWithType: ISparqlAlgebra.FixedVariables
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.FixedVariables
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter
+  name: SparqlFilter
+  nameWithType: VariableRestrictionFilter.SparqlFilter
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.SparqlFilter
+- uid: VDS.RDF.Query.Algebra.IFilter.SparqlFilter
+  commentId: P:VDS.RDF.Query.Algebra.IFilter.SparqlFilter
+  parent: VDS.RDF.Query.Algebra.IFilter
+  name: SparqlFilter
+  nameWithType: IFilter.SparqlFilter
+  fullName: VDS.RDF.Query.Algebra.IFilter.SparqlFilter
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra
+  name: InnerAlgebra
+  nameWithType: VariableRestrictionFilter.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.InnerAlgebra
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  commentId: P:VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  name: InnerAlgebra
+  nameWithType: IUnaryOperator.InnerAlgebra
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.InnerAlgebra
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString
+  name: ToString
+  nameWithType: VariableRestrictionFilter.ToString
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToString
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery
+  name: ToQuery
+  nameWithType: VariableRestrictionFilter.ToQuery
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToQuery
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToQuery()
+  nameWithType: ISparqlAlgebra.ToQuery()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+    name: ToQuery
+    nameWithType: ISparqlAlgebra.ToQuery
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlQuery
+  commentId: T:VDS.RDF.Query.SparqlQuery
+  parent: VDS.RDF.Query
+  name: SparqlQuery
+  nameWithType: SparqlQuery
+  fullName: VDS.RDF.Query.SparqlQuery
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern
+  name: ToGraphPattern
+  nameWithType: VariableRestrictionFilter.ToGraphPattern
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.ToGraphPattern
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  commentId: M:VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  parent: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  name: ToGraphPattern()
+  nameWithType: ISparqlAlgebra.ToGraphPattern()
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+    name: ToGraphPattern
+    nameWithType: ISparqlAlgebra.ToGraphPattern
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra.ToGraphPattern
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Patterns.GraphPattern
+  commentId: T:VDS.RDF.Query.Patterns.GraphPattern
+  parent: VDS.RDF.Query.Patterns
+  name: GraphPattern
+  nameWithType: GraphPattern
+  fullName: VDS.RDF.Query.Patterns.GraphPattern
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform*
+  commentId: Overload:VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform
+  name: Transform
+  nameWithType: VariableRestrictionFilter.Transform
+  fullName: VDS.RDF.Query.Algebra.VariableRestrictionFilter.Transform
+- uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  commentId: M:VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  parent: VDS.RDF.Query.Algebra.IUnaryOperator
+  name: Transform(IAlgebraOptimiser)
+  nameWithType: IUnaryOperator.Transform(IAlgebraOptimiser)
+  fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+    name: Transform
+    nameWithType: IUnaryOperator.Transform
+    fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.IUnaryOperator.Transform(VDS.RDF.Query.Optimisation.IAlgebraOptimiser)
+    name: Transform
+    nameWithType: IUnaryOperator.Transform
+    fullName: VDS.RDF.Query.Algebra.IUnaryOperator.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+    name: IAlgebraOptimiser
+    nameWithType: IAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation

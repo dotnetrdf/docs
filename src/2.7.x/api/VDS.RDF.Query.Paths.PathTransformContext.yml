@@ -1,0 +1,995 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Paths.PathTransformContext
+  commentId: T:VDS.RDF.Query.Paths.PathTransformContext
+  id: PathTransformContext
+  parent: VDS.RDF.Query.Paths
+  children:
+  - VDS.RDF.Query.Paths.PathTransformContext.#ctor(VDS.RDF.Query.Paths.PathTransformContext)
+  - VDS.RDF.Query.Paths.PathTransformContext.#ctor(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Patterns.PatternItem)
+  - VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern(VDS.RDF.Query.Patterns.ITriplePattern)
+  - VDS.RDF.Query.Paths.PathTransformContext.End
+  - VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable
+  - VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Paths.ISparqlPath,VDS.RDF.Query.Patterns.PatternItem)
+  - VDS.RDF.Query.Paths.PathTransformContext.NextID
+  - VDS.RDF.Query.Paths.PathTransformContext.Object
+  - VDS.RDF.Query.Paths.PathTransformContext.ResetObject
+  - VDS.RDF.Query.Paths.PathTransformContext.Subject
+  - VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra
+  - VDS.RDF.Query.Paths.PathTransformContext.Top
+  langs:
+  - csharp
+  - vb
+  name: PathTransformContext
+  nameWithType: PathTransformContext
+  fullName: VDS.RDF.Query.Paths.PathTransformContext
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PathTransformContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nTransform Context class that is used in the Path to Algebra Transformation process.\n"
+  example: []
+  syntax:
+    content: public class PathTransformContext
+    content.vb: Public Class PathTransformContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Paths.PathTransformContext.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Paths.PathTransformContext.#ctor(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Patterns.PatternItem)
+  commentId: M:VDS.RDF.Query.Paths.PathTransformContext.#ctor(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Patterns.PatternItem)
+  id: '#ctor(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Patterns.PatternItem)'
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: PathTransformContext(PatternItem, PatternItem)
+  nameWithType: PathTransformContext.PathTransformContext(PatternItem, PatternItem)
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.PathTransformContext(VDS.RDF.Query.Patterns.PatternItem, VDS.RDF.Query.Patterns.PatternItem)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 47
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nCreates a new Path Transform Context.\n"
+  example: []
+  syntax:
+    content: public PathTransformContext(PatternItem start, PatternItem end)
+    parameters:
+    - id: start
+      type: VDS.RDF.Query.Patterns.PatternItem
+      description: Subject that is the start of the Path.
+    - id: end
+      type: VDS.RDF.Query.Patterns.PatternItem
+      description: Object that is the end of the Path.
+    content.vb: Public Sub New(start As PatternItem, end As PatternItem)
+  overload: VDS.RDF.Query.Paths.PathTransformContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.#ctor(VDS.RDF.Query.Paths.PathTransformContext)
+  commentId: M:VDS.RDF.Query.Paths.PathTransformContext.#ctor(VDS.RDF.Query.Paths.PathTransformContext)
+  id: '#ctor(VDS.RDF.Query.Paths.PathTransformContext)'
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: PathTransformContext(PathTransformContext)
+  nameWithType: PathTransformContext.PathTransformContext(PathTransformContext)
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.PathTransformContext(VDS.RDF.Query.Paths.PathTransformContext)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 59
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nCreates a new Path Transform Context from an existing context.\n"
+  example: []
+  syntax:
+    content: public PathTransformContext(PathTransformContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.Paths.PathTransformContext
+      description: Context.
+    content.vb: Public Sub New(context As PathTransformContext)
+  overload: VDS.RDF.Query.Paths.PathTransformContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra
+  commentId: M:VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra
+  id: ToAlgebra
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: ToAlgebra()
+  nameWithType: PathTransformContext.ToAlgebra()
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToAlgebra
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 72
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nReturns the BGP that the Path Transform produces.\n"
+  example: []
+  syntax:
+    content: public ISparqlAlgebra ToAlgebra()
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public Function ToAlgebra As ISparqlAlgebra
+  overload: VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable
+  commentId: M:VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable
+  id: GetNextTemporaryVariable
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: GetNextTemporaryVariable()
+  nameWithType: PathTransformContext.GetNextTemporaryVariable()
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetNextTemporaryVariable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 88
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets the next available temporary variable.\n"
+  example: []
+  syntax:
+    content: public BlankNodePattern GetNextTemporaryVariable()
+    return:
+      type: VDS.RDF.Query.Patterns.BlankNodePattern
+      description: ''
+    content.vb: Public Function GetNextTemporaryVariable As BlankNodePattern
+  overload: VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern(VDS.RDF.Query.Patterns.ITriplePattern)
+  commentId: M:VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern(VDS.RDF.Query.Patterns.ITriplePattern)
+  id: AddTriplePattern(VDS.RDF.Query.Patterns.ITriplePattern)
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: AddTriplePattern(ITriplePattern)
+  nameWithType: PathTransformContext.AddTriplePattern(ITriplePattern)
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern(VDS.RDF.Query.Patterns.ITriplePattern)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddTriplePattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 98
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nAdds a Triple Pattern to the Path Transform.\n"
+  example: []
+  syntax:
+    content: public void AddTriplePattern(ITriplePattern p)
+    parameters:
+    - id: p
+      type: VDS.RDF.Query.Patterns.ITriplePattern
+      description: Triple Pattern.
+    content.vb: Public Sub AddTriplePattern(p As ITriplePattern)
+  overload: VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.NextID
+  commentId: P:VDS.RDF.Query.Paths.PathTransformContext.NextID
+  id: NextID
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: NextID
+  nameWithType: PathTransformContext.NextID
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.NextID
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NextID
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 106
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets the Next ID to be used.\n"
+  example: []
+  syntax:
+    content: public int NextID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NextID As Integer
+  overload: VDS.RDF.Query.Paths.PathTransformContext.NextID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.Subject
+  commentId: P:VDS.RDF.Query.Paths.PathTransformContext.Subject
+  id: Subject
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: Subject
+  nameWithType: PathTransformContext.Subject
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.Subject
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Subject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 121
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets/Sets the Subject of the Triple Pattern at this point in the Path Transformation.\n"
+  example: []
+  syntax:
+    content: public PatternItem Subject { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Patterns.PatternItem
+    content.vb: Public Property Subject As PatternItem
+  overload: VDS.RDF.Query.Paths.PathTransformContext.Subject*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.Object
+  commentId: P:VDS.RDF.Query.Paths.PathTransformContext.Object
+  id: Object
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: Object
+  nameWithType: PathTransformContext.Object
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.Object
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Object
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 136
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets/Sets the Object of the Triple Pattern at this point in the Path Transformation.\n"
+  example: []
+  syntax:
+    content: public PatternItem Object { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Patterns.PatternItem
+    content.vb: Public Property Object As PatternItem
+  overload: VDS.RDF.Query.Paths.PathTransformContext.Object*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.End
+  commentId: P:VDS.RDF.Query.Paths.PathTransformContext.End
+  id: End
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: PathTransformContext.End
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.End
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: End
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 151
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets/Sets the Object at the end of the Pattern.\n"
+  example: []
+  syntax:
+    content: public PatternItem End { get; set; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Patterns.PatternItem
+    content.vb: Public Property End As PatternItem
+  overload: VDS.RDF.Query.Paths.PathTransformContext.End*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.ResetObject
+  commentId: M:VDS.RDF.Query.Paths.PathTransformContext.ResetObject
+  id: ResetObject
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: ResetObject()
+  nameWithType: PathTransformContext.ResetObject()
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.ResetObject()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ResetObject
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 166
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nResets the current Object to be the end Object of the Path.\n"
+  example: []
+  syntax:
+    content: public void ResetObject()
+    content.vb: Public Sub ResetObject
+  overload: VDS.RDF.Query.Paths.PathTransformContext.ResetObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.Top
+  commentId: P:VDS.RDF.Query.Paths.PathTransformContext.Top
+  id: Top
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: PathTransformContext.Top
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.Top
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Top
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 174
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets/Sets whether this is the Top Level Pattern.\n"
+  example: []
+  syntax:
+    content: public bool Top { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Top As Boolean
+  overload: VDS.RDF.Query.Paths.PathTransformContext.Top*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Paths.ISparqlPath,VDS.RDF.Query.Patterns.PatternItem)
+  commentId: M:VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Paths.ISparqlPath,VDS.RDF.Query.Patterns.PatternItem)
+  id: GetTriplePattern(VDS.RDF.Query.Patterns.PatternItem,VDS.RDF.Query.Paths.ISparqlPath,VDS.RDF.Query.Patterns.PatternItem)
+  parent: VDS.RDF.Query.Paths.PathTransformContext
+  langs:
+  - csharp
+  - vb
+  name: GetTriplePattern(PatternItem, ISparqlPath, PatternItem)
+  nameWithType: PathTransformContext.GetTriplePattern(PatternItem, ISparqlPath, PatternItem)
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern(VDS.RDF.Query.Patterns.PatternItem, VDS.RDF.Query.Paths.ISparqlPath, VDS.RDF.Query.Patterns.PatternItem)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetTriplePattern
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/PathTransformContext.cs
+    startLine: 193
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nCreates a Triple Pattern.\n"
+  example: []
+  syntax:
+    content: public ITriplePattern GetTriplePattern(PatternItem subj, ISparqlPath path, PatternItem obj)
+    parameters:
+    - id: subj
+      type: VDS.RDF.Query.Patterns.PatternItem
+      description: Subject.
+    - id: path
+      type: VDS.RDF.Query.Paths.ISparqlPath
+      description: Property Path.
+    - id: obj
+      type: VDS.RDF.Query.Patterns.PatternItem
+      description: Object.
+    return:
+      type: VDS.RDF.Query.Patterns.ITriplePattern
+      description: ''
+    content.vb: Public Function GetTriplePattern(subj As PatternItem, path As ISparqlPath, obj As PatternItem) As ITriplePattern
+  overload: VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Query.Paths
+  commentId: N:VDS.RDF.Query.Paths
+  name: VDS.RDF.Query.Paths
+  nameWithType: VDS.RDF.Query.Paths
+  fullName: VDS.RDF.Query.Paths
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Paths.PathTransformContext.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<PathTransformContext>()
+  nameWithType: Extensions.AsEnumerable<PathTransformContext>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Paths.PathTransformContext>()
+  nameWithType.vb: Extensions.AsEnumerable(Of PathTransformContext)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Paths.PathTransformContext)()
+  name.vb: AsEnumerable(Of PathTransformContext)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<PathTransformContext>
+    nameWithType: Extensions.AsEnumerable<PathTransformContext>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Paths.PathTransformContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of PathTransformContext)
+    nameWithType: Extensions.AsEnumerable(Of PathTransformContext)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Paths.PathTransformContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Paths.PathTransformContext.#ctor*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.#ctor
+  name: PathTransformContext
+  nameWithType: PathTransformContext.PathTransformContext
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.PathTransformContext
+- uid: VDS.RDF.Query.Patterns.PatternItem
+  commentId: T:VDS.RDF.Query.Patterns.PatternItem
+  parent: VDS.RDF.Query.Patterns
+  name: PatternItem
+  nameWithType: PatternItem
+  fullName: VDS.RDF.Query.Patterns.PatternItem
+- uid: VDS.RDF.Query.Patterns
+  commentId: N:VDS.RDF.Query.Patterns
+  name: VDS.RDF.Query.Patterns
+  nameWithType: VDS.RDF.Query.Patterns
+  fullName: VDS.RDF.Query.Patterns
+- uid: VDS.RDF.Query.Paths.PathTransformContext
+  commentId: T:VDS.RDF.Query.Paths.PathTransformContext
+  parent: VDS.RDF.Query.Paths
+  name: PathTransformContext
+  nameWithType: PathTransformContext
+  fullName: VDS.RDF.Query.Paths.PathTransformContext
+- uid: VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra
+  name: ToAlgebra
+  nameWithType: PathTransformContext.ToAlgebra
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.ToAlgebra
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable
+  name: GetNextTemporaryVariable
+  nameWithType: PathTransformContext.GetNextTemporaryVariable
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.GetNextTemporaryVariable
+- uid: VDS.RDF.Query.Patterns.BlankNodePattern
+  commentId: T:VDS.RDF.Query.Patterns.BlankNodePattern
+  parent: VDS.RDF.Query.Patterns
+  name: BlankNodePattern
+  nameWithType: BlankNodePattern
+  fullName: VDS.RDF.Query.Patterns.BlankNodePattern
+- uid: VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern
+  name: AddTriplePattern
+  nameWithType: PathTransformContext.AddTriplePattern
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.AddTriplePattern
+- uid: VDS.RDF.Query.Patterns.ITriplePattern
+  commentId: T:VDS.RDF.Query.Patterns.ITriplePattern
+  parent: VDS.RDF.Query.Patterns
+  name: ITriplePattern
+  nameWithType: ITriplePattern
+  fullName: VDS.RDF.Query.Patterns.ITriplePattern
+- uid: VDS.RDF.Query.Paths.PathTransformContext.NextID*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.NextID
+  name: NextID
+  nameWithType: PathTransformContext.NextID
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.NextID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.Paths.PathTransformContext.Subject*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.Subject
+  name: Subject
+  nameWithType: PathTransformContext.Subject
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.Subject
+- uid: VDS.RDF.Query.Paths.PathTransformContext.Object*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.Object
+  name: Object
+  nameWithType: PathTransformContext.Object
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.Object
+- uid: VDS.RDF.Query.Paths.PathTransformContext.End*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.End
+  name: End
+  nameWithType: PathTransformContext.End
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.End
+- uid: VDS.RDF.Query.Paths.PathTransformContext.ResetObject*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.ResetObject
+  name: ResetObject
+  nameWithType: PathTransformContext.ResetObject
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.ResetObject
+- uid: VDS.RDF.Query.Paths.PathTransformContext.Top*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.Top
+  name: Top
+  nameWithType: PathTransformContext.Top
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.Top
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern*
+  commentId: Overload:VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern
+  name: GetTriplePattern
+  nameWithType: PathTransformContext.GetTriplePattern
+  fullName: VDS.RDF.Query.Paths.PathTransformContext.GetTriplePattern
+- uid: VDS.RDF.Query.Paths.ISparqlPath
+  commentId: T:VDS.RDF.Query.Paths.ISparqlPath
+  parent: VDS.RDF.Query.Paths
+  name: ISparqlPath
+  nameWithType: ISparqlPath
+  fullName: VDS.RDF.Query.Paths.ISparqlPath

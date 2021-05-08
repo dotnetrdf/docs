@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Web.WildcardGraphHandler
+  commentId: T:VDS.RDF.Web.WildcardGraphHandler
+  id: WildcardGraphHandler
+  parent: VDS.RDF.Web
+  children:
+  - VDS.RDF.Web.WildcardGraphHandler.LoadConfig(HttpContext)
+  - VDS.RDF.Web.WildcardGraphHandler.UpdateConfig(HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: WildcardGraphHandler
+  nameWithType: WildcardGraphHandler
+  fullName: VDS.RDF.Web.WildcardGraphHandler
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/WildcardGraphHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WildcardGraphHandler
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/WildcardGraphHandler.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHTTP Handler for serving Graphs in ASP.Net applications\n"
+  remarks: "\n<p>\nUsed to serve a Graph at a base URL with any URL under that being handled by this Handler.  The Graph is served to the user in one of their acceptable MIME types if possible, if they don&apos;t accept any MIME type we can serve then they get a 406 Not Acceptable\n</p>\n<p>\nThis Handler is configured using the new Configuration API introduced in the 0.3.0 release.  This requires just one setting to be defined in the &lt;appSettings> section of your Web.config file which points to a Configuration Graph like so:\n<pre><code>&lt;add key=&quot;dotNetRDFConfig&quot; value=&quot;~/App_Data/config.ttl&quot; /></code></pre>\nThe Configuration Graph must then contain Triples like the following to specify a Graph to be served:\n<pre><code>&lt;dotnetrdf:/folder/graph/*> a dnr:HttpHandler ;\n                                  dnr:type &quot;VDS.RDF.Web.WildcardGraphHandler&quot; ;\n                                  dnr:usingGraph _:graph .\n\n_:graph a dnr:Graph ;\n        dnr:type &quot;VDS.RDF.Graph&quot; ;\n        dnr:fromFile &quot;yourGraph.rdf&quot; .</code></pre>\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class WildcardGraphHandler : GraphHandler'
+    content.vb: >-
+      Public Class WildcardGraphHandler
+          Inherits GraphHandler
+  inheritance:
+  - System.Object
+  - VDS.RDF.Web.BaseGraphHandler
+  - VDS.RDF.Web.GraphHandler
+  inheritedMembers:
+  - VDS.RDF.Web.BaseGraphHandler._config
+  - VDS.RDF.Web.BaseGraphHandler.IsReusable
+  - VDS.RDF.Web.BaseGraphHandler.ProcessRequest(HttpContext)
+  - VDS.RDF.Web.BaseGraphHandler.SelectWriter(VDS.RDF.MimeTypeDefinition)
+  - VDS.RDF.Web.BaseGraphHandler.ProcessGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Web.BaseGraphHandler.ComputeETag(VDS.RDF.IGraph)
+  extensionMethods:
+  - VDS.RDF.Web.WildcardGraphHandler.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Web.WildcardGraphHandler.LoadConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.WildcardGraphHandler.LoadConfig(HttpContext)
+  id: LoadConfig(HttpContext)
+  parent: VDS.RDF.Web.WildcardGraphHandler
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig(HttpContext)
+  nameWithType: WildcardGraphHandler.LoadConfig(HttpContext)
+  fullName: VDS.RDF.Web.WildcardGraphHandler.LoadConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/WildcardGraphHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/WildcardGraphHandler.cs
+    startLine: 66
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nLoads the Handler Configuration\n"
+  example: []
+  syntax:
+    content: protected override BaseGraphHandlerConfiguration LoadConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    return:
+      type: VDS.RDF.Web.Configuration.Resource.BaseGraphHandlerConfiguration
+      description: ''
+    content.vb: Protected Overrides Function LoadConfig(context As HttpContext) As BaseGraphHandlerConfiguration
+  overridden: VDS.RDF.Web.GraphHandler.LoadConfig(HttpContext)
+  overload: VDS.RDF.Web.WildcardGraphHandler.LoadConfig*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Web.WildcardGraphHandler.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.WildcardGraphHandler.UpdateConfig(HttpContext)
+  id: UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.WildcardGraphHandler
+  langs:
+  - csharp
+  - vb
+  name: UpdateConfig(HttpContext)
+  nameWithType: WildcardGraphHandler.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.WildcardGraphHandler.UpdateConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/WildcardGraphHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/WildcardGraphHandler.cs
+    startLine: 109
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nUpdates the Handlers configuration\n"
+  example: []
+  syntax:
+    content: protected override void UpdateConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    content.vb: Protected Overrides Sub UpdateConfig(context As HttpContext)
+  overridden: VDS.RDF.Web.GraphHandler.UpdateConfig(HttpContext)
+  overload: VDS.RDF.Web.WildcardGraphHandler.UpdateConfig*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Web
+  commentId: N:VDS.RDF.Web
+  name: VDS.RDF.Web
+  nameWithType: VDS.RDF.Web
+  fullName: VDS.RDF.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Web.BaseGraphHandler
+  commentId: T:VDS.RDF.Web.BaseGraphHandler
+  parent: VDS.RDF.Web
+  name: BaseGraphHandler
+  nameWithType: BaseGraphHandler
+  fullName: VDS.RDF.Web.BaseGraphHandler
+- uid: VDS.RDF.Web.GraphHandler
+  commentId: T:VDS.RDF.Web.GraphHandler
+  parent: VDS.RDF.Web
+  name: GraphHandler
+  nameWithType: GraphHandler
+  fullName: VDS.RDF.Web.GraphHandler
+- uid: VDS.RDF.Web.BaseGraphHandler._config
+  commentId: F:VDS.RDF.Web.BaseGraphHandler._config
+  parent: VDS.RDF.Web.BaseGraphHandler
+  name: _config
+  nameWithType: BaseGraphHandler._config
+  fullName: VDS.RDF.Web.BaseGraphHandler._config
+- uid: VDS.RDF.Web.BaseGraphHandler.IsReusable
+  commentId: P:VDS.RDF.Web.BaseGraphHandler.IsReusable
+  parent: VDS.RDF.Web.BaseGraphHandler
+  name: IsReusable
+  nameWithType: BaseGraphHandler.IsReusable
+  fullName: VDS.RDF.Web.BaseGraphHandler.IsReusable
+- uid: VDS.RDF.Web.BaseGraphHandler.ProcessRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseGraphHandler.ProcessRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseGraphHandler
+  isExternal: true
+  name: ProcessRequest(HttpContext)
+  nameWithType: BaseGraphHandler.ProcessRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseGraphHandler.ProcessRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseGraphHandler.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseGraphHandler.ProcessRequest
+    fullName: VDS.RDF.Web.BaseGraphHandler.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseGraphHandler.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseGraphHandler.ProcessRequest
+    fullName: VDS.RDF.Web.BaseGraphHandler.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseGraphHandler.SelectWriter(VDS.RDF.MimeTypeDefinition)
+  commentId: M:VDS.RDF.Web.BaseGraphHandler.SelectWriter(VDS.RDF.MimeTypeDefinition)
+  parent: VDS.RDF.Web.BaseGraphHandler
+  name: SelectWriter(MimeTypeDefinition)
+  nameWithType: BaseGraphHandler.SelectWriter(MimeTypeDefinition)
+  fullName: VDS.RDF.Web.BaseGraphHandler.SelectWriter(VDS.RDF.MimeTypeDefinition)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseGraphHandler.SelectWriter(VDS.RDF.MimeTypeDefinition)
+    name: SelectWriter
+    nameWithType: BaseGraphHandler.SelectWriter
+    fullName: VDS.RDF.Web.BaseGraphHandler.SelectWriter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.MimeTypeDefinition
+    name: MimeTypeDefinition
+    nameWithType: MimeTypeDefinition
+    fullName: VDS.RDF.MimeTypeDefinition
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseGraphHandler.SelectWriter(VDS.RDF.MimeTypeDefinition)
+    name: SelectWriter
+    nameWithType: BaseGraphHandler.SelectWriter
+    fullName: VDS.RDF.Web.BaseGraphHandler.SelectWriter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.MimeTypeDefinition
+    name: MimeTypeDefinition
+    nameWithType: MimeTypeDefinition
+    fullName: VDS.RDF.MimeTypeDefinition
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseGraphHandler.ProcessGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Web.BaseGraphHandler.ProcessGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Web.BaseGraphHandler
+  name: ProcessGraph(IGraph)
+  nameWithType: BaseGraphHandler.ProcessGraph(IGraph)
+  fullName: VDS.RDF.Web.BaseGraphHandler.ProcessGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseGraphHandler.ProcessGraph(VDS.RDF.IGraph)
+    name: ProcessGraph
+    nameWithType: BaseGraphHandler.ProcessGraph
+    fullName: VDS.RDF.Web.BaseGraphHandler.ProcessGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseGraphHandler.ProcessGraph(VDS.RDF.IGraph)
+    name: ProcessGraph
+    nameWithType: BaseGraphHandler.ProcessGraph
+    fullName: VDS.RDF.Web.BaseGraphHandler.ProcessGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseGraphHandler.ComputeETag(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Web.BaseGraphHandler.ComputeETag(VDS.RDF.IGraph)
+  parent: VDS.RDF.Web.BaseGraphHandler
+  name: ComputeETag(IGraph)
+  nameWithType: BaseGraphHandler.ComputeETag(IGraph)
+  fullName: VDS.RDF.Web.BaseGraphHandler.ComputeETag(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseGraphHandler.ComputeETag(VDS.RDF.IGraph)
+    name: ComputeETag
+    nameWithType: BaseGraphHandler.ComputeETag
+    fullName: VDS.RDF.Web.BaseGraphHandler.ComputeETag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseGraphHandler.ComputeETag(VDS.RDF.IGraph)
+    name: ComputeETag
+    nameWithType: BaseGraphHandler.ComputeETag
+    fullName: VDS.RDF.Web.BaseGraphHandler.ComputeETag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.WildcardGraphHandler.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<WildcardGraphHandler>()
+  nameWithType: Extensions.AsEnumerable<WildcardGraphHandler>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.WildcardGraphHandler>()
+  nameWithType.vb: Extensions.AsEnumerable(Of WildcardGraphHandler)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.WildcardGraphHandler)()
+  name.vb: AsEnumerable(Of WildcardGraphHandler)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<WildcardGraphHandler>
+    nameWithType: Extensions.AsEnumerable<WildcardGraphHandler>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.WildcardGraphHandler>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of WildcardGraphHandler)
+    nameWithType: Extensions.AsEnumerable(Of WildcardGraphHandler)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.WildcardGraphHandler)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Web.GraphHandler.LoadConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.GraphHandler.LoadConfig(HttpContext)
+  parent: VDS.RDF.Web.GraphHandler
+  isExternal: true
+  name: LoadConfig(HttpContext)
+  nameWithType: GraphHandler.LoadConfig(HttpContext)
+  fullName: VDS.RDF.Web.GraphHandler.LoadConfig(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.GraphHandler.LoadConfig(HttpContext)
+    name: LoadConfig
+    nameWithType: GraphHandler.LoadConfig
+    fullName: VDS.RDF.Web.GraphHandler.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.GraphHandler.LoadConfig(HttpContext)
+    name: LoadConfig
+    nameWithType: GraphHandler.LoadConfig
+    fullName: VDS.RDF.Web.GraphHandler.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.WildcardGraphHandler.LoadConfig*
+  commentId: Overload:VDS.RDF.Web.WildcardGraphHandler.LoadConfig
+  name: LoadConfig
+  nameWithType: WildcardGraphHandler.LoadConfig
+  fullName: VDS.RDF.Web.WildcardGraphHandler.LoadConfig
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: VDS.RDF.Web.Configuration.Resource.BaseGraphHandlerConfiguration
+  commentId: T:VDS.RDF.Web.Configuration.Resource.BaseGraphHandlerConfiguration
+  parent: VDS.RDF.Web.Configuration.Resource
+  name: BaseGraphHandlerConfiguration
+  nameWithType: BaseGraphHandlerConfiguration
+  fullName: VDS.RDF.Web.Configuration.Resource.BaseGraphHandlerConfiguration
+- uid: VDS.RDF.Web.Configuration.Resource
+  commentId: N:VDS.RDF.Web.Configuration.Resource
+  name: VDS.RDF.Web.Configuration.Resource
+  nameWithType: VDS.RDF.Web.Configuration.Resource
+  fullName: VDS.RDF.Web.Configuration.Resource
+- uid: VDS.RDF.Web.GraphHandler.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.GraphHandler.UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.GraphHandler
+  isExternal: true
+  name: UpdateConfig(HttpContext)
+  nameWithType: GraphHandler.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.GraphHandler.UpdateConfig(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.GraphHandler.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: GraphHandler.UpdateConfig
+    fullName: VDS.RDF.Web.GraphHandler.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.GraphHandler.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: GraphHandler.UpdateConfig
+    fullName: VDS.RDF.Web.GraphHandler.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.WildcardGraphHandler.UpdateConfig*
+  commentId: Overload:VDS.RDF.Web.WildcardGraphHandler.UpdateConfig
+  name: UpdateConfig
+  nameWithType: WildcardGraphHandler.UpdateConfig
+  fullName: VDS.RDF.Web.WildcardGraphHandler.UpdateConfig

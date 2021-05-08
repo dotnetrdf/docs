@@ -1,0 +1,887 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.GraphMatcher
+  commentId: T:VDS.RDF.GraphMatcher
+  id: GraphMatcher
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.GraphMatcher.Equals(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  - VDS.RDF.GraphMatcher.GenerateMappings(System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode},System.Collections.Generic.Dictionary{VDS.RDF.INode,System.Collections.Generic.List{VDS.RDF.INode}})
+  - VDS.RDF.GraphMatcher.Mapping
+  langs:
+  - csharp
+  - vb
+  name: GraphMatcher
+  nameWithType: GraphMatcher
+  fullName: VDS.RDF.GraphMatcher
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/GraphMatcher.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GraphMatcher
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/GraphMatcher.cs
+    startLine: 90
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nImplements a Graph Isomorphism Algorithm.\n"
+  remarks: "\n<p>\nThe algorithm used to determine Graph equality is based in part on a Iterative Vertex Classification Algorithm described in a Technical Report from HP by Jeremy J Carroll - <a href=\"http://www.hpl.hp.com/techreports/2001/HPL-2001-293.html\">Matching RDF Graphs</a> but has been expanded upon significantly to use a variety of techniques.\n</p>\n<p>\nGraph Equality is determined according to the following algorithm, we refer to the first graph as the <em>Source Graph</em> and the second graph as the <em>Target Graph</em>:.\n</p>\n<ol>\n<li>If both graphs are null they are considered equal</li>\n<li>If only one of the given graph is null then they are not equal</li>\n<li>If the given graphs are reference equal then they are equal</li>\n<li>If the given graphs have a different number of Triples they are not equal</li>\n<li>Declare a list of triples which are the triples of the second graph called <em>TargetTriples</em></li>\n<li>Declare two dictionaries of Nodes to Integers which are called <em>SourceClassification</em> and <em>TargetClassification</em></li>\n<li>For Each Triple in the Source Graph\n<ol>\n<li>If it is a ground triple and cannot be found and removed from <em>TargetTriples</em> then graphs are not equal since the triple does not exist in both graphs</li>\n<li>If it contains blank nodes track the number of usages of this blank node in <em>SourceClassification</em></li>\n</ol>\n</li> \n<li>If there are any triples remaining in <em>TargetTriples</em> which are ground triples then graphs are not equal since the Source Graph does not contain them</li>\n<li>If all the triples from both graphs were ground triples (i.e. there were no blank nodes) then the graphs are equal</li>\n<li>Iterate over the remaining triples in <em>TargetTriples</em> and populate the <em>TargetClassification</em></li>\n<li>If the count of the two classifications is different the graphs are not equal since there are differing numbers of blank nodes in the Graph</li>\n<li>Now build two additional dictionaries of Integers to Integers which are called <em>SourceDegreeClassification</em> and <em>TargetDegreeClassification</em>.  Iterate over <em>SourceClassification</em> and <em>TargetClassification</em> such that the corresponding degree classifications contain a mapping of the number of blank nodes with a given degree</li>\n<li>If the count of the two degree classifications is different the graphs are not equal since there are not the same range of blank node degrees in both graphs</li>\n<li>For All classifications in <em>SourceDegreeClassification</em> there must be a matching classification in <em>TargetDegreeClassification</em> else the graphs are not equal</li>\n<li>Then build a possible mapping using the following rules:\n<ol>\n<li>Any blank bode used only once (single-use) in the Source Graph should be mapped to an equivalent blank bode in the Target Graph.  If this is not possible then the graphs are not equal</li>\n<li>Any blank node with a unique degree in the Source Graph should be mapped to an equivalent blank node in the Target Graph.  If this is not possible then the graphs are not equal</li>\n<li>Any blank node used with unique constants (two other ground terms in a triple) in the Source Graph should be mapped to an equivalent blank bode in the Target Graph.  If this is not possible then the graphs are not equal.</li>\n<li>Build up lists of dependent pairs of blank Nodes for both graphs</li>\n<li>Use these lists to determine if there are any independent nodes not yet mapped in the Source Graph.  These should be mapped to equivalent blank nodes in the Target Graph, if this is not possible the graphs are not equal</li>\n<li><strong>Important:</strong> Keep a copy of the mapping up to this point as a <em>Base Mapping</em> for use as a fallback in later steps</li>\n<li>Use the dependency information and existing mappings to generate a possible mapping</li>\n<li>If a complete possible mapping (there is a mapping for each blank node from the Source Graph to the Target Graph) then test this mapping.  If it succeeds then the graphs are equal</li>\n</ol>\n</li>\n<li>If we don&apos;t yet have a mapping take a divide and conquer approach:\n<ol>\n<li>Take the not yet mapped blank nodes for each graph and sub-divide them into their isolated sub-graphs</li>\n<li>If there are at least 2 isolated sub-graphs proceed to divide and conquer</li>\n<li>For Each Isolated Sub-Graph from the Source Graph\n<ol>\n<li>Consider each possible isolated sub-graph of the same size from the target graph, if there are none then graphs are not equal.  If there is a single possible equal isolated sub-graph add the mappings for all involved blank nodes.</li>\n</ol>\n</li>\n<li>If we now have a complete possible mapping (there is a mapping for each blank node from the Source Graph to the Target Graph) then test the mapping.  Return success/failure depending on whether the mapping is valid.</li>\n<li><strong>Important:</strong> Keep a copy of the mapping up to this point as a <em>Base Mapping</em> for use as a base for the brute force step</li>\n</ol> \n</li>\n<li>If we still don&apos;t have a complete mapping we now fallback to the <em>Base Mapping</em> and use it as a basis for brute forcing the possible solution space and testing every possibility until either a mapping works or we find the graphs to be non-equal</li>\n</ol>\n"
+  example: []
+  syntax:
+    content: public class GraphMatcher
+    content.vb: Public Class GraphMatcher
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.GraphMatcher.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.GraphMatcher.Equals(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.GraphMatcher.Equals(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  id: Equals(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  parent: VDS.RDF.GraphMatcher
+  langs:
+  - csharp
+  - vb
+  name: Equals(IGraph, IGraph)
+  nameWithType: GraphMatcher.Equals(IGraph, IGraph)
+  fullName: VDS.RDF.GraphMatcher.Equals(VDS.RDF.IGraph, VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/GraphMatcher.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Equals
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/GraphMatcher.cs
+    startLine: 106
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCompares two Graphs for equality.\n"
+  example: []
+  syntax:
+    content: public bool Equals(IGraph g, IGraph h)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    - id: h
+      type: VDS.RDF.IGraph
+      description: Graph.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function Equals(g As IGraph, h As IGraph) As Boolean
+  overload: VDS.RDF.GraphMatcher.Equals*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.GraphMatcher.GenerateMappings(System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode},System.Collections.Generic.Dictionary{VDS.RDF.INode,System.Collections.Generic.List{VDS.RDF.INode}})
+  commentId: M:VDS.RDF.GraphMatcher.GenerateMappings(System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode},System.Collections.Generic.Dictionary{VDS.RDF.INode,System.Collections.Generic.List{VDS.RDF.INode}})
+  id: GenerateMappings(System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode},System.Collections.Generic.Dictionary{VDS.RDF.INode,System.Collections.Generic.List{VDS.RDF.INode}})
+  parent: VDS.RDF.GraphMatcher
+  langs:
+  - csharp
+  - vb
+  name: GenerateMappings(Dictionary<INode, INode>, Dictionary<INode, List<INode>>)
+  nameWithType: GraphMatcher.GenerateMappings(Dictionary<INode, INode>, Dictionary<INode, List<INode>>)
+  fullName: VDS.RDF.GraphMatcher.GenerateMappings(System.Collections.Generic.Dictionary<VDS.RDF.INode, VDS.RDF.INode>, System.Collections.Generic.Dictionary<VDS.RDF.INode, System.Collections.Generic.List<VDS.RDF.INode>>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/GraphMatcher.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GenerateMappings
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/GraphMatcher.cs
+    startLine: 997
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nHelper method for brute forcing the possible mappings.\n"
+  remarks: "\nThe base mapping at the time of the initial call should contain known good mappings.\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<Dictionary<INode, INode>> GenerateMappings(Dictionary<INode, INode> baseMapping, Dictionary<INode, List<INode>> possibleMappings)
+    parameters:
+    - id: baseMapping
+      type: System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode}
+      description: Base Mapping.
+    - id: possibleMappings
+      type: System.Collections.Generic.Dictionary{VDS.RDF.INode,System.Collections.Generic.List{VDS.RDF.INode}}
+      description: Possible Mappings.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode}}
+      description: ''
+    content.vb: Public Shared Function GenerateMappings(baseMapping As Dictionary(Of INode, INode), possibleMappings As Dictionary(Of INode, List(Of INode))) As IEnumerable(Of Dictionary(Of INode, INode))
+  overload: VDS.RDF.GraphMatcher.GenerateMappings*
+  nameWithType.vb: GraphMatcher.GenerateMappings(Dictionary(Of INode, INode), Dictionary(Of INode, List(Of INode)))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.GraphMatcher.GenerateMappings(System.Collections.Generic.Dictionary(Of VDS.RDF.INode, VDS.RDF.INode), System.Collections.Generic.Dictionary(Of VDS.RDF.INode, System.Collections.Generic.List(Of VDS.RDF.INode)))
+  name.vb: GenerateMappings(Dictionary(Of INode, INode), Dictionary(Of INode, List(Of INode)))
+- uid: VDS.RDF.GraphMatcher.Mapping
+  commentId: P:VDS.RDF.GraphMatcher.Mapping
+  id: Mapping
+  parent: VDS.RDF.GraphMatcher
+  langs:
+  - csharp
+  - vb
+  name: Mapping
+  nameWithType: GraphMatcher.Mapping
+  fullName: VDS.RDF.GraphMatcher.Mapping
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/GraphMatcher.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Mapping
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/GraphMatcher.cs
+    startLine: 1057
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nGets the Blank Node Mapping found between the Graphs (if one was found).\n"
+  example: []
+  syntax:
+    content: public Dictionary<INode, INode> Mapping { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode}
+    content.vb: Public ReadOnly Property Mapping As Dictionary(Of INode, INode)
+  overload: VDS.RDF.GraphMatcher.Mapping*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.GraphMatcher.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<GraphMatcher>()
+  nameWithType: Extensions.AsEnumerable<GraphMatcher>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.GraphMatcher>()
+  nameWithType.vb: Extensions.AsEnumerable(Of GraphMatcher)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.GraphMatcher)()
+  name.vb: AsEnumerable(Of GraphMatcher)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<GraphMatcher>
+    nameWithType: Extensions.AsEnumerable<GraphMatcher>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.GraphMatcher>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of GraphMatcher)
+    nameWithType: Extensions.AsEnumerable(Of GraphMatcher)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.GraphMatcher)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.GraphMatcher.Equals*
+  commentId: Overload:VDS.RDF.GraphMatcher.Equals
+  name: Equals
+  nameWithType: GraphMatcher.Equals
+  fullName: VDS.RDF.GraphMatcher.Equals
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.GraphMatcher.GenerateMappings*
+  commentId: Overload:VDS.RDF.GraphMatcher.GenerateMappings
+  name: GenerateMappings
+  nameWithType: GraphMatcher.GenerateMappings
+  fullName: VDS.RDF.GraphMatcher.GenerateMappings
+- uid: System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<INode, INode>
+  nameWithType: Dictionary<INode, INode>
+  fullName: System.Collections.Generic.Dictionary<VDS.RDF.INode, VDS.RDF.INode>
+  nameWithType.vb: Dictionary(Of INode, INode)
+  fullName.vb: System.Collections.Generic.Dictionary(Of VDS.RDF.INode, VDS.RDF.INode)
+  name.vb: Dictionary(Of INode, INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary{VDS.RDF.INode,System.Collections.Generic.List{VDS.RDF.INode}}
+  commentId: T:System.Collections.Generic.Dictionary{VDS.RDF.INode,System.Collections.Generic.List{VDS.RDF.INode}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<INode, List<INode>>
+  nameWithType: Dictionary<INode, List<INode>>
+  fullName: System.Collections.Generic.Dictionary<VDS.RDF.INode, System.Collections.Generic.List<VDS.RDF.INode>>
+  nameWithType.vb: Dictionary(Of INode, List(Of INode))
+  fullName.vb: System.Collections.Generic.Dictionary(Of VDS.RDF.INode, System.Collections.Generic.List(Of VDS.RDF.INode))
+  name.vb: Dictionary(Of INode, List(Of INode))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.Dictionary{VDS.RDF.INode,VDS.RDF.INode}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Dictionary<INode, INode>>
+  nameWithType: IEnumerable<Dictionary<INode, INode>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.Dictionary<VDS.RDF.INode, VDS.RDF.INode>>
+  nameWithType.vb: IEnumerable(Of Dictionary(Of INode, INode))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.Dictionary(Of VDS.RDF.INode, VDS.RDF.INode))
+  name.vb: IEnumerable(Of Dictionary(Of INode, INode))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.GraphMatcher.Mapping*
+  commentId: Overload:VDS.RDF.GraphMatcher.Mapping
+  name: Mapping
+  nameWithType: GraphMatcher.Mapping
+  fullName: VDS.RDF.GraphMatcher.Mapping

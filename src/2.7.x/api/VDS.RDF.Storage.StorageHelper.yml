@@ -1,0 +1,920 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.StorageHelper
+  commentId: T:VDS.RDF.Storage.StorageHelper
+  id: StorageHelper
+  parent: VDS.RDF.Storage
+  children:
+  - VDS.RDF.Storage.StorageHelper.HandleError(System.Exception,System.String)
+  - VDS.RDF.Storage.StorageHelper.HandleError``1(System.Exception,System.String,System.Func{System.String,System.Exception,``0})
+  - VDS.RDF.Storage.StorageHelper.HandleHttpError(System.Net.WebException,System.String)
+  - VDS.RDF.Storage.StorageHelper.HandleHttpError``1(System.Net.WebException,System.String,System.Func{System.String,System.Exception,``0})
+  - VDS.RDF.Storage.StorageHelper.HandleHttpQueryError(System.Net.WebException)
+  - VDS.RDF.Storage.StorageHelper.HandleQueryError(System.Exception)
+  - VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary
+  - VDS.RDF.Storage.StorageHelper.HttpMultipartContentTemplate
+  langs:
+  - csharp
+  - vb
+  name: StorageHelper
+  nameWithType: StorageHelper
+  fullName: VDS.RDF.Storage.StorageHelper
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: StorageHelper
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 36
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nStatic Helper for the Storage API.\n"
+  example: []
+  syntax:
+    content: public static class StorageHelper
+    content.vb: Public Module StorageHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: VDS.RDF.Storage.StorageHelper.HttpMultipartContentTemplate
+  commentId: F:VDS.RDF.Storage.StorageHelper.HttpMultipartContentTemplate
+  id: HttpMultipartContentTemplate
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HttpMultipartContentTemplate
+  nameWithType: StorageHelper.HttpMultipartContentTemplate
+  fullName: VDS.RDF.Storage.StorageHelper.HttpMultipartContentTemplate
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HttpMultipartContentTemplate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nTemplate for posting form data as part of a HTTP multipart request.\n"
+  example: []
+  syntax:
+    content: 'public const string HttpMultipartContentTemplate = "Content-Disposition: form-data; name=\"{0}\"\r\n\r\n{1}"'
+    return:
+      type: System.String
+    content.vb: 'Public Const HttpMultipartContentTemplate As String = "Content-Disposition: form-data; name=""{0}""" & vbCrLf & vbCrLf & "{1}"'
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary
+  commentId: P:VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary
+  id: HttpMultipartBoundary
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HttpMultipartBoundary
+  nameWithType: StorageHelper.HttpMultipartBoundary
+  fullName: VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HttpMultipartBoundary
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 46
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets a new unique boundary for HTTP mutlipart requests.\n"
+  example: []
+  syntax:
+    content: public static string HttpMultipartBoundary { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property HttpMultipartBoundary As String
+  overload: VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: VDS.RDF.Storage.StorageHelper.HandleHttpQueryError(System.Net.WebException)
+  commentId: M:VDS.RDF.Storage.StorageHelper.HandleHttpQueryError(System.Net.WebException)
+  id: HandleHttpQueryError(System.Net.WebException)
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleHttpQueryError(WebException)
+  nameWithType: StorageHelper.HandleHttpQueryError(WebException)
+  fullName: VDS.RDF.Storage.StorageHelper.HandleHttpQueryError(System.Net.WebException)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleHttpQueryError
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nHandles HTTP Query Errors obtaining additional information from the HTTP response if possible.\n"
+  example: []
+  syntax:
+    content: public static RdfQueryException HandleHttpQueryError(WebException webEx)
+    parameters:
+    - id: webEx
+      type: System.Net.WebException
+      description: HTTP Error.
+    return:
+      type: VDS.RDF.Query.RdfQueryException
+      description: ''
+    content.vb: Public Shared Function HandleHttpQueryError(webEx As WebException) As RdfQueryException
+  overload: VDS.RDF.Storage.StorageHelper.HandleHttpQueryError*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Storage.StorageHelper.HandleHttpError(System.Net.WebException,System.String)
+  commentId: M:VDS.RDF.Storage.StorageHelper.HandleHttpError(System.Net.WebException,System.String)
+  id: HandleHttpError(System.Net.WebException,System.String)
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleHttpError(WebException, String)
+  nameWithType: StorageHelper.HandleHttpError(WebException, String)
+  fullName: VDS.RDF.Storage.StorageHelper.HandleHttpError(System.Net.WebException, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleHttpError
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 75
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nHandles HTTP Errors obtaining additional information from the HTTP response if possible.\n"
+  example: []
+  syntax:
+    content: public static RdfStorageException HandleHttpError(WebException webEx, string action)
+    parameters:
+    - id: webEx
+      type: System.Net.WebException
+      description: HTTP Error.
+    - id: action
+      type: System.String
+      description: Action being performed.
+    return:
+      type: VDS.RDF.Storage.RdfStorageException
+      description: ''
+    content.vb: Public Shared Function HandleHttpError(webEx As WebException, action As String) As RdfStorageException
+  overload: VDS.RDF.Storage.StorageHelper.HandleHttpError*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Storage.StorageHelper.HandleHttpError``1(System.Net.WebException,System.String,System.Func{System.String,System.Exception,``0})
+  commentId: M:VDS.RDF.Storage.StorageHelper.HandleHttpError``1(System.Net.WebException,System.String,System.Func{System.String,System.Exception,``0})
+  id: HandleHttpError``1(System.Net.WebException,System.String,System.Func{System.String,System.Exception,``0})
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleHttpError<T>(WebException, String, Func<String, Exception, T>)
+  nameWithType: StorageHelper.HandleHttpError<T>(WebException, String, Func<String, Exception, T>)
+  fullName: VDS.RDF.Storage.StorageHelper.HandleHttpError<T>(System.Net.WebException, System.String, System.Func<System.String, System.Exception, T>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleHttpError
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 89
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nHandles HTTP Errors obtaining additional information from the HTTP response if possible.\n"
+  remarks: "\nAdapted from Ron Michael&apos;s Zettlemoyer&apos;s original patch for this in Stardog to use it across all operations as far as possible.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T HandleHttpError<T>(WebException webEx, string action, Func<string, Exception, T> errorProvider)
+          where T : Exception
+    parameters:
+    - id: webEx
+      type: System.Net.WebException
+      description: HTTP Error.
+    - id: action
+      type: System.String
+      description: Action being performed.
+    - id: errorProvider
+      type: System.Func{System.String,System.Exception,{T}}
+      description: Function that generates the actual errors.
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function HandleHttpError(Of T As Exception)(webEx As WebException, action As String, errorProvider As Func(Of String, Exception, T)) As T
+  overload: VDS.RDF.Storage.StorageHelper.HandleHttpError*
+  nameWithType.vb: StorageHelper.HandleHttpError(Of T)(WebException, String, Func(Of String, Exception, T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Storage.StorageHelper.HandleHttpError(Of T)(System.Net.WebException, System.String, System.Func(Of System.String, System.Exception, T))
+  name.vb: HandleHttpError(Of T)(WebException, String, Func(Of String, Exception, T))
+- uid: VDS.RDF.Storage.StorageHelper.HandleQueryError(System.Exception)
+  commentId: M:VDS.RDF.Storage.StorageHelper.HandleQueryError(System.Exception)
+  id: HandleQueryError(System.Exception)
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleQueryError(Exception)
+  nameWithType: StorageHelper.HandleQueryError(Exception)
+  fullName: VDS.RDF.Storage.StorageHelper.HandleQueryError(System.Exception)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleQueryError
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 137
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nHandles Query Errors.\n"
+  example: []
+  syntax:
+    content: public static RdfQueryException HandleQueryError(Exception ex)
+    parameters:
+    - id: ex
+      type: System.Exception
+      description: Error.
+    return:
+      type: VDS.RDF.Query.RdfQueryException
+      description: ''
+    content.vb: Public Shared Function HandleQueryError(ex As Exception) As RdfQueryException
+  overload: VDS.RDF.Storage.StorageHelper.HandleQueryError*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Storage.StorageHelper.HandleError(System.Exception,System.String)
+  commentId: M:VDS.RDF.Storage.StorageHelper.HandleError(System.Exception,System.String)
+  id: HandleError(System.Exception,System.String)
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleError(Exception, String)
+  nameWithType: StorageHelper.HandleError(Exception, String)
+  fullName: VDS.RDF.Storage.StorageHelper.HandleError(System.Exception, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleError
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 155
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nHandles Errors.\n"
+  example: []
+  syntax:
+    content: public static RdfStorageException HandleError(Exception ex, string action)
+    parameters:
+    - id: ex
+      type: System.Exception
+      description: Error.
+    - id: action
+      type: System.String
+      description: Action being performed.
+    return:
+      type: VDS.RDF.Storage.RdfStorageException
+      description: ''
+    content.vb: Public Shared Function HandleError(ex As Exception, action As String) As RdfStorageException
+  overload: VDS.RDF.Storage.StorageHelper.HandleError*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: VDS.RDF.Storage.StorageHelper.HandleError``1(System.Exception,System.String,System.Func{System.String,System.Exception,``0})
+  commentId: M:VDS.RDF.Storage.StorageHelper.HandleError``1(System.Exception,System.String,System.Func{System.String,System.Exception,``0})
+  id: HandleError``1(System.Exception,System.String,System.Func{System.String,System.Exception,``0})
+  parent: VDS.RDF.Storage.StorageHelper
+  langs:
+  - csharp
+  - vb
+  name: HandleError<T>(Exception, String, Func<String, Exception, T>)
+  nameWithType: StorageHelper.HandleError<T>(Exception, String, Func<String, Exception, T>)
+  fullName: VDS.RDF.Storage.StorageHelper.HandleError<T>(System.Exception, System.String, System.Func<System.String, System.Exception, T>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/StorageHelper.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleError
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/StorageHelper.cs
+    startLine: 175
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nHandles Errors.\n"
+  example: []
+  syntax:
+    content: >-
+      public static T HandleError<T>(Exception ex, string action, Func<string, Exception, T> errorProvider)
+          where T : Exception
+    parameters:
+    - id: ex
+      type: System.Exception
+      description: Error.
+    - id: action
+      type: System.String
+      description: Action being performed.
+    - id: errorProvider
+      type: System.Func{System.String,System.Exception,{T}}
+      description: Function that generates the actual errors.
+    typeParameters:
+    - id: T
+      description: Error Type.
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Shared Function HandleError(Of T As Exception)(ex As Exception, action As String, errorProvider As Func(Of String, Exception, T)) As T
+  overload: VDS.RDF.Storage.StorageHelper.HandleError*
+  nameWithType.vb: StorageHelper.HandleError(Of T)(Exception, String, Func(Of String, Exception, T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.Storage.StorageHelper.HandleError(Of T)(System.Exception, System.String, System.Func(Of System.String, System.Exception, T))
+  name.vb: HandleError(Of T)(Exception, String, Func(Of String, Exception, T))
+references:
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary*
+  commentId: Overload:VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary
+  name: HttpMultipartBoundary
+  nameWithType: StorageHelper.HttpMultipartBoundary
+  fullName: VDS.RDF.Storage.StorageHelper.HttpMultipartBoundary
+- uid: VDS.RDF.Storage.StorageHelper.HandleHttpQueryError*
+  commentId: Overload:VDS.RDF.Storage.StorageHelper.HandleHttpQueryError
+  name: HandleHttpQueryError
+  nameWithType: StorageHelper.HandleHttpQueryError
+  fullName: VDS.RDF.Storage.StorageHelper.HandleHttpQueryError
+- uid: System.Net.WebException
+  commentId: T:System.Net.WebException
+  parent: System.Net
+  isExternal: true
+  name: WebException
+  nameWithType: WebException
+  fullName: System.Net.WebException
+- uid: VDS.RDF.Query.RdfQueryException
+  commentId: T:VDS.RDF.Query.RdfQueryException
+  parent: VDS.RDF.Query
+  name: RdfQueryException
+  nameWithType: RdfQueryException
+  fullName: VDS.RDF.Query.RdfQueryException
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Storage.StorageHelper.HandleHttpError*
+  commentId: Overload:VDS.RDF.Storage.StorageHelper.HandleHttpError
+  name: HandleHttpError
+  nameWithType: StorageHelper.HandleHttpError
+  fullName: VDS.RDF.Storage.StorageHelper.HandleHttpError
+- uid: VDS.RDF.Storage.RdfStorageException
+  commentId: T:VDS.RDF.Storage.RdfStorageException
+  parent: VDS.RDF.Storage
+  name: RdfStorageException
+  nameWithType: RdfStorageException
+  fullName: VDS.RDF.Storage.RdfStorageException
+- uid: System.Func{System.String,System.Exception,{T}}
+  commentId: T:System.Func{System.String,System.Exception,``0}
+  parent: System
+  definition: System.Func`3
+  name: Func<String, Exception, T>
+  nameWithType: Func<String, Exception, T>
+  fullName: System.Func<System.String, System.Exception, T>
+  nameWithType.vb: Func(Of String, Exception, T)
+  fullName.vb: System.Func(Of System.String, System.Exception, T)
+  name.vb: Func(Of String, Exception, T)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: VDS.RDF.Storage.StorageHelper.HandleQueryError*
+  commentId: Overload:VDS.RDF.Storage.StorageHelper.HandleQueryError
+  name: HandleQueryError
+  nameWithType: StorageHelper.HandleQueryError
+  fullName: VDS.RDF.Storage.StorageHelper.HandleQueryError
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: VDS.RDF.Storage.StorageHelper.HandleError*
+  commentId: Overload:VDS.RDF.Storage.StorageHelper.HandleError
+  name: HandleError
+  nameWithType: StorageHelper.HandleError
+  fullName: VDS.RDF.Storage.StorageHelper.HandleError

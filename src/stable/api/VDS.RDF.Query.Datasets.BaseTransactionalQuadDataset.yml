@@ -1,0 +1,2714 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  commentId: T:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  id: BaseTransactionalQuadDataset
+  parent: VDS.RDF.Query.Datasets
+  children:
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor(System.Boolean)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal(System.Uri)
+  langs:
+  - csharp
+  - vb
+  name: BaseTransactionalQuadDataset
+  nameWithType: BaseTransactionalQuadDataset
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseTransactionalQuadDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 627
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nAbstract Base class for quad datasets that support transactions.\n"
+  remarks: "\n<p>\nThe Transaction implementation of dotNetRDF is based upon a MRSW concurrency model, since only one writer may be active changes are immediately pushed to the dataset and visible within the transaction and they are committed or rolled back when <xref href=\"VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard\" data-throw-if-not-resolved=\"false\"></xref> are called.\n</p>\n<p>\nSo in practical terms it is perfectly OK for the storage to be updated during a transaction because if the transaction fails the changes will be rolled back because all changes are stored in-memory until the end of the transaction.  This may not be an ideal transaction model for all scenarios so you may wish to implement your own version of transactions or code your implementations of the abstract methods accordingly to limit actual persistence to the end of a transaction.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseTransactionalQuadDataset : BaseQuadDataset, ISparqlDataset'
+    content.vb: >-
+      Public MustInherit Class BaseTransactionalQuadDataset
+          Inherits BaseQuadDataset
+          Implements ISparqlDataset
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Datasets.BaseQuadDataset
+  derivedClasses:
+  - VDS.RDF.Query.Datasets.InMemoryQuadDataset
+  implements:
+  - VDS.RDF.Query.Datasets.ISparqlDataset
+  inheritedMembers:
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.DefaultGraphUris
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.ActiveGraphUris
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.UsesUnionDefaultGraph
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad(System.Uri,VDS.RDF.Triple)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad(System.Uri,VDS.RDF.Triple)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.Graphs
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GraphUris
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.HasTriples
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple(VDS.RDF.Triple)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad(System.Uri,VDS.RDF.Triple)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.Triples
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads(System.Uri)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject(System.Uri,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate(System.Uri,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject(System.Uri,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: BaseTransactionalQuadDataset()
+  nameWithType: BaseTransactionalQuadDataset.BaseTransactionalQuadDataset()
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.BaseTransactionalQuadDataset()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 636
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nCreates a Transactional Quad Dataset.\n"
+  example: []
+  syntax:
+    content: public BaseTransactionalQuadDataset()
+    content.vb: Public Sub New
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor(System.Boolean)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: BaseTransactionalQuadDataset(Boolean)
+  nameWithType: BaseTransactionalQuadDataset.BaseTransactionalQuadDataset(Boolean)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.BaseTransactionalQuadDataset(System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 643
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nCreates a Transactional Quad Dataset.\n"
+  example: []
+  syntax:
+    content: public BaseTransactionalQuadDataset(bool unionDefaultGraph)
+    parameters:
+    - id: unionDefaultGraph
+      type: System.Boolean
+      description: Sets whether the default graph should be the union of all graphs.
+    content.vb: Public Sub New(unionDefaultGraph As Boolean)
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor(System.Uri)
+  id: '#ctor(System.Uri)'
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: BaseTransactionalQuadDataset(Uri)
+  nameWithType: BaseTransactionalQuadDataset.BaseTransactionalQuadDataset(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.BaseTransactionalQuadDataset(System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 650
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nCreates a Transactional Quad Dataset.\n"
+  example: []
+  syntax:
+    content: public BaseTransactionalQuadDataset(Uri defaultGraphUri)
+    parameters:
+    - id: defaultGraphUri
+      type: System.Uri
+      description: Default Graph URI.
+    content.vb: Public Sub New(defaultGraphUri As Uri)
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph(VDS.RDF.IGraph)
+  id: AddGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: AddGraph(IGraph)
+  nameWithType: BaseTransactionalQuadDataset.AddGraph(IGraph)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 657
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nAdds a Graph to the Dataset.\n"
+  example: []
+  syntax:
+    content: public override sealed bool AddGraph(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to add.
+    return:
+      type: System.Boolean
+    content.vb: Public NotOverridable Overrides Function AddGraph(g As IGraph) As Boolean
+  overridden: VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph(VDS.RDF.IGraph)
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal(VDS.RDF.IGraph)
+  id: AddGraphInternal(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: AddGraphInternal(IGraph)
+  nameWithType: BaseTransactionalQuadDataset.AddGraphInternal(IGraph)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddGraphInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 675
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nAdds a Graph to the Dataset.\n"
+  example: []
+  syntax:
+    content: protected abstract bool AddGraphInternal(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to add.
+    return:
+      type: System.Boolean
+    content.vb: Protected MustOverride Function AddGraphInternal(g As IGraph) As Boolean
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph(System.Uri)
+  id: RemoveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: RemoveGraph(Uri)
+  nameWithType: BaseTransactionalQuadDataset.RemoveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 681
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nRemoves a Graph from the Dataset.\n"
+  example: []
+  syntax:
+    content: public override sealed bool RemoveGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+    content.vb: Public NotOverridable Overrides Function RemoveGraph(graphUri As Uri) As Boolean
+  overridden: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph(System.Uri)
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal(System.Uri)
+  id: RemoveGraphInternal(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: RemoveGraphInternal(Uri)
+  nameWithType: BaseTransactionalQuadDataset.RemoveGraphInternal(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveGraphInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 723
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nRemoves a Graph from the dataset.\n"
+  example: []
+  syntax:
+    content: protected abstract bool RemoveGraphInternal(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: System.Boolean
+    content.vb: Protected MustOverride Function RemoveGraphInternal(graphUri As Uri) As Boolean
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item(System.Uri)
+  commentId: P:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item(System.Uri)
+  id: Item(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: Item[Uri]
+  nameWithType: BaseTransactionalQuadDataset.Item[Uri]
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item[System.Uri]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 730
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets a Graph from the dataset.\n"
+  example: []
+  syntax:
+    content: public override IGraph this[Uri graphUri] { get; }
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public Overrides ReadOnly Property Item(graphUri As Uri) As IGraph
+  overridden: VDS.RDF.Query.Datasets.BaseQuadDataset.Item(System.Uri)
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item*
+  nameWithType.vb: BaseTransactionalQuadDataset.Item(Uri)
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+  fullName.vb: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item(System.Uri)
+  name.vb: Item(Uri)
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph(System.Uri)
+  id: GetModifiableGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: GetModifiableGraph(Uri)
+  nameWithType: BaseTransactionalQuadDataset.GetModifiableGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetModifiableGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 774
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets a Graph from the Dataset that can be modified.\n"
+  example: []
+  syntax:
+    content: public override sealed IGraph GetModifiableGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public NotOverridable Overrides Function GetModifiableGraph(graphUri As Uri) As IGraph
+  overridden: VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph(System.Uri)
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal(System.Uri)
+  id: GetModifiableGraphInternal(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: GetModifiableGraphInternal(Uri)
+  nameWithType: BaseTransactionalQuadDataset.GetModifiableGraphInternal(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetModifiableGraphInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 795
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets a Graph from the Dataset that can be modified transactionally.\n"
+  example: []
+  syntax:
+    content: protected abstract ITransactionalGraph GetModifiableGraphInternal(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.ITransactionalGraph
+      description: ''
+    content.vb: Protected MustOverride Function GetModifiableGraphInternal(graphUri As Uri) As ITransactionalGraph
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush
+  id: Flush
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: BaseTransactionalQuadDataset.Flush()
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Flush
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 803
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nEnsures that any changes to the Dataset (if any) are flushed to the underlying Storage.\n"
+  remarks: "\nCommits the Active Transaction.\n"
+  example: []
+  syntax:
+    content: public override sealed void Flush()
+    content.vb: Public NotOverridable Overrides Sub Flush
+  overridden: VDS.RDF.Query.Datasets.BaseQuadDataset.Flush
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard
+  id: Discard
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: Discard()
+  nameWithType: BaseTransactionalQuadDataset.Discard()
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Discard
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 843
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nEnsures that any changes to the Dataset (if any) are discarded.\n"
+  remarks: "\nRollsback the Active Transaction.\n"
+  example: []
+  syntax:
+    content: public override sealed void Discard()
+    content.vb: Public NotOverridable Overrides Sub Discard
+  overridden: VDS.RDF.Query.Datasets.BaseQuadDataset.Discard
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal
+  id: FlushInternal
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: FlushInternal()
+  nameWithType: BaseTransactionalQuadDataset.FlushInternal()
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FlushInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 894
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nAllows the derived dataset to take any post-Flush() actions required.\n"
+  example: []
+  syntax:
+    content: protected virtual void FlushInternal()
+    content.vb: Protected Overridable Sub FlushInternal
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal
+  id: DiscardInternal
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset
+  langs:
+  - csharp
+  - vb
+  name: DiscardInternal()
+  nameWithType: BaseTransactionalQuadDataset.DiscardInternal()
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DiscardInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Datasets/BaseQuadDataset.cs
+    startLine: 902
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nAllows the derived dataset to take any post-Discard() actions required.\n"
+  example: []
+  syntax:
+    content: protected virtual void DiscardInternal()
+    content.vb: Protected Overridable Sub DiscardInternal
+  overload: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+references:
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalDataset
+  name: Flush()
+  nameWithType: BaseTransactionalDataset.Flush()
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush
+    name: Flush
+    nameWithType: BaseTransactionalDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush
+    name: Flush
+    nameWithType: BaseTransactionalDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard
+  commentId: M:VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard
+  parent: VDS.RDF.Query.Datasets.BaseTransactionalDataset
+  name: Discard()
+  nameWithType: BaseTransactionalDataset.Discard()
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard
+    name: Discard
+    nameWithType: BaseTransactionalDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard
+    name: Discard
+    nameWithType: BaseTransactionalDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.BaseTransactionalDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset
+  commentId: T:VDS.RDF.Query.Datasets.BaseQuadDataset
+  parent: VDS.RDF.Query.Datasets
+  name: BaseQuadDataset
+  nameWithType: BaseQuadDataset
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: SetActiveGraph(IEnumerable<Uri>)
+  nameWithType: BaseQuadDataset.SetActiveGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  nameWithType.vb: BaseQuadDataset.SetActiveGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetActiveGraph(IEnumerable(Of Uri))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetActiveGraph
+    nameWithType: BaseQuadDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetActiveGraph
+    nameWithType: BaseQuadDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: SetActiveGraph(Uri)
+  nameWithType: BaseQuadDataset.SetActiveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Uri)
+    name: SetActiveGraph
+    nameWithType: BaseQuadDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph(System.Uri)
+    name: SetActiveGraph
+    nameWithType: BaseQuadDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: SetDefaultGraph(Uri)
+  nameWithType: BaseQuadDataset.SetDefaultGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Uri)
+    name: SetDefaultGraph
+    nameWithType: BaseQuadDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Uri)
+    name: SetDefaultGraph
+    nameWithType: BaseQuadDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: SetDefaultGraph(IEnumerable<Uri>)
+  nameWithType: BaseQuadDataset.SetDefaultGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  nameWithType.vb: BaseQuadDataset.SetDefaultGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetDefaultGraph(IEnumerable(Of Uri))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetDefaultGraph
+    nameWithType: BaseQuadDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetDefaultGraph
+    nameWithType: BaseQuadDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: ResetActiveGraph()
+  nameWithType: BaseQuadDataset.ResetActiveGraph()
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph
+    name: ResetActiveGraph
+    nameWithType: BaseQuadDataset.ResetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph
+    name: ResetActiveGraph
+    nameWithType: BaseQuadDataset.ResetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: ResetDefaultGraph()
+  nameWithType: BaseQuadDataset.ResetDefaultGraph()
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph
+    name: ResetDefaultGraph
+    nameWithType: BaseQuadDataset.ResetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph
+    name: ResetDefaultGraph
+    nameWithType: BaseQuadDataset.ResetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ResetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.DefaultGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.DefaultGraphUris
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: DefaultGraphUris
+  nameWithType: BaseQuadDataset.DefaultGraphUris
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.DefaultGraphUris
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ActiveGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.ActiveGraphUris
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: ActiveGraphUris
+  nameWithType: BaseQuadDataset.ActiveGraphUris
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ActiveGraphUris
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.UsesUnionDefaultGraph
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.UsesUnionDefaultGraph
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: UsesUnionDefaultGraph
+  nameWithType: BaseQuadDataset.UsesUnionDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.UsesUnionDefaultGraph
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: IsDefaultGraph(Uri)
+  nameWithType: BaseQuadDataset.IsDefaultGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph(System.Uri)
+    name: IsDefaultGraph
+    nameWithType: BaseQuadDataset.IsDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph(System.Uri)
+    name: IsDefaultGraph
+    nameWithType: BaseQuadDataset.IsDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.IsDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad(System.Uri,VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad(System.Uri,VDS.RDF.Triple)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: AddQuad(Uri, Triple)
+  nameWithType: BaseQuadDataset.AddQuad(Uri, Triple)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad(System.Uri, VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad(System.Uri,VDS.RDF.Triple)
+    name: AddQuad
+    nameWithType: BaseQuadDataset.AddQuad
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad(System.Uri,VDS.RDF.Triple)
+    name: AddQuad
+    nameWithType: BaseQuadDataset.AddQuad
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.AddQuad
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad(System.Uri,VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad(System.Uri,VDS.RDF.Triple)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: RemoveQuad(Uri, Triple)
+  nameWithType: BaseQuadDataset.RemoveQuad(Uri, Triple)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad(System.Uri, VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad(System.Uri,VDS.RDF.Triple)
+    name: RemoveQuad
+    nameWithType: BaseQuadDataset.RemoveQuad
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad(System.Uri,VDS.RDF.Triple)
+    name: RemoveQuad
+    nameWithType: BaseQuadDataset.RemoveQuad
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveQuad
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: HasGraph(Uri)
+  nameWithType: BaseQuadDataset.HasGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: BaseQuadDataset.HasGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: BaseQuadDataset.HasGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: HasGraphInternal(Uri)
+  nameWithType: BaseQuadDataset.HasGraphInternal(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal(System.Uri)
+    name: HasGraphInternal
+    nameWithType: BaseQuadDataset.HasGraphInternal
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal(System.Uri)
+    name: HasGraphInternal
+    nameWithType: BaseQuadDataset.HasGraphInternal
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.HasGraphInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Graphs
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.Graphs
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: Graphs
+  nameWithType: BaseQuadDataset.Graphs
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Graphs
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GraphUris
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.GraphUris
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: GraphUris
+  nameWithType: BaseQuadDataset.GraphUris
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GraphUris
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetGraphInternal(Uri)
+  nameWithType: BaseQuadDataset.GetGraphInternal(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal(System.Uri)
+    name: GetGraphInternal
+    nameWithType: BaseQuadDataset.GetGraphInternal
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal(System.Uri)
+    name: GetGraphInternal
+    nameWithType: BaseQuadDataset.GetGraphInternal
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetGraphInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.HasTriples
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.HasTriples
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: HasTriples
+  nameWithType: BaseQuadDataset.HasTriples
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.HasTriples
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple(VDS.RDF.Triple)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: ContainsTriple(Triple)
+  nameWithType: BaseQuadDataset.ContainsTriple(Triple)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple(VDS.RDF.Triple)
+    name: ContainsTriple
+    nameWithType: BaseQuadDataset.ContainsTriple
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple(VDS.RDF.Triple)
+    name: ContainsTriple
+    nameWithType: BaseQuadDataset.ContainsTriple
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad(System.Uri,VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad(System.Uri,VDS.RDF.Triple)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: ContainsQuad(Uri, Triple)
+  nameWithType: BaseQuadDataset.ContainsQuad(Uri, Triple)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad(System.Uri, VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad(System.Uri,VDS.RDF.Triple)
+    name: ContainsQuad
+    nameWithType: BaseQuadDataset.ContainsQuad
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad(System.Uri,VDS.RDF.Triple)
+    name: ContainsQuad
+    nameWithType: BaseQuadDataset.ContainsQuad
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.ContainsQuad
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Triples
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.Triples
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: Triples
+  nameWithType: BaseQuadDataset.Triples
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Triples
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetQuads(Uri)
+  nameWithType: BaseQuadDataset.GetQuads(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads(System.Uri)
+    name: GetQuads
+    nameWithType: BaseQuadDataset.GetQuads
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads(System.Uri)
+    name: GetQuads
+    nameWithType: BaseQuadDataset.GetQuads
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuads
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: GetTriplesWithSubject(INode)
+  nameWithType: BaseQuadDataset.GetTriplesWithSubject(INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject(VDS.RDF.INode)
+    name: GetTriplesWithSubject
+    nameWithType: BaseQuadDataset.GetTriplesWithSubject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject(VDS.RDF.INode)
+    name: GetTriplesWithSubject
+    nameWithType: BaseQuadDataset.GetTriplesWithSubject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject(System.Uri,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject(System.Uri,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetQuadsWithSubject(Uri, INode)
+  nameWithType: BaseQuadDataset.GetQuadsWithSubject(Uri, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject(System.Uri, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject(System.Uri,VDS.RDF.INode)
+    name: GetQuadsWithSubject
+    nameWithType: BaseQuadDataset.GetQuadsWithSubject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject(System.Uri,VDS.RDF.INode)
+    name: GetQuadsWithSubject
+    nameWithType: BaseQuadDataset.GetQuadsWithSubject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: GetTriplesWithPredicate(INode)
+  nameWithType: BaseQuadDataset.GetTriplesWithPredicate(INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+    name: GetTriplesWithPredicate
+    nameWithType: BaseQuadDataset.GetTriplesWithPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+    name: GetTriplesWithPredicate
+    nameWithType: BaseQuadDataset.GetTriplesWithPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate(System.Uri,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate(System.Uri,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetQuadsWithPredicate(Uri, INode)
+  nameWithType: BaseQuadDataset.GetQuadsWithPredicate(Uri, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate(System.Uri, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate(System.Uri,VDS.RDF.INode)
+    name: GetQuadsWithPredicate
+    nameWithType: BaseQuadDataset.GetQuadsWithPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate(System.Uri,VDS.RDF.INode)
+    name: GetQuadsWithPredicate
+    nameWithType: BaseQuadDataset.GetQuadsWithPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: GetTriplesWithObject(INode)
+  nameWithType: BaseQuadDataset.GetTriplesWithObject(INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject(VDS.RDF.INode)
+    name: GetTriplesWithObject
+    nameWithType: BaseQuadDataset.GetTriplesWithObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject(VDS.RDF.INode)
+    name: GetTriplesWithObject
+    nameWithType: BaseQuadDataset.GetTriplesWithObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject(System.Uri,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject(System.Uri,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetQuadsWithObject(Uri, INode)
+  nameWithType: BaseQuadDataset.GetQuadsWithObject(Uri, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject(System.Uri, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject(System.Uri,VDS.RDF.INode)
+    name: GetQuadsWithObject
+    nameWithType: BaseQuadDataset.GetQuadsWithObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject(System.Uri,VDS.RDF.INode)
+    name: GetQuadsWithObject
+    nameWithType: BaseQuadDataset.GetQuadsWithObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: GetTriplesWithSubjectPredicate(INode, INode)
+  nameWithType: BaseQuadDataset.GetTriplesWithSubjectPredicate(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectPredicate
+    nameWithType: BaseQuadDataset.GetTriplesWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectPredicate
+    nameWithType: BaseQuadDataset.GetTriplesWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetQuadsWithSubjectPredicate(Uri, INode, INode)
+  nameWithType: BaseQuadDataset.GetQuadsWithSubjectPredicate(Uri, INode, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate(System.Uri, VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+    name: GetQuadsWithSubjectPredicate
+    nameWithType: BaseQuadDataset.GetQuadsWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+    name: GetQuadsWithSubjectPredicate
+    nameWithType: BaseQuadDataset.GetQuadsWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: GetTriplesWithSubjectObject(INode, INode)
+  nameWithType: BaseQuadDataset.GetTriplesWithSubjectObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectObject
+    nameWithType: BaseQuadDataset.GetTriplesWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectObject
+    nameWithType: BaseQuadDataset.GetTriplesWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetQuadsWithSubjectObject(Uri, INode, INode)
+  nameWithType: BaseQuadDataset.GetQuadsWithSubjectObject(Uri, INode, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject(System.Uri, VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+    name: GetQuadsWithSubjectObject
+    nameWithType: BaseQuadDataset.GetQuadsWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+    name: GetQuadsWithSubjectObject
+    nameWithType: BaseQuadDataset.GetQuadsWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: GetTriplesWithPredicateObject(INode, INode)
+  nameWithType: BaseQuadDataset.GetTriplesWithPredicateObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithPredicateObject
+    nameWithType: BaseQuadDataset.GetTriplesWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithPredicateObject
+    nameWithType: BaseQuadDataset.GetTriplesWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetTriplesWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetQuadsWithPredicateObject(Uri, INode, INode)
+  nameWithType: BaseQuadDataset.GetQuadsWithPredicateObject(Uri, INode, INode)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject(System.Uri, VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+    name: GetQuadsWithPredicateObject
+    nameWithType: BaseQuadDataset.GetQuadsWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject(System.Uri,VDS.RDF.INode,VDS.RDF.INode)
+    name: GetQuadsWithPredicateObject
+    nameWithType: BaseQuadDataset.GetQuadsWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetQuadsWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseTransactionalQuadDataset>()
+  nameWithType: Extensions.AsEnumerable<BaseTransactionalQuadDataset>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseTransactionalQuadDataset)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset)()
+  name.vb: AsEnumerable(Of BaseTransactionalQuadDataset)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseTransactionalQuadDataset>
+    nameWithType: Extensions.AsEnumerable<BaseTransactionalQuadDataset>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseTransactionalQuadDataset)
+    nameWithType: Extensions.AsEnumerable(Of BaseTransactionalQuadDataset)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalDataset
+  commentId: T:VDS.RDF.Query.Datasets.BaseTransactionalDataset
+  parent: VDS.RDF.Query.Datasets
+  name: BaseTransactionalDataset
+  nameWithType: BaseTransactionalDataset
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalDataset
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.#ctor
+  name: BaseTransactionalQuadDataset
+  nameWithType: BaseTransactionalQuadDataset.BaseTransactionalQuadDataset
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.BaseTransactionalQuadDataset
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: AddGraph(IGraph)
+  nameWithType: BaseQuadDataset.AddGraph(IGraph)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph(VDS.RDF.IGraph)
+    name: AddGraph
+    nameWithType: BaseQuadDataset.AddGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph(VDS.RDF.IGraph)
+    name: AddGraph
+    nameWithType: BaseQuadDataset.AddGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.AddGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph
+  name: AddGraph
+  nameWithType: BaseTransactionalQuadDataset.AddGraph
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraph
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal
+  name: AddGraphInternal
+  nameWithType: BaseTransactionalQuadDataset.AddGraphInternal
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.AddGraphInternal
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: RemoveGraph(Uri)
+  nameWithType: BaseQuadDataset.RemoveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph(System.Uri)
+    name: RemoveGraph
+    nameWithType: BaseQuadDataset.RemoveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph(System.Uri)
+    name: RemoveGraph
+    nameWithType: BaseQuadDataset.RemoveGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.RemoveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph
+  name: RemoveGraph
+  nameWithType: BaseTransactionalQuadDataset.RemoveGraph
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraph
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal
+  name: RemoveGraphInternal
+  nameWithType: BaseTransactionalQuadDataset.RemoveGraphInternal
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.RemoveGraphInternal
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Item(System.Uri)
+  commentId: P:VDS.RDF.Query.Datasets.BaseQuadDataset.Item(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: Item[Uri]
+  nameWithType: BaseQuadDataset.Item[Uri]
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Item[System.Uri]
+  nameWithType.vb: BaseQuadDataset.Item(Uri)
+  fullName.vb: VDS.RDF.Query.Datasets.BaseQuadDataset.Item(System.Uri)
+  name.vb: Item(Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Item(System.Uri)
+    name: Item
+    nameWithType: BaseQuadDataset.Item
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Item(System.Uri)
+    name: Item
+    nameWithType: BaseQuadDataset.Item
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item
+  name: Item
+  nameWithType: BaseTransactionalQuadDataset.Item
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Item
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  isExternal: true
+  name: GetModifiableGraph(Uri)
+  nameWithType: BaseQuadDataset.GetModifiableGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: BaseQuadDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: BaseQuadDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph
+  name: GetModifiableGraph
+  nameWithType: BaseTransactionalQuadDataset.GetModifiableGraph
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraph
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal
+  name: GetModifiableGraphInternal
+  nameWithType: BaseTransactionalQuadDataset.GetModifiableGraphInternal
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.GetModifiableGraphInternal
+- uid: VDS.RDF.ITransactionalGraph
+  commentId: T:VDS.RDF.ITransactionalGraph
+  parent: VDS.RDF
+  name: ITransactionalGraph
+  nameWithType: ITransactionalGraph
+  fullName: VDS.RDF.ITransactionalGraph
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Flush
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.Flush
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: Flush()
+  nameWithType: BaseQuadDataset.Flush()
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Flush()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Flush
+    name: Flush
+    nameWithType: BaseQuadDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Flush
+    name: Flush
+    nameWithType: BaseQuadDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush
+  name: Flush
+  nameWithType: BaseTransactionalQuadDataset.Flush
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Flush
+- uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Discard
+  commentId: M:VDS.RDF.Query.Datasets.BaseQuadDataset.Discard
+  parent: VDS.RDF.Query.Datasets.BaseQuadDataset
+  name: Discard()
+  nameWithType: BaseQuadDataset.Discard()
+  fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Discard()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Discard
+    name: Discard
+    nameWithType: BaseQuadDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.BaseQuadDataset.Discard
+    name: Discard
+    nameWithType: BaseQuadDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.BaseQuadDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard
+  name: Discard
+  nameWithType: BaseTransactionalQuadDataset.Discard
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.Discard
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal
+  name: FlushInternal
+  nameWithType: BaseTransactionalQuadDataset.FlushInternal
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.FlushInternal
+- uid: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal*
+  commentId: Overload:VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal
+  name: DiscardInternal
+  nameWithType: BaseTransactionalQuadDataset.DiscardInternal
+  fullName: VDS.RDF.Query.Datasets.BaseTransactionalQuadDataset.DiscardInternal

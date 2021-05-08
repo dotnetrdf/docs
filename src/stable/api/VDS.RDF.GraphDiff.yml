@@ -1,0 +1,702 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.GraphDiff
+  commentId: T:VDS.RDF.GraphDiff
+  id: GraphDiff
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.GraphDiff.ComputeMSGs(VDS.RDF.IGraph,System.Collections.Generic.HashSet{VDS.RDF.Triple},System.Collections.Generic.List{VDS.RDF.IGraph})
+  - VDS.RDF.GraphDiff.Difference(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  langs:
+  - csharp
+  - vb
+  name: GraphDiff
+  nameWithType: GraphDiff
+  fullName: VDS.RDF.GraphDiff
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/GraphDiff.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GraphDiff
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/GraphDiff.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nImplementation of a Graph Difference algorithm for RDF Graphs.\n"
+  remarks: "\n<p>\nThis algorithm is broadly based upon the methodology fror computing differences in RDF Graphs described in the <a href=\"http://www.springerlink.com/index/lq65211003774313.pdf\">RDFSync</a> paper by Tummarello et al.  This is an implementation purely of a difference algorithm and not the synchronisation aspects described in their paper.  Main difference between their algorithm and mine is that mine does not make the input Graphs lean as it is concerned with showing the raw differences between the Graphs and does not concern itself with whether the differences may be semantically irrelevant.\n</p>\n<p>\nTo understand this consider the following Graphs:\n</p>\n<h2>Graph A</h2>\n<pre><code>_:autos1 rdfs:label &quot;Rob&quot; .</code></pre>\n<h2>Graph B</h2>\n<pre><code>_:autos1 rdfs:label &quot;Rob&quot; .\n_:autos2 rdfs:label &quot;Rob&quot; .</code></pre>\n<p>\nGiven these Graphs computing the Graph Difference between A and B would report an Added MSG (Minimal Spanning Graph) when in fact the 2nd Graph is non-lean and could be reduced to the same as the 1st Graph.\n</p>\n"
+  example: []
+  syntax:
+    content: public class GraphDiff
+    content.vb: Public Class GraphDiff
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.GraphDiff.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.GraphDiff.Difference(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.GraphDiff.Difference(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  id: Difference(VDS.RDF.IGraph,VDS.RDF.IGraph)
+  parent: VDS.RDF.GraphDiff
+  langs:
+  - csharp
+  - vb
+  name: Difference(IGraph, IGraph)
+  nameWithType: GraphDiff.Difference(IGraph, IGraph)
+  fullName: VDS.RDF.GraphDiff.Difference(VDS.RDF.IGraph, VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/GraphDiff.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Difference
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/GraphDiff.cs
+    startLine: 69
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nCalculates the Difference between the two Graphs i.e. the changes required to get from the 1st Graph to the 2nd Graph.\n"
+  example: []
+  syntax:
+    content: public GraphDiffReport Difference(IGraph a, IGraph b)
+    parameters:
+    - id: a
+      type: VDS.RDF.IGraph
+      description: First Graph.
+    - id: b
+      type: VDS.RDF.IGraph
+      description: Second Graph.
+    return:
+      type: VDS.RDF.GraphDiffReport
+      description: ''
+    content.vb: Public Function Difference(a As IGraph, b As IGraph) As GraphDiffReport
+  overload: VDS.RDF.GraphDiff.Difference*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.GraphDiff.ComputeMSGs(VDS.RDF.IGraph,System.Collections.Generic.HashSet{VDS.RDF.Triple},System.Collections.Generic.List{VDS.RDF.IGraph})
+  commentId: M:VDS.RDF.GraphDiff.ComputeMSGs(VDS.RDF.IGraph,System.Collections.Generic.HashSet{VDS.RDF.Triple},System.Collections.Generic.List{VDS.RDF.IGraph})
+  id: ComputeMSGs(VDS.RDF.IGraph,System.Collections.Generic.HashSet{VDS.RDF.Triple},System.Collections.Generic.List{VDS.RDF.IGraph})
+  parent: VDS.RDF.GraphDiff
+  langs:
+  - csharp
+  - vb
+  name: ComputeMSGs(IGraph, HashSet<Triple>, List<IGraph>)
+  nameWithType: GraphDiff.ComputeMSGs(IGraph, HashSet<Triple>, List<IGraph>)
+  fullName: VDS.RDF.GraphDiff.ComputeMSGs(VDS.RDF.IGraph, System.Collections.Generic.HashSet<VDS.RDF.Triple>, System.Collections.Generic.List<VDS.RDF.IGraph>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/GraphDiff.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ComputeMSGs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/GraphDiff.cs
+    startLine: 247
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nComputes MSGs for a Graph.\n"
+  example: []
+  syntax:
+    content: public static void ComputeMSGs(IGraph g, HashSet<Triple> unassigned, List<IGraph> msgs)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    - id: unassigned
+      type: System.Collections.Generic.HashSet{VDS.RDF.Triple}
+      description: Triples that need assigning to MSGs.
+    - id: msgs
+      type: System.Collections.Generic.List{VDS.RDF.IGraph}
+      description: MSGs list to populate.
+    content.vb: Public Shared Sub ComputeMSGs(g As IGraph, unassigned As HashSet(Of Triple), msgs As List(Of IGraph))
+  overload: VDS.RDF.GraphDiff.ComputeMSGs*
+  nameWithType.vb: GraphDiff.ComputeMSGs(IGraph, HashSet(Of Triple), List(Of IGraph))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: VDS.RDF.GraphDiff.ComputeMSGs(VDS.RDF.IGraph, System.Collections.Generic.HashSet(Of VDS.RDF.Triple), System.Collections.Generic.List(Of VDS.RDF.IGraph))
+  name.vb: ComputeMSGs(IGraph, HashSet(Of Triple), List(Of IGraph))
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.GraphDiff.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<GraphDiff>()
+  nameWithType: Extensions.AsEnumerable<GraphDiff>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.GraphDiff>()
+  nameWithType.vb: Extensions.AsEnumerable(Of GraphDiff)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.GraphDiff)()
+  name.vb: AsEnumerable(Of GraphDiff)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<GraphDiff>
+    nameWithType: Extensions.AsEnumerable<GraphDiff>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.GraphDiff>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of GraphDiff)
+    nameWithType: Extensions.AsEnumerable(Of GraphDiff)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.GraphDiff)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.GraphDiff.Difference*
+  commentId: Overload:VDS.RDF.GraphDiff.Difference
+  name: Difference
+  nameWithType: GraphDiff.Difference
+  fullName: VDS.RDF.GraphDiff.Difference
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.GraphDiffReport
+  commentId: T:VDS.RDF.GraphDiffReport
+  parent: VDS.RDF
+  name: GraphDiffReport
+  nameWithType: GraphDiffReport
+  fullName: VDS.RDF.GraphDiffReport
+- uid: VDS.RDF.GraphDiff.ComputeMSGs*
+  commentId: Overload:VDS.RDF.GraphDiff.ComputeMSGs
+  name: ComputeMSGs
+  nameWithType: GraphDiff.ComputeMSGs
+  fullName: VDS.RDF.GraphDiff.ComputeMSGs
+- uid: System.Collections.Generic.HashSet{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.HashSet{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  name: HashSet<Triple>
+  nameWithType: HashSet<Triple>
+  fullName: System.Collections.Generic.HashSet<VDS.RDF.Triple>
+  nameWithType.vb: HashSet(Of Triple)
+  fullName.vb: System.Collections.Generic.HashSet(Of VDS.RDF.Triple)
+  name.vb: HashSet(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{VDS.RDF.IGraph}
+  commentId: T:System.Collections.Generic.List{VDS.RDF.IGraph}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IGraph>
+  nameWithType: List<IGraph>
+  fullName: System.Collections.Generic.List<VDS.RDF.IGraph>
+  nameWithType.vb: List(Of IGraph)
+  fullName.vb: System.Collections.Generic.List(Of VDS.RDF.IGraph)
+  name.vb: List(Of IGraph)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

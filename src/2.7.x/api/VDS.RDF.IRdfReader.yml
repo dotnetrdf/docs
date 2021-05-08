@@ -1,0 +1,500 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.IRdfReader
+  commentId: T:VDS.RDF.IRdfReader
+  id: IRdfReader
+  parent: VDS.RDF
+  children:
+  - VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.IO.StreamReader)
+  - VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.IO.TextReader)
+  - VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.IO.StreamReader)
+  - VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  - VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.IRdfReader.Warning
+  langs:
+  - csharp
+  - vb
+  name: IRdfReader
+  nameWithType: IRdfReader
+  fullName: VDS.RDF.IRdfReader
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IRdfReader
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nInterface to be implemented by RDF Readers which parse Concrete RDF Syntax.\n"
+  example: []
+  syntax:
+    content: public interface IRdfReader
+    content.vb: Public Interface IRdfReader
+  extensionMethods:
+  - VDS.RDF.IRdfReader.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.IO.StreamReader)
+  commentId: M:VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.IO.StreamReader)
+  id: Load(VDS.RDF.IGraph,System.IO.StreamReader)
+  parent: VDS.RDF.IRdfReader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, StreamReader)
+  nameWithType: IRdfReader.Load(IGraph, StreamReader)
+  fullName: VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph, System.IO.StreamReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod for Loading a Graph from some Concrete RDF Syntax via some arbitrary Stream.\n"
+  example: []
+  syntax:
+    content: void Load(IGraph g, StreamReader input)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load RDF into.
+    - id: input
+      type: System.IO.StreamReader
+      description: The reader to read input from.
+    content.vb: Sub Load(g As IGraph, input As StreamReader)
+  overload: VDS.RDF.IRdfReader.Load*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Parser tries to output something that is invalid RDF.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the Parser cannot Parse the Input.
+  - type: System.IO.IOException
+    commentId: T:System.IO.IOException
+    description: Thrown if the Parser encounters an IO Error while trying to access/parse the Stream.
+- uid: VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.IO.TextReader)
+  commentId: M:VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.IO.TextReader)
+  id: Load(VDS.RDF.IGraph,System.IO.TextReader)
+  parent: VDS.RDF.IRdfReader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, TextReader)
+  nameWithType: IRdfReader.Load(IGraph, TextReader)
+  fullName: VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph, System.IO.TextReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 55
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod for Loading a Graph from some Concrete RDF Syntax via some arbitrary Input.\n"
+  example: []
+  syntax:
+    content: void Load(IGraph g, TextReader input)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load RDF into.
+    - id: input
+      type: System.IO.TextReader
+      description: The reader to read input from.
+    content.vb: Sub Load(g As IGraph, input As TextReader)
+  overload: VDS.RDF.IRdfReader.Load*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Parser tries to output something that is invalid RDF.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the Parser cannot Parse the Input.
+  - type: System.IO.IOException
+    commentId: T:System.IO.IOException
+    description: Thrown if the Parser encounters an IO Error while trying to access/parse the Stream.
+- uid: VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph,System.String)
+  id: Load(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.IRdfReader
+  langs:
+  - csharp
+  - vb
+  name: Load(IGraph, String)
+  nameWithType: IRdfReader.Load(IGraph, String)
+  fullName: VDS.RDF.IRdfReader.Load(VDS.RDF.IGraph, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 65
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod for Loading a Graph from some Concrete RDF Syntax from a given File.\n"
+  example: []
+  syntax:
+    content: void Load(IGraph g, string filename)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to load RDF into.
+    - id: filename
+      type: System.String
+      description: The Filename of the File to read from.
+    content.vb: Sub Load(g As IGraph, filename As String)
+  overload: VDS.RDF.IRdfReader.Load*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Parser tries to output something that is invalid RDF.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the Parser cannot Parse the Input.
+  - type: System.IO.IOException
+    commentId: T:System.IO.IOException
+    description: Thrown if the Parser encounters an IO Error while trying to access/parse the File.
+- uid: VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.IO.StreamReader)
+  commentId: M:VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.IO.StreamReader)
+  id: Load(VDS.RDF.IRdfHandler,System.IO.StreamReader)
+  parent: VDS.RDF.IRdfReader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, StreamReader)
+  nameWithType: IRdfReader.Load(IRdfHandler, StreamReader)
+  fullName: VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler, System.IO.StreamReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 75
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod for Loading RDF using a RDF Handler from some Concrete RDF Syntax via some arbitrary Stream.\n"
+  example: []
+  syntax:
+    content: void Load(IRdfHandler handler, StreamReader input)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: input
+      type: System.IO.StreamReader
+      description: The reader to read input from.
+    content.vb: Sub Load(handler As IRdfHandler, input As StreamReader)
+  overload: VDS.RDF.IRdfReader.Load*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Parser tries to output something that is invalid RDF.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the Parser cannot Parse the Input.
+  - type: System.IO.IOException
+    commentId: T:System.IO.IOException
+    description: Thrown if the Parser encounters an IO Error while trying to access/parse the Stream.
+- uid: VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  commentId: M:VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  id: Load(VDS.RDF.IRdfHandler,System.IO.TextReader)
+  parent: VDS.RDF.IRdfReader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, TextReader)
+  nameWithType: IRdfReader.Load(IRdfHandler, TextReader)
+  fullName: VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler, System.IO.TextReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 85
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod for Loading RDF using a RDF Handler from some Concrete RDF Syntax via some arbitrary Stream.\n"
+  example: []
+  syntax:
+    content: void Load(IRdfHandler handler, TextReader input)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: input
+      type: System.IO.TextReader
+      description: The reader to read input from.
+    content.vb: Sub Load(handler As IRdfHandler, input As TextReader)
+  overload: VDS.RDF.IRdfReader.Load*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Parser tries to output something that is invalid RDF.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the Parser cannot Parse the Input.
+  - type: System.IO.IOException
+    commentId: T:System.IO.IOException
+    description: Thrown if the Parser encounters an IO Error while trying to access/parse the Stream.
+- uid: VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler,System.String)
+  id: Load(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.IRdfReader
+  langs:
+  - csharp
+  - vb
+  name: Load(IRdfHandler, String)
+  nameWithType: IRdfReader.Load(IRdfHandler, String)
+  fullName: VDS.RDF.IRdfReader.Load(VDS.RDF.IRdfHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Load
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 95
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nMethod for Loading RDF using a RDF Handler from some Concrete RDF Syntax from a given File.\n"
+  example: []
+  syntax:
+    content: void Load(IRdfHandler handler, string filename)
+    parameters:
+    - id: handler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler to use.
+    - id: filename
+      type: System.String
+      description: The Filename of the File to read from.
+    content.vb: Sub Load(handler As IRdfHandler, filename As String)
+  overload: VDS.RDF.IRdfReader.Load*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if the Parser tries to output something that is invalid RDF.
+  - type: VDS.RDF.Parsing.RdfParseException
+    commentId: T:VDS.RDF.Parsing.RdfParseException
+    description: Thrown if the Parser cannot Parse the Input.
+  - type: System.IO.IOException
+    commentId: T:System.IO.IOException
+    description: Thrown if the Parser encounters an IO Error while trying to access/parse the Stream.
+- uid: VDS.RDF.IRdfReader.Warning
+  commentId: E:VDS.RDF.IRdfReader.Warning
+  id: Warning
+  parent: VDS.RDF.IRdfReader
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: IRdfReader.Warning
+  fullName: VDS.RDF.IRdfReader.Warning
+  type: Event
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Core/IRDFReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Warning
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IRDFReader.cs
+    startLine: 100
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF
+  summary: "\nEvent which Readers can raise when they notice syntax that is ambigious/deprecated etc which can still be parsed\n"
+  example: []
+  syntax:
+    content: event RdfReaderWarning Warning
+    return:
+      type: VDS.RDF.RdfReaderWarning
+    content.vb: Event Warning As RdfReaderWarning
+references:
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.IRdfReader.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IRdfReader>()
+  nameWithType: Extensions.AsEnumerable<IRdfReader>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.IRdfReader>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IRdfReader)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.IRdfReader)()
+  name.vb: AsEnumerable(Of IRdfReader)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IRdfReader>
+    nameWithType: Extensions.AsEnumerable<IRdfReader>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.IRdfReader>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IRdfReader)
+    nameWithType: Extensions.AsEnumerable(Of IRdfReader)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.IRdfReader)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.RdfException
+  commentId: T:VDS.RDF.RdfException
+  parent: VDS.RDF
+  name: RdfException
+  nameWithType: RdfException
+  fullName: VDS.RDF.RdfException
+- uid: VDS.RDF.Parsing.RdfParseException
+  commentId: T:VDS.RDF.Parsing.RdfParseException
+  parent: VDS.RDF.Parsing
+  name: RdfParseException
+  nameWithType: RdfParseException
+  fullName: VDS.RDF.Parsing.RdfParseException
+- uid: System.IO.IOException
+  commentId: T:System.IO.IOException
+  isExternal: true
+- uid: VDS.RDF.IRdfReader.Load*
+  commentId: Overload:VDS.RDF.IRdfReader.Load
+  name: Load
+  nameWithType: IRdfReader.Load
+  fullName: VDS.RDF.IRdfReader.Load
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: System.IO.StreamReader
+  commentId: T:System.IO.StreamReader
+  parent: System.IO
+  isExternal: true
+  name: StreamReader
+  nameWithType: StreamReader
+  fullName: System.IO.StreamReader
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: System.IO.TextReader
+  commentId: T:System.IO.TextReader
+  parent: System.IO
+  isExternal: true
+  name: TextReader
+  nameWithType: TextReader
+  fullName: System.IO.TextReader
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.RdfReaderWarning
+  commentId: T:VDS.RDF.RdfReaderWarning
+  parent: VDS.RDF
+  name: RdfReaderWarning
+  nameWithType: RdfReaderWarning
+  fullName: VDS.RDF.RdfReaderWarning

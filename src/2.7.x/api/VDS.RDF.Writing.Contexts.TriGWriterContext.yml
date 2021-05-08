@@ -1,0 +1,842 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext
+  commentId: T:VDS.RDF.Writing.Contexts.TriGWriterContext
+  id: TriGWriterContext
+  parent: VDS.RDF.Writing.Contexts
+  children:
+  - VDS.RDF.Writing.Contexts.TriGWriterContext.#ctor(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  - VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel
+  - VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode
+  langs:
+  - csharp
+  - vb
+  name: TriGWriterContext
+  nameWithType: TriGWriterContext
+  fullName: VDS.RDF.Writing.Contexts.TriGWriterContext
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TriGWriterContext
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+    startLine: 33
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing.Contexts
+  summary: "\nWriter Context for TriG.\n"
+  example: []
+  syntax:
+    content: 'public class TriGWriterContext : ThreadedStoreWriterContext, IStoreWriterContext'
+    content.vb: >-
+      Public Class TriGWriterContext
+          Inherits ThreadedStoreWriterContext
+          Implements IStoreWriterContext
+  inheritance:
+  - System.Object
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  - VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+  implements:
+  - VDS.RDF.Writing.Contexts.IStoreWriterContext
+  inheritedMembers:
+  - VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.NamespaceMap
+  - VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.QNameMapper
+  - VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add(System.Uri)
+  - VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri(System.Uri@)
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext._prettyPrint
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext._hiSpeedAllowed
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext.PrettyPrint
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext.HighSpeedModePermitted
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Store
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Output
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.String)
+  - VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.Uri)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Writing.Contexts.TriGWriterContext.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext.#ctor(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  commentId: M:VDS.RDF.Writing.Contexts.TriGWriterContext.#ctor(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean,System.Boolean,System.Int32,System.Boolean)
+  id: '#ctor(VDS.RDF.ITripleStore,System.IO.TextWriter,System.Boolean,System.Boolean,System.Int32,System.Boolean)'
+  parent: VDS.RDF.Writing.Contexts.TriGWriterContext
+  langs:
+  - csharp
+  - vb
+  name: TriGWriterContext(ITripleStore, TextWriter, Boolean, Boolean, Int32, Boolean)
+  nameWithType: TriGWriterContext.TriGWriterContext(ITripleStore, TextWriter, Boolean, Boolean, Int32, Boolean)
+  fullName: VDS.RDF.Writing.Contexts.TriGWriterContext.TriGWriterContext(VDS.RDF.ITripleStore, System.IO.TextWriter, System.Boolean, System.Boolean, System.Int32, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+    startLine: 47
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing.Contexts
+  summary: "\nCreates a new TriG Writer context.\n"
+  example: []
+  syntax:
+    content: public TriGWriterContext(ITripleStore store, TextWriter output, bool prettyPrint, bool hiSpeedAllowed, int compressionLevel, bool n3compatability)
+    parameters:
+    - id: store
+      type: VDS.RDF.ITripleStore
+      description: Triple Store to save.
+    - id: output
+      type: System.IO.TextWriter
+      description: TextWriter to output to.
+    - id: prettyPrint
+      type: System.Boolean
+      description: Whether to use pretty printing.
+    - id: hiSpeedAllowed
+      type: System.Boolean
+      description: Whether high speed mode is permitted.
+    - id: compressionLevel
+      type: System.Int32
+      description: Compression Level to use.
+    - id: n3compatability
+      type: System.Boolean
+      description: Whether to enable N3 compatability mode.
+    content.vb: Public Sub New(store As ITripleStore, output As TextWriter, prettyPrint As Boolean, hiSpeedAllowed As Boolean, compressionLevel As Integer, n3compatability As Boolean)
+  overload: VDS.RDF.Writing.Contexts.TriGWriterContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel
+  commentId: P:VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel
+  id: CompressionLevel
+  parent: VDS.RDF.Writing.Contexts.TriGWriterContext
+  langs:
+  - csharp
+  - vb
+  name: CompressionLevel
+  nameWithType: TriGWriterContext.CompressionLevel
+  fullName: VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CompressionLevel
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+    startLine: 56
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing.Contexts
+  summary: "\nGets/Sets the Compression Level.\n"
+  example: []
+  syntax:
+    content: public int CompressionLevel { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CompressionLevel As Integer
+  overload: VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode
+  commentId: P:VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode
+  id: N3CompatabilityMode
+  parent: VDS.RDF.Writing.Contexts.TriGWriterContext
+  langs:
+  - csharp
+  - vb
+  name: N3CompatabilityMode
+  nameWithType: TriGWriterContext.N3CompatabilityMode
+  fullName: VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: N3CompatabilityMode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Writing/Contexts/TriGWriterContext.cs
+    startLine: 71
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Writing.Contexts
+  summary: "\nGets/Sets N3 Compatability Mode.\n"
+  example: []
+  syntax:
+    content: public bool N3CompatabilityMode { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property N3CompatabilityMode As Boolean
+  overload: VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Writing.Contexts
+  commentId: N:VDS.RDF.Writing.Contexts
+  name: VDS.RDF.Writing.Contexts
+  nameWithType: VDS.RDF.Writing.Contexts
+  fullName: VDS.RDF.Writing.Contexts
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  commentId: T:VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  parent: VDS.RDF.Writing.Contexts
+  name: BaseStoreWriterContext
+  nameWithType: BaseStoreWriterContext
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+- uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+  commentId: T:VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+  parent: VDS.RDF.Writing.Contexts
+  name: ThreadedStoreWriterContext
+  nameWithType: ThreadedStoreWriterContext
+  fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+- uid: VDS.RDF.Writing.Contexts.IStoreWriterContext
+  commentId: T:VDS.RDF.Writing.Contexts.IStoreWriterContext
+  parent: VDS.RDF.Writing.Contexts
+  name: IStoreWriterContext
+  nameWithType: IStoreWriterContext
+  fullName: VDS.RDF.Writing.Contexts.IStoreWriterContext
+- uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.NamespaceMap
+  commentId: P:VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.NamespaceMap
+  parent: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+  name: NamespaceMap
+  nameWithType: ThreadedStoreWriterContext.NamespaceMap
+  fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.NamespaceMap
+- uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.QNameMapper
+  commentId: P:VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.QNameMapper
+  parent: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+  name: QNameMapper
+  nameWithType: ThreadedStoreWriterContext.QNameMapper
+  fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.QNameMapper
+- uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add(System.Uri)
+  commentId: M:VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add(System.Uri)
+  parent: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+  isExternal: true
+  name: Add(Uri)
+  nameWithType: ThreadedStoreWriterContext.Add(Uri)
+  fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add(System.Uri)
+    name: Add
+    nameWithType: ThreadedStoreWriterContext.Add
+    fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add(System.Uri)
+    name: Add
+    nameWithType: ThreadedStoreWriterContext.Add
+    fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri(System.Uri@)
+  commentId: M:VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri(System.Uri@)
+  parent: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext
+  isExternal: true
+  name: TryGetNextUri(Uri)
+  nameWithType: ThreadedStoreWriterContext.TryGetNextUri(Uri)
+  fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri(System.Uri@)
+    name: TryGetNextUri
+    nameWithType: ThreadedStoreWriterContext.TryGetNextUri
+    fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri(System.Uri@)
+    name: TryGetNextUri
+    nameWithType: ThreadedStoreWriterContext.TryGetNextUri
+    fullName: VDS.RDF.Writing.Contexts.ThreadedStoreWriterContext.TryGetNextUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext._prettyPrint
+  commentId: F:VDS.RDF.Writing.Contexts.BaseStoreWriterContext._prettyPrint
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  name: _prettyPrint
+  nameWithType: BaseStoreWriterContext._prettyPrint
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext._prettyPrint
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext._hiSpeedAllowed
+  commentId: F:VDS.RDF.Writing.Contexts.BaseStoreWriterContext._hiSpeedAllowed
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  name: _hiSpeedAllowed
+  nameWithType: BaseStoreWriterContext._hiSpeedAllowed
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext._hiSpeedAllowed
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.PrettyPrint
+  commentId: P:VDS.RDF.Writing.Contexts.BaseStoreWriterContext.PrettyPrint
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  name: PrettyPrint
+  nameWithType: BaseStoreWriterContext.PrettyPrint
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.PrettyPrint
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.HighSpeedModePermitted
+  commentId: P:VDS.RDF.Writing.Contexts.BaseStoreWriterContext.HighSpeedModePermitted
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  name: HighSpeedModePermitted
+  nameWithType: BaseStoreWriterContext.HighSpeedModePermitted
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.HighSpeedModePermitted
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Store
+  commentId: P:VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Store
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  name: Store
+  nameWithType: BaseStoreWriterContext.Store
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Store
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Output
+  commentId: P:VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Output
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  name: Output
+  nameWithType: BaseStoreWriterContext.Output
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.Output
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.String)
+  commentId: M:VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.String)
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  isExternal: true
+  name: FormatUri(String)
+  nameWithType: BaseStoreWriterContext.FormatUri(String)
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.String)
+    name: FormatUri
+    nameWithType: BaseStoreWriterContext.FormatUri
+    fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.String)
+    name: FormatUri
+    nameWithType: BaseStoreWriterContext.FormatUri
+    fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.Uri)
+  commentId: M:VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.Uri)
+  parent: VDS.RDF.Writing.Contexts.BaseStoreWriterContext
+  isExternal: true
+  name: FormatUri(Uri)
+  nameWithType: BaseStoreWriterContext.FormatUri(Uri)
+  fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.Uri)
+    name: FormatUri
+    nameWithType: BaseStoreWriterContext.FormatUri
+    fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri(System.Uri)
+    name: FormatUri
+    nameWithType: BaseStoreWriterContext.FormatUri
+    fullName: VDS.RDF.Writing.Contexts.BaseStoreWriterContext.FormatUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<TriGWriterContext>()
+  nameWithType: Extensions.AsEnumerable<TriGWriterContext>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.Contexts.TriGWriterContext>()
+  nameWithType.vb: Extensions.AsEnumerable(Of TriGWriterContext)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.Contexts.TriGWriterContext)()
+  name.vb: AsEnumerable(Of TriGWriterContext)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<TriGWriterContext>
+    nameWithType: Extensions.AsEnumerable<TriGWriterContext>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Writing.Contexts.TriGWriterContext>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of TriGWriterContext)
+    nameWithType: Extensions.AsEnumerable(Of TriGWriterContext)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Writing.Contexts.TriGWriterContext)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext.#ctor*
+  commentId: Overload:VDS.RDF.Writing.Contexts.TriGWriterContext.#ctor
+  name: TriGWriterContext
+  nameWithType: TriGWriterContext.TriGWriterContext
+  fullName: VDS.RDF.Writing.Contexts.TriGWriterContext.TriGWriterContext
+- uid: VDS.RDF.ITripleStore
+  commentId: T:VDS.RDF.ITripleStore
+  parent: VDS.RDF
+  name: ITripleStore
+  nameWithType: ITripleStore
+  fullName: VDS.RDF.ITripleStore
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  parent: System.IO
+  isExternal: true
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel*
+  commentId: Overload:VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel
+  name: CompressionLevel
+  nameWithType: TriGWriterContext.CompressionLevel
+  fullName: VDS.RDF.Writing.Contexts.TriGWriterContext.CompressionLevel
+- uid: VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode*
+  commentId: Overload:VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode
+  name: N3CompatabilityMode
+  nameWithType: TriGWriterContext.N3CompatabilityMode
+  fullName: VDS.RDF.Writing.Contexts.TriGWriterContext.N3CompatabilityMode

@@ -1,0 +1,2754 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector
+  commentId: T:VDS.RDF.Storage.ReadWriteSparqlConnector
+  id: ReadWriteSparqlConnector
+  parent: VDS.RDF.Storage
+  children:
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(System.Uri,System.Uri)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(System.Uri,System.Uri,VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint,VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.String)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.Uri)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.ToString
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.Update(System.String)
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported
+  langs:
+  - csharp
+  - vb
+  name: ReadWriteSparqlConnector
+  nameWithType: ReadWriteSparqlConnector
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ReadWriteSparqlConnector
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 586
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nClass for connecting to any SPARQL server that provides both a query and update endpoint.\n"
+  remarks: "\n<p>\nThis class is a wrapper around a <xref href=\"VDS.RDF.Query.SparqlRemoteEndpoint\" data-throw-if-not-resolved=\"false\"></xref> and a <xref href=\"VDS.RDF.Update.SparqlRemoteUpdateEndpoint\" data-throw-if-not-resolved=\"false\"></xref>.  The former is used for the query functionality while the latter is used for the update functionality.  As updates happen via SPARQL the behaviour with respects to adding and removing blank nodes will be somewhat up to the underlying SPARQL implementation.  This connector is <strong>not</strong> able to carry out <xref href=\"VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri%2cSystem.Collections.Generic.IEnumerable%7bVDS.RDF.Triple%7d%2cSystem.Collections.Generic.IEnumerable%7bVDS.RDF.Triple%7d)\" data-throw-if-not-resolved=\"false\"></xref> operations which attempt to delete blank nodes and cannot guarantee that added blank nodes bear any relation to existing blank nodes in the store.\n</p>\n<p>\nUnlike other HTTP based connectors this connector does not derive from <xref href=\"VDS.RDF.Storage.BaseAsyncHttpConnector\" data-throw-if-not-resolved=\"false\"></xref> - if you need to specify proxy information you should do so on the SPARQL Endpoint you are wrapping either by providing endpoint instance pre-configured with the proxy settings or by accessing the endpoint via the <xref href=\"VDS.RDF.Storage.ReadWriteSparqlConnector\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint\" data-throw-if-not-resolved=\"false\"></xref> properties and programmatically adding the settings.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class ReadWriteSparqlConnector : SparqlConnector, IConfigurationSerializable, IUpdateableStorage, IQueryableStorage, IStorageProvider, IStorageCapabilities, IDisposable'
+    content.vb: >-
+      Public Class ReadWriteSparqlConnector
+          Inherits SparqlConnector
+          Implements IConfigurationSerializable, IUpdateableStorage, IQueryableStorage, IStorageProvider, IStorageCapabilities, IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.Storage.SparqlConnector
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  - VDS.RDF.Storage.IUpdateableStorage
+  - VDS.RDF.Storage.IQueryableStorage
+  - VDS.RDF.Storage.IStorageProvider
+  - VDS.RDF.Storage.IStorageCapabilities
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.Storage.SparqlConnector._endpoint
+  - VDS.RDF.Storage.SparqlConnector._mode
+  - VDS.RDF.Storage.SparqlConnector._skipLocalParsing
+  - VDS.RDF.Storage.SparqlConnector._timeout
+  - VDS.RDF.Storage.SparqlConnector.ParentServer
+  - VDS.RDF.Storage.SparqlConnector.SkipLocalParsing
+  - VDS.RDF.Storage.SparqlConnector.Endpoint
+  - VDS.RDF.Storage.SparqlConnector.Query(System.String)
+  - VDS.RDF.Storage.SparqlConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  - VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  - VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  - VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Storage.SparqlConnector.ListGraphs
+  - VDS.RDF.Storage.SparqlConnector.ListGraphsSupported
+  - VDS.RDF.Storage.SparqlConnector.IsReady
+  - VDS.RDF.Storage.SparqlConnector.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Storage.ReadWriteSparqlConnector.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint,VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint,VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  id: '#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint,VDS.RDF.Storage.SparqlConnectorLoadMethod)'
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: ReadWriteSparqlConnector(SparqlRemoteEndpoint, SparqlRemoteUpdateEndpoint, SparqlConnectorLoadMethod)
+  nameWithType: ReadWriteSparqlConnector.ReadWriteSparqlConnector(SparqlRemoteEndpoint, SparqlRemoteUpdateEndpoint, SparqlConnectorLoadMethod)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.ReadWriteSparqlConnector(VDS.RDF.Query.SparqlRemoteEndpoint, VDS.RDF.Update.SparqlRemoteUpdateEndpoint, VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 598
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection.\n"
+  example: []
+  syntax:
+    content: public ReadWriteSparqlConnector(SparqlRemoteEndpoint queryEndpoint, SparqlRemoteUpdateEndpoint updateEndpoint, SparqlConnectorLoadMethod mode)
+    parameters:
+    - id: queryEndpoint
+      type: VDS.RDF.Query.SparqlRemoteEndpoint
+      description: Query Endpoint.
+    - id: updateEndpoint
+      type: VDS.RDF.Update.SparqlRemoteUpdateEndpoint
+      description: Update Endpoint.
+    - id: mode
+      type: VDS.RDF.Storage.SparqlConnectorLoadMethod
+      description: Method for loading graphs.
+    content.vb: Public Sub New(queryEndpoint As SparqlRemoteEndpoint, updateEndpoint As SparqlRemoteUpdateEndpoint, mode As SparqlConnectorLoadMethod)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint)
+  id: '#ctor(VDS.RDF.Query.SparqlRemoteEndpoint,VDS.RDF.Update.SparqlRemoteUpdateEndpoint)'
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: ReadWriteSparqlConnector(SparqlRemoteEndpoint, SparqlRemoteUpdateEndpoint)
+  nameWithType: ReadWriteSparqlConnector.ReadWriteSparqlConnector(SparqlRemoteEndpoint, SparqlRemoteUpdateEndpoint)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.ReadWriteSparqlConnector(VDS.RDF.Query.SparqlRemoteEndpoint, VDS.RDF.Update.SparqlRemoteUpdateEndpoint)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 609
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection.\n"
+  example: []
+  syntax:
+    content: public ReadWriteSparqlConnector(SparqlRemoteEndpoint queryEndpoint, SparqlRemoteUpdateEndpoint updateEndpoint)
+    parameters:
+    - id: queryEndpoint
+      type: VDS.RDF.Query.SparqlRemoteEndpoint
+      description: Query Endpoint.
+    - id: updateEndpoint
+      type: VDS.RDF.Update.SparqlRemoteUpdateEndpoint
+      description: Update Endpoint.
+    content.vb: Public Sub New(queryEndpoint As SparqlRemoteEndpoint, updateEndpoint As SparqlRemoteUpdateEndpoint)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(System.Uri,System.Uri,VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(System.Uri,System.Uri,VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  id: '#ctor(System.Uri,System.Uri,VDS.RDF.Storage.SparqlConnectorLoadMethod)'
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: ReadWriteSparqlConnector(Uri, Uri, SparqlConnectorLoadMethod)
+  nameWithType: ReadWriteSparqlConnector.ReadWriteSparqlConnector(Uri, Uri, SparqlConnectorLoadMethod)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.ReadWriteSparqlConnector(System.Uri, System.Uri, VDS.RDF.Storage.SparqlConnectorLoadMethod)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 618
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection.\n"
+  example: []
+  syntax:
+    content: public ReadWriteSparqlConnector(Uri queryEndpoint, Uri updateEndpoint, SparqlConnectorLoadMethod mode)
+    parameters:
+    - id: queryEndpoint
+      type: System.Uri
+      description: Query Endpoint.
+    - id: updateEndpoint
+      type: System.Uri
+      description: Update Endpoint.
+    - id: mode
+      type: VDS.RDF.Storage.SparqlConnectorLoadMethod
+      description: Method for loading graphs.
+    content.vb: Public Sub New(queryEndpoint As Uri, updateEndpoint As Uri, mode As SparqlConnectorLoadMethod)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(System.Uri,System.Uri)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor(System.Uri,System.Uri)
+  id: '#ctor(System.Uri,System.Uri)'
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: ReadWriteSparqlConnector(Uri, Uri)
+  nameWithType: ReadWriteSparqlConnector.ReadWriteSparqlConnector(Uri, Uri)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.ReadWriteSparqlConnector(System.Uri, System.Uri)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 626
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection.\n"
+  example: []
+  syntax:
+    content: public ReadWriteSparqlConnector(Uri queryEndpoint, Uri updateEndpoint)
+    parameters:
+    - id: queryEndpoint
+      type: System.Uri
+      description: Query Endpoint.
+    - id: updateEndpoint
+      type: System.Uri
+      description: Update Endpoint.
+    content.vb: Public Sub New(queryEndpoint As Uri, updateEndpoint As Uri)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+  commentId: P:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+  id: UpdateEndpoint
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: UpdateEndpoint
+  nameWithType: ReadWriteSparqlConnector.UpdateEndpoint
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateEndpoint
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 632
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets the underlying <xref href=\"VDS.RDF.Update.SparqlRemoteUpdateEndpoint\" data-throw-if-not-resolved=\"false\"></xref> which this class is a wrapper around.\n"
+  example: []
+  syntax:
+    content: >-
+      [TypeConverter(typeof(ExpandableObjectConverter))]
+
+      public SparqlRemoteUpdateEndpoint UpdateEndpoint { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Update.SparqlRemoteUpdateEndpoint
+    content.vb: >-
+      <TypeConverter(GetType(ExpandableObjectConverter))>
+
+      Public ReadOnly Property UpdateEndpoint As SparqlRemoteUpdateEndpoint
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint*
+  attributes:
+  - type: System.ComponentModel.TypeConverterAttribute
+    ctor: System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: System.ComponentModel.ExpandableObjectConverter
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout
+  commentId: P:VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout
+  id: Timeout
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: ReadWriteSparqlConnector.Timeout
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Timeout
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 644
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets/Sets the HTTP Timeout in milliseconds used for communicating with the SPARQL Endpoint.\n"
+  example: []
+  syntax:
+    content: public override int Timeout { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Property Timeout As Integer
+  overridden: VDS.RDF.Storage.SparqlConnector.Timeout
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported
+  commentId: P:VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported
+  id: DeleteSupported
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: DeleteSupported
+  nameWithType: ReadWriteSparqlConnector.DeleteSupported
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteSupported
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 661
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets that deleting graphs is supported.\n"
+  example: []
+  syntax:
+    content: public override bool DeleteSupported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property DeleteSupported As Boolean
+  overridden: VDS.RDF.Storage.SparqlConnector.DeleteSupported
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported*
+  implements:
+  - VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly
+  commentId: P:VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly
+  id: IsReadOnly
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: ReadWriteSparqlConnector.IsReadOnly
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsReadOnly
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 672
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets that the store is not read-only.\n"
+  example: []
+  syntax:
+    content: public override bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property IsReadOnly As Boolean
+  overridden: VDS.RDF.Storage.SparqlConnector.IsReadOnly
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly*
+  implements:
+  - VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour
+  commentId: P:VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour
+  id: IOBehaviour
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: IOBehaviour
+  nameWithType: ReadWriteSparqlConnector.IOBehaviour
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IOBehaviour
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 683
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets the IO behaviour for the store.\n"
+  example: []
+  syntax:
+    content: public override IOBehaviour IOBehaviour { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Storage.IOBehaviour
+    content.vb: Public Overrides ReadOnly Property IOBehaviour As IOBehaviour
+  overridden: VDS.RDF.Storage.SparqlConnector.IOBehaviour
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour*
+  implements:
+  - VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported
+  commentId: P:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported
+  id: UpdateSupported
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: UpdateSupported
+  nameWithType: ReadWriteSparqlConnector.UpdateSupported
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateSupported
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 694
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets that triple level updates are supported, see the remarks section of the <xref href=\"VDS.RDF.Storage.ReadWriteSparqlConnector\" data-throw-if-not-resolved=\"false\"></xref> for exactly what is and isn&apos;t supported.\n"
+  example: []
+  syntax:
+    content: public override bool UpdateSupported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property UpdateSupported As Boolean
+  overridden: VDS.RDF.Storage.SparqlConnector.UpdateSupported
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported*
+  implements:
+  - VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.String)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.String)
+  id: DeleteGraph(System.String)
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: DeleteGraph(String)
+  nameWithType: ReadWriteSparqlConnector.DeleteGraph(String)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 706
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nDeletes a graph from the store.\n"
+  example: []
+  syntax:
+    content: public override void DeleteGraph(string graphUri)
+    parameters:
+    - id: graphUri
+      type: System.String
+      description: URI of the graph to delete.
+    content.vb: Public Overrides Sub DeleteGraph(graphUri As String)
+  overridden: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.String)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph*
+  implements:
+  - VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.Uri)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.Uri)
+  id: DeleteGraph(System.Uri)
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: DeleteGraph(Uri)
+  nameWithType: ReadWriteSparqlConnector.DeleteGraph(Uri)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 715
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nDeletes a graph from the store.\n"
+  example: []
+  syntax:
+    content: public override void DeleteGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: URI of the graph to delete.
+    content.vb: Public Overrides Sub DeleteGraph(graphUri As Uri)
+  overridden: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.Uri)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph*
+  implements:
+  - VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  id: SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: SaveGraph(IGraph)
+  nameWithType: ReadWriteSparqlConnector.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SaveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 731
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nSaves a graph to the store.\n"
+  example: []
+  syntax:
+    content: public override void SaveGraph(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to save.
+    content.vb: Public Overrides Sub SaveGraph(g As IGraph)
+  overridden: VDS.RDF.Storage.SparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph*
+  implements:
+  - VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  id: UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: ReadWriteSparqlConnector.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 773
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nUpdates a graph in the store.\n"
+  example: []
+  syntax:
+    content: public override void UpdateGraph(string graphUri, IEnumerable<Triple> additions, IEnumerable<Triple> removals)
+    parameters:
+    - id: graphUri
+      type: System.String
+      description: URI of the graph to update.
+    - id: additions
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to add.
+    - id: removals
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to remove.
+    content.vb: Public Overrides Sub UpdateGraph(graphUri As String, additions As IEnumerable(Of Triple), removals As IEnumerable(Of Triple))
+  overridden: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph*
+  implements:
+  - VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  nameWithType.vb: ReadWriteSparqlConnector.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  id: UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: ReadWriteSparqlConnector.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 784
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nUpdates a graph in the store.\n"
+  example: []
+  syntax:
+    content: public override void UpdateGraph(Uri graphUri, IEnumerable<Triple> additions, IEnumerable<Triple> removals)
+    parameters:
+    - id: graphUri
+      type: System.Uri
+      description: URI of the graph to update.
+    - id: additions
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to add.
+    - id: removals
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: Triples to remove.
+    content.vb: Public Overrides Sub UpdateGraph(graphUri As Uri, additions As IEnumerable(Of Triple), removals As IEnumerable(Of Triple))
+  overridden: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph*
+  implements:
+  - VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  nameWithType.vb: ReadWriteSparqlConnector.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.Update(System.String)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.Update(System.String)
+  id: Update(System.String)
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: Update(String)
+  nameWithType: ReadWriteSparqlConnector.Update(String)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.Update(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Update
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 850
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nMakes a SPARQL Update against the store.\n"
+  example: []
+  syntax:
+    content: public void Update(string sparqlUpdate)
+    parameters:
+    - id: sparqlUpdate
+      type: System.String
+      description: SPARQL Update.
+    content.vb: Public Sub Update(sparqlUpdate As String)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.Update*
+  implements:
+  - VDS.RDF.Storage.IUpdateableStorage.Update(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.ToString
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.ToString
+  id: ToString
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ReadWriteSparqlConnector.ToString()
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 872
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets a String which gives details of the Connection.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: VDS.RDF.Storage.SparqlConnector.ToString
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  id: SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Storage.ReadWriteSparqlConnector
+  langs:
+  - csharp
+  - vb
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: ReadWriteSparqlConnector.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SparqlConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SerializeConfiguration
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SparqlConnector.cs
+    startLine: 881
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nSerializes the connection&apos;s configuration.\n"
+  example: []
+  syntax:
+    content: public override void SerializeConfiguration(ConfigurationSerializationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Configuration.ConfigurationSerializationContext
+      description: Configuration Serialization Context.
+    content.vb: Public Overrides Sub SerializeConfiguration(context As ConfigurationSerializationContext)
+  overridden: VDS.RDF.Storage.SparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  overload: VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.SparqlRemoteEndpoint
+  commentId: T:VDS.RDF.Query.SparqlRemoteEndpoint
+  parent: VDS.RDF.Query
+  name: SparqlRemoteEndpoint
+  nameWithType: SparqlRemoteEndpoint
+  fullName: VDS.RDF.Query.SparqlRemoteEndpoint
+- uid: VDS.RDF.Update.SparqlRemoteUpdateEndpoint
+  commentId: T:VDS.RDF.Update.SparqlRemoteUpdateEndpoint
+  parent: VDS.RDF.Update
+  name: SparqlRemoteUpdateEndpoint
+  nameWithType: SparqlRemoteUpdateEndpoint
+  fullName: VDS.RDF.Update.SparqlRemoteUpdateEndpoint
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: IStorageProvider.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: IStorageProvider.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector
+  commentId: T:VDS.RDF.Storage.BaseAsyncHttpConnector
+  parent: VDS.RDF.Storage
+  name: BaseAsyncHttpConnector
+  nameWithType: BaseAsyncHttpConnector
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector
+  commentId: T:VDS.RDF.Storage.ReadWriteSparqlConnector
+  name: ReadWriteSparqlConnector
+  nameWithType: ReadWriteSparqlConnector
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+  commentId: P:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+  isExternal: true
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Storage.SparqlConnector
+  commentId: T:VDS.RDF.Storage.SparqlConnector
+  parent: VDS.RDF.Storage
+  name: SparqlConnector
+  nameWithType: SparqlConnector
+  fullName: VDS.RDF.Storage.SparqlConnector
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: VDS.RDF.Storage.IUpdateableStorage
+  commentId: T:VDS.RDF.Storage.IUpdateableStorage
+  parent: VDS.RDF.Storage
+  name: IUpdateableStorage
+  nameWithType: IUpdateableStorage
+  fullName: VDS.RDF.Storage.IUpdateableStorage
+- uid: VDS.RDF.Storage.IQueryableStorage
+  commentId: T:VDS.RDF.Storage.IQueryableStorage
+  parent: VDS.RDF.Storage
+  name: IQueryableStorage
+  nameWithType: IQueryableStorage
+  fullName: VDS.RDF.Storage.IQueryableStorage
+- uid: VDS.RDF.Storage.IStorageProvider
+  commentId: T:VDS.RDF.Storage.IStorageProvider
+  parent: VDS.RDF.Storage
+  name: IStorageProvider
+  nameWithType: IStorageProvider
+  fullName: VDS.RDF.Storage.IStorageProvider
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  parent: VDS.RDF.Storage
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Storage.SparqlConnector._endpoint
+  commentId: F:VDS.RDF.Storage.SparqlConnector._endpoint
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: _endpoint
+  nameWithType: SparqlConnector._endpoint
+  fullName: VDS.RDF.Storage.SparqlConnector._endpoint
+- uid: VDS.RDF.Storage.SparqlConnector._mode
+  commentId: F:VDS.RDF.Storage.SparqlConnector._mode
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: _mode
+  nameWithType: SparqlConnector._mode
+  fullName: VDS.RDF.Storage.SparqlConnector._mode
+- uid: VDS.RDF.Storage.SparqlConnector._skipLocalParsing
+  commentId: F:VDS.RDF.Storage.SparqlConnector._skipLocalParsing
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: _skipLocalParsing
+  nameWithType: SparqlConnector._skipLocalParsing
+  fullName: VDS.RDF.Storage.SparqlConnector._skipLocalParsing
+- uid: VDS.RDF.Storage.SparqlConnector._timeout
+  commentId: F:VDS.RDF.Storage.SparqlConnector._timeout
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: _timeout
+  nameWithType: SparqlConnector._timeout
+  fullName: VDS.RDF.Storage.SparqlConnector._timeout
+- uid: VDS.RDF.Storage.SparqlConnector.ParentServer
+  commentId: P:VDS.RDF.Storage.SparqlConnector.ParentServer
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: ParentServer
+  nameWithType: SparqlConnector.ParentServer
+  fullName: VDS.RDF.Storage.SparqlConnector.ParentServer
+- uid: VDS.RDF.Storage.SparqlConnector.SkipLocalParsing
+  commentId: P:VDS.RDF.Storage.SparqlConnector.SkipLocalParsing
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: SkipLocalParsing
+  nameWithType: SparqlConnector.SkipLocalParsing
+  fullName: VDS.RDF.Storage.SparqlConnector.SkipLocalParsing
+- uid: VDS.RDF.Storage.SparqlConnector.Endpoint
+  commentId: P:VDS.RDF.Storage.SparqlConnector.Endpoint
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: Endpoint
+  nameWithType: SparqlConnector.Endpoint
+  fullName: VDS.RDF.Storage.SparqlConnector.Endpoint
+- uid: VDS.RDF.Storage.SparqlConnector.Query(System.String)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.Query(System.String)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: Query(String)
+  nameWithType: SparqlConnector.Query(String)
+  fullName: VDS.RDF.Storage.SparqlConnector.Query(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.Query(System.String)
+    name: Query
+    nameWithType: SparqlConnector.Query
+    fullName: VDS.RDF.Storage.SparqlConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.Query(System.String)
+    name: Query
+    nameWithType: SparqlConnector.Query
+    fullName: VDS.RDF.Storage.SparqlConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: Query(IRdfHandler, ISparqlResultsHandler, String)
+  nameWithType: SparqlConnector.Query(IRdfHandler, ISparqlResultsHandler, String)
+  fullName: VDS.RDF.Storage.SparqlConnector.Query(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+    name: Query
+    nameWithType: SparqlConnector.Query
+    fullName: VDS.RDF.Storage.SparqlConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+    name: Query
+    nameWithType: SparqlConnector.Query
+    fullName: VDS.RDF.Storage.SparqlConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: LoadGraph(IGraph, Uri)
+  nameWithType: SparqlConnector.LoadGraph(IGraph, Uri)
+  fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, Uri)
+  nameWithType: SparqlConnector.LoadGraph(IRdfHandler, Uri)
+  fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: LoadGraph(IGraph, String)
+  nameWithType: SparqlConnector.LoadGraph(IGraph, String)
+  fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, String)
+  nameWithType: SparqlConnector.LoadGraph(IRdfHandler, String)
+  fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: SparqlConnector.LoadGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.ListGraphs
+  commentId: M:VDS.RDF.Storage.SparqlConnector.ListGraphs
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: ListGraphs()
+  nameWithType: SparqlConnector.ListGraphs()
+  fullName: VDS.RDF.Storage.SparqlConnector.ListGraphs()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.ListGraphs
+    name: ListGraphs
+    nameWithType: SparqlConnector.ListGraphs
+    fullName: VDS.RDF.Storage.SparqlConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.ListGraphs
+    name: ListGraphs
+    nameWithType: SparqlConnector.ListGraphs
+    fullName: VDS.RDF.Storage.SparqlConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.SparqlConnector.ListGraphsSupported
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: ListGraphsSupported
+  nameWithType: SparqlConnector.ListGraphsSupported
+  fullName: VDS.RDF.Storage.SparqlConnector.ListGraphsSupported
+- uid: VDS.RDF.Storage.SparqlConnector.IsReady
+  commentId: P:VDS.RDF.Storage.SparqlConnector.IsReady
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: IsReady
+  nameWithType: SparqlConnector.IsReady
+  fullName: VDS.RDF.Storage.SparqlConnector.IsReady
+- uid: VDS.RDF.Storage.SparqlConnector.Dispose
+  commentId: M:VDS.RDF.Storage.SparqlConnector.Dispose
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: Dispose()
+  nameWithType: SparqlConnector.Dispose()
+  fullName: VDS.RDF.Storage.SparqlConnector.Dispose()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.Dispose
+    name: Dispose
+    nameWithType: SparqlConnector.Dispose
+    fullName: VDS.RDF.Storage.SparqlConnector.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.Dispose
+    name: Dispose
+    nameWithType: SparqlConnector.Dispose
+    fullName: VDS.RDF.Storage.SparqlConnector.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<ReadWriteSparqlConnector>()
+  nameWithType: Extensions.AsEnumerable<ReadWriteSparqlConnector>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.ReadWriteSparqlConnector>()
+  nameWithType.vb: Extensions.AsEnumerable(Of ReadWriteSparqlConnector)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.ReadWriteSparqlConnector)()
+  name.vb: AsEnumerable(Of ReadWriteSparqlConnector)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<ReadWriteSparqlConnector>
+    nameWithType: Extensions.AsEnumerable<ReadWriteSparqlConnector>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.ReadWriteSparqlConnector>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of ReadWriteSparqlConnector)
+    nameWithType: Extensions.AsEnumerable(Of ReadWriteSparqlConnector)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.ReadWriteSparqlConnector)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: VDS.RDF.Update
+  commentId: N:VDS.RDF.Update
+  name: VDS.RDF.Update
+  nameWithType: VDS.RDF.Update
+  fullName: VDS.RDF.Update
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.#ctor
+  name: ReadWriteSparqlConnector
+  nameWithType: ReadWriteSparqlConnector.ReadWriteSparqlConnector
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.ReadWriteSparqlConnector
+- uid: VDS.RDF.Storage.SparqlConnectorLoadMethod
+  commentId: T:VDS.RDF.Storage.SparqlConnectorLoadMethod
+  parent: VDS.RDF.Storage
+  name: SparqlConnectorLoadMethod
+  nameWithType: SparqlConnectorLoadMethod
+  fullName: VDS.RDF.Storage.SparqlConnectorLoadMethod
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+  name: UpdateEndpoint
+  nameWithType: ReadWriteSparqlConnector.UpdateEndpoint
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateEndpoint
+- uid: VDS.RDF.Storage.SparqlConnector.Timeout
+  commentId: P:VDS.RDF.Storage.SparqlConnector.Timeout
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: Timeout
+  nameWithType: SparqlConnector.Timeout
+  fullName: VDS.RDF.Storage.SparqlConnector.Timeout
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout
+  name: Timeout
+  nameWithType: ReadWriteSparqlConnector.Timeout
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.Timeout
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Storage.SparqlConnector.DeleteSupported
+  commentId: P:VDS.RDF.Storage.SparqlConnector.DeleteSupported
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: DeleteSupported
+  nameWithType: SparqlConnector.DeleteSupported
+  fullName: VDS.RDF.Storage.SparqlConnector.DeleteSupported
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported
+  name: DeleteSupported
+  nameWithType: ReadWriteSparqlConnector.DeleteSupported
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: DeleteSupported
+  nameWithType: IStorageCapabilities.DeleteSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Storage.SparqlConnector.IsReadOnly
+  commentId: P:VDS.RDF.Storage.SparqlConnector.IsReadOnly
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: IsReadOnly
+  nameWithType: SparqlConnector.IsReadOnly
+  fullName: VDS.RDF.Storage.SparqlConnector.IsReadOnly
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly
+  name: IsReadOnly
+  nameWithType: ReadWriteSparqlConnector.IsReadOnly
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.IsReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IsReadOnly
+  nameWithType: IStorageCapabilities.IsReadOnly
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+- uid: VDS.RDF.Storage.SparqlConnector.IOBehaviour
+  commentId: P:VDS.RDF.Storage.SparqlConnector.IOBehaviour
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: IOBehaviour
+  nameWithType: SparqlConnector.IOBehaviour
+  fullName: VDS.RDF.Storage.SparqlConnector.IOBehaviour
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour
+  name: IOBehaviour
+  nameWithType: ReadWriteSparqlConnector.IOBehaviour
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.IOBehaviour
+- uid: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: IOBehaviour
+  nameWithType: IStorageCapabilities.IOBehaviour
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+- uid: VDS.RDF.Storage.IOBehaviour
+  commentId: T:VDS.RDF.Storage.IOBehaviour
+  parent: VDS.RDF.Storage
+  name: IOBehaviour
+  nameWithType: IOBehaviour
+  fullName: VDS.RDF.Storage.IOBehaviour
+- uid: VDS.RDF.Storage.SparqlConnector.UpdateSupported
+  commentId: P:VDS.RDF.Storage.SparqlConnector.UpdateSupported
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: UpdateSupported
+  nameWithType: SparqlConnector.UpdateSupported
+  fullName: VDS.RDF.Storage.SparqlConnector.UpdateSupported
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported
+  name: UpdateSupported
+  nameWithType: ReadWriteSparqlConnector.UpdateSupported
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: UpdateSupported
+  nameWithType: IStorageCapabilities.UpdateSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+- uid: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.String)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.String)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: DeleteGraph(String)
+  nameWithType: SparqlConnector.DeleteGraph(String)
+  fullName: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: SparqlConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: SparqlConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph
+  name: DeleteGraph
+  nameWithType: ReadWriteSparqlConnector.DeleteGraph
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.DeleteGraph
+- uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: DeleteGraph(String)
+  nameWithType: IStorageProvider.DeleteGraph(String)
+  fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.Uri)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.Uri)
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: DeleteGraph(Uri)
+  nameWithType: SparqlConnector.DeleteGraph(Uri)
+  fullName: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: SparqlConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: SparqlConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: DeleteGraph(Uri)
+  nameWithType: IStorageProvider.DeleteGraph(Uri)
+  fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: IStorageProvider.DeleteGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: SaveGraph(IGraph)
+  nameWithType: SparqlConnector.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.SparqlConnector.SaveGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: SparqlConnector.SaveGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: SparqlConnector.SaveGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph
+  name: SaveGraph
+  nameWithType: ReadWriteSparqlConnector.SaveGraph
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.SaveGraph
+- uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.IStorageProvider
+  name: SaveGraph(IGraph)
+  nameWithType: IStorageProvider.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: IStorageProvider.SaveGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: IStorageProvider.SaveGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: SparqlConnector.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: SparqlConnector.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: SparqlConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: SparqlConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph
+  name: UpdateGraph
+  nameWithType: ReadWriteSparqlConnector.UpdateGraph
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.UpdateGraph
+- uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.IStorageProvider
+  isExternal: true
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: IStorageProvider.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: IStorageProvider.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: IStorageProvider.UpdateGraph
+    fullName: VDS.RDF.Storage.IStorageProvider.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Triple>
+  nameWithType: IEnumerable<Triple>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerable(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple)
+  name.vb: IEnumerable(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.SparqlConnector
+  isExternal: true
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: SparqlConnector.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: SparqlConnector.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: SparqlConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: SparqlConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.SparqlConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.Update*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.Update
+  name: Update
+  nameWithType: ReadWriteSparqlConnector.Update
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.Update
+- uid: VDS.RDF.Storage.IUpdateableStorage.Update(System.String)
+  commentId: M:VDS.RDF.Storage.IUpdateableStorage.Update(System.String)
+  parent: VDS.RDF.Storage.IUpdateableStorage
+  isExternal: true
+  name: Update(String)
+  nameWithType: IUpdateableStorage.Update(String)
+  fullName: VDS.RDF.Storage.IUpdateableStorage.Update(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IUpdateableStorage.Update(System.String)
+    name: Update
+    nameWithType: IUpdateableStorage.Update
+    fullName: VDS.RDF.Storage.IUpdateableStorage.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IUpdateableStorage.Update(System.String)
+    name: Update
+    nameWithType: IUpdateableStorage.Update
+    fullName: VDS.RDF.Storage.IUpdateableStorage.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SparqlConnector.ToString
+  commentId: M:VDS.RDF.Storage.SparqlConnector.ToString
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: ToString()
+  nameWithType: SparqlConnector.ToString()
+  fullName: VDS.RDF.Storage.SparqlConnector.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.ToString
+    name: ToString
+    nameWithType: SparqlConnector.ToString
+    fullName: VDS.RDF.Storage.SparqlConnector.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.ToString
+    name: ToString
+    nameWithType: SparqlConnector.ToString
+    fullName: VDS.RDF.Storage.SparqlConnector.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.ToString*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.ToString
+  name: ToString
+  nameWithType: ReadWriteSparqlConnector.ToString
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.ToString
+- uid: VDS.RDF.Storage.SparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Storage.SparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Storage.SparqlConnector
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: SparqlConnector.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Storage.SparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: SparqlConnector.SerializeConfiguration
+    fullName: VDS.RDF.Storage.SparqlConnector.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SparqlConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: SparqlConnector.SerializeConfiguration
+    fullName: VDS.RDF.Storage.SparqlConnector.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration*
+  commentId: Overload:VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration
+  name: SerializeConfiguration
+  nameWithType: ReadWriteSparqlConnector.SerializeConfiguration
+  fullName: VDS.RDF.Storage.ReadWriteSparqlConnector.SerializeConfiguration
+- uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+  commentId: T:VDS.RDF.Configuration.ConfigurationSerializationContext
+  parent: VDS.RDF.Configuration
+  name: ConfigurationSerializationContext
+  nameWithType: ConfigurationSerializationContext
+  fullName: VDS.RDF.Configuration.ConfigurationSerializationContext

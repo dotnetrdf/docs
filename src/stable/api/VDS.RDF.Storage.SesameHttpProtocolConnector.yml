@@ -1,0 +1,3978 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.SesameHttpProtocolConnector
+  commentId: T:VDS.RDF.Storage.SesameHttpProtocolConnector
+  id: SesameHttpProtocolConnector
+  parent: VDS.RDF.Storage
+  children:
+  - VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String)
+  - VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.Net.IWebProxy)
+  - VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.String,System.String)
+  - VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.String,System.String,System.Net.IWebProxy)
+  langs:
+  - csharp
+  - vb
+  name: SesameHttpProtocolConnector
+  nameWithType: SesameHttpProtocolConnector
+  fullName: VDS.RDF.Storage.SesameHttpProtocolConnector
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SesameHttpProtocolConnector
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+    startLine: 1207
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nConnector for connecting to a Store that supports the Sesame 2.0 HTTP Communication protocol.\n"
+  remarks: "\nActs as a synonym for whatever the latest version of the Sesame HTTP Protocol that is supported by dotNetRDF might be.  Currently this is Version 6 which includes SPARQL Update support (Sesame 2.4+ required).\n"
+  example: []
+  syntax:
+    content: 'public class SesameHttpProtocolConnector : SesameHttpProtocolVersion6Connector, IAsyncQueryableStorage, IAsyncStorageProvider, IConfigurationSerializable, IUpdateableStorage, IQueryableStorage, IStorageProvider, IStorageCapabilities, IDisposable'
+    content.vb: >-
+      Public Class SesameHttpProtocolConnector
+          Inherits SesameHttpProtocolVersion6Connector
+          Implements IAsyncQueryableStorage, IAsyncStorageProvider, IConfigurationSerializable, IUpdateableStorage, IQueryableStorage, IStorageProvider, IStorageCapabilities, IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.Storage.BaseHttpConnector
+  - VDS.RDF.Storage.BaseAsyncHttpConnector
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  - VDS.RDF.Storage.SesameHttpProtocolVersion5Connector
+  - VDS.RDF.Storage.SesameHttpProtocolVersion6Connector
+  implements:
+  - VDS.RDF.Storage.IAsyncQueryableStorage
+  - VDS.RDF.Storage.IAsyncStorageProvider
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  - VDS.RDF.Storage.IUpdateableStorage
+  - VDS.RDF.Storage.IQueryableStorage
+  - VDS.RDF.Storage.IStorageProvider
+  - VDS.RDF.Storage.IStorageCapabilities
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String)
+  - VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._baseUri
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._store
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._repositoriesPrefix
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._queryPath
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._updatePath
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._fullContextEncoding
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._postAllQueries
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector._server
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.BaseUri
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.RepositoryName
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IOBehaviour
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateSupported
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteSupported
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphsSupported
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReady
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReadOnly
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ParentServer
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery(System.String)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.Uri)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.AsyncParentServer
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString
+  - VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfHandler,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph(System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync(System.Net.HttpWebRequest,System.Boolean,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence(System.Collections.Generic.IEnumerable{System.Net.HttpWebRequest},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  - VDS.RDF.Storage.BaseHttpConnector.Proxy
+  - VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+  - VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+  - VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  - VDS.RDF.Storage.BaseHttpConnector.Timeout
+  - VDS.RDF.Storage.BaseHttpConnector.Username
+  - VDS.RDF.Storage.BaseHttpConnector.Password
+  - VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  - VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+  - VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Storage.SesameHttpProtocolConnector.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String)
+  commentId: M:VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: VDS.RDF.Storage.SesameHttpProtocolConnector
+  langs:
+  - csharp
+  - vb
+  name: SesameHttpProtocolConnector(String, String)
+  nameWithType: SesameHttpProtocolConnector.SesameHttpProtocolConnector(String, String)
+  fullName: VDS.RDF.Storage.SesameHttpProtocolConnector.SesameHttpProtocolConnector(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+    startLine: 1215
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection to a Sesame HTTP Protocol supporting Store.\n"
+  example: []
+  syntax:
+    content: public SesameHttpProtocolConnector(string baseUri, string storeID)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Store.
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    content.vb: Public Sub New(baseUri As String, storeID As String)
+  overload: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.String,System.String)
+  commentId: M:VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String)'
+  parent: VDS.RDF.Storage.SesameHttpProtocolConnector
+  langs:
+  - csharp
+  - vb
+  name: SesameHttpProtocolConnector(String, String, String, String)
+  nameWithType: SesameHttpProtocolConnector.SesameHttpProtocolConnector(String, String, String, String)
+  fullName: VDS.RDF.Storage.SesameHttpProtocolConnector.SesameHttpProtocolConnector(System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+    startLine: 1225
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection to a Sesame HTTP Protocol supporting Store.\n"
+  example: []
+  syntax:
+    content: public SesameHttpProtocolConnector(string baseUri, string storeID, string username, string password)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Store.
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    - id: username
+      type: System.String
+      description: Username to use for requests that require authentication.
+    - id: password
+      type: System.String
+      description: Password to use for requests that require authentication.
+    content.vb: Public Sub New(baseUri As String, storeID As String, username As String, password As String)
+  overload: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.Net.IWebProxy)
+  commentId: M:VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.Net.IWebProxy)
+  id: '#ctor(System.String,System.String,System.Net.IWebProxy)'
+  parent: VDS.RDF.Storage.SesameHttpProtocolConnector
+  langs:
+  - csharp
+  - vb
+  name: SesameHttpProtocolConnector(String, String, IWebProxy)
+  nameWithType: SesameHttpProtocolConnector.SesameHttpProtocolConnector(String, String, IWebProxy)
+  fullName: VDS.RDF.Storage.SesameHttpProtocolConnector.SesameHttpProtocolConnector(System.String, System.String, System.Net.IWebProxy)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+    startLine: 1234
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection to a Sesame HTTP Protocol supporting Store.\n"
+  example: []
+  syntax:
+    content: public SesameHttpProtocolConnector(string baseUri, string storeID, IWebProxy proxy)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Store.
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    - id: proxy
+      type: System.Net.IWebProxy
+      description: Proxy Server.
+    content.vb: Public Sub New(baseUri As String, storeID As String, proxy As IWebProxy)
+  overload: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.String,System.String,System.Net.IWebProxy)
+  commentId: M:VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor(System.String,System.String,System.String,System.String,System.Net.IWebProxy)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.Net.IWebProxy)'
+  parent: VDS.RDF.Storage.SesameHttpProtocolConnector
+  langs:
+  - csharp
+  - vb
+  name: SesameHttpProtocolConnector(String, String, String, String, IWebProxy)
+  nameWithType: SesameHttpProtocolConnector.SesameHttpProtocolConnector(String, String, String, String, IWebProxy)
+  fullName: VDS.RDF.Storage.SesameHttpProtocolConnector.SesameHttpProtocolConnector(System.String, System.String, System.String, System.String, System.Net.IWebProxy)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/SesameHTTPProtocolConnector.cs
+    startLine: 1245
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new connection to a Sesame HTTP Protocol supporting Store.\n"
+  example: []
+  syntax:
+    content: public SesameHttpProtocolConnector(string baseUri, string storeID, string username, string password, IWebProxy proxy)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Store.
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    - id: username
+      type: System.String
+      description: Username to use for requests that require authentication.
+    - id: password
+      type: System.String
+      description: Password to use for requests that require authentication.
+    - id: proxy
+      type: System.Net.IWebProxy
+      description: Proxy Server.
+    content.vb: Public Sub New(baseUri As String, storeID As String, username As String, password As String, proxy As IWebProxy)
+  overload: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Storage.BaseHttpConnector
+  commentId: T:VDS.RDF.Storage.BaseHttpConnector
+  parent: VDS.RDF.Storage
+  name: BaseHttpConnector
+  nameWithType: BaseHttpConnector
+  fullName: VDS.RDF.Storage.BaseHttpConnector
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector
+  commentId: T:VDS.RDF.Storage.BaseAsyncHttpConnector
+  parent: VDS.RDF.Storage
+  name: BaseAsyncHttpConnector
+  nameWithType: BaseAsyncHttpConnector
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  commentId: T:VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  parent: VDS.RDF.Storage
+  name: BaseSesameHttpProtocolConnector
+  nameWithType: BaseSesameHttpProtocolConnector
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+- uid: VDS.RDF.Storage.SesameHttpProtocolVersion5Connector
+  commentId: T:VDS.RDF.Storage.SesameHttpProtocolVersion5Connector
+  parent: VDS.RDF.Storage
+  name: SesameHttpProtocolVersion5Connector
+  nameWithType: SesameHttpProtocolVersion5Connector
+  fullName: VDS.RDF.Storage.SesameHttpProtocolVersion5Connector
+- uid: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector
+  commentId: T:VDS.RDF.Storage.SesameHttpProtocolVersion6Connector
+  parent: VDS.RDF.Storage
+  name: SesameHttpProtocolVersion6Connector
+  nameWithType: SesameHttpProtocolVersion6Connector
+  fullName: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector
+- uid: VDS.RDF.Storage.IAsyncQueryableStorage
+  commentId: T:VDS.RDF.Storage.IAsyncQueryableStorage
+  parent: VDS.RDF.Storage
+  name: IAsyncQueryableStorage
+  nameWithType: IAsyncQueryableStorage
+  fullName: VDS.RDF.Storage.IAsyncQueryableStorage
+- uid: VDS.RDF.Storage.IAsyncStorageProvider
+  commentId: T:VDS.RDF.Storage.IAsyncStorageProvider
+  parent: VDS.RDF.Storage
+  name: IAsyncStorageProvider
+  nameWithType: IAsyncStorageProvider
+  fullName: VDS.RDF.Storage.IAsyncStorageProvider
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: VDS.RDF.Storage.IUpdateableStorage
+  commentId: T:VDS.RDF.Storage.IUpdateableStorage
+  parent: VDS.RDF.Storage
+  name: IUpdateableStorage
+  nameWithType: IUpdateableStorage
+  fullName: VDS.RDF.Storage.IUpdateableStorage
+- uid: VDS.RDF.Storage.IQueryableStorage
+  commentId: T:VDS.RDF.Storage.IQueryableStorage
+  parent: VDS.RDF.Storage
+  name: IQueryableStorage
+  nameWithType: IQueryableStorage
+  fullName: VDS.RDF.Storage.IQueryableStorage
+- uid: VDS.RDF.Storage.IStorageProvider
+  commentId: T:VDS.RDF.Storage.IStorageProvider
+  parent: VDS.RDF.Storage
+  name: IStorageProvider
+  nameWithType: IStorageProvider
+  fullName: VDS.RDF.Storage.IStorageProvider
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  parent: VDS.RDF.Storage
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String)
+  commentId: M:VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String)
+  parent: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector
+  isExternal: true
+  name: Update(String)
+  nameWithType: SesameHttpProtocolVersion6Connector.Update(String)
+  fullName: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String)
+    name: Update
+    nameWithType: SesameHttpProtocolVersion6Connector.Update
+    fullName: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String)
+    name: Update
+    nameWithType: SesameHttpProtocolVersion6Connector.Update
+    fullName: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector
+  isExternal: true
+  name: Update(String, AsyncStorageCallback, Object)
+  nameWithType: SesameHttpProtocolVersion6Connector.Update(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: Update
+    nameWithType: SesameHttpProtocolVersion6Connector.Update
+    fullName: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: Update
+    nameWithType: SesameHttpProtocolVersion6Connector.Update
+    fullName: VDS.RDF.Storage.SesameHttpProtocolVersion6Connector.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._baseUri
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._baseUri
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _baseUri
+  nameWithType: BaseSesameHttpProtocolConnector._baseUri
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._baseUri
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._store
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._store
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _store
+  nameWithType: BaseSesameHttpProtocolConnector._store
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._store
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._repositoriesPrefix
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._repositoriesPrefix
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _repositoriesPrefix
+  nameWithType: BaseSesameHttpProtocolConnector._repositoriesPrefix
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._repositoriesPrefix
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._queryPath
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._queryPath
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _queryPath
+  nameWithType: BaseSesameHttpProtocolConnector._queryPath
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._queryPath
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._updatePath
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._updatePath
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _updatePath
+  nameWithType: BaseSesameHttpProtocolConnector._updatePath
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._updatePath
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._fullContextEncoding
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._fullContextEncoding
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _fullContextEncoding
+  nameWithType: BaseSesameHttpProtocolConnector._fullContextEncoding
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._fullContextEncoding
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._postAllQueries
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._postAllQueries
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _postAllQueries
+  nameWithType: BaseSesameHttpProtocolConnector._postAllQueries
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._postAllQueries
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._server
+  commentId: F:VDS.RDF.Storage.BaseSesameHttpProtocolConnector._server
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: _server
+  nameWithType: BaseSesameHttpProtocolConnector._server
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector._server
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.BaseUri
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.BaseUri
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: BaseUri
+  nameWithType: BaseSesameHttpProtocolConnector.BaseUri
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.BaseUri
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.RepositoryName
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.RepositoryName
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: RepositoryName
+  nameWithType: BaseSesameHttpProtocolConnector.RepositoryName
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.RepositoryName
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IOBehaviour
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IOBehaviour
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: IOBehaviour
+  nameWithType: BaseSesameHttpProtocolConnector.IOBehaviour
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IOBehaviour
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateSupported
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateSupported
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: UpdateSupported
+  nameWithType: BaseSesameHttpProtocolConnector.UpdateSupported
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateSupported
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteSupported
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteSupported
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: DeleteSupported
+  nameWithType: BaseSesameHttpProtocolConnector.DeleteSupported
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteSupported
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphsSupported
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: ListGraphsSupported
+  nameWithType: BaseSesameHttpProtocolConnector.ListGraphsSupported
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphsSupported
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReady
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReady
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: IsReady
+  nameWithType: BaseSesameHttpProtocolConnector.IsReady
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReady
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReadOnly
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReadOnly
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: IsReadOnly
+  nameWithType: BaseSesameHttpProtocolConnector.IsReadOnly
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.IsReadOnly
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ParentServer
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ParentServer
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: ParentServer
+  nameWithType: BaseSesameHttpProtocolConnector.ParentServer
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ParentServer
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: Query(String)
+  nameWithType: BaseSesameHttpProtocolConnector.Query(String)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: Query(IRdfHandler, ISparqlResultsHandler, String)
+  nameWithType: BaseSesameHttpProtocolConnector.Query(IRdfHandler, ISparqlResultsHandler, String)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery(System.String)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery(System.String)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: EscapeQuery(String)
+  nameWithType: BaseSesameHttpProtocolConnector.EscapeQuery(String)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery(System.String)
+    name: EscapeQuery
+    nameWithType: BaseSesameHttpProtocolConnector.EscapeQuery
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery(System.String)
+    name: EscapeQuery
+    nameWithType: BaseSesameHttpProtocolConnector.EscapeQuery
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.EscapeQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: GetSaveContentType()
+  nameWithType: BaseSesameHttpProtocolConnector.GetSaveContentType()
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType
+    name: GetSaveContentType
+    nameWithType: BaseSesameHttpProtocolConnector.GetSaveContentType
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType
+    name: GetSaveContentType
+    nameWithType: BaseSesameHttpProtocolConnector.GetSaveContentType
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.GetSaveContentType
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: CreateRdfWriter()
+  nameWithType: BaseSesameHttpProtocolConnector.CreateRdfWriter()
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter
+    name: CreateRdfWriter
+    nameWithType: BaseSesameHttpProtocolConnector.CreateRdfWriter
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter
+    name: CreateRdfWriter
+    nameWithType: BaseSesameHttpProtocolConnector.CreateRdfWriter
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRdfWriter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: LoadGraph(IGraph, Uri)
+  nameWithType: BaseSesameHttpProtocolConnector.LoadGraph(IGraph, Uri)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, Uri)
+  nameWithType: BaseSesameHttpProtocolConnector.LoadGraph(IRdfHandler, Uri)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: LoadGraph(IGraph, String)
+  nameWithType: BaseSesameHttpProtocolConnector.LoadGraph(IGraph, String)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, String)
+  nameWithType: BaseSesameHttpProtocolConnector.LoadGraph(IRdfHandler, String)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: SaveGraph(IGraph)
+  nameWithType: BaseSesameHttpProtocolConnector.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: BaseSesameHttpProtocolConnector.SaveGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: BaseSesameHttpProtocolConnector.SaveGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: BaseSesameHttpProtocolConnector.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: BaseSesameHttpProtocolConnector.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.Uri)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.Uri)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: DeleteGraph(Uri)
+  nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph(Uri)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: DeleteGraph(String)
+  nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph(String)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: ListGraphs()
+  nameWithType: BaseSesameHttpProtocolConnector.ListGraphs()
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs
+    name: ListGraphs
+    nameWithType: BaseSesameHttpProtocolConnector.ListGraphs
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs
+    name: ListGraphs
+    nameWithType: BaseSesameHttpProtocolConnector.ListGraphs
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.AsyncParentServer
+  commentId: P:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.AsyncParentServer
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: AsyncParentServer
+  nameWithType: BaseSesameHttpProtocolConnector.AsyncParentServer
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.AsyncParentServer
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: SaveGraph(IGraph, AsyncStorageCallback, Object)
+  nameWithType: BaseSesameHttpProtocolConnector.SaveGraph(IGraph, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: SaveGraph
+    nameWithType: BaseSesameHttpProtocolConnector.SaveGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph(VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: SaveGraph
+    nameWithType: BaseSesameHttpProtocolConnector.SaveGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, String, AsyncStorageCallback, Object)
+  nameWithType: BaseSesameHttpProtocolConnector.LoadGraph(IRdfHandler, String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler, System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseSesameHttpProtocolConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>, AsyncStorageCallback, Object)
+  nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  nameWithType.vb: BaseSesameHttpProtocolConnector.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple), AsyncStorageCallback, Object)
+  fullName.vb: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple), AsyncStorageCallback, Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: UpdateGraph
+    nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: UpdateGraph
+    nameWithType: BaseSesameHttpProtocolConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: DeleteGraph(String, AsyncStorageCallback, Object)
+  nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteGraph
+    nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteGraph
+    nameWithType: BaseSesameHttpProtocolConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: Query(String, AsyncStorageCallback, Object)
+  nameWithType: BaseSesameHttpProtocolConnector.Query(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: Query(IRdfHandler, ISparqlResultsHandler, String, AsyncStorageCallback, Object)
+  nameWithType: BaseSesameHttpProtocolConnector.Query(IRdfHandler, ISparqlResultsHandler, String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: Query
+    nameWithType: BaseSesameHttpProtocolConnector.Query
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  isExternal: true
+  name: CreateRequest(String, String, String, Dictionary<String, String>)
+  nameWithType: BaseSesameHttpProtocolConnector.CreateRequest(String, String, String, Dictionary<String, String>)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest(System.String, System.String, System.String, System.Collections.Generic.Dictionary<System.String, System.String>)
+  nameWithType.vb: BaseSesameHttpProtocolConnector.CreateRequest(String, String, String, Dictionary(Of String, String))
+  fullName.vb: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest(System.String, System.String, System.String, System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: CreateRequest(String, String, String, Dictionary(Of String, String))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+    name: CreateRequest
+    nameWithType: BaseSesameHttpProtocolConnector.CreateRequest
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+    name: CreateRequest
+    nameWithType: BaseSesameHttpProtocolConnector.CreateRequest
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.CreateRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: Dispose()
+  nameWithType: BaseSesameHttpProtocolConnector.Dispose()
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose
+    name: Dispose
+    nameWithType: BaseSesameHttpProtocolConnector.Dispose
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose
+    name: Dispose
+    nameWithType: BaseSesameHttpProtocolConnector.Dispose
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: ToString()
+  nameWithType: BaseSesameHttpProtocolConnector.ToString()
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString
+    name: ToString
+    nameWithType: BaseSesameHttpProtocolConnector.ToString
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString
+    name: ToString
+    nameWithType: BaseSesameHttpProtocolConnector.ToString
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Storage.BaseSesameHttpProtocolConnector
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: BaseSesameHttpProtocolConnector.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: BaseSesameHttpProtocolConnector.SerializeConfiguration
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: BaseSesameHttpProtocolConnector.SerializeConfiguration
+    fullName: VDS.RDF.Storage.BaseSesameHttpProtocolConnector.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: LoadGraph(IGraph, Uri, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.LoadGraph(IGraph, Uri, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph, System.Uri, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseAsyncHttpConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseAsyncHttpConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: LoadGraph(IGraph, String, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.LoadGraph(IGraph, String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph, System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseAsyncHttpConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IGraph,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseAsyncHttpConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, Uri, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.LoadGraph(IRdfHandler, Uri, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IRdfHandler, System.Uri, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseAsyncHttpConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraph
+    nameWithType: BaseAsyncHttpConnector.LoadGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfHandler,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfHandler,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: LoadGraphAsync(HttpWebRequest, IRdfHandler, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.LoadGraphAsync(HttpWebRequest, IRdfHandler, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync(System.Net.HttpWebRequest, VDS.RDF.IRdfHandler, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfHandler,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraphAsync
+    nameWithType: BaseAsyncHttpConnector.LoadGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfHandler,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: LoadGraphAsync
+    nameWithType: BaseAsyncHttpConnector.LoadGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.LoadGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: SaveGraphAsync(HttpWebRequest, IRdfWriter, IGraph, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.SaveGraphAsync(HttpWebRequest, IRdfWriter, IGraph, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync(System.Net.HttpWebRequest, VDS.RDF.IRdfWriter, VDS.RDF.IGraph, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: SaveGraphAsync
+    nameWithType: BaseAsyncHttpConnector.SaveGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IRdfWriter
+    name: IRdfWriter
+    nameWithType: IRdfWriter
+    fullName: VDS.RDF.IRdfWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,VDS.RDF.IGraph,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: SaveGraphAsync
+    nameWithType: BaseAsyncHttpConnector.SaveGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.SaveGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IRdfWriter
+    name: IRdfWriter
+    nameWithType: IRdfWriter
+    fullName: VDS.RDF.IRdfWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  nameWithType.vb: BaseAsyncHttpConnector.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple), AsyncStorageCallback, Object)
+  fullName.vb: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple), AsyncStorageCallback, Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: UpdateGraph
+    nameWithType: BaseAsyncHttpConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: UpdateGraph
+    nameWithType: BaseAsyncHttpConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: UpdateGraphAsync(HttpWebRequest, IRdfWriter, Uri, IEnumerable<Triple>, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.UpdateGraphAsync(HttpWebRequest, IRdfWriter, Uri, IEnumerable<Triple>, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync(System.Net.HttpWebRequest, VDS.RDF.IRdfWriter, System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  nameWithType.vb: BaseAsyncHttpConnector.UpdateGraphAsync(HttpWebRequest, IRdfWriter, Uri, IEnumerable(Of Triple), AsyncStorageCallback, Object)
+  fullName.vb: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync(System.Net.HttpWebRequest, VDS.RDF.IRdfWriter, System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  name.vb: UpdateGraphAsync(HttpWebRequest, IRdfWriter, Uri, IEnumerable(Of Triple), AsyncStorageCallback, Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: UpdateGraphAsync
+    nameWithType: BaseAsyncHttpConnector.UpdateGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IRdfWriter
+    name: IRdfWriter
+    nameWithType: IRdfWriter
+    fullName: VDS.RDF.IRdfWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync(System.Net.HttpWebRequest,VDS.RDF.IRdfWriter,System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: UpdateGraphAsync
+    nameWithType: BaseAsyncHttpConnector.UpdateGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.UpdateGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.IRdfWriter
+    name: IRdfWriter
+    nameWithType: IRdfWriter
+    fullName: VDS.RDF.IRdfWriter
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph(System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph(System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: DeleteGraph(Uri, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.DeleteGraph(Uri, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph(System.Uri, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph(System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteGraph
+    nameWithType: BaseAsyncHttpConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph(System.Uri,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteGraph
+    nameWithType: BaseAsyncHttpConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync(System.Net.HttpWebRequest,System.Boolean,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync(System.Net.HttpWebRequest,System.Boolean,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: DeleteGraphAsync(HttpWebRequest, Boolean, String, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.DeleteGraphAsync(HttpWebRequest, Boolean, String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync(System.Net.HttpWebRequest, System.Boolean, System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync(System.Net.HttpWebRequest,System.Boolean,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteGraphAsync
+    nameWithType: BaseAsyncHttpConnector.DeleteGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync(System.Net.HttpWebRequest,System.Boolean,System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteGraphAsync
+    nameWithType: BaseAsyncHttpConnector.DeleteGraphAsync
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.DeleteGraphAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: ListGraphs(AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.ListGraphs(AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs(VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: ListGraphs
+    nameWithType: BaseAsyncHttpConnector.ListGraphs
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: ListGraphs
+    nameWithType: BaseAsyncHttpConnector.ListGraphs
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence(System.Collections.Generic.IEnumerable{System.Net.HttpWebRequest},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence(System.Collections.Generic.IEnumerable{System.Net.HttpWebRequest},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.BaseAsyncHttpConnector
+  isExternal: true
+  name: MakeRequestSequence(IEnumerable<HttpWebRequest>, AsyncStorageCallback, Object)
+  nameWithType: BaseAsyncHttpConnector.MakeRequestSequence(IEnumerable<HttpWebRequest>, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence(System.Collections.Generic.IEnumerable<System.Net.HttpWebRequest>, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  nameWithType.vb: BaseAsyncHttpConnector.MakeRequestSequence(IEnumerable(Of HttpWebRequest), AsyncStorageCallback, Object)
+  fullName.vb: VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence(System.Collections.Generic.IEnumerable(Of System.Net.HttpWebRequest), VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  name.vb: MakeRequestSequence(IEnumerable(Of HttpWebRequest), AsyncStorageCallback, Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence(System.Collections.Generic.IEnumerable{System.Net.HttpWebRequest},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: MakeRequestSequence
+    nameWithType: BaseAsyncHttpConnector.MakeRequestSequence
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence(System.Collections.Generic.IEnumerable{System.Net.HttpWebRequest},VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: MakeRequestSequence
+    nameWithType: BaseAsyncHttpConnector.MakeRequestSequence
+    fullName: VDS.RDF.Storage.BaseAsyncHttpConnector.MakeRequestSequence
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxy(String)
+  nameWithType: BaseHttpConnector.SetProxy(String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxy(Uri)
+  nameWithType: BaseHttpConnector.SetProxy(Uri)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.Proxy
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.Proxy
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: Proxy
+  nameWithType: BaseHttpConnector.Proxy
+  fullName: VDS.RDF.Storage.BaseHttpConnector.Proxy
+- uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: ClearProxy()
+  nameWithType: BaseHttpConnector.ClearProxy()
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxy()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+    name: ClearProxy
+    nameWithType: BaseHttpConnector.ClearProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+    name: ClearProxy
+    nameWithType: BaseHttpConnector.ClearProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxyCredentials(String, String)
+  nameWithType: BaseHttpConnector.SetProxyCredentials(String, String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxyCredentials(String, String, String)
+  nameWithType: BaseHttpConnector.SetProxyCredentials(String, String, String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: ProxyCredentials
+  nameWithType: BaseHttpConnector.ProxyCredentials
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+- uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: ClearProxyCredentials()
+  nameWithType: BaseHttpConnector.ClearProxyCredentials()
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+    name: ClearProxyCredentials
+    nameWithType: BaseHttpConnector.ClearProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+    name: ClearProxyCredentials
+    nameWithType: BaseHttpConnector.ClearProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.Timeout
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.Timeout
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: Timeout
+  nameWithType: BaseHttpConnector.Timeout
+  fullName: VDS.RDF.Storage.BaseHttpConnector.Timeout
+- uid: VDS.RDF.Storage.BaseHttpConnector.Username
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.Username
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: Username
+  nameWithType: BaseHttpConnector.Username
+  fullName: VDS.RDF.Storage.BaseHttpConnector.Username
+- uid: VDS.RDF.Storage.BaseHttpConnector.Password
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.Password
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: Password
+  nameWithType: BaseHttpConnector.Password
+  fullName: VDS.RDF.Storage.BaseHttpConnector.Password
+- uid: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: ApplyRequestOptions(HttpWebRequest)
+  nameWithType: BaseHttpConnector.ApplyRequestOptions(HttpWebRequest)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseHttpConnector.ApplyRequestOptions
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseHttpConnector.ApplyRequestOptions
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: SerializeStandardConfig(INode, ConfigurationSerializationContext)
+  nameWithType: BaseHttpConnector.SerializeStandardConfig(INode, ConfigurationSerializationContext)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode, VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeStandardConfig
+    nameWithType: BaseHttpConnector.SerializeStandardConfig
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeStandardConfig
+    nameWithType: BaseHttpConnector.SerializeStandardConfig
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetCredentials(String, String)
+  nameWithType: BaseHttpConnector.SetCredentials(String, String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseHttpConnector.SetCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseHttpConnector.SetCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.SesameHttpProtocolConnector.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SesameHttpProtocolConnector>()
+  nameWithType: Extensions.AsEnumerable<SesameHttpProtocolConnector>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.SesameHttpProtocolConnector>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SesameHttpProtocolConnector)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.SesameHttpProtocolConnector)()
+  name.vb: AsEnumerable(Of SesameHttpProtocolConnector)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SesameHttpProtocolConnector>
+    nameWithType: Extensions.AsEnumerable<SesameHttpProtocolConnector>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.SesameHttpProtocolConnector>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SesameHttpProtocolConnector)
+    nameWithType: Extensions.AsEnumerable(Of SesameHttpProtocolConnector)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.SesameHttpProtocolConnector)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor*
+  commentId: Overload:VDS.RDF.Storage.SesameHttpProtocolConnector.#ctor
+  name: SesameHttpProtocolConnector
+  nameWithType: SesameHttpProtocolConnector.SesameHttpProtocolConnector
+  fullName: VDS.RDF.Storage.SesameHttpProtocolConnector.SesameHttpProtocolConnector
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Net.IWebProxy
+  commentId: T:System.Net.IWebProxy
+  parent: System.Net
+  isExternal: true
+  name: IWebProxy
+  nameWithType: IWebProxy
+  fullName: System.Net.IWebProxy
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net

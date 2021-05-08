@@ -1,0 +1,1282 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser
+  id: SimpleVirtualAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  children:
+  - VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.#ctor(VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider{System.Int32,System.Int32})
+  - VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  langs:
+  - csharp
+  - vb
+  name: SimpleVirtualAlgebraOptimiser
+  nameWithType: SimpleVirtualAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VirtualAlgebraOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SimpleVirtualAlgebraOptimiser
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VirtualAlgebraOptimiser.cs
+    startLine: 281
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nA concrete implementation of a Virtual Algebra Optimiser where the virtual IDs are simply integers.\n"
+  example: []
+  syntax:
+    content: 'public class SimpleVirtualAlgebraOptimiser : VirtualAlgebraOptimiser<int, int>, IAlgebraOptimiser, IExpressionTransformer'
+    content.vb: >-
+      Public Class SimpleVirtualAlgebraOptimiser
+          Inherits VirtualAlgebraOptimiser(Of Integer, Integer)
+          Implements IAlgebraOptimiser, IExpressionTransformer
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  implements:
+  - VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  - VDS.RDF.Query.Expressions.IExpressionTransformer
+  inheritedMembers:
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}._provider
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.#ctor(VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider{System.Int32,System.Int32})
+  commentId: M:VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.#ctor(VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider{System.Int32,System.Int32})
+  id: '#ctor(VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider{System.Int32,System.Int32})'
+  parent: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser
+  langs:
+  - csharp
+  - vb
+  name: SimpleVirtualAlgebraOptimiser(IVirtualRdfProvider<Int32, Int32>)
+  nameWithType: SimpleVirtualAlgebraOptimiser.SimpleVirtualAlgebraOptimiser(IVirtualRdfProvider<Int32, Int32>)
+  fullName: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.SimpleVirtualAlgebraOptimiser(VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider<System.Int32, System.Int32>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VirtualAlgebraOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VirtualAlgebraOptimiser.cs
+    startLine: 288
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nCreates a new Simple Virtual Algebra Optimiser.\n"
+  example: []
+  syntax:
+    content: public SimpleVirtualAlgebraOptimiser(IVirtualRdfProvider<int, int> provider)
+    parameters:
+    - id: provider
+      type: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider{System.Int32,System.Int32}
+      description: Virtual RDF provider.
+    content.vb: Public Sub New(provider As IVirtualRdfProvider(Of Integer, Integer))
+  overload: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.#ctor*
+  nameWithType.vb: SimpleVirtualAlgebraOptimiser.SimpleVirtualAlgebraOptimiser(IVirtualRdfProvider(Of Int32, Int32))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.SimpleVirtualAlgebraOptimiser(VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider(Of System.Int32, System.Int32))
+  name.vb: SimpleVirtualAlgebraOptimiser(IVirtualRdfProvider(Of Int32, Int32))
+- uid: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  id: CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser
+  langs:
+  - csharp
+  - vb
+  name: CreateVirtualNode(Int32, INode)
+  nameWithType: SimpleVirtualAlgebraOptimiser.CreateVirtualNode(Int32, INode)
+  fullName: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode(System.Int32, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Optimisation/VirtualAlgebraOptimiser.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CreateVirtualNode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Optimisation/VirtualAlgebraOptimiser.cs
+    startLine: 297
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Optimisation
+  summary: "\nCreates a new Virtual Node using the virtual RDF provider this optimiser was instantiated with.\n"
+  example: []
+  syntax:
+    content: protected override INode CreateVirtualNode(int id, INode value)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: Virtual Node ID.
+    - id: value
+      type: VDS.RDF.INode
+      description: Node Value.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Protected Overrides Function CreateVirtualNode(id As Integer, value As INode) As INode
+  overridden: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  overload: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Optimisation
+  commentId: N:VDS.RDF.Query.Optimisation
+  name: VDS.RDF.Query.Optimisation
+  nameWithType: VDS.RDF.Query.Optimisation
+  fullName: VDS.RDF.Query.Optimisation
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  commentId: T:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  parent: VDS.RDF.Query.Optimisation
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2
+  name: VirtualAlgebraOptimiser<Int32, Int32>
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32)
+  name.vb: VirtualAlgebraOptimiser(Of Int32, Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2
+    name: VirtualAlgebraOptimiser
+    nameWithType: VirtualAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2
+    name: VirtualAlgebraOptimiser
+    nameWithType: VirtualAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  commentId: T:VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+  parent: VDS.RDF.Query.Optimisation
+  name: IAlgebraOptimiser
+  nameWithType: IAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.IAlgebraOptimiser
+- uid: VDS.RDF.Query.Expressions.IExpressionTransformer
+  commentId: T:VDS.RDF.Query.Expressions.IExpressionTransformer
+  parent: VDS.RDF.Query.Expressions
+  name: IExpressionTransformer
+  nameWithType: IExpressionTransformer
+  fullName: VDS.RDF.Query.Expressions.IExpressionTransformer
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}._provider
+  commentId: F:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}._provider
+  parent: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2._provider
+  name: _provider
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>._provider
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>._provider
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32)._provider
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32)._provider
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  parent: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  name: Optimise(ISparqlAlgebra)
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.Optimise(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32).Optimise(ISparqlAlgebra)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.Optimise
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: VirtualAlgebraOptimiser(Of Int32, Int32).Optimise
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  parent: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  name: Transform(ISparqlExpression)
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.Transform(ISparqlExpression)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32).Transform(ISparqlExpression)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: Transform
+    nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.Transform
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: Transform
+    nameWithType: VirtualAlgebraOptimiser(Of Int32, Int32).Transform
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  parent: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  name: SubstitutePrimaryExpression(ISparqlExpression)
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.SubstitutePrimaryExpression(ISparqlExpression)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32).SubstitutePrimaryExpression(ISparqlExpression)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: SubstitutePrimaryExpression
+    nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.SubstitutePrimaryExpression
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.SubstitutePrimaryExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: SubstitutePrimaryExpression
+    nameWithType: VirtualAlgebraOptimiser(Of Int32, Int32).SubstitutePrimaryExpression
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).SubstitutePrimaryExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.CreateVirtualNode(System.Int32,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.CreateVirtualNode(`0,VDS.RDF.INode)
+  name: CreateVirtualNode(Int32, INode)
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.CreateVirtualNode(Int32, INode)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.CreateVirtualNode(System.Int32, VDS.RDF.INode)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32).CreateVirtualNode(Int32, INode)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).CreateVirtualNode(System.Int32, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.CreateVirtualNode(`0,VDS.RDF.INode)
+    name: CreateVirtualNode
+    nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.CreateVirtualNode
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.CreateVirtualNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.CreateVirtualNode(`0,VDS.RDF.INode)
+    name: CreateVirtualNode
+    nameWithType: VirtualAlgebraOptimiser(Of Int32, Int32).CreateVirtualNode
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).CreateVirtualNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  name: IsApplicable(SparqlQuery)
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32).IsApplicable(SparqlQuery)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).IsApplicable(VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser(Of Int32, Int32).IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser{System.Int32,System.Int32}
+  definition: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of Int32, Int32).IsApplicable(SparqlUpdateCommandSet)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser<Int32, Int32>.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<System.Int32, System.Int32>.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser(Of Int32, Int32).IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of System.Int32, System.Int32).IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SimpleVirtualAlgebraOptimiser>()
+  nameWithType: Extensions.AsEnumerable<SimpleVirtualAlgebraOptimiser>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SimpleVirtualAlgebraOptimiser)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser)()
+  name.vb: AsEnumerable(Of SimpleVirtualAlgebraOptimiser)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SimpleVirtualAlgebraOptimiser>
+    nameWithType: Extensions.AsEnumerable<SimpleVirtualAlgebraOptimiser>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SimpleVirtualAlgebraOptimiser)
+    nameWithType: Extensions.AsEnumerable(Of SimpleVirtualAlgebraOptimiser)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2
+  commentId: T:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2
+  name: VirtualAlgebraOptimiser<TNodeID, TGraphID>
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID)
+  name.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2
+    name: VirtualAlgebraOptimiser
+    nameWithType: VirtualAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeID
+    nameWithType: TNodeID
+    fullName: TNodeID
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TGraphID
+    nameWithType: TGraphID
+    fullName: TGraphID
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2
+    name: VirtualAlgebraOptimiser
+    nameWithType: VirtualAlgebraOptimiser
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeID
+    nameWithType: TNodeID
+    fullName: TNodeID
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TGraphID
+    nameWithType: TGraphID
+    fullName: TGraphID
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Expressions
+  commentId: N:VDS.RDF.Query.Expressions
+  name: VDS.RDF.Query.Expressions
+  nameWithType: VDS.RDF.Query.Expressions
+  fullName: VDS.RDF.Query.Expressions
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2._provider
+  commentId: F:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2._provider
+  name: _provider
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>._provider
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>._provider
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID)._provider
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID)._provider
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  name: Optimise(ISparqlAlgebra)
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.Optimise(ISparqlAlgebra)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Optimise(ISparqlAlgebra)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.Optimise
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Optimise(VDS.RDF.Query.Algebra.ISparqlAlgebra)
+    name: Optimise
+    nameWithType: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Optimise
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Optimise
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+    name: ISparqlAlgebra
+    nameWithType: ISparqlAlgebra
+    fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  name: Transform(ISparqlExpression)
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.Transform(ISparqlExpression)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Transform(ISparqlExpression)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: Transform
+    nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.Transform
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.Transform(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: Transform
+    nameWithType: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Transform
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).Transform
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  name: SubstitutePrimaryExpression(ISparqlExpression)
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.SubstitutePrimaryExpression(ISparqlExpression)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).SubstitutePrimaryExpression(ISparqlExpression)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: SubstitutePrimaryExpression
+    nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.SubstitutePrimaryExpression
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.SubstitutePrimaryExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.SubstitutePrimaryExpression(VDS.RDF.Query.Expressions.ISparqlExpression)
+    name: SubstitutePrimaryExpression
+    nameWithType: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).SubstitutePrimaryExpression
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).SubstitutePrimaryExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Expressions.ISparqlExpression
+    name: ISparqlExpression
+    nameWithType: ISparqlExpression
+    fullName: VDS.RDF.Query.Expressions.ISparqlExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.CreateVirtualNode(`0,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.CreateVirtualNode(`0,VDS.RDF.INode)
+  name: CreateVirtualNode(TNodeID, INode)
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.CreateVirtualNode(TNodeID, INode)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.CreateVirtualNode(TNodeID, VDS.RDF.INode)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).CreateVirtualNode(TNodeID, INode)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).CreateVirtualNode(TNodeID, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.CreateVirtualNode(`0,VDS.RDF.INode)
+    name: CreateVirtualNode
+    nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.CreateVirtualNode
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.CreateVirtualNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TNodeID
+    nameWithType: TNodeID
+    fullName: TNodeID
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.CreateVirtualNode(`0,VDS.RDF.INode)
+    name: CreateVirtualNode
+    nameWithType: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).CreateVirtualNode
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).CreateVirtualNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TNodeID
+    nameWithType: TNodeID
+    fullName: TNodeID
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  name: IsApplicable(SparqlQuery)
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable(SparqlQuery)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable(VDS.RDF.Query.SparqlQuery)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable(SparqlQuery)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable(VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Query.SparqlQuery)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  name: IsApplicable(SparqlUpdateCommandSet)
+  nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  nameWithType.vb: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable(SparqlUpdateCommandSet)
+  fullName.vb: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser<TNodeID, TGraphID>.IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser`2.IsApplicable(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: IsApplicable
+    nameWithType: VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable
+    fullName: VDS.RDF.Query.Optimisation.VirtualAlgebraOptimiser(Of TNodeID, TGraphID).IsApplicable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.#ctor*
+  commentId: Overload:VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.#ctor
+  name: SimpleVirtualAlgebraOptimiser
+  nameWithType: SimpleVirtualAlgebraOptimiser.SimpleVirtualAlgebraOptimiser
+  fullName: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.SimpleVirtualAlgebraOptimiser
+- uid: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider{System.Int32,System.Int32}
+  commentId: T:VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider{System.Int32,System.Int32}
+  parent: VDS.RDF.Storage.Virtualisation
+  definition: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider`2
+  name: IVirtualRdfProvider<Int32, Int32>
+  nameWithType: IVirtualRdfProvider<Int32, Int32>
+  fullName: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider<System.Int32, System.Int32>
+  nameWithType.vb: IVirtualRdfProvider(Of Int32, Int32)
+  fullName.vb: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider(Of System.Int32, System.Int32)
+  name.vb: IVirtualRdfProvider(Of Int32, Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider`2
+    name: IVirtualRdfProvider
+    nameWithType: IVirtualRdfProvider
+    fullName: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider`2
+    name: IVirtualRdfProvider
+    nameWithType: IVirtualRdfProvider
+    fullName: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider`2
+  commentId: T:VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider`2
+  name: IVirtualRdfProvider<TNodeID, TGraphID>
+  nameWithType: IVirtualRdfProvider<TNodeID, TGraphID>
+  fullName: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider<TNodeID, TGraphID>
+  nameWithType.vb: IVirtualRdfProvider(Of TNodeID, TGraphID)
+  fullName.vb: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider(Of TNodeID, TGraphID)
+  name.vb: IVirtualRdfProvider(Of TNodeID, TGraphID)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider`2
+    name: IVirtualRdfProvider
+    nameWithType: IVirtualRdfProvider
+    fullName: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TNodeID
+    nameWithType: TNodeID
+    fullName: TNodeID
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TGraphID
+    nameWithType: TGraphID
+    fullName: TGraphID
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider`2
+    name: IVirtualRdfProvider
+    nameWithType: IVirtualRdfProvider
+    fullName: VDS.RDF.Storage.Virtualisation.IVirtualRdfProvider
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TNodeID
+    nameWithType: TNodeID
+    fullName: TNodeID
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TGraphID
+    nameWithType: TGraphID
+    fullName: TGraphID
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Virtualisation
+  commentId: N:VDS.RDF.Storage.Virtualisation
+  name: VDS.RDF.Storage.Virtualisation
+  nameWithType: VDS.RDF.Storage.Virtualisation
+  fullName: VDS.RDF.Storage.Virtualisation
+- uid: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode*
+  commentId: Overload:VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode
+  name: CreateVirtualNode
+  nameWithType: SimpleVirtualAlgebraOptimiser.CreateVirtualNode
+  fullName: VDS.RDF.Query.Optimisation.SimpleVirtualAlgebraOptimiser.CreateVirtualNode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode

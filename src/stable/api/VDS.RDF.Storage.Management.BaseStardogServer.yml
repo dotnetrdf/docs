@@ -1,0 +1,3044 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.Management.BaseStardogServer
+  commentId: T:VDS.RDF.Storage.Management.BaseStardogServer
+  id: BaseStardogServer
+  parent: VDS.RDF.Storage.Management
+  children:
+  - VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String)
+  - VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.Net.IWebProxy)
+  - VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.String,System.String)
+  - VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.String,System.String,System.Net.IWebProxy)
+  - VDS.RDF.Storage.Management.BaseStardogServer.AdminUri
+  - VDS.RDF.Storage.Management.BaseStardogServer.BaseUri
+  - VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  - VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  - VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String)
+  - VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.Management.BaseStardogServer.Dispose
+  - VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String)
+  - VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String)
+  - VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String)
+  - VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.Management.BaseStardogServer.HasCredentials
+  - VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour
+  - VDS.RDF.Storage.Management.BaseStardogServer.ListStores
+  - VDS.RDF.Storage.Management.BaseStardogServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  - VDS.RDF.Storage.Management.BaseStardogServer.Password
+  - VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  - VDS.RDF.Storage.Management.BaseStardogServer.Username
+  langs:
+  - csharp
+  - vb
+  name: BaseStardogServer
+  nameWithType: BaseStardogServer
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseStardogServer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nAbstract implementation of a management connection to a Stardog server using the HTTP protocol.\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseStardogServer : BaseHttpConnector, IAsyncStorageServer, IConfigurationSerializable, IStorageServer, IDisposable'
+    content.vb: >-
+      Public MustInherit Class BaseStardogServer
+          Inherits BaseHttpConnector
+          Implements IAsyncStorageServer, IConfigurationSerializable, IStorageServer, IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.Storage.BaseHttpConnector
+  derivedClasses:
+  - VDS.RDF.Storage.Management.StardogV1Server
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  - VDS.RDF.Storage.Management.IStorageServer
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  - VDS.RDF.Storage.BaseHttpConnector.Proxy
+  - VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+  - VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+  - VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+  - VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  - VDS.RDF.Storage.BaseHttpConnector.Timeout
+  - VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  - VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+  - VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Storage.Management.BaseStardogServer.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.BaseUri
+  commentId: F:VDS.RDF.Storage.Management.BaseStardogServer.BaseUri
+  id: BaseUri
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: BaseUri
+  nameWithType: BaseStardogServer.BaseUri
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.BaseUri
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 52
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nThe base URI of the Stardog server.\n"
+  example: []
+  syntax:
+    content: protected readonly string BaseUri
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly BaseUri As String
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.AdminUri
+  commentId: F:VDS.RDF.Storage.Management.BaseStardogServer.AdminUri
+  id: AdminUri
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: AdminUri
+  nameWithType: BaseStardogServer.AdminUri
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.AdminUri
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AdminUri
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 57
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nThe URI of the admin API.\n"
+  example: []
+  syntax:
+    content: protected readonly string AdminUri
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly AdminUri As String
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.Username
+  commentId: F:VDS.RDF.Storage.Management.BaseStardogServer.Username
+  id: Username
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: Username
+  nameWithType: BaseStardogServer.Username
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.Username
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Username
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 62
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nThe username to use for the connection.\n"
+  example: []
+  syntax:
+    content: protected readonly string Username
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly Username As String
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.Password
+  commentId: F:VDS.RDF.Storage.Management.BaseStardogServer.Password
+  id: Password
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: BaseStardogServer.Password
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.Password
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Password
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 67
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nThe password to use for the connection.\n"
+  example: []
+  syntax:
+    content: protected readonly string Password
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly Password As String
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.HasCredentials
+  commentId: F:VDS.RDF.Storage.Management.BaseStardogServer.HasCredentials
+  id: HasCredentials
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: HasCredentials
+  nameWithType: BaseStardogServer.HasCredentials
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.HasCredentials
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasCredentials
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 72
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nTrue if a user name and password are specified, false otherwise.\n"
+  example: []
+  syntax:
+    content: protected readonly bool HasCredentials
+    return:
+      type: System.Boolean
+    content.vb: Protected ReadOnly HasCredentials As Boolean
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: BaseStardogServer(String)
+  nameWithType: BaseStardogServer.BaseStardogServer(String)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.BaseStardogServer(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 87
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nCreates a new connection to a Stardog Server.\n"
+  example: []
+  syntax:
+    content: public BaseStardogServer(string baseUri)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Server.
+    content.vb: Public Sub New(baseUri As String)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: BaseStardogServer(String, String, String)
+  nameWithType: BaseStardogServer.BaseStardogServer(String, String, String)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.BaseStardogServer(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 98
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nCreates a new connection to a Stardog Server.\n"
+  example: []
+  syntax:
+    content: public BaseStardogServer(string baseUri, string username, string password)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Server.
+    - id: username
+      type: System.String
+      description: Username.
+    - id: password
+      type: System.String
+      description: Password.
+    content.vb: Public Sub New(baseUri As String, username As String, password As String)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.Net.IWebProxy)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.Net.IWebProxy)
+  id: '#ctor(System.String,System.Net.IWebProxy)'
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: BaseStardogServer(String, IWebProxy)
+  nameWithType: BaseStardogServer.BaseStardogServer(String, IWebProxy)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.BaseStardogServer(System.String, System.Net.IWebProxy)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 115
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nCreates a new connection to a Stardog Server.\n"
+  example: []
+  syntax:
+    content: public BaseStardogServer(string baseUri, IWebProxy proxy)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Server.
+    - id: proxy
+      type: System.Net.IWebProxy
+      description: Proxy Server.
+    content.vb: Public Sub New(baseUri As String, proxy As IWebProxy)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.String,System.String,System.Net.IWebProxy)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.#ctor(System.String,System.String,System.String,System.Net.IWebProxy)
+  id: '#ctor(System.String,System.String,System.String,System.Net.IWebProxy)'
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: BaseStardogServer(String, String, String, IWebProxy)
+  nameWithType: BaseStardogServer.BaseStardogServer(String, String, String, IWebProxy)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.BaseStardogServer(System.String, System.String, System.String, System.Net.IWebProxy)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 127
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nCreates a new connection to a Stardog Server.\n"
+  example: []
+  syntax:
+    content: public BaseStardogServer(string baseUri, string username, string password, IWebProxy proxy)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: Base Uri of the Server.
+    - id: username
+      type: System.String
+      description: Username.
+    - id: password
+      type: System.String
+      description: Password.
+    - id: proxy
+      type: System.Net.IWebProxy
+      description: Proxy Server.
+    content.vb: Public Sub New(baseUri As String, username As String, password As String, proxy As IWebProxy)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour
+  commentId: P:VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour
+  id: IOBehaviour
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: IOBehaviour
+  nameWithType: BaseStardogServer.IOBehaviour
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IOBehaviour
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 136
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nGets the IO Behaviour of the server.\n"
+  example: []
+  syntax:
+    content: public virtual IOBehaviour IOBehaviour { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Storage.IOBehaviour
+    content.vb: Public Overridable ReadOnly Property IOBehaviour As IOBehaviour
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour*
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer.IOBehaviour
+  - VDS.RDF.Storage.Management.IStorageServer.IOBehaviour
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.ListStores
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.ListStores
+  id: ListStores
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: ListStores()
+  nameWithType: BaseStardogServer.ListStores()
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.ListStores()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ListStores
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 147
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nLists the database available on the server.\n"
+  example: []
+  syntax:
+    content: public virtual IEnumerable<string> ListStores()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: ''
+    content.vb: Public Overridable Function ListStores As IEnumerable(Of String)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.ListStores*
+  implements:
+  - VDS.RDF.Storage.Management.IStorageServer.ListStores
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String)
+  id: GetDefaultTemplate(System.String)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultTemplate(String)
+  nameWithType: BaseStardogServer.GetDefaultTemplate(String)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetDefaultTemplate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 189
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nGets a default template for creating a new Store.\n"
+  example: []
+  syntax:
+    content: public virtual IStoreTemplate GetDefaultTemplate(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: Store ID.
+    return:
+      type: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+      description: ''
+    content.vb: Public Overridable Function GetDefaultTemplate(id As String) As IStoreTemplate
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate*
+  implements:
+  - VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate(System.String)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String)
+  id: GetAvailableTemplates(System.String)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: GetAvailableTemplates(String)
+  nameWithType: BaseStardogServer.GetAvailableTemplates(String)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetAvailableTemplates
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 199
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nGets all available templates for creating a new Store.\n"
+  example: []
+  syntax:
+    content: public virtual IEnumerable<IStoreTemplate> GetAvailableTemplates(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: Store ID.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Storage.Management.Provisioning.IStoreTemplate}
+      description: ''
+    content.vb: Public Overridable Function GetAvailableTemplates(id As String) As IEnumerable(Of IStoreTemplate)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates*
+  implements:
+  - VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates(System.String)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  id: CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: CreateStore(IStoreTemplate)
+  nameWithType: BaseStardogServer.CreateStore(IStoreTemplate)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CreateStore
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 230
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nCreates a new Store based off the given template.\n"
+  remarks: "\n<p>\nTemplates must inherit from <xref href=\"VDS.RDF.Storage.Management.Provisioning.Stardog.BaseStardogTemplate\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n<p>\nUses some code based off on answers <a href=\"http://stackoverflow.com/questions/566462/upload-files-with-httpwebrequest-multipart-form-data\">here</a> to help do the multipart form data request.\n</p>\n"
+  example: []
+  syntax:
+    content: public virtual bool CreateStore(IStoreTemplate template)
+    parameters:
+    - id: template
+      type: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+      description: Template.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overridable Function CreateStore(template As IStoreTemplate) As Boolean
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore*
+  implements:
+  - VDS.RDF.Storage.Management.IStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String)
+  id: DeleteStore(System.String)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: DeleteStore(String)
+  nameWithType: BaseStardogServer.DeleteStore(String)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteStore
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 292
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nDeletes a Store with the given ID.\n"
+  example: []
+  syntax:
+    content: public virtual void DeleteStore(string storeID)
+    parameters:
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    content.vb: Public Overridable Sub DeleteStore(storeID As String)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore*
+  implements:
+  - VDS.RDF.Storage.Management.IStorageServer.DeleteStore(System.String)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String)
+  id: GetStore(System.String)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: GetStore(String)
+  nameWithType: BaseStardogServer.GetStore(String)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetStore
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 320
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nGets a provider for the Store with the given ID.\n"
+  example: []
+  syntax:
+    content: public abstract IStorageProvider GetStore(string storeID)
+    parameters:
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    return:
+      type: VDS.RDF.Storage.IStorageProvider
+      description: ''
+    content.vb: Public MustOverride Function GetStore(storeID As String) As IStorageProvider
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.GetStore*
+  implements:
+  - VDS.RDF.Storage.Management.IStorageServer.GetStore(System.String)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  id: ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: ListStores(AsyncStorageCallback, Object)
+  nameWithType: BaseStardogServer.ListStores(AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ListStores
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 331
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nLists all databases available on the server.\n"
+  example: []
+  syntax:
+    content: public virtual void ListStores(AsyncStorageCallback callback, object state)
+    parameters:
+    - id: callback
+      type: VDS.RDF.Storage.AsyncStorageCallback
+      description: Callback.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Overridable Sub ListStores(callback As AsyncStorageCallback, state As Object)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.ListStores*
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  id: GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultTemplate(String, AsyncStorageCallback, Object)
+  nameWithType: BaseStardogServer.GetDefaultTemplate(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetDefaultTemplate
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 393
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nGets a default template for creating a new Store.\n"
+  example: []
+  syntax:
+    content: public virtual void GetDefaultTemplate(string id, AsyncStorageCallback callback, object state)
+    parameters:
+    - id: id
+      type: System.String
+      description: Store ID.
+    - id: callback
+      type: VDS.RDF.Storage.AsyncStorageCallback
+      description: Callback.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Overridable Sub GetDefaultTemplate(id As String, callback As AsyncStorageCallback, state As Object)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate*
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  id: GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: GetAvailableTemplates(String, AsyncStorageCallback, Object)
+  nameWithType: BaseStardogServer.GetAvailableTemplates(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetAvailableTemplates
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 405
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nGets all available templates for creating a new Store.\n"
+  example: []
+  syntax:
+    content: public virtual void GetAvailableTemplates(string id, AsyncStorageCallback callback, object state)
+    parameters:
+    - id: id
+      type: System.String
+      description: Store ID.
+    - id: callback
+      type: VDS.RDF.Storage.AsyncStorageCallback
+      description: Callback.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Overridable Sub GetAvailableTemplates(id As String, callback As AsyncStorageCallback, state As Object)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates*
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  id: CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: CreateStore(IStoreTemplate, AsyncStorageCallback, Object)
+  nameWithType: BaseStardogServer.CreateStore(IStoreTemplate, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CreateStore
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 434
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nCreates a new store based on the given template.\n"
+  remarks: "\n<p>\nTemplate must inherit from <xref href=\"VDS.RDF.Storage.Management.Provisioning.Stardog.BaseStardogTemplate\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n"
+  example: []
+  syntax:
+    content: public virtual void CreateStore(IStoreTemplate template, AsyncStorageCallback callback, object state)
+    parameters:
+    - id: template
+      type: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+      description: Template.
+    - id: callback
+      type: VDS.RDF.Storage.AsyncStorageCallback
+      description: Callback.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Overridable Sub CreateStore(template As IStoreTemplate, callback As AsyncStorageCallback, state As Object)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore*
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  id: DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: DeleteStore(String, AsyncStorageCallback, Object)
+  nameWithType: BaseStardogServer.DeleteStore(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteStore
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 530
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nDeletes a database from the server.\n"
+  example: []
+  syntax:
+    content: public virtual void DeleteStore(string storeID, AsyncStorageCallback callback, object state)
+    parameters:
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    - id: callback
+      type: VDS.RDF.Storage.AsyncStorageCallback
+      description: Callback.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public Overridable Sub DeleteStore(storeID As String, callback As AsyncStorageCallback, state As Object)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore*
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  id: GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: GetStore(String, AsyncStorageCallback, Object)
+  nameWithType: BaseStardogServer.GetStore(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetStore(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetStore
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 577
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nGets a database from the server.\n"
+  example: []
+  syntax:
+    content: public abstract void GetStore(string storeID, AsyncStorageCallback callback, object state)
+    parameters:
+    - id: storeID
+      type: System.String
+      description: Store ID.
+    - id: callback
+      type: VDS.RDF.Storage.AsyncStorageCallback
+      description: Callback.
+    - id: state
+      type: System.Object
+      description: State to pass to the callback.
+    content.vb: Public MustOverride Sub GetStore(storeID As String, callback As AsyncStorageCallback, state As Object)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.GetStore*
+  implements:
+  - VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  id: CreateAdminRequest(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: CreateAdminRequest(String, String, String, Dictionary<String, String>)
+  nameWithType: BaseStardogServer.CreateAdminRequest(String, String, String, Dictionary<String, String>)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest(System.String, System.String, System.String, System.Collections.Generic.Dictionary<System.String, System.String>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: CreateAdminRequest
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 589
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nCreate a request to the Stardog server&apos;s Admin API.\n"
+  example: []
+  syntax:
+    content: protected virtual HttpWebRequest CreateAdminRequest(string servicePath, string accept, string method, Dictionary<string, string> requestParams)
+    parameters:
+    - id: servicePath
+      type: System.String
+      description: The admin API service path.
+    - id: accept
+      type: System.String
+      description: Accept header content.
+    - id: method
+      type: System.String
+      description: HTTP method to use.
+    - id: requestParams
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: Additional request parameters.
+    return:
+      type: System.Net.HttpWebRequest
+      description: ''
+    content.vb: Protected Overridable Function CreateAdminRequest(servicePath As String, accept As String, method As String, requestParams As Dictionary(Of String, String)) As HttpWebRequest
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest*
+  nameWithType.vb: BaseStardogServer.CreateAdminRequest(String, String, String, Dictionary(Of String, String))
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest(System.String, System.String, System.String, System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: CreateAdminRequest(String, String, String, Dictionary(Of String, String))
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.Dispose
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.Dispose
+  id: Dispose
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: BaseStardogServer.Dispose()
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.Dispose()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Dispose
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 647
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nDisposes of the server.\n"
+  example: []
+  syntax:
+    content: public virtual void Dispose()
+    content.vb: Public Overridable Sub Dispose
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  id: SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Storage.Management.BaseStardogServer
+  langs:
+  - csharp
+  - vb
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: BaseStardogServer.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SerializeConfiguration
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/Management/StardogServer.cs
+    startLine: 656
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage.Management
+  summary: "\nSerializes the connection&apos;s configuration.\n"
+  example: []
+  syntax:
+    content: public virtual void SerializeConfiguration(ConfigurationSerializationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Configuration.ConfigurationSerializationContext
+      description: Configuration Serialization Context.
+    content.vb: Public Overridable Sub SerializeConfiguration(context As ConfigurationSerializationContext)
+  overload: VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration*
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: VDS.RDF.Storage.Management
+  commentId: N:VDS.RDF.Storage.Management
+  name: VDS.RDF.Storage.Management
+  nameWithType: VDS.RDF.Storage.Management
+  fullName: VDS.RDF.Storage.Management
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Storage.BaseHttpConnector
+  commentId: T:VDS.RDF.Storage.BaseHttpConnector
+  parent: VDS.RDF.Storage
+  name: BaseHttpConnector
+  nameWithType: BaseHttpConnector
+  fullName: VDS.RDF.Storage.BaseHttpConnector
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer
+  commentId: T:VDS.RDF.Storage.Management.IAsyncStorageServer
+  parent: VDS.RDF.Storage.Management
+  name: IAsyncStorageServer
+  nameWithType: IAsyncStorageServer
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: VDS.RDF.Storage.Management.IStorageServer
+  commentId: T:VDS.RDF.Storage.Management.IStorageServer
+  parent: VDS.RDF.Storage.Management
+  name: IStorageServer
+  nameWithType: IStorageServer
+  fullName: VDS.RDF.Storage.Management.IStorageServer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxy(String)
+  nameWithType: BaseHttpConnector.SetProxy(String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.String)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxy(Uri)
+  nameWithType: BaseHttpConnector.SetProxy(Uri)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxy(System.Uri)
+    name: SetProxy
+    nameWithType: BaseHttpConnector.SetProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.Proxy
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.Proxy
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: Proxy
+  nameWithType: BaseHttpConnector.Proxy
+  fullName: VDS.RDF.Storage.BaseHttpConnector.Proxy
+- uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: ClearProxy()
+  nameWithType: BaseHttpConnector.ClearProxy()
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxy()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+    name: ClearProxy
+    nameWithType: BaseHttpConnector.ClearProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+    name: ClearProxy
+    nameWithType: BaseHttpConnector.ClearProxy
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxyCredentials(String, String)
+  nameWithType: BaseHttpConnector.SetProxyCredentials(String, String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetProxyCredentials(String, String, String)
+  nameWithType: BaseHttpConnector.SetProxyCredentials(String, String, String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String, System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials(System.String,System.String,System.String)
+    name: SetProxyCredentials
+    nameWithType: BaseHttpConnector.SetProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: ProxyCredentials
+  nameWithType: BaseHttpConnector.ProxyCredentials
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ProxyCredentials
+- uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: ClearProxyCredentials()
+  nameWithType: BaseHttpConnector.ClearProxyCredentials()
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+    name: ClearProxyCredentials
+    nameWithType: BaseHttpConnector.ClearProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+    name: ClearProxyCredentials
+    nameWithType: BaseHttpConnector.ClearProxyCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ClearProxyCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.Timeout
+  commentId: P:VDS.RDF.Storage.BaseHttpConnector.Timeout
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: Timeout
+  nameWithType: BaseHttpConnector.Timeout
+  fullName: VDS.RDF.Storage.BaseHttpConnector.Timeout
+- uid: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: ApplyRequestOptions(HttpWebRequest)
+  nameWithType: BaseHttpConnector.ApplyRequestOptions(HttpWebRequest)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseHttpConnector.ApplyRequestOptions
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions(System.Net.HttpWebRequest)
+    name: ApplyRequestOptions
+    nameWithType: BaseHttpConnector.ApplyRequestOptions
+    fullName: VDS.RDF.Storage.BaseHttpConnector.ApplyRequestOptions
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Net.HttpWebRequest
+    name: HttpWebRequest
+    nameWithType: HttpWebRequest
+    fullName: System.Net.HttpWebRequest
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  name: SerializeStandardConfig(INode, ConfigurationSerializationContext)
+  nameWithType: BaseHttpConnector.SerializeStandardConfig(INode, ConfigurationSerializationContext)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode, VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeStandardConfig
+    nameWithType: BaseHttpConnector.SerializeStandardConfig
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig(VDS.RDF.INode,VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeStandardConfig
+    nameWithType: BaseHttpConnector.SerializeStandardConfig
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SerializeStandardConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+  commentId: M:VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+  parent: VDS.RDF.Storage.BaseHttpConnector
+  isExternal: true
+  name: SetCredentials(String, String)
+  nameWithType: BaseHttpConnector.SetCredentials(String, String)
+  fullName: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseHttpConnector.SetCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.BaseHttpConnector.SetCredentials(System.String,System.String)
+    name: SetCredentials
+    nameWithType: BaseHttpConnector.SetCredentials
+    fullName: VDS.RDF.Storage.BaseHttpConnector.SetCredentials
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseStardogServer>()
+  nameWithType: Extensions.AsEnumerable<BaseStardogServer>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.Management.BaseStardogServer>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseStardogServer)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.Management.BaseStardogServer)()
+  name.vb: AsEnumerable(Of BaseStardogServer)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseStardogServer>
+    nameWithType: Extensions.AsEnumerable<BaseStardogServer>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.Management.BaseStardogServer>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseStardogServer)
+    nameWithType: Extensions.AsEnumerable(Of BaseStardogServer)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.Management.BaseStardogServer)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.#ctor*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.#ctor
+  name: BaseStardogServer
+  nameWithType: BaseStardogServer.BaseStardogServer
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.BaseStardogServer
+- uid: System.Net.IWebProxy
+  commentId: T:System.Net.IWebProxy
+  parent: System.Net
+  isExternal: true
+  name: IWebProxy
+  nameWithType: IWebProxy
+  fullName: System.Net.IWebProxy
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour
+  name: IOBehaviour
+  nameWithType: BaseStardogServer.IOBehaviour
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.IOBehaviour
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer.IOBehaviour
+  commentId: P:VDS.RDF.Storage.Management.IAsyncStorageServer.IOBehaviour
+  parent: VDS.RDF.Storage.Management.IAsyncStorageServer
+  name: IOBehaviour
+  nameWithType: IAsyncStorageServer.IOBehaviour
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.IOBehaviour
+- uid: VDS.RDF.Storage.Management.IStorageServer.IOBehaviour
+  commentId: P:VDS.RDF.Storage.Management.IStorageServer.IOBehaviour
+  parent: VDS.RDF.Storage.Management.IStorageServer
+  name: IOBehaviour
+  nameWithType: IStorageServer.IOBehaviour
+  fullName: VDS.RDF.Storage.Management.IStorageServer.IOBehaviour
+- uid: VDS.RDF.Storage.IOBehaviour
+  commentId: T:VDS.RDF.Storage.IOBehaviour
+  parent: VDS.RDF.Storage
+  name: IOBehaviour
+  nameWithType: IOBehaviour
+  fullName: VDS.RDF.Storage.IOBehaviour
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.ListStores*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.ListStores
+  name: ListStores
+  nameWithType: BaseStardogServer.ListStores
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.ListStores
+- uid: VDS.RDF.Storage.Management.IStorageServer.ListStores
+  commentId: M:VDS.RDF.Storage.Management.IStorageServer.ListStores
+  parent: VDS.RDF.Storage.Management.IStorageServer
+  name: ListStores()
+  nameWithType: IStorageServer.ListStores()
+  fullName: VDS.RDF.Storage.Management.IStorageServer.ListStores()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.ListStores
+    name: ListStores
+    nameWithType: IStorageServer.ListStores
+    fullName: VDS.RDF.Storage.Management.IStorageServer.ListStores
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.ListStores
+    name: ListStores
+    nameWithType: IStorageServer.ListStores
+    fullName: VDS.RDF.Storage.Management.IStorageServer.ListStores
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate
+  name: GetDefaultTemplate
+  nameWithType: BaseStardogServer.GetDefaultTemplate
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetDefaultTemplate
+- uid: VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate(System.String)
+  commentId: M:VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate(System.String)
+  parent: VDS.RDF.Storage.Management.IStorageServer
+  isExternal: true
+  name: GetDefaultTemplate(String)
+  nameWithType: IStorageServer.GetDefaultTemplate(String)
+  fullName: VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate(System.String)
+    name: GetDefaultTemplate
+    nameWithType: IStorageServer.GetDefaultTemplate
+    fullName: VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate(System.String)
+    name: GetDefaultTemplate
+    nameWithType: IStorageServer.GetDefaultTemplate
+    fullName: VDS.RDF.Storage.Management.IStorageServer.GetDefaultTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  commentId: T:VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  parent: VDS.RDF.Storage.Management.Provisioning
+  name: IStoreTemplate
+  nameWithType: IStoreTemplate
+  fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+- uid: VDS.RDF.Storage.Management.Provisioning
+  commentId: N:VDS.RDF.Storage.Management.Provisioning
+  name: VDS.RDF.Storage.Management.Provisioning
+  nameWithType: VDS.RDF.Storage.Management.Provisioning
+  fullName: VDS.RDF.Storage.Management.Provisioning
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates
+  name: GetAvailableTemplates
+  nameWithType: BaseStardogServer.GetAvailableTemplates
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetAvailableTemplates
+- uid: VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates(System.String)
+  commentId: M:VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates(System.String)
+  parent: VDS.RDF.Storage.Management.IStorageServer
+  isExternal: true
+  name: GetAvailableTemplates(String)
+  nameWithType: IStorageServer.GetAvailableTemplates(String)
+  fullName: VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates(System.String)
+    name: GetAvailableTemplates
+    nameWithType: IStorageServer.GetAvailableTemplates
+    fullName: VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates(System.String)
+    name: GetAvailableTemplates
+    nameWithType: IStorageServer.GetAvailableTemplates
+    fullName: VDS.RDF.Storage.Management.IStorageServer.GetAvailableTemplates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Storage.Management.Provisioning.IStoreTemplate}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Storage.Management.Provisioning.IStoreTemplate}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IStoreTemplate>
+  nameWithType: IEnumerable<IStoreTemplate>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Storage.Management.Provisioning.IStoreTemplate>
+  nameWithType.vb: IEnumerable(Of IStoreTemplate)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  name.vb: IEnumerable(Of IStoreTemplate)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+    name: IStoreTemplate
+    nameWithType: IStoreTemplate
+    fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+    name: IStoreTemplate
+    nameWithType: IStoreTemplate
+    fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.Provisioning.Stardog.BaseStardogTemplate
+  commentId: T:VDS.RDF.Storage.Management.Provisioning.Stardog.BaseStardogTemplate
+  parent: VDS.RDF.Storage.Management.Provisioning.Stardog
+  name: BaseStardogTemplate
+  nameWithType: BaseStardogTemplate
+  fullName: VDS.RDF.Storage.Management.Provisioning.Stardog.BaseStardogTemplate
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.CreateStore
+  name: CreateStore
+  nameWithType: BaseStardogServer.CreateStore
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.CreateStore
+- uid: VDS.RDF.Storage.Management.IStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  commentId: M:VDS.RDF.Storage.Management.IStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  parent: VDS.RDF.Storage.Management.IStorageServer
+  name: CreateStore(IStoreTemplate)
+  nameWithType: IStorageServer.CreateStore(IStoreTemplate)
+  fullName: VDS.RDF.Storage.Management.IStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+    name: CreateStore
+    nameWithType: IStorageServer.CreateStore
+    fullName: VDS.RDF.Storage.Management.IStorageServer.CreateStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+    name: IStoreTemplate
+    nameWithType: IStoreTemplate
+    fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate)
+    name: CreateStore
+    nameWithType: IStorageServer.CreateStore
+    fullName: VDS.RDF.Storage.Management.IStorageServer.CreateStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+    name: IStoreTemplate
+    nameWithType: IStoreTemplate
+    fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.Provisioning.Stardog
+  commentId: N:VDS.RDF.Storage.Management.Provisioning.Stardog
+  name: VDS.RDF.Storage.Management.Provisioning.Stardog
+  nameWithType: VDS.RDF.Storage.Management.Provisioning.Stardog
+  fullName: VDS.RDF.Storage.Management.Provisioning.Stardog
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore
+  name: DeleteStore
+  nameWithType: BaseStardogServer.DeleteStore
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.DeleteStore
+- uid: VDS.RDF.Storage.Management.IStorageServer.DeleteStore(System.String)
+  commentId: M:VDS.RDF.Storage.Management.IStorageServer.DeleteStore(System.String)
+  parent: VDS.RDF.Storage.Management.IStorageServer
+  isExternal: true
+  name: DeleteStore(String)
+  nameWithType: IStorageServer.DeleteStore(String)
+  fullName: VDS.RDF.Storage.Management.IStorageServer.DeleteStore(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.DeleteStore(System.String)
+    name: DeleteStore
+    nameWithType: IStorageServer.DeleteStore
+    fullName: VDS.RDF.Storage.Management.IStorageServer.DeleteStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.DeleteStore(System.String)
+    name: DeleteStore
+    nameWithType: IStorageServer.DeleteStore
+    fullName: VDS.RDF.Storage.Management.IStorageServer.DeleteStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.GetStore*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.GetStore
+  name: GetStore
+  nameWithType: BaseStardogServer.GetStore
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.GetStore
+- uid: VDS.RDF.Storage.Management.IStorageServer.GetStore(System.String)
+  commentId: M:VDS.RDF.Storage.Management.IStorageServer.GetStore(System.String)
+  parent: VDS.RDF.Storage.Management.IStorageServer
+  isExternal: true
+  name: GetStore(String)
+  nameWithType: IStorageServer.GetStore(String)
+  fullName: VDS.RDF.Storage.Management.IStorageServer.GetStore(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.GetStore(System.String)
+    name: GetStore
+    nameWithType: IStorageServer.GetStore
+    fullName: VDS.RDF.Storage.Management.IStorageServer.GetStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IStorageServer.GetStore(System.String)
+    name: GetStore
+    nameWithType: IStorageServer.GetStore
+    fullName: VDS.RDF.Storage.Management.IStorageServer.GetStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.IStorageProvider
+  commentId: T:VDS.RDF.Storage.IStorageProvider
+  parent: VDS.RDF.Storage
+  name: IStorageProvider
+  nameWithType: IStorageProvider
+  fullName: VDS.RDF.Storage.IStorageProvider
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.IAsyncStorageServer
+  isExternal: true
+  name: ListStores(AsyncStorageCallback, Object)
+  nameWithType: IAsyncStorageServer.ListStores(AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: ListStores
+    nameWithType: IAsyncStorageServer.ListStores
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores(VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: ListStores
+    nameWithType: IAsyncStorageServer.ListStores
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.ListStores
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.AsyncStorageCallback
+  commentId: T:VDS.RDF.Storage.AsyncStorageCallback
+  parent: VDS.RDF.Storage
+  name: AsyncStorageCallback
+  nameWithType: AsyncStorageCallback
+  fullName: VDS.RDF.Storage.AsyncStorageCallback
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.IAsyncStorageServer
+  isExternal: true
+  name: GetDefaultTemplate(String, AsyncStorageCallback, Object)
+  nameWithType: IAsyncStorageServer.GetDefaultTemplate(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: GetDefaultTemplate
+    nameWithType: IAsyncStorageServer.GetDefaultTemplate
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: GetDefaultTemplate
+    nameWithType: IAsyncStorageServer.GetDefaultTemplate
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetDefaultTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.IAsyncStorageServer
+  isExternal: true
+  name: GetAvailableTemplates(String, AsyncStorageCallback, Object)
+  nameWithType: IAsyncStorageServer.GetAvailableTemplates(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: GetAvailableTemplates
+    nameWithType: IAsyncStorageServer.GetAvailableTemplates
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: GetAvailableTemplates
+    nameWithType: IAsyncStorageServer.GetAvailableTemplates
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetAvailableTemplates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.IAsyncStorageServer
+  isExternal: true
+  name: CreateStore(IStoreTemplate, AsyncStorageCallback, Object)
+  nameWithType: IAsyncStorageServer.CreateStore(IStoreTemplate, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: CreateStore
+    nameWithType: IAsyncStorageServer.CreateStore
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+    name: IStoreTemplate
+    nameWithType: IStoreTemplate
+    fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore(VDS.RDF.Storage.Management.Provisioning.IStoreTemplate,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: CreateStore
+    nameWithType: IAsyncStorageServer.CreateStore
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.CreateStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+    name: IStoreTemplate
+    nameWithType: IStoreTemplate
+    fullName: VDS.RDF.Storage.Management.Provisioning.IStoreTemplate
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.IAsyncStorageServer
+  isExternal: true
+  name: DeleteStore(String, AsyncStorageCallback, Object)
+  nameWithType: IAsyncStorageServer.DeleteStore(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteStore
+    nameWithType: IAsyncStorageServer.DeleteStore
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: DeleteStore
+    nameWithType: IAsyncStorageServer.DeleteStore
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.DeleteStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  commentId: M:VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+  parent: VDS.RDF.Storage.Management.IAsyncStorageServer
+  isExternal: true
+  name: GetStore(String, AsyncStorageCallback, Object)
+  nameWithType: IAsyncStorageServer.GetStore(String, AsyncStorageCallback, Object)
+  fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore(System.String, VDS.RDF.Storage.AsyncStorageCallback, System.Object)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: GetStore
+    nameWithType: IAsyncStorageServer.GetStore
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore(System.String,VDS.RDF.Storage.AsyncStorageCallback,System.Object)
+    name: GetStore
+    nameWithType: IAsyncStorageServer.GetStore
+    fullName: VDS.RDF.Storage.Management.IAsyncStorageServer.GetStore
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.Storage.AsyncStorageCallback
+    name: AsyncStorageCallback
+    nameWithType: AsyncStorageCallback
+    fullName: VDS.RDF.Storage.AsyncStorageCallback
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest
+  name: CreateAdminRequest
+  nameWithType: BaseStardogServer.CreateAdminRequest
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.CreateAdminRequest
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Net.HttpWebRequest
+  commentId: T:System.Net.HttpWebRequest
+  parent: System.Net
+  isExternal: true
+  name: HttpWebRequest
+  nameWithType: HttpWebRequest
+  fullName: System.Net.HttpWebRequest
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.Dispose*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.Dispose
+  name: Dispose
+  nameWithType: BaseStardogServer.Dispose
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration*
+  commentId: Overload:VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration
+  name: SerializeConfiguration
+  nameWithType: BaseStardogServer.SerializeConfiguration
+  fullName: VDS.RDF.Storage.Management.BaseStardogServer.SerializeConfiguration
+- uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Configuration.IConfigurationSerializable
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: IConfigurationSerializable.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: IConfigurationSerializable.SerializeConfiguration
+    fullName: VDS.RDF.Configuration.IConfigurationSerializable.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+  commentId: T:VDS.RDF.Configuration.ConfigurationSerializationContext
+  parent: VDS.RDF.Configuration
+  name: ConfigurationSerializationContext
+  nameWithType: ConfigurationSerializationContext
+  fullName: VDS.RDF.Configuration.ConfigurationSerializationContext

@@ -1,0 +1,412 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  id: IStorageCapabilities
+  parent: VDS.RDF.Storage
+  children:
+  - VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  - VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  - VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  - VDS.RDF.Storage.IStorageCapabilities.IsReady
+  - VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  - VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  langs:
+  - csharp
+  - vb
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+  type: Interface
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IStorageCapabilities
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 37
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nInterface which describes the capabilities of some storage provider.\n"
+  example: []
+  syntax:
+    content: public interface IStorageCapabilities
+    content.vb: Public Interface IStorageCapabilities
+  extensionMethods:
+  - VDS.RDF.Storage.IStorageCapabilities.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReady
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IsReady
+  id: IsReady
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  langs:
+  - csharp
+  - vb
+  name: IsReady
+  nameWithType: IStorageCapabilities.IsReady
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReady
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsReady
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets whether the connection with the underlying Store is ready for use.\n"
+  example: []
+  syntax:
+    content: bool IsReady { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsReady As Boolean
+  overload: VDS.RDF.Storage.IStorageCapabilities.IsReady*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  id: IsReadOnly
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: IStorageCapabilities.IsReadOnly
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsReadOnly
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 53
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets whether the connection with the underlying Store is read-only.\n"
+  remarks: "\nAny Manager which indicates it is read-only should also return false for the <xref href=\"VDS.RDF.Storage.IStorageCapabilities.UpdateSupported\" data-throw-if-not-resolved=\"false\"></xref> property and should throw a <xref href=\"VDS.RDF.Storage.RdfStorageException\" data-throw-if-not-resolved=\"false\"></xref> if the <strong>SaveGraph()</strong> or <strong>UpdateGraph()</strong> methods are called.\n"
+  example: []
+  syntax:
+    content: bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsReadOnly As Boolean
+  overload: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  id: IOBehaviour
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  langs:
+  - csharp
+  - vb
+  name: IOBehaviour
+  nameWithType: IStorageCapabilities.IOBehaviour
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IOBehaviour
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 61
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets the Save Behaviour the Store uses.\n"
+  example: []
+  syntax:
+    content: IOBehaviour IOBehaviour { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Storage.IOBehaviour
+    content.vb: ReadOnly Property IOBehaviour As IOBehaviour
+  overload: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  id: UpdateSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  langs:
+  - csharp
+  - vb
+  name: UpdateSupported
+  nameWithType: IStorageCapabilities.UpdateSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateSupported
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets whether the triple level updates are supported.\n"
+  remarks: "\nSome Stores do not support updates at the Triple level and may as designated in the interface defintion throw a <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref> if the <strong>UpdateGraph()</strong> method is called.  This property allows for calling code to check in advance whether Updates are supported.\n"
+  example: []
+  syntax:
+    content: bool UpdateSupported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property UpdateSupported As Boolean
+  overload: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  id: DeleteSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  langs:
+  - csharp
+  - vb
+  name: DeleteSupported
+  nameWithType: IStorageCapabilities.DeleteSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DeleteSupported
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 84
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets whether the deletion of graphs is supported.\n"
+  remarks: "\nSome Stores do not support the deletion of Graphs and may as designated in the interface definition throw a <xref href=\"System.NotSupportedException\" data-throw-if-not-resolved=\"false\"></xref> if the <strong>DeleteGraph()</strong> method is called.  This property allows for calling code to check in advance whether Deletion of Graphs is supported.\n"
+  example: []
+  syntax:
+    content: bool DeleteSupported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property DeleteSupported As Boolean
+  overload: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  id: ListGraphsSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  langs:
+  - csharp
+  - vb
+  name: ListGraphsSupported
+  nameWithType: IStorageCapabilities.ListGraphsSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/IStorageProvider.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ListGraphsSupported
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/IStorageProvider.cs
+    startLine: 92
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nGets whether the Store supports Listing Graphs.\n"
+  example: []
+  syntax:
+    content: bool ListGraphsSupported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property ListGraphsSupported As Boolean
+  overload: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: VDS.RDF.Storage.IStorageCapabilities.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<IStorageCapabilities>()
+  nameWithType: Extensions.AsEnumerable<IStorageCapabilities>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.IStorageCapabilities>()
+  nameWithType.vb: Extensions.AsEnumerable(Of IStorageCapabilities)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.IStorageCapabilities)()
+  name.vb: AsEnumerable(Of IStorageCapabilities)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<IStorageCapabilities>
+    nameWithType: Extensions.AsEnumerable<IStorageCapabilities>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.IStorageCapabilities>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of IStorageCapabilities)
+    nameWithType: Extensions.AsEnumerable(Of IStorageCapabilities)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.IStorageCapabilities)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReady*
+  commentId: Overload:VDS.RDF.Storage.IStorageCapabilities.IsReady
+  name: IsReady
+  nameWithType: IStorageCapabilities.IsReady
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReady
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: UpdateSupported
+  nameWithType: IStorageCapabilities.UpdateSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+- uid: VDS.RDF.Storage.RdfStorageException
+  commentId: T:VDS.RDF.Storage.RdfStorageException
+  parent: VDS.RDF.Storage
+  name: RdfStorageException
+  nameWithType: RdfStorageException
+  fullName: VDS.RDF.Storage.RdfStorageException
+- uid: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly*
+  commentId: Overload:VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+  name: IsReadOnly
+  nameWithType: IStorageCapabilities.IsReadOnly
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IsReadOnly
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  parent: VDS.RDF.Storage
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+- uid: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour*
+  commentId: Overload:VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+  name: IOBehaviour
+  nameWithType: IStorageCapabilities.IOBehaviour
+  fullName: VDS.RDF.Storage.IStorageCapabilities.IOBehaviour
+- uid: VDS.RDF.Storage.IOBehaviour
+  commentId: T:VDS.RDF.Storage.IOBehaviour
+  parent: VDS.RDF.Storage
+  name: IOBehaviour
+  nameWithType: IOBehaviour
+  fullName: VDS.RDF.Storage.IOBehaviour
+- uid: System.NotSupportedException
+  commentId: T:System.NotSupportedException
+  isExternal: true
+- uid: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported*
+  commentId: Overload:VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+  name: UpdateSupported
+  nameWithType: IStorageCapabilities.UpdateSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.UpdateSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported*
+  commentId: Overload:VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+  name: DeleteSupported
+  nameWithType: IStorageCapabilities.DeleteSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.DeleteSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported*
+  commentId: Overload:VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  name: ListGraphsSupported
+  nameWithType: IStorageCapabilities.ListGraphsSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported

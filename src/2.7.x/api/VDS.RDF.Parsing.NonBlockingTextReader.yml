@@ -1,0 +1,1752 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Parsing.NonBlockingTextReader
+  commentId: T:VDS.RDF.Parsing.NonBlockingTextReader
+  id: NonBlockingTextReader
+  parent: VDS.RDF.Parsing
+  children:
+  - VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer
+  langs:
+  - csharp
+  - vb
+  name: NonBlockingTextReader
+  nameWithType: NonBlockingTextReader
+  fullName: VDS.RDF.Parsing.NonBlockingTextReader
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/BlockingTextReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: NonBlockingTextReader
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/BlockingTextReader.cs
+    startLine: 449
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nThe NonBlockingTextReader is an implementation of a <xref href=\"VDS.RDF.Parsing.BufferedTextReader\" data-throw-if-not-resolved=\"false\"></xref> designed to wrap other readers where latency is known not to be a problem and we don&apos;t expect to ever have an empty read occur before the actual end of the stream.\n"
+  remarks: "\nCurrently we only use this for file and network streams, you can force this to never be used with the global static <xref href=\"VDS.RDF.Options.ForceBlockingIO\" data-throw-if-not-resolved=\"false\"></xref> option.\n"
+  example: []
+  syntax:
+    content: 'public sealed class NonBlockingTextReader : BufferedTextReader, IDisposable'
+    content.vb: >-
+      Public NotInheritable Class NonBlockingTextReader
+          Inherits BufferedTextReader
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - System.MarshalByRefObject
+  - System.IO.TextReader
+  - VDS.RDF.Parsing.ParsingTextReader
+  - VDS.RDF.Parsing.BufferedTextReader
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.Parsing.BufferedTextReader.DefaultBufferSize
+  - VDS.RDF.Parsing.BufferedTextReader._buffer
+  - VDS.RDF.Parsing.BufferedTextReader._pos
+  - VDS.RDF.Parsing.BufferedTextReader._bufferAmount
+  - VDS.RDF.Parsing.BufferedTextReader._finished
+  - VDS.RDF.Parsing.BufferedTextReader._reader
+  - VDS.RDF.Parsing.BufferedTextReader.ReadBlock(System.Char[],System.Int32,System.Int32)
+  - VDS.RDF.Parsing.BufferedTextReader.Read(System.Char[],System.Int32,System.Int32)
+  - VDS.RDF.Parsing.BufferedTextReader.Read
+  - VDS.RDF.Parsing.BufferedTextReader.Peek
+  - VDS.RDF.Parsing.BufferedTextReader.EndOfStream
+  - VDS.RDF.Parsing.BufferedTextReader.Close
+  - VDS.RDF.Parsing.BufferedTextReader.Dispose(System.Boolean)
+  - VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader,System.Int32)
+  - VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader)
+  - VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream,System.Int32)
+  - VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream)
+  - VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader)
+  - VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader,System.Int32)
+  - VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader)
+  - VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader,System.Int32)
+  - System.IO.TextReader.Null
+  - System.IO.TextReader.Dispose
+  - System.IO.TextReader.ReadAsync(System.Char[],System.Int32,System.Int32)
+  - System.IO.TextReader.ReadBlockAsync(System.Char[],System.Int32,System.Int32)
+  - System.IO.TextReader.ReadLine
+  - System.IO.TextReader.ReadLineAsync
+  - System.IO.TextReader.ReadToEnd
+  - System.IO.TextReader.ReadToEndAsync
+  - System.IO.TextReader.Synchronized(System.IO.TextReader)
+  - System.MarshalByRefObject.GetLifetimeService
+  - System.MarshalByRefObject.InitializeLifetimeService
+  - System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Parsing.NonBlockingTextReader.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer
+  commentId: M:VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer
+  id: FillBuffer
+  parent: VDS.RDF.Parsing.NonBlockingTextReader
+  langs:
+  - csharp
+  - vb
+  name: FillBuffer()
+  nameWithType: NonBlockingTextReader.FillBuffer()
+  fullName: VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Parsing/BlockingTextReader.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FillBuffer
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Parsing/BlockingTextReader.cs
+    startLine: 467
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Parsing
+  summary: "\nFills the buffer in a non-blocking manner.\n"
+  example: []
+  syntax:
+    content: protected override void FillBuffer()
+    content.vb: Protected Overrides Sub FillBuffer
+  overridden: VDS.RDF.Parsing.BufferedTextReader.FillBuffer
+  overload: VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Parsing.BufferedTextReader
+  commentId: T:VDS.RDF.Parsing.BufferedTextReader
+  parent: VDS.RDF.Parsing
+  name: BufferedTextReader
+  nameWithType: BufferedTextReader
+  fullName: VDS.RDF.Parsing.BufferedTextReader
+- uid: VDS.RDF.Options.ForceBlockingIO
+  commentId: P:VDS.RDF.Options.ForceBlockingIO
+  isExternal: true
+- uid: VDS.RDF.Parsing
+  commentId: N:VDS.RDF.Parsing
+  name: VDS.RDF.Parsing
+  nameWithType: VDS.RDF.Parsing
+  fullName: VDS.RDF.Parsing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.MarshalByRefObject
+  commentId: T:System.MarshalByRefObject
+  parent: System
+  isExternal: true
+  name: MarshalByRefObject
+  nameWithType: MarshalByRefObject
+  fullName: System.MarshalByRefObject
+- uid: System.IO.TextReader
+  commentId: T:System.IO.TextReader
+  parent: System.IO
+  isExternal: true
+  name: TextReader
+  nameWithType: TextReader
+  fullName: System.IO.TextReader
+- uid: VDS.RDF.Parsing.ParsingTextReader
+  commentId: T:VDS.RDF.Parsing.ParsingTextReader
+  parent: VDS.RDF.Parsing
+  name: ParsingTextReader
+  nameWithType: ParsingTextReader
+  fullName: VDS.RDF.Parsing.ParsingTextReader
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Parsing.BufferedTextReader.DefaultBufferSize
+  commentId: F:VDS.RDF.Parsing.BufferedTextReader.DefaultBufferSize
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: DefaultBufferSize
+  nameWithType: BufferedTextReader.DefaultBufferSize
+  fullName: VDS.RDF.Parsing.BufferedTextReader.DefaultBufferSize
+- uid: VDS.RDF.Parsing.BufferedTextReader._buffer
+  commentId: F:VDS.RDF.Parsing.BufferedTextReader._buffer
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: _buffer
+  nameWithType: BufferedTextReader._buffer
+  fullName: VDS.RDF.Parsing.BufferedTextReader._buffer
+- uid: VDS.RDF.Parsing.BufferedTextReader._pos
+  commentId: F:VDS.RDF.Parsing.BufferedTextReader._pos
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: _pos
+  nameWithType: BufferedTextReader._pos
+  fullName: VDS.RDF.Parsing.BufferedTextReader._pos
+- uid: VDS.RDF.Parsing.BufferedTextReader._bufferAmount
+  commentId: F:VDS.RDF.Parsing.BufferedTextReader._bufferAmount
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: _bufferAmount
+  nameWithType: BufferedTextReader._bufferAmount
+  fullName: VDS.RDF.Parsing.BufferedTextReader._bufferAmount
+- uid: VDS.RDF.Parsing.BufferedTextReader._finished
+  commentId: F:VDS.RDF.Parsing.BufferedTextReader._finished
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: _finished
+  nameWithType: BufferedTextReader._finished
+  fullName: VDS.RDF.Parsing.BufferedTextReader._finished
+- uid: VDS.RDF.Parsing.BufferedTextReader._reader
+  commentId: F:VDS.RDF.Parsing.BufferedTextReader._reader
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: _reader
+  nameWithType: BufferedTextReader._reader
+  fullName: VDS.RDF.Parsing.BufferedTextReader._reader
+- uid: VDS.RDF.Parsing.BufferedTextReader.ReadBlock(System.Char[],System.Int32,System.Int32)
+  commentId: M:VDS.RDF.Parsing.BufferedTextReader.ReadBlock(System.Char[],System.Int32,System.Int32)
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  isExternal: true
+  name: ReadBlock(Char[], Int32, Int32)
+  nameWithType: BufferedTextReader.ReadBlock(Char[], Int32, Int32)
+  fullName: VDS.RDF.Parsing.BufferedTextReader.ReadBlock(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: BufferedTextReader.ReadBlock(Char(), Int32, Int32)
+  fullName.vb: VDS.RDF.Parsing.BufferedTextReader.ReadBlock(System.Char(), System.Int32, System.Int32)
+  name.vb: ReadBlock(Char(), Int32, Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.ReadBlock(System.Char[],System.Int32,System.Int32)
+    name: ReadBlock
+    nameWithType: BufferedTextReader.ReadBlock
+    fullName: VDS.RDF.Parsing.BufferedTextReader.ReadBlock
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.ReadBlock(System.Char[],System.Int32,System.Int32)
+    name: ReadBlock
+    nameWithType: BufferedTextReader.ReadBlock
+    fullName: VDS.RDF.Parsing.BufferedTextReader.ReadBlock
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.BufferedTextReader.Read(System.Char[],System.Int32,System.Int32)
+  commentId: M:VDS.RDF.Parsing.BufferedTextReader.Read(System.Char[],System.Int32,System.Int32)
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  isExternal: true
+  name: Read(Char[], Int32, Int32)
+  nameWithType: BufferedTextReader.Read(Char[], Int32, Int32)
+  fullName: VDS.RDF.Parsing.BufferedTextReader.Read(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: BufferedTextReader.Read(Char(), Int32, Int32)
+  fullName.vb: VDS.RDF.Parsing.BufferedTextReader.Read(System.Char(), System.Int32, System.Int32)
+  name.vb: Read(Char(), Int32, Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Read(System.Char[],System.Int32,System.Int32)
+    name: Read
+    nameWithType: BufferedTextReader.Read
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Read
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Read(System.Char[],System.Int32,System.Int32)
+    name: Read
+    nameWithType: BufferedTextReader.Read
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Read
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.BufferedTextReader.Read
+  commentId: M:VDS.RDF.Parsing.BufferedTextReader.Read
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: Read()
+  nameWithType: BufferedTextReader.Read()
+  fullName: VDS.RDF.Parsing.BufferedTextReader.Read()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Read
+    name: Read
+    nameWithType: BufferedTextReader.Read
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Read
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Read
+    name: Read
+    nameWithType: BufferedTextReader.Read
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Read
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.BufferedTextReader.Peek
+  commentId: M:VDS.RDF.Parsing.BufferedTextReader.Peek
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: Peek()
+  nameWithType: BufferedTextReader.Peek()
+  fullName: VDS.RDF.Parsing.BufferedTextReader.Peek()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Peek
+    name: Peek
+    nameWithType: BufferedTextReader.Peek
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Peek
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Peek
+    name: Peek
+    nameWithType: BufferedTextReader.Peek
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Peek
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.BufferedTextReader.EndOfStream
+  commentId: P:VDS.RDF.Parsing.BufferedTextReader.EndOfStream
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: EndOfStream
+  nameWithType: BufferedTextReader.EndOfStream
+  fullName: VDS.RDF.Parsing.BufferedTextReader.EndOfStream
+- uid: VDS.RDF.Parsing.BufferedTextReader.Close
+  commentId: M:VDS.RDF.Parsing.BufferedTextReader.Close
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: Close()
+  nameWithType: BufferedTextReader.Close()
+  fullName: VDS.RDF.Parsing.BufferedTextReader.Close()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Close
+    name: Close
+    nameWithType: BufferedTextReader.Close
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Close
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Close
+    name: Close
+    nameWithType: BufferedTextReader.Close
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Close
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.BufferedTextReader.Dispose(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.BufferedTextReader.Dispose(System.Boolean)
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: BufferedTextReader.Dispose(Boolean)
+  fullName: VDS.RDF.Parsing.BufferedTextReader.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: BufferedTextReader.Dispose
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: BufferedTextReader.Dispose
+    fullName: VDS.RDF.Parsing.BufferedTextReader.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader,System.Int32)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader,System.Int32)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: Create(TextReader, Int32)
+  nameWithType: ParsingTextReader.Create(TextReader, Int32)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader,System.Int32)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader,System.Int32)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: Create(TextReader)
+  nameWithType: ParsingTextReader.Create(TextReader)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.TextReader)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream,System.Int32)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream,System.Int32)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: Create(Stream, Int32)
+  nameWithType: ParsingTextReader.Create(Stream, Int32)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream,System.Int32)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream,System.Int32)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: Create(Stream)
+  nameWithType: ParsingTextReader.Create(Stream)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.Create(System.IO.Stream)
+    name: Create
+    nameWithType: ParsingTextReader.Create
+    fullName: VDS.RDF.Parsing.ParsingTextReader.Create
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: CreateBlocking(TextReader)
+  nameWithType: ParsingTextReader.CreateBlocking(TextReader)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader)
+    name: CreateBlocking
+    nameWithType: ParsingTextReader.CreateBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader)
+    name: CreateBlocking
+    nameWithType: ParsingTextReader.CreateBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader,System.Int32)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader,System.Int32)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: CreateBlocking(TextReader, Int32)
+  nameWithType: ParsingTextReader.CreateBlocking(TextReader, Int32)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader,System.Int32)
+    name: CreateBlocking
+    nameWithType: ParsingTextReader.CreateBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking(System.IO.TextReader,System.Int32)
+    name: CreateBlocking
+    nameWithType: ParsingTextReader.CreateBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: CreateNonBlocking(TextReader)
+  nameWithType: ParsingTextReader.CreateNonBlocking(TextReader)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader)
+    name: CreateNonBlocking
+    nameWithType: ParsingTextReader.CreateNonBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader)
+    name: CreateNonBlocking
+    nameWithType: ParsingTextReader.CreateNonBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader,System.Int32)
+  commentId: M:VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader,System.Int32)
+  parent: VDS.RDF.Parsing.ParsingTextReader
+  isExternal: true
+  name: CreateNonBlocking(TextReader, Int32)
+  nameWithType: ParsingTextReader.CreateNonBlocking(TextReader, Int32)
+  fullName: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader,System.Int32)
+    name: CreateNonBlocking
+    nameWithType: ParsingTextReader.CreateNonBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking(System.IO.TextReader,System.Int32)
+    name: CreateNonBlocking
+    nameWithType: ParsingTextReader.CreateNonBlocking
+    fullName: VDS.RDF.Parsing.ParsingTextReader.CreateNonBlocking
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.Null
+  commentId: F:System.IO.TextReader.Null
+  parent: System.IO.TextReader
+  isExternal: true
+  name: "Null"
+  nameWithType: TextReader.Null
+  fullName: System.IO.TextReader.Null
+- uid: System.IO.TextReader.Dispose
+  commentId: M:System.IO.TextReader.Dispose
+  parent: System.IO.TextReader
+  isExternal: true
+  name: Dispose()
+  nameWithType: TextReader.Dispose()
+  fullName: System.IO.TextReader.Dispose()
+  spec.csharp:
+  - uid: System.IO.TextReader.Dispose
+    name: Dispose
+    nameWithType: TextReader.Dispose
+    fullName: System.IO.TextReader.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.Dispose
+    name: Dispose
+    nameWithType: TextReader.Dispose
+    fullName: System.IO.TextReader.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.ReadAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextReader.ReadAsync(System.Char[],System.Int32,System.Int32)
+  parent: System.IO.TextReader
+  isExternal: true
+  name: ReadAsync(Char[], Int32, Int32)
+  nameWithType: TextReader.ReadAsync(Char[], Int32, Int32)
+  fullName: System.IO.TextReader.ReadAsync(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: TextReader.ReadAsync(Char(), Int32, Int32)
+  fullName.vb: System.IO.TextReader.ReadAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: ReadAsync(Char(), Int32, Int32)
+  spec.csharp:
+  - uid: System.IO.TextReader.ReadAsync(System.Char[],System.Int32,System.Int32)
+    name: ReadAsync
+    nameWithType: TextReader.ReadAsync
+    fullName: System.IO.TextReader.ReadAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.ReadAsync(System.Char[],System.Int32,System.Int32)
+    name: ReadAsync
+    nameWithType: TextReader.ReadAsync
+    fullName: System.IO.TextReader.ReadAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.ReadBlockAsync(System.Char[],System.Int32,System.Int32)
+  commentId: M:System.IO.TextReader.ReadBlockAsync(System.Char[],System.Int32,System.Int32)
+  parent: System.IO.TextReader
+  isExternal: true
+  name: ReadBlockAsync(Char[], Int32, Int32)
+  nameWithType: TextReader.ReadBlockAsync(Char[], Int32, Int32)
+  fullName: System.IO.TextReader.ReadBlockAsync(System.Char[], System.Int32, System.Int32)
+  nameWithType.vb: TextReader.ReadBlockAsync(Char(), Int32, Int32)
+  fullName.vb: System.IO.TextReader.ReadBlockAsync(System.Char(), System.Int32, System.Int32)
+  name.vb: ReadBlockAsync(Char(), Int32, Int32)
+  spec.csharp:
+  - uid: System.IO.TextReader.ReadBlockAsync(System.Char[],System.Int32,System.Int32)
+    name: ReadBlockAsync
+    nameWithType: TextReader.ReadBlockAsync
+    fullName: System.IO.TextReader.ReadBlockAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.ReadBlockAsync(System.Char[],System.Int32,System.Int32)
+    name: ReadBlockAsync
+    nameWithType: TextReader.ReadBlockAsync
+    fullName: System.IO.TextReader.ReadBlockAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.ReadLine
+  commentId: M:System.IO.TextReader.ReadLine
+  parent: System.IO.TextReader
+  isExternal: true
+  name: ReadLine()
+  nameWithType: TextReader.ReadLine()
+  fullName: System.IO.TextReader.ReadLine()
+  spec.csharp:
+  - uid: System.IO.TextReader.ReadLine
+    name: ReadLine
+    nameWithType: TextReader.ReadLine
+    fullName: System.IO.TextReader.ReadLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.ReadLine
+    name: ReadLine
+    nameWithType: TextReader.ReadLine
+    fullName: System.IO.TextReader.ReadLine
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.ReadLineAsync
+  commentId: M:System.IO.TextReader.ReadLineAsync
+  parent: System.IO.TextReader
+  isExternal: true
+  name: ReadLineAsync()
+  nameWithType: TextReader.ReadLineAsync()
+  fullName: System.IO.TextReader.ReadLineAsync()
+  spec.csharp:
+  - uid: System.IO.TextReader.ReadLineAsync
+    name: ReadLineAsync
+    nameWithType: TextReader.ReadLineAsync
+    fullName: System.IO.TextReader.ReadLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.ReadLineAsync
+    name: ReadLineAsync
+    nameWithType: TextReader.ReadLineAsync
+    fullName: System.IO.TextReader.ReadLineAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.ReadToEnd
+  commentId: M:System.IO.TextReader.ReadToEnd
+  parent: System.IO.TextReader
+  isExternal: true
+  name: ReadToEnd()
+  nameWithType: TextReader.ReadToEnd()
+  fullName: System.IO.TextReader.ReadToEnd()
+  spec.csharp:
+  - uid: System.IO.TextReader.ReadToEnd
+    name: ReadToEnd
+    nameWithType: TextReader.ReadToEnd
+    fullName: System.IO.TextReader.ReadToEnd
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.ReadToEnd
+    name: ReadToEnd
+    nameWithType: TextReader.ReadToEnd
+    fullName: System.IO.TextReader.ReadToEnd
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.ReadToEndAsync
+  commentId: M:System.IO.TextReader.ReadToEndAsync
+  parent: System.IO.TextReader
+  isExternal: true
+  name: ReadToEndAsync()
+  nameWithType: TextReader.ReadToEndAsync()
+  fullName: System.IO.TextReader.ReadToEndAsync()
+  spec.csharp:
+  - uid: System.IO.TextReader.ReadToEndAsync
+    name: ReadToEndAsync
+    nameWithType: TextReader.ReadToEndAsync
+    fullName: System.IO.TextReader.ReadToEndAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.ReadToEndAsync
+    name: ReadToEndAsync
+    nameWithType: TextReader.ReadToEndAsync
+    fullName: System.IO.TextReader.ReadToEndAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.TextReader.Synchronized(System.IO.TextReader)
+  commentId: M:System.IO.TextReader.Synchronized(System.IO.TextReader)
+  parent: System.IO.TextReader
+  isExternal: true
+  name: Synchronized(TextReader)
+  nameWithType: TextReader.Synchronized(TextReader)
+  fullName: System.IO.TextReader.Synchronized(System.IO.TextReader)
+  spec.csharp:
+  - uid: System.IO.TextReader.Synchronized(System.IO.TextReader)
+    name: Synchronized
+    nameWithType: TextReader.Synchronized
+    fullName: System.IO.TextReader.Synchronized
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.TextReader.Synchronized(System.IO.TextReader)
+    name: Synchronized
+    nameWithType: TextReader.Synchronized
+    fullName: System.IO.TextReader.Synchronized
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.TextReader
+    name: TextReader
+    nameWithType: TextReader
+    fullName: System.IO.TextReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.MarshalByRefObject.GetLifetimeService
+  commentId: M:System.MarshalByRefObject.GetLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  name: GetLifetimeService()
+  nameWithType: MarshalByRefObject.GetLifetimeService()
+  fullName: System.MarshalByRefObject.GetLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    nameWithType: MarshalByRefObject.GetLifetimeService
+    fullName: System.MarshalByRefObject.GetLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.GetLifetimeService
+    name: GetLifetimeService
+    nameWithType: MarshalByRefObject.GetLifetimeService
+    fullName: System.MarshalByRefObject.GetLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.MarshalByRefObject.InitializeLifetimeService
+  commentId: M:System.MarshalByRefObject.InitializeLifetimeService
+  parent: System.MarshalByRefObject
+  isExternal: true
+  name: InitializeLifetimeService()
+  nameWithType: MarshalByRefObject.InitializeLifetimeService()
+  fullName: System.MarshalByRefObject.InitializeLifetimeService()
+  spec.csharp:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    nameWithType: MarshalByRefObject.InitializeLifetimeService
+    fullName: System.MarshalByRefObject.InitializeLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.InitializeLifetimeService
+    name: InitializeLifetimeService
+    nameWithType: MarshalByRefObject.InitializeLifetimeService
+    fullName: System.MarshalByRefObject.InitializeLifetimeService
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  commentId: M:System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  parent: System.MarshalByRefObject
+  isExternal: true
+  name: MemberwiseClone(Boolean)
+  nameWithType: MarshalByRefObject.MemberwiseClone(Boolean)
+  fullName: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+  spec.csharp:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    nameWithType: MarshalByRefObject.MemberwiseClone
+    fullName: System.MarshalByRefObject.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.MarshalByRefObject.MemberwiseClone(System.Boolean)
+    name: MemberwiseClone
+    nameWithType: MarshalByRefObject.MemberwiseClone
+    fullName: System.MarshalByRefObject.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.NonBlockingTextReader.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<NonBlockingTextReader>()
+  nameWithType: Extensions.AsEnumerable<NonBlockingTextReader>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.NonBlockingTextReader>()
+  nameWithType.vb: Extensions.AsEnumerable(Of NonBlockingTextReader)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.NonBlockingTextReader)()
+  name.vb: AsEnumerable(Of NonBlockingTextReader)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<NonBlockingTextReader>
+    nameWithType: Extensions.AsEnumerable<NonBlockingTextReader>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Parsing.NonBlockingTextReader>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of NonBlockingTextReader)
+    nameWithType: Extensions.AsEnumerable(Of NonBlockingTextReader)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Parsing.NonBlockingTextReader)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Parsing.BufferedTextReader.FillBuffer
+  commentId: M:VDS.RDF.Parsing.BufferedTextReader.FillBuffer
+  parent: VDS.RDF.Parsing.BufferedTextReader
+  name: FillBuffer()
+  nameWithType: BufferedTextReader.FillBuffer()
+  fullName: VDS.RDF.Parsing.BufferedTextReader.FillBuffer()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.FillBuffer
+    name: FillBuffer
+    nameWithType: BufferedTextReader.FillBuffer
+    fullName: VDS.RDF.Parsing.BufferedTextReader.FillBuffer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.BufferedTextReader.FillBuffer
+    name: FillBuffer
+    nameWithType: BufferedTextReader.FillBuffer
+    fullName: VDS.RDF.Parsing.BufferedTextReader.FillBuffer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer*
+  commentId: Overload:VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer
+  name: FillBuffer
+  nameWithType: NonBlockingTextReader.FillBuffer
+  fullName: VDS.RDF.Parsing.NonBlockingTextReader.FillBuffer

@@ -1,0 +1,1641 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Inference.PelletReasoner
+  commentId: T:VDS.RDF.Query.Inference.PelletReasoner
+  id: PelletReasoner
+  parent: VDS.RDF.Query.Inference
+  children:
+  - VDS.RDF.Query.Inference.PelletReasoner.#ctor(System.Uri,System.String)
+  - VDS.RDF.Query.Inference.PelletReasoner.#ctor(VDS.RDF.Query.Inference.Pellet.PelletServer,System.String)
+  - VDS.RDF.Query.Inference.PelletReasoner.Add(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Inference.PelletReasoner.Classify
+  - VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery(System.String)
+  - VDS.RDF.Query.Inference.PelletReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  - VDS.RDF.Query.Inference.PelletReasoner.Extract(System.String)
+  - VDS.RDF.Query.Inference.PelletReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  - VDS.RDF.Query.Inference.PelletReasoner.IsConsistent
+  - VDS.RDF.Query.Inference.PelletReasoner.IsConsistent(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase
+  - VDS.RDF.Query.Inference.PelletReasoner.Realize
+  - VDS.RDF.Query.Inference.PelletReasoner.Server
+  - VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable
+  langs:
+  - csharp
+  - vb
+  name: PelletReasoner
+  nameWithType: PelletReasoner
+  fullName: VDS.RDF.Query.Inference.PelletReasoner
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: PelletReasoner
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nA Pellet Reasoner which provides OWL 2 capable reasoning using an external knowledge base from a Pellet Server instance.\n"
+  remarks: "\n<p>\n<strong>Note:</strong> Currently this reasoner operates only on a external knowledge base and there is currently no way to introduce new knowledge bases/data through the dotNetRDF API.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class PelletReasoner : IQueryableOwlReasoner, IOwlReasoner'
+    content.vb: >-
+      Public Class PelletReasoner
+          Implements IQueryableOwlReasoner, IOwlReasoner
+  inheritance:
+  - System.Object
+  implements:
+  - VDS.RDF.Query.Inference.IQueryableOwlReasoner
+  - VDS.RDF.Query.Inference.IOwlReasoner
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Query.Inference.PelletReasoner.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Inference.PelletReasoner.#ctor(VDS.RDF.Query.Inference.Pellet.PelletServer,System.String)
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.#ctor(VDS.RDF.Query.Inference.Pellet.PelletServer,System.String)
+  id: '#ctor(VDS.RDF.Query.Inference.Pellet.PelletServer,System.String)'
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: PelletReasoner(PelletServer, String)
+  nameWithType: PelletReasoner.PelletReasoner(PelletServer, String)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.PelletReasoner(VDS.RDF.Query.Inference.Pellet.PelletServer, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 52
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nCreates a new Pellet Reasoner.\n"
+  example: []
+  syntax:
+    content: public PelletReasoner(PelletServer server, string kbName)
+    parameters:
+    - id: server
+      type: VDS.RDF.Query.Inference.Pellet.PelletServer
+      description: Pellet Server.
+    - id: kbName
+      type: System.String
+      description: Knowledge Base name.
+    content.vb: Public Sub New(server As PelletServer, kbName As String)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.#ctor(System.Uri,System.String)
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.#ctor(System.Uri,System.String)
+  id: '#ctor(System.Uri,System.String)'
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: PelletReasoner(Uri, String)
+  nameWithType: PelletReasoner.PelletReasoner(Uri, String)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.PelletReasoner(System.Uri, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 70
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nCreates a new Pellet Reasoner.\n"
+  example: []
+  syntax:
+    content: public PelletReasoner(Uri serverUri, string kbName)
+    parameters:
+    - id: serverUri
+      type: System.Uri
+      description: Pellet Server URI.
+    - id: kbName
+      type: System.String
+      description: Knowledge Base name.
+    content.vb: Public Sub New(serverUri As Uri, kbName As String)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase
+  commentId: P:VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase
+  id: KnowledgeBase
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: KnowledgeBase
+  nameWithType: PelletReasoner.KnowledgeBase
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: KnowledgeBase
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 76
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nGets the Knowledge Base this Reasoner operates over.\n"
+  example: []
+  syntax:
+    content: public KnowledgeBase KnowledgeBase { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Inference.Pellet.KnowledgeBase
+    content.vb: Public ReadOnly Property KnowledgeBase As KnowledgeBase
+  overload: VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Server
+  commentId: P:VDS.RDF.Query.Inference.PelletReasoner.Server
+  id: Server
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Server
+  nameWithType: PelletReasoner.Server
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Server
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Server
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 87
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nGets the Pellet Server this Reasoner operates on.\n"
+  example: []
+  syntax:
+    content: public PelletServer Server { get; }
+    parameters: []
+    return:
+      type: VDS.RDF.Query.Inference.Pellet.PelletServer
+    content.vb: Public ReadOnly Property Server As PelletServer
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Server*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery(System.String)
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery(System.String)
+  id: ExecuteQuery(System.String)
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: ExecuteQuery(String)
+  nameWithType: PelletReasoner.ExecuteQuery(String)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ExecuteQuery
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 100
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExecutes a SPARQL Query against the underlying Knowledge Base.\n"
+  example: []
+  syntax:
+    content: public object ExecuteQuery(string sparqlQuery)
+    parameters:
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Function ExecuteQuery(sparqlQuery As String) As Object
+  overload: VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery*
+  implements:
+  - VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Add(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.Add(VDS.RDF.IGraph)
+  id: Add(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Add(IGraph)
+  nameWithType: PelletReasoner.Add(IGraph)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Add(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Add
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 121
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nAdds a Graph to the Knowledge Base.\n"
+  remarks: "\nCurrently not supported by Pellet Server.\n"
+  example: []
+  syntax:
+    content: public void Add(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    content.vb: Public Sub Add(g As IGraph)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Add*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  id: Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Extract(IGraph, INode)
+  nameWithType: PelletReasoner.Extract(IGraph, INode)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Extract(VDS.RDF.IGraph, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Extract
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 135
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtract a reasoning enhanced sub-graph from the given Graph rooted at the given Node.\n"
+  remarks: "\nCurrently not supported by Pellet Server.\n"
+  example: []
+  syntax:
+    content: public IGraph Extract(IGraph g, INode n)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    - id: n
+      type: VDS.RDF.INode
+      description: Root Node.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public Function Extract(g As IGraph, n As INode) As IGraph
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Extract*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Extract(System.String)
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.Extract(System.String)
+  id: Extract(System.String)
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Extract(String)
+  nameWithType: PelletReasoner.Extract(String)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Extract(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Extract
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 148
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts all possible triples using the given extraction mode.\n"
+  remarks: "\nCurrently not supported by Pellet Server.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Triple> Extract(string mode)
+    parameters:
+    - id: mode
+      type: System.String
+      description: Extraction Mode.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Function Extract(mode As String) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Extract*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  id: Extract(System.Collections.Generic.IEnumerable{System.String})
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Extract(IEnumerable<String>)
+  nameWithType: PelletReasoner.Extract(IEnumerable<String>)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Extract(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Extract
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 161
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts all possible triples using the given extraction modes.\n"
+  remarks: "\nCurrently not supported by Pellet Server.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Triple> Extract(IEnumerable<string> modes)
+    parameters:
+    - id: modes
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Extraction Modes.
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Function Extract(modes As IEnumerable(Of String)) As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Extract*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  nameWithType.vb: PelletReasoner.Extract(IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.Inference.PelletReasoner.Extract(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Extract(IEnumerable(Of String))
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Classify
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.Classify
+  id: Classify
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Classify()
+  nameWithType: PelletReasoner.Classify()
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Classify()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Classify
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 170
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts the triples which comprise the class hierarchy.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Triple> Classify()
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Function Classify As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Classify*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Realize
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.Realize
+  id: Realize
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Realize()
+  nameWithType: PelletReasoner.Realize()
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Realize()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Realize
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 188
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nExtracts the triples which comprise the class hierarchy and individuals of those classes.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Triple> Realize()
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+      description: ''
+    content.vb: Public Function Realize As IEnumerable(Of Triple)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Realize*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.IsConsistent
+  id: IsConsistent
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: IsConsistent()
+  nameWithType: PelletReasoner.IsConsistent()
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsConsistent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 206
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nReturns whether the underlying knowledge base is consistent.\n"
+  example: []
+  syntax:
+    content: public bool IsConsistent()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsConsistent As Boolean
+  overload: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Inference.PelletReasoner.IsConsistent(VDS.RDF.IGraph)
+  id: IsConsistent(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: IsConsistent(IGraph)
+  nameWithType: PelletReasoner.IsConsistent(IGraph)
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsConsistent
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 228
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nReturns whether the given Graph is consistent with the underlying knowledge base.\n"
+  remarks: "\nCurrently not supported by Pellet Server.\n"
+  example: []
+  syntax:
+    content: public bool IsConsistent(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsConsistent(g As IGraph) As Boolean
+  overload: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable
+  commentId: P:VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable
+  id: Unsatisfiable
+  parent: VDS.RDF.Query.Inference.PelletReasoner
+  langs:
+  - csharp
+  - vb
+  name: Unsatisfiable
+  nameWithType: PelletReasoner.Unsatisfiable
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Unsatisfiable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Inference/PelletReasoner.cs
+    startLine: 239
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Inference
+  summary: "\nReturns the enumeration of unsatisfiable classes.\n"
+  remarks: "\nCurrently not supported by Pellet Server.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<OntologyResource> Unsatisfiable { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.Ontology.OntologyResource}
+    content.vb: Public ReadOnly Property Unsatisfiable As IEnumerable(Of OntologyResource)
+  overload: VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable*
+  implements:
+  - VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: VDS.RDF.Query.Inference
+  commentId: N:VDS.RDF.Query.Inference
+  name: VDS.RDF.Query.Inference
+  nameWithType: VDS.RDF.Query.Inference
+  fullName: VDS.RDF.Query.Inference
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Inference.IQueryableOwlReasoner
+  commentId: T:VDS.RDF.Query.Inference.IQueryableOwlReasoner
+  parent: VDS.RDF.Query.Inference
+  name: IQueryableOwlReasoner
+  nameWithType: IQueryableOwlReasoner
+  fullName: VDS.RDF.Query.Inference.IQueryableOwlReasoner
+- uid: VDS.RDF.Query.Inference.IOwlReasoner
+  commentId: T:VDS.RDF.Query.Inference.IOwlReasoner
+  parent: VDS.RDF.Query.Inference
+  name: IOwlReasoner
+  nameWithType: IOwlReasoner
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Inference.PelletReasoner.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<PelletReasoner>()
+  nameWithType: Extensions.AsEnumerable<PelletReasoner>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Inference.PelletReasoner>()
+  nameWithType.vb: Extensions.AsEnumerable(Of PelletReasoner)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Inference.PelletReasoner)()
+  name.vb: AsEnumerable(Of PelletReasoner)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<PelletReasoner>
+    nameWithType: Extensions.AsEnumerable<PelletReasoner>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Inference.PelletReasoner>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of PelletReasoner)
+    nameWithType: Extensions.AsEnumerable(Of PelletReasoner)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Inference.PelletReasoner)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Inference.PelletReasoner.#ctor*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.#ctor
+  name: PelletReasoner
+  nameWithType: PelletReasoner.PelletReasoner
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.PelletReasoner
+- uid: VDS.RDF.Query.Inference.Pellet.PelletServer
+  commentId: T:VDS.RDF.Query.Inference.Pellet.PelletServer
+  parent: VDS.RDF.Query.Inference.Pellet
+  name: PelletServer
+  nameWithType: PelletServer
+  fullName: VDS.RDF.Query.Inference.Pellet.PelletServer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Query.Inference.Pellet
+  commentId: N:VDS.RDF.Query.Inference.Pellet
+  name: VDS.RDF.Query.Inference.Pellet
+  nameWithType: VDS.RDF.Query.Inference.Pellet
+  fullName: VDS.RDF.Query.Inference.Pellet
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase
+  name: KnowledgeBase
+  nameWithType: PelletReasoner.KnowledgeBase
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.KnowledgeBase
+- uid: VDS.RDF.Query.Inference.Pellet.KnowledgeBase
+  commentId: T:VDS.RDF.Query.Inference.Pellet.KnowledgeBase
+  parent: VDS.RDF.Query.Inference.Pellet
+  name: KnowledgeBase
+  nameWithType: KnowledgeBase
+  fullName: VDS.RDF.Query.Inference.Pellet.KnowledgeBase
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Server*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.Server
+  name: Server
+  nameWithType: PelletReasoner.Server
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Server
+- uid: VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery
+  name: ExecuteQuery
+  nameWithType: PelletReasoner.ExecuteQuery
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.ExecuteQuery
+- uid: VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery(System.String)
+  commentId: M:VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery(System.String)
+  parent: VDS.RDF.Query.Inference.IQueryableOwlReasoner
+  isExternal: true
+  name: ExecuteQuery(String)
+  nameWithType: IQueryableOwlReasoner.ExecuteQuery(String)
+  fullName: VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery(System.String)
+    name: ExecuteQuery
+    nameWithType: IQueryableOwlReasoner.ExecuteQuery
+    fullName: VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery(System.String)
+    name: ExecuteQuery
+    nameWithType: IQueryableOwlReasoner.ExecuteQuery
+    fullName: VDS.RDF.Query.Inference.IQueryableOwlReasoner.ExecuteQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Add*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.Add
+  name: Add
+  nameWithType: PelletReasoner.Add
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Add
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  name: Add(IGraph)
+  nameWithType: IOwlReasoner.Add(IGraph)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+    name: Add
+    nameWithType: IOwlReasoner.Add
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Add(VDS.RDF.IGraph)
+    name: Add
+    nameWithType: IOwlReasoner.Add
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Extract*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.Extract
+  name: Extract
+  nameWithType: PelletReasoner.Extract
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Extract
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  name: Extract(IGraph, INode)
+  nameWithType: IOwlReasoner.Extract(IGraph, INode)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+    name: Extract
+    nameWithType: IOwlReasoner.Extract
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(VDS.RDF.IGraph,VDS.RDF.INode)
+    name: Extract
+    nameWithType: IOwlReasoner.Extract
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  isExternal: true
+  name: Extract(String)
+  nameWithType: IOwlReasoner.Extract(String)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+    name: Extract
+    nameWithType: IOwlReasoner.Extract
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.String)
+    name: Extract
+    nameWithType: IOwlReasoner.Extract
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Triple}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Triple>
+  nameWithType: IEnumerable<Triple>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Triple>
+  nameWithType.vb: IEnumerable(Of Triple)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple)
+  name.vb: IEnumerable(Of Triple)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  isExternal: true
+  name: Extract(IEnumerable<String>)
+  nameWithType: IOwlReasoner.Extract(IEnumerable<String>)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable<System.String>)
+  nameWithType.vb: IOwlReasoner.Extract(IEnumerable(Of String))
+  fullName.vb: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Extract(IEnumerable(Of String))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+    name: Extract
+    nameWithType: IOwlReasoner.Extract
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Extract(System.Collections.Generic.IEnumerable{System.String})
+    name: Extract
+    nameWithType: IOwlReasoner.Extract
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Extract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Classify*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.Classify
+  name: Classify
+  nameWithType: PelletReasoner.Classify
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Classify
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  name: Classify()
+  nameWithType: IOwlReasoner.Classify()
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Classify()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Classify
+    name: Classify
+    nameWithType: IOwlReasoner.Classify
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Classify
+    name: Classify
+    nameWithType: IOwlReasoner.Classify
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Classify
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Realize*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.Realize
+  name: Realize
+  nameWithType: PelletReasoner.Realize
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Realize
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  name: Realize()
+  nameWithType: IOwlReasoner.Realize()
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Realize()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Realize
+    name: Realize
+    nameWithType: IOwlReasoner.Realize
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.Realize
+    name: Realize
+    nameWithType: IOwlReasoner.Realize
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.Realize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.IsConsistent
+  name: IsConsistent
+  nameWithType: PelletReasoner.IsConsistent
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.IsConsistent
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  name: IsConsistent()
+  nameWithType: IOwlReasoner.IsConsistent()
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+    name: IsConsistent
+    nameWithType: IOwlReasoner.IsConsistent
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+    name: IsConsistent
+    nameWithType: IOwlReasoner.IsConsistent
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  name: IsConsistent(IGraph)
+  nameWithType: IOwlReasoner.IsConsistent(IGraph)
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+    name: IsConsistent
+    nameWithType: IOwlReasoner.IsConsistent
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent(VDS.RDF.IGraph)
+    name: IsConsistent
+    nameWithType: IOwlReasoner.IsConsistent
+    fullName: VDS.RDF.Query.Inference.IOwlReasoner.IsConsistent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable*
+  commentId: Overload:VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable
+  name: Unsatisfiable
+  nameWithType: PelletReasoner.Unsatisfiable
+  fullName: VDS.RDF.Query.Inference.PelletReasoner.Unsatisfiable
+- uid: VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  commentId: P:VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+  parent: VDS.RDF.Query.Inference.IOwlReasoner
+  name: Unsatisfiable
+  nameWithType: IOwlReasoner.Unsatisfiable
+  fullName: VDS.RDF.Query.Inference.IOwlReasoner.Unsatisfiable
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.Ontology.OntologyResource}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.Ontology.OntologyResource}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<OntologyResource>
+  nameWithType: IEnumerable<OntologyResource>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.Ontology.OntologyResource>
+  nameWithType.vb: IEnumerable(Of OntologyResource)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.Ontology.OntologyResource)
+  name.vb: IEnumerable(Of OntologyResource)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Ontology.OntologyResource
+    name: OntologyResource
+    nameWithType: OntologyResource
+    fullName: VDS.RDF.Ontology.OntologyResource
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Ontology.OntologyResource
+    name: OntologyResource
+    nameWithType: OntologyResource
+    fullName: VDS.RDF.Ontology.OntologyResource
+  - name: )
+    nameWithType: )
+    fullName: )

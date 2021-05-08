@@ -1,0 +1,2612 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.SparqlResult
+  commentId: T:VDS.RDF.Query.SparqlResult
+  id: SparqlResult
+  parent: VDS.RDF.Query
+  children:
+  - VDS.RDF.Query.SparqlResult.#ctor
+  - VDS.RDF.Query.SparqlResult.#ctor(VDS.RDF.Query.Algebra.ISet)
+  - VDS.RDF.Query.SparqlResult.#ctor(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  - VDS.RDF.Query.SparqlResult.Count
+  - VDS.RDF.Query.SparqlResult.Equals(System.Object)
+  - VDS.RDF.Query.SparqlResult.GetEnumerator
+  - VDS.RDF.Query.SparqlResult.GetHashCode
+  - VDS.RDF.Query.SparqlResult.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - VDS.RDF.Query.SparqlResult.GetSchema
+  - VDS.RDF.Query.SparqlResult.HasBoundValue(System.String)
+  - VDS.RDF.Query.SparqlResult.HasValue(System.String)
+  - VDS.RDF.Query.SparqlResult.IsGroundResult
+  - VDS.RDF.Query.SparqlResult.Item(System.Int32)
+  - VDS.RDF.Query.SparqlResult.Item(System.String)
+  - VDS.RDF.Query.SparqlResult.ReadXml(System.Xml.XmlReader)
+  - VDS.RDF.Query.SparqlResult.System#Collections#IEnumerable#GetEnumerator
+  - VDS.RDF.Query.SparqlResult.ToString
+  - VDS.RDF.Query.SparqlResult.ToString(VDS.RDF.Writing.Formatting.INodeFormatter)
+  - VDS.RDF.Query.SparqlResult.Trim
+  - VDS.RDF.Query.SparqlResult.TryGetBoundValue(System.String,VDS.RDF.INode@)
+  - VDS.RDF.Query.SparqlResult.TryGetValue(System.String,VDS.RDF.INode@)
+  - VDS.RDF.Query.SparqlResult.Value(System.String)
+  - VDS.RDF.Query.SparqlResult.Variables
+  - VDS.RDF.Query.SparqlResult.WriteXml(System.Xml.XmlWriter)
+  langs:
+  - csharp
+  - vb
+  name: SparqlResult
+  nameWithType: SparqlResult
+  fullName: VDS.RDF.Query.SparqlResult
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SparqlResult
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 45
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nClass for representing a Row of a Sparql Result Set.\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public sealed class SparqlResult : IEnumerable<KeyValuePair<string, INode>>, IEnumerable, ISerializable, IXmlSerializable
+    content.vb: >-
+      <Serializable>
+
+      Public NotInheritable Class SparqlResult
+          Implements IEnumerable(Of KeyValuePair(Of String, INode)), IEnumerable, ISerializable, IXmlSerializable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  - System.Collections.IEnumerable
+  - System.Runtime.Serialization.ISerializable
+  - System.Xml.Serialization.IXmlSerializable
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.SparqlResult.VDS.RDF.Extensions.AsEnumerable``1
+  - System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}})
+  - System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  - VDS.RDF.Query.SparqlResult.VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: VDS.RDF.Query.SparqlResult.#ctor
+  commentId: M:VDS.RDF.Query.SparqlResult.#ctor
+  id: '#ctor'
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: SparqlResult()
+  nameWithType: SparqlResult.SparqlResult()
+  fullName: VDS.RDF.Query.SparqlResult.SparqlResult()
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 59
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new empty SPARQL Result which can only be filled by methods internal to the dotNetRDF Library.\n"
+  example: []
+  syntax:
+    content: public SparqlResult()
+    content.vb: Public Sub New
+  overload: VDS.RDF.Query.SparqlResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.#ctor(VDS.RDF.Query.Algebra.ISet)
+  commentId: M:VDS.RDF.Query.SparqlResult.#ctor(VDS.RDF.Query.Algebra.ISet)
+  id: '#ctor(VDS.RDF.Query.Algebra.ISet)'
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: SparqlResult(ISet)
+  nameWithType: SparqlResult.SparqlResult(ISet)
+  fullName: VDS.RDF.Query.SparqlResult.SparqlResult(VDS.RDF.Query.Algebra.ISet)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 66
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new SPARQL Result from the given Set.\n"
+  example: []
+  syntax:
+    content: public SparqlResult(ISet s)
+    parameters:
+    - id: s
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Set.
+    content.vb: Public Sub New(s As ISet)
+  overload: VDS.RDF.Query.SparqlResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.#ctor(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.SparqlResult.#ctor(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})'
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: SparqlResult(ISet, IEnumerable<String>)
+  nameWithType: SparqlResult.SparqlResult(ISet, IEnumerable<String>)
+  fullName: VDS.RDF.Query.SparqlResult.SparqlResult(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 80
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nCreates a new SPARQL Result from the given Set which contains only the given variables in the given order.\n"
+  example: []
+  syntax:
+    content: public SparqlResult(ISet s, IEnumerable<string> variables)
+    parameters:
+    - id: s
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Set.
+    - id: variables
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Variables.
+    content.vb: Public Sub New(s As ISet, variables As IEnumerable(Of String))
+  overload: VDS.RDF.Query.SparqlResult.#ctor*
+  nameWithType.vb: SparqlResult.SparqlResult(ISet, IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.SparqlResult.SparqlResult(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: SparqlResult(ISet, IEnumerable(Of String))
+- uid: VDS.RDF.Query.SparqlResult.Value(System.String)
+  commentId: M:VDS.RDF.Query.SparqlResult.Value(System.String)
+  id: Value(System.String)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: Value(String)
+  nameWithType: SparqlResult.Value(String)
+  fullName: VDS.RDF.Query.SparqlResult.Value(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Value
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 108
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Value that is bound to the given Variable.\n"
+  example: []
+  syntax:
+    content: public INode Value(string variable)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable whose Value you wish to retrieve.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Public Function Value(variable As String) As INode
+  overload: VDS.RDF.Query.SparqlResult.Value*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if there is nothing bound to the given Variable Name for this Result.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.Item(System.String)
+  commentId: P:VDS.RDF.Query.SparqlResult.Item(System.String)
+  id: Item(System.String)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: SparqlResult.Item[String]
+  fullName: VDS.RDF.Query.SparqlResult.Item[System.String]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 126
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Value that is bound to the given Variable.\n"
+  example: []
+  syntax:
+    content: public INode this[string variable] { get; }
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable whose Value you wish to retrieve.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Public ReadOnly Property Item(variable As String) As INode
+  overload: VDS.RDF.Query.SparqlResult.Item*
+  exceptions:
+  - type: VDS.RDF.RdfException
+    commentId: T:VDS.RDF.RdfException
+    description: Thrown if there is nothing bound to the given Variable Name for this Result.
+  nameWithType.vb: SparqlResult.Item(String)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: VDS.RDF.Query.SparqlResult.Item(System.String)
+  name.vb: Item(String)
+- uid: VDS.RDF.Query.SparqlResult.Item(System.Int32)
+  commentId: P:VDS.RDF.Query.SparqlResult.Item(System.Int32)
+  id: Item(System.Int32)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: Item[Int32]
+  nameWithType: SparqlResult.Item[Int32]
+  fullName: VDS.RDF.Query.SparqlResult.Item[System.Int32]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 143
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the Value that is bound at the given Index.\n"
+  remarks: "\nAs of 1.0.0 the order of variables in a result may/may not vary depending on the original query.  If a specific variable list was declared dotNetRDF tries to preserve that order but this may not always happen depending on how results are received.\n"
+  example: []
+  syntax:
+    content: public INode this[int index] { get; }
+    parameters:
+    - id: index
+      type: System.Int32
+      description: Index whose Value you wish to retrieve.
+    return:
+      type: VDS.RDF.INode
+      description: ''
+    content.vb: Public ReadOnly Property Item(index As Integer) As INode
+  overload: VDS.RDF.Query.SparqlResult.Item*
+  exceptions:
+  - type: System.IndexOutOfRangeException
+    commentId: T:System.IndexOutOfRangeException
+    description: Thrown if there is nothing bound at the given Index.
+  nameWithType.vb: SparqlResult.Item(Int32)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: VDS.RDF.Query.SparqlResult.Item(System.Int32)
+  name.vb: Item(Int32)
+- uid: VDS.RDF.Query.SparqlResult.TryGetValue(System.String,VDS.RDF.INode@)
+  commentId: M:VDS.RDF.Query.SparqlResult.TryGetValue(System.String,VDS.RDF.INode@)
+  id: TryGetValue(System.String,VDS.RDF.INode@)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: TryGetValue(String, out INode)
+  nameWithType: SparqlResult.TryGetValue(String, out INode)
+  fullName: VDS.RDF.Query.SparqlResult.TryGetValue(System.String, out VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TryGetValue
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 164
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nTries to get a value (which may be null) for the variable.\n"
+  example: []
+  syntax:
+    content: public bool TryGetValue(string variable, out INode value)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable.
+    - id: value
+      type: VDS.RDF.INode
+      description: Value.
+    return:
+      type: System.Boolean
+      description: True if the variable was present (even it was unbound) and false otherwise.
+    content.vb: Public Function TryGetValue(variable As String, ByRef value As INode) As Boolean
+  overload: VDS.RDF.Query.SparqlResult.TryGetValue*
+  nameWithType.vb: SparqlResult.TryGetValue(String, ByRef INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.SparqlResult.TryGetValue(System.String, ByRef VDS.RDF.INode)
+  name.vb: TryGetValue(String, ByRef INode)
+- uid: VDS.RDF.Query.SparqlResult.TryGetBoundValue(System.String,VDS.RDF.INode@)
+  commentId: M:VDS.RDF.Query.SparqlResult.TryGetBoundValue(System.String,VDS.RDF.INode@)
+  id: TryGetBoundValue(System.String,VDS.RDF.INode@)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: TryGetBoundValue(String, out INode)
+  nameWithType: SparqlResult.TryGetBoundValue(String, out INode)
+  fullName: VDS.RDF.Query.SparqlResult.TryGetBoundValue(System.String, out VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: TryGetBoundValue
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 184
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nTries to get a non-null value for the variable.\n"
+  example: []
+  syntax:
+    content: public bool TryGetBoundValue(string variable, out INode value)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable.
+    - id: value
+      type: VDS.RDF.INode
+      description: Value.
+    return:
+      type: System.Boolean
+      description: True if the variable was present and bound, false otherwise.
+    content.vb: Public Function TryGetBoundValue(variable As String, ByRef value As INode) As Boolean
+  overload: VDS.RDF.Query.SparqlResult.TryGetBoundValue*
+  nameWithType.vb: SparqlResult.TryGetBoundValue(String, ByRef INode)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: VDS.RDF.Query.SparqlResult.TryGetBoundValue(System.String, ByRef VDS.RDF.INode)
+  name.vb: TryGetBoundValue(String, ByRef INode)
+- uid: VDS.RDF.Query.SparqlResult.Count
+  commentId: P:VDS.RDF.Query.SparqlResult.Count
+  id: Count
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: SparqlResult.Count
+  fullName: VDS.RDF.Query.SparqlResult.Count
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Count
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 201
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the number of Variables for which this Result contains Bindings.\n"
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: VDS.RDF.Query.SparqlResult.Count*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlResult.HasValue(System.String)
+  commentId: M:VDS.RDF.Query.SparqlResult.HasValue(System.String)
+  id: HasValue(System.String)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: HasValue(String)
+  nameWithType: SparqlResult.HasValue(String)
+  fullName: VDS.RDF.Query.SparqlResult.HasValue(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasValue
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 249
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nChecks whether a given Variable has a value (which may be null) for this result.\n"
+  remarks: Returns true even if the value is null, use <xref href="VDS.RDF.Query.SparqlResult.HasBoundValue(System.String)" data-throw-if-not-resolved="false"></xref> instead to see whether a non-null value is present for a variable.
+  example: []
+  syntax:
+    content: public bool HasValue(string variable)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable Name.
+    return:
+      type: System.Boolean
+      description: True if the variable is present, false otherwise.
+    content.vb: Public Function HasValue(variable As String) As Boolean
+  overload: VDS.RDF.Query.SparqlResult.HasValue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.HasBoundValue(System.String)
+  commentId: M:VDS.RDF.Query.SparqlResult.HasBoundValue(System.String)
+  id: HasBoundValue(System.String)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: HasBoundValue(String)
+  nameWithType: SparqlResult.HasBoundValue(String)
+  fullName: VDS.RDF.Query.SparqlResult.HasBoundValue(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HasBoundValue
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 259
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nChecks whether a given Variable has a non-null value for this result.\n"
+  example: []
+  syntax:
+    content: public bool HasBoundValue(string variable)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable Name.
+    return:
+      type: System.Boolean
+      description: True if the variable is present and has a non-null value, false otherwise.
+    content.vb: Public Function HasBoundValue(variable As String) As Boolean
+  overload: VDS.RDF.Query.SparqlResult.HasBoundValue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.Variables
+  commentId: P:VDS.RDF.Query.SparqlResult.Variables
+  id: Variables
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: SparqlResult.Variables
+  fullName: VDS.RDF.Query.SparqlResult.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 267
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the set of Variables that are bound in this Result.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property Variables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.SparqlResult.Variables*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlResult.IsGroundResult
+  commentId: P:VDS.RDF.Query.SparqlResult.IsGroundResult
+  id: IsGroundResult
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: IsGroundResult
+  nameWithType: SparqlResult.IsGroundResult
+  fullName: VDS.RDF.Query.SparqlResult.IsGroundResult
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsGroundResult
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 281
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets whether a Result is a Ground Result.\n"
+  remarks: "\nA <strong>Ground Result</strong> is a result which is considered to be a fixed fact.  In practise this means it contains no Blank Nodes.\n"
+  example: []
+  syntax:
+    content: public bool IsGroundResult { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroundResult As Boolean
+  overload: VDS.RDF.Query.SparqlResult.IsGroundResult*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: VDS.RDF.Query.SparqlResult.Trim
+  commentId: M:VDS.RDF.Query.SparqlResult.Trim
+  id: Trim
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: Trim()
+  nameWithType: SparqlResult.Trim()
+  fullName: VDS.RDF.Query.SparqlResult.Trim()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Trim
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 292
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nRemoves all Variables Bindings where the Variable is Unbound.\n"
+  example: []
+  syntax:
+    content: public void Trim()
+    content.vb: Public Sub Trim
+  overload: VDS.RDF.Query.SparqlResult.Trim*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.ToString
+  commentId: M:VDS.RDF.Query.SparqlResult.ToString
+  id: ToString
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SparqlResult.ToString()
+  fullName: VDS.RDF.Query.SparqlResult.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 307
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nDisplays the Result as a comma separated string of pairs of the form ?var = value.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.SparqlResult.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.SparqlResult.ToString(VDS.RDF.Writing.Formatting.INodeFormatter)
+  commentId: M:VDS.RDF.Query.SparqlResult.ToString(VDS.RDF.Writing.Formatting.INodeFormatter)
+  id: ToString(VDS.RDF.Writing.Formatting.INodeFormatter)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: ToString(INodeFormatter)
+  nameWithType: SparqlResult.ToString(INodeFormatter)
+  fullName: VDS.RDF.Query.SparqlResult.ToString(VDS.RDF.Writing.Formatting.INodeFormatter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 342
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nDisplays the Result as a comma separated string of paris of the form ?var = value where values are formatted using the given Node Formatter.\n"
+  example: []
+  syntax:
+    content: public string ToString(INodeFormatter formatter)
+    parameters:
+    - id: formatter
+      type: VDS.RDF.Writing.Formatting.INodeFormatter
+      description: Node Formatter.
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Function ToString(formatter As INodeFormatter) As String
+  overload: VDS.RDF.Query.SparqlResult.ToString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.Equals(System.Object)
+  commentId: M:VDS.RDF.Query.SparqlResult.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: SparqlResult.Equals(Object)
+  fullName: VDS.RDF.Query.SparqlResult.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Equals
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 377
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nOverride of the Equals method for Results.\n"
+  remarks: Used implicitly in applying Distinct and Reduced modifiers to the Result Set.
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: VDS.RDF.Query.SparqlResult.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.SparqlResult.GetHashCode
+  commentId: M:VDS.RDF.Query.SparqlResult.GetHashCode
+  id: GetHashCode
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: SparqlResult.GetHashCode()
+  fullName: VDS.RDF.Query.SparqlResult.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetHashCode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 427
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nOverride of the GetHashCode method for Results.\n"
+  remarks: Used implicitly in applying Distinct and Reduced modifiers to the Result Set.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: VDS.RDF.Query.SparqlResult.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.SparqlResult.GetEnumerator
+  commentId: M:VDS.RDF.Query.SparqlResult.GetEnumerator
+  id: GetEnumerator
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: SparqlResult.GetEnumerator()
+  fullName: VDS.RDF.Query.SparqlResult.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetEnumerator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 459
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEnumerates the Bindings of Variable Names to Values in this Result.\n"
+  remarks: "\nDoes not respect the ordering of the variables (if any).\n"
+  example: []
+  syntax:
+    content: public IEnumerator<KeyValuePair<string, INode>> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+      description: ''
+    content.vb: Public Function GetEnumerator As IEnumerator(Of KeyValuePair(Of String, INode))
+  overload: VDS.RDF.Query.SparqlResult.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}.GetEnumerator
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:VDS.RDF.Query.SparqlResult.System#Collections#IEnumerable#GetEnumerator
+  id: System#Collections#IEnumerable#GetEnumerator
+  isEii: true
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: IEnumerable.GetEnumerator()
+  nameWithType: SparqlResult.IEnumerable.GetEnumerator()
+  fullName: VDS.RDF.Query.SparqlResult.System.Collections.IEnumerable.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: System.Collections.IEnumerable.GetEnumerator
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 468
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nEnumerates the Bindings of Variable Names to Values in this Result.\n"
+  example: []
+  syntax:
+    content: IEnumerator IEnumerable.GetEnumerator()
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Function System.Collections.IEnumerable.GetEnumerator As IEnumerator Implements IEnumerable.GetEnumerator
+  overload: VDS.RDF.Query.SparqlResult.System#Collections#IEnumerable#GetEnumerator*
+  implements:
+  - System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: SparqlResult.System.Collections.IEnumerable.GetEnumerator()
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+- uid: VDS.RDF.Query.SparqlResult.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:VDS.RDF.Query.SparqlResult.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: SparqlResult.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: VDS.RDF.Query.SparqlResult.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetObjectData
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 483
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the data for serialization.\n"
+  example: []
+  syntax:
+    content: public void GetObjectData(SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+      description: Serialization Information.
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+      description: Streaming Context.
+    content.vb: Public Sub GetObjectData(info As SerializationInfo, context As StreamingContext)
+  overload: VDS.RDF.Query.SparqlResult.GetObjectData*
+  implements:
+  - System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.GetSchema
+  commentId: M:VDS.RDF.Query.SparqlResult.GetSchema
+  id: GetSchema
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: GetSchema()
+  nameWithType: SparqlResult.GetSchema()
+  fullName: VDS.RDF.Query.SparqlResult.GetSchema()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetSchema
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 492
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nGets the schema for XML serialization.\n"
+  example: []
+  syntax:
+    content: public XmlSchema GetSchema()
+    return:
+      type: System.Xml.Schema.XmlSchema
+      description: ''
+    content.vb: Public Function GetSchema As XmlSchema
+  overload: VDS.RDF.Query.SparqlResult.GetSchema*
+  implements:
+  - System.Xml.Serialization.IXmlSerializable.GetSchema
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.WriteXml(System.Xml.XmlWriter)
+  commentId: M:VDS.RDF.Query.SparqlResult.WriteXml(System.Xml.XmlWriter)
+  id: WriteXml(System.Xml.XmlWriter)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: WriteXml(XmlWriter)
+  nameWithType: SparqlResult.WriteXml(XmlWriter)
+  fullName: VDS.RDF.Query.SparqlResult.WriteXml(System.Xml.XmlWriter)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: WriteXml
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 501
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nWrites the data for XML serialization (.Net serialization not the official SPARQL results serialization).\n"
+  example: []
+  syntax:
+    content: public void WriteXml(XmlWriter writer)
+    parameters:
+    - id: writer
+      type: System.Xml.XmlWriter
+      description: XML Writer.
+    content.vb: Public Sub WriteXml(writer As XmlWriter)
+  overload: VDS.RDF.Query.SparqlResult.WriteXml*
+  implements:
+  - System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.SparqlResult.ReadXml(System.Xml.XmlReader)
+  commentId: M:VDS.RDF.Query.SparqlResult.ReadXml(System.Xml.XmlReader)
+  id: ReadXml(System.Xml.XmlReader)
+  parent: VDS.RDF.Query.SparqlResult
+  langs:
+  - csharp
+  - vb
+  name: ReadXml(XmlReader)
+  nameWithType: SparqlResult.ReadXml(XmlReader)
+  fullName: VDS.RDF.Query.SparqlResult.ReadXml(System.Xml.XmlReader)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/SPARQLResult.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ReadXml
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/SPARQLResult.cs
+    startLine: 518
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query
+  summary: "\nReads the data for XML deserialization (.Net serialization not the official SPARQL results serialization).\n"
+  example: []
+  syntax:
+    content: public void ReadXml(XmlReader reader)
+    parameters:
+    - id: reader
+      type: System.Xml.XmlReader
+      description: XML Reader.
+    content.vb: Public Sub ReadXml(reader As XmlReader)
+  overload: VDS.RDF.Query.SparqlResult.ReadXml*
+  implements:
+  - System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: VDS.RDF.Query
+  commentId: N:VDS.RDF.Query
+  name: VDS.RDF.Query
+  nameWithType: VDS.RDF.Query
+  fullName: VDS.RDF.Query
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyValuePair<String, INode>>
+  nameWithType: IEnumerable<KeyValuePair<String, INode>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, INode))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode))
+  name.vb: IEnumerable(Of KeyValuePair(Of String, INode))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: System.Xml.Serialization.IXmlSerializable
+  commentId: T:System.Xml.Serialization.IXmlSerializable
+  parent: System.Xml.Serialization
+  isExternal: true
+  name: IXmlSerializable
+  nameWithType: IXmlSerializable
+  fullName: System.Xml.Serialization.IXmlSerializable
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResult.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SparqlResult>()
+  nameWithType: Extensions.AsEnumerable<SparqlResult>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlResult>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SparqlResult)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlResult)()
+  name.vb: AsEnumerable(Of SparqlResult)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SparqlResult>
+    nameWithType: Extensions.AsEnumerable<SparqlResult>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.SparqlResult>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SparqlResult)
+    nameWithType: Extensions.AsEnumerable(Of SparqlResult)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.SparqlResult)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}.VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  name: IsDisjoint<KeyValuePair<String, INode>>(IEnumerable<KeyValuePair<String, INode>>)
+  nameWithType: Extensions.IsDisjoint<KeyValuePair<String, INode>>(IEnumerable<KeyValuePair<String, INode>>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>)
+  nameWithType.vb: Extensions.IsDisjoint(Of KeyValuePair(Of String, INode))(IEnumerable(Of KeyValuePair(Of String, INode)))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode))(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode)))
+  name.vb: IsDisjoint(Of KeyValuePair(Of String, INode))(IEnumerable(Of KeyValuePair(Of String, INode)))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<KeyValuePair<String, INode>>
+    nameWithType: Extensions.IsDisjoint<KeyValuePair<String, INode>>
+    fullName: VDS.RDF.Extensions.IsDisjoint<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of KeyValuePair(Of String, INode))
+    nameWithType: Extensions.IsDisjoint(Of KeyValuePair(Of String, INode))
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode))
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}.VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  name: ChunkBy<KeyValuePair<String, INode>>(Int32)
+  nameWithType: Extensions.ChunkBy<KeyValuePair<String, INode>>(Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>(System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of KeyValuePair(Of String, INode))(Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode))(System.Int32)
+  name.vb: ChunkBy(Of KeyValuePair(Of String, INode))(Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy<KeyValuePair<String, INode>>
+    nameWithType: Extensions.ChunkBy<KeyValuePair<String, INode>>
+    fullName: VDS.RDF.Extensions.ChunkBy<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Int32)
+    name: ChunkBy(Of KeyValuePair(Of String, INode))
+    nameWithType: Extensions.ChunkBy(Of KeyValuePair(Of String, INode))
+    fullName: VDS.RDF.Extensions.ChunkBy(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode))
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResult.VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+  commentId: M:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  parent: VDS.RDF.Dynamic.DynamicExtensions
+  definition: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  name: AsDynamic()
+  nameWithType: DynamicExtensions.AsDynamic()
+  fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic()
+  spec.csharp:
+  - uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+    name: AsDynamic
+    nameWithType: DynamicExtensions.AsDynamic
+    fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+    name: AsDynamic
+    nameWithType: DynamicExtensions.AsDynamic
+    fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+- uid: System.Xml.Serialization
+  commentId: N:System.Xml.Serialization
+  isExternal: true
+  name: System.Xml.Serialization
+  nameWithType: System.Xml.Serialization
+  fullName: System.Xml.Serialization
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  commentId: M:VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  name: IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  nameWithType: Extensions.IsDisjoint<T>(IEnumerable<T>, IEnumerable<T>)
+  fullName: VDS.RDF.Extensions.IsDisjoint<T>(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: Extensions.IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  fullName.vb: VDS.RDF.Extensions.IsDisjoint(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IsDisjoint(Of T)(IEnumerable(Of T), IEnumerable(Of T))
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint<T>
+    nameWithType: Extensions.IsDisjoint<T>
+    fullName: VDS.RDF.Extensions.IsDisjoint<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.IsDisjoint``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0})
+    name: IsDisjoint(Of T)
+    nameWithType: Extensions.IsDisjoint(Of T)
+    fullName: VDS.RDF.Extensions.IsDisjoint(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  commentId: M:VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+  isExternal: true
+  name: ChunkBy<T>(IEnumerable<T>, Int32)
+  nameWithType: Extensions.ChunkBy<T>(IEnumerable<T>, Int32)
+  fullName: VDS.RDF.Extensions.ChunkBy<T>(System.Collections.Generic.IEnumerable<T>, System.Int32)
+  nameWithType.vb: Extensions.ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  fullName.vb: VDS.RDF.Extensions.ChunkBy(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32)
+  name.vb: ChunkBy(Of T)(IEnumerable(Of T), Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy<T>
+    nameWithType: Extensions.ChunkBy<T>
+    fullName: VDS.RDF.Extensions.ChunkBy<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.ChunkBy``1(System.Collections.Generic.IEnumerable{``0},System.Int32)
+    name: ChunkBy(Of T)
+    nameWithType: Extensions.ChunkBy(Of T)
+    fullName: VDS.RDF.Extensions.ChunkBy(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  commentId: M:VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  name: AsDynamic(SparqlResult)
+  nameWithType: DynamicExtensions.AsDynamic(SparqlResult)
+  fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+  spec.csharp:
+  - uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+    name: AsDynamic
+    nameWithType: DynamicExtensions.AsDynamic
+    fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResult
+    name: SparqlResult
+    nameWithType: SparqlResult
+    fullName: VDS.RDF.Query.SparqlResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(VDS.RDF.Query.SparqlResult)
+    name: AsDynamic
+    nameWithType: DynamicExtensions.AsDynamic
+    fullName: VDS.RDF.Dynamic.DynamicExtensions.AsDynamic
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlResult
+    name: SparqlResult
+    nameWithType: SparqlResult
+    fullName: VDS.RDF.Query.SparqlResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Dynamic.DynamicExtensions
+  commentId: T:VDS.RDF.Dynamic.DynamicExtensions
+  parent: VDS.RDF.Dynamic
+  name: DynamicExtensions
+  nameWithType: DynamicExtensions
+  fullName: VDS.RDF.Dynamic.DynamicExtensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Dynamic
+  commentId: N:VDS.RDF.Dynamic
+  name: VDS.RDF.Dynamic
+  nameWithType: VDS.RDF.Dynamic
+  fullName: VDS.RDF.Dynamic
+- uid: VDS.RDF.Query.SparqlResult.#ctor*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.#ctor
+  name: SparqlResult
+  nameWithType: SparqlResult.SparqlResult
+  fullName: VDS.RDF.Query.SparqlResult.SparqlResult
+- uid: VDS.RDF.Query.Algebra.ISet
+  commentId: T:VDS.RDF.Query.Algebra.ISet
+  parent: VDS.RDF.Query.Algebra
+  name: ISet
+  nameWithType: ISet
+  fullName: VDS.RDF.Query.Algebra.ISet
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.RdfException
+  commentId: T:VDS.RDF.RdfException
+  parent: VDS.RDF
+  name: RdfException
+  nameWithType: RdfException
+  fullName: VDS.RDF.RdfException
+- uid: VDS.RDF.Query.SparqlResult.Value*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.Value
+  name: Value
+  nameWithType: SparqlResult.Value
+  fullName: VDS.RDF.Query.SparqlResult.Value
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.SparqlResult.Item*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.Item
+  name: Item
+  nameWithType: SparqlResult.Item
+  fullName: VDS.RDF.Query.SparqlResult.Item
+- uid: System.IndexOutOfRangeException
+  commentId: T:System.IndexOutOfRangeException
+  isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.SparqlResult.TryGetValue*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.TryGetValue
+  name: TryGetValue
+  nameWithType: SparqlResult.TryGetValue
+  fullName: VDS.RDF.Query.SparqlResult.TryGetValue
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.SparqlResult.TryGetBoundValue*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.TryGetBoundValue
+  name: TryGetBoundValue
+  nameWithType: SparqlResult.TryGetBoundValue
+  fullName: VDS.RDF.Query.SparqlResult.TryGetBoundValue
+- uid: VDS.RDF.Query.SparqlResult.Count*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.Count
+  name: Count
+  nameWithType: SparqlResult.Count
+  fullName: VDS.RDF.Query.SparqlResult.Count
+- uid: VDS.RDF.Query.SparqlResult.HasBoundValue(System.String)
+  commentId: M:VDS.RDF.Query.SparqlResult.HasBoundValue(System.String)
+  isExternal: true
+- uid: VDS.RDF.Query.SparqlResult.HasValue*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.HasValue
+  name: HasValue
+  nameWithType: SparqlResult.HasValue
+  fullName: VDS.RDF.Query.SparqlResult.HasValue
+- uid: VDS.RDF.Query.SparqlResult.HasBoundValue*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.HasBoundValue
+  name: HasBoundValue
+  nameWithType: SparqlResult.HasBoundValue
+  fullName: VDS.RDF.Query.SparqlResult.HasBoundValue
+- uid: VDS.RDF.Query.SparqlResult.Variables*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.Variables
+  name: Variables
+  nameWithType: SparqlResult.Variables
+  fullName: VDS.RDF.Query.SparqlResult.Variables
+- uid: VDS.RDF.Query.SparqlResult.IsGroundResult*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.IsGroundResult
+  name: IsGroundResult
+  nameWithType: SparqlResult.IsGroundResult
+  fullName: VDS.RDF.Query.SparqlResult.IsGroundResult
+- uid: VDS.RDF.Query.SparqlResult.Trim*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.Trim
+  name: Trim
+  nameWithType: SparqlResult.Trim
+  fullName: VDS.RDF.Query.SparqlResult.Trim
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResult.ToString*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.ToString
+  name: ToString
+  nameWithType: SparqlResult.ToString
+  fullName: VDS.RDF.Query.SparqlResult.ToString
+- uid: VDS.RDF.Writing.Formatting.INodeFormatter
+  commentId: T:VDS.RDF.Writing.Formatting.INodeFormatter
+  parent: VDS.RDF.Writing.Formatting
+  name: INodeFormatter
+  nameWithType: INodeFormatter
+  fullName: VDS.RDF.Writing.Formatting.INodeFormatter
+- uid: VDS.RDF.Writing.Formatting
+  commentId: N:VDS.RDF.Writing.Formatting
+  name: VDS.RDF.Writing.Formatting
+  nameWithType: VDS.RDF.Writing.Formatting
+  fullName: VDS.RDF.Writing.Formatting
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResult.Equals*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.Equals
+  name: Equals
+  nameWithType: SparqlResult.Equals
+  fullName: VDS.RDF.Query.SparqlResult.Equals
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResult.GetHashCode*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.GetHashCode
+  name: GetHashCode
+  nameWithType: SparqlResult.GetHashCode
+  fullName: VDS.RDF.Query.SparqlResult.GetHashCode
+- uid: VDS.RDF.Query.SparqlResult.GetEnumerator*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.GetEnumerator
+  name: GetEnumerator
+  nameWithType: SparqlResult.GetEnumerator
+  fullName: VDS.RDF.Query.SparqlResult.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<KeyValuePair<String, INode>>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, INode)).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode)).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<KeyValuePair<String, INode>>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of KeyValuePair(Of String, INode)).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode)).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  commentId: T:System.Collections.Generic.IEnumerator{System.Collections.Generic.KeyValuePair{System.String,VDS.RDF.INode}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<KeyValuePair<String, INode>>
+  nameWithType: IEnumerator<KeyValuePair<String, INode>>
+  fullName: System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<System.String, VDS.RDF.INode>>
+  nameWithType.vb: IEnumerator(Of KeyValuePair(Of String, INode))
+  fullName.vb: System.Collections.Generic.IEnumerator(Of System.Collections.Generic.KeyValuePair(Of System.String, VDS.RDF.INode))
+  name.vb: IEnumerator(Of KeyValuePair(Of String, INode))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<T>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of T).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of T).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.SparqlResult.System#Collections#IEnumerable#GetEnumerator*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator
+  nameWithType: SparqlResult.IEnumerable.GetEnumerator
+  fullName: VDS.RDF.Query.SparqlResult.System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: SparqlResult.System.Collections.IEnumerable.GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+- uid: System.Collections.IEnumerable.GetEnumerator
+  commentId: M:System.Collections.IEnumerable.GetEnumerator
+  parent: System.Collections.IEnumerable
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable.GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: VDS.RDF.Query.SparqlResult.GetObjectData*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.GetObjectData
+  name: GetObjectData
+  nameWithType: SparqlResult.GetObjectData
+  fullName: VDS.RDF.Query.SparqlResult.GetObjectData
+- uid: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: System.Runtime.Serialization.ISerializable
+  isExternal: true
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: ISerializable.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  spec.csharp:
+  - uid: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: ISerializable.GetObjectData
+    fullName: System.Runtime.Serialization.ISerializable.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+    name: GetObjectData
+    nameWithType: ISerializable.GetObjectData
+    fullName: System.Runtime.Serialization.ISerializable.GetObjectData
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Runtime.Serialization.SerializationInfo
+    name: SerializationInfo
+    nameWithType: SerializationInfo
+    fullName: System.Runtime.Serialization.SerializationInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Runtime.Serialization.StreamingContext
+    name: StreamingContext
+    nameWithType: StreamingContext
+    fullName: System.Runtime.Serialization.StreamingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Runtime.Serialization.SerializationInfo
+  commentId: T:System.Runtime.Serialization.SerializationInfo
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  commentId: T:System.Runtime.Serialization.StreamingContext
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext
+- uid: VDS.RDF.Query.SparqlResult.GetSchema*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.GetSchema
+  name: GetSchema
+  nameWithType: SparqlResult.GetSchema
+  fullName: VDS.RDF.Query.SparqlResult.GetSchema
+- uid: System.Xml.Serialization.IXmlSerializable.GetSchema
+  commentId: M:System.Xml.Serialization.IXmlSerializable.GetSchema
+  parent: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: GetSchema()
+  nameWithType: IXmlSerializable.GetSchema()
+  fullName: System.Xml.Serialization.IXmlSerializable.GetSchema()
+  spec.csharp:
+  - uid: System.Xml.Serialization.IXmlSerializable.GetSchema
+    name: GetSchema
+    nameWithType: IXmlSerializable.GetSchema
+    fullName: System.Xml.Serialization.IXmlSerializable.GetSchema
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.Serialization.IXmlSerializable.GetSchema
+    name: GetSchema
+    nameWithType: IXmlSerializable.GetSchema
+    fullName: System.Xml.Serialization.IXmlSerializable.GetSchema
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.Schema.XmlSchema
+  commentId: T:System.Xml.Schema.XmlSchema
+  parent: System.Xml.Schema
+  isExternal: true
+  name: XmlSchema
+  nameWithType: XmlSchema
+  fullName: System.Xml.Schema.XmlSchema
+- uid: System.Xml.Schema
+  commentId: N:System.Xml.Schema
+  isExternal: true
+  name: System.Xml.Schema
+  nameWithType: System.Xml.Schema
+  fullName: System.Xml.Schema
+- uid: VDS.RDF.Query.SparqlResult.WriteXml*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.WriteXml
+  name: WriteXml
+  nameWithType: SparqlResult.WriteXml
+  fullName: VDS.RDF.Query.SparqlResult.WriteXml
+- uid: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  commentId: M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  parent: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: WriteXml(XmlWriter)
+  nameWithType: IXmlSerializable.WriteXml(XmlWriter)
+  fullName: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+  spec.csharp:
+  - uid: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: IXmlSerializable.WriteXml
+    fullName: System.Xml.Serialization.IXmlSerializable.WriteXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: XmlWriter
+    nameWithType: XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
+    name: WriteXml
+    nameWithType: IXmlSerializable.WriteXml
+    fullName: System.Xml.Serialization.IXmlSerializable.WriteXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlWriter
+    name: XmlWriter
+    nameWithType: XmlWriter
+    fullName: System.Xml.XmlWriter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.XmlWriter
+  commentId: T:System.Xml.XmlWriter
+  parent: System.Xml
+  isExternal: true
+  name: XmlWriter
+  nameWithType: XmlWriter
+  fullName: System.Xml.XmlWriter
+- uid: System.Xml
+  commentId: N:System.Xml
+  isExternal: true
+  name: System.Xml
+  nameWithType: System.Xml
+  fullName: System.Xml
+- uid: VDS.RDF.Query.SparqlResult.ReadXml*
+  commentId: Overload:VDS.RDF.Query.SparqlResult.ReadXml
+  name: ReadXml
+  nameWithType: SparqlResult.ReadXml
+  fullName: VDS.RDF.Query.SparqlResult.ReadXml
+- uid: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  commentId: M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  parent: System.Xml.Serialization.IXmlSerializable
+  isExternal: true
+  name: ReadXml(XmlReader)
+  nameWithType: IXmlSerializable.ReadXml(XmlReader)
+  fullName: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+  spec.csharp:
+  - uid: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: IXmlSerializable.ReadXml
+    fullName: System.Xml.Serialization.IXmlSerializable.ReadXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: XmlReader
+    nameWithType: XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
+    name: ReadXml
+    nameWithType: IXmlSerializable.ReadXml
+    fullName: System.Xml.Serialization.IXmlSerializable.ReadXml
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Xml.XmlReader
+    name: XmlReader
+    nameWithType: XmlReader
+    fullName: System.Xml.XmlReader
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Xml.XmlReader
+  commentId: T:System.Xml.XmlReader
+  parent: System.Xml
+  isExternal: true
+  name: XmlReader
+  nameWithType: XmlReader
+  fullName: System.Xml.XmlReader

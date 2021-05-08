@@ -1,0 +1,1663 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector
+  commentId: T:VDS.RDF.Storage.QueryableReadOnlyConnector
+  id: QueryableReadOnlyConnector
+  parent: VDS.RDF.Storage
+  children:
+  - VDS.RDF.Storage.QueryableReadOnlyConnector.#ctor(VDS.RDF.Storage.IQueryableStorage)
+  - VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs
+  - VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported
+  - VDS.RDF.Storage.QueryableReadOnlyConnector.Query(System.String)
+  - VDS.RDF.Storage.QueryableReadOnlyConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  langs:
+  - csharp
+  - vb
+  name: QueryableReadOnlyConnector
+  nameWithType: QueryableReadOnlyConnector
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: QueryableReadOnlyConnector
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+    startLine: 302
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nProvides a Read-Only wrapper that can be placed around another <xref href=\"VDS.RDF.Storage.IQueryableStorage\" data-throw-if-not-resolved=\"false\"></xref> instance.\n"
+  remarks: "\n<p>\nThis is useful if you want to allow some code read-only access to a mutable store and ensure that it cannot modify the store via the manager instance.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class QueryableReadOnlyConnector : ReadOnlyConnector, IConfigurationSerializable, IQueryableStorage, IStorageProvider, IStorageCapabilities, IDisposable'
+    content.vb: >-
+      Public Class QueryableReadOnlyConnector
+          Inherits ReadOnlyConnector
+          Implements IConfigurationSerializable, IQueryableStorage, IStorageProvider, IStorageCapabilities, IDisposable
+  inheritance:
+  - System.Object
+  - VDS.RDF.Storage.ReadOnlyConnector
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  - VDS.RDF.Storage.IQueryableStorage
+  - VDS.RDF.Storage.IStorageProvider
+  - VDS.RDF.Storage.IStorageCapabilities
+  - System.IDisposable
+  inheritedMembers:
+  - VDS.RDF.Storage.ReadOnlyConnector.ParentServer
+  - VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  - VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  - VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  - VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  - VDS.RDF.Storage.ReadOnlyConnector.SaveGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Storage.ReadOnlyConnector.IOBehaviour
+  - VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  - VDS.RDF.Storage.ReadOnlyConnector.UpdateSupported
+  - VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.Uri)
+  - VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.String)
+  - VDS.RDF.Storage.ReadOnlyConnector.DeleteSupported
+  - VDS.RDF.Storage.ReadOnlyConnector.IsReady
+  - VDS.RDF.Storage.ReadOnlyConnector.IsReadOnly
+  - VDS.RDF.Storage.ReadOnlyConnector.Dispose
+  - VDS.RDF.Storage.ReadOnlyConnector.ToString
+  - VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Storage.QueryableReadOnlyConnector.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.#ctor(VDS.RDF.Storage.IQueryableStorage)
+  commentId: M:VDS.RDF.Storage.QueryableReadOnlyConnector.#ctor(VDS.RDF.Storage.IQueryableStorage)
+  id: '#ctor(VDS.RDF.Storage.IQueryableStorage)'
+  parent: VDS.RDF.Storage.QueryableReadOnlyConnector
+  langs:
+  - csharp
+  - vb
+  name: QueryableReadOnlyConnector(IQueryableStorage)
+  nameWithType: QueryableReadOnlyConnector.QueryableReadOnlyConnector(IQueryableStorage)
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.QueryableReadOnlyConnector(VDS.RDF.Storage.IQueryableStorage)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+    startLine: 311
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nCreates a new Queryable Read-Only connection which is a read-only wrapper around another store.\n"
+  example: []
+  syntax:
+    content: public QueryableReadOnlyConnector(IQueryableStorage manager)
+    parameters:
+    - id: manager
+      type: VDS.RDF.Storage.IQueryableStorage
+      description: Manager for the Store you want to wrap as read-only.
+    content.vb: Public Sub New(manager As IQueryableStorage)
+  overload: VDS.RDF.Storage.QueryableReadOnlyConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.Query(System.String)
+  commentId: M:VDS.RDF.Storage.QueryableReadOnlyConnector.Query(System.String)
+  id: Query(System.String)
+  parent: VDS.RDF.Storage.QueryableReadOnlyConnector
+  langs:
+  - csharp
+  - vb
+  name: Query(String)
+  nameWithType: QueryableReadOnlyConnector.Query(String)
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.Query(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Query
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+    startLine: 322
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nExecutes a SPARQL Query on the underlying Store.\n"
+  example: []
+  syntax:
+    content: public object Query(string sparqlQuery)
+    parameters:
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Function Query(sparqlQuery As String) As Object
+  overload: VDS.RDF.Storage.QueryableReadOnlyConnector.Query*
+  implements:
+  - VDS.RDF.Storage.IQueryableStorage.Query(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  commentId: M:VDS.RDF.Storage.QueryableReadOnlyConnector.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  id: Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  parent: VDS.RDF.Storage.QueryableReadOnlyConnector
+  langs:
+  - csharp
+  - vb
+  name: Query(IRdfHandler, ISparqlResultsHandler, String)
+  nameWithType: QueryableReadOnlyConnector.Query(IRdfHandler, ISparqlResultsHandler, String)
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.Query(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Query
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+    startLine: 334
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nExecutes a SPARQL Query on the underlying Store processing the results with an appropriate handler from those provided.\n"
+  example: []
+  syntax:
+    content: public void Query(IRdfHandler rdfHandler, ISparqlResultsHandler resultsHandler, string sparqlQuery)
+    parameters:
+    - id: rdfHandler
+      type: VDS.RDF.IRdfHandler
+      description: RDF Handler.
+    - id: resultsHandler
+      type: VDS.RDF.ISparqlResultsHandler
+      description: Results Handler.
+    - id: sparqlQuery
+      type: System.String
+      description: SPARQL Query.
+    content.vb: Public Sub Query(rdfHandler As IRdfHandler, resultsHandler As ISparqlResultsHandler, sparqlQuery As String)
+  overload: VDS.RDF.Storage.QueryableReadOnlyConnector.Query*
+  implements:
+  - VDS.RDF.Storage.IQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs
+  commentId: M:VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs
+  id: ListGraphs
+  parent: VDS.RDF.Storage.QueryableReadOnlyConnector
+  langs:
+  - csharp
+  - vb
+  name: ListGraphs()
+  nameWithType: QueryableReadOnlyConnector.ListGraphs()
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ListGraphs
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+    startLine: 343
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nLists the Graphs in the Store.\n"
+  example: []
+  syntax:
+    content: public override IEnumerable<Uri> ListGraphs()
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Uri}
+      description: ''
+    content.vb: Public Overrides Function ListGraphs As IEnumerable(Of Uri)
+  overridden: VDS.RDF.Storage.ReadOnlyConnector.ListGraphs
+  overload: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs*
+  implements:
+  - VDS.RDF.Storage.IStorageProvider.ListGraphs
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported
+  id: ListGraphsSupported
+  parent: VDS.RDF.Storage.QueryableReadOnlyConnector
+  langs:
+  - csharp
+  - vb
+  name: ListGraphsSupported
+  nameWithType: QueryableReadOnlyConnector.ListGraphsSupported
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ListGraphsSupported
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Storage/ReadOnlyConnector.cs
+    startLine: 386
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Storage
+  summary: "\nReturns that listing Graphs is supported.\n"
+  example: []
+  syntax:
+    content: public override bool ListGraphsSupported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property ListGraphsSupported As Boolean
+  overridden: VDS.RDF.Storage.ReadOnlyConnector.ListGraphsSupported
+  overload: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported*
+  implements:
+  - VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+references:
+- uid: VDS.RDF.Storage.IQueryableStorage
+  commentId: T:VDS.RDF.Storage.IQueryableStorage
+  parent: VDS.RDF.Storage
+  name: IQueryableStorage
+  nameWithType: IQueryableStorage
+  fullName: VDS.RDF.Storage.IQueryableStorage
+- uid: VDS.RDF.Storage
+  commentId: N:VDS.RDF.Storage
+  name: VDS.RDF.Storage
+  nameWithType: VDS.RDF.Storage
+  fullName: VDS.RDF.Storage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Storage.ReadOnlyConnector
+  commentId: T:VDS.RDF.Storage.ReadOnlyConnector
+  parent: VDS.RDF.Storage
+  name: ReadOnlyConnector
+  nameWithType: ReadOnlyConnector
+  fullName: VDS.RDF.Storage.ReadOnlyConnector
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: VDS.RDF.Storage.IStorageProvider
+  commentId: T:VDS.RDF.Storage.IStorageProvider
+  parent: VDS.RDF.Storage
+  name: IStorageProvider
+  nameWithType: IStorageProvider
+  fullName: VDS.RDF.Storage.IStorageProvider
+- uid: VDS.RDF.Storage.IStorageCapabilities
+  commentId: T:VDS.RDF.Storage.IStorageCapabilities
+  parent: VDS.RDF.Storage
+  name: IStorageCapabilities
+  nameWithType: IStorageCapabilities
+  fullName: VDS.RDF.Storage.IStorageCapabilities
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: VDS.RDF.Storage.ReadOnlyConnector.ParentServer
+  commentId: P:VDS.RDF.Storage.ReadOnlyConnector.ParentServer
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: ParentServer
+  nameWithType: ReadOnlyConnector.ParentServer
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.ParentServer
+- uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: LoadGraph(IGraph, Uri)
+  nameWithType: ReadOnlyConnector.LoadGraph(IGraph, Uri)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.Uri)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: LoadGraph(IGraph, String)
+  nameWithType: ReadOnlyConnector.LoadGraph(IGraph, String)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IGraph,System.String)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, Uri)
+  nameWithType: ReadOnlyConnector.LoadGraph(IRdfHandler, Uri)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.Uri)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: LoadGraph(IRdfHandler, String)
+  nameWithType: ReadOnlyConnector.LoadGraph(IRdfHandler, String)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph(VDS.RDF.IRdfHandler,System.String)
+    name: LoadGraph
+    nameWithType: ReadOnlyConnector.LoadGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.LoadGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.SaveGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.SaveGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: SaveGraph(IGraph)
+  nameWithType: ReadOnlyConnector.SaveGraph(IGraph)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.SaveGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: ReadOnlyConnector.SaveGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.SaveGraph(VDS.RDF.IGraph)
+    name: SaveGraph
+    nameWithType: ReadOnlyConnector.SaveGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.SaveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.IOBehaviour
+  commentId: P:VDS.RDF.Storage.ReadOnlyConnector.IOBehaviour
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: IOBehaviour
+  nameWithType: ReadOnlyConnector.IOBehaviour
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.IOBehaviour
+- uid: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: ReadOnlyConnector.UpdateGraph(Uri, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: ReadOnlyConnector.UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.Uri, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(Uri, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: ReadOnlyConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.Uri,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: ReadOnlyConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  nameWithType: ReadOnlyConnector.UpdateGraph(String, IEnumerable<Triple>, IEnumerable<Triple>)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>, System.Collections.Generic.IEnumerable<VDS.RDF.Triple>)
+  nameWithType.vb: ReadOnlyConnector.UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  fullName.vb: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.String, System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple), System.Collections.Generic.IEnumerable(Of VDS.RDF.Triple))
+  name.vb: UpdateGraph(String, IEnumerable(Of Triple), IEnumerable(Of Triple))
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: ReadOnlyConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph(System.String,System.Collections.Generic.IEnumerable{VDS.RDF.Triple},System.Collections.Generic.IEnumerable{VDS.RDF.Triple})
+    name: UpdateGraph
+    nameWithType: ReadOnlyConnector.UpdateGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.UpdateGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.UpdateSupported
+  commentId: P:VDS.RDF.Storage.ReadOnlyConnector.UpdateSupported
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: UpdateSupported
+  nameWithType: ReadOnlyConnector.UpdateSupported
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.UpdateSupported
+- uid: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.Uri)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.Uri)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: DeleteGraph(Uri)
+  nameWithType: ReadOnlyConnector.DeleteGraph(Uri)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: ReadOnlyConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.Uri)
+    name: DeleteGraph
+    nameWithType: ReadOnlyConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.String)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.String)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  isExternal: true
+  name: DeleteGraph(String)
+  nameWithType: ReadOnlyConnector.DeleteGraph(String)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: ReadOnlyConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph(System.String)
+    name: DeleteGraph
+    nameWithType: ReadOnlyConnector.DeleteGraph
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.DeleteGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.DeleteSupported
+  commentId: P:VDS.RDF.Storage.ReadOnlyConnector.DeleteSupported
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: DeleteSupported
+  nameWithType: ReadOnlyConnector.DeleteSupported
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.DeleteSupported
+- uid: VDS.RDF.Storage.ReadOnlyConnector.IsReady
+  commentId: P:VDS.RDF.Storage.ReadOnlyConnector.IsReady
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: IsReady
+  nameWithType: ReadOnlyConnector.IsReady
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.IsReady
+- uid: VDS.RDF.Storage.ReadOnlyConnector.IsReadOnly
+  commentId: P:VDS.RDF.Storage.ReadOnlyConnector.IsReadOnly
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: IsReadOnly
+  nameWithType: ReadOnlyConnector.IsReadOnly
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.IsReadOnly
+- uid: VDS.RDF.Storage.ReadOnlyConnector.Dispose
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.Dispose
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: Dispose()
+  nameWithType: ReadOnlyConnector.Dispose()
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.Dispose()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.Dispose
+    name: Dispose
+    nameWithType: ReadOnlyConnector.Dispose
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.Dispose
+    name: Dispose
+    nameWithType: ReadOnlyConnector.Dispose
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.ToString
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.ToString
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: ToString()
+  nameWithType: ReadOnlyConnector.ToString()
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.ToString
+    name: ToString
+    nameWithType: ReadOnlyConnector.ToString
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.ToString
+    name: ToString
+    nameWithType: ReadOnlyConnector.ToString
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: ReadOnlyConnector.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: ReadOnlyConnector.SerializeConfiguration
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: ReadOnlyConnector.SerializeConfiguration
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<QueryableReadOnlyConnector>()
+  nameWithType: Extensions.AsEnumerable<QueryableReadOnlyConnector>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.QueryableReadOnlyConnector>()
+  nameWithType.vb: Extensions.AsEnumerable(Of QueryableReadOnlyConnector)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.QueryableReadOnlyConnector)()
+  name.vb: AsEnumerable(Of QueryableReadOnlyConnector)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<QueryableReadOnlyConnector>
+    nameWithType: Extensions.AsEnumerable<QueryableReadOnlyConnector>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Storage.QueryableReadOnlyConnector>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of QueryableReadOnlyConnector)
+    nameWithType: Extensions.AsEnumerable(Of QueryableReadOnlyConnector)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Storage.QueryableReadOnlyConnector)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.#ctor*
+  commentId: Overload:VDS.RDF.Storage.QueryableReadOnlyConnector.#ctor
+  name: QueryableReadOnlyConnector
+  nameWithType: QueryableReadOnlyConnector.QueryableReadOnlyConnector
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.QueryableReadOnlyConnector
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.Query*
+  commentId: Overload:VDS.RDF.Storage.QueryableReadOnlyConnector.Query
+  name: Query
+  nameWithType: QueryableReadOnlyConnector.Query
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.Query
+- uid: VDS.RDF.Storage.IQueryableStorage.Query(System.String)
+  commentId: M:VDS.RDF.Storage.IQueryableStorage.Query(System.String)
+  parent: VDS.RDF.Storage.IQueryableStorage
+  isExternal: true
+  name: Query(String)
+  nameWithType: IQueryableStorage.Query(String)
+  fullName: VDS.RDF.Storage.IQueryableStorage.Query(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IQueryableStorage.Query(System.String)
+    name: Query
+    nameWithType: IQueryableStorage.Query
+    fullName: VDS.RDF.Storage.IQueryableStorage.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IQueryableStorage.Query(System.String)
+    name: Query
+    nameWithType: IQueryableStorage.Query
+    fullName: VDS.RDF.Storage.IQueryableStorage.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Storage.IQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  commentId: M:VDS.RDF.Storage.IQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+  parent: VDS.RDF.Storage.IQueryableStorage
+  isExternal: true
+  name: Query(IRdfHandler, ISparqlResultsHandler, String)
+  nameWithType: IQueryableStorage.Query(IRdfHandler, ISparqlResultsHandler, String)
+  fullName: VDS.RDF.Storage.IQueryableStorage.Query(VDS.RDF.IRdfHandler, VDS.RDF.ISparqlResultsHandler, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+    name: Query
+    nameWithType: IQueryableStorage.Query
+    fullName: VDS.RDF.Storage.IQueryableStorage.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IQueryableStorage.Query(VDS.RDF.IRdfHandler,VDS.RDF.ISparqlResultsHandler,System.String)
+    name: Query
+    nameWithType: IQueryableStorage.Query
+    fullName: VDS.RDF.Storage.IQueryableStorage.Query
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IRdfHandler
+    name: IRdfHandler
+    nameWithType: IRdfHandler
+    fullName: VDS.RDF.IRdfHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.ISparqlResultsHandler
+    name: ISparqlResultsHandler
+    nameWithType: ISparqlResultsHandler
+    fullName: VDS.RDF.ISparqlResultsHandler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.ISparqlResultsHandler
+  commentId: T:VDS.RDF.ISparqlResultsHandler
+  parent: VDS.RDF
+  name: ISparqlResultsHandler
+  nameWithType: ISparqlResultsHandler
+  fullName: VDS.RDF.ISparqlResultsHandler
+- uid: VDS.RDF.Storage.ReadOnlyConnector.ListGraphs
+  commentId: M:VDS.RDF.Storage.ReadOnlyConnector.ListGraphs
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: ListGraphs()
+  nameWithType: ReadOnlyConnector.ListGraphs()
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.ListGraphs()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.ListGraphs
+    name: ListGraphs
+    nameWithType: ReadOnlyConnector.ListGraphs
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.ReadOnlyConnector.ListGraphs
+    name: ListGraphs
+    nameWithType: ReadOnlyConnector.ListGraphs
+    fullName: VDS.RDF.Storage.ReadOnlyConnector.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs*
+  commentId: Overload:VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs
+  name: ListGraphs
+  nameWithType: QueryableReadOnlyConnector.ListGraphs
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphs
+- uid: VDS.RDF.Storage.IStorageProvider.ListGraphs
+  commentId: M:VDS.RDF.Storage.IStorageProvider.ListGraphs
+  parent: VDS.RDF.Storage.IStorageProvider
+  name: ListGraphs()
+  nameWithType: IStorageProvider.ListGraphs()
+  fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs()
+  spec.csharp:
+  - uid: VDS.RDF.Storage.IStorageProvider.ListGraphs
+    name: ListGraphs
+    nameWithType: IStorageProvider.ListGraphs
+    fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Storage.IStorageProvider.ListGraphs
+    name: ListGraphs
+    nameWithType: IStorageProvider.ListGraphs
+    fullName: VDS.RDF.Storage.IStorageProvider.ListGraphs
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Uri}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Uri}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Uri>
+  nameWithType: IEnumerable<Uri>
+  fullName: System.Collections.Generic.IEnumerable<System.Uri>
+  nameWithType.vb: IEnumerable(Of Uri)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Uri)
+  name.vb: IEnumerable(Of Uri)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Storage.ReadOnlyConnector.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.ReadOnlyConnector.ListGraphsSupported
+  parent: VDS.RDF.Storage.ReadOnlyConnector
+  name: ListGraphsSupported
+  nameWithType: ReadOnlyConnector.ListGraphsSupported
+  fullName: VDS.RDF.Storage.ReadOnlyConnector.ListGraphsSupported
+- uid: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported*
+  commentId: Overload:VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported
+  name: ListGraphsSupported
+  nameWithType: QueryableReadOnlyConnector.ListGraphsSupported
+  fullName: VDS.RDF.Storage.QueryableReadOnlyConnector.ListGraphsSupported
+- uid: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  commentId: P:VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+  parent: VDS.RDF.Storage.IStorageCapabilities
+  name: ListGraphsSupported
+  nameWithType: IStorageCapabilities.ListGraphsSupported
+  fullName: VDS.RDF.Storage.IStorageCapabilities.ListGraphsSupported
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

@@ -1,0 +1,1632 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Data.DataTables.DataTableHandler
+  commentId: T:VDS.RDF.Data.DataTables.DataTableHandler
+  id: DataTableHandler
+  parent: VDS.RDF.Data.DataTables
+  children:
+  - VDS.RDF.Data.DataTables.DataTableHandler.#ctor(System.Data.DataTable)
+  - VDS.RDF.Data.DataTables.DataTableHandler.#ctor(System.Data.DataTable,System.String,System.String,System.String)
+  - VDS.RDF.Data.DataTables.DataTableHandler._table
+  - VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll
+  - VDS.RDF.Data.DataTables.DataTableHandler.DefaultObjectColumn
+  - VDS.RDF.Data.DataTables.DataTableHandler.DefaultPredicateColumn
+  - VDS.RDF.Data.DataTables.DataTableHandler.DefaultSubjectColumn
+  - VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal(VDS.RDF.Triple)
+  langs:
+  - csharp
+  - vb
+  name: DataTableHandler
+  nameWithType: DataTableHandler
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DataTableHandler
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nRDF Handler which turns triples into rows in a Data Table\n"
+  example: []
+  syntax:
+    content: 'public class DataTableHandler : BaseRdfHandler, IRdfHandler, INodeFactory'
+    content.vb: >-
+      Public Class DataTableHandler
+          Inherits BaseRdfHandler
+          Implements IRdfHandler, INodeFactory
+  inheritance:
+  - System.Object
+  - VDS.RDF.Parsing.Handlers.BaseHandler
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  implements:
+  - VDS.RDF.IRdfHandler
+  - VDS.RDF.INodeFactory
+  inheritedMembers:
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf(System.Boolean)
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal(System.Boolean)
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace(System.String,System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal(System.String,System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri(System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal(System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple(VDS.RDF.Triple)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  - VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - VDS.RDF.Data.DataTables.DataTableHandler.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.DefaultSubjectColumn
+  commentId: F:VDS.RDF.Data.DataTables.DataTableHandler.DefaultSubjectColumn
+  id: DefaultSubjectColumn
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: DefaultSubjectColumn
+  nameWithType: DataTableHandler.DefaultSubjectColumn
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.DefaultSubjectColumn
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DefaultSubjectColumn
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 41
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nConstants for Default Column Names\n"
+  example: []
+  syntax:
+    content: public const string DefaultSubjectColumn = "Subject"
+    return:
+      type: System.String
+    content.vb: Public Const DefaultSubjectColumn As String = "Subject"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.DefaultPredicateColumn
+  commentId: F:VDS.RDF.Data.DataTables.DataTableHandler.DefaultPredicateColumn
+  id: DefaultPredicateColumn
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: DefaultPredicateColumn
+  nameWithType: DataTableHandler.DefaultPredicateColumn
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.DefaultPredicateColumn
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DefaultPredicateColumn
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 42
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nConstants for Default Column Names\n"
+  example: []
+  syntax:
+    content: public const string DefaultPredicateColumn = "Predicate"
+    return:
+      type: System.String
+    content.vb: Public Const DefaultPredicateColumn As String = "Predicate"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.DefaultObjectColumn
+  commentId: F:VDS.RDF.Data.DataTables.DataTableHandler.DefaultObjectColumn
+  id: DefaultObjectColumn
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: DefaultObjectColumn
+  nameWithType: DataTableHandler.DefaultObjectColumn
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.DefaultObjectColumn
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: DefaultObjectColumn
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 43
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nConstants for Default Column Names\n"
+  example: []
+  syntax:
+    content: public const string DefaultObjectColumn = "Object"
+    return:
+      type: System.String
+    content.vb: Public Const DefaultObjectColumn As String = "Object"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: VDS.RDF.Data.DataTables.DataTableHandler._table
+  commentId: F:VDS.RDF.Data.DataTables.DataTableHandler._table
+  id: _table
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: _table
+  nameWithType: DataTableHandler._table
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler._table
+  type: Field
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: _table
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 48
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nData Table into which Triples will be converted to rows\n"
+  example: []
+  syntax:
+    content: protected DataTable _table
+    return:
+      type: System.Data.DataTable
+    content.vb: Protected _table As DataTable
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.#ctor(System.Data.DataTable,System.String,System.String,System.String)
+  commentId: M:VDS.RDF.Data.DataTables.DataTableHandler.#ctor(System.Data.DataTable,System.String,System.String,System.String)
+  id: '#ctor(System.Data.DataTable,System.String,System.String,System.String)'
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: DataTableHandler(DataTable, String, String, String)
+  nameWithType: DataTableHandler.DataTableHandler(DataTable, String, String, String)
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.DataTableHandler(System.Data.DataTable, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 58
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nCreates a new Handler for a given Data Table with custom column names\n"
+  example: []
+  syntax:
+    content: public DataTableHandler(DataTable table, string subjColName, string predColName, string objColName)
+    parameters:
+    - id: table
+      type: System.Data.DataTable
+      description: Data Table
+    - id: subjColName
+      type: System.String
+      description: Subject Column Name
+    - id: predColName
+      type: System.String
+      description: Predicate Column Name
+    - id: objColName
+      type: System.String
+      description: Object Column Name
+    content.vb: Public Sub New(table As DataTable, subjColName As String, predColName As String, objColName As String)
+  overload: VDS.RDF.Data.DataTables.DataTableHandler.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.#ctor(System.Data.DataTable)
+  commentId: M:VDS.RDF.Data.DataTables.DataTableHandler.#ctor(System.Data.DataTable)
+  id: '#ctor(System.Data.DataTable)'
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: DataTableHandler(DataTable)
+  nameWithType: DataTableHandler.DataTableHandler(DataTable)
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.DataTableHandler(System.Data.DataTable)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 70
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nCreates a new Handler for a given Data Table using the default column names\n"
+  example: []
+  syntax:
+    content: public DataTableHandler(DataTable table)
+    parameters:
+    - id: table
+      type: System.Data.DataTable
+      description: Data Table
+    content.vb: Public Sub New(table As DataTable)
+  overload: VDS.RDF.Data.DataTables.DataTableHandler.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal(VDS.RDF.Triple)
+  id: HandleTripleInternal(VDS.RDF.Triple)
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleTripleInternal(Triple)
+  nameWithType: DataTableHandler.HandleTripleInternal(Triple)
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal(VDS.RDF.Triple)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: HandleTripleInternal
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 81
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nHandles a Triple by turning it into a row in the Data Table\n"
+  remarks: "\nTo customize how a Triple is converted into a row in the table derive from this class and override this method\n"
+  example: []
+  syntax:
+    content: protected override bool HandleTripleInternal(Triple t)
+    parameters:
+    - id: t
+      type: VDS.RDF.Triple
+      description: Triple
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Overrides Function HandleTripleInternal(t As Triple) As Boolean
+  overridden: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal(VDS.RDF.Triple)
+  overload: VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll
+  commentId: P:VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll
+  id: AcceptsAll
+  parent: VDS.RDF.Data.DataTables.DataTableHandler
+  langs:
+  - csharp
+  - vb
+  name: AcceptsAll
+  nameWithType: DataTableHandler.AcceptsAll
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AcceptsAll
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Data.DataTables/DataTableHandler.cs
+    startLine: 94
+  assemblies:
+  - dotNetRDF.Data.DataTables
+  namespace: VDS.RDF.Data.DataTables
+  summary: "\nIndicates that the Handler accepts all triples\n"
+  example: []
+  syntax:
+    content: public override bool AcceptsAll { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property AcceptsAll As Boolean
+  overridden: VDS.RDF.Parsing.Handlers.BaseRdfHandler.AcceptsAll
+  overload: VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+references:
+- uid: VDS.RDF.Data.DataTables
+  commentId: N:VDS.RDF.Data.DataTables
+  name: VDS.RDF.Data.DataTables
+  nameWithType: VDS.RDF.Data.DataTables
+  fullName: VDS.RDF.Data.DataTables
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler
+  commentId: T:VDS.RDF.Parsing.Handlers.BaseHandler
+  parent: VDS.RDF.Parsing.Handlers
+  name: BaseHandler
+  nameWithType: BaseHandler
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  commentId: T:VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  parent: VDS.RDF.Parsing.Handlers
+  name: BaseRdfHandler
+  nameWithType: BaseRdfHandler
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+- uid: VDS.RDF.IRdfHandler
+  commentId: T:VDS.RDF.IRdfHandler
+  parent: VDS.RDF
+  name: IRdfHandler
+  nameWithType: IRdfHandler
+  fullName: VDS.RDF.IRdfHandler
+- uid: VDS.RDF.INodeFactory
+  commentId: T:VDS.RDF.INodeFactory
+  parent: VDS.RDF
+  name: INodeFactory
+  nameWithType: INodeFactory
+  fullName: VDS.RDF.INodeFactory
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  name: StartRdf()
+  nameWithType: BaseRdfHandler.StartRdf()
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf
+    name: StartRdf
+    nameWithType: BaseRdfHandler.StartRdf
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf
+    name: StartRdf
+    nameWithType: BaseRdfHandler.StartRdf
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  name: StartRdfInternal()
+  nameWithType: BaseRdfHandler.StartRdfInternal()
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal
+    name: StartRdfInternal
+    nameWithType: BaseRdfHandler.StartRdfInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal
+    name: StartRdfInternal
+    nameWithType: BaseRdfHandler.StartRdfInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.StartRdfInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf(System.Boolean)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  isExternal: true
+  name: EndRdf(Boolean)
+  nameWithType: BaseRdfHandler.EndRdf(Boolean)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf(System.Boolean)
+    name: EndRdf
+    nameWithType: BaseRdfHandler.EndRdf
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf(System.Boolean)
+    name: EndRdf
+    nameWithType: BaseRdfHandler.EndRdf
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdf
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal(System.Boolean)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal(System.Boolean)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  isExternal: true
+  name: EndRdfInternal(Boolean)
+  nameWithType: BaseRdfHandler.EndRdfInternal(Boolean)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal(System.Boolean)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal(System.Boolean)
+    name: EndRdfInternal
+    nameWithType: BaseRdfHandler.EndRdfInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal(System.Boolean)
+    name: EndRdfInternal
+    nameWithType: BaseRdfHandler.EndRdfInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.EndRdfInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace(System.String,System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace(System.String,System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  isExternal: true
+  name: HandleNamespace(String, Uri)
+  nameWithType: BaseRdfHandler.HandleNamespace(String, Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace(System.String,System.Uri)
+    name: HandleNamespace
+    nameWithType: BaseRdfHandler.HandleNamespace
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace(System.String,System.Uri)
+    name: HandleNamespace
+    nameWithType: BaseRdfHandler.HandleNamespace
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal(System.String,System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal(System.String,System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  isExternal: true
+  name: HandleNamespaceInternal(String, Uri)
+  nameWithType: BaseRdfHandler.HandleNamespaceInternal(String, Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal(System.String,System.Uri)
+    name: HandleNamespaceInternal
+    nameWithType: BaseRdfHandler.HandleNamespaceInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal(System.String,System.Uri)
+    name: HandleNamespaceInternal
+    nameWithType: BaseRdfHandler.HandleNamespaceInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleNamespaceInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri(System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri(System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  isExternal: true
+  name: HandleBaseUri(Uri)
+  nameWithType: BaseRdfHandler.HandleBaseUri(Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri(System.Uri)
+    name: HandleBaseUri
+    nameWithType: BaseRdfHandler.HandleBaseUri
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri(System.Uri)
+    name: HandleBaseUri
+    nameWithType: BaseRdfHandler.HandleBaseUri
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUri
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal(System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal(System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  isExternal: true
+  name: HandleBaseUriInternal(Uri)
+  nameWithType: BaseRdfHandler.HandleBaseUriInternal(Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal(System.Uri)
+    name: HandleBaseUriInternal
+    nameWithType: BaseRdfHandler.HandleBaseUriInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal(System.Uri)
+    name: HandleBaseUriInternal
+    nameWithType: BaseRdfHandler.HandleBaseUriInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleBaseUriInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple(VDS.RDF.Triple)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  name: HandleTriple(Triple)
+  nameWithType: BaseRdfHandler.HandleTriple(Triple)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple(VDS.RDF.Triple)
+    name: HandleTriple
+    nameWithType: BaseRdfHandler.HandleTriple
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple(VDS.RDF.Triple)
+    name: HandleTriple
+    nameWithType: BaseRdfHandler.HandleTriple
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+  commentId: P:VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: NodeFactory
+  nameWithType: BaseHandler.NodeFactory
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.NodeFactory
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: CreateBlankNode()
+  nameWithType: BaseHandler.CreateBlankNode()
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateBlankNode(String)
+  nameWithType: BaseHandler.CreateBlankNode(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode(System.String)
+    name: CreateBlankNode
+    nameWithType: BaseHandler.CreateBlankNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateBlankNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: CreateGraphLiteralNode()
+  nameWithType: BaseHandler.CreateGraphLiteralNode()
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: CreateGraphLiteralNode(IGraph)
+  nameWithType: BaseHandler.CreateGraphLiteralNode(IGraph)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode(VDS.RDF.IGraph)
+    name: CreateGraphLiteralNode
+    nameWithType: BaseHandler.CreateGraphLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateGraphLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateLiteralNode(String, Uri)
+  nameWithType: BaseHandler.CreateLiteralNode(String, Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String, System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.Uri)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateLiteralNode(String)
+  nameWithType: BaseHandler.CreateLiteralNode(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateLiteralNode(String, String)
+  nameWithType: BaseHandler.CreateLiteralNode(String, String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String, System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode(System.String,System.String)
+    name: CreateLiteralNode
+    nameWithType: BaseHandler.CreateLiteralNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateLiteralNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateUriNode(Uri)
+  nameWithType: BaseHandler.CreateUriNode(Uri)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+    name: CreateUriNode
+    nameWithType: BaseHandler.CreateUriNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode(System.Uri)
+    name: CreateUriNode
+    nameWithType: BaseHandler.CreateUriNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateUriNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  isExternal: true
+  name: CreateVariableNode(String)
+  nameWithType: BaseHandler.CreateVariableNode(String)
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+    name: CreateVariableNode
+    nameWithType: BaseHandler.CreateVariableNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode(System.String)
+    name: CreateVariableNode
+    nameWithType: BaseHandler.CreateVariableNode
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.CreateVariableNode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  parent: VDS.RDF.Parsing.Handlers.BaseHandler
+  name: GetNextBlankNodeID()
+  nameWithType: BaseHandler.GetNextBlankNodeID()
+  fullName: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID()
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+    name: GetNextBlankNodeID
+    nameWithType: BaseHandler.GetNextBlankNodeID
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+    name: GetNextBlankNodeID
+    nameWithType: BaseHandler.GetNextBlankNodeID
+    fullName: VDS.RDF.Parsing.Handlers.BaseHandler.GetNextBlankNodeID
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<DataTableHandler>()
+  nameWithType: Extensions.AsEnumerable<DataTableHandler>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Data.DataTables.DataTableHandler>()
+  nameWithType.vb: Extensions.AsEnumerable(Of DataTableHandler)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Data.DataTables.DataTableHandler)()
+  name.vb: AsEnumerable(Of DataTableHandler)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<DataTableHandler>
+    nameWithType: Extensions.AsEnumerable<DataTableHandler>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Data.DataTables.DataTableHandler>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of DataTableHandler)
+    nameWithType: Extensions.AsEnumerable(Of DataTableHandler)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Data.DataTables.DataTableHandler)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Parsing.Handlers
+  commentId: N:VDS.RDF.Parsing.Handlers
+  name: VDS.RDF.Parsing.Handlers
+  nameWithType: VDS.RDF.Parsing.Handlers
+  fullName: VDS.RDF.Parsing.Handlers
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Data.DataTable
+  commentId: T:System.Data.DataTable
+  parent: System.Data
+  isExternal: true
+  name: DataTable
+  nameWithType: DataTable
+  fullName: System.Data.DataTable
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.#ctor*
+  commentId: Overload:VDS.RDF.Data.DataTables.DataTableHandler.#ctor
+  name: DataTableHandler
+  nameWithType: DataTableHandler.DataTableHandler
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.DataTableHandler
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal(VDS.RDF.Triple)
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  name: HandleTripleInternal(Triple)
+  nameWithType: BaseRdfHandler.HandleTripleInternal(Triple)
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal(VDS.RDF.Triple)
+    name: HandleTripleInternal
+    nameWithType: BaseRdfHandler.HandleTripleInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal(VDS.RDF.Triple)
+    name: HandleTripleInternal
+    nameWithType: BaseRdfHandler.HandleTripleInternal
+    fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.HandleTripleInternal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal*
+  commentId: Overload:VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal
+  name: HandleTripleInternal
+  nameWithType: DataTableHandler.HandleTripleInternal
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.HandleTripleInternal
+- uid: VDS.RDF.Triple
+  commentId: T:VDS.RDF.Triple
+  parent: VDS.RDF
+  name: Triple
+  nameWithType: Triple
+  fullName: VDS.RDF.Triple
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Parsing.Handlers.BaseRdfHandler.AcceptsAll
+  commentId: P:VDS.RDF.Parsing.Handlers.BaseRdfHandler.AcceptsAll
+  parent: VDS.RDF.Parsing.Handlers.BaseRdfHandler
+  name: AcceptsAll
+  nameWithType: BaseRdfHandler.AcceptsAll
+  fullName: VDS.RDF.Parsing.Handlers.BaseRdfHandler.AcceptsAll
+- uid: VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll*
+  commentId: Overload:VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll
+  name: AcceptsAll
+  nameWithType: DataTableHandler.AcceptsAll
+  fullName: VDS.RDF.Data.DataTables.DataTableHandler.AcceptsAll

@@ -1,0 +1,1173 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Web.SparqlServer
+  commentId: T:VDS.RDF.Web.SparqlServer
+  id: SparqlServer
+  parent: VDS.RDF.Web
+  children:
+  - VDS.RDF.Web.SparqlServer.LoadConfig(HttpContext,System.String@)
+  - VDS.RDF.Web.SparqlServer.UpdateConfig(HttpContext)
+  langs:
+  - csharp
+  - vb
+  name: SparqlServer
+  nameWithType: SparqlServer
+  fullName: VDS.RDF.Web.SparqlServer
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/SparqlServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SparqlServer
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/SparqlServer.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nHTTP Handler for adding SPARQL Servers to ASP.Net applications - SPARQL Servers provide combined Query, Update and Graph Store HTTP Protocol for RDF Graph Management endpoints\n"
+  remarks: "\n<p>\nUsed to create a SPARQL Server with a base URI where any URI under this URI is handled by this Server\n</p>\n<p>\nFor example given a Base URI of <strong>http://example.org/server/</strong> then the Handler would treat requests to <strong>http://example.org/server/query</strong> as SPARQL Query requests, requests to <strong>http://example.org/server/update</strong> as SPARQL Update requests and requests to any other URL covered by this base URL as SPARQL Graph Store HTTP Protocol requests\n</p>\n<p>\nThis Handler is configured using the new Configuration API introduced in the 0.3.0 release.  This requires just one setting to be defined in the &lt;appSettings> section of your Web.config file which points to a Configuration Graph like so:\n<pre><code>&lt;add key=&quot;dotNetRDFConfig&quot; value=&quot;~/App_Data/config.ttl&quot; /></code></pre>\nThe Configuration Graph must then contain Triples like the following to specify a Update Endpoint:\n<pre><code>&lt;dotnetrdf:/folder/server/*> a dnr:HttpHandler ;\n                                   dnr:type &quot;VDS.RDF.Web.SparqlServer&quot; ;\n                                   dnr:queryProcessor _:qProc ;\n                                   dnr:updateProcessor _:uProc ;\n                                   dnr:protocolProcessor _:pProc .\n\n_:qProc a dnr:SparqlQueryProcessor ;\n        dnr:type &quot;VDS.RDF.Query.LeviathanQueryProcessor&quot; ;\n        dnr:usingStore _:store .\n\n_:uProc a dnr:SparqlUpdateProcessor ;\n        dnr:type &quot;VDS.RDF.Update.LeviathanUpdateProcessor&quot; ;\n        dnr:usingStore _:store .\n\n_:pProc a dnr:SparqlHttpProtocolProcessor ;\n        dnr:type &quot;VDS.RDF.Update.Protocol.LeviathanProtocolProcessor&quot; ;\n        dnr:usingStore _:store .\n\n_:store a dnr:TripleStore ;\n        dnr:type &quot;VDS.RDF.TripleStore&quot; .</code></pre>\n</p>\n"
+  example: []
+  syntax:
+    content: 'public class SparqlServer : BaseSparqlServer'
+    content.vb: >-
+      Public Class SparqlServer
+          Inherits BaseSparqlServer
+  inheritance:
+  - System.Object
+  - VDS.RDF.Web.BaseSparqlServer
+  inheritedMembers:
+  - VDS.RDF.Web.BaseSparqlServer._config
+  - VDS.RDF.Web.BaseSparqlServer.IsReusable
+  - VDS.RDF.Web.BaseSparqlServer.ProcessRequest(HttpContext)
+  - VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest(HttpContext)
+  - VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest(HttpContext)
+  - VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest(HttpContext)
+  - VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest(HttpContext)
+  - VDS.RDF.Web.BaseSparqlServer.LoadConfig(HttpContext,String@)
+  - VDS.RDF.Web.BaseSparqlServer.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  - VDS.RDF.Web.BaseSparqlServer.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  - VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults(HttpContext,Object)
+  - VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception)
+  - VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception,System.Int32)
+  - VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception)
+  - VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception,System.Int32)
+  - VDS.RDF.Web.BaseSparqlServer.ShowQueryForm(HttpContext)
+  - VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm(HttpContext)
+  extensionMethods:
+  - VDS.RDF.Web.SparqlServer.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Web.SparqlServer.LoadConfig(HttpContext,System.String@)
+  commentId: M:VDS.RDF.Web.SparqlServer.LoadConfig(HttpContext,System.String@)
+  id: LoadConfig(HttpContext,System.String@)
+  parent: VDS.RDF.Web.SparqlServer
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig(HttpContext, out String)
+  nameWithType: SparqlServer.LoadConfig(HttpContext, out String)
+  fullName: VDS.RDF.Web.SparqlServer.LoadConfig(HttpContext, out System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/SparqlServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: LoadConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/SparqlServer.cs
+    startLine: 83
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nLoads the Handler Configuration\n"
+  example: []
+  syntax:
+    content: protected override BaseSparqlServerConfiguration LoadConfig(HttpContext context, out string basePath)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    - id: basePath
+      type: System.String
+      description: Base Path for the Server
+    return:
+      type: VDS.RDF.Web.Configuration.Server.BaseSparqlServerConfiguration
+      description: ''
+    content.vb: Protected Overrides Function LoadConfig(context As HttpContext, ByRef basePath As String) As BaseSparqlServerConfiguration
+  overload: VDS.RDF.Web.SparqlServer.LoadConfig*
+  nameWithType.vb: SparqlServer.LoadConfig(HttpContext, ByRef String)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: VDS.RDF.Web.SparqlServer.LoadConfig(HttpContext, ByRef System.String)
+  name.vb: LoadConfig(HttpContext, ByRef String)
+- uid: VDS.RDF.Web.SparqlServer.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.SparqlServer.UpdateConfig(HttpContext)
+  id: UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.SparqlServer
+  langs:
+  - csharp
+  - vb
+  name: UpdateConfig(HttpContext)
+  nameWithType: SparqlServer.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.SparqlServer.UpdateConfig(HttpContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Web/SparqlServer.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: UpdateConfig
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Web/SparqlServer.cs
+    startLine: 129
+  assemblies:
+  - dotNetRDF.Web
+  namespace: VDS.RDF.Web
+  summary: "\nUpdates the Handler Configuration\n"
+  example: []
+  syntax:
+    content: protected override void UpdateConfig(HttpContext context)
+    parameters:
+    - id: context
+      type: HttpContext
+      description: HTTP Context
+    content.vb: Protected Overrides Sub UpdateConfig(context As HttpContext)
+  overridden: VDS.RDF.Web.BaseSparqlServer.UpdateConfig(HttpContext)
+  overload: VDS.RDF.Web.SparqlServer.UpdateConfig*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: VDS.RDF.Web
+  commentId: N:VDS.RDF.Web
+  name: VDS.RDF.Web
+  nameWithType: VDS.RDF.Web
+  fullName: VDS.RDF.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Web.BaseSparqlServer
+  commentId: T:VDS.RDF.Web.BaseSparqlServer
+  parent: VDS.RDF.Web
+  name: BaseSparqlServer
+  nameWithType: BaseSparqlServer
+  fullName: VDS.RDF.Web.BaseSparqlServer
+- uid: VDS.RDF.Web.BaseSparqlServer._config
+  commentId: F:VDS.RDF.Web.BaseSparqlServer._config
+  parent: VDS.RDF.Web.BaseSparqlServer
+  name: _config
+  nameWithType: BaseSparqlServer._config
+  fullName: VDS.RDF.Web.BaseSparqlServer._config
+- uid: VDS.RDF.Web.BaseSparqlServer.IsReusable
+  commentId: P:VDS.RDF.Web.BaseSparqlServer.IsReusable
+  parent: VDS.RDF.Web.BaseSparqlServer
+  name: IsReusable
+  nameWithType: BaseSparqlServer.IsReusable
+  fullName: VDS.RDF.Web.BaseSparqlServer.IsReusable
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ProcessRequest(HttpContext)
+  nameWithType: BaseSparqlServer.ProcessRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseSparqlServer.ProcessRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessRequest(HttpContext)
+    name: ProcessRequest
+    nameWithType: BaseSparqlServer.ProcessRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ProcessQueryRequest(HttpContext)
+  nameWithType: BaseSparqlServer.ProcessQueryRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest(HttpContext)
+    name: ProcessQueryRequest
+    nameWithType: BaseSparqlServer.ProcessQueryRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest(HttpContext)
+    name: ProcessQueryRequest
+    nameWithType: BaseSparqlServer.ProcessQueryRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQueryRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ProcessUpdateRequest(HttpContext)
+  nameWithType: BaseSparqlServer.ProcessUpdateRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest(HttpContext)
+    name: ProcessUpdateRequest
+    nameWithType: BaseSparqlServer.ProcessUpdateRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest(HttpContext)
+    name: ProcessUpdateRequest
+    nameWithType: BaseSparqlServer.ProcessUpdateRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessUpdateRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ProcessProtocolRequest(HttpContext)
+  nameWithType: BaseSparqlServer.ProcessProtocolRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest(HttpContext)
+    name: ProcessProtocolRequest
+    nameWithType: BaseSparqlServer.ProcessProtocolRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest(HttpContext)
+    name: ProcessProtocolRequest
+    nameWithType: BaseSparqlServer.ProcessProtocolRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessProtocolRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ProcessDescriptionRequest(HttpContext)
+  nameWithType: BaseSparqlServer.ProcessDescriptionRequest(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest(HttpContext)
+    name: ProcessDescriptionRequest
+    nameWithType: BaseSparqlServer.ProcessDescriptionRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest(HttpContext)
+    name: ProcessDescriptionRequest
+    nameWithType: BaseSparqlServer.ProcessDescriptionRequest
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessDescriptionRequest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.LoadConfig(HttpContext,String@)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.LoadConfig(HttpContext,String@)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: LoadConfig(HttpContext, String)
+  nameWithType: BaseSparqlServer.LoadConfig(HttpContext, String)
+  fullName: VDS.RDF.Web.BaseSparqlServer.LoadConfig(HttpContext, String)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.LoadConfig(HttpContext,String@)
+    name: LoadConfig
+    nameWithType: BaseSparqlServer.LoadConfig
+    fullName: VDS.RDF.Web.BaseSparqlServer.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.LoadConfig(HttpContext,String@)
+    name: LoadConfig
+    nameWithType: BaseSparqlServer.LoadConfig
+    fullName: VDS.RDF.Web.BaseSparqlServer.LoadConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  name: ProcessQuery(SparqlQuery)
+  nameWithType: BaseSparqlServer.ProcessQuery(SparqlQuery)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: BaseSparqlServer.ProcessQuery
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessQuery(VDS.RDF.Query.SparqlQuery)
+    name: ProcessQuery
+    nameWithType: BaseSparqlServer.ProcessQuery
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.SparqlQuery
+    name: SparqlQuery
+    nameWithType: SparqlQuery
+    fullName: VDS.RDF.Query.SparqlQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  name: ProcessUpdates(SparqlUpdateCommandSet)
+  nameWithType: BaseSparqlServer.ProcessUpdates(SparqlUpdateCommandSet)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: ProcessUpdates
+    nameWithType: BaseSparqlServer.ProcessUpdates
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessUpdates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessUpdates(VDS.RDF.Update.SparqlUpdateCommandSet)
+    name: ProcessUpdates
+    nameWithType: BaseSparqlServer.ProcessUpdates
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessUpdates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Update.SparqlUpdateCommandSet
+    name: SparqlUpdateCommandSet
+    nameWithType: SparqlUpdateCommandSet
+    fullName: VDS.RDF.Update.SparqlUpdateCommandSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults(HttpContext,Object)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults(HttpContext,Object)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ProcessQueryResults(HttpContext, Object)
+  nameWithType: BaseSparqlServer.ProcessQueryResults(HttpContext, Object)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults(HttpContext, Object)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults(HttpContext,Object)
+    name: ProcessQueryResults
+    nameWithType: BaseSparqlServer.ProcessQueryResults
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Object
+    name: Object
+    nameWithType: Object
+    fullName: Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults(HttpContext,Object)
+    name: ProcessQueryResults
+    nameWithType: BaseSparqlServer.ProcessQueryResults
+    fullName: VDS.RDF.Web.BaseSparqlServer.ProcessQueryResults
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Object
+    name: Object
+    nameWithType: Object
+    fullName: Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: HandleQueryErrors(HttpContext, String, String, Exception)
+  nameWithType: BaseSparqlServer.HandleQueryErrors(HttpContext, String, String, Exception)
+  fullName: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext, String, String, Exception)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception)
+    name: HandleQueryErrors
+    nameWithType: BaseSparqlServer.HandleQueryErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception)
+    name: HandleQueryErrors
+    nameWithType: BaseSparqlServer.HandleQueryErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception,System.Int32)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception,System.Int32)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: HandleQueryErrors(HttpContext, String, String, Exception, Int32)
+  nameWithType: BaseSparqlServer.HandleQueryErrors(HttpContext, String, String, Exception, Int32)
+  fullName: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext, String, String, Exception, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception,System.Int32)
+    name: HandleQueryErrors
+    nameWithType: BaseSparqlServer.HandleQueryErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors(HttpContext,String,String,Exception,System.Int32)
+    name: HandleQueryErrors
+    nameWithType: BaseSparqlServer.HandleQueryErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleQueryErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: HandleUpdateErrors(HttpContext, String, String, Exception)
+  nameWithType: BaseSparqlServer.HandleUpdateErrors(HttpContext, String, String, Exception)
+  fullName: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext, String, String, Exception)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception)
+    name: HandleUpdateErrors
+    nameWithType: BaseSparqlServer.HandleUpdateErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception)
+    name: HandleUpdateErrors
+    nameWithType: BaseSparqlServer.HandleUpdateErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception,System.Int32)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception,System.Int32)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: HandleUpdateErrors(HttpContext, String, String, Exception, Int32)
+  nameWithType: BaseSparqlServer.HandleUpdateErrors(HttpContext, String, String, Exception, Int32)
+  fullName: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext, String, String, Exception, System.Int32)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception,System.Int32)
+    name: HandleUpdateErrors
+    nameWithType: BaseSparqlServer.HandleUpdateErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors(HttpContext,String,String,Exception,System.Int32)
+    name: HandleUpdateErrors
+    nameWithType: BaseSparqlServer.HandleUpdateErrors
+    fullName: VDS.RDF.Web.BaseSparqlServer.HandleUpdateErrors
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ShowQueryForm(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ShowQueryForm(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ShowQueryForm(HttpContext)
+  nameWithType: BaseSparqlServer.ShowQueryForm(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ShowQueryForm(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ShowQueryForm(HttpContext)
+    name: ShowQueryForm
+    nameWithType: BaseSparqlServer.ShowQueryForm
+    fullName: VDS.RDF.Web.BaseSparqlServer.ShowQueryForm
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ShowQueryForm(HttpContext)
+    name: ShowQueryForm
+    nameWithType: BaseSparqlServer.ShowQueryForm
+    fullName: VDS.RDF.Web.BaseSparqlServer.ShowQueryForm
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: ShowUpdateForm(HttpContext)
+  nameWithType: BaseSparqlServer.ShowUpdateForm(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm(HttpContext)
+    name: ShowUpdateForm
+    nameWithType: BaseSparqlServer.ShowUpdateForm
+    fullName: VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm(HttpContext)
+    name: ShowUpdateForm
+    nameWithType: BaseSparqlServer.ShowUpdateForm
+    fullName: VDS.RDF.Web.BaseSparqlServer.ShowUpdateForm
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.SparqlServer.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<SparqlServer>()
+  nameWithType: Extensions.AsEnumerable<SparqlServer>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.SparqlServer>()
+  nameWithType.vb: Extensions.AsEnumerable(Of SparqlServer)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.SparqlServer)()
+  name.vb: AsEnumerable(Of SparqlServer)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<SparqlServer>
+    nameWithType: Extensions.AsEnumerable<SparqlServer>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Web.SparqlServer>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of SparqlServer)
+    nameWithType: Extensions.AsEnumerable(Of SparqlServer)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Web.SparqlServer)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Web.SparqlServer.LoadConfig*
+  commentId: Overload:VDS.RDF.Web.SparqlServer.LoadConfig
+  name: LoadConfig
+  nameWithType: SparqlServer.LoadConfig
+  fullName: VDS.RDF.Web.SparqlServer.LoadConfig
+- uid: HttpContext
+  isExternal: true
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: HttpContext
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.Web.Configuration.Server.BaseSparqlServerConfiguration
+  commentId: T:VDS.RDF.Web.Configuration.Server.BaseSparqlServerConfiguration
+  parent: VDS.RDF.Web.Configuration.Server
+  name: BaseSparqlServerConfiguration
+  nameWithType: BaseSparqlServerConfiguration
+  fullName: VDS.RDF.Web.Configuration.Server.BaseSparqlServerConfiguration
+- uid: VDS.RDF.Web.Configuration.Server
+  commentId: N:VDS.RDF.Web.Configuration.Server
+  name: VDS.RDF.Web.Configuration.Server
+  nameWithType: VDS.RDF.Web.Configuration.Server
+  fullName: VDS.RDF.Web.Configuration.Server
+- uid: VDS.RDF.Web.BaseSparqlServer.UpdateConfig(HttpContext)
+  commentId: M:VDS.RDF.Web.BaseSparqlServer.UpdateConfig(HttpContext)
+  parent: VDS.RDF.Web.BaseSparqlServer
+  isExternal: true
+  name: UpdateConfig(HttpContext)
+  nameWithType: BaseSparqlServer.UpdateConfig(HttpContext)
+  fullName: VDS.RDF.Web.BaseSparqlServer.UpdateConfig(HttpContext)
+  spec.csharp:
+  - uid: VDS.RDF.Web.BaseSparqlServer.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: BaseSparqlServer.UpdateConfig
+    fullName: VDS.RDF.Web.BaseSparqlServer.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Web.BaseSparqlServer.UpdateConfig(HttpContext)
+    name: UpdateConfig
+    nameWithType: BaseSparqlServer.UpdateConfig
+    fullName: VDS.RDF.Web.BaseSparqlServer.UpdateConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: HttpContext
+    name: HttpContext
+    nameWithType: HttpContext
+    fullName: HttpContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Web.SparqlServer.UpdateConfig*
+  commentId: Overload:VDS.RDF.Web.SparqlServer.UpdateConfig
+  name: UpdateConfig
+  nameWithType: SparqlServer.UpdateConfig
+  fullName: VDS.RDF.Web.SparqlServer.UpdateConfig

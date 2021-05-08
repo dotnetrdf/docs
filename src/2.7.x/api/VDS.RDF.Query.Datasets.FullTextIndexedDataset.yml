@@ -1,0 +1,1498 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  commentId: T:VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  id: FullTextIndexedDataset
+  parent: VDS.RDF.Query.Datasets
+  children:
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer)
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer,System.Boolean)
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph(VDS.RDF.IGraph)
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph(Uri)
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph(Uri)
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  langs:
+  - csharp
+  - vb
+  name: FullTextIndexedDataset
+  nameWithType: FullTextIndexedDataset
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FullTextIndexedDataset
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 35
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nA Full Text Indexed Dataset is a wrapper around another dataset and provides automatic full text indexing of data that is added and removed.\n"
+  example: []
+  syntax:
+    content: 'public class FullTextIndexedDataset : WrapperDataset, IConfigurationSerializable, IThreadSafeDataset, ISparqlDataset'
+    content.vb: >-
+      Public Class FullTextIndexedDataset
+          Inherits WrapperDataset
+          Implements IConfigurationSerializable, IThreadSafeDataset, ISparqlDataset
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Datasets.WrapperDataset
+  implements:
+  - VDS.RDF.Configuration.IConfigurationSerializable
+  - VDS.RDF.Query.Datasets.IThreadSafeDataset
+  - VDS.RDF.Query.Datasets.ISparqlDataset
+  inheritedMembers:
+  - VDS.RDF.Query.Datasets.WrapperDataset._dataset
+  - VDS.RDF.Query.Datasets.WrapperDataset.Lock
+  - VDS.RDF.Query.Datasets.WrapperDataset.UnderlyingDataset
+  - VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  - VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph
+  - VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph
+  - VDS.RDF.Query.Datasets.WrapperDataset.DefaultGraphUris
+  - VDS.RDF.Query.Datasets.WrapperDataset.ActiveGraphUris
+  - VDS.RDF.Query.Datasets.WrapperDataset.UsesUnionDefaultGraph
+  - VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.WrapperDataset.HasGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.WrapperDataset.Graphs
+  - VDS.RDF.Query.Datasets.WrapperDataset.GraphUris
+  - VDS.RDF.Query.Datasets.WrapperDataset.Item(System.Uri)
+  - VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph(System.Uri)
+  - VDS.RDF.Query.Datasets.WrapperDataset.HasTriples
+  - VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple(VDS.RDF.Triple)
+  - VDS.RDF.Query.Datasets.WrapperDataset.Triples
+  - VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject(VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  - VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  extensionMethods:
+  - VDS.RDF.Query.Datasets.FullTextIndexedDataset.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer,System.Boolean)
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer,System.Boolean)
+  id: '#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer,System.Boolean)'
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: FullTextIndexedDataset(ISparqlDataset, IFullTextIndexer, Boolean)
+  nameWithType: FullTextIndexedDataset.FullTextIndexedDataset(ISparqlDataset, IFullTextIndexer, Boolean)
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.FullTextIndexedDataset(VDS.RDF.Query.Datasets.ISparqlDataset, VDS.RDF.Query.FullText.Indexing.IFullTextIndexer, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 50
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nCreates a new Full Text Indexed Dataset.\n"
+  remarks: "\nIf <code data-dev-comment-type=\"paramref\" class=\"paramref\">indexNow</code> is true then the provided dataset will be fully indexed when this constructor is called.\n"
+  example: []
+  syntax:
+    content: public FullTextIndexedDataset(ISparqlDataset dataset, IFullTextIndexer indexer, bool indexNow)
+    parameters:
+    - id: dataset
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset to wrap.
+    - id: indexer
+      type: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+      description: Indexer to use.
+    - id: indexNow
+      type: System.Boolean
+      description: Whether the dataset provided should be indexed now, set to false if indexer is linked to an existing index for this data.
+    content.vb: Public Sub New(dataset As ISparqlDataset, indexer As IFullTextIndexer, indexNow As Boolean)
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer)
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer)
+  id: '#ctor(VDS.RDF.Query.Datasets.ISparqlDataset,VDS.RDF.Query.FullText.Indexing.IFullTextIndexer)'
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: FullTextIndexedDataset(ISparqlDataset, IFullTextIndexer)
+  nameWithType: FullTextIndexedDataset.FullTextIndexedDataset(ISparqlDataset, IFullTextIndexer)
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.FullTextIndexedDataset(VDS.RDF.Query.Datasets.ISparqlDataset, VDS.RDF.Query.FullText.Indexing.IFullTextIndexer)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 74
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nCreates a new Full Text Indexed Dataset.\n"
+  remarks: "\nDoes not do any indexing, assumes the provided dataset is already indexed.  When using this constructor only changes to the dataset affect the index.\n"
+  example: []
+  syntax:
+    content: public FullTextIndexedDataset(ISparqlDataset dataset, IFullTextIndexer indexer)
+    parameters:
+    - id: dataset
+      type: VDS.RDF.Query.Datasets.ISparqlDataset
+      description: Dataset to wrap.
+    - id: indexer
+      type: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+      description: Indexer to use.
+    content.vb: Public Sub New(dataset As ISparqlDataset, indexer As IFullTextIndexer)
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph(VDS.RDF.IGraph)
+  id: AddGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: AddGraph(IGraph)
+  nameWithType: FullTextIndexedDataset.AddGraph(IGraph)
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph(VDS.RDF.IGraph)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: AddGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 81
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nAdds a Graph to the Dataset updating the Full Text Index appropriately.\n"
+  example: []
+  syntax:
+    content: public override bool AddGraph(IGraph g)
+    parameters:
+    - id: g
+      type: VDS.RDF.IGraph
+      description: Graph to add.
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function AddGraph(g As IGraph) As Boolean
+  overridden: VDS.RDF.Query.Datasets.WrapperDataset.AddGraph(VDS.RDF.IGraph)
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph(Uri)
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph(Uri)
+  id: RemoveGraph(Uri)
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: RemoveGraph(Uri)
+  nameWithType: FullTextIndexedDataset.RemoveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph(Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: RemoveGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 91
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nRemoves a Graph from the Dataset updating the Full Text Index appropriately.\n"
+  example: []
+  syntax:
+    content: public override bool RemoveGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: Uri
+      description: URI of the Graph to remove.
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function RemoveGraph(graphUri As Uri) As Boolean
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph(Uri)
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph(Uri)
+  id: GetModifiableGraph(Uri)
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: GetModifiableGraph(Uri)
+  nameWithType: FullTextIndexedDataset.GetModifiableGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph(Uri)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetModifiableGraph
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 105
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nGets a modifiable graph from the store ensuring that modifications will update the Full Text Index.\n"
+  example: []
+  syntax:
+    content: public override IGraph GetModifiableGraph(Uri graphUri)
+    parameters:
+    - id: graphUri
+      type: Uri
+      description: Graph URI.
+    return:
+      type: VDS.RDF.IGraph
+      description: ''
+    content.vb: Public Overrides Function GetModifiableGraph(graphUri As Uri) As IGraph
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush
+  id: Flush
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: FullTextIndexedDataset.Flush()
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Flush
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 139
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nFlushes changes to the Dataset and ensures the Index is up to date.\n"
+  example: []
+  syntax:
+    content: public override void Flush()
+    content.vb: Public Overrides Sub Flush
+  overridden: VDS.RDF.Query.Datasets.WrapperDataset.Flush
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard
+  id: Discard
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: Discard()
+  nameWithType: FullTextIndexedDataset.Discard()
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Discard
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 149
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nDiscards changes to the Dataset and ensures the Index is up to date.\n"
+  example: []
+  syntax:
+    content: public override void Discard()
+    content.vb: Public Overrides Sub Discard
+  overridden: VDS.RDF.Query.Datasets.WrapperDataset.Discard
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  id: SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Query.Datasets.FullTextIndexedDataset
+  langs:
+  - csharp
+  - vb
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: FullTextIndexedDataset.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: SerializeConfiguration
+    path: ../../dotNetRDF/Libraries/dotNetRDF.Query.FullText/Datasets/FullTextIndexedDataset.cs
+    startLine: 160
+  assemblies:
+  - dotNetRDF.Query.FullText
+  namespace: VDS.RDF.Query.Datasets
+  summary: "\nSerializes the Configuration of the Dataset.\n"
+  example: []
+  syntax:
+    content: public override void SerializeConfiguration(ConfigurationSerializationContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Configuration.ConfigurationSerializationContext
+      description: Serialization Context.
+    content.vb: Public Overrides Sub SerializeConfiguration(context As ConfigurationSerializationContext)
+  overridden: VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  overload: VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Datasets
+  commentId: N:VDS.RDF.Query.Datasets
+  name: VDS.RDF.Query.Datasets
+  nameWithType: VDS.RDF.Query.Datasets
+  fullName: VDS.RDF.Query.Datasets
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Datasets.WrapperDataset
+  commentId: T:VDS.RDF.Query.Datasets.WrapperDataset
+  parent: VDS.RDF.Query.Datasets
+  name: WrapperDataset
+  nameWithType: WrapperDataset
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset
+- uid: VDS.RDF.Configuration.IConfigurationSerializable
+  commentId: T:VDS.RDF.Configuration.IConfigurationSerializable
+  parent: VDS.RDF.Configuration
+  name: IConfigurationSerializable
+  nameWithType: IConfigurationSerializable
+  fullName: VDS.RDF.Configuration.IConfigurationSerializable
+- uid: VDS.RDF.Query.Datasets.IThreadSafeDataset
+  commentId: T:VDS.RDF.Query.Datasets.IThreadSafeDataset
+  parent: VDS.RDF.Query.Datasets
+  name: IThreadSafeDataset
+  nameWithType: IThreadSafeDataset
+  fullName: VDS.RDF.Query.Datasets.IThreadSafeDataset
+- uid: VDS.RDF.Query.Datasets.ISparqlDataset
+  commentId: T:VDS.RDF.Query.Datasets.ISparqlDataset
+  parent: VDS.RDF.Query.Datasets
+  name: ISparqlDataset
+  nameWithType: ISparqlDataset
+  fullName: VDS.RDF.Query.Datasets.ISparqlDataset
+- uid: VDS.RDF.Query.Datasets.WrapperDataset._dataset
+  commentId: F:VDS.RDF.Query.Datasets.WrapperDataset._dataset
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: _dataset
+  nameWithType: WrapperDataset._dataset
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset._dataset
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.Lock
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.Lock
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: Lock
+  nameWithType: WrapperDataset.Lock
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.Lock
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.UnderlyingDataset
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.UnderlyingDataset
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: UnderlyingDataset
+  nameWithType: WrapperDataset.UnderlyingDataset
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.UnderlyingDataset
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: SetActiveGraph(IEnumerable<Uri>)
+  nameWithType: WrapperDataset.SetActiveGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  nameWithType.vb: WrapperDataset.SetActiveGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetActiveGraph(IEnumerable(Of Uri))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetActiveGraph
+    nameWithType: WrapperDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetActiveGraph
+    nameWithType: WrapperDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: SetActiveGraph(Uri)
+  nameWithType: WrapperDataset.SetActiveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Uri)
+    name: SetActiveGraph
+    nameWithType: WrapperDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph(System.Uri)
+    name: SetActiveGraph
+    nameWithType: WrapperDataset.SetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: SetDefaultGraph(Uri)
+  nameWithType: WrapperDataset.SetDefaultGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Uri)
+    name: SetDefaultGraph
+    nameWithType: WrapperDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Uri)
+    name: SetDefaultGraph
+    nameWithType: WrapperDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: SetDefaultGraph(IEnumerable<Uri>)
+  nameWithType: WrapperDataset.SetDefaultGraph(IEnumerable<Uri>)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable<System.Uri>)
+  nameWithType.vb: WrapperDataset.SetDefaultGraph(IEnumerable(Of Uri))
+  fullName.vb: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable(Of System.Uri))
+  name.vb: SetDefaultGraph(IEnumerable(Of Uri))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetDefaultGraph
+    nameWithType: WrapperDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph(System.Collections.Generic.IEnumerable{System.Uri})
+    name: SetDefaultGraph
+    nameWithType: WrapperDataset.SetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: ResetActiveGraph()
+  nameWithType: WrapperDataset.ResetActiveGraph()
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph
+    name: ResetActiveGraph
+    nameWithType: WrapperDataset.ResetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph
+    name: ResetActiveGraph
+    nameWithType: WrapperDataset.ResetActiveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.ResetActiveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: ResetDefaultGraph()
+  nameWithType: WrapperDataset.ResetDefaultGraph()
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph
+    name: ResetDefaultGraph
+    nameWithType: WrapperDataset.ResetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph
+    name: ResetDefaultGraph
+    nameWithType: WrapperDataset.ResetDefaultGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.ResetDefaultGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.DefaultGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.DefaultGraphUris
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: DefaultGraphUris
+  nameWithType: WrapperDataset.DefaultGraphUris
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.DefaultGraphUris
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.ActiveGraphUris
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.ActiveGraphUris
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: ActiveGraphUris
+  nameWithType: WrapperDataset.ActiveGraphUris
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.ActiveGraphUris
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.UsesUnionDefaultGraph
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.UsesUnionDefaultGraph
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: UsesUnionDefaultGraph
+  nameWithType: WrapperDataset.UsesUnionDefaultGraph
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.UsesUnionDefaultGraph
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: RemoveGraph(Uri)
+  nameWithType: WrapperDataset.RemoveGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph(System.Uri)
+    name: RemoveGraph
+    nameWithType: WrapperDataset.RemoveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph(System.Uri)
+    name: RemoveGraph
+    nameWithType: WrapperDataset.RemoveGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.RemoveGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.HasGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.HasGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: HasGraph(Uri)
+  nameWithType: WrapperDataset.HasGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.HasGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: WrapperDataset.HasGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.HasGraph(System.Uri)
+    name: HasGraph
+    nameWithType: WrapperDataset.HasGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.HasGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.Graphs
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.Graphs
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: Graphs
+  nameWithType: WrapperDataset.Graphs
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.Graphs
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GraphUris
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.GraphUris
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: GraphUris
+  nameWithType: WrapperDataset.GraphUris
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GraphUris
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.Item(System.Uri)
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.Item(System.Uri)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: Item[Uri]
+  nameWithType: WrapperDataset.Item[Uri]
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.Item[System.Uri]
+  nameWithType.vb: WrapperDataset.Item(Uri)
+  fullName.vb: VDS.RDF.Query.Datasets.WrapperDataset.Item(System.Uri)
+  name.vb: Item(Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.Item(System.Uri)
+    name: Item
+    nameWithType: WrapperDataset.Item
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.Item(System.Uri)
+    name: Item
+    nameWithType: WrapperDataset.Item
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph(System.Uri)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph(System.Uri)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  isExternal: true
+  name: GetModifiableGraph(Uri)
+  nameWithType: WrapperDataset.GetModifiableGraph(Uri)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph(System.Uri)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: WrapperDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph(System.Uri)
+    name: GetModifiableGraph
+    nameWithType: WrapperDataset.GetModifiableGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetModifiableGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Uri
+    name: Uri
+    nameWithType: Uri
+    fullName: System.Uri
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.HasTriples
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.HasTriples
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: HasTriples
+  nameWithType: WrapperDataset.HasTriples
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.HasTriples
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple(VDS.RDF.Triple)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple(VDS.RDF.Triple)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: ContainsTriple(Triple)
+  nameWithType: WrapperDataset.ContainsTriple(Triple)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple(VDS.RDF.Triple)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple(VDS.RDF.Triple)
+    name: ContainsTriple
+    nameWithType: WrapperDataset.ContainsTriple
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple(VDS.RDF.Triple)
+    name: ContainsTriple
+    nameWithType: WrapperDataset.ContainsTriple
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.ContainsTriple
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Triple
+    name: Triple
+    nameWithType: Triple
+    fullName: VDS.RDF.Triple
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.Triples
+  commentId: P:VDS.RDF.Query.Datasets.WrapperDataset.Triples
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: Triples
+  nameWithType: WrapperDataset.Triples
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.Triples
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: GetTriplesWithSubject(INode)
+  nameWithType: WrapperDataset.GetTriplesWithSubject(INode)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject(VDS.RDF.INode)
+    name: GetTriplesWithSubject
+    nameWithType: WrapperDataset.GetTriplesWithSubject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject(VDS.RDF.INode)
+    name: GetTriplesWithSubject
+    nameWithType: WrapperDataset.GetTriplesWithSubject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: GetTriplesWithPredicate(INode)
+  nameWithType: WrapperDataset.GetTriplesWithPredicate(INode)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+    name: GetTriplesWithPredicate
+    nameWithType: WrapperDataset.GetTriplesWithPredicate
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate(VDS.RDF.INode)
+    name: GetTriplesWithPredicate
+    nameWithType: WrapperDataset.GetTriplesWithPredicate
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject(VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject(VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: GetTriplesWithObject(INode)
+  nameWithType: WrapperDataset.GetTriplesWithObject(INode)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject(VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject(VDS.RDF.INode)
+    name: GetTriplesWithObject
+    nameWithType: WrapperDataset.GetTriplesWithObject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject(VDS.RDF.INode)
+    name: GetTriplesWithObject
+    nameWithType: WrapperDataset.GetTriplesWithObject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: GetTriplesWithSubjectPredicate(INode, INode)
+  nameWithType: WrapperDataset.GetTriplesWithSubjectPredicate(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectPredicate
+    nameWithType: WrapperDataset.GetTriplesWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectPredicate
+    nameWithType: WrapperDataset.GetTriplesWithSubjectPredicate
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectPredicate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: GetTriplesWithSubjectObject(INode, INode)
+  nameWithType: WrapperDataset.GetTriplesWithSubjectObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectObject
+    nameWithType: WrapperDataset.GetTriplesWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithSubjectObject
+    nameWithType: WrapperDataset.GetTriplesWithSubjectObject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithSubjectObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: GetTriplesWithPredicateObject(INode, INode)
+  nameWithType: WrapperDataset.GetTriplesWithPredicateObject(INode, INode)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject(VDS.RDF.INode, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithPredicateObject
+    nameWithType: WrapperDataset.GetTriplesWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject(VDS.RDF.INode,VDS.RDF.INode)
+    name: GetTriplesWithPredicateObject
+    nameWithType: WrapperDataset.GetTriplesWithPredicateObject
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.GetTriplesWithPredicateObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<FullTextIndexedDataset>()
+  nameWithType: Extensions.AsEnumerable<FullTextIndexedDataset>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.FullTextIndexedDataset>()
+  nameWithType.vb: Extensions.AsEnumerable(Of FullTextIndexedDataset)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.FullTextIndexedDataset)()
+  name.vb: AsEnumerable(Of FullTextIndexedDataset)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<FullTextIndexedDataset>
+    nameWithType: Extensions.AsEnumerable<FullTextIndexedDataset>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Datasets.FullTextIndexedDataset>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of FullTextIndexedDataset)
+    nameWithType: Extensions.AsEnumerable(Of FullTextIndexedDataset)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Datasets.FullTextIndexedDataset)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Configuration
+  commentId: N:VDS.RDF.Configuration
+  name: VDS.RDF.Configuration
+  nameWithType: VDS.RDF.Configuration
+  fullName: VDS.RDF.Configuration
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor*
+  commentId: Overload:VDS.RDF.Query.Datasets.FullTextIndexedDataset.#ctor
+  name: FullTextIndexedDataset
+  nameWithType: FullTextIndexedDataset.FullTextIndexedDataset
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.FullTextIndexedDataset
+- uid: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  commentId: T:VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+  parent: VDS.RDF.Query.FullText.Indexing
+  name: IFullTextIndexer
+  nameWithType: IFullTextIndexer
+  fullName: VDS.RDF.Query.FullText.Indexing.IFullTextIndexer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.FullText.Indexing
+  commentId: N:VDS.RDF.Query.FullText.Indexing
+  name: VDS.RDF.Query.FullText.Indexing
+  nameWithType: VDS.RDF.Query.FullText.Indexing
+  fullName: VDS.RDF.Query.FullText.Indexing
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.AddGraph(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.AddGraph(VDS.RDF.IGraph)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: AddGraph(IGraph)
+  nameWithType: WrapperDataset.AddGraph(IGraph)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.AddGraph(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.AddGraph(VDS.RDF.IGraph)
+    name: AddGraph
+    nameWithType: WrapperDataset.AddGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.AddGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.AddGraph(VDS.RDF.IGraph)
+    name: AddGraph
+    nameWithType: WrapperDataset.AddGraph
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.AddGraph
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph
+  name: AddGraph
+  nameWithType: FullTextIndexedDataset.AddGraph
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.AddGraph
+- uid: VDS.RDF.IGraph
+  commentId: T:VDS.RDF.IGraph
+  parent: VDS.RDF
+  name: IGraph
+  nameWithType: IGraph
+  fullName: VDS.RDF.IGraph
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph
+  name: RemoveGraph
+  nameWithType: FullTextIndexedDataset.RemoveGraph
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.RemoveGraph
+- uid: Uri
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: Uri
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph*
+  commentId: Overload:VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph
+  name: GetModifiableGraph
+  nameWithType: FullTextIndexedDataset.GetModifiableGraph
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.GetModifiableGraph
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.Flush
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.Flush
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: Flush()
+  nameWithType: WrapperDataset.Flush()
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.Flush()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.Flush
+    name: Flush
+    nameWithType: WrapperDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.Flush
+    name: Flush
+    nameWithType: WrapperDataset.Flush
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.Flush
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush*
+  commentId: Overload:VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush
+  name: Flush
+  nameWithType: FullTextIndexedDataset.Flush
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Flush
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.Discard
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.Discard
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: Discard()
+  nameWithType: WrapperDataset.Discard()
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.Discard()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.Discard
+    name: Discard
+    nameWithType: WrapperDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.Discard
+    name: Discard
+    nameWithType: WrapperDataset.Discard
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.Discard
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard*
+  commentId: Overload:VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard
+  name: Discard
+  nameWithType: FullTextIndexedDataset.Discard
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.Discard
+- uid: VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  commentId: M:VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  parent: VDS.RDF.Query.Datasets.WrapperDataset
+  name: SerializeConfiguration(ConfigurationSerializationContext)
+  nameWithType: WrapperDataset.SerializeConfiguration(ConfigurationSerializationContext)
+  fullName: VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: WrapperDataset.SerializeConfiguration
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration(VDS.RDF.Configuration.ConfigurationSerializationContext)
+    name: SerializeConfiguration
+    nameWithType: WrapperDataset.SerializeConfiguration
+    fullName: VDS.RDF.Query.Datasets.WrapperDataset.SerializeConfiguration
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+    name: ConfigurationSerializationContext
+    nameWithType: ConfigurationSerializationContext
+    fullName: VDS.RDF.Configuration.ConfigurationSerializationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration*
+  commentId: Overload:VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration
+  name: SerializeConfiguration
+  nameWithType: FullTextIndexedDataset.SerializeConfiguration
+  fullName: VDS.RDF.Query.Datasets.FullTextIndexedDataset.SerializeConfiguration
+- uid: VDS.RDF.Configuration.ConfigurationSerializationContext
+  commentId: T:VDS.RDF.Configuration.ConfigurationSerializationContext
+  parent: VDS.RDF.Configuration
+  name: ConfigurationSerializationContext
+  nameWithType: ConfigurationSerializationContext
+  fullName: VDS.RDF.Configuration.ConfigurationSerializationContext

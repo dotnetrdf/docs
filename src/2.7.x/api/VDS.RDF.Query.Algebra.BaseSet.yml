@@ -1,0 +1,1887 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Algebra.BaseSet
+  commentId: T:VDS.RDF.Query.Algebra.BaseSet
+  id: BaseSet
+  parent: VDS.RDF.Query.Algebra
+  children:
+  - VDS.RDF.Query.Algebra.BaseSet.Add(System.String,VDS.RDF.INode)
+  - VDS.RDF.Query.Algebra.BaseSet.ContainsVariable(System.String)
+  - VDS.RDF.Query.Algebra.BaseSet.Copy
+  - VDS.RDF.Query.Algebra.BaseSet.Equals(System.Object)
+  - VDS.RDF.Query.Algebra.BaseSet.Equals(VDS.RDF.Query.Algebra.ISet)
+  - VDS.RDF.Query.Algebra.BaseSet.GetHashCode
+  - VDS.RDF.Query.Algebra.BaseSet.ID
+  - VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  - VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  - VDS.RDF.Query.Algebra.BaseSet.Item(System.String)
+  - VDS.RDF.Query.Algebra.BaseSet.Join(VDS.RDF.Query.Algebra.ISet)
+  - VDS.RDF.Query.Algebra.BaseSet.Remove(System.String)
+  - VDS.RDF.Query.Algebra.BaseSet.ToString
+  - VDS.RDF.Query.Algebra.BaseSet.Values
+  - VDS.RDF.Query.Algebra.BaseSet.Variables
+  langs:
+  - csharp
+  - vb
+  name: BaseSet
+  nameWithType: BaseSet
+  fullName: VDS.RDF.Query.Algebra.BaseSet
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: BaseSet
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 127
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nAbstract Base Class for implementations of the <xref href=\"VDS.RDF.Query.Algebra.ISet\" data-throw-if-not-resolved=\"false\"></xref> interface.\n"
+  example: []
+  syntax:
+    content: 'public abstract class BaseSet : ISet, IEquatable<ISet>'
+    content.vb: >-
+      Public MustInherit Class BaseSet
+          Implements ISet, IEquatable(Of ISet)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - VDS.RDF.Query.Algebra.Set
+  implements:
+  - VDS.RDF.Query.Algebra.ISet
+  - System.IEquatable{VDS.RDF.Query.Algebra.ISet}
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Algebra.BaseSet.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: VDS.RDF.Query.Algebra.BaseSet.Add(System.String,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.Add(System.String,VDS.RDF.INode)
+  id: Add(System.String,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Add(String, INode)
+  nameWithType: BaseSet.Add(String, INode)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Add(System.String, VDS.RDF.INode)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Add
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 137
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nAdds a Value for a Variable to the Set.\n"
+  example: []
+  syntax:
+    content: public abstract void Add(string variable, INode value)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable.
+    - id: value
+      type: VDS.RDF.INode
+      description: Value.
+    content.vb: Public MustOverride Sub Add(variable As String, value As INode)
+  overload: VDS.RDF.Query.Algebra.BaseSet.Add*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.Add(System.String,VDS.RDF.INode)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Query.Algebra.BaseSet.ContainsVariable(System.String)
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.ContainsVariable(System.String)
+  id: ContainsVariable(System.String)
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: ContainsVariable(String)
+  nameWithType: BaseSet.ContainsVariable(String)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.ContainsVariable(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ContainsVariable
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 144
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nChecks whether the Set contains a given Variable.\n"
+  example: []
+  syntax:
+    content: public abstract bool ContainsVariable(string variable)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public MustOverride Function ContainsVariable(variable As String) As Boolean
+  overload: VDS.RDF.Query.Algebra.BaseSet.ContainsVariable*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.ContainsVariable(System.String)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  id: IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: IsCompatibleWith(ISet, IEnumerable<String>)
+  nameWithType: BaseSet.IsCompatibleWith(ISet, IEnumerable<String>)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsCompatibleWith
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 152
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets whether the Set is compatible with a given set based on the given variables.\n"
+  example: []
+  syntax:
+    content: public abstract bool IsCompatibleWith(ISet s, IEnumerable<string> vars)
+    parameters:
+    - id: s
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Set.
+    - id: vars
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Variables.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public MustOverride Function IsCompatibleWith(s As ISet, vars As IEnumerable(Of String)) As Boolean
+  overload: VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  nameWithType.vb: BaseSet.IsCompatibleWith(ISet, IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: IsCompatibleWith(ISet, IEnumerable(Of String))
+- uid: VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  id: IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: IsMinusCompatibleWith(ISet, IEnumerable<String>)
+  nameWithType: BaseSet.IsMinusCompatibleWith(ISet, IEnumerable<String>)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: IsMinusCompatibleWith
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 160
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets whether the Set is minus compatible with a given set based on the given variables.\n"
+  example: []
+  syntax:
+    content: public abstract bool IsMinusCompatibleWith(ISet s, IEnumerable<string> vars)
+    parameters:
+    - id: s
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Set.
+    - id: vars
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Variables.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public MustOverride Function IsMinusCompatibleWith(s As ISet, vars As IEnumerable(Of String)) As Boolean
+  overload: VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  nameWithType.vb: BaseSet.IsMinusCompatibleWith(ISet, IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: IsMinusCompatibleWith(ISet, IEnumerable(Of String))
+- uid: VDS.RDF.Query.Algebra.BaseSet.ID
+  commentId: P:VDS.RDF.Query.Algebra.BaseSet.ID
+  id: ID
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: BaseSet.ID
+  fullName: VDS.RDF.Query.Algebra.BaseSet.ID
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ID
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 165
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets/Sets the ID of the Set.\n"
+  example: []
+  syntax:
+    content: public int ID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ID As Integer
+  overload: VDS.RDF.Query.Algebra.BaseSet.ID*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.ID
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.BaseSet.Remove(System.String)
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.Remove(System.String)
+  id: Remove(System.String)
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Remove(String)
+  nameWithType: BaseSet.Remove(String)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Remove(System.String)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Remove
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 181
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nRemoves a Value for a Variable from the Set.\n"
+  example: []
+  syntax:
+    content: public abstract void Remove(string variable)
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable.
+    content.vb: Public MustOverride Sub Remove(variable As String)
+  overload: VDS.RDF.Query.Algebra.BaseSet.Remove*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.Remove(System.String)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Query.Algebra.BaseSet.Item(System.String)
+  commentId: P:VDS.RDF.Query.Algebra.BaseSet.Item(System.String)
+  id: Item(System.String)
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: BaseSet.Item[String]
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Item[System.String]
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: this[]
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 188
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nRetrieves the Value in this set for the given Variable.\n"
+  example: []
+  syntax:
+    content: public abstract INode this[string variable] { get; }
+    parameters:
+    - id: variable
+      type: System.String
+      description: Variable.
+    return:
+      type: VDS.RDF.INode
+      description: Either a Node or a null.
+    content.vb: Public MustOverride ReadOnly Property Item(variable As String) As INode
+  overload: VDS.RDF.Query.Algebra.BaseSet.Item*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.Item(System.String)
+  nameWithType.vb: BaseSet.Item(String)
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+  fullName.vb: VDS.RDF.Query.Algebra.BaseSet.Item(System.String)
+  name.vb: Item(String)
+- uid: VDS.RDF.Query.Algebra.BaseSet.Values
+  commentId: P:VDS.RDF.Query.Algebra.BaseSet.Values
+  id: Values
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Values
+  nameWithType: BaseSet.Values
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Values
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Values
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 196
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Values in the Set.\n"
+  example: []
+  syntax:
+    content: public abstract IEnumerable<INode> Values { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+    content.vb: Public MustOverride ReadOnly Property Values As IEnumerable(Of INode)
+  overload: VDS.RDF.Query.Algebra.BaseSet.Values*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.Values
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.BaseSet.Variables
+  commentId: P:VDS.RDF.Query.Algebra.BaseSet.Variables
+  id: Variables
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Variables
+  nameWithType: BaseSet.Variables
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Variables
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Variables
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 204
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Variables in the Set.\n"
+  example: []
+  syntax:
+    content: public abstract IEnumerable<string> Variables { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public MustOverride ReadOnly Property Variables As IEnumerable(Of String)
+  overload: VDS.RDF.Query.Algebra.BaseSet.Variables*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.Variables
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: VDS.RDF.Query.Algebra.BaseSet.Join(VDS.RDF.Query.Algebra.ISet)
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.Join(VDS.RDF.Query.Algebra.ISet)
+  id: Join(VDS.RDF.Query.Algebra.ISet)
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Join(ISet)
+  nameWithType: BaseSet.Join(ISet)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Join(VDS.RDF.Query.Algebra.ISet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Join
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 214
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nJoins the set to another set.\n"
+  example: []
+  syntax:
+    content: public abstract ISet Join(ISet other)
+    parameters:
+    - id: other
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Other Set.
+    return:
+      type: VDS.RDF.Query.Algebra.ISet
+      description: ''
+    content.vb: Public MustOverride Function Join(other As ISet) As ISet
+  overload: VDS.RDF.Query.Algebra.BaseSet.Join*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.Join(VDS.RDF.Query.Algebra.ISet)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Query.Algebra.BaseSet.Copy
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.Copy
+  id: Copy
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Copy()
+  nameWithType: BaseSet.Copy()
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Copy()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Copy
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 220
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nCopies the Set.\n"
+  example: []
+  syntax:
+    content: public abstract ISet Copy()
+    return:
+      type: VDS.RDF.Query.Algebra.ISet
+      description: ''
+    content.vb: Public MustOverride Function Copy As ISet
+  overload: VDS.RDF.Query.Algebra.BaseSet.Copy*
+  implements:
+  - VDS.RDF.Query.Algebra.ISet.Copy
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: VDS.RDF.Query.Algebra.BaseSet.Equals(VDS.RDF.Query.Algebra.ISet)
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.Equals(VDS.RDF.Query.Algebra.ISet)
+  id: Equals(VDS.RDF.Query.Algebra.ISet)
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Equals(ISet)
+  nameWithType: BaseSet.Equals(ISet)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Equals(VDS.RDF.Query.Algebra.ISet)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Equals
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 227
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets whether the Set is equal to another set.\n"
+  example: []
+  syntax:
+    content: public bool Equals(ISet other)
+    parameters:
+    - id: other
+      type: VDS.RDF.Query.Algebra.ISet
+      description: Set to compare with.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function Equals(other As ISet) As Boolean
+  overload: VDS.RDF.Query.Algebra.BaseSet.Equals*
+  implements:
+  - System.IEquatable{VDS.RDF.Query.Algebra.ISet}.Equals(VDS.RDF.Query.Algebra.ISet)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Algebra.BaseSet.Equals(System.Object)
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: BaseSet.Equals(Object)
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: Equals
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 239
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets whether the Set is equal to another object.\n"
+  example: []
+  syntax:
+    content: public override sealed bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: Object to compare with.
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public NotOverridable Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: VDS.RDF.Query.Algebra.BaseSet.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  - sealed
+  modifiers.vb:
+  - Public
+  - Overrides
+  - NotOverridable
+- uid: VDS.RDF.Query.Algebra.BaseSet.GetHashCode
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.GetHashCode
+  id: GetHashCode
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: BaseSet.GetHashCode()
+  fullName: VDS.RDF.Query.Algebra.BaseSet.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: GetHashCode
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 254
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the Hash Code of the Set.\n"
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.Object.GetHashCode
+  overload: VDS.RDF.Query.Algebra.BaseSet.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Algebra.BaseSet.ToString
+  commentId: M:VDS.RDF.Query.Algebra.BaseSet.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Algebra.BaseSet
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: BaseSet.ToString()
+  fullName: VDS.RDF.Query.Algebra.BaseSet.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Algebra/ISet.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Algebra/ISet.cs
+    startLine: 263
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Algebra
+  summary: "\nGets the String representation of the Set.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: VDS.RDF.Query.Algebra.BaseSet.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Algebra.ISet
+  commentId: T:VDS.RDF.Query.Algebra.ISet
+  parent: VDS.RDF.Query.Algebra
+  name: ISet
+  nameWithType: ISet
+  fullName: VDS.RDF.Query.Algebra.ISet
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IEquatable{VDS.RDF.Query.Algebra.ISet}
+  commentId: T:System.IEquatable{VDS.RDF.Query.Algebra.ISet}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<ISet>
+  nameWithType: IEquatable<ISet>
+  fullName: System.IEquatable<VDS.RDF.Query.Algebra.ISet>
+  nameWithType.vb: IEquatable(Of ISet)
+  fullName.vb: System.IEquatable(Of VDS.RDF.Query.Algebra.ISet)
+  name.vb: IEquatable(Of ISet)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<BaseSet>()
+  nameWithType: Extensions.AsEnumerable<BaseSet>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.BaseSet>()
+  nameWithType.vb: Extensions.AsEnumerable(Of BaseSet)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.BaseSet)()
+  name.vb: AsEnumerable(Of BaseSet)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<BaseSet>
+    nameWithType: Extensions.AsEnumerable<BaseSet>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Algebra.BaseSet>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of BaseSet)
+    nameWithType: Extensions.AsEnumerable(Of BaseSet)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Algebra.BaseSet)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Algebra.BaseSet.Add*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Add
+  name: Add
+  nameWithType: BaseSet.Add
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Add
+- uid: VDS.RDF.Query.Algebra.ISet.Add(System.String,VDS.RDF.INode)
+  commentId: M:VDS.RDF.Query.Algebra.ISet.Add(System.String,VDS.RDF.INode)
+  parent: VDS.RDF.Query.Algebra.ISet
+  isExternal: true
+  name: Add(String, INode)
+  nameWithType: ISet.Add(String, INode)
+  fullName: VDS.RDF.Query.Algebra.ISet.Add(System.String, VDS.RDF.INode)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.Add(System.String,VDS.RDF.INode)
+    name: Add
+    nameWithType: ISet.Add
+    fullName: VDS.RDF.Query.Algebra.ISet.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.Add(System.String,VDS.RDF.INode)
+    name: Add
+    nameWithType: ISet.Add
+    fullName: VDS.RDF.Query.Algebra.ISet.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: VDS.RDF.INode
+  commentId: T:VDS.RDF.INode
+  parent: VDS.RDF
+  name: INode
+  nameWithType: INode
+  fullName: VDS.RDF.INode
+- uid: VDS.RDF.Query.Algebra.BaseSet.ContainsVariable*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.ContainsVariable
+  name: ContainsVariable
+  nameWithType: BaseSet.ContainsVariable
+  fullName: VDS.RDF.Query.Algebra.BaseSet.ContainsVariable
+- uid: VDS.RDF.Query.Algebra.ISet.ContainsVariable(System.String)
+  commentId: M:VDS.RDF.Query.Algebra.ISet.ContainsVariable(System.String)
+  parent: VDS.RDF.Query.Algebra.ISet
+  isExternal: true
+  name: ContainsVariable(String)
+  nameWithType: ISet.ContainsVariable(String)
+  fullName: VDS.RDF.Query.Algebra.ISet.ContainsVariable(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.ContainsVariable(System.String)
+    name: ContainsVariable
+    nameWithType: ISet.ContainsVariable
+    fullName: VDS.RDF.Query.Algebra.ISet.ContainsVariable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.ContainsVariable(System.String)
+    name: ContainsVariable
+    nameWithType: ISet.ContainsVariable
+    fullName: VDS.RDF.Query.Algebra.ISet.ContainsVariable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith
+  name: IsCompatibleWith
+  nameWithType: BaseSet.IsCompatibleWith
+  fullName: VDS.RDF.Query.Algebra.BaseSet.IsCompatibleWith
+- uid: VDS.RDF.Query.Algebra.ISet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Algebra.ISet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  parent: VDS.RDF.Query.Algebra.ISet
+  isExternal: true
+  name: IsCompatibleWith(ISet, IEnumerable<String>)
+  nameWithType: ISet.IsCompatibleWith(ISet, IEnumerable<String>)
+  fullName: VDS.RDF.Query.Algebra.ISet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable<System.String>)
+  nameWithType.vb: ISet.IsCompatibleWith(ISet, IEnumerable(Of String))
+  fullName.vb: VDS.RDF.Query.Algebra.ISet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: IsCompatibleWith(ISet, IEnumerable(Of String))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+    name: IsCompatibleWith
+    nameWithType: ISet.IsCompatibleWith
+    fullName: VDS.RDF.Query.Algebra.ISet.IsCompatibleWith
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.IsCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+    name: IsCompatibleWith
+    nameWithType: ISet.IsCompatibleWith
+    fullName: VDS.RDF.Query.Algebra.ISet.IsCompatibleWith
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith
+  name: IsMinusCompatibleWith
+  nameWithType: BaseSet.IsMinusCompatibleWith
+  fullName: VDS.RDF.Query.Algebra.BaseSet.IsMinusCompatibleWith
+- uid: VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+  parent: VDS.RDF.Query.Algebra.ISet
+  isExternal: true
+  name: IsMinusCompatibleWith(ISet, IEnumerable<String>)
+  nameWithType: ISet.IsMinusCompatibleWith(ISet, IEnumerable<String>)
+  fullName: VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable<System.String>)
+  nameWithType.vb: ISet.IsMinusCompatibleWith(ISet, IEnumerable(Of String))
+  fullName.vb: VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: IsMinusCompatibleWith(ISet, IEnumerable(Of String))
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+    name: IsMinusCompatibleWith
+    nameWithType: ISet.IsMinusCompatibleWith
+    fullName: VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith(VDS.RDF.Query.Algebra.ISet,System.Collections.Generic.IEnumerable{System.String})
+    name: IsMinusCompatibleWith
+    nameWithType: ISet.IsMinusCompatibleWith
+    fullName: VDS.RDF.Query.Algebra.ISet.IsMinusCompatibleWith
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.ID*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.ID
+  name: ID
+  nameWithType: BaseSet.ID
+  fullName: VDS.RDF.Query.Algebra.BaseSet.ID
+- uid: VDS.RDF.Query.Algebra.ISet.ID
+  commentId: P:VDS.RDF.Query.Algebra.ISet.ID
+  parent: VDS.RDF.Query.Algebra.ISet
+  name: ID
+  nameWithType: ISet.ID
+  fullName: VDS.RDF.Query.Algebra.ISet.ID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.Algebra.BaseSet.Remove*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Remove
+  name: Remove
+  nameWithType: BaseSet.Remove
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Remove
+- uid: VDS.RDF.Query.Algebra.ISet.Remove(System.String)
+  commentId: M:VDS.RDF.Query.Algebra.ISet.Remove(System.String)
+  parent: VDS.RDF.Query.Algebra.ISet
+  isExternal: true
+  name: Remove(String)
+  nameWithType: ISet.Remove(String)
+  fullName: VDS.RDF.Query.Algebra.ISet.Remove(System.String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.Remove(System.String)
+    name: Remove
+    nameWithType: ISet.Remove
+    fullName: VDS.RDF.Query.Algebra.ISet.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.Remove(System.String)
+    name: Remove
+    nameWithType: ISet.Remove
+    fullName: VDS.RDF.Query.Algebra.ISet.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.Item*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Item
+  name: Item
+  nameWithType: BaseSet.Item
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Item
+- uid: VDS.RDF.Query.Algebra.ISet.Item(System.String)
+  commentId: P:VDS.RDF.Query.Algebra.ISet.Item(System.String)
+  parent: VDS.RDF.Query.Algebra.ISet
+  isExternal: true
+  name: Item[String]
+  nameWithType: ISet.Item[String]
+  fullName: VDS.RDF.Query.Algebra.ISet.Item[System.String]
+  nameWithType.vb: ISet.Item(String)
+  fullName.vb: VDS.RDF.Query.Algebra.ISet.Item(System.String)
+  name.vb: Item(String)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.Item(System.String)
+    name: Item
+    nameWithType: ISet.Item
+    fullName: VDS.RDF.Query.Algebra.ISet.Item
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.Item(System.String)
+    name: Item
+    nameWithType: ISet.Item
+    fullName: VDS.RDF.Query.Algebra.ISet.Item
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.Values*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Values
+  name: Values
+  nameWithType: BaseSet.Values
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Values
+- uid: VDS.RDF.Query.Algebra.ISet.Values
+  commentId: P:VDS.RDF.Query.Algebra.ISet.Values
+  parent: VDS.RDF.Query.Algebra.ISet
+  name: Values
+  nameWithType: ISet.Values
+  fullName: VDS.RDF.Query.Algebra.ISet.Values
+- uid: System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  commentId: T:System.Collections.Generic.IEnumerable{VDS.RDF.INode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<INode>
+  nameWithType: IEnumerable<INode>
+  fullName: System.Collections.Generic.IEnumerable<VDS.RDF.INode>
+  nameWithType.vb: IEnumerable(Of INode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of VDS.RDF.INode)
+  name.vb: IEnumerable(Of INode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: VDS.RDF.INode
+    name: INode
+    nameWithType: INode
+    fullName: VDS.RDF.INode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.Variables*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Variables
+  name: Variables
+  nameWithType: BaseSet.Variables
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Variables
+- uid: VDS.RDF.Query.Algebra.ISet.Variables
+  commentId: P:VDS.RDF.Query.Algebra.ISet.Variables
+  parent: VDS.RDF.Query.Algebra.ISet
+  name: Variables
+  nameWithType: ISet.Variables
+  fullName: VDS.RDF.Query.Algebra.ISet.Variables
+- uid: VDS.RDF.Query.Algebra.BaseSet.Join*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Join
+  name: Join
+  nameWithType: BaseSet.Join
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Join
+- uid: VDS.RDF.Query.Algebra.ISet.Join(VDS.RDF.Query.Algebra.ISet)
+  commentId: M:VDS.RDF.Query.Algebra.ISet.Join(VDS.RDF.Query.Algebra.ISet)
+  parent: VDS.RDF.Query.Algebra.ISet
+  name: Join(ISet)
+  nameWithType: ISet.Join(ISet)
+  fullName: VDS.RDF.Query.Algebra.ISet.Join(VDS.RDF.Query.Algebra.ISet)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.Join(VDS.RDF.Query.Algebra.ISet)
+    name: Join
+    nameWithType: ISet.Join
+    fullName: VDS.RDF.Query.Algebra.ISet.Join
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.Join(VDS.RDF.Query.Algebra.ISet)
+    name: Join
+    nameWithType: ISet.Join
+    fullName: VDS.RDF.Query.Algebra.ISet.Join
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.Copy*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Copy
+  name: Copy
+  nameWithType: BaseSet.Copy
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Copy
+- uid: VDS.RDF.Query.Algebra.ISet.Copy
+  commentId: M:VDS.RDF.Query.Algebra.ISet.Copy
+  parent: VDS.RDF.Query.Algebra.ISet
+  name: Copy()
+  nameWithType: ISet.Copy()
+  fullName: VDS.RDF.Query.Algebra.ISet.Copy()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Algebra.ISet.Copy
+    name: Copy
+    nameWithType: ISet.Copy
+    fullName: VDS.RDF.Query.Algebra.ISet.Copy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Algebra.ISet.Copy
+    name: Copy
+    nameWithType: ISet.Copy
+    fullName: VDS.RDF.Query.Algebra.ISet.Copy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.Equals*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.Equals
+  name: Equals
+  nameWithType: BaseSet.Equals
+  fullName: VDS.RDF.Query.Algebra.BaseSet.Equals
+- uid: System.IEquatable{VDS.RDF.Query.Algebra.ISet}.Equals(VDS.RDF.Query.Algebra.ISet)
+  commentId: M:System.IEquatable{VDS.RDF.Query.Algebra.ISet}.Equals(VDS.RDF.Query.Algebra.ISet)
+  parent: System.IEquatable{VDS.RDF.Query.Algebra.ISet}
+  definition: System.IEquatable`1.Equals(`0)
+  name: Equals(ISet)
+  nameWithType: IEquatable<ISet>.Equals(ISet)
+  fullName: System.IEquatable<VDS.RDF.Query.Algebra.ISet>.Equals(VDS.RDF.Query.Algebra.ISet)
+  nameWithType.vb: IEquatable(Of ISet).Equals(ISet)
+  fullName.vb: System.IEquatable(Of VDS.RDF.Query.Algebra.ISet).Equals(VDS.RDF.Query.Algebra.ISet)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<ISet>.Equals
+    fullName: System.IEquatable<VDS.RDF.Query.Algebra.ISet>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of ISet).Equals
+    fullName: System.IEquatable(Of VDS.RDF.Query.Algebra.ISet).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Algebra.ISet
+    name: ISet
+    nameWithType: ISet
+    fullName: VDS.RDF.Query.Algebra.ISet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable<T>.Equals
+    fullName: System.IEquatable<T>.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    nameWithType: IEquatable(Of T).Equals
+    fullName: System.IEquatable(Of T).Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.GetHashCode*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.GetHashCode
+  name: GetHashCode
+  nameWithType: BaseSet.GetHashCode
+  fullName: VDS.RDF.Query.Algebra.BaseSet.GetHashCode
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Algebra.BaseSet.ToString*
+  commentId: Overload:VDS.RDF.Query.Algebra.BaseSet.ToString
+  name: ToString
+  nameWithType: BaseSet.ToString
+  fullName: VDS.RDF.Query.Algebra.BaseSet.ToString

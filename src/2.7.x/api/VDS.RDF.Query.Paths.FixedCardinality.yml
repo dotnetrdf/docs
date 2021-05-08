@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: VDS.RDF.Query.Paths.FixedCardinality
+  commentId: T:VDS.RDF.Query.Paths.FixedCardinality
+  id: FixedCardinality
+  parent: VDS.RDF.Query.Paths
+  children:
+  - VDS.RDF.Query.Paths.FixedCardinality.#ctor(VDS.RDF.Query.Paths.ISparqlPath,System.Int32)
+  - VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality
+  - VDS.RDF.Query.Paths.FixedCardinality.MinCardinality
+  - VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  - VDS.RDF.Query.Paths.FixedCardinality.ToString
+  langs:
+  - csharp
+  - vb
+  name: FixedCardinality
+  nameWithType: FixedCardinality
+  fullName: VDS.RDF.Query.Paths.FixedCardinality
+  type: Class
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: FixedCardinality
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+    startLine: 64
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nRepresents a Fixed Cardinality restriction on a Path.\n"
+  example: []
+  syntax:
+    content: 'public class FixedCardinality : Cardinality, ISparqlPath'
+    content.vb: >-
+      Public Class FixedCardinality
+          Inherits Cardinality
+          Implements ISparqlPath
+  inheritance:
+  - System.Object
+  - VDS.RDF.Query.Paths.BaseUnaryPath
+  - VDS.RDF.Query.Paths.Cardinality
+  implements:
+  - VDS.RDF.Query.Paths.ISparqlPath
+  inheritedMembers:
+  - VDS.RDF.Query.Paths.BaseUnaryPath._path
+  - VDS.RDF.Query.Paths.BaseUnaryPath.Path
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - VDS.RDF.Query.Paths.FixedCardinality.VDS.RDF.Extensions.AsEnumerable``1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: VDS.RDF.Query.Paths.FixedCardinality.#ctor(VDS.RDF.Query.Paths.ISparqlPath,System.Int32)
+  commentId: M:VDS.RDF.Query.Paths.FixedCardinality.#ctor(VDS.RDF.Query.Paths.ISparqlPath,System.Int32)
+  id: '#ctor(VDS.RDF.Query.Paths.ISparqlPath,System.Int32)'
+  parent: VDS.RDF.Query.Paths.FixedCardinality
+  langs:
+  - csharp
+  - vb
+  name: FixedCardinality(ISparqlPath, Int32)
+  nameWithType: FixedCardinality.FixedCardinality(ISparqlPath, Int32)
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.FixedCardinality(VDS.RDF.Query.Paths.ISparqlPath, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: .ctor
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+    startLine: 73
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nCreates a new Fixed Cardinality restriction.\n"
+  example: []
+  syntax:
+    content: public FixedCardinality(ISparqlPath path, int n)
+    parameters:
+    - id: path
+      type: VDS.RDF.Query.Paths.ISparqlPath
+      description: Path.
+    - id: n
+      type: System.Int32
+      description: N.
+    content.vb: Public Sub New(path As ISparqlPath, n As Integer)
+  overload: VDS.RDF.Query.Paths.FixedCardinality.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality
+  commentId: P:VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality
+  id: MaxCardinality
+  parent: VDS.RDF.Query.Paths.FixedCardinality
+  langs:
+  - csharp
+  - vb
+  name: MaxCardinality
+  nameWithType: FixedCardinality.MaxCardinality
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: MaxCardinality
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+    startLine: 82
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets the Maximum Cardinality of the Path.\n"
+  example: []
+  syntax:
+    content: public override int MaxCardinality { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property MaxCardinality As Integer
+  overridden: VDS.RDF.Query.Paths.Cardinality.MaxCardinality
+  overload: VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Query.Paths.FixedCardinality.MinCardinality
+  commentId: P:VDS.RDF.Query.Paths.FixedCardinality.MinCardinality
+  id: MinCardinality
+  parent: VDS.RDF.Query.Paths.FixedCardinality
+  langs:
+  - csharp
+  - vb
+  name: MinCardinality
+  nameWithType: FixedCardinality.MinCardinality
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.MinCardinality
+  type: Property
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: MinCardinality
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+    startLine: 93
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets the Minimum Cardinality of the Path.\n"
+  example: []
+  syntax:
+    content: public override int MinCardinality { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property MinCardinality As Integer
+  overridden: VDS.RDF.Query.Paths.Cardinality.MinCardinality
+  overload: VDS.RDF.Query.Paths.FixedCardinality.MinCardinality*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  commentId: M:VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  id: ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  parent: VDS.RDF.Query.Paths.FixedCardinality
+  langs:
+  - csharp
+  - vb
+  name: ToAlgebra(PathTransformContext)
+  nameWithType: FixedCardinality.ToAlgebra(PathTransformContext)
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToAlgebra
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+    startLine: 106
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nConverts a Path into its Algebra Form.\n"
+  example: []
+  syntax:
+    content: public override ISparqlAlgebra ToAlgebra(PathTransformContext context)
+    parameters:
+    - id: context
+      type: VDS.RDF.Query.Paths.PathTransformContext
+      description: Path Transformation Context.
+    return:
+      type: VDS.RDF.Query.Algebra.ISparqlAlgebra
+      description: ''
+    content.vb: Public Overrides Function ToAlgebra(context As PathTransformContext) As ISparqlAlgebra
+  overridden: VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  overload: VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: VDS.RDF.Query.Paths.FixedCardinality.ToString
+  commentId: M:VDS.RDF.Query.Paths.FixedCardinality.ToString
+  id: ToString
+  parent: VDS.RDF.Query.Paths.FixedCardinality
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: FixedCardinality.ToString()
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.ToString()
+  type: Method
+  source:
+    remote:
+      path: Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+      branch: master
+      repo: https://github.com/dotnetrdf/dotnetrdf.git
+    id: ToString
+    path: ../../dotNetRDF/Libraries/dotNetRDF/Query/Paths/CardinalityPathClasses.cs
+    startLine: 139
+  assemblies:
+  - dotNetRDF
+  namespace: VDS.RDF.Query.Paths
+  summary: "\nGets the String representation of the Path.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString As String
+  overridden: VDS.RDF.Query.Paths.BaseUnaryPath.ToString
+  overload: VDS.RDF.Query.Paths.FixedCardinality.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: VDS.RDF.Query.Paths
+  commentId: N:VDS.RDF.Query.Paths
+  name: VDS.RDF.Query.Paths
+  nameWithType: VDS.RDF.Query.Paths
+  fullName: VDS.RDF.Query.Paths
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: VDS.RDF.Query.Paths.BaseUnaryPath
+  commentId: T:VDS.RDF.Query.Paths.BaseUnaryPath
+  parent: VDS.RDF.Query.Paths
+  name: BaseUnaryPath
+  nameWithType: BaseUnaryPath
+  fullName: VDS.RDF.Query.Paths.BaseUnaryPath
+- uid: VDS.RDF.Query.Paths.Cardinality
+  commentId: T:VDS.RDF.Query.Paths.Cardinality
+  parent: VDS.RDF.Query.Paths
+  name: Cardinality
+  nameWithType: Cardinality
+  fullName: VDS.RDF.Query.Paths.Cardinality
+- uid: VDS.RDF.Query.Paths.ISparqlPath
+  commentId: T:VDS.RDF.Query.Paths.ISparqlPath
+  parent: VDS.RDF.Query.Paths
+  name: ISparqlPath
+  nameWithType: ISparqlPath
+  fullName: VDS.RDF.Query.Paths.ISparqlPath
+- uid: VDS.RDF.Query.Paths.BaseUnaryPath._path
+  commentId: F:VDS.RDF.Query.Paths.BaseUnaryPath._path
+  parent: VDS.RDF.Query.Paths.BaseUnaryPath
+  name: _path
+  nameWithType: BaseUnaryPath._path
+  fullName: VDS.RDF.Query.Paths.BaseUnaryPath._path
+- uid: VDS.RDF.Query.Paths.BaseUnaryPath.Path
+  commentId: P:VDS.RDF.Query.Paths.BaseUnaryPath.Path
+  parent: VDS.RDF.Query.Paths.BaseUnaryPath
+  name: Path
+  nameWithType: BaseUnaryPath.Path
+  fullName: VDS.RDF.Query.Paths.BaseUnaryPath.Path
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Paths.FixedCardinality.VDS.RDF.Extensions.AsEnumerable``1
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  parent: VDS.RDF.Extensions
+  definition: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<FixedCardinality>()
+  nameWithType: Extensions.AsEnumerable<FixedCardinality>()
+  fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Paths.FixedCardinality>()
+  nameWithType.vb: Extensions.AsEnumerable(Of FixedCardinality)()
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Paths.FixedCardinality)()
+  name.vb: AsEnumerable(Of FixedCardinality)()
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable<FixedCardinality>
+    nameWithType: Extensions.AsEnumerable<FixedCardinality>
+    fullName: VDS.RDF.Extensions.AsEnumerable<VDS.RDF.Query.Paths.FixedCardinality>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1
+    name: AsEnumerable(Of FixedCardinality)
+    nameWithType: Extensions.AsEnumerable(Of FixedCardinality)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of VDS.RDF.Query.Paths.FixedCardinality)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+  commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
+  name: AsEnumerable<T>(T)
+  nameWithType: Extensions.AsEnumerable<T>(T)
+  fullName: VDS.RDF.Extensions.AsEnumerable<T>(T)
+  nameWithType.vb: Extensions.AsEnumerable(Of T)(T)
+  fullName.vb: VDS.RDF.Extensions.AsEnumerable(Of T)(T)
+  name.vb: AsEnumerable(Of T)(T)
+  spec.csharp:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable<T>
+    nameWithType: Extensions.AsEnumerable<T>
+    fullName: VDS.RDF.Extensions.AsEnumerable<T>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
+    name: AsEnumerable(Of T)
+    nameWithType: Extensions.AsEnumerable(Of T)
+    fullName: VDS.RDF.Extensions.AsEnumerable(Of T)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Extensions
+  commentId: T:VDS.RDF.Extensions
+  parent: VDS.RDF
+  name: Extensions
+  nameWithType: Extensions
+  fullName: VDS.RDF.Extensions
+- uid: VDS.RDF
+  commentId: N:VDS.RDF
+  name: VDS.RDF
+  nameWithType: VDS.RDF
+  fullName: VDS.RDF
+- uid: VDS.RDF.Query.Paths.FixedCardinality.#ctor*
+  commentId: Overload:VDS.RDF.Query.Paths.FixedCardinality.#ctor
+  name: FixedCardinality
+  nameWithType: FixedCardinality.FixedCardinality
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.FixedCardinality
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: VDS.RDF.Query.Paths.Cardinality.MaxCardinality
+  commentId: P:VDS.RDF.Query.Paths.Cardinality.MaxCardinality
+  parent: VDS.RDF.Query.Paths.Cardinality
+  name: MaxCardinality
+  nameWithType: Cardinality.MaxCardinality
+  fullName: VDS.RDF.Query.Paths.Cardinality.MaxCardinality
+- uid: VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality*
+  commentId: Overload:VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality
+  name: MaxCardinality
+  nameWithType: FixedCardinality.MaxCardinality
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.MaxCardinality
+- uid: VDS.RDF.Query.Paths.Cardinality.MinCardinality
+  commentId: P:VDS.RDF.Query.Paths.Cardinality.MinCardinality
+  parent: VDS.RDF.Query.Paths.Cardinality
+  name: MinCardinality
+  nameWithType: Cardinality.MinCardinality
+  fullName: VDS.RDF.Query.Paths.Cardinality.MinCardinality
+- uid: VDS.RDF.Query.Paths.FixedCardinality.MinCardinality*
+  commentId: Overload:VDS.RDF.Query.Paths.FixedCardinality.MinCardinality
+  name: MinCardinality
+  nameWithType: FixedCardinality.MinCardinality
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.MinCardinality
+- uid: VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  commentId: M:VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  parent: VDS.RDF.Query.Paths.BaseUnaryPath
+  name: ToAlgebra(PathTransformContext)
+  nameWithType: BaseUnaryPath.ToAlgebra(PathTransformContext)
+  fullName: VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+  spec.csharp:
+  - uid: VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+    name: ToAlgebra
+    nameWithType: BaseUnaryPath.ToAlgebra
+    fullName: VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Paths.PathTransformContext
+    name: PathTransformContext
+    nameWithType: PathTransformContext
+    fullName: VDS.RDF.Query.Paths.PathTransformContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra(VDS.RDF.Query.Paths.PathTransformContext)
+    name: ToAlgebra
+    nameWithType: BaseUnaryPath.ToAlgebra
+    fullName: VDS.RDF.Query.Paths.BaseUnaryPath.ToAlgebra
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.Query.Paths.PathTransformContext
+    name: PathTransformContext
+    nameWithType: PathTransformContext
+    fullName: VDS.RDF.Query.Paths.PathTransformContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra*
+  commentId: Overload:VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra
+  name: ToAlgebra
+  nameWithType: FixedCardinality.ToAlgebra
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.ToAlgebra
+- uid: VDS.RDF.Query.Paths.PathTransformContext
+  commentId: T:VDS.RDF.Query.Paths.PathTransformContext
+  parent: VDS.RDF.Query.Paths
+  name: PathTransformContext
+  nameWithType: PathTransformContext
+  fullName: VDS.RDF.Query.Paths.PathTransformContext
+- uid: VDS.RDF.Query.Algebra.ISparqlAlgebra
+  commentId: T:VDS.RDF.Query.Algebra.ISparqlAlgebra
+  parent: VDS.RDF.Query.Algebra
+  name: ISparqlAlgebra
+  nameWithType: ISparqlAlgebra
+  fullName: VDS.RDF.Query.Algebra.ISparqlAlgebra
+- uid: VDS.RDF.Query.Algebra
+  commentId: N:VDS.RDF.Query.Algebra
+  name: VDS.RDF.Query.Algebra
+  nameWithType: VDS.RDF.Query.Algebra
+  fullName: VDS.RDF.Query.Algebra
+- uid: VDS.RDF.Query.Paths.BaseUnaryPath.ToString
+  commentId: M:VDS.RDF.Query.Paths.BaseUnaryPath.ToString
+  parent: VDS.RDF.Query.Paths.BaseUnaryPath
+  name: ToString()
+  nameWithType: BaseUnaryPath.ToString()
+  fullName: VDS.RDF.Query.Paths.BaseUnaryPath.ToString()
+  spec.csharp:
+  - uid: VDS.RDF.Query.Paths.BaseUnaryPath.ToString
+    name: ToString
+    nameWithType: BaseUnaryPath.ToString
+    fullName: VDS.RDF.Query.Paths.BaseUnaryPath.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Query.Paths.BaseUnaryPath.ToString
+    name: ToString
+    nameWithType: BaseUnaryPath.ToString
+    fullName: VDS.RDF.Query.Paths.BaseUnaryPath.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Query.Paths.FixedCardinality.ToString*
+  commentId: Overload:VDS.RDF.Query.Paths.FixedCardinality.ToString
+  name: ToString
+  nameWithType: FixedCardinality.ToString
+  fullName: VDS.RDF.Query.Paths.FixedCardinality.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
