@@ -1,3 +1,11 @@
+# This script makes a copy of the documentation in the latest directory as a new persistent version
+# The version number provided in the script parameter should be the version of dotNetRDF that the docs relate to
+# Ideally we should have no more than one docs release for each minor version (e.g docs version 2.7 would be the
+# documentation for all 2.7.x releases of the library). As the docs are copied they can be tweaked post-release
+# if needed.
+#
+# The copy process creates a new sub-directory under src for the version (with the version number as the directory name)
+# and a new docfx build file specifically for that version (named {$version}_docfx.json)
 param ($version)
 
 $build_file='.\src\' + $version + '_docfx.json'
