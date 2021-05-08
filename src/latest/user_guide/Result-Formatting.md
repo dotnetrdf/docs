@@ -1,6 +1,6 @@
 # Result Formatting 
 
-When you make a SPARQL query as detailed on the [Querying with SPARQL](../tutorial/Querying-With-SPARQL.md) you typically get back a [SparqlResultSet](xref:VDS.RDF.Query.SparqlResultSet) object.  While you can trivially dump results to strings using the `ToString()` method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
+When you make a SPARQL query as detailed on the [Querying with SPARQL](Querying-With-SPARQL.md) you typically get back a [SparqlResultSet](xref:VDS.RDF.Query.SparqlResultSet) object.  While you can trivially dump results to strings using the `ToString()` method this doesn't give you a particularly pretty output, this page details various methods by which you can format results for display.
 
 ## Using Formatters 
 

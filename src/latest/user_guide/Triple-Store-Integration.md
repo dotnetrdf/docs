@@ -1,6 +1,6 @@
 # 3rd Party Triple Store Integration
 
-While the API can represent Triple Stores as an in-memory collection of Graphs as discussed in [Working with Triple Stores](../tutorial/Working-With-Triple-Stores.md) it also has the ability to integrate with a variety of 3rd party Triple Stores via our [`VDS.RDF.Storage.IStorageProvider`](xref:VDS.RDF.Storage.IStorageProvider) and [`VDS.RDF.Storage.IAsyncStorageProvider`](xref:VDS.RDF.Storage.IAsyncStorageProvider) interfaces. Both these interfaces extend the [`VDS.RDF.Storage.IStorageCapabilities`](xref:VDS.RDF.Storage.IStorageCapabilities) interface which provides information about what a specific implementation supports.
+While the API can represent Triple Stores as an in-memory collection of Graphs as discussed in [Working with Triple Stores](Working-With-Triple-Stores.md) it also has the ability to integrate with a variety of 3rd party Triple Stores via our [`VDS.RDF.Storage.IStorageProvider`](xref:VDS.RDF.Storage.IStorageProvider) and [`VDS.RDF.Storage.IAsyncStorageProvider`](xref:VDS.RDF.Storage.IAsyncStorageProvider) interfaces. Both these interfaces extend the [`VDS.RDF.Storage.IStorageCapabilities`](xref:VDS.RDF.Storage.IStorageCapabilities) interface which provides information about what a specific implementation supports.
 
 Some implementations may implement additional interfaces which provide extra features. See the async operations section for more detail on the asynchronous version of the API.
 

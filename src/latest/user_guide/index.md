@@ -10,16 +10,16 @@ If you are already an experienced dotNetRDF user you may wish to look at the [De
 
 This series of pages aims to introduce you to the core concepts of dotNetRDF and get you up and running with the library, reading in order is suggested for new users:
 
-1. [Getting Started](../tutorial/Getting-Started.md)
-1. [Library Overview](../tutorial/Library-Overview.md)
-1. [Hello World](../tutorial/Hello-World.md)
-1. [Reading RDF](../tutorial/Reading-RDF.md)
-1. [Writing RDF](../tutorial/Writing-RDF.md)
-1. [Working with Graphs](../tutorial/Working-With-Graphs.md)
-1. [Typed Values and Lists](../tutorial/Typed-Values-And-Lists.md)
-1. [Working with Triple Stores](../tutorial/Working-With-Triple-Stores.md)
-1. [Querying with SPARQL](../tutorial/Querying-With-SPARQL.md)
-1. [Updating with SPARQL](../tutorial/Updating-With-SPARQL.md)
+1. [Getting Started](Getting-Started.md)
+1. [Library Overview](Library-Overview.md)
+1. [Hello World](Hello-World.md)
+1. [Reading RDF](Reading-RDF.md)
+1. [Writing RDF](Writing-RDF.md)
+1. [Working with Graphs](Working-With-Graphs.md)
+1. [Typed Values and Lists](Typed-Values-And-Lists.md)
+1. [Working with Triple Stores](Working-With-Triple-Stores.md)
+1. [Querying with SPARQL](Querying-With-SPARQL.md)
+1. [Updating with SPARQL](Updating-With-SPARQL.md)
 
 ## General Topics
 

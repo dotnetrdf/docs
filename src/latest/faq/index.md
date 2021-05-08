@@ -7,15 +7,13 @@ This page details common problems
 
 ### What platforms does dotNetRDF run on?
 
-dotNetRDF runs on .Net 3.5 Framework and higher, builds are provided for various framework profiles on the different versions of the framework. Exact supported features depend on the build used, see [Getting Started](../tutorial/Getting-Started.md) for more details on the builds.
-
-dotNetRDF will also run under Mono 2.8 and higher, generally we recommend using the newest Mono release possible for best results.
+dotNetRDF runs on .Net 4.0 Framework and higher, builds are provided for various framework profiles on the different versions of the framework. Exact supported features depend on the build used, see [Getting Started](../user_guide/Getting-Started.md) for more details on the builds. The core library targets the following frameworks: .NET 4.0, .NET 4.0 Client Profile; and .NET Standard 2.0. Some features of the library may not be available for .NET 4.0 and particularly for the Client Profile.
 
 ## Compilation/Runtime Errors
 
 ### How do I compile dotNetRDF myself?
 
-Firstly check out the source from the [GitHub repository](https://github.com/dotnetrdf/dotnetrdf). Once downloaded you can either open the solution in Visual Studio 2015 or build via the NAnt scripts. Building via the NAnt scripts is more powerful and only relies on the relevant .Net Framework SDKs having been installed on your system and so doesn't require a full Visual Studio install.
+Firstly check out the source from the [GitHub repository](https://github.com/dotnetrdf/dotnetrdf). Once downloaded you can either open the solution in Visual Studio 2019 or build on the command-line using the dotnet build command.
 
 See documentation under `Build/` in the source-code tree for more information.
 

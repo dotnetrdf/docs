@@ -1,6 +1,6 @@
 # Formatting API 
 
-The Formatting API is an collection of APIs found in the [`VDS.RDF.Writing.Formatting`](xref:VDS.RDF.Writing.Formatting) namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [Writing RDF](../tutorial/Writing-RDF.md) page.
+The Formatting API is an collection of APIs found in the [`VDS.RDF.Writing.Formatting`](xref:VDS.RDF.Writing.Formatting) namespace, it is concerned with turning objects like nodes, triples and SPARQL results into strings for display.  The formatting API underpins the writers already seen in the basic tutorial on the [Writing RDF](Writing-RDF.md) page.
 
 The API consists of a number of interfaces:
 

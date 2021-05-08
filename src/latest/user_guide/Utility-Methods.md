@@ -4,7 +4,7 @@ The library provides a number of useful Utility Methods embodied in a single sta
 
 ## CopyNode
 
-The [CopyNode()](xref:VDS.RDF.Tools.CopyNode(VDS.RDF.INode,VDS.RDF.IGraph)) method is designed to be use to copy nodes between graphs. As explained in the [Library Overview](../tutorial/Library-Overview.md) when you create a triple all the nodes of that triple must come from the same graph. When you are working with multiple graphs and combining the information you may need to assert information from one graph into the other, the following example demonstrates this:
+The [CopyNode()](xref:VDS.RDF.Tools.CopyNode(VDS.RDF.INode,VDS.RDF.IGraph)) method is designed to be use to copy nodes between graphs. As explained in the [Library Overview](Library-Overview.md) when you create a triple all the nodes of that triple must come from the same graph. When you are working with multiple graphs and combining the information you may need to assert information from one graph into the other, the following example demonstrates this:
 
 ```csharp
 using System;

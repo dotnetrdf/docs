@@ -65,7 +65,7 @@ Called when processing completes, either because the end of the data was reached
 
 # Sample Usages 
 
-You can see a basic example of using the API on the [Reading RDF](../tutorial/Reading-RDF.md) page
+You can see a basic example of using the API on the [Reading RDF](Reading-RDF.md) page
 
 ## Using the WriteThroughHandler 
 

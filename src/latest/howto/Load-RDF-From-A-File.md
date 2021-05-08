@@ -16,4 +16,4 @@ IGraph g = new Graph();
 g.LoadFromFile("example.ttl", new TurtleParser());
 ```
 
-Learn more by reading the [Reading RDF](../tutorial/Reading-RDF.md) documentation.
+Learn more by reading the [Reading RDF](../user_guide/Reading-RDF.md) documentation.

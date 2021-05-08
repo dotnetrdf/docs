@@ -2,7 +2,7 @@
 
 You can treat any publicly accessible SPARQL Query endpoint as a read-only store using the [SparqlConnector](xref:VDS.RDF.Storage.SparqlConnector).
 
-**Note:** If you were looking for documentation on querying a SPARQL endpoint please see [Querying with SPARQL](../tutorial/Querying-With-SPARQL.md)
+**Note:** If you were looking for documentation on querying a SPARQL endpoint please see [Querying with SPARQL](Querying-With-SPARQL.md)
 
 ## Supported Capabilities 
 

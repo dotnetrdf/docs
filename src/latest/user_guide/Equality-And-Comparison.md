@@ -4,7 +4,7 @@ This page covers how equality and comparison are defined for the various core cl
 
 ## Nodes
 
-As discussed in the [Library Overview](../tutorial/Library-Overview.md) there are various types of node representing the different types of RDF term that may exist and be represented within a RDF graph.
+As discussed in the [Library Overview](Library-Overview.md) there are various types of node representing the different types of RDF term that may exist and be represented within a RDF graph.
 
 The [RDF Concepts and Abstract Syntax (W3C Specification)](http://www.w3.org/TR/rdf-concepts/) defines how and when terms are considered equal and so the definition of `Equals()` for nodes is based upon this.
 

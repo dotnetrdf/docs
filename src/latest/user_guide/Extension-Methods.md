@@ -44,7 +44,7 @@ In most applications this wouldn't matter since the fragment identifier is usual
 
 ## LoadFromFile, LoadFromUri, LoadFromEmbeddedResource and LoadFromString 
 
-These extension methods for [`IGraph`](xref:VDS.RDF.IGraph) instances all provide shortcuts for invoking the various static loader classes that can be used to load RDF from various common sources as detailed in the [Reading RDF](../tutorial/Reading-RDF.md#reading-rdf-from-common-sources) documentation.
+These extension methods for [`IGraph`](xref:VDS.RDF.IGraph) instances all provide shortcuts for invoking the various static loader classes that can be used to load RDF from various common sources as detailed in the [Reading RDF](Reading-RDF.md#reading-rdf-from-common-sources) documentation.
 
 
 ## Retract 
