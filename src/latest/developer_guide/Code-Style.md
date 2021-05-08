@@ -1,5 +1,3 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[Code Style|DeveloperGuide-Code-Style]]
-
 # Code Style
 
 This document covers the Code Style used in dotNetRDF, if you are contributing patches, bug fixes or other code to dotNetRDF we much prefer it if you keep to the following guidelines and we will likely reformat code that does not match these guidelines.

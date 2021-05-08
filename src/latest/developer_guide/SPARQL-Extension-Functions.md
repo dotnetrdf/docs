@@ -1,18 +1,16 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[Extension Functions|DeveloperGuide-SPARQL-Extension-Functions]]
+# Implementing Extension Functions
 
-# Extension Functions
-
-Extension Functions are a standardised extension point provided by the [SPARQL Specification](http://www.w3.org/TR/sparql11-query/#extensionFunctions) which allows you to introduce new functions by naming them with URIs.  dotNetRDF includes full support for this functionality and includes a whole range of extension functions described on the [[Function Libraries|DeveloperGuide-SPARQL-Function-Libraries]] page.  This page covers how to add your own extension functions.
+Extension Functions are a standardised extension point provided by the [SPARQL Specification](http://www.w3.org/TR/sparql11-query/#extensionFunctions) which allows you to introduce new functions by naming them with URIs.  dotNetRDF includes full support for this functionality and includes a whole range of extension functions described on the [Function Libraries](SPARQL-Function-Libraries.md) page.  This page covers how to add your own extension functions.
 
 Adding an extension function requires implementing two interfaces:
-* `VDS.RDF.Query.Expressions.ISparqlExpression`
-* VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory
+* <xref:VDS.RDF.Query.Expressions.ISparqlExpression>
+* <xref:VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory>
 
 Note that by default the library allows unknown extension functions and just treats them as always producing an error, you can change this behaviour to disallow unknown extension functions by setting the `Options.QueryAllowUnknownFunctions` property to `false`
 
 ## Implement ISparqlExpression
 
-The `ISparqlExpression` interface implements the actual function logic, there are a variety of abstract implementations that may be relevant depending on the kind of function you wish to implement.  You may find it easiest to start by copying the code from a similar existing function or extending the same base class as a similar existing function.
+The <xref:VDS.RDF.Query.Expressions.ISparqlExpression> interface implements the actual function logic, there are a variety of abstract implementations that may be relevant depending on the kind of function you wish to implement.  You may find it easiest to start by copying the code from a similar existing function or extending the same base class as a similar existing function.
 
 Let's take a look at an example implementation from dotNetRDF itself:
 
@@ -124,7 +122,7 @@ The remaining methods and properties are primarily around having the expression 
 
 ## Implements ISparqlCustomExpressionFactory
 
-The `ISparqlCustomExpressionFactory` interface provides a factory for your custom expressions, each factory can potentially produce many different extension functions depending on how you've implemented it.
+The <xref:VDS.RDF.Query.Expressions.ISparqlCustomExpressionFactory> interface provides a factory for your custom expressions, each factory can potentially produce many different extension functions depending on how you've implemented it.
 
 Let's take a look at an example from the dotNetRDF code:
 
@@ -383,7 +381,7 @@ This is the factory corresponding to our earlier example as well as some other f
 
 In order for your factories to be used they have to be registered, factories can be registered in several places depending on the scope you want them to have.
 
-If you want your factory to have global scope and apply to all queries and updates then you can register it with the `VDS.RDF.Query.Expressions.SparqlExpressionFactory` class like so:
+If you want your factory to have global scope and apply to all queries and updates then you can register it with the <xref:VDS.RDF.Query.Expressions.SparqlExpressionFactory> class like so:
 
 ```csharp
 SparqlExpressionFactory.AddCustomFactory(new MyCustomFactory());
@@ -398,4 +396,4 @@ parser.ExpressionFactories = new ISparqlCustomExpressionFactory[] { new MyCustom
 
 Once registered all subsequent queries and updates may now use your newly registered extension functions.
 
-When integrating with ASP.Net applications or using the [[Configuration API|UserGuide-Configuration-API]] then you can configure custom expression factories as detailed on the [[Configuring SPARQL Expression Factories|UserGuide-Configuration-SPARQL-Expression-Factories]] page.
+When integrating with ASP.Net applications or using the [Configuration API](../user_guide/Configuration-API.md) then you can configure custom expression factories as detailed on the [Configuring SPARQL Expression Factories](../user_guide/Configuration-SPARQL-Expression-Factories.md) page.

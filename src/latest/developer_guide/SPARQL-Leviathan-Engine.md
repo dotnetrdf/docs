@@ -1,5 +1,3 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[Leviathan Engine|DeveloperGuide-SPARQL-Leviathan-Engine]]
-
 # Leviathan Engine
 
 Leviathan is the code name for our block based in-memory SPARQL engine, it supports full SPARQL 1.0 and SPARQL 1.1.  Leviathan is a designed to follow the SPARQL algebra closely and so executes complex queries correctly and accurately.
@@ -14,7 +12,7 @@ Leviathan is the code name for our block based in-memory SPARQL engine, it suppo
 
 ## SPARQL Optimization
 
-SPARQL Optimization is discussed on the [[SPARQL Optimization|DeveloperGuide-SPARQL-Optimization]] page.
+SPARQL Optimization is discussed on the [SPARQL Optimization](SPARQL-Optimization.md) page.
 
 ## SPARQL Algebra
 
@@ -67,5 +65,5 @@ public class AlgebraEvaluationExample
 
 ## Further Reading
 
-* [[SPARQL Extensions|DeveloperGuide-SPARQL-Extensions]]
-* [[Leviathan Function Library|DeveloperGuide-SPARQL-Leviathan-Functions]]
+* [SPARQL Extensions](SPARQL-Extensions.md)
+* [Leviathan Function Library](SPARQL-Leviathan-Functions.md)

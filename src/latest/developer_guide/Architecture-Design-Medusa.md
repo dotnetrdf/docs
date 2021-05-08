@@ -1,5 +1,3 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[Architecture|DeveloperGuide-Architecture]] > [[Design|DeveloperGuide-Architecture-Design]] > [[Medusa Query Engine|DeveloperGuide-Architecture-Design-Medusa]]
-
 # Medusa Query Engine
 
 Medusa is the code name for a next generation streaming query engine for dotNetRDF.  
@@ -8,7 +6,7 @@ The current prototype development work is ongoing on the 1.9 branch in the new d
 
 ## Motivation
 
-Our current [[Leviathan Engine|DeveloperGuide-SPARQL-Leviathan-Engine]] is what is typically characterised as a block based engine, this means that it works by evaluating one chunk of the query in full before moving onto the next.  While this has some advantages it also some key disadvantages, namely:
+Our current [Leviathan Engine](SPARQL-Leviathan-Engine.md) is what is typically characterised as a block based engine, this means that it works by evaluating one chunk of the query in full before moving onto the next.  While this has some advantages it also some key disadvantages, namely:
 
 * Very memory inefficient for queries with large intermediate results
 * Can't return any results until all results are generated

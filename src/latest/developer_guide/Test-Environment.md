@@ -20,6 +20,8 @@ You may find that a few tests fail, some of these may be genuine failures while 
 
 Some of these intermittent failures are down to tests that rely upon web based resources such as [DBPedia](http://dbpedia.org) which may be temporarily unavailable or over capacity at the time of running the tests.  Others relate to timeout tests are may fail simply because your system is powerful enough to finish the tested task before the timeout is hit or conversely is too slow to run the test within the timeout.
 
+NOTE: Many of these tests that depended on having a remote endpoint have now been reimplemented to use WireMock.NET to mock a remote endpoint. Due to the additional dependencies and platform restrictions that WireMock.Net involves, these tests are implemented in a separate `dotNetRDF.MockServerTests` project that can also be found in the `Testing` folder.
+
 ### Genuine Failures
 
 Depending on the current state of Trunk when you run the tests you may find that there are some genuine failures because there are tests in place for reported bugs that are unresolved or new features that are incomplete.  If you think you have encountered this check the recent commit messages or simply ask on the developer mailing list

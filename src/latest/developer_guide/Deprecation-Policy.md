@@ -1,5 +1,3 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[Deprecation Policy|DeveloperGuide-Deprecation-Policy]]
-
 # Deprecation Policy
 
 Our deprecation policy is a very simple three step process.

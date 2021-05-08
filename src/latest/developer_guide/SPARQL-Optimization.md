@@ -1,14 +1,12 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[SPARQL Optimization|DeveloperGuide-SPARQL-Optimization]]
-
 # SPARQL Optimization
 
-This article aims to explain as much of how our SPARQL query optimisation works in the [[Leviathan Engine|DeveloperGuide-SPARQL-Leviathan-Engine]] as possible. Optimisation can be divided into 3 main stages:
+This article aims to explain as much of how our SPARQL query optimisation works in the [Leviathan Engine](SPARQL-Leviathan-Engine.md) as possible. Optimisation can be divided into 3 main stages:
 
 1. Query Optimisation
 2. Algebra Optimisation
 3. Evaluation Optimisation
 
-If you want to implement your own optimizers see [[Implementing Custom Optimisers|DeveloperGuide-SPARQL-Implementing-Custom-Optimizers]]
+If you want to implement your own optimizers see [Implementing Custom Optimisers](SPARQL-Implementing-Custom-Optimizers.md)
 
 # Query Optimisation
 
@@ -35,7 +33,7 @@ Our default selectivity ranking is purely rules based and ranks patterns based o
 6. Predicate
 7. Object
 
-**Note:** The above represents the ranking implemented in the current release, this has changed in the past and may change in the future based on internal testing and benchmarking.  Sometimes you may be able to get better performance by using the statistics based `VDS.RDF.Query.Optimisation.WeightedOptimiser`.
+**Note:** The above represents the ranking implemented in the current release, this has changed in the past and may change in the future based on internal testing and benchmarking.  Sometimes you may be able to get better performance by using the statistics based <xref:VDS.RDF.Query.Optimisation.WeightedOptimiser>.
 
 The name of a pattern refers to the the parts of the pattern that are not variables, i.e. an example Subject-Predicate pattern would be the following:
 
@@ -213,11 +211,11 @@ In a case like this there is absolutely nothing we can do other than evaluate th
 Slice(Select(LazyBgp({ ?s rdfs:label ?label . ?s ?p ?o })), LIMIT 10, OFFSET 0)
 ```
 
-`VDS.RDF.Query.Algebra.LazyBgp` is a specialised implementation of `VDS.RDF.Query.Algebra.IBgp` which does the minimum amount of work necessary to answer a query. In this case it needs only find the first 10 solutions that satisfy the pattern. Since a query may operate over millions of triples if we can stop processing earlier then we can get better performance. If we process the same query without this optimisation we have to find every possible solutions that satisfies the pattern and then discard all but 10.
+<xref:VDS.RDF.Query.Algebra.LazyBgp> is a specialised implementation of <xref:VDS.RDF.Query.Algebra.IBgp> which does the minimum amount of work necessary to answer a query. In this case it needs only find the first 10 solutions that satisfy the pattern. Since a query may operate over millions of triples if we can stop processing earlier then we can get better performance. If we process the same query without this optimisation we have to find every possible solutions that satisfies the pattern and then discard all but 10.
 
 The algebra optimiser uses a variety of these kinds of optimisations depending on the query. Obviously they are not applicable in every case (e.g. if there is an `ORDER BY` clause you need all the solutions in order to do the ordering before you can apply the `LIMIT`) but they can be used to significantly improve performance in various cases.
 
-There are a similar set of optimisations that are used for `ASK` queries since they aim to do the minimal amount of work possible as they only need to find one result satisfying the query. For a fuller list of available optimisers see the [[Advanced SPARQL Operations|UserGuide-Advanced-SPARQL-Operations]] page.
+There are a similar set of optimisations that are used for `ASK` queries since they aim to do the minimal amount of work possible as they only need to find one result satisfying the query. For a fuller list of available optimisers see the [Advanced SPARQL Operations](../user_guide/Advanced-SPARQL-Operations.md) page.
 
 # Evaluation Optimisation
 
@@ -233,7 +231,7 @@ The engine is optimised to use lazy evaluation wherever possible. What this mean
 
 ## Parallel Evaluation
 
-The more recent releases leverage the .Net PLINQ framework to parallelize parts of the query evaluation wherever possible.  This means queries can take full advantage of the processors available on your machine, see [[Performance|DeveloperGuide-SPARQL-Performance]] for performance data which shows just how much of an impact this can have.
+The more recent releases leverage the .Net PLINQ framework to parallelize parts of the query evaluation wherever possible.  This means queries can take full advantage of the processors available on your machine, see [Performance](SPARQL-Performance.md) for performance data which shows just how much of an impact this can have.
 
 Currently the following operations are parallelized:
 

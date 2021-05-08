@@ -1,5 +1,3 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[Function Libraries|DeveloperGuide-SPARQL-Function-Libraries]] > [[Leviathan Functions|DeveloperGuide-SPARQL-Leviathan-Functions]]
-
 # Leviathan Function Library
 
 The Leviathan Function Library is a library of extension functions for SPARQL which embody a large number of numeric functions and a few string functions that can be used in queries executed by dotNetRDF.

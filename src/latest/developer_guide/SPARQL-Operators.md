@@ -1,5 +1,3 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[SPARQL Operators|DeveloperGuide-SPARQL-Operators]]
-
 # SPARQL Operators
 
 SPARQL Operators are an extension to SPARQL permitted by the specification which allow for implementations to extend the definition of certain operators - namely `=`, `!=`, `<`, `<=`, `>`, `>=`, `+`, `-`, `*` and `/`.
@@ -12,7 +10,7 @@ Right now the only operators which dotNetRDF provides extensions for are `+` and
 
 ## Implementing Custom Operators
 
-Custom operators are implemented by implementing the `VDS.RDF.Query.Operators.ISparqlOperator` interface and registering your implementation with the `VDS.RDF.Query.Operators.SparqlOperators` registry.
+Custom operators are implemented by implementing the <xref:VDS.RDF.Query.Operators.ISparqlOperator> interface and registering your implementation with the <xref:VDS.RDF.Query.Operators.SparqlOperators> registry.
 
 ### The ISparqlOperator Interface
 
@@ -24,7 +22,7 @@ SparqlOperators.AddOperator(new MyCustomOperator());
 
 #### Operator
 
-The `Operator` property returns a `VDS.RDF.Query.Operators.SparqlOperatorType` which indicates which operator your implementation overloads.
+The `Operator` property returns a <xref:VDS.RDF.Query.Operators.SparqlOperatorType> which indicates which operator your implementation overloads.
 
 #### IsApplicable()
 
@@ -32,4 +30,4 @@ The `IsApplicable()` method takes in the proposed arguments for the operator and
 
 #### Apply()
 
-The `Apply()` method takes the arguments for the operator and applies the operator returning either the resulting value or throwing a `VDS.RDF.Query.RdfQueryException` if an error occurs.
+The `Apply()` method takes the arguments for the operator and applies the operator returning either the resulting value or throwing a <xref:VDS.RDF.Query.RdfQueryException> if an error occurs.

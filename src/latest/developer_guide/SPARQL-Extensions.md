@@ -1,12 +1,10 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[SPARQL Extensions|DeveloperGuide-SPARQL-Extensions]]
-
 # SPARQL Extensions
 
 This page provides an overview and links to further resources about SPARQL extensions supported in dotNetRDF.
 
 ## Full Text Query
 
-Full Text Query is an extension which allows full text search of RDF data to be integrated into SPARQL queries, please see the [[Full Text Querying with SPARQL|UserGuide-Full-Text-Querying-With-SPARQL]] page for more information on this.
+Full Text Query is an extension which allows full text search of RDF data to be integrated into SPARQL queries, please see the [Full Text Querying with SPARQL](../user_guide/Full-Text-Querying-With-SPARQL.md) page for more information on this.
 
 ## LET Assignment
 
@@ -18,4 +16,8 @@ Generally it is preferred that you use `BIND` wherever possible since this is st
 
 ## Function Libraries
 
-We support a wide variety of extension functions and aggregates, see [[Function Libraries|DeveloperGuide-SPARQL-Function-Libraries]] for available libraries.
+We support a wide variety of extension functions and aggregates, see [Function Libraries](SPARQL-Function-Libraries.md) for available libraries.
+
+## Custom Extension Functions
+
+You can also create your own extension functions. See [Extension Functions](SPARQL-Extension-Functions.md) for more details.

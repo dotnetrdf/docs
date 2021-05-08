@@ -1,10 +1,11 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[Architecture|DeveloperGuide-Architecture]] > [[Design|DeveloperGuide-Architecture-Design]] > [[dotNetRDF 2.0 Design|DeveloperGuide-Architecture-Design-2.0]]
+# dotNetRDF 3.0 Design
 
-# dotNetRDF 2.0 Design
+dotNetRDF 3.0 will start to implement a lot of the restructuring that Rob had originally planned for the 2.0 release but which got put on hold as more effort went in to building out new 
+features and supporting additional syntaxes.
 
-Now we have reached dotNetRDF 1.0 we have been thinking a lot about the state of the API and what we would really like to change if we were able to introduce more significant refactors and breaking changes.  This thinking so far forms the basis for this design document, the idea is that we would make a number of significant and breaking changes in the 2.0 API in order to clean up, simplify and modularize the API better.
+The following is the original 2.0 design plans kept here for reference, actual planning for 3.0 is taking place in the [dotNetRDF 3.0 project board on GitHub](https://github.com/dotnetrdf/dotnetrdf/projects/1)
 
-It is proposed that an initial version of this revised API be published as a transitional 1.9 release so that users can use the new API and provide feedback as it is developed.  Parallel to that we will continue to support the 1.0 release with bug fixes, it is expected that an initial 1.9 will not be ready until around the same time as 1.1.0 is released.
+TODO: This page should be updated as we get closer to tackling some of the issues described below.
 
 ## API Modularization
 

@@ -1,5 +1,3 @@
-[[Home]] > [[Developer Guide|DeveloperGuide]] > [[SPARQL Engine|DeveloperGuide-SPARQL-Engine]] > [[SPARQL Conformance|DeveloperGuide-SPARQL-Conformance]]
-
 # SPARQL Conformance
 
 This page details dotNetRDF conformance with the SPARQL specifications.
