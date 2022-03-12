@@ -17,10 +17,10 @@ items:
   source:
     remote:
       path: Libraries/dotNetRDF/Core/IGraph.cs
-      branch: master
+      branch: maintenance/2.x
       repo: https://github.com/dotnetrdf/dotnetrdf.git
     id: ITransactionalGraph
-    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IGraph.cs
+    path: Libraries/dotNetRDF/Core/IGraph.cs
     startLine: 423
   assemblies:
   - dotNetRDF
@@ -95,6 +95,7 @@ items:
   - System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)
   - System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)
   extensionMethods:
+  - VDS.RDF.IGraph.VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
   - VDS.RDF.ITransactionalGraph.VDS.RDF.Extensions.AsEnumerable``1
   - VDS.RDF.IGraph.VDS.RDF.Extensions.Assert(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode)
   - VDS.RDF.IGraph.VDS.RDF.Extensions.Retract(VDS.RDF.INode,VDS.RDF.INode,VDS.RDF.INode)
@@ -131,7 +132,6 @@ items:
   - VDS.RDF.IGraph.VDS.RDF.GraphExtensions.SaveToStream(System.IO.TextWriter,VDS.RDF.IStoreWriter)
   - VDS.RDF.IGraph.VDS.RDF.GraphExtensions.SaveToStream(System.String,System.IO.TextWriter)
   - VDS.RDF.IGraph.VDS.RDF.Dynamic.DynamicExtensions.AsDynamic(System.Uri,System.Uri)
-  - VDS.RDF.IGraph.VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
   modifiers.csharp:
   - public
   - interface
@@ -152,10 +152,10 @@ items:
   source:
     remote:
       path: Libraries/dotNetRDF/Core/IGraph.cs
-      branch: master
+      branch: maintenance/2.x
       repo: https://github.com/dotnetrdf/dotnetrdf.git
     id: Flush
-    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IGraph.cs
+    path: Libraries/dotNetRDF/Core/IGraph.cs
     startLine: 429
   assemblies:
   - dotNetRDF
@@ -180,10 +180,10 @@ items:
   source:
     remote:
       path: Libraries/dotNetRDF/Core/IGraph.cs
-      branch: master
+      branch: maintenance/2.x
       repo: https://github.com/dotnetrdf/dotnetrdf.git
     id: Discard
-    path: ../../dotNetRDF/Libraries/dotNetRDF/Core/IGraph.cs
+    path: Libraries/dotNetRDF/Core/IGraph.cs
     startLine: 434
   assemblies:
   - dotNetRDF
@@ -2357,6 +2357,35 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: VDS.RDF.IGraph.VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
+  commentId: M:VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
+  parent: VDS.RDF.Data.DataTables.GraphExtensions
+  definition: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
+  name: ToDataTable()
+  nameWithType: GraphExtensions.ToDataTable()
+  fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable()
+  spec.csharp:
+  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
+    name: ToDataTable
+    nameWithType: GraphExtensions.ToDataTable
+    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
+    name: ToDataTable
+    nameWithType: GraphExtensions.ToDataTable
+    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: VDS.RDF.ITransactionalGraph.VDS.RDF.Extensions.AsEnumerable``1
   commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
   parent: VDS.RDF.Extensions
@@ -4470,35 +4499,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: VDS.RDF.IGraph.VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
-  commentId: M:VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
-  parent: VDS.RDF.Data.DataTables.GraphExtensions
-  definition: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
-  name: ToDataTable()
-  nameWithType: GraphExtensions.ToDataTable()
-  fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable()
-  spec.csharp:
-  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
-    name: ToDataTable
-    nameWithType: GraphExtensions.ToDataTable
-    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
-    name: ToDataTable
-    nameWithType: GraphExtensions.ToDataTable
-    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: VDS.RDF.IGraph
   commentId: T:VDS.RDF.IGraph
   parent: VDS.RDF
@@ -4525,6 +4525,47 @@ references:
   name: IXmlSerializable
   nameWithType: IXmlSerializable
   fullName: System.Xml.Serialization.IXmlSerializable
+- uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
+  commentId: M:VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
+  name: ToDataTable(IGraph)
+  nameWithType: GraphExtensions.ToDataTable(IGraph)
+  fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
+  spec.csharp:
+  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
+    name: ToDataTable
+    nameWithType: GraphExtensions.ToDataTable
+    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
+    name: ToDataTable
+    nameWithType: GraphExtensions.ToDataTable
+    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: VDS.RDF.IGraph
+    name: IGraph
+    nameWithType: IGraph
+    fullName: VDS.RDF.IGraph
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: VDS.RDF.Data.DataTables.GraphExtensions
+  commentId: T:VDS.RDF.Data.DataTables.GraphExtensions
+  parent: VDS.RDF.Data.DataTables
+  name: GraphExtensions
+  nameWithType: GraphExtensions
+  fullName: VDS.RDF.Data.DataTables.GraphExtensions
 - uid: VDS.RDF.Extensions.AsEnumerable``1(``0)
   commentId: M:VDS.RDF.Extensions.AsEnumerable``1(``0)
   name: AsEnumerable<T>(T)
@@ -7105,47 +7146,6 @@ references:
   name: DynamicExtensions
   nameWithType: DynamicExtensions
   fullName: VDS.RDF.Dynamic.DynamicExtensions
-- uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
-  commentId: M:VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
-  name: ToDataTable(IGraph)
-  nameWithType: GraphExtensions.ToDataTable(IGraph)
-  fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
-  spec.csharp:
-  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
-    name: ToDataTable
-    nameWithType: GraphExtensions.ToDataTable
-    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: VDS.RDF.IGraph
-    name: IGraph
-    nameWithType: IGraph
-    fullName: VDS.RDF.IGraph
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable(VDS.RDF.IGraph)
-    name: ToDataTable
-    nameWithType: GraphExtensions.ToDataTable
-    fullName: VDS.RDF.Data.DataTables.GraphExtensions.ToDataTable
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: VDS.RDF.IGraph
-    name: IGraph
-    nameWithType: IGraph
-    fullName: VDS.RDF.IGraph
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: VDS.RDF.Data.DataTables.GraphExtensions
-  commentId: T:VDS.RDF.Data.DataTables.GraphExtensions
-  parent: VDS.RDF.Data.DataTables
-  name: GraphExtensions
-  nameWithType: GraphExtensions
-  fullName: VDS.RDF.Data.DataTables.GraphExtensions
 - uid: System
   commentId: N:System
   isExternal: true
@@ -7158,16 +7158,16 @@ references:
   name: System.Xml.Serialization
   nameWithType: System.Xml.Serialization
   fullName: System.Xml.Serialization
-- uid: VDS.RDF.Dynamic
-  commentId: N:VDS.RDF.Dynamic
-  name: VDS.RDF.Dynamic
-  nameWithType: VDS.RDF.Dynamic
-  fullName: VDS.RDF.Dynamic
 - uid: VDS.RDF.Data.DataTables
   commentId: N:VDS.RDF.Data.DataTables
   name: VDS.RDF.Data.DataTables
   nameWithType: VDS.RDF.Data.DataTables
   fullName: VDS.RDF.Data.DataTables
+- uid: VDS.RDF.Dynamic
+  commentId: N:VDS.RDF.Dynamic
+  name: VDS.RDF.Dynamic
+  nameWithType: VDS.RDF.Dynamic
+  fullName: VDS.RDF.Dynamic
 - uid: VDS.RDF.ITransactionalGraph.Flush*
   commentId: Overload:VDS.RDF.ITransactionalGraph.Flush
   name: Flush
@@ -7178,3 +7178,4 @@ references:
   name: Discard
   nameWithType: ITransactionalGraph.Discard
   fullName: VDS.RDF.ITransactionalGraph.Discard
+shouldSkipMarkup: true
