@@ -1,3 +1,9 @@
+---
+# Archived Documentation Repository
+
+As of release 3.0, the documentation for dotNetRDF has moved to the [main repository](https://github.com/dotnetrdf/dotnetrdf) 
+---
+
 # docs
 Documentation for the dotNetRDF library and tools
 
